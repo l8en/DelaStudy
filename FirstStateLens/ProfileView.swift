@@ -6,6 +6,7 @@ struct ProfileView: View {
     @State private var goal = 10
     @State private var editing = false
     @State private var confirmingReset = false
+    @State private var compactHeader = false
 
     private var unlockedAwards: Int { model.awards.filter(\.isUnlocked).count }
     private var currentLevelXP: Int { model.stats.xp % 100 }
@@ -13,6 +14,7 @@ struct ProfileView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 26) {
+                LensScrollMarker()
                 HStack {
                     Text("LEARNER PROFILE").font(.caption.weight(.heavy)).tracking(1.2).foregroundStyle(LensTheme.teal)
                     Spacer()
@@ -35,9 +37,11 @@ struct ProfileView: View {
                 Button("Reset all progress", role: .destructive) { confirmingReset = true }
                     .font(.subheadline.bold()).frame(maxWidth: .infinity).padding(.vertical, 14)
             }
-            .padding(.horizontal, 20).padding(.top, 12).padding(.bottom, 42)
+            .padding(.horizontal, 20).padding(.top, 12).padding(.bottom, 110)
         }
         .background(LensTheme.paper).navigationBarTitleDisplayMode(.inline)
+        .lensScrollSpace { compactHeader = $0 < -8 }
+        .morphingTopBar(title: "Profile", symbol: "person.crop.circle.fill", collapsed: compactHeader)
         .navigationDestination(for: Course.self) { CourseDetailView(model: model, course: $0) }
         .sheet(isPresented: $editing) { editSheet }
         .confirmationDialog("Reset all progress?", isPresented: $confirmingReset, titleVisibility: .visible) {
@@ -72,12 +76,12 @@ struct ProfileView: View {
         ZStack {
             Circle().fill(LensTheme.surface).frame(width: 104, height: 104)
             Circle().stroke(LensTheme.border, lineWidth: 8).frame(width: 90, height: 90)
-            Circle().trim(from: 0, to: max(0.015, model.stats.levelProgress))
+            Circle().trim(from: 0, to: model.stats.levelProgress)
                 .stroke(AngularGradient(colors: [LensTheme.blue, LensTheme.pink, LensTheme.gold], center: .center), style: StrokeStyle(lineWidth: 8, lineCap: .round))
                 .rotationEffect(.degrees(-90)).frame(width: 90, height: 90)
             Circle().fill(LensTheme.navy).frame(width: 70, height: 70)
-            Text(initials).font(.title2.weight(.heavy)).foregroundStyle(.white)
-            Text("\(model.stats.level)").font(.caption2.monospacedDigit().bold()).foregroundStyle(.white)
+            Text(initials).font(.title2.weight(.heavy)).foregroundStyle(LensTheme.onInk)
+            Text("\(model.stats.level)").font(.caption2.monospacedDigit().bold()).foregroundStyle(LensTheme.onInk)
                 .frame(width: 28, height: 28).background(LensTheme.teal, in: Circle()).overlay(Circle().stroke(.white, lineWidth: 3))
                 .offset(x: 36, y: 35)
         }.frame(width: 104, height: 104)
@@ -88,7 +92,12 @@ struct ProfileView: View {
             HStack(alignment: .lastTextBaseline) {
                 Text("Academic Emblems").font(.title2.weight(.heavy)).foregroundStyle(LensTheme.navy)
                 Spacer()
-                Text("\(unlockedAwards)/\(model.awards.count)").font(.headline.monospacedDigit().bold()).foregroundStyle(LensTheme.navy)
+                NavigationLink { AwardsView(model: model) } label: {
+                    HStack(spacing: 7) {
+                        Text("\(unlockedAwards)/\(model.awards.count)").font(.headline.monospacedDigit().bold())
+                        Image(systemName: "chevron.right").font(.caption.bold())
+                    }.foregroundStyle(LensTheme.navy)
+                }.accessibilityLabel("View all awards, \(unlockedAwards) of \(model.awards.count) earned")
             }
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3), spacing: 18) {
                 ForEach(Array(model.awards.enumerated()), id: \.element.id) { index, award in
@@ -141,7 +150,7 @@ struct ProfileView: View {
     private var currentCourse: some View {
         NavigationLink(value: model.selectedCourse) {
             HStack(spacing: 14) {
-                Image(systemName: model.selectedCourse.symbolName).font(.title3.bold()).foregroundStyle(.white)
+                Image(systemName: model.selectedCourse.symbolName).font(.title3.bold()).foregroundStyle(LensTheme.onInk)
                     .frame(width: 50, height: 50).background(LensTheme.navy, in: Circle())
                 VStack(alignment: .leading, spacing: 4) {
                     Text("CURRENT COURSE").font(.caption2.bold()).tracking(1).foregroundStyle(LensTheme.navy)
@@ -149,7 +158,7 @@ struct ProfileView: View {
                 }
                 Spacer(); Text("\(Int(model.courseCompletion(model.selectedCourse.id) * 100))%").font(.headline.monospacedDigit().bold()).foregroundStyle(LensTheme.navy)
             }.padding(18).background(LensTheme.courseSurface(model.selectedCourse.subject), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
-        }.buttonStyle(.plain)
+        }.buttonStyle(LensCardButtonStyle())
     }
 
     private var initials: String {

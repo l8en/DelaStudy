@@ -107,6 +107,8 @@ private struct FeedbackView: View {
 
 private struct SessionCompleteView: View {
     @Bindable var model: AppModel
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var revealed = false
     var sessionAttempts: [Attempt] {
         guard let id = model.activeSession?.id else { return [] }
         return model.snapshot.attempts.filter { $0.sessionID == id }
@@ -114,7 +116,12 @@ private struct SessionCompleteView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
             Spacer()
-            Image(systemName: "scope").font(.system(size: 44)).foregroundStyle(LensTheme.teal).accessibilityHidden(true)
+            ZStack {
+                Circle().fill(LensTheme.blue.opacity(0.65)).frame(width: 96, height: 96)
+                Circle().trim(from: 0, to: revealed ? 1 : 0).stroke(LensTheme.navy, style: StrokeStyle(lineWidth: 5, lineCap: .round)).rotationEffect(.degrees(-90)).frame(width: 82, height: 82)
+                Image(systemName: "checkmark").font(.system(size: 34, weight: .heavy)).foregroundStyle(LensTheme.navy)
+                    .scaleEffect(revealed || reduceMotion ? 1 : 0.6).opacity(revealed || reduceMotion ? 1 : 0)
+            }.accessibilityHidden(true)
             EditorialTitle(eyebrow: "Test complete", title: "Lesson complete.")
             Text("\(sessionAttempts.filter(\.isCorrect).count) of \(sessionAttempts.count) correct")
                 .font(.title3.monospacedDigit()).foregroundStyle(LensTheme.navy)
@@ -127,5 +134,9 @@ private struct SessionCompleteView: View {
             Button("Return home", action: model.closePractice).buttonStyle(LensPrimaryButtonStyle())
         }
         .padding(28)
+        .onAppear {
+            if reduceMotion { revealed = true }
+            else { withAnimation(.spring(response: 0.55, dampingFraction: 0.78)) { revealed = true } }
+        }
     }
 }

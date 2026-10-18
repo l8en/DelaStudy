@@ -97,6 +97,28 @@ final class AppModel {
         commit(updated)
     }
 
+    func saveCommunityResponse(_ response: String, for promptID: String) {
+        var updated = snapshot
+        let trimmed = response.trimmingCharacters(in: .whitespacesAndNewlines)
+        if trimmed.isEmpty { updated.communityResponses.removeValue(forKey: promptID) }
+        else { updated.communityResponses[promptID] = String(trimmed.prefix(600)) }
+        commit(updated)
+    }
+
+    func toggleChallenge(_ id: String) {
+        var updated = snapshot
+        if updated.joinedChallengeIDs.contains(id) { updated.joinedChallengeIDs.remove(id) }
+        else { updated.joinedChallengeIDs.insert(id) }
+        commit(updated)
+    }
+
+    func toggleCollegeChecklistItem(_ id: String) {
+        var updated = snapshot
+        if updated.collegeChecklistIDs.contains(id) { updated.collegeChecklistIDs.remove(id) }
+        else { updated.collegeChecklistIDs.insert(id) }
+        commit(updated)
+    }
+
     func startRecommendedSession() {
         if let objective = recommendation?.objective { startSession(objectiveID: objective.id) }
     }

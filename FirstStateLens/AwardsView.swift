@@ -2,11 +2,13 @@ import SwiftUI
 
 struct AwardsView: View {
     @Bindable var model: AppModel
+    @State private var compactHeader = false
     private var unlocked: Int { model.awards.filter(\.isUnlocked).count }
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
+                LensScrollMarker()
                 EditorialTitle(eyebrow: "Collection", title: "Awards")
                 HStack {
                     VStack(alignment: .leading, spacing: 5) {
@@ -24,9 +26,11 @@ struct AwardsView: View {
                         AwardTile(award: award, tint: tileColor(index))
                     }
                 }
-            }.padding(.horizontal, 20).padding(.top, 18).padding(.bottom, 30)
+            }.padding(.horizontal, 20).padding(.top, 18).padding(.bottom, 110)
         }
         .background(LensTheme.paper).navigationBarTitleDisplayMode(.inline)
+        .lensScrollSpace { compactHeader = $0 < -8 }
+        .morphingTopBar(title: "Awards", symbol: "trophy.fill", collapsed: compactHeader)
     }
 
     private func tileColor(_ index: Int) -> Color {
@@ -44,14 +48,15 @@ private struct AwardTile: View {
                 Image(systemName: award.symbolName).font(.title2).foregroundStyle(award.isUnlocked ? .white : LensTheme.navy)
                     .frame(width: 48, height: 48).background(award.isUnlocked ? LensTheme.navy : .white.opacity(0.72), in: Circle())
                 Spacer()
-                if award.isUnlocked { Image(systemName: "checkmark").font(.caption.bold()).foregroundStyle(.white).frame(width: 27, height: 27).background(LensTheme.navy, in: Circle()) }
+                if award.isUnlocked { Image(systemName: "checkmark").font(.caption.bold()).foregroundStyle(LensTheme.onInk).frame(width: 27, height: 27).background(LensTheme.navy, in: Circle()) }
             }
             Text(award.title).font(.headline.weight(.heavy)).foregroundStyle(LensTheme.navy)
+            Text(award.detail).font(.caption.weight(.semibold)).foregroundStyle(LensTheme.navy).lineLimit(3)
             Spacer(minLength: 0)
             ProgressView(value: award.fraction).tint(LensTheme.navy).background(.white.opacity(0.55))
-            Text(award.isUnlocked ? "UNLOCKED" : "\(award.current) / \(award.target)").font(.caption2.bold()).tracking(0.8).foregroundStyle(LensTheme.navy)
+            Text(award.isUnlocked ? "EARNED" : "\(award.current) / \(award.target)").font(.caption2.bold()).tracking(0.8).foregroundStyle(LensTheme.navy)
         }
-        .padding(16).frame(maxWidth: .infinity, minHeight: 190, alignment: .topLeading)
+        .padding(16).frame(maxWidth: .infinity, minHeight: 238, alignment: .topLeading)
         .background(tint.opacity(award.isUnlocked ? 0.88 : 0.42), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(award.title), \(award.detail), \(award.isUnlocked ? "unlocked" : "\(award.current) of \(award.target)")")

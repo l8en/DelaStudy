@@ -126,8 +126,14 @@ public enum AppContent {
             PracticeQuestion(id: "college-bio-checkpoint", objectiveID: "college-bio-cycle", prompt: "What can a cell-cycle checkpoint do when DNA damage is detected?", choices: choices([("a", "Pause progression so repair can occur"), ("b", "Immediately begin translation"), ("c", "Remove the plasma membrane"), ("d", "Convert RNA into DNA in every cell")]), correctChoiceID: "a", explanation: "Checkpoint proteins can halt the cycle when conditions are unfavorable or DNA is damaged, allowing repair or triggering other protective responses.", source: collegeBiologyText),
             PracticeQuestion(id: "college-bio-metaphase", objectiveID: "college-bio-cycle", prompt: "What characterizes metaphase of mitosis?", choices: choices([("a", "Chromosomes align near the cell’s equator"), ("b", "DNA is first replicated"), ("c", "The nuclear envelope fully reforms around two nuclei"), ("d", "Homologous chromosomes pair for crossing over")]), correctChoiceID: "a", explanation: "During metaphase, duplicated chromosomes align at the metaphase plate before sister chromatids separate in anaphase.", source: collegeBiologyText)
         ]
+        let expansion = ExpandedCatalog.content(accessedOn: accessed)
         let lessons = lessonMaterials()
-        return LearningContent(courses: courses, objectives: objectives, questions: questions, lessonMaterials: lessons)
+        return LearningContent(
+            courses: courses + expansion.courses,
+            objectives: objectives + expansion.objectives,
+            questions: questions + expansion.questions,
+            lessonMaterials: lessons + expansion.lessonMaterials
+        )
     }()
 
     private static func lessonMaterials() -> [LessonMaterial] {

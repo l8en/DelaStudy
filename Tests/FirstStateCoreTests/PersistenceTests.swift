@@ -19,7 +19,15 @@ struct PersistenceTests {
         let (store, directory) = try temporaryStore(); defer { try? FileManager.default.removeItem(at: directory) }
         let session = StudySession(objectiveID: "read-record", startedAt: Date(timeIntervalSince1970: 1))
         let attempt = Attempt(questionID: "record-date", objectiveID: "read-record", submittedChoiceID: "b", isCorrect: true, timestamp: Date(timeIntervalSince1970: 2), sessionID: session.id, contentVersion: 1)
-        let expected = ProgressSnapshot(hasCompletedOnboarding: true, studyIntention: .understandDelaware, attempts: [attempt], sessions: [session])
+        let expected = ProgressSnapshot(
+            hasCompletedOnboarding: true,
+            studyIntention: .understandDelaware,
+            attempts: [attempt],
+            sessions: [session],
+            communityResponses: ["evidence": "One source can establish its own claims."],
+            joinedChallengeIDs: ["explain-one-idea"],
+            collegeChecklistIDs: ["interests"]
+        )
         try store.save(expected)
         #expect(try store.load() == expected)
     }
@@ -52,6 +60,9 @@ struct PersistenceTests {
         let loaded = try store.load()
         #expect(loaded.schemaVersion == ProgressSnapshot.currentSchemaVersion)
         #expect(loaded.profile == LearnerProfile())
+        #expect(loaded.communityResponses.isEmpty)
+        #expect(loaded.joinedChallengeIDs.isEmpty)
+        #expect(loaded.collegeChecklistIDs.isEmpty)
         #expect(loaded.hasCompletedOnboarding)
     }
 }

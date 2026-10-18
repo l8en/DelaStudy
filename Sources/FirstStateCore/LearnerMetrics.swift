@@ -36,7 +36,17 @@ public enum LearnerMetrics {
         let completed = snapshot.sessions.filter { $0.completedAt != nil }
         let correctQuestions = Set(snapshot.attempts.filter(\.isCorrect).map(\.questionID)).count
         let practicedCourses = Set(snapshot.attempts.compactMap { content.course(containing: $0.objectiveID)?.id }).count
+        let practicedSubjects = Set(snapshot.attempts.compactMap { content.course(containing: $0.objectiveID)?.subject }).count
+        let collegeCoursesStarted = Set(snapshot.attempts.compactMap { attempt -> String? in
+            guard let course = content.course(containing: attempt.objectiveID), course.level == .college else { return nil }
+            return course.id
+        }).count
         let stats = stats(content: content, snapshot: snapshot, now: now, calendar: calendar)
+        let completedHighSchoolCourses = content.courses.filter { course in
+            guard course.level == .highSchool else { return false }
+            let states = MasteryEngine.progress(content: content, attempts: snapshot.attempts, courseID: course.id)
+            return !states.isEmpty && states.allSatisfy { $0.status == .demonstrated }
+        }.count
         let perfectSessions = completed.filter { session in
             let attempts = snapshot.attempts.filter { $0.sessionID == session.id }
             let expected = content.questions(for: session.objectiveID).count
@@ -48,7 +58,11 @@ public enum LearnerMetrics {
             AwardProgress(id: "five-correct", title: "Quick Study", detail: "Answer five different questions correctly.", symbolName: "bolt.fill", current: correctQuestions, target: 5),
             AwardProgress(id: "explorer", title: "Course Explorer", detail: "Practice in two different courses.", symbolName: "safari.fill", current: practicedCourses, target: 2),
             AwardProgress(id: "streak", title: "Three-Day Rhythm", detail: "Study on three consecutive days.", symbolName: "flame.fill", current: stats.streakDays, target: 3),
-            AwardProgress(id: "course-complete", title: "Course Complete", detail: "Demonstrate every lesson in a course.", symbolName: "trophy.fill", current: stats.completedCourses, target: 1)
+            AwardProgress(id: "course-complete", title: "Course Complete", detail: "Demonstrate every lesson in a course.", symbolName: "trophy.fill", current: stats.completedCourses, target: 1),
+            AwardProgress(id: "five-lessons", title: "Study Sprint", detail: "Complete five lesson tests.", symbolName: "flag.checkered", current: completed.count, target: 5),
+            AwardProgress(id: "three-subjects", title: "Renaissance Learner", detail: "Practice in three different subjects.", symbolName: "circles.hexagongrid.fill", current: practicedSubjects, target: 3),
+            AwardProgress(id: "college-start", title: "Campus Ready", detail: "Begin a college-level course.", symbolName: "building.columns.fill", current: collegeCoursesStarted, target: 1),
+            AwardProgress(id: "high-school-course", title: "High School Scholar", detail: "Complete a high-school course.", symbolName: "graduationcap.fill", current: completedHighSchoolCourses, target: 1)
         ]
     }
 

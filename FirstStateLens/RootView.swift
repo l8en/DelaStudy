@@ -39,8 +39,10 @@ struct MainTabView: View {
                 .tabItem { Label("Home", systemImage: "house.fill") }
             NavigationStack { CourseCatalogView(model: model) }
                 .tabItem { Label("Learn", systemImage: "books.vertical.fill") }
-            NavigationStack { AwardsView(model: model) }
-                .tabItem { Label("Awards", systemImage: "trophy.fill") }
+            NavigationStack { CommunityView(model: model) }
+                .tabItem { Label("Community", systemImage: "person.3.fill") }
+            NavigationStack { CollegeHubView(model: model) }
+                .tabItem { Label("College", systemImage: "graduationcap.fill") }
             NavigationStack { ProfileView(model: model) }
                 .tabItem { Label("Profile", systemImage: "person.crop.circle.fill") }
         }

@@ -17,7 +17,7 @@ struct CourseDetailView: View {
                 }
                 curriculumPanel
                 SourceNote(source: course.source)
-            }.padding(.horizontal, 20).padding(.top, 12).padding(.bottom, 30)
+            }.padding(.horizontal, 20).padding(.top, 12).padding(.bottom, 110)
         }
         .background(LensTheme.paper).navigationTitle(course.title).navigationBarTitleDisplayMode(.inline)
     }
@@ -25,7 +25,7 @@ struct CourseDetailView: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 18) {
             HStack(alignment: .top) {
-                Image(systemName: course.symbolName).font(.system(size: 34, weight: .semibold)).foregroundStyle(.white)
+                Image(systemName: course.symbolName).font(.system(size: 34, weight: .semibold)).foregroundStyle(LensTheme.navy)
                     .frame(width: 72, height: 72).background(color, in: RoundedRectangle(cornerRadius: 22))
                 Spacer()
                 Text("\(Int(model.courseCompletion(course.id) * 100))%").font(.title2.monospacedDigit().bold()).foregroundStyle(color)
@@ -71,7 +71,7 @@ struct CourseDetailView: View {
             NavigationLink {
                 LessonDetailView(model: model, course: course, objective: objective, lessonNumber: index + 1)
             } label: { lessonRowContent(objective, index: index, status: status, accessible: true) }
-            .buttonStyle(.plain)
+            .buttonStyle(LensCardButtonStyle())
             .accessibilityLabel("Lesson \(index + 1), \(objective.title), \(statusLabel(status))")
         } else {
             lessonRowContent(objective, index: index, status: status, accessible: false)
@@ -83,7 +83,7 @@ struct CourseDetailView: View {
     private func lessonRowContent(_ objective: LearningObjective, index: Int, status: ObjectiveStatus, accessible: Bool) -> some View {
         HStack(alignment: .top, spacing: 16) {
             VStack(spacing: 0) {
-                Image(systemName: statusSymbol(status)).font(.headline).foregroundStyle(accessible ? .white : LensTheme.slate)
+                Image(systemName: statusSymbol(status)).font(.headline).foregroundStyle(accessible ? LensTheme.onInk : LensTheme.slate)
                     .frame(width: 46, height: 46).background(accessible ? LensTheme.navy : LensTheme.border, in: Circle())
                 if index < objectives.count - 1 { Rectangle().fill(status == .demonstrated ? color : LensTheme.border).frame(width: 3, height: 54) }
             }

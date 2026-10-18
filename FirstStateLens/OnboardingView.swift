@@ -57,7 +57,7 @@ struct OnboardingView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 EditorialTitle(eyebrow: "Step 1", title: "Where should we begin?")
-                ForEach(model.content.courses) { course in
+                ForEach(featuredCourses) { course in
                     Button { selectedCourseID = course.id } label: {
                         HStack(spacing: 16) {
                             Image(systemName: course.symbolName).font(.title2).foregroundStyle(LensTheme.courseColor(course.subject))
@@ -74,7 +74,7 @@ struct OnboardingView: View {
                         .padding(16).background(LensTheme.courseSurface(course.subject), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
                         .overlay(RoundedRectangle(cornerRadius: 22).stroke(selectedCourseID == course.id ? LensTheme.navy : .clear, lineWidth: 3))
                     }
-                    .buttonStyle(.plain).accessibilityAddTraits(selectedCourseID == course.id ? .isSelected : [])
+                    .buttonStyle(LensCardButtonStyle()).accessibilityAddTraits(selectedCourseID == course.id ? .isSelected : [])
                 }
             }.padding(24)
         }
@@ -116,5 +116,10 @@ struct OnboardingView: View {
             }
             Spacer(minLength: 0)
         }
+    }
+
+    private var featuredCourses: [Course] {
+        let ids = ["first-state-civics", "algebra-i", "ap-biology", "geometry", "high-school-chemistry", "english-composition"]
+        return ids.compactMap { model.content.course(id: $0) }
     }
 }

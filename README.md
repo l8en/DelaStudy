@@ -1,10 +1,10 @@
 # First State Lens
 
-First State Lens is a native, local-first iPhone study app for high-school and early-college learners. It turns trustworthy public and open educational material into short, structured courses in U.S. history, algebra, and biology.
+First State Lens is a native, local-first iPhone study app for high-school and early-college learners. It turns trustworthy public and open educational material into short, structured courses across humanities, mathematics, science, computing, social science, and personal finance.
 
-The app includes five course paths, 12 prerequisite-linked lessons, 24 original practice questions, lesson notes, source readings, in-app YouTube playback, explainable recommendations, XP and levels, streaks, six earned awards, and a private local profile. Every reward is calculated from saved lesson activity; there are no fake users, leaderboards, or progress values.
+The app includes 29 course paths, 36 lessons, 72 original practice questions, lesson notes, source readings, in-app YouTube playback in the core paths, explainable recommendations, XP and levels, streaks, ten rule-based academic awards, a private study community, and a college launchpad. Every reward is calculated from saved activity; there are no fake users, leaderboards, or progress values.
 
-Three courses are labeled High School: U.S. History, Algebra I, and AP Biology. Two are labeled College: College Algebra and General Biology I. Core lessons, notes, tests, progress, and rewards work from the bundled app; video streaming and linked source readings require internet access.
+Seventeen paths are labeled High School and twelve are labeled College. Lessons, notes, tests, progress, community writing, readiness checklists, and rewards work from the bundled app; video streaming, sharing, and linked source readings require external services.
 
 > Original practice material informed by publicly available Delaware learning objectives and archival records. Not an official Delaware assessment and not endorsed by the State of Delaware.
 

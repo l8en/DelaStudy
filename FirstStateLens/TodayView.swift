@@ -2,12 +2,14 @@ import SwiftUI
 
 struct TodayView: View {
     @Bindable var model: AppModel
+    @State private var compactHeader = false
     private var cardColor: Color { LensTheme.courseSurface(model.selectedCourse.subject) }
     private var demonstrated: Int { model.selectedCourseProgress.filter { $0.status == .demonstrated }.count }
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
+                LensScrollMarker()
                 profileHeader
                 Text("Your learning\nroadmap")
                     .font(.system(size: 42, weight: .heavy, design: .rounded))
@@ -17,14 +19,16 @@ struct TodayView: View {
                 momentumStrip
                 if let award = model.awards.first(where: { !$0.isUnlocked }) { nextAward(award) }
             }
-            .padding(.horizontal, 20).padding(.top, 16).padding(.bottom, 30)
+            .padding(.horizontal, 20).padding(.top, 16).padding(.bottom, 110)
         }
         .background(LensTheme.paper).navigationBarTitleDisplayMode(.inline)
+        .lensScrollSpace { compactHeader = $0 < -8 }
+        .morphingTopBar(title: "Today", symbol: "sparkles", collapsed: compactHeader)
     }
 
     private var profileHeader: some View {
         HStack(spacing: 12) {
-            Text(initials).font(.headline.bold()).foregroundStyle(.white)
+            Text(initials).font(.headline.bold()).foregroundStyle(LensTheme.onInk)
                 .frame(width: 48, height: 48).background(LensTheme.navy, in: Circle())
             VStack(alignment: .leading, spacing: 2) {
                 Text(greeting).font(.caption.weight(.bold)).foregroundStyle(LensTheme.slate)
@@ -43,12 +47,12 @@ struct TodayView: View {
     private var courseHero: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
-                Image(systemName: model.selectedCourse.symbolName).font(.title2.weight(.bold)).foregroundStyle(.white)
+                Image(systemName: model.selectedCourse.symbolName).font(.title2.weight(.bold)).foregroundStyle(LensTheme.onInk)
                     .frame(width: 54, height: 54).background(LensTheme.navy, in: Circle())
                 Spacer()
                 ZStack {
                     Circle().stroke(LensTheme.navy.opacity(0.18), lineWidth: 4)
-                    Circle().trim(from: 0, to: max(0.02, model.courseCompletion(model.selectedCourse.id)))
+                    Circle().trim(from: 0, to: model.courseCompletion(model.selectedCourse.id))
                         .stroke(LensTheme.navy, style: StrokeStyle(lineWidth: 4, lineCap: .round)).rotationEffect(.degrees(-90))
                     Text("\(demonstrated)/\(model.selectedCourse.objectiveIDs.count)").font(.caption.bold()).foregroundStyle(LensTheme.navy)
                 }.frame(width: 56, height: 56)
@@ -63,8 +67,8 @@ struct TodayView: View {
                     LessonDetailView(model: model, course: model.selectedCourse, objective: nextObjective, lessonNumber: lessonNumber(for: nextObjective))
                 } label: {
                     HStack { Text(demonstrated == 0 ? "Start first lesson" : "Continue course"); Spacer(); Image(systemName: "arrow.right") }
-                        .font(.headline.bold()).foregroundStyle(.white).padding(.horizontal, 20).frame(height: 58).background(LensTheme.navy, in: Capsule())
-                }.buttonStyle(.plain)
+                        .font(.headline.bold()).foregroundStyle(LensTheme.onInk).padding(.horizontal, 20).frame(height: 58).background(LensTheme.navy, in: Capsule())
+                }.buttonStyle(LensCardButtonStyle())
             }
         }
         .padding(22).background(cardColor, in: RoundedRectangle(cornerRadius: 32, style: .continuous))

@@ -38,4 +38,17 @@ struct LearnerMetricsTests {
         let award = LearnerMetrics.awards(content: AppContent.content, snapshot: ProgressSnapshot(attempts: attempts)).first { $0.id == "explorer" }
         #expect(award?.isUnlocked == true)
     }
+
+    @Test func subjectAndCollegeAwardsUseActualCourseActivity() {
+        let attempts = [
+            Attempt(questionID: "record-date", objectiveID: "read-record", submittedChoiceID: "b", isCorrect: true, timestamp: .now, sessionID: UUID(), contentVersion: 1),
+            Attempt(questionID: "algebra-balance", objectiveID: "algebra-equations", submittedChoiceID: "a", isCorrect: true, timestamp: .now, sessionID: UUID(), contentVersion: 1),
+            Attempt(questionID: "biology-shared", objectiveID: "biology-cells", submittedChoiceID: "b", isCorrect: true, timestamp: .now, sessionID: UUID(), contentVersion: 1),
+            Attempt(questionID: "college-function-value", objectiveID: "college-functions", submittedChoiceID: "c", isCorrect: true, timestamp: .now, sessionID: UUID(), contentVersion: 1)
+        ]
+        let awards = LearnerMetrics.awards(content: AppContent.content, snapshot: ProgressSnapshot(attempts: attempts))
+        #expect(awards.first { $0.id == "three-subjects" }?.isUnlocked == true)
+        #expect(awards.first { $0.id == "college-start" }?.isUnlocked == true)
+        #expect(awards.count == 10)
+    }
 }

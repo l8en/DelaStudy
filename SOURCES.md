@@ -1,6 +1,6 @@
 # Source register
 
-Accessed and verified October 16, 2026.
+Accessed and verified October 17, 2026.
 
 | Source | Publisher | URL | Used for | Reuse / limitation |
 |---|---|---|---|---|
@@ -13,6 +13,9 @@ Accessed and verified October 16, 2026.
 | Biology for AP Courses | OpenStax, Rice University | https://openstax.org/books/biology-ap-courses/pages/preface | High-school AP Biology course alignment, cells, and membrane transport | Open textbook; source reading is linked and attributed. App notes and tests are original. |
 | College Algebra 2e | OpenStax, Rice University | https://openstax.org/books/college-algebra-2e/pages/preface | College-level functions, domains, ranges, and quadratics | Open textbook; source reading is linked and attributed. App notes and tests are original. |
 | Biology 2e | OpenStax, Rice University | https://openstax.org/books/biology-2e/pages/preface | College-level gene expression and cell-cycle regulation | Open textbook; source reading is linked and attributed. App notes and tests are original. |
+| OpenStax subject catalog | OpenStax, Rice University | https://openstax.org/subjects | Foundation modules in calculus, statistics, chemistry, physics, environmental biology, economics, psychology, sociology, government, history, and writing | Open textbooks are linked per course. App summaries, notes, choices, and explanations are original; one module does not represent a full textbook. |
+| High School Mathematics | Illustrative Mathematics | https://illustrativemathematics.org/math-curriculum/9-12-math/ | Geometry and Algebra II course alignment | Openly licensed curriculum sequence; app lessons and assessment items are original. |
+| Your Money, Your Goals | Consumer Financial Protection Bureau | https://www.consumerfinance.gov/consumer-tools/educator-tools/your-money-your-goals/ | Personal-finance foundation path | Public U.S. government educational resource; app wording and practice are original. |
 | YouTube Embedded Players and Player Parameters | Google for Developers | https://developers.google.com/youtube/player_parameters | Inline player behavior, privacy-enhanced embed URL, captions, and plays-inline playback | Videos remain hosted by their publishers on YouTube. The app embeds rather than copies them and provides a direct fallback link. |
 
 ## Authorship note

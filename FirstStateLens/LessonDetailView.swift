@@ -36,7 +36,7 @@ struct LessonDetailView: View {
                         .buttonStyle(LensPrimaryButtonStyle())
                 }
             }
-            .padding(.horizontal, 20).padding(.vertical, 16)
+            .padding(.horizontal, 20).padding(.top, 16).padding(.bottom, 110)
         }
         .background(LensTheme.paper)
         .navigationTitle("Lesson \(lessonNumber)")
@@ -81,7 +81,7 @@ struct LessonDetailView: View {
             Text("KEY IDEAS").font(.caption.bold()).tracking(1.2).foregroundStyle(color)
             ForEach(Array(material.keyIdeas.enumerated()), id: \.offset) { index, idea in
                 HStack(alignment: .top, spacing: 13) {
-                    Text("\(index + 1)").font(.caption.monospacedDigit().bold()).foregroundStyle(.white)
+                    Text("\(index + 1)").font(.caption.monospacedDigit().bold()).foregroundStyle(LensTheme.onInk)
                         .frame(width: 28, height: 28).background(color, in: Circle())
                     Text(idea).foregroundStyle(LensTheme.navy).lineSpacing(3)
                 }
