@@ -1,0 +1,307 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_8bf3bdf5-5120-4cb1-96a9-73d769e443d7"><h2 data-rex-keep="true" data-type="document-title" id="page_8bf3bdf5-5120-4cb1-96a9-73d769e443d7_titlecreatedbycookbook"><span class="os-number">1.6</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Sampling Experiment</span>
+</h2>
+<div class="statistics lab ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167914447982"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Stats Lab </span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Sampling Experiment</span>
+</h4>
+<p id="id9893246">Class Time:</p>
+<p id="element-745">Names:</p>
+<div data-type="list" id="element-806"><div data-type="title">Student Learning Outcomes</div><ul>
+<li>The student will demonstrate the simple random, systematic, stratified, and cluster sampling techniques.</li>
+<li>The student will explain the details of each procedure used.<span data-count="2" data-type="newline"><br/><br/></span></li>
+</ul></div>
+<p id="element-153">In this lab, you will be asked to pick several random samples of restaurants. In each case, describe your procedure briefly, including how you might have used the random number generator, and then list the restaurants in the sample you obtained.</p>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="id11521709"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">NOTE</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idp40181216">The following section contains restaurants stratified by city into columns and grouped horizontally by entree cost (clusters).</p>
+</div></section></div><div class="os-table os-top-titled-container"><div class="os-table-title">Restaurants Stratified by City and Entree Cost</div>
+<div class="table-scroll"><table class="top-titled" data-summary="This table provides a sample of restaurants.  Each cell contains a list of restaurants that correspond to the given location and price range.  The first column lists the location, the second column contains restaurants with entrees under $10, the third column contains restaurants with entrees between $10 and $15, the fourth column between $15 and $20, and the fifth column restaurants with entrees over $20." id="id9894hh324636"><thead>
+<tr>
+<th scope="col">Entree Cost</th>
+<th scope="col">Under $10</th>
+<th scope="col">$10 to under $15</th>
+<th scope="col">$15 to under $20</th>
+<th scope="col">Over $20</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>San Jose</td>
+<td>El Abuelo Taq, Pasta Mia, Emma’s Express, Bamboo Hut</td>
+<td>Emperor’s Guard, Creekside Inn</td>
+<td>Agenda, Gervais, Miro’s</td>
+<td>Blake’s, Eulipia, Hayes Mansion, Germania</td>
+</tr>
+<tr>
+<td>Palo Alto</td>
+<td>Senor Taco, Olive Garden, Taxi’s</td>
+<td>Ming’s, P.A. Joe’s, Stickney’s</td>
+<td>Scott’s Seafood, Poolside Grill, Fish Market</td>
+<td>Sundance Mine, Maddalena’s, Spago’s</td>
+</tr>
+<tr>
+<td>Los Gatos</td>
+<td>Mary’s Patio, Mount Everest, Sweet Pea’s, Andele Taqueria</td>
+<td>Lindsey’s, Willow Street</td>
+<td>Toll House</td>
+<td>Charter House, La Maison Du Cafe</td>
+</tr>
+<tr>
+<td>Mountain View</td>
+<td>Maharaja, New Ma’s, Thai-Rific, Garden Fresh</td>
+<td>Amber Indian, La Fiesta, Fiesta del Mar, Dawit</td>
+<td>Austin’s, Shiva’s, Mazeh</td>
+<td>Le Petit Bistro</td>
+</tr>
+<tr>
+<td>Cupertino</td>
+<td>Hobees, Hung Fu, Samrat, Panda Express</td>
+<td>Santa Barb. Grill, Mand. Gourmet, Bombay Oven, Kathmandu West</td>
+<td>Fontana’s, Blue Pheasant</td>
+<td>Hamasushi, Helios</td>
+</tr>
+<tr>
+<td>Sunnyvale</td>
+<td>Chekijababi, Taj India, Full Throttle, Tia Juana, Lemon Grass</td>
+<td>Pacific Fresh, Charley Brown’s, Cafe Cameroon, Faz, Aruba’s</td>
+<td>Lion &amp; Compass, The Palace, Beau Sejour</td>
+<td>
+</td></tr>
+<tr>
+<td>Santa Clara</td>
+<td>Rangoli, Armadillo Willy’s, Thai Pepper, Pasand</td>
+<td>Arthur’s, Katie’s Cafe, Pedro’s, La Galleria</td>
+<td>Birk’s, Truya Sushi, Valley Plaza</td>
+<td>Lakeside, Mariani’s</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">1.21</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Restaurants Used In Sample</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<p id="element-23513616999"><span data-type="title">A Simple Random Sample</span>Pick a <strong>simple random sample</strong> of 15 restaurants.</p><ol id="list-23562"><li>Describe your procedure.</li>
+<li>Complete the table with your sample.
+<div class="os-table" id="tableone"><div class="table-scroll"><table data-id="tableone" data-summary="This table is presented as a template for collecting data and contains a total of 15 blank cells." role="presentation"><tbody>
+<tr>
+<td>1. __________</td>
+<td>6. __________</td>
+<td>11. __________</td>
+</tr>
+<tr>
+<td>2. __________</td>
+<td>7. __________</td>
+<td>12. __________</td>
+</tr>
+<tr>
+<td>3. __________</td>
+<td>8. __________</td>
+<td>13. __________</td>
+</tr>
+<tr>
+<td>4. __________</td>
+<td>9. __________</td>
+<td>14. __________</td>
+</tr>
+<tr>
+<td>5. __________</td>
+<td>10. __________</td>
+<td>15. __________</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">1.22</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</li>
+</ol>
+<p id="element-235975691"><span data-type="title">A Systematic Sample</span>Pick a <strong>systematic sample</strong> of 15 restaurants.</p><ol id="list-235562"><li>Describe your procedure.</li>
+<li>Complete the table with your sample.
+<div class="os-table" id="tabletwo"><div class="table-scroll"><table data-id="tabletwo" data-summary="This table is presented as a template for collecting data and contains a total of 15 blank cells." role="presentation"><tbody>
+<tr>
+<td>1. __________</td>
+<td>6. __________</td>
+<td>11. __________</td>
+</tr>
+<tr>
+<td>2. __________</td>
+<td>7. __________</td>
+<td>12. __________</td>
+</tr>
+<tr>
+<td>3. __________</td>
+<td>8. __________</td>
+<td>13. __________</td>
+</tr>
+<tr>
+<td>4. __________</td>
+<td>9. __________</td>
+<td>14. __________</td>
+</tr>
+<tr>
+<td>5. __________</td>
+<td>10. __________</td>
+<td>15. __________</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">1.23</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</li>
+</ol>
+<p id="element-2466992"><span data-type="title">A Stratified Sample</span>Pick a <strong>stratified sample</strong>, by city, of 20 restaurants. Use 25% of the restaurants from each stratum. Round to the nearest whole number.</p><ol id="list-23566372"><li>Describe your procedure.</li>
+<li>Complete the table with your sample.
+<div class="os-table" id="tablethree"><div class="table-scroll"><table data-id="tablethree" data-summary="This table is presented as a template for collecting data and contains a total of 20 blank cells." role="presentation"><tbody>
+<tr>
+<td>1. __________</td>
+<td>6. __________</td>
+<td>11. __________</td>
+<td>16. __________</td>
+</tr>
+<tr>
+<td>2. __________</td>
+<td>7. __________</td>
+<td>12. __________</td>
+<td>17. __________</td>
+</tr>
+<tr>
+<td>3. __________</td>
+<td>8. __________</td>
+<td>13. __________</td>
+<td>18. __________</td>
+</tr>
+<tr>
+<td>4. __________</td>
+<td>9. __________</td>
+<td>14. __________</td>
+<td>19. __________</td>
+</tr>
+<tr>
+<td>5. __________</td>
+<td>10. __________</td>
+<td>15. __________</td>
+<td>20. __________</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">1.24</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</li>
+</ol>
+<p id="element-2359869125"><span data-type="title">A Stratified Sample</span>Pick a <strong>stratified sample</strong>, by entree cost, of 21 restaurants. Use 25% of the restaurants from each stratum.  Round to the nearest whole number.</p><ol id="list-235966372"><li>Describe your procedure.</li>
+<li>Complete the table with your sample.
+<div class="os-table" id="tablefour"><div class="table-scroll"><table data-id="tablefour" data-summary="This table is presented as a template for collecting data and contins a total of 21 blank cells." role="presentation"><tbody>
+<tr>
+<td>1. __________</td>
+<td>6. __________</td>
+<td>11. __________</td>
+<td>16. __________</td>
+</tr>
+<tr>
+<td>2. __________</td>
+<td>7. __________</td>
+<td>12. __________</td>
+<td>17. __________</td>
+</tr>
+<tr>
+<td>3. __________</td>
+<td>8. __________</td>
+<td>13. __________</td>
+<td>18. __________</td>
+</tr>
+<tr>
+<td>4. __________</td>
+<td>9. __________</td>
+<td>14. __________</td>
+<td>19. __________</td>
+</tr>
+<tr>
+<td>5. __________</td>
+<td>10. __________</td>
+<td>15. __________</td>
+<td>20. __________</td>
+</tr>
+<tr>
+<td>
+</td><td>
+</td><td>
+</td><td>21. __________</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">1.25</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</li>
+</ol>
+<p id="element-252976925"><span data-type="title">A Cluster Sample</span>Pick a <strong>cluster sample</strong> of restaurants from two cities. The number of restaurants will vary.</p><ol id="list-2359669372"><li>Describe your procedure.</li>
+<li>Complete the table with your sample.
+<div class="os-table" id="tablefive"><div class="table-scroll"><table data-id="tablefive" data-summary="This table is presented as a template for collecting data and contains a total of 25 blank cells." role="presentation"><tbody>
+<tr>
+<td>1. ________</td>
+<td>6. ________</td>
+<td>11. ________</td>
+<td>16. ________</td>
+<td>21. ________</td>
+</tr>
+<tr>
+<td>2. ________</td>
+<td>7. ________</td>
+<td>12. ________</td>
+<td>17. ________</td>
+<td>22. ________</td>
+</tr>
+<tr>
+<td>3. ________</td>
+<td>8. ________</td>
+<td>13. ________</td>
+<td>18. ________</td>
+<td>23. ________</td>
+</tr>
+<tr>
+<td>4. ________</td>
+<td>9. ________</td>
+<td>14. ________</td>
+<td>19. ________</td>
+<td>24. ________</td>
+</tr>
+<tr>
+<td>5. ________</td>
+<td>10. ________</td>
+<td>15. ________</td>
+<td>20. ________</td>
+<td>25. ________</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">1.26</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</li>
+</ol></div></section></div>
+</div></article><footer><p>Adapted from OpenStax, Introductory Statistics 2e, 1.6 Sampling Experiment. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introductory-statistics-2e/pages/1-6-sampling-experiment">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

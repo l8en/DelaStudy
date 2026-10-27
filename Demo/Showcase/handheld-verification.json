@@ -1,0 +1,69 @@
+{
+  "verifiedOn": "2026-10-26",
+  "file": "DelaStudy-Handheld-Walkthrough.mp4",
+  "audioTracks": 0,
+  "bytes": 84898974,
+  "codec": "avc1",
+  "creationEpoch": 1793066412.8009148,
+  "duration": 168,
+  "height": 1080,
+  "videoTracks": 1,
+  "width": 1920,
+  "sha256": "e7b39398dc3c6220b0e1ae86ce8164276194f6f55d5b8b0783a89a7cf65556ef",
+  "presentation": {
+    "device": "Original iPhone 14 Pro-style presentation frame; not an exact CAD model.",
+    "hand": "Original code-native illustrated hand with shared holding motion and subtle thumb flex.",
+    "dynamicIsland": "Illustrated front cutout and camera detail; no new app integration or physical-device functionality.",
+    "background": "White",
+    "codeWindows": 8,
+    "captions": false,
+    "audio": false,
+    "preserved": "DelaStudy branding applied to public filenames, titles, scripts and lesson credit. Two navigation transitions trimmed; all scene durations and study interactions preserved."
+  },
+  "motion": {
+    "sharedRotationDegreesAmplitude": 0.3333333333333333,
+    "sharedVerticalPixelsAmplitude": 1.6,
+    "thumbRotationDegreesAmplitude": 0.36,
+    "phoneRotationPeriodSeconds": 12,
+    "verticalPeriodSeconds": 9,
+    "thumbPeriodSeconds": 16
+  },
+  "checks": [
+    "Renderer and handheld helper compile with the current native macOS SDK.",
+    "All 13 chapter midpoints decoded and visually reviewed.",
+    "Full-size practice and Zen frames reviewed for screen masking, device detail, hand placement and readable code.",
+    "Opposite holding poses reviewed at 3 and 9 seconds.",
+    "Closing frame decoded at 167 seconds with no lingering code or black frame.",
+    "Final media is 1920x1080 H.264 with 168-second duration and zero audio tracks.",
+    "Previous exports preserved; no production app or user account data modified.",
+    "git diff --check passed.",
+    "DelaStudy credit visually reviewed; exported media properties remeasured after branding update."
+  ],
+  "sourceFiles": [
+    {
+      "path": "scripts/render_showcase.swift",
+      "sha256": "cb7bc75c944a0db0fd97e5f099043fcb52dd736a9be6ff0eba53683de5ae1631"
+    },
+    {
+      "path": "scripts/showcase_handheld.swift",
+      "sha256": "a926bf4dda3afff544cbea1e30fffc4c6b8807fbb025eeb60b7b4649da128a97"
+    },
+    {
+      "path": "Demo/Showcase/handheld-edit-manifest.json",
+      "sha256": "05f42e892124f1793e0d6281ebd613ff7424997c92e6c529b3d73dfbacf78e98"
+    }
+  ],
+  "modelReference": "https://support.apple.com/en-us/111849",
+  "boundaries": [
+    "The original app footage was captured in iPhone 14 Simulator, not from a physical iPhone 14 Pro.",
+    "The hardware and hand are composited illustration, not a filmed person or a photorealistic 3D scan.",
+    "The video does not establish physical-device, Dynamic Island or release readiness."
+  ],
+  "durationSeconds": 168,
+  "brandingRevision": {
+    "appName": "DelaStudy",
+    "description": "DelaStudy branding applied to public filenames, titles, scripts and lesson credit. Two navigation transitions trimmed; all scene durations and study interactions preserved.",
+    "creditsComposited": true,
+    "projectIdentifiersUnchanged": true
+  }
+}

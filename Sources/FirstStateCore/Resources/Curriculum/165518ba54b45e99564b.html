@@ -1,0 +1,909 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_d9656d2a-5f02-4142-8bc1-8b5cb8feedf9"><h2 data-rex-keep="true" data-type="document-title" id="page_d9656d2a-5f02-4142-8bc1-8b5cb8feedf9_titlecreatedbycookbook"><span class="os-number">2.5</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Measures of the Center of the Data</span>
+</h2>
+<p id="element-848">The "center" of a data set is also a way of describing location.
+The two most widely used measures of the "center" of the data are the <span data-type="term" group-by="m" id="term-00001">mean</span> (average) and the <span data-type="term" group-by="m" id="term-00002">median</span>. To calculate the <strong>mean weight</strong> of 50 people, add the 50 weights together and divide by 50. To find the <strong> median weight</strong> of the 50 people, order the data and find the number that splits the data into two equal parts. The median is generally a better measure of the center when there are extreme values or outliers because it is not affected by the precise numerical values of the outliers. The mean is the most common measure of the center.</p>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="eip-13"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">NOTE</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idp62684352">The words “mean” and “average” are often used interchangeably. The substitution of one word for the other is common practice. The technical term is “arithmetic mean” and “average” is technically a center location. However, in practice among non-statisticians, “average" is commonly accepted for “arithmetic mean.”</p></div></section></div>
+<p id="element-44">When each value in the data set is not unique, the mean can be calculated by multiplying each distinct value by its frequency and then dividing the sum by the total number of data values. The letter used to represent the <strong>sample mean</strong> is an <em data-effect="italics">x</em> with a bar over it (pronounced “<em data-effect="italics">x</em> bar”): <span class="os-math-in-para"><math display="inline"><semantics><mrow><mover accent="true">
+<mi>x</mi>
+<mo>–</mo>
+</mover></mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>–</mo>
+</mover></annotation-xml></semantics></math></span>.</p><p id="element-705">The Greek letter <em data-effect="italics">μ</em> (pronounced "mew") represents the <strong>population mean</strong>. One of the requirements for the <strong>sample mean</strong> to be a good estimate of the <strong>population mean</strong> is for the sample taken to be truly random.</p>
+<p id="element-228">To see that both ways of calculating the mean are the same, consider the sample:
+<span data-type="newline"><br/></span>1; 1; 1; 2; 2; 3; 4; 4; 4; 4; 4</p><div class="unnumbered" data-label="" data-type="equation" id="element-46"><div class="math-scroll"><math display="block"><semantics><mrow>
+<mover>
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mn>2</mn>
+<mo>+</mo>
+<mn>2</mn>
+<mo>+</mo>
+<mn>3</mn>
+<mo>+</mo>
+<mn>4</mn>
+<mo>+</mo>
+<mn>4</mn>
+<mo>+</mo>
+<mn>4</mn>
+<mo>+</mo>
+<mn>4</mn>
+<mo>+</mo>
+<mn>4</mn>
+</mrow>
+<mn>11</mn>
+</mfrac>
+<mo>=</mo>
+<mn>2.7</mn>
+</mrow><annotation-xml encoding="MathML-Content"><mover>
+<mi>x</mi>
+<mo>¯</mo>
+</mover><mo>=</mo><mfrac>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mn>2</mn>
+<mo>+</mo>
+<mn>2</mn>
+<mo>+</mo>
+<mn>3</mn>
+<mo>+</mo>
+<mn>4</mn>
+<mo>+</mo>
+<mn>4</mn>
+<mo>+</mo>
+<mn>4</mn>
+<mo>+</mo>
+<mn>4</mn>
+<mo>+</mo>
+<mn>4</mn>
+</mrow>
+<mn>11</mn>
+</mfrac><mo>=</mo><mn>2.7</mn></annotation-xml></semantics></math></div>
+</div>
+<div class="unnumbered" data-label="" data-type="equation" id="element-662"><div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>3</mn><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mn>2</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>+</mo><mn>5</mn><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mn>11</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>2.7</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>3</mn><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mn>2</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>+</mo><mn>5</mn><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mn>11</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>2.7</mn>
+</mrow></annotation-xml></semantics></math></div></div><p id="element-180">In the second calculation, the frequencies are 3, 2, 1, and 5.</p><p id="element-429">You can quickly find the location of the median by using the expression <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mrow>
+<mi>n</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mrow>
+<mi>n</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac></annotation-xml></semantics></math></span>.</p>
+<p id="element-860">The letter <em data-effect="italics">n</em> is the total number of data values in the sample. If <em data-effect="italics">n</em> is an odd number, the median is the middle value of the ordered data (ordered smallest to largest). If <em data-effect="italics">n</em> is an even number, the median is equal to the two middle values added together and divided by two after the data has been ordered. For example, if the total number of data values is 97, then <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mrow>
+<mi>n</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mrow>
+<mi>n</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac></annotation-xml></semantics></math></span>=
+<span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mrow>
+<mn>97</mn>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mrow>
+<mn>97</mn>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac></annotation-xml></semantics></math></span> = 49. The median is the 49<sup>th</sup> value in the ordered data. If the total number of data values is 100, then <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mrow>
+<mi>n</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mrow>
+<mi>n</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac></annotation-xml></semantics></math></span>=
+<span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mrow>
+<mn>100</mn>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mrow>
+<mn>100</mn>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac></annotation-xml></semantics></math></span> = 50.5. The median occurs midway between the 50<sup>th</sup> and 51<sup>st</sup> values. The location of the median and the value of the median are <strong>not</strong> the same. The upper case letter <em data-effect="italics">M</em> is often used to represent the median. The next example illustrates the location of the median and the value of the median.</p><div class="ui-has-child-title" data-type="example" id="element-3"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.26</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="exer4"><header></header><section>
+<div data-type="problem" id="id45306962"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-226">A hospital administrator keeps track of the ages (in years) of patients visiting the emergency room over a one-week period (data are sorted from smallest to largest):<span data-type="newline"><br/></span>3; 4; 8; 8; 10; 11; 12; 13; 14; 15; 15; 16; 16; 17; 17; 18; 21; 22; 22; 24; 24; 25; 26; 26; 27; 27; 29; 29; 31; 32; 33; 33; 34; 34; 35; 37; 40; 44; 44; 47;
+<span data-type="newline"><br/></span>Calculate the mean and the median.</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id45386042">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-471">The calculation for the mean is:</p>
+<p id="element-197"><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover>
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mo>[</mo>
+<mn>3</mn>
+<mo>+</mo>
+<mn>4</mn>
+<mo>+</mo>
+<mo>(</mo>
+<mn>8</mn>
+<mo>)</mo>
+<mo>(</mo>
+<mn>2</mn>
+<mo>)</mo>
+<mo>+</mo>
+<mn>10</mn>
+<mo>+</mo>
+<mn>11</mn>
+<mo>+</mo>
+<mn>12</mn>
+<mo>+</mo>
+<mn>13</mn>
+<mo>+</mo>
+<mn>14</mn>
+<mo>+</mo>
+<mo>(</mo>
+<mn>15</mn>
+<mo>)</mo>
+<mo>(</mo>
+<mn>2</mn>
+<mo>)</mo>
+<mo>+</mo>
+<mo>(</mo>
+<mn>16</mn>
+<mo>)</mo>
+<mo>(</mo>
+<mn>2</mn>
+<mo>)</mo>
+<mo>+</mo>
+<mtext>...</mtext>
+<mo>+</mo>
+<mn>35</mn>
+<mo>+</mo>
+<mn>37</mn>
+<mo>+</mo>
+<mn>40</mn>
+<mo>+</mo>
+<mo>(</mo>
+<mn>44</mn>
+<mo>)</mo>
+<mo>(</mo>
+<mn>2</mn>
+<mo>)</mo>
+<mo>+</mo>
+<mn>47</mn>
+<mo>]</mo>
+</mrow>
+<mn>40</mn>
+</mfrac>
+<mo>=</mo>
+<mi>23.6</mi>
+</mrow><annotation-xml encoding="MathML-Content"><mover>
+<mi>x</mi>
+<mo>¯</mo>
+</mover><mo>=</mo><mfrac>
+<mrow>
+<mo>[</mo>
+<mn>3</mn>
+<mo>+</mo>
+<mn>4</mn>
+<mo>+</mo>
+<mo>(</mo>
+<mn>8</mn>
+<mo>)</mo>
+<mo>(</mo>
+<mn>2</mn>
+<mo>)</mo>
+<mo>+</mo>
+<mn>10</mn>
+<mo>+</mo>
+<mn>11</mn>
+<mo>+</mo>
+<mn>12</mn>
+<mo>+</mo>
+<mn>13</mn>
+<mo>+</mo>
+<mn>14</mn>
+<mo>+</mo>
+<mo>(</mo>
+<mn>15</mn>
+<mo>)</mo>
+<mo>(</mo>
+<mn>2</mn>
+<mo>)</mo>
+<mo>+</mo>
+<mo>(</mo>
+<mn>16</mn>
+<mo>)</mo>
+<mo>(</mo>
+<mn>2</mn>
+<mo>)</mo>
+<mo>+</mo>
+<mtext>...</mtext>
+<mo>+</mo>
+<mn>35</mn>
+<mo>+</mo>
+<mn>37</mn>
+<mo>+</mo>
+<mn>40</mn>
+<mo>+</mo>
+<mo>(</mo>
+<mn>44</mn>
+<mo>)</mo>
+<mo>(</mo>
+<mn>2</mn>
+<mo>)</mo>
+<mo>+</mo>
+<mn>47</mn>
+<mo>]</mo>
+</mrow>
+<mn>40</mn>
+</mfrac><mo>=</mo><mi>23.6</mi></annotation-xml></semantics></math></span>
+<span data-type="newline"><br/></span>To find the median, <em data-effect="italics">M</em>, first use the formula for the location. The location is:
+<span data-type="newline"><br/></span><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mrow>
+<mi>n</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>40</mn>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<mn>20.5</mn>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mrow>
+<mi>n</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac><mo>=</mo><mfrac>
+<mrow>
+<mn>40</mn>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+<mn>2</mn>
+</mfrac><mo>=</mo><mn>20.5</mn></annotation-xml></semantics></math></span>
+<span data-type="newline"><br/></span>Starting at the smallest value, the median is located between the 20<sup>th</sup> and 21<sup>st</sup> values (the two 24s):
+<span data-type="newline"><br/></span>3; 4; 8; 8; 10; 11; 12; 13; 14; 15; 15; 16; 16; 17; 17; 18; 21; 22; 22; 24; 24; 25; 26; 26; 27; 27; 29; 29; 31; 32; 33; 33; 34; 34; 35; 37; 40; 44; 44; 47;</p><p id="element-904">
+<span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mi>M</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>24</mn>
+<mo>+</mo>
+<mn>24</mn>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo>
+<mn>24</mn>
+</mrow><annotation-xml encoding="MathML-Content"><mi>M</mi><mo>=</mo><mfrac>
+<mrow>
+<mn>24</mn>
+<mo>+</mo>
+<mn>24</mn>
+</mrow>
+<mn>2</mn>
+</mfrac><mo>=</mo><mn>24</mn></annotation-xml></semantics></math></span>
+</p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics calculator ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp50763088"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Using the TI-83, 83+, 84, 84+ Calculator</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idp54507328">To find the mean and the median:</p>
+<p id="fs-idp87775312">Clear list L1.  Pres <code data-type="code">STAT 4:ClrList</code>. Enter 2nd 1 for list L1. Press ENTER.</p>
+<p id="fs-idm47103392">Enter data into the list editor.  Press <code data-type="code">STAT 1:EDIT</code>.</p>
+<p id="fs-idp45529696">Put the data values into list L1.</p>
+<p id="fs-idp33349200">Press STAT and arrow to CALC.  Press 1:1-VarStats. Press 2nd 1 for L1 and then ENTER.</p>
+<p id="fs-idp46064432">Press the down and up arrow keys to scroll.</p>
+<p id="fs-idp50820000"><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> = 23.6, <em data-effect="italics">M</em> = 24</p>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp48953680"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.26</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm28353888"><header></header><section><div data-type="problem" id="fs-idm72704208"><div class="os-problem-container">
+<p id="fs-idm46796800">The following data show the number of months patients typically wait on a transplant list before getting surgery. The data are ordered from smallest to largest. Calculate the mean and median.</p><p id="fs-idm114142640">
+<span data-display="inline" data-list-type="labeled-item" data-type="list" id="list-00001">
+<span data-type="item">3<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">4<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">5<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">7<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">7<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">7<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">7<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">8<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">8<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">9<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">9<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">10<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">10<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">10<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">10<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">10<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">11<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">12<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">12<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">13<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">14<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">14<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">15<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">15<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">17<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">17<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">18<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">19<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">19<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">19<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">21<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">21<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">22<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">22<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">23<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">24<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">24<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">24<span class="-os-inline-list-separator">; </span></span>
+<span data-type="item">24</span>
+</span></p>
+</div></div>
+</section></div></div></section></div>
+<div class="ui-has-child-title" data-type="example" id="element-231"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.27</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="exer6"><header></header><section>
+<div data-type="problem" id="id45393377"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-213">Suppose that in a small town of 50 people, one person earns $5,000,000 per year and the other 49 each earn $30,000. Which is the better measure of the "center": the mean or the median?</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id45393396">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-444">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>5</mn><mo>,</mo><mn>000</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>49</mn><mo stretchy="false">(</mo><mn>30</mn><mo>,</mo><mn>000</mn><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>129,400</mn>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>5</mn><mo>,</mo><mn>000</mn><mo>,</mo><mn>000</mn><mo>+</mo><mn>49</mn><mo stretchy="false">(</mo><mn>30</mn><mo>,</mo><mn>000</mn><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>129,400</mn>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p><p id="element-311"><em data-effect="italics">M</em> = 30,000
+</p><p id="element-831">(There are 49 people who earn $30,000 and one person who earns $5,000,000.)</p>
+<p id="element-564">The median is a better measure of the "center" than the mean because 49 of  the values are 30,000 and one is 5,000,000.  The 5,000,000 is an outlier.  The 30,000 gives us a better sense of the middle of the data.</p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp18783360"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.27</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm79009152"><header></header><section><div data-type="problem" id="fs-idm79009024"><div class="os-problem-container"><p id="fs-idm10019504">In a sample of 60 households, one house is worth $2,500,000. Twenty-nine houses are worth $280,000, and all the others are worth $315,000. Which is the better measure of the “center”: the mean or the median?</p></div></div>
+</section></div></div></section></div>
+<p id="element-584">Another measure of the center is the mode. The <span data-type="term" group-by="m" id="term-00003">mode</span> is the most frequent value. There can be more than one mode in a data set as long as those values have the same frequency and that frequency is the highest. A data set with two modes is called bimodal.</p>
+<div class="ui-has-child-title" data-type="example" id="element-114"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.28</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><p id="element-639">Statistics exam scores for 20 students are as follows:</p>
+<p id="element-104"><span data-display="inline" data-list-type="labeled-item" data-type="list" id="set-536">
+<span data-type="item">50<span class="-os-inline-list-separator">; </span></span><span data-type="item">53<span class="-os-inline-list-separator">; </span></span><span data-type="item">59<span class="-os-inline-list-separator">; </span></span><span data-type="item">59<span class="-os-inline-list-separator">; </span></span><span data-type="item">63<span class="-os-inline-list-separator">; </span></span><span data-type="item">63<span class="-os-inline-list-separator">; </span></span><span data-type="item">72<span class="-os-inline-list-separator">; </span></span><span data-type="item">72<span class="-os-inline-list-separator">; </span></span><span data-type="item">72<span class="-os-inline-list-separator">; </span></span><span data-type="item">72<span class="-os-inline-list-separator">; </span></span><span data-type="item">72<span class="-os-inline-list-separator">; </span></span><span data-type="item">76<span class="-os-inline-list-separator">; </span></span><span data-type="item">78<span class="-os-inline-list-separator">; </span></span><span data-type="item">81<span class="-os-inline-list-separator">; </span></span><span data-type="item">83<span class="-os-inline-list-separator">; </span></span><span data-type="item">84<span class="-os-inline-list-separator">; </span></span><span data-type="item">84<span class="-os-inline-list-separator">; </span></span><span data-type="item">84<span class="-os-inline-list-separator">; </span></span><span data-type="item">90<span class="-os-inline-list-separator">; </span></span><span data-type="item">93</span></span>
+</p><div class="unnumbered has-problem-title" data-type="exercise" id="exer3"><header></header><section>
+<div data-type="problem" id="id44835721"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-32535">Find the mode.</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id44835735">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-76">The most frequent score is 72, which occurs five times. Mode  =  72.</p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp45793968"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.28</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm24402032"><header></header><section><div data-type="problem" id="fs-idm24643648"><div class="os-problem-container"><p id="fs-idp74555792">The number of books checked out from the library from 25 students are as follows:</p>
+<p id="fs-idm901328"><span data-display="inline" data-list-type="labeled-item" data-type="list" id="list-00002"><span data-type="item">0<span class="-os-inline-list-separator">; </span></span><span data-type="item">0<span class="-os-inline-list-separator">; </span></span><span data-type="item">0<span class="-os-inline-list-separator">; </span></span><span data-type="item">1<span class="-os-inline-list-separator">; </span></span><span data-type="item">2<span class="-os-inline-list-separator">; </span></span><span data-type="item">3<span class="-os-inline-list-separator">; </span></span><span data-type="item">3<span class="-os-inline-list-separator">; </span></span><span data-type="item">4<span class="-os-inline-list-separator">; </span></span><span data-type="item">4<span class="-os-inline-list-separator">; </span></span><span data-type="item">5<span class="-os-inline-list-separator">; </span></span><span data-type="item">5<span class="-os-inline-list-separator">; </span></span><span data-type="item">7<span class="-os-inline-list-separator">; </span></span><span data-type="item">7<span class="-os-inline-list-separator">; </span></span><span data-type="item">7<span class="-os-inline-list-separator">; </span></span><span data-type="item">7<span class="-os-inline-list-separator">; </span></span><span data-type="item">8<span class="-os-inline-list-separator">; </span></span><span data-type="item">8<span class="-os-inline-list-separator">; </span></span><span data-type="item">8<span class="-os-inline-list-separator">; </span></span><span data-type="item">9<span class="-os-inline-list-separator">; </span></span><span data-type="item">10<span class="-os-inline-list-separator">; </span></span><span data-type="item">10<span class="-os-inline-list-separator">; </span></span><span data-type="item">11<span class="-os-inline-list-separator">; </span></span><span data-type="item">11<span class="-os-inline-list-separator">; </span></span><span data-type="item">12<span class="-os-inline-list-separator">; </span></span><span data-type="item">12</span></span>
+<span data-type="newline"><br/></span>Find the mode.
+</p>
+</div></div>
+</section></div></div></section></div>
+<div class="ui-has-child-title" data-type="example" id="element-725"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.29</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-622">Five real estate exam scores are 430, 430, 480, 480, 495. The data set is bimodal because the scores 430 and 480 each occur twice.</p>
+<p id="element-353">When is the mode the best measure of the "center"? Consider a weight loss program that advertises a mean weight loss of six pounds the first week of the program. The mode might indicate that most people lose two pounds the first week, making the program less appealing.</p>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="eip-146"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">NOTE</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm78257648">The mode can be calculated for qualitative data as well as for quantitative data. For example, if the data set is: red, red, red, green, green, yellow, purple, black, blue, the mode is red.</p></div></section></div>
+<p id="element-660">Statistical software will easily calculate the mean, the median, and the mode. Some graphing calculators can also make these calculations.  In the real world, people make these calculations using software.</p>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp55881696"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.29</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm2098096"><header></header><section><div data-type="problem" id="fs-idm2097968"><div class="os-problem-container">
+<p id="fs-idm5923360">Five credit scores are 680, 680, 700, 720, 720. The data set is bimodal because the scores 680 and 720 each occur twice. Consider the annual earnings of workers at a factory. The mode is $25,000 and occurs 150 times out of 301. The median is $50,000 and the mean is $47,500. What would be the best measure of the “center”?</p></div></div>
+</section></div>
+</div></section></div><section data-depth="1" id="element-282"><h3 data-type="title">The Law of Large Numbers and the Mean</h3>
+<p id="element-41">The Law of Large Numbers says that if you take samples of larger and larger size from any population, then the mean <span class="os-math-in-para"><math display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo>¯</mo></mover></mrow><annotation-xml encoding="MathML-Content"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></annotation-xml></semantics></math></span> of the sample is very likely to get closer and closer to <em data-effect="italics">µ</em>. This is discussed in more detail later in the text.</p>
+</section>
+<section data-depth="1" id="eip-529"><h3 data-type="title">Sampling Distributions and Statistic of a Sampling Distribution</h3>
+<p id="eip-568">You can think of a <span data-type="term" group-by="s" id="term-00004">sampling distribution</span> as a <strong> relative frequency distribution</strong> with a great many samples. (See <strong>Sampling and Data</strong> for a review of relative frequency). Suppose thirty randomly selected students were asked the number of movies they watched the previous week. The results are in the <strong>relative frequency table</strong> shown below.</p>
+<div class="os-table" id="rel_freq_table"><div class="table-scroll"><table data-id="rel_freq_table" data-summary="The table presents the number of movies 30 students watched in the previous week. The first column lists the number of movies from 0-4 and the second column lists the relative frequencies."><thead>
+<tr>
+<th scope="col"># of movies</th>
+<th scope="col">Relative Frequency</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>5</mn>
+<mrow>
+<mn>30</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>5</mn>
+<mrow>
+<mn>30</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+<tr>
+<td>1</td>
+<td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>15</mn>
+<mrow>
+<mn>30</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>15</mn>
+<mrow>
+<mn>30</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+<tr>
+<td>2</td>
+<td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>6</mn>
+<mrow>
+<mn>30</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>6</mn>
+<mrow>
+<mn>30</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+<tr>
+<td>3</td>
+<td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mrow>
+<mn>30</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>3</mn>
+<mrow>
+<mn>30</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+<tr>
+<td>4</td>
+<td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>30</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>30</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.25</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="eip-7"><strong>If you let the number of samples get very large (say, 300 million or more), the relative frequency table becomes a relative frequency distribution</strong>.</p>
+<p id="eip-309">A <strong>statistic</strong> is a number calculated from a sample. Statistic examples include the mean, the median and the mode as well as others.  The sample mean <span class="os-math-in-para"><math display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo>¯</mo></mover></mrow><annotation-xml encoding="MathML-Content"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></annotation-xml></semantics></math></span> is an example of a statistic which estimates the population mean <em data-effect="italics">μ</em>.</p></section>
+<section data-depth="1" id="fs-idp28527728"><h3 data-type="title">Calculating the Mean of Grouped Frequency Tables</h3>
+<p id="fs-idp16870784">When only grouped data is available, you do not know the individual data values (we only know intervals and interval frequencies); therefore, you cannot compute an exact mean for the data set. What we must do is estimate the actual mean by calculating the mean of a frequency table. A <span data-type="term" group-by="f" id="term-00005">frequency table</span> is a data representation in which grouped data is displayed along with the corresponding frequencies. To calculate the mean from a grouped frequency table we can apply the basic definition of mean: <em data-effect="italics">mean</em> = <span class="os-math-in-para"><math display="inline"><semantics><mrow><mfrac><mrow><mtext>data</mtext><mo> </mo><mtext>sum</mtext></mrow><mtext>number of data values</mtext></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mrow><mtext>data</mtext><mo> </mo><mtext>sum</mtext></mrow><mtext>number of data values</mtext></mfrac></annotation-xml></semantics></math></span> We simply need to modify the definition to fit within the restrictions of a frequency table.</p>
+<p id="fs-idp28261664">Since we do not know the individual data values we can instead find the <span data-type="term" group-by="m" id="term-00006">midpoint</span> of each interval. The midpoint is <span class="os-math-in-para"><math display="inline"><semantics><mrow><mfrac><mrow><mtext>lower boundary</mtext><mo>+</mo><mtext>upper boundary</mtext></mrow><mn>2</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mrow><mtext>lower boundary</mtext><mo>+</mo><mtext>upper boundary</mtext></mrow><mn>2</mn></mfrac></annotation-xml></semantics></math></span>. We can now modify the mean definition to be <span class="os-math-in-para"><math display="inline"><semantics><mrow><mtext>Mean of Frequency Table</mtext><mo>=</mo><mfrac><mstyle displaystyle="true"><mo>∑</mo><mi>f</mi><mi>m</mi></mstyle><mstyle displaystyle="true"><mo>∑</mo><mi>f</mi></mstyle></mfrac></mrow><annotation-xml encoding="MathML-Content"><mtext>Mean of Frequency Table</mtext><mo>=</mo><mfrac><mstyle displaystyle="true"><mo>∑</mo><mi>f</mi><mi>m</mi></mstyle><mstyle displaystyle="true"><mo>∑</mo><mi>f</mi></mstyle></mfrac></annotation-xml></semantics></math></span> where <em data-effect="italics">f</em> = the frequency of the interval and <em data-effect="italics">m</em> = the midpoint of the interval.</p>
+<div class="ui-has-child-title" data-type="example" id="fs-idp59127680"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.30</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idp61839840"><header></header><section>
+<div data-type="problem" id="fs-idp47622112"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idm6896112">A frequency table displaying professor Blount’s last statistic test is shown. Find the best estimate of the class mean.</p>
+<div class="os-table" id="fs-idp32456976"><div class="table-scroll"><table data-id="fs-idp32456976" data-summary=""><thead>
+<tr><th scope="col">Grade Interval</th> <th scope="col">Number of Students</th></tr>
+</thead><tbody>
+<tr><td>50–56.5</td> <td>1</td></tr>
+<tr><td>56.5–62.5</td> <td>0</td></tr>
+<tr><td>62.5–68.5</td> <td>4</td></tr>
+<tr><td>68.5–74.5</td> <td>4</td></tr>
+<tr><td>74.5–80.5</td> <td>2</td></tr>
+<tr><td>80.5–86.5</td> <td>3</td></tr>
+<tr><td>86.5–92.5</td> <td>4</td></tr>
+<tr><td>92.5–98.5</td> <td>1</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.26</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idp56820112">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<ul id="fs-idp26414448">
+<li>Find the midpoints for all intervals</li>
+</ul>
+<div class="os-table" id="fs-idp15194576"><div class="table-scroll"><table data-id="fs-idp15194576" data-summary="">
+<thead>
+<tr><th scope="col">Grade Interval</th> <th scope="col">Midpoint</th></tr>
+</thead>
+<tbody>
+<tr><td>50–56.5</td> <td>53.25</td></tr>
+<tr><td>56.5–62.5</td> <td>59.5</td></tr>
+<tr><td>62.5–68.5</td> <td>65.5</td></tr>
+<tr><td>68.5–74.5</td> <td>71.5</td></tr>
+<tr><td>74.5–80.5</td> <td>77.5</td></tr>
+<tr><td>80.5–86.5</td> <td>83.5</td></tr>
+<tr><td>86.5–92.5</td> <td>89.5</td></tr>
+<tr><td>92.5–98.5</td> <td>95.5</td></tr>
+</tbody>
+</table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.27</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<ul id="fs-idp72598816"><li>Calculate the sum of the product of each interval frequency and midpoint.<math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mstyle displaystyle="true" mathsize="140%"><mo>∑</mo></mstyle>
+<mtext>​</mtext>
+</msup>
+<mi>f</mi><mi>m</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mstyle displaystyle="true" mathsize="140%"><mo>∑</mo></mstyle>
+<mtext>​</mtext>
+</msup>
+<mi>f</mi><mi>m</mi>
+</mrow></annotation-xml></semantics></math><span data-count="2" data-type="newline"><br/><br/></span><math display="inline"><semantics><mrow>
+<mrow>
+<mn>53.25</mn><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mn>59.5</mn><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>+</mo><mn>65.5</mn><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo><mo>+</mo><mn>71.5</mn><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo><mo>+</mo><mn>77.5</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mn>83.5</mn><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>+</mo><mn>89.5</mn><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo><mo>+</mo><mn>95.5</mn><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>1460.25</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>53.25</mn><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mn>59.5</mn><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>+</mo><mn>65.5</mn><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo><mo>+</mo><mn>71.5</mn><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo><mo>+</mo><mn>77.5</mn><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>+</mo><mn>83.5</mn><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mo>+</mo><mn>89.5</mn><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo><mo>+</mo><mn>95.5</mn><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mn>1460.25</mn>
+</mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow>
+<mrow>
+<mi>μ</mi><mo>=</mo><mfrac>
+<mrow>
+<mstyle displaystyle="true">
+<mo>∑</mo> <mrow>
+<mi>f</mi><mi>m</mi>
+</mrow>
+</mstyle>
+</mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mo>∑</mo> <mi>f</mi>
+</mstyle>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>1460.25</mn>
+</mrow>
+<mrow>
+<mn>19</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>76.86</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>μ</mi><mo>=</mo><mfrac>
+<mrow>
+<mstyle displaystyle="true">
+<mo>∑</mo> <mrow>
+<mi>f</mi><mi>m</mi>
+</mrow>
+</mstyle>
+</mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mo>∑</mo> <mi>f</mi>
+</mstyle>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>1460.25</mn>
+</mrow>
+<mrow>
+<mn>19</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>76.86</mn>
+</mrow></annotation-xml></semantics></math></li>
+</ul></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm52755520"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.30</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idp22476928"><header></header><section>
+<div data-type="problem" id="fs-idp50951968"><div class="os-problem-container">
+<p id="fs-idm11216000">A researcher conducted a study on the effect that playing video games has on memory recall. As part of the study, they compiled the following data:</p>
+<div class="os-table" id="fs-idm6918832"><div class="table-scroll"><table data-id="fs-idm6918832" data-summary=""><thead><tr><th scope="col">Hours Teenagers Spend on Video Games</th> <th scope="col">Number of Teenagers</th></tr></thead><tbody>
+<tr><td>0–3.5</td><td>3</td></tr>
+<tr><td>3.5–7.5</td><td>7</td></tr>
+<tr><td>7.5–11.5</td><td>12</td></tr>
+<tr><td>11.5–15.5</td><td>7</td></tr>
+<tr><td>15.5–19.5</td><td>9</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.28</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<p id="fs-idp10596832">What is the best estimate for the mean number of hours spent playing video games?</p>
+</div></div>
+</section></div>
+</div></section></div></section>
+</div></article><footer><p>Adapted from OpenStax, Introductory Statistics 2e, 2.5 Measures of the Center of the Data. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introductory-statistics-2e/pages/2-5-measures-of-the-center-of-the-data">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

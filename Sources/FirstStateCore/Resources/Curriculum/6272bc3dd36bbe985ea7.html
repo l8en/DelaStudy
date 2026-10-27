@@ -1,0 +1,531 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_1a2f7d70-9845-4401-b722-0600085b4fe1"><h2 data-rex-keep="true" data-type="document-title" id="page_1a2f7d70-9845-4401-b722-0600085b4fe1_titlecreatedbycookbook"><span class="os-number">3.1</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Terminology</span>
+</h2>
+<p id="element-712">Probability is a measure that is associated with how certain we are of outcomes of a particular experiment or activity. An <span data-type="term" group-by="e" id="term-00001">experiment</span> is a planned operation carried out under controlled conditions. If the result is not predetermined, then the experiment is said to be a <strong>chance</strong> experiment. Flipping one fair coin twice is an example of an experiment.</p>
+<p id="element-71">A result of an experiment is called an <span data-type="term" group-by="o" id="term-00002">outcome</span>. The <span data-type="term" group-by="s" id="term-00003">sample space</span> of an experiment is the set of all possible outcomes. Three ways to represent a sample space are: to list the possible outcomes, to create a tree diagram, or to create a Venn diagram. The uppercase letter <em data-effect="italics">S</em> is used to denote the sample space. For example, if you flip one fair coin, <em data-effect="italics">S</em> = {<em data-effect="italics">H</em>, <em data-effect="italics">T</em>} where <em data-effect="italics">H</em> = heads and <em data-effect="italics">T</em> = tails are the outcomes.</p><p id="element-214">An <span data-type="term" group-by="e" id="term-00004">event</span> is any combination of outcomes. Upper case letters like <em data-effect="italics">A</em> and <em data-effect="italics">B</em> represent events. For example, if the experiment is to flip one fair coin, event <em data-effect="italics">A</em> might be getting at most one head. The probability of an event <em data-effect="italics">A</em> is written <em data-effect="italics">P</em>(<em data-effect="italics">A</em>).</p>
+<p id="element-544">The <span data-type="term" group-by="p" id="term-00005">probability</span> of any outcome is the <span data-type="term" group-by="l" id="term-00006">long-term relative frequency</span> of that outcome. <strong>Probabilities are between zero and one, inclusive</strong> (that is, zero and one and all numbers between these values). <em data-effect="italics">P</em>(<em data-effect="italics">A</em>) = 0 means the event <em data-effect="italics">A</em> can never happen. <em data-effect="italics">P</em>(<em data-effect="italics">A</em>) = 1 means the event <em data-effect="italics">A</em> always happens. <em data-effect="italics">P</em>(<em data-effect="italics">A</em>) = 0.5 means the event <em data-effect="italics">A</em> is equally likely to occur or not to occur. For example, if you flip one fair coin repeatedly (from 20 to 2,000 to 20,000 times) the relative frequency of heads approaches 0.5 (the probability of heads).</p>
+<p id="eip-516"><span data-type="term" group-by="E" id="term-00007">Equally likely</span> means that each outcome of an experiment occurs with equal probability. For example, if you toss a <span data-type="term" group-by="f" id="term-00008">fair</span>, six-sided die, each face (1, 2, 3, 4, 5, or 6) is as likely to occur as any other face. If you toss a fair coin, a Head (<em data-effect="italics">H</em>) and a Tail (<em data-effect="italics">T</em>) are equally likely to occur. If you randomly guess the answer to a true/false question on an exam, you are equally likely to select a correct answer or an incorrect answer.</p>
+<p id="element-677"><strong>To calculate the probability of an event <em data-effect="italics">A</em> when all outcomes in the sample space are equally likely</strong>, count the number of outcomes for event <em data-effect="italics">A</em> and divide by the total number of outcomes in the sample space. For example, if you toss a fair dime and a fair nickel, the sample space is {<em data-effect="italics">HH</em>, <em data-effect="italics">TH</em>, <em data-effect="italics">HT</em>, <em data-effect="italics">TT</em>} where <em data-effect="italics">T</em> = tails and <em data-effect="italics">H</em> = heads. The sample space has four outcomes. <em data-effect="italics">A</em> = getting one head. There are two outcomes that meet this condition {<em data-effect="italics">HT</em>, <em data-effect="italics">TH</em>}, so <em data-effect="italics">P</em>(<em data-effect="italics">A</em>) = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mn>4</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>2</mn>
+<mn>4</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> = 0.5.</p><p id="eip-405">Suppose you roll one fair six-sided die, with the numbers {1, 2, 3, 4, 5, 6} on its faces. Let event <em data-effect="italics">E</em> = rolling a number that is at least five. There are two outcomes {5, 6}. <em data-effect="italics">P</em>(<em data-effect="italics">E</em>) = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mn>6</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>2</mn>
+<mn>6</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>. If you were to roll the die only a few times, you would not be surprised if your observed results did not match the probability. If you were to roll the die a very large number of times, you would expect that, overall, <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mn>2</mn><mn>6</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>2</mn><mn>6</mn></mfrac></mrow></annotation-xml></semantics></math></span> of the rolls would result in an outcome of "at least five". You would not expect exactly <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mn>2</mn><mn>6</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>2</mn><mn>6</mn></mfrac></mrow></annotation-xml></semantics></math></span>. The long-term relative frequency of obtaining this result would approach the theoretical probability of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mn>2</mn><mn>6</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>2</mn><mn>6</mn></mfrac></mrow></annotation-xml></semantics></math></span> as the number of repetitions grows larger and larger.</p>
+<p id="eip-664">This important characteristic of probability experiments is known as the <span data-type="term" group-by="l" id="term-00009">law of large numbers</span> which states that as the number of repetitions of an experiment is increased, the relative frequency obtained in the experiment tends to become closer and closer to the theoretical probability. Even though the outcomes do not happen according to any set pattern or order, overall, the long-term observed relative frequency will approach the theoretical probability. (The word <strong>empirical</strong> is often used instead of the word observed.)</p>
+<p id="eip-407">It is important to realize that in many situations, the outcomes are not equally likely. A coin or die may be <span data-type="term" group-by="u" id="term-00010">unfair</span>, or <strong>biased</strong>. Two math professors in Europe had their statistics students test the Belgian one Euro coin and discovered that in 250 trials, a head was obtained 56% of the time and a tail was obtained 44% of the time. The data seem to show that the coin is not a fair coin; more repetitions would be helpful to draw a more accurate conclusion about such bias. Some dice may be biased. Look at the dice in a game you have at home; the spots on each face are usually small holes carved out and then painted to make the spots visible. Your dice may or may not be biased; it is possible that the outcomes may be affected by the slight weight differences due to the different numbers of holes in the faces. Gambling casinos make a lot of money depending on outcomes from rolling dice, so casino dice are made differently to eliminate bias. Casino dice have flat faces; the holes are completely filled with paint having the same density as the material that the dice are made out of so that each face is equally likely to occur. Later we will learn techniques to use to work with probabilities for events that are not equally likely.<span data-count="2" data-type="newline"><br/><br/></span></p>
+<p id="element-189"><span data-type="title"><span data-type="term" group-by="Symbols" id="term-00013">"OR" Event</span>:</span>An outcome is in the event <em data-effect="italics">A</em> OR <em data-effect="italics">B</em> if the outcome is in <em data-effect="italics">A</em> or is in <em data-effect="italics">B</em> or is in both <em data-effect="italics">A</em> and <em data-effect="italics">B</em>.<span data-type="newline"><br/></span>The event A OR B can also be written as A Union B, with notation as follows:<span data-type="newline"><br/></span><span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation-xml encoding="MathML-Content"><mi>A</mi><mo>∪</mo><mi>B</mi></annotation-xml></semantics></math></span><span data-type="newline"><br/></span>For example, let A = {1, 2, 3, 4, 5} and B = {4, 5, 6, 7, 8}.<span data-type="newline"><br/></span>Then <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation-xml encoding="MathML-Content"><mi>A</mi><mo>∪</mo><mi>B</mi></annotation-xml></semantics></math></span> = {1, 2, 3, 4, 5, 6, 7, 8}. Notice that 4 and 5 are NOT listed twice.<span data-count="2" data-type="newline"><br/><br/></span></p>
+<p id="element-713"><span data-type="title"><span data-type="term" group-by="Symbols" id="term-00014">"AND" Event</span>:</span>An outcome is in the event <em data-effect="italics">A</em> AND <em data-effect="italics">B</em> if the outcome is in both <em data-effect="italics">A</em> and <em data-effect="italics">B</em> at the same time.<span data-type="newline"><br/></span>The event <em data-effect="italics">A</em> AND <em data-effect="italics">B</em> can also be written as <em data-effect="italics">A</em> Intersection <em data-effect="italics">B</em>, with notation as follows:<span data-type="newline"><br/></span><span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation-xml encoding="MathML-Content"><mi>A</mi><mo>∩</mo><mi>B</mi></annotation-xml></semantics></math></span><span data-type="newline"><br/></span>For example, let <em data-effect="italics">A</em> and <em data-effect="italics">B</em> be {1, 2, 3, 4, 5} and {4, 5, 6, 7, 8}, respectively.<span data-type="newline"><br/></span>Then <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation-xml encoding="MathML-Content"><mi>A</mi><mo>∩</mo><mi>B</mi></annotation-xml></semantics></math></span>= {4, 5}.</p>
+<p id="element-123">The <span data-type="term" group-by="c" id="term-00011">complement of event <em data-effect="italics">A</em></span> is denoted <em data-effect="italics">A′</em> (read "<em data-effect="italics">A</em> prime"). <em data-effect="italics">A′</em> consists of all outcomes that are <strong>NOT</strong> in <em data-effect="italics">A</em>. Notice that <em data-effect="italics">P</em>(<em data-effect="italics">A</em>) + <em data-effect="italics">P</em>(<em data-effect="italics">A′</em>) = 1. For example, let <em data-effect="italics">S</em> = {1, 2, 3, 4, 5, 6} and let <em data-effect="italics">A</em> = {1, 2, 3, 4}. Then, <em data-effect="italics">A′</em> = {5, 6}. <em data-effect="italics">P</em>(<em data-effect="italics">A</em>) = <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mn>4</mn><mn>6</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>4</mn><mn>6</mn></mfrac></mrow></annotation-xml></semantics></math></span>, <em data-effect="italics">P</em>(<em data-effect="italics">A′</em>) = <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mn>2</mn><mn>6</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>2</mn><mn>6</mn></mfrac></mrow></annotation-xml></semantics></math></span>, and <em data-effect="italics">P</em>(<em data-effect="italics">A</em>) + <em data-effect="italics">P</em>(<em data-effect="italics">A′</em>) = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>4</mn>
+<mn>6</mn>
+</mfrac>
+<mo> + </mo><mfrac>
+<mn>2</mn>
+<mn>6</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>4</mn>
+<mn>6</mn>
+</mfrac>
+<mo> + </mo><mfrac>
+<mn>2</mn>
+<mn>6</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> = 1</p><p id="element-426">The <span data-type="term" group-by="c" id="term-00012">conditional probability</span> of <em data-effect="italics">A</em> given <em data-effect="italics">B</em> is written <em data-effect="italics">P</em>(<em data-effect="italics">A</em>|<em data-effect="italics">B</em>). <em data-effect="italics">P</em>(<em data-effect="italics">A</em>|<em data-effect="italics">B</em>) is the probability that event <em data-effect="italics">A</em> will occur given that the event <em data-effect="italics">B</em> has already occurred. <strong>A conditional reduces the sample space</strong>. We calculate the probability of <em data-effect="italics">A</em> from the reduced sample space <em data-effect="italics">B</em>. The formula to calculate <em data-effect="italics">P</em>(<em data-effect="italics">A</em>|<em data-effect="italics">B</em>) is <em data-effect="italics">P</em>(<em data-effect="italics">A</em>|<em data-effect="italics">B</em>) = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mtext> AND </mtext><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mtext> AND </mtext><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> where <em data-effect="italics">P</em>(<em data-effect="italics">B</em>) is greater than zero.</p><p id="element-476">For example, suppose we toss one fair, six-sided die. The sample space <em data-effect="italics">S</em> = {1, 2, 3, 4, 5, 6}. Let <em data-effect="italics">A</em> = face is 2 or 3 and <em data-effect="italics">B</em> = face is even (2, 4, 6). To calculate <em data-effect="italics">P</em>(<em data-effect="italics">A</em>|<em data-effect="italics">B</em>), we count the number of outcomes 2 or 3 in the sample space <em data-effect="italics">B</em> = {2, 4, 6}. Then we divide that by the number of outcomes <em data-effect="italics">B</em> (rather than <em data-effect="italics">S</em>).</p><p id="element-388">We get the same result by using the formula. Remember that <em data-effect="italics">S</em> has six outcomes.</p><p id="element-179"><em data-effect="italics">P</em>(<em data-effect="italics">A</em>|<em data-effect="italics">B</em>) = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mspace width="2pt"></mspace><mtext>AND</mtext><mspace width="2pt"></mspace><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mtext>the number of outcomes that are 2 or 3 and even in </mtext><mspace width="2pt"></mspace><mi>S</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>6</mn>
+</mfrac>
+</mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mtext>the number of outcomes that are even in </mtext><mspace width="2pt"></mspace><mi>S</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>6</mn>
+</mfrac>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>6</mn>
+</mfrac>
+</mrow>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mn>6</mn>
+</mfrac>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mspace width="2pt"></mspace><mtext>AND</mtext><mspace width="2pt"></mspace><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mtext>the number of outcomes that are 2 or 3 and even in </mtext><mspace width="2pt"></mspace><mi>S</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>6</mn>
+</mfrac>
+</mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mtext>the number of outcomes that are even in </mtext><mspace width="2pt"></mspace><mi>S</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>6</mn>
+</mfrac>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>6</mn>
+</mfrac>
+</mrow>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mn>6</mn>
+</mfrac>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p><p id="eip-615"><span data-type="title">Understanding Terminology and Symbols</span>It is important to read each problem carefully to think about and understand what the events are. Understanding the wording is the first very important step in solving probability problems. Reread the problem several times if necessary. Clearly identify the event of interest. Determine whether there is a condition stated in the wording that would indicate that the probability is conditional; carefully identify the condition, if any.</p>
+<div class="ui-has-child-title" data-type="example" id="fs-idp18139744"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.1</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idp55046224"><header></header><section>
+<div data-type="problem" id="fs-idm2608960"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idm9889072">The sample space <em data-effect="italics">S</em> is the whole numbers starting at one and less than 20.</p>
+<ol id="fs-idp18756240" type="a">
+<li><em data-effect="italics">S</em> = _____________________________
+<p id="eip-idm125727456">Let event <em data-effect="italics">A</em> = the even numbers and event <em data-effect="italics">B</em> = numbers greater than 13.</p>
+</li>
+<li><em data-effect="italics">A</em> = _____________________, <em data-effect="italics">B</em> = _____________________</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em>) = _____________, <em data-effect="italics">P</em>(<em data-effect="italics">B</em>) = ________________</li>
+<li><em data-effect="italics">A</em> AND <em data-effect="italics">B</em> = ____________________, <em data-effect="italics">A</em> OR <em data-effect="italics">B</em> = ________________</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em> AND <em data-effect="italics">B</em>) = _________, <em data-effect="italics">P</em>(<em data-effect="italics">A</em> OR <em data-effect="italics">B</em>) = _____________</li>
+<li><em data-effect="italics">A′</em> = _____________, <em data-effect="italics">P</em>(<em data-effect="italics">A′</em>) = _____________</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em>) + <em data-effect="italics">P</em>(<em data-effect="italics">A′</em>) = ____________</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em>|<em data-effect="italics">B</em>) = ___________, <em data-effect="italics">P</em>(<em data-effect="italics">B</em>|<em data-effect="italics">A</em>) = _____________; are the probabilities equal?</li>
+</ol>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idm6734480">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<ol id="fs-idp17343632" type="a"><li><em data-effect="italics">S</em> = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}</li>
+<li><em data-effect="italics">A</em> = {2, 4, 6, 8, 10, 12, 14, 16, 18}, <em data-effect="italics">B</em> = {14, 15, 16, 17, 18, 19}</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>9</mn><mrow><mn>19</mn></mrow></mfrac>
+</mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>9</mn><mrow><mn>19</mn></mrow></mfrac>
+</mrow></annotation-xml></semantics></math>, <em data-effect="italics">P</em>(<em data-effect="italics">B</em>) = <math display="inline"><semantics><mrow><mrow><mfrac>
+<mn>6</mn>
+<mrow>
+<mn>19</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac>
+<mn>6</mn>
+<mrow>
+<mn>19</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">A</em> AND <em data-effect="italics">B</em> = {14,16,18}, <em data-effect="italics">A</em> OR <em data-effect="italics">B</em> = {2, 4, 6, 8, 10, 12, 14, 15, 16, 17, 18, 19}</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em> AND <em data-effect="italics">B</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>3</mn><mrow><mn>19</mn></mrow> </mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>3</mn><mrow><mn>19</mn></mrow> </mfrac></mrow></annotation-xml></semantics></math>, <em data-effect="italics">P</em>(<em data-effect="italics">A</em> OR <em data-effect="italics">B</em>) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>12</mn>
+<mrow>
+<mn>19</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>12</mn>
+<mrow>
+<mn>19</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">A′</em> = 1, 3, 5, 7, 9, 11, 13, 15, 17, 19; <em data-effect="italics">P</em>(<em data-effect="italics">A′</em>) = <math display="inline"><semantics><mrow>
+<mrow><mfrac><mrow><mn>10</mn></mrow><mrow><mn>19</mn></mrow></mfrac> </mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><mn>10</mn></mrow><mrow><mn>19</mn></mrow></mfrac> </mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em>) + <em data-effect="italics">P</em>(<em data-effect="italics">A′</em>) = 1 (<math display="inline"><semantics><mrow>
+<mrow><mfrac><mrow><mn>9</mn></mrow><mrow><mn>19</mn></mrow></mfrac> </mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><mn>9</mn></mrow><mrow><mn>19</mn></mrow></mfrac> </mrow></annotation-xml></semantics></math> + <math display="inline"><semantics><mrow>
+<mrow><mfrac><mrow><mn>10</mn></mrow><mrow><mn>19</mn></mrow></mfrac> </mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><mn>10</mn></mrow><mrow><mn>19</mn></mrow></mfrac> </mrow></annotation-xml></semantics></math> = 1)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em>|<em data-effect="italics">B</em>) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mtext> AND </mtext><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mtext> AND </mtext><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mn>6</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>3</mn>
+<mn>6</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math>, <em data-effect="italics">P</em>(<em data-effect="italics">B</em>|<em data-effect="italics">A</em>) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mtext> AND </mtext><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mtext> AND </mtext><mi>B</mi><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mn>9</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>3</mn>
+<mn>9</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math>, No</li></ol></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm38461776"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">3.1</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idp18521824"><header></header><section>
+<div data-type="problem" id="fs-idp8232288"><div class="os-problem-container">
+<p id="fs-idp22298512">The sample space <em data-effect="italics">S</em> is all the ordered pairs of two whole numbers, the first from one to three and the second from one to four (Example: (1, 4)).<span data-count="2" data-type="newline"><br/><br/></span></p><ol id="fs-idm618192" type="a"><li><em data-effect="italics">S</em> = _____________________________
+<span data-count="2" data-type="newline"><br/><br/></span>Let event <em data-effect="italics">A</em> = the sum is even and event <em data-effect="italics">B</em> = the first number is prime.</li>
+<li><em data-effect="italics">A</em> = _____________________, <em data-effect="italics">B</em> = _____________________</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em>) = _____________, <em data-effect="italics">P</em>(<em data-effect="italics">B</em>) = ________________</li>
+<li><em data-effect="italics">A</em> AND <em data-effect="italics">B</em> = ____________________, <em data-effect="italics">A</em> OR <em data-effect="italics">B</em> = ________________</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em> AND <em data-effect="italics">B</em>) = _________, <em data-effect="italics">P</em>(<em data-effect="italics">A</em> OR <em data-effect="italics">B</em>) = _____________</li>
+<li><em data-effect="italics">B′</em> = _____________, <em data-effect="italics">P</em>(<em data-effect="italics">B′</em>) = _____________</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em>) + <em data-effect="italics">P</em>(<em data-effect="italics">A′</em>) = ____________</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">A</em>|<em data-effect="italics">B</em>) = ___________, <em data-effect="italics">P</em>(<em data-effect="italics">B</em>|<em data-effect="italics">A</em>) = _____________; are the probabilities equal?</li></ol></div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-idp58540864"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.2</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idm2972704"><header></header><section>
+<div data-type="problem" id="fs-idp70495648"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idp2040560">A fair, six-sided die is rolled. Describe the sample space <em data-effect="italics">S</em>, identify each of the following events with a subset of <em data-effect="italics">S</em> and compute its probability (an outcome is the number of dots that show up).</p>
+<ol id="fs-idp63287328" type="a">
+<li>Event <em data-effect="italics">T</em> = the outcome is two.</li>
+<li>Event <em data-effect="italics">A</em> = the outcome is an even number.</li>
+<li>Event <em data-effect="italics">B</em> = the outcome is less than four.</li>
+<li>The complement of <em data-effect="italics">A</em>.</li>
+<li><em data-effect="italics">A</em> GIVEN <em data-effect="italics">B</em></li>
+<li><em data-effect="italics">B</em> GIVEN <em data-effect="italics">A</em></li>
+<li><em data-effect="italics">A</em> AND <em data-effect="italics">B</em></li>
+<li><em data-effect="italics">A</em> OR <em data-effect="italics">B</em></li>
+<li><em data-effect="italics">A</em> OR <em data-effect="italics">B′</em></li>
+<li>Event <em data-effect="italics">N</em> = the outcome is a prime number.</li>
+<li>Event <em data-effect="italics">I</em> = the outcome is seven.</li>
+</ol></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idp22590288">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<ol id="fs-idp47608624" type="a"><li><em data-effect="italics">T</em> = {2}, <em data-effect="italics">P</em>(<em data-effect="italics">T</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">A</em> = {2, 4, 6}, <em data-effect="italics">P</em>(<em data-effect="italics">A</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">B</em> = {1, 2, 3}, <em data-effect="italics">P</em>(<em data-effect="italics">B</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">A′</em> = {1, 3, 5}, <em data-effect="italics">P</em>(<em data-effect="italics">A′</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">A</em>|<em data-effect="italics">B</em> = {2}, <em data-effect="italics">P</em>(<em data-effect="italics">A</em>|<em data-effect="italics">B</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">B</em>|<em data-effect="italics">A</em> = {2}, <em data-effect="italics">P</em>(<em data-effect="italics">B</em>|<em data-effect="italics">A</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">A</em> AND <em data-effect="italics">B</em> = {2}, <em data-effect="italics">P</em>(<em data-effect="italics">A</em> AND <em data-effect="italics">B</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">A</em> OR <em data-effect="italics">B</em> = {1, 2, 3, 4, 6}, <em data-effect="italics">P</em>(<em data-effect="italics">A</em> OR <em data-effect="italics">B</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>5</mn><mn>6</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>5</mn><mn>6</mn></mfrac></mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">A</em> OR <em data-effect="italics">B′</em> = {2, 4, 5, 6}, <em data-effect="italics">P</em>(<em data-effect="italics">A</em> OR <em data-effect="italics">B′</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">N</em> = {2, 3, 5}, <em data-effect="italics">P</em>(<em data-effect="italics">N</em>) = <math display="inline"><semantics><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></annotation-xml></semantics></math></li>
+<li>A six-sided die does not have seven dots. <em data-effect="italics">P</em>(7) = 0.</li>
+</ol></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="note-00001"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">3.2</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="exer-00001"><header></header><section>
+<div data-type="problem" id="prob-00001"><div class="os-problem-container">
+<p id="para-00001">A number is randomly selected between 1 to 10. Describe the sample space <em data-effect="italics">S</em>, identify each of the following events with a subset of S, and compute its probability (an outcome is the number selected).</p>
+<ol id="list-00001" type="a">
+<li>Event <em data-effect="italics">F</em> = the outcome is 5.</li>
+<li>Event <em data-effect="italics">A</em> = the number is more than 6.</li>
+<li>Event <em data-effect="italics">B</em> = the number is odd.</li>
+<li>The complement of <em data-effect="italics">B</em>.</li>
+<li><em data-effect="italics">A</em> GIVEN <em data-effect="italics">B</em>.</li>
+<li><em data-effect="italics">B</em> GIVEN <em data-effect="italics">A</em>.</li>
+<li><em data-effect="italics">A</em> OR <em data-effect="italics">B</em>.</li>
+<li><em data-effect="italics">A’</em> OR <em data-effect="italics">B</em>.</li>
+<li>Event <em data-effect="italics">P</em> = the outcome is a composite number.</li>
+<li>Event <em data-effect="italics">M</em> = the number is a multiple of 3.</li>
+</ol>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-idp6753008"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.3</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="fs-idp15243376"><a aria-label="View Table 3.1" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology#ch03_M02-tbl001">Table 3.1</a> describes the distribution of a random sample <em data-effect="italics">S</em> of 100 individuals, organized by sex assigned at birth and whether they are right- or left-handed.
+</p><div class="os-table" id="ch03_M02-tbl001"><div class="table-scroll"><table data-id="ch03_M02-tbl001" data-summary="Example 3 Table"><thead>
+<tr>
+<th scope="col">
+</th><th scope="col">Right-handed</th>
+<th scope="col">Left-handed</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Males</td>
+<td>43</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Females</td>
+<td>44</td>
+<td>4</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.1</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idp47478688"><header></header><section>
+<div data-type="problem" id="fs-idp17336896"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idp16966080">Let’s denote the events <em data-effect="italics">M</em> = the subject is male, <em data-effect="italics">F</em> = the subject is female, <em data-effect="italics">R</em> = the subject is right-handed, <em data-effect="italics">L</em> = the subject is left-handed. Compute the following probabilities:</p><ol id="fs-idm298416" type="a"><li><em data-effect="italics">P</em>(<em data-effect="italics">M</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">R</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">L</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em> AND <em data-effect="italics">R</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em> AND <em data-effect="italics">L</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em> OR <em data-effect="italics">F</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em> OR <em data-effect="italics">R</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em> OR <em data-effect="italics">L</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M'</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">R</em>|<em data-effect="italics">M</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em>|<em data-effect="italics">L</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">L</em>|<em data-effect="italics">F</em>)</li></ol></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idm1054528">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<ol id="fs-idm30102752" type="a"><li><em data-effect="italics">P</em>(<em data-effect="italics">M</em>) = 0.52</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em>) = 0.48</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">R</em>) = 0.87</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">L</em>) = 0.13</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em> AND <em data-effect="italics">R</em>) = 0.43</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em> AND <em data-effect="italics">L</em>) = 0.04</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em> OR <em data-effect="italics">F</em>) = 1</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em> OR <em data-effect="italics">R</em>) = 0.96</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em> OR <em data-effect="italics">L</em>) = 0.57</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M'</em>) = 0.48</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">R</em>|<em data-effect="italics">M</em>) = 0.8269 (rounded to four decimal places)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em>|<em data-effect="italics">L</em>) = 0.3077 (rounded to four decimal places)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">L</em>|<em data-effect="italics">F</em>) = 0.0833</li></ol></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="note-00002"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">3.3</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="exer-00002"><header></header><section>
+<div data-type="problem" id="prob-00002"><div class="os-problem-container">
+<p id="para-00002">The table describes the distribution of a random sample S of 100 individuals, organized by gender and whether they like tea or coffee.</p>
+<div class="os-table" id="table-00001"><div class="table-scroll"><table data-id="table-00001" data-summary=".."><thead>
+<tr>
+<th data-align="center" scope="col">
+</th><th data-align="center" scope="col"><strong>Tea</strong></th>
+<th data-align="center" scope="col"><strong>Coffee</strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td data-align="center"><strong>Men</strong></td>
+<td data-align="center">22</td>
+<td data-align="center">26</td>
+</tr>
+<tr>
+<td data-align="center"><strong>Women</strong></td>
+<td data-align="center">16</td>
+<td data-align="center">36</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.2</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title"><!-- no-selfclose --></span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<p id="para-00003">Let's denote the events <em data-effect="italics">M</em> = the subject is a man, <em data-effect="italics">W</em> = the subject is a woman, <em data-effect="italics">T</em> = the subject likes tea, and <em data-effect="italics">C</em> = the subject likes coffee. Compute the following probabilities:</p>
+<ol id="list-00003" type="a">
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">W</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">T</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">C</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em> AND <em data-effect="italics">T</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">W</em> and <em data-effect="italics">C</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em> OR <em data-effect="italics">W</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em> OR <em data-effect="italics">T</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">W</em> OR <em data-effect="italics">C</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em>')</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">T</em>|<em data-effect="italics">M</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">W</em>|<em data-effect="italics">C</em>)</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">C</em>|<em data-effect="italics">W</em>)</li>
+</ol>
+</div></div>
+</section></div>
+</div></section></div>
+</div></article><footer><p>Adapted from OpenStax, Introductory Statistics 2e, 3.1 Terminology. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

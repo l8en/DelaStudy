@@ -1,0 +1,1472 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_2779d41f-ca46-4a9d-8e8d-c2aeb13b92d1"><h2 data-rex-keep="true" data-type="document-title" id="page_2779d41f-ca46-4a9d-8e8d-c2aeb13b92d1_titlecreatedbycookbook"><span class="os-number">4.2</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Mean or Expected Value and Standard Deviation</span>
+</h2>
+<p id="s-idm1221053442">The <span data-type="term" group-by="e" id="term-00001">expected value</span> is often referred to as the <strong>"long-term" average or mean</strong>. This means that over the long term of doing an experiment over and over, you would <strong>expect</strong> this average.</p>
+<p id="fs-idm122105344">You toss a coin and record the result. What is the probability that the result is heads? If you flip a coin two times, does probability tell you that these flips will result in one heads and one tail? You might toss a fair coin ten times and record nine heads. As you learned in <a aria-label="Go to Probability Topics" data-page-fragment="" data-page-slug="3-introduction" data-page-uuid="326ee2e0-0ccd-46ae-a776-f8857a5dad4c" href="https://openstax.org/books/introductory-statistics-2e/pages/3-introduction">Probability Topics</a>, probability does not describe the short-term results of an experiment. It gives information about what can be expected in the long term. To demonstrate this, Karl Pearson once tossed a fair coin 24,000 times! He recorded the results of each toss, obtaining heads 12,012 times. <strong>In his experiment, Pearson illustrated the Law of Large Numbers</strong>.</p><p id="fs-idm32245968"><strong>The Law of Large Numbers</strong> states that, as the number of trials in a probability experiment increases, the difference between the theoretical probability of an event and the relative frequency approaches zero <strong>(the theoretical probability and the relative frequency get closer and closer together)</strong>. When evaluating the long-term results of statistical experiments, we often want to know the “average” outcome. This “long-term average” is known as the <span data-type="term" group-by="m" id="term-00002">mean</span> or <span data-type="term" group-by="e" id="term-00003">expected value</span> of the experiment and is denoted by the Greek letter <em data-effect="italics">μ</em>. In other words, after conducting many trials of an experiment, you would expect this average value.</p>
+<p id="eip-332">The mean, <em data-effect="italics">μ</em>, of a discrete probability function is the expected value. </p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-226">
+<div class="math-scroll"><math display="block"><semantics><mrow><mi>μ</mi><mo>=</mo><mrow><mo stretchy="false">∑</mo><mrow><mo>(</mo><mi>x</mi><mo>∙</mo><mi>P</mi><mfenced separators="|"><mrow><mi>x</mi></mrow></mfenced><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mi>μ</mi><mo>=</mo><mrow><mo stretchy="false">∑</mo><mrow><mo>(</mo><mi>x</mi><mo>∙</mo><mi>P</mi><mfenced separators="|"><mrow><mi>x</mi></mrow></mfenced><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></div></div><p id="eip-436">The standard deviation, <em data-effect="italics">σ</em>, of the PDF is the square root of the variance.</p><div class="unnumbered" data-type="equation" id="eip-365"><div class="math-scroll"><math display="block"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo stretchy="false">∑</mo><mrow><mo>[</mo><msup><mrow><mfenced separators="|"><mrow><mi>x</mi><mi> </mi><mo>–</mo><mi> </mi><mi>μ</mi></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup><mi> </mi><mo>∙</mo><mi> </mi><mi>Ρ</mi><mfenced separators="|"><mrow><mi>x</mi></mrow></mfenced><mo>]</mo><mi> </mi></mrow></mrow></msqrt></mrow><annotation-xml encoding="MathML-Content"><mi>σ</mi><mo>=</mo><msqrt><mrow><mo stretchy="false">∑</mo><mrow><mo>[</mo><msup><mrow><mfenced separators="|"><mrow><mi>x</mi><mi> </mi><mo>–</mo><mi> </mi><mi>μ</mi></mrow></mfenced></mrow><mrow><mn>2</mn></mrow></msup><mi> </mi><mo>∙</mo><mi> </mi><mi>Ρ</mi><mfenced separators="|"><mrow><mi>x</mi></mrow></mfenced><mo>]</mo><mi> </mi></mrow></mrow></msqrt></annotation-xml></semantics></math></div></div><p id="eip-988">When all outcomes in the probability distribution are equally likely, these formulas coincide with the mean and standard deviation of the set of possible outcomes.</p>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="id8737934"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">NOTE</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="eip-idp95250624">To find the expected value or long term average, <em data-effect="italics">μ</em>, simply multiply each value of the random variable by its probability and add the products.</p></div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-idp56252608"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4.3</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="fs-idm190895152">A soccer team plays soccer zero, one, or two days a week. The probability that they play zero days is 0.2, the probability that they play one day is 0.5, and the probability that they play two days is 0.3. Find the long-term average or expected value, <em data-effect="italics">μ</em>, of the number of days per week the soccer team plays soccer.</p>
+<p id="element-126">To do the problem, first let the random variable <em data-effect="italics">X</em> = the number of days the soccer team plays soccer per week. <em data-effect="italics">X</em> takes on the values 0, 1, 2. Construct a PDF table adding a column <em data-effect="italics">x</em>*<em data-effect="italics">P</em>(<em data-effect="italics">x</em>). In this column, you will multiply each <em data-effect="italics">x</em> value by its probability.</p>
+<div class="os-table" id="element-749"><div class="table-scroll"><table data-id="element-749" data-summary="The PDF table contains the number of days a men's soccer team plays soccer per week and thir probabilities."><thead>
+<tr>
+<th scope="col"><em data-effect="italics">x</em></th>
+<th scope="col"><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+<th scope="col"><em data-effect="italics">x</em>*<em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>0.2</td>
+<td>(0)(0.2) = 0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.5</td>
+<td>(1)(0.5) = 0.5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.3</td>
+<td>(2)(0.3) = 0.6</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.5</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Expected Value Table This table is called an expected value table. The table helps you calculate the expected value or long-term average.</span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="fs-idm87467792">Add the last column <em data-effect="italics">x</em>*<em data-effect="italics">P</em>(<em data-effect="italics">x</em>) to find the long term average or expected value: (0)(0.2) + (1)(0.5) + (2)(0.3) = 0 + 0.5 + 0.6 = 1.1.</p><p id="element-353">The expected value is 1.1. The soccer team would, on the average, expect to play soccer 1.1 days per week. The number 1.1 is the long-term average or expected value if the soccer team plays soccer week after week after week. We say <em data-effect="italics">μ</em> = 1.1.</p></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="note-00001"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">4.3</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="exer-00001"><header></header><section><div data-type="problem" id="prob-00001"><div class="os-problem-container">
+<p id="para-00001">A customer orders 1, 2, or 3 bottles of water. The probability of ordering 1 bottle is 0.6, the probability of ordering 2 bottles is 0.3, and the probability of ordering 3 bottles is 0.1. Find the long-term average or expected value, μ, of the number of bottles a customer will order.</p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-idm82770544"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4.4</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="fs-idm122112">Find the expected value of the number of times a newborn baby's crying wakes its parents after midnight. The expected value is the expected number of times per week a newborn baby's crying wakes its parents after midnight. Calculate the standard deviation of the variable as well.
+
+</p><div class="os-table" id="element-740"><div class="table-scroll"><table data-id="element-740" data-summary="The PDF table contains the number of times a newborn wakes its parents after midnight, their probabilities and a column for each number multiplied by its probability."><thead>
+<tr>
+<th scope="col"><em data-effect="italics">x</em></th>
+<th scope="col"><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+<th scope="col"><em data-effect="italics">x</em>*<em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+<th scope="col">(<em data-effect="italics">x</em> – <em data-effect="italics">μ</em>)<sup>2</sup> ⋅ <em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th></tr>
+</thead><tbody>
+<tr>
+<td>0 </td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 0) =  <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>2</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+<td>(0)<math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> = 0</td>
+<td>(0 – 2.1)<sup>2</sup> ⋅ 0.04 = 0.1764</td>
+</tr>
+<tr>
+<td>1</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 1) = <math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>11</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>11</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></td>
+<td>(1)<math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>11</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>11</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>11</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>11</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>(1 – 2.1)<sup>2</sup> ⋅ 0.22 = 0.2662</td>
+</tr>
+<tr>
+<td>2</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 2) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>23</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>23</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>(2)<math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>23</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>23</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>46</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>46</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>(2 – 2.1)<sup>2</sup> ⋅ 0.46 = 0.0046</td>
+</tr>
+<tr>
+<td>3</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 3) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>9</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>9</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>(3)<math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>27</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>27</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>(3 – 2.1)<sup>2</sup> ⋅ 0.18 = 0.1458</td>
+</tr>
+<tr>
+<td>4</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 4) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>4</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>4</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>(4)<math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>4</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>4</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>16</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>16</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>(4 – 2.1)<sup>2</sup> ⋅ 0.08 = 0.2888</td>
+</tr>
+<tr>
+<td>5</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 5) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>(5)<math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>5</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>5</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>(5 – 2.1)<sup>2</sup> ⋅ 0.02 = 0.1682</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.6</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">You expect a newborn to wake its parents after midnight 2.1 times per week, on the average.</span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="fs-idp11618480">Add the values in the third column of the table to find the expected value of <em data-effect="italics">X</em>: <span data-count="1" data-type="newline"><br/></span><em data-effect="italics">μ</em> = Expected Value = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>105</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>105</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> = 2.1</p><p id="fs-idm128391792">Use <em data-effect="italics">μ</em> to complete the table. The fourth column of this table will provide the values you need to calculate the standard deviation. For each value <em data-effect="italics">x</em>, multiply the square of its deviation by its probability. (Each deviation has the format <em data-effect="italics">x</em> – <em data-effect="italics">μ</em>).</p><p id="fs-idm66531168">Add the values in the fourth column of the table:</p>
+<p id="fs-idm70422448">0.1764 + 0.2662 + 0.0046 + 0.1458 + 0.2888 + 0.1682 = 1.05</p>
+<p id="fs-idm146103552">The standard deviation of <em data-effect="italics">X</em> is the square root of this sum: <em data-effect="italics">σ</em> = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1.05</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msqrt>
+<mrow>
+<mn>1.05</mn>
+</mrow>
+</msqrt>
+</mrow></annotation-xml></semantics></math></span> ≈ 1.0247
+</p>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm80414512"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">4.4</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm131173600"><header></header><section>
+<div data-type="problem" id="fs-idm112686784"><div class="os-problem-container">
+<p id="fs-idm86997008">A hospital researcher is interested in the number of times the average post-op patient will ring the nurse during a 12-hour shift. For a random sample of 50 patients, the following information was obtained. What is the expected value?</p>
+<div class="os-table" id="fs-idm56815952"><div class="table-scroll"><table data-id="fs-idm56815952" data-summary="The number of times the average post-op patient will ring the nurse during a 12-hour shift"><thead>
+<tr><th scope="col"><em data-effect="italics">x</em></th> <th scope="col"><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th></tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 0) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>4</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>4</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td></tr>
+<tr>
+<td>1</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 1) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>8</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>8</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td></tr>
+<tr>
+<td>2</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 2) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>16</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>16</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td></tr>
+<tr>
+<td>3</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 3) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>14</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>14</mn>
+</mrow>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac></mrow></annotation-xml></semantics></math>
+</td></tr>
+<tr>
+<td>4</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 4) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>6</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>6</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+<tr>
+<td>5</td>
+<td><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 5) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>2</mn>
+<mrow>
+<mn>50</mn>
+</mrow>
+</mfrac></mrow></annotation-xml></semantics></math>
+</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.7</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div></div></div>
+</section></div></div></section></div><div class="ui-has-child-title" data-type="example" id="element-116"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4.5</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-117">Suppose you play a game of chance in which five numbers are chosen from 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. A computer randomly selects five numbers from zero to nine with replacement. You pay $2 to play and could profit $100,000 if you match all five numbers in order (you get your $2 back plus $100,000). Over the long term, what is your <strong>expected</strong> profit of playing the game?</p>
+<p id="element-481">To do this problem, set up an expected value table for the amount of money you can profit.</p>
+<p id="element-382">Let <em data-effect="italics">X</em> = the amount of money you profit. The values of <em data-effect="italics">x</em> are not 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Since you are interested in your profit (or loss), the values of <em data-effect="italics">x</em> are 100,000 dollars and −2 dollars.</p>
+<p id="element-996">To win, you must get all five numbers correct, in order. The probability of choosing one correct number is <span class="os-math-in-para"><math display="inline"><semantics><mrow><mfrac><mn>1</mn><mn>10</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>1</mn><mn>10</mn></mfrac></annotation-xml></semantics></math></span> because there are ten numbers. You may choose a number more than once. The probability of choosing all five numbers correctly and in order is</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-10"><div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mo>=</mo><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msup>
+<mrow>
+<mn>10</mn>
+</mrow>
+<mrow>
+<mo>−</mo><mn>5</mn>
+</mrow>
+</msup>
+<mo stretchy="false">)</mo><mo>=</mo><mn>0.00001.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mo>=</mo><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msup>
+<mrow>
+<mn>10</mn>
+</mrow>
+<mrow>
+<mo>−</mo><mn>5</mn>
+</mrow>
+</msup>
+<mo stretchy="false">)</mo><mo>=</mo><mn>0.00001.</mn>
+</mrow></annotation-xml></semantics></math></div></div>
+<p id="element-800">Therefore, the probability of winning is 0.00001 and the probability of losing is</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-755"><div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mn>1</mn><mo>−</mo><mn>0.00001</mn><mo>=</mo><mn>0.99999.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>1</mn><mo>−</mo><mn>0.00001</mn><mo>=</mo><mn>0.99999.</mn>
+</mrow></annotation-xml></semantics></math></div></div>
+<p id="element-839">The expected value table is as follows:</p>
+<div class="os-table" id="element-480"><div class="table-scroll"><table data-id="element-480" data-summary="In the table, to find the expected value, add the last column."><thead>
+<tr>
+<th scope="col">
+</th><th scope="col"><em data-effect="italics">x</em></th>
+<th scope="col"><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+<th scope="col"><em data-effect="italics">x</em>*<em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Loss</td>
+<td>–2</td>
+<td>0.99999</td>
+<td>(–2)(0.99999) = –1.99998</td>
+</tr>
+<tr>
+<td>Profit</td>
+<td>100,000</td>
+<td>0.00001</td>
+<td>(100000)(0.00001) = 1</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.8</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Αdd the last column. –1.99998 + 1 = –0.99998</span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="element-406">Since –0.99998 is about –1, you would, on average, expect to lose approximately $1 for each game you play. However, each time you play, you either lose $2 or profit $100,000. The $1 is the average or expected LOSS per game after playing this game over and over.</p></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm7487840"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">4.5</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm58858880"><header></header><section><div data-type="problem" id="fs-idm58346384"><div class="os-problem-container">
+<p id="fs-idm147804448">You are playing a game of chance in which four cards are drawn from a standard deck of 52 cards. You guess the suit of each card before it is drawn. The cards are replaced in the deck on each draw. You pay $1 to play. If you guess the right suit every time, you get your money back and $256. What is your expected profit of playing the game over the long term?</p></div></div>
+</section></div></div></section></div><div class="ui-has-child-title" data-type="example" id="element-341"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4.6</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-408">Suppose you play a game with a biased coin. You play each game by tossing the coin once. <em data-effect="italics">P</em>(heads) = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mn>3</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>2</mn>
+<mn>3</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> and <em data-effect="italics">P</em>(tails) = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>. If you toss a head, you pay $6. If you toss a tail, you win $10. If you play this game many times, will you come out ahead?<span data-count="2" data-type="newline"><br/><br/></span>
+</p>
+<div class="unnumbered has-problem-title" data-type="exercise" id="element-193"><header></header><section>
+<div data-type="problem" id="id14631763"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-653">a. Define a random variable <em data-effect="italics">X</em>.</p>
+<p id="element-597">b. Complete the following expected value table.</p><div class="os-table" id="element-644"><div class="table-scroll"><table data-id="element-644" data-summary="Problem 2 Table"><thead>
+<tr>
+<th scope="col">
+</th><th scope="col"><em data-effect="italics">x</em></th>
+<th scope="col">
+</th><th scope="col">
+</th></tr>
+</thead><tbody>
+<tr>
+<td>WIN</td>
+<td>10</td>
+<td><math display="inline"><semantics><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>1</mn><mn>3</mn></mfrac></annotation-xml></semantics></math></td>
+<td>
+</td></tr>
+<tr>
+<td>LOSE</td>
+<td>
+</td><td>
+</td><td><math display="inline"><semantics><mrow><mfrac><mn>–12</mn><mn>3</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>–12</mn><mn>3</mn></mfrac></annotation-xml></semantics></math></td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.9</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<p id="element-847">c. What is the expected value, <em data-effect="italics">μ</em>? Do you come out ahead?</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id14631784">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-548">a. <em data-effect="italics">X</em> = amount of profit</p>
+<p id="fs-idm44109456">b.
+</p><div class="os-table" id="element-644s"><div class="table-scroll"><table data-id="element-644s" data-summary="In the PDF table, the outcomes (money you win or lose) of a game played with a biased coin are recorded. There is a column to record the probability and a column to record the outcome multiplied by its probability.">
+<thead>
+<tr>
+<th scope="col">
+</th><th scope="col"><em data-effect="italics">x</em></th>
+<th scope="col"><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+<th scope="col"><em data-effect="italics">xP</em>(<em data-effect="italics">x</em>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WIN</td>
+<td>10</td>
+<td><math display="inline"><semantics><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>1</mn><mn>3</mn></mfrac></annotation-xml></semantics></math></td> <td><math display="inline"><semantics><mrow><mfrac><mn>10</mn><mn>3</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>10</mn><mn>3</mn></mfrac></annotation-xml></semantics></math></td>
+</tr>
+<tr>
+<td>LOSE</td>
+<td>–6</td>
+<td><math display="inline"><semantics><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>2</mn><mn>3</mn></mfrac></annotation-xml></semantics></math></td>
+<td><math display="inline"><semantics><mrow><mfrac><mn>–12</mn><mn>3</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>–12</mn><mn>3</mn></mfrac></annotation-xml></semantics></math></td>
+</tr></tbody>
+</table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.10</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<p id="element-535">c. Add the last column of the table. The expected value <em data-effect="italics">μ</em> = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>–</mtext><mn>2</mn>
+</mrow>
+<mn>3</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mtext>–</mtext><mn>2</mn>
+</mrow>
+<mn>3</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>. You lose, on average, about 67 cents each time you play the game so you do not come out ahead.</p></div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp157498240"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">4.6</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm123810544"><header></header><section><div data-type="problem" id="fs-idm43455984"><div class="os-problem-container">
+<p id="fs-idm133743184">Suppose you play a game with a spinner. You play each game by spinning the spinner once. <em data-effect="italics">P</em>(red) = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mn>5</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>2</mn>
+<mn>5</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>, <em data-effect="italics">P</em>(blue) = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mn>5</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>2</mn>
+<mn>5</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>, and <em data-effect="italics">P</em>(green) = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>. If you land on red, you pay $10. If you land on blue, you don't pay or win anything. If you land on green, you win $10. Complete the following expected value table.</p>
+<div class="os-table" id="fs-idm71508016"><div class="table-scroll"><table data-id="fs-idm71508016" data-summary="Exercise 3 Table 1"><thead>
+<tr>
+<th scope="col">
+</th><th scope="col"><em data-effect="italics">x</em></th>
+<th scope="col"><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+<th scope="col"></th></tr>
+</thead><tbody>
+<tr>
+<td>Red</td>
+<td>
+</td><td>
+</td><td><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>–</mtext><mfrac>
+<mrow>
+<mn>20</mn>
+</mrow>
+<mn>5</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>–</mtext><mfrac>
+<mrow>
+<mn>20</mn>
+</mrow>
+<mn>5</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>
+</td><td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mn>5</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>2</mn>
+<mn>5</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>
+</td></tr>
+<tr>
+<td>Green</td>
+<td>10</td>
+<td>
+</td><td>
+</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.11</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div></div></div>
+</section></div></div></section></div><p id="element-903">Like data, probability distributions have standard deviations. To calculate the standard deviation (<em data-effect="italics">σ</em>) of a probability distribution, find each deviation from its expected value, square it, multiply it by its probability, add the products, and take the square root. To understand how to do the calculation, look at the table for the number of days per week a men's soccer team plays soccer. To find the standard deviation, add the entries in the column labeled (<em data-effect="italics">x</em> – <em data-effect="italics">μ</em>)<sup>2</sup><em data-effect="italics">P</em>(<em data-effect="italics">x</em>) and take the square root.
+
+</p><div class="os-table" id="element-226"><div class="table-scroll"><table data-id="element-226" data-summary="PDF table with the added columns for expected value and variance."><thead>
+<tr>
+<th scope="col"><em data-effect="italics">x</em></th>
+<th scope="col"><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+<th scope="col"><em data-effect="italics">x</em>*<em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+<th scope="col">(<em data-effect="italics">x</em> – <em data-effect="italics">μ</em>)<sup>2</sup><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>0.2</td>
+<td>(0)(0.2) = 0</td>
+<td>(0 – 1.1)<sup>2</sup>(0.2) = 0.242</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.5</td>
+<td>(1)(0.5) = 0.5</td>
+<td>(1 – 1.1)<sup>2</sup>(0.5) = 0.005</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.3</td>
+<td>(2)(0.3) = 0.6</td>
+<td>(2 – 1.1)<sup>2</sup>(0.3) = 0.243</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.12</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="eip-127">Add the last column in the table. 0.242 + 0.005 + 0.243 = 0.490. The standard deviation is the square root of 0.49, or <em data-effect="italics">σ</em> = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>0.49</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msqrt>
+<mrow>
+<mn>0.49</mn>
+</mrow>
+</msqrt>
+</mrow></annotation-xml></semantics></math></span> = 0.7</p><p id="element-873">Generally for probability distributions, we use a calculator or a computer to calculate <em data-effect="italics">μ</em> and <em data-effect="italics">σ</em> to reduce roundoff error. For some probability distributions, there are short-cut formulas for calculating <em data-effect="italics">μ</em> and <em data-effect="italics">σ</em>.</p><div class="ui-has-child-title" data-type="example" id="fs-idp4384592"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4.7</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><div class="unnumbered has-problem-title" data-type="exercise" id="fs-idm87291728"><header></header><section><div data-type="problem" id="fs-idm69882560"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idm82328592">Toss a fair, six-sided die twice. Let <em data-effect="italics">X</em> = the number of faces that show an even number. Construct a table like <a aria-label="View Table 4.11" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation#fs-idm71508016">Table 4.11</a> and calculate the mean <em data-effect="italics">μ</em> and standard deviation <em data-effect="italics">σ</em> of <em data-effect="italics">X</em>.</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idm46332752">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-idm86008592">Tossing one fair six-sided die twice has the same sample space as tossing two fair six-sided dice. The sample space has 36 outcomes:</p>
+<div class="os-table" id="fs-idm21999584"><div class="table-scroll"><table data-id="fs-idm21999584" data-summary="" role="presentation">
+<tbody>
+<tr><td>(1, 1)</td><td>(1, 2)</td><td>(1, 3)</td><td>(1, 4)</td><td>(1, 5)</td><td>(1, 6)</td></tr>
+<tr><td>(2, 1)</td><td>(2, 2)</td><td>(2, 3)</td><td>(2, 4)</td><td>(2, 5)</td><td>(2, 6)</td></tr>
+<tr><td>(3, 1)</td><td>(3, 2)</td><td>(3, 3)</td><td>(3, 4)</td><td>(3, 5)</td><td>(3, 6)</td></tr>
+<tr><td>(4, 1)</td><td>(4, 2)</td><td>(4, 3)</td><td>(4, 4)</td><td>(4, 5)</td><td>(4, 6)</td></tr>
+<tr><td>(5, 1)</td><td>(5, 2)</td><td>(5, 3)</td><td>(5, 4)</td><td>(5, 5)</td><td>(5, 6)</td></tr>
+<tr><td>(6, 1)</td><td>(6, 2)</td><td>(6, 3)</td><td>(6, 4)</td><td>(6, 5)</td><td>(6, 6)</td></tr>
+</tbody>
+</table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.13</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<p id="fs-idm130208640">Use the sample space to complete the following table:</p>
+<div class="os-table" id="fs-idp385088"><div class="table-scroll"><table data-id="fs-idp385088" data-summary="Calculating">
+<thead>
+<tr>
+<th scope="col"><em data-effect="italics">x</em></th>
+<th scope="col"><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+<th scope="col"><em data-effect="italics">x</em><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+<th scope="col">(<em data-effect="italics">x</em> – <em data-effect="italics">μ</em>)<sup>2</sup> <math display="inline"><semantics><mrow>
+<mo>⋅</mo>
+</mrow><annotation-xml encoding="MathML-Content"><mo>⋅</mo></annotation-xml></semantics></math> <em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>0</td>
+<td>(0 – 1)<sup>2</sup> ⋅ <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td></tr>
+<tr>
+<td>1</td> <td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>18</mn>
+</mrow>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>18</mn>
+</mrow>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td> <td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>18</mn>
+</mrow>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>18</mn>
+</mrow>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td>
+<td>(1 – 1)<sup>2</sup> ⋅ <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>18</mn>
+</mrow>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>18</mn>
+</mrow>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = 0</td></tr>
+<tr>
+<td>2</td> <td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td> <td><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>18</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>18</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+<td>(2 – 1)<sup>2</sup> ⋅ <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>9</mn>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></td></tr>
+</tbody>
+</table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.14</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Calculating <em data-effect="italics">μ</em> and <em data-effect="italics">σ</em>.</span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="fs-idm8206048">Add the values in the third column to find the expected value: <em data-effect="italics">μ</em> = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>36</mn>
+</mrow>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>36</mn>
+</mrow>
+<mrow>
+<mn>36</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> = 1. Use this value to complete the fourth column.</p>
+<p id="fs-idm151081888">Add the values in the fourth column and take the square root of the sum: σ = <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msqrt><mrow><mfrac><mrow><mn>18</mn></mrow><mrow><mn>36</mn></mrow></mfrac></mrow></msqrt></mrow> </mrow><annotation-xml encoding="MathML-Content"><mrow><msqrt><mrow><mfrac><mrow><mn>18</mn></mrow><mrow><mn>36</mn></mrow></mfrac></mrow></msqrt></mrow></annotation-xml></semantics></math></span> ≈ 0.7071.</p></div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="note-00002"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">4.7</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="exer-00002"><header></header><section><div data-type="problem" id="prob-00002"><div class="os-problem-container">
+<p id="para-00006">Two stacks of cards are placed on a table. Each stack has cards number 1 to 8. One card from each stack is picked up. Let <em data-effect="italics">X</em> = number of cards showing an odd number. Construct a table like Table 4.11 and calculate the mean µ and standard deviation σ of <em data-effect="italics">X</em>.</p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="example1.8"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4.8</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><div class="unnumbered has-problem-title" data-type="exercise" id="fs-idm71286192"><header></header><section><div data-type="problem" id="fs-idm79685344"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idm64926544">On May 11, 2013 at 9:30 PM, the probability that moderate seismic activity (one moderate earthquake) would occur in the next 48 hours in Iran was about 21.42%. Suppose you make a bet that a moderate earthquake will occur in Iran during this period. If you win the bet, you win $50. If you lose the bet, you pay $20. Let <em data-effect="italics">X</em> = the amount of profit from a bet.</p><p id="fs-idm74848144"><em data-effect="italics">P</em>(win) = <em data-effect="italics">P</em>(one moderate earthquake will occur) = 21.42%</p>
+<p id="fs-idm122921568"><em data-effect="italics">P</em>(loss) = <em data-effect="italics">P</em>(one moderate earthquake will <em data-effect="italics">not</em> occur) = 100% – 21.42%</p><p id="fs-idm135341424">If you bet many times, will you come out ahead? Explain your answer in a complete sentence using numbers. What is the standard deviation of <em data-effect="italics">X</em>? Construct a table similar to <a aria-label="View Table 4.12" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation#element-226">Table 4.12</a> and <a aria-label="View Table 4.13" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation#fs-idm21999584">Table 4.13</a> to help you answer these questions.</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idm128877280">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<div class="os-table" id="fs-idm70673696"><div class="table-scroll"><table data-id="fs-idm70673696" data-summary="">
+<thead>
+<tr>
+<th scope="col">
+</th><th scope="col"><em data-effect="italics">x</em></th>
+<th scope="col"><em data-effect="italics">P(x)</em></th>
+<th scope="col"><em data-effect="italics">x</em><em data-effect="italics">(Px)</em></th>
+<th scope="col">(<em data-effect="italics">x</em> – <em data-effect="italics">μ</em>)<sup>2</sup><em data-effect="italics">P</em>(<em data-effect="italics">x</em>)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>win</td>
+<td>50</td>
+<td>0.2142</td>
+<td>10.71</td>
+<td>[50 – (–5.006)]<sup>2</sup>(0.2142) = 648.0964</td>
+</tr>
+<tr>
+<td>loss</td>
+<td>–20</td>
+<td>0.7858</td>
+<td>–15.716</td>
+<td>[–20 – (–5.006)]<sup>2</sup>(0.7858) = 176.6636</td></tr>
+</tbody>
+</table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4.15</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<p id="fs-idm111908496">Mean = Expected Value = 10.71 + (–15.716) = –5.006.</p><p id="fs-idm85218944">If you make this bet many times under the same conditions, your long term outcome will be an average <em data-effect="italics">loss</em> of $5.01 per bet.</p>
+<p id="fs-idm50457088">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mtext>Standard Deviation = </mtext><msqrt>
+<mrow>
+<mn>648.0964</mn><mo>+</mo><mn>176.6636</mn>
+</mrow>
+</msqrt>
+<mo>≈</mo><mn>28.7186</mn>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mtext>Standard Deviation = </mtext><msqrt>
+<mrow>
+<mn>648.0964</mn><mo>+</mo><mn>176.6636</mn>
+</mrow>
+</msqrt>
+<mo>≈</mo><mn>28.7186</mn>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p></div>
+</section>
+</details>
+</section></div></div></section></div><div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp152488176"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">4.8</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm88593344"><header></header><section><div data-type="problem" id="eip-idp52574576"><div class="os-problem-container">
+<p id="eip-idp52574832">On May 11, 2013 at 9:30 PM, the probability that moderate seismic activity (one moderate earthquake) would occur in the next 48 hours in Japan was about 1.08%. As in <a aria-label="Go to Example 4.8" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation#example1.8">Example 4.8</a>, you bet that a moderate earthquake will occur in Japan during this period. If you win the bet, you win $100. If you lose the bet, you pay $10. Let <em data-effect="italics">X</em> = the amount of profit from a bet. Find the mean and standard deviation of <em data-effect="italics">X</em>.</p>
+</div></div>
+</section></div></div></section></div><p id="element-1">Some of the more common discrete probability functions are binomial, geometric, hypergeometric, and Poisson. Most elementary courses do not cover the geometric, hypergeometric, and Poisson. Your instructor will let you know if they wish to cover these distributions.</p>
+<p id="element-428">A probability distribution function is a pattern. You try to fit a probability problem into a <strong>pattern</strong> or distribution in order to perform the necessary calculations. These distributions are tools to make solving probability problems easier. Each distribution has its own special characteristics. Learning the characteristics enables you to distinguish among the different distributions.</p>
+</div></article><footer><p>Adapted from OpenStax, Introductory Statistics 2e, 4.2 Mean or Expected Value and Standard Deviation. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

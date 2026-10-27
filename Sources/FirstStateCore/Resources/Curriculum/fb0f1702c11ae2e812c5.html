@@ -1,0 +1,376 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_bc58a529-1c62-4763-b718-e03330e35ad9"><h2 data-rex-keep="true" data-type="document-title" id="page_bc58a529-1c62-4763-b718-e03330e35ad9_titlecreatedbycookbook"><span class="os-number">2.1</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Computational Thinking</span>
+</h2>
+<section class="learning-objectives" data-depth="1" id="sect-00001"><h3 data-type="title">Learning Objectives</h3>
+<p id="para-00001">By the end of this section, you will be able to:</p>
+<ul id="list-00001">
+<li>Define computational thinking</li>
+<li>Discuss computational thinking examples</li>
+</ul>
+</section>
+<p id="para-00002">This chapter presents key aspects of computational thinking, including logical thinking, assessment, decomposition, pattern recognition, abstraction, generalization, componentization, and automation. These elements guide how computer scientists approach problems and create well-designed solution building blocks at both the business and technical levels. Computational thinking often involves a bottom-up approach, focusing on computing in smaller contexts, and seeks to generate innovative solutions by utilizing data structures and algorithms. Additionally, it may make use of existing design building blocks like design patterns and abstract data types to expedite the development of optimal combinations of data structures and algorithms.</p>
+<section data-depth="1" id="sect-00002"><h3 data-type="title">What Is Computational Thinking?</h3>
+<p id="para-00003">The problem-solving and cognitive process, known as <span data-type="term" group-by="c" id="term-00001">computational thinking</span>, is rooted in principles derived from computer science. It involves breaking down complex problems into smaller, more manageable parts and devising systematic approaches to solve them. Complex problems are situations that are difficult because they involve many different interrelated parts or factors. These problems can be hard to understand and often don’t have simple solutions.</p>
+<p id="para-00004">While “computational thinking” is still perceived by some as an abstract concept without a universally accepted definition, its core value is to facilitate the application of separate strategies and tools to address complex problems. In problem-solving, computers play a central role, but their effectiveness centers on a prior comprehension of the problem and its potential solutions. Computational thinking serves as the bridge between the problem and its resolution. It empowers solution designers to navigate the complexity of a given problem, separate its components, and formulate possible solutions. These solutions, once developed, can be communicated in a manner that is comprehensible to both computers and humans, adopting effective problem-solving.</p>
+<div class="link-to-learning ui-has-child-title" data-type="note" id="note-00001"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Link to Learning</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="para-00005">Computational thinking serves as the intermediary that helps us read complex problems, formulate solutions, and then express those solutions in a manner that computers, humans, or a collaboration of both can implement. Read this article for a <a aria-label="Go to good introduction to computational thinking" href="https://openstax.org/r/76CompThinking" rel="noopener nofollow" target="_blank">good introduction to computational thinking</a> from the BBC.</p>
+</div></section></div>
+<section data-depth="2" id="sect-00003"><h4 data-type="title">Vision</h4>
+<p id="para-00006">To further qualify computational thinking, Al Aho of the Columbia University Computer Science Department describes computational thinking as “the thought processes involved in formulating problems so their solutions can be represented as computational steps and algorithms.” Jeannette Wing, also of Columbia University, brought the idea of computational thinking to prominence in a paper she wrote in 2006 while at Carnegie Mellon University. She believes that computational thinking details the mental acts needed to compute a solution to a problem either by human actions or machine. Computational thinking encompasses a collection of methods and approaches for resolving (and acquiring the skills to resolve) complex challenges, closely aligned with mathematical thinking through its utilization of abstraction, generalization, modeling, and measurement (<a aria-label="View Figure 2.2" class="autogenerated-content" href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking#fig-00001">Figure 2.2</a>). However, it differentiates itself by being more definitely aware than mathematics alone in its capacity for computation and the potential advantages it offers.</p>
+<div class="os-figure" id="fig-00001"><figure class="scaled-down ui-has-child-figcaption" data-id="fig-00001">
+<span data-alt="Diagram of Computational Thinking. Surrounding concepts: Decomposition, Pattern Recognition, Abstraction, Algorithm, Generalization, Evaluation, Modeling, and Simulation." data-type="media">
+<img alt="Diagram of Computational Thinking. Surrounding concepts: Decomposition, Pattern Recognition, Abstraction, Algorithm, Generalization, Evaluation, Modeling, and Simulation." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/3dc5d8d5d2026b4dbadb590e1f5b22e36e82b319" height="888" loading="lazy" src="6f6b07c7eb6d76c59ea35682.webp" width="898"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.2</span>
+<span class="os-divider"> </span>
+<span class="os-caption">This diagram illustrates the main components of computational thinking. (attribution: Copyright Rice University, OpenStax, under CC BY NC-SA 4.0 license)</span>
+</figcaption></figure></div>
+<p id="para-00007">Critical thinking is an important skill that can help with computational thinking. It boils down to understanding concepts rather than just mastering technical details for using software, prioritizing comprehension over rote learning. It’s a core skill, not an extra burden on a curriculum checklist, and it uniquely involves humans, not computers, blending problem-solving and critical thinking. Critical thinking focuses on ideas, not tangible items, applying advanced thinking to devise solutions. Critical thinking is essential for everyone and is, comparable to foundational abilities like reading, writing, and arithmetic.</p>
+</section>
+<section data-depth="2" id="sect-00004"><h4 data-type="title">Computational Thinking Concepts</h4>
+<p id="para-00008">The description provided by the <span class="no-emphasis" data-type="term" group-by="I" id="term-00002">International Society for Technology in Education (ISTE)</span> outlines the key components and dispositions of computational thinking. Let’s explore each characteristic in more detail:</p>
+<ul id="list-00002">
+<li>Decomposition: The analytical process of breaking down complex concepts or problems into smaller parts is called <span data-type="term" group-by="d" id="term-00003">decomposition</span>. This approach helps analyze and solve problems more effectively.</li>
+<li><span class="no-emphasis" data-type="term" group-by="P" id="term-00004">Pattern recognition</span> (logically organizing and analyzing data): Computational thinking emphasizes the logical organization and analysis of data. This includes the ability to structure information in a way that facilitates effective problem-solving.</li>
+<li>Representing data through abstractions: An <span data-type="term" group-by="a" id="term-00005">abstraction</span> is a simplified representation of complex systems or phenomena. Computational thinking involves representing data through an abstraction, such as a simulation, which uses models as surrogates for real systems.</li>
+<li>Automation through algorithmic thinking: Using a program or computer application to perform repetitive tasks or calculations is considered <span data-type="term" group-by="a" id="term-00006">automation</span>.</li>
+<li>Identification, analysis, and implementation of solutions: Computational thinking emphasizes identification, analysis, and implementation of potential solutions to achieve optimal efficiency and effectiveness through a combination of steps and resources.</li>
+<li>Generalization and transferability: Generalizing and transferring this problem-solving process across a wide variety of problems showcases the adaptability and applicability of computational thinking.</li>
+</ul>
+<p id="para-00009">These abilities are supported and enriched by fundamental abilities integral to computational thinking. These abilities involve the following characteristics: confidence in navigating complexity, resilience in tackling challenging problems, an acceptance of ambiguity, adeptness in addressing open-ended issues, and proficiency in collaborating with others to attain shared objectives or solutions. Another illustration of computational thinking is the three As, which is organized into three phases, as visualized in <a aria-label="View Figure 2.3" class="autogenerated-content" href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking#fig-00002">Figure 2.3</a>:</p>
+<ol id="list-00003">
+<li>Abstraction: The initial step involves problem formulation.</li>
+<li>Automation: Next, the focus shifts to expressing the solution.</li>
+<li>Analysis: Finally, the process encompasses solution execution and evaluation.</li>
+</ol>
+<div class="os-figure" id="fig-00002"><figure class="scaled-down ui-has-child-figcaption" data-id="fig-00002">
+<span data-alt="Illustration of Human abilities/Computer affordances. Abstraction: Formation of problem (How does an avalanche happen?). Automation: Expression of solution (Build simple model of gravity). Analysis: Execution and evaluation of solution (Visualize the solution)." data-type="media">
+<img alt="Illustration of Human abilities/Computer affordances. Abstraction: Formation of problem (How does an avalanche happen?). Automation: Expression of solution (Build simple model of gravity). Analysis: Execution and evaluation of solution (Visualize the solution)." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/31b6a475c334e9e75c360f177952b07b1798bf59" height="787" loading="lazy" src="88000b93a60c27a70ce710f6.webp" width="900"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.3</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The three As—abstraction, automation, analysis—illustrate the power of computational thinking. (credit photo: modification of “Avalanche on Everest” by Chagai/Wikimedia Commons, Public Domain; credit graph: modification of “Slope stability calculation for a model landslide” by B. Terhost and Bodo Damm/Journal of Geological Research, CC BY)</span>
+</figcaption></figure></div>
+</section>
+<section data-depth="2" id="sect-00005"><h4 data-type="title">Computational Thinking Techniques</h4>
+<p id="para-00010">In today’s technology world, mastering computational thinking techniques is important. These techniques offer a systematic way to solve problems using tools like data structures, which are like containers used to organize and store data efficiently in a computer. They define how data is logically arranged and manipulated, making it easier to access and work with information in algorithms and programs. There are four key techniques (cornerstones) to computational thinking, as illustrated in <a aria-label="View Figure 2.4" class="autogenerated-content" href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking#fig-00003">Figure 2.4</a>:</p>
+<ul id="list-00004">
+<li>Decomposition is a fundamental concept in computational thinking, representing the process of systematically breaking down a complex problem or system into smaller, more manageable parts or subproblems. By breaking down complexity into simpler elements, decomposition promotes a more organized approach to problem-solving.</li>
+<li>Logical thinking and pattern recognition is a computational thinking technique that involves the process of identifying similarities among and within problems. This computational thinking technique emphasizes the ability to recognize recurring structures, relationships, or sequences in various problem-solving situations.</li>
+<li>Abstraction is a computational thinking technique that centers on focusing on important information while ignoring irrelevant details. This technique enables a clearer understanding of the core issues.</li>
+<li>Algorithms are like detailed sets of instructions for solving a problem step-by-step. They help break down complex tasks into manageable actions, ensuring a clear path to problem-solving.</li>
+</ul>
+<div class="os-figure" id="fig-00003"><figure class="scaled-down ui-has-child-figcaption" data-id="fig-00003">
+<span data-alt="Illustration of computational thinking: Algorithms, Decomposition, Logical Thinking, Abstraction." data-type="media">
+<img alt="Illustration of computational thinking: Algorithms, Decomposition, Logical Thinking, Abstraction." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/5f143d7f720175e6a5e47e343a71108d18f51886" height="529" loading="lazy" src="deedaab26f28f0d74d150995.webp" width="905"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.4</span>
+<span class="os-divider"> </span>
+<span class="os-caption">Users can explore the essence of computational thinking through decomposition, logical thinking, abstraction, and algorithms. (attribution: Copyright Rice University, OpenStax, under CC BY NC-SA 4.0 license)</span>
+</figcaption></figure></div>
+<p id="para-00011">In addition to the four techniques, computational thinking involves essential steps such as testing and debugging. Testing is crucial for uncovering errors within the step-by-step instructions or algorithms employed to tackle a problem. On the other hand, <span data-type="term" group-by="d" id="term-00007">debugging</span> entails identifying and rectifying issues within the code.</p>
+<p id="para-00012">A programmer is someone who writes instructions for a computer to follow. A typical example is that of a programmer who gives instructions to a robot and tells it to make a jam sandwich. In this case, applying computational techniques to give instructions to the robot entails the following techniques: decomposition, logical thinking and pattern recognition, abstraction, and algorithms. These techniques are explained in the following subsections as they apply to the jam sandwich example.</p>
+<div class="tech-everyday ui-has-child-title" data-type="note" id="note-00002"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Technology in Everyday Life</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Traffic Accident Data</span>
+</h4>
+<p id="para-00013">Analyzing data involves collecting and cleaning information, exploring patterns through visual and statistical methods, and forming hypotheses. Statistical analysis and visualization are used to draw conclusions, and findings are interpreted and communicated in reports or presentations to help in the process of decision-making. Analyze the patterns and trends in traffic accident data to understand the prevalence of road injuries and fatalities, and examine the progression of traffic incidents over time. To enhance road safety measures and policies, you should apply computational thinking skills to identify recurring patterns and abstract the most crucial information from the data. By extracting valuable insights, you can contribute to the development and refinement of strategies that effectively improve road safety.</p>
+</div></section></div>
+</section>
+<section data-depth="2" id="sect-00006"><h4 data-type="title">Decomposition</h4>
+<p id="para-00014">Decomposition involves solving a complex problem by breaking it up into smaller, more manageable tasks. Decomposition enables the consideration of various components essential for solving a seemingly complex task, allowing it to be redefined into a more manageable problem. In the case of the jam sandwich example, decomposition involves identifying all the required ingredients and the steps the robot must take to successfully create a jam sandwich.</p>
+</section>
+<section data-depth="2" id="sect-00007"><h4 data-type="title">Logical Thinking and Pattern Recognition</h4>
+<p id="para-00015">Pattern recognition makes it possible to group all the different features considered in decomposition into categories. In the jam sandwich example, pattern recognition leads to grouping the various things identified via decomposition into categories, in this case, ingredients, equipment, and actions. Therefore, applying decomposition and pattern recognition will lead to thinking of as many things as possible that are required to make a jam sandwich. The more things that can be thought of (i.e., ingredients, equipment, and actions), the clearer the instructions will be. A first attempt at decomposition and pattern recognition is summarized in <a aria-label="View Table 2.1" class="autogenerated-content" href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking#table-00001">Table 2.1</a>.</p>
+<div class="os-table" id="table-00001"><div class="table-scroll"><table data-id="table-00001" data-summary=" "><thead>
+<tr class="header-row" valign="top">
+<th data-align="center" data-valign="top" scope="col">Ingredients</th>
+<th data-align="center" data-valign="top" scope="col">Equipment</th>
+<th data-align="center" data-valign="top" scope="col">Actions</th>
+</tr>
+</thead><tbody>
+<tr valign="top">
+<td data-align="left" data-valign="top">Bread</td>
+<td data-align="left" data-valign="top">Plate</td>
+<td data-align="left" data-valign="top">Repeat <em data-effect="italics">x</em> times</td>
+</tr>
+<tr valign="top">
+<td data-align="left" data-valign="top">Jam</td>
+<td data-align="left" data-valign="top">Knife</td>
+<td data-align="left" data-valign="top">Left hand (LH)</td>
+</tr>
+<tr valign="top">
+<td data-align="left" data-valign="top">Butter</td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top">Right hand (RH)</td>
+</tr>
+<tr valign="top">
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top">Pick up</td>
+</tr>
+<tr valign="top">
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top">Unscrew</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.1</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Logical Thinking and Pattern Recognition Example</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The jam sandwich pattern recognition defines the ingredients, equipment, and actions needed for completion.</span>
+</div>
+</div>
+<p id="para-00016">The process of identifying patterns typically requires logical thinking such as inductive or deductive reasoning. Inductive reasoning makes it possible to go from specific examples to general principles. For example, recognizing that dividing any number by 1 results in the original number leads to the broader conclusion that holds true for any number. Similarly, understanding that the sum of two odd numbers yields an even number leads to the generalization that adding two odd numbers always results in an even number. Inductive reasoning turns an observation into a pattern, which allows making a tentative hypothesis that can be turned into a theory. Deductive reasoning is the process of drawing valid conclusions from premises given the fact that it is not possible for the premises to be true and the conclusion to be false. A traditional example illustrates how the premises “all men are mortal” and “Socrates is a man” lead to the deductively correct conclusion that “Socrates is mortal.”</p>
+<div class="tech-everyday ui-has-child-title" data-type="note" id="note-00003"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Technology in Everyday Life</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Computational Thinking in Our Life</span>
+</h4>
+<p id="para-00017">Computational thinking is a method of problem-solving that is extremely useful in everyday life. It involves breaking down complex issues into manageable parts, identifying patterns, extracting essential information, and devising systematic solutions. This process not only applies to technical fields, but also to everyday situations.</p>
+<p id="para-00018">For example, imagine someone trying to manage their monthly expenses within a tight budget. Here's how you might apply computational thinking to this common problem of managing a monthly budget:</p>
+<ol id="list-00005">
+<li>Decomposition: Break down the financial challenge into different categories such as rent, groceries, utilities, and entertainment.</li>
+<li>Pattern recognition: Analyze past spending to identify patterns.</li>
+<li>Abstraction: Focus on key areas where costs can be reduced.</li>
+<li>Algorithmic thinking: Develop a systematic approach to allocate monthly income.</li>
+</ol>
+<p id="para-00019">By using computational thinking, you can manage your finances more effectively, ensuring they cover essential costs while maximizing their savings.</p>
+</div></section></div>
+</section>
+<section data-depth="2" id="sect-00008"><h4 data-type="title">Abstraction</h4>
+<p id="para-00020">Abstraction makes it possible to pull out the important details and identify principles that apply to other problems or situations. When applying abstraction, it may be useful to write down some notes or draw diagrams to help understand how to resolve the problem. In the jam sandwich example, abstraction means forming an idea of what the sandwich should look like. To apply abstraction here, you would create a model or draw a picture representing the final appearance of the jam sandwich once it is made. This simplifies the details, providing a clearer image of the desired outcome. Simple tools like the <span class="no-emphasis" data-type="term" group-by="W" id="term-00009">Windows Paint program</span> can be used to do this, as shown in <a aria-label="View Figure 2.5" class="autogenerated-content" href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking#fig-00004">Figure 2.5</a>.</p>
+<div class="os-figure" id="fig-00004"><figure class="scaled-down ui-has-child-figcaption" data-id="fig-00004">
+<span data-alt="Image of cone, with illustration of cone and triangle underneath, labeled: multiple sides put together. Image of bread + jam + bread put together to make sandwich, labeled: bread + filling + bread." data-type="media">
+<img alt="Image of cone, with illustration of cone and triangle underneath, labeled: multiple sides put together. Image of bread + jam + bread put together to make sandwich, labeled: bread + filling + bread." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/767c6359be97b11e9cd2fe594b5e77aa13a4443e" height="430" loading="lazy" src="f3af89a56022b6e824c5772a.webp" width="738"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.5</span>
+<span class="os-divider"> </span>
+<span class="os-caption">This jam sandwich abstraction example illustrates what the final product should look like. (attribution: Copyright Rice University, OpenStax, under CC BY NC-SA 4.0 license)</span>
+</figcaption></figure></div>
+<p id="para-00021">In technology, data are represented at different levels of abstraction to simplify user interaction and manage complex operations efficiently. Users interact with a web application through a straightforward interface, like requesting help from a GenAI tool, without seeing the underlying complexity. This <span class="no-emphasis" data-type="term" group-by="G" id="term-00010">GenAI</span> prompt is then processed by the application’s logic, which validates and directs it appropriately, often invisibly to the user. Finally, at the back end, the prompt is processed and a GenAI-generated response is provided. Each layer of abstraction serves a separate role, making the entire process efficient for both the user and the system (<a aria-label="View Figure 2.6" class="autogenerated-content" href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking#fig-00005">Figure 2.6</a>).</p>
+<div class="os-figure" id="fig-00005"><figure class="scaled-down ui-has-child-figcaption" data-id="fig-00005">
+<span data-alt="Illustration of backend with LangChain, LLM framework, Input/Output, Large Language Model and Frontend with Streamlit, Web framework, with Input/Output between the two. Prompt input by user with Generated response output." data-type="media">
+<img alt="Illustration of backend with LangChain, LLM framework, Input/Output, Large Language Model and Frontend with Streamlit, Web framework, with Input/Output between the two. Prompt input by user with Generated response output." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/743043374afed26e61db2cbeba58f74ee23eaa60" height="567" loading="lazy" src="531bf3e096e5b6f372e011be.webp" width="964"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.6</span>
+<span class="os-divider"> </span>
+<span class="os-caption">When using GenAI, a user interacts with the interface while the application processes the prompt with layers of abstraction on the back end. (attribution: Copyright Rice University, OpenStax, under CC BY NC-SA 4.0 license)</span>
+</figcaption></figure></div>
+</section>
+<section data-depth="2" id="sect-00009"><h4 data-type="title">Algorithm</h4>
+<p id="para-00022">An algorithm is a sequence of steps/instructions that must be followed in a specific order to solve a problem. Algorithms make it possible to describe a solution to a problem by writing down the instructions that are required to solve the problem. Computer programs typically execute algorithms to perform certain tasks. In the jam sandwich example, the algorithm technique is about writing instructions that the robot can follow to make the jam sandwich. As you will learn in <a aria-label="Go to Chapter 3 Data Structures and Algorithms" class="autogenerated-content" data-page-fragment="" data-page-slug="3-introduction" data-page-uuid="63481810-ce08-4652-b115-7424cb09029a" href="https://openstax.org/books/introduction-computer-science/pages/3-introduction">Chapter 3 Data Structures and Algorithms</a>, algorithms are most commonly written as either pseudocode or a flowchart. An outline of the logic of algorithms using a combination of language and high-level programming concepts is called <span data-type="term" group-by="p" id="term-00012">pseudocode</span>. Each step is shown in a clearly ordered, written structure. A <span data-type="term" group-by="f" id="term-00013">flowchart</span> clearly shows the flow and direction of decisions in a visual way using a diagram. Either way is fine, and it is a matter of personal preference. Basic templates for the flowchart and pseudocode are in <a aria-label="View Figure 2.7" class="autogenerated-content" href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking#fig-00006">Figure 2.7</a>.</p>
+<div class="os-figure" id="fig-00006"><figure class="scaled-down ui-has-child-figcaption" data-id="fig-00006">
+<span data-alt="Chart of Pseudocode: Start, If the statement is true, Then go to Action 1, Else go to Action 2, End. Flowchart shows Pseudocode as a flowchart with same decisions." data-type="media">
+<img alt="Chart of Pseudocode: Start, If the statement is true, Then go to Action 1, Else go to Action 2, End. Flowchart shows Pseudocode as a flowchart with same decisions." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/edf6326df2a7798a6f66347574cbb8b778804871" height="547" loading="lazy" src="f350d0d0117181dc9eeb07d5.webp" width="874"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.7</span>
+<span class="os-divider"> </span>
+<span class="os-caption">Pseudocode lists each step, while a flowchart visually outlines the process of decision-making. (attribution: Copyright Rice University, OpenStax, under CC BY NC-SA 4.0 license)</span>
+</figcaption></figure></div>
+<p id="para-00023">Writing algorithms requires practice. Not everyone likes butter in their jam sandwich. The robot needs a method of making sure it adds or does not add butter, depending on preferences. It is therefore necessary to account for the following steps in the pseudocode and flowchart:</p>
+<ol id="list-00006">
+<li>Ask whether there should be butter on the bread.</li>
+<li>Either spread butter on the bread,</li>
+<li>Or, do not use butter.</li>
+</ol>
+<p id="para-00024">These steps can be added as actions in the table previously shown and expressed as steps in the pseudocode using programming keywords such as <span class="no-emphasis" data-type="term" group-by="I" id="term-00014">INPUT</span>, <span class="no-emphasis" data-type="term" group-by="O" id="term-00015">OUTPUT</span>, <span class="no-emphasis" data-type="term" group-by="I" id="term-00016">IF</span>, <span class="no-emphasis" data-type="term" group-by="T" id="term-00017">THEN</span>, <span class="no-emphasis" data-type="term" group-by="E" id="term-00018">ELSE</span>, and <span class="no-emphasis" data-type="term" group-by="S" id="term-00019">START</span>. The corresponding instructions can then be converted into a flowchart using the symbols in <a aria-label="View Figure 2.8" class="autogenerated-content" href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking#fig-00007">Figure 2.8</a>.</p>
+<div class="os-figure" id="fig-00007"><figure class="scaled-down ui-has-child-figcaption" data-id="fig-00007">
+<span data-alt="Chart with Symbol and Instruction. Rounded rectangle: Start/end; Rectangle: Task (e.g., spread jam); Diamond: Decision (e.g., do you want butter?); Downward arrow: Direction of flow." data-type="media">
+<img alt="Chart with Symbol and Instruction. Rounded rectangle: Start/end; Rectangle: Task (e.g., spread jam); Diamond: Decision (e.g., do you want butter?); Downward arrow: Direction of flow." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/94cea39b748a912f85fc1316b7d6357d1b3cb570" height="517" loading="lazy" src="a9fa705b7a2882e2ab90cd03.webp" width="704"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.8</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The symbols used in a flowchart are associated with their instructions. (attribution: Copyright Rice University, OpenStax, under CC BY NC-SA 4.0 license)</span>
+</figcaption></figure></div>
+<section data-depth="3" id="sect-00010"><h5 data-type="title">Algorithm Execution Model Patterns</h5>
+<p id="para-00025">Various patterns of execution models may be used to step through the instructions provided in an algorithm. So far, we have only considered the traditional sequential (i.e., step-by-step) execution model for algorithm instructions. However, it is also possible to leverage parallelism/concurrency and recursion as alternative models to drive the execution of algorithms’ instructions.</p>
+<p id="para-00026">Parallel/concurrent execution models are typically used to optimize algorithm execution efficiency. As an example, if you and a friend are buying tickets for a movie and there are three independent lines, you may opt for a parallel processing model of execution by having you and your friend join two separate lines to buy the tickets. In that case, you are guaranteed to be able to obtain the tickets quicker assuming one of the lines operating in parallel with the other ends up serving customers faster, which is most often the case. Note that executing the same algorithm simultaneously on a computer may not be possible if you only have one central processing unit (CPU) in your machine. In that case, you can simulate parallelism by having the operating system running on the machine execute the two algorithms concurrently as separate tasks while sharing the single processor resources. This approach is less efficient than true parallelism. More detail on the differences between concurrency and parallelism will be provided in <a aria-label="Go to Chapter 4 Linguistic Realization of Algorithms: Low-Level Programming Languages" class="autogenerated-content" data-page-fragment="" data-page-slug="4-introduction" data-page-uuid="fdbf96bc-fbca-4605-b2b6-97356f00bb01" href="https://openstax.org/books/introduction-computer-science/pages/4-introduction">Chapter 4 Linguistic Realization of Algorithms: Low-Level Programming Languages</a>.</p>
+<p id="para-00027">Recursive models of execution provide another elegant and effective alternative to the traditional sequential model of execution. The problem-solving technique where a process calls itself in order to solve smaller instances of the same problem is called <span data-type="term" group-by="r" id="term-00020">recursion</span>. It can be a powerful tool in programming because it allows for elegant solutions to complex problems by breaking them down into smaller, more manageable parts. By leveraging recursion, programmers can write concise and efficient code to solve a wide range of problems.</p>
+<p id="para-00028">One of the key advantages of recursion is its ability to handle complex tasks with minimal code. Instead of writing lengthy iterative loops to solve repetitive tasks, recursion allows programmers to define a process that calls itself with modified input parameters, effectively reducing the amount of code needed. However, it’s essential to be cautious when using recursion, as improper implementation can lead to stack overflow errors due to excessive process calls. Programmers should ensure that recursive processes have proper base cases to terminate the recursion and avoid infinite loops. Example:</p>
+<pre class="c" data-lang="c" data-type="code"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+    
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">recursiveSum</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>{
+  <span class="hljs-comment">// Base case</span>
+  <span class="hljs-keyword">if</span> (x == <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// Recursive step</span>
+    <span class="hljs-keyword">return</span> x + recursiveSum (x - <span class="hljs-number">1</span>);
+  }
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">cout</span> &lt;&lt; recursiveSum (<span class="hljs-number">10</span>);
+  <span class="hljs-comment">// Answer is 55</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</pre>
+<p id="para-00029">In this scenario, the process involves gradually adding values to the total variable as you iterate through a loop. However, a different approach involves leveraging computational thinking to deconstruct the problem, breaking it down into smaller subcomponents. This method tackles these subcomponents individually to address the overarching issue. When these smaller parts represent scaled-down versions of the original problem, recursion becomes a valuable tool.</p>
+<p id="para-00030">In practical scenarios, recursion often manifests as a <span data-type="term" group-by="f" id="term-00021">function</span>, which is a set of commands that can be repeatedly executed. It may accept an input and may return an output. The base case represents the function’s most straightforward operation for a given input. To effectively implement recursion, two primary steps must be followed: (a) identify the base case, and (b) outline the recursive steps. In the context of a recursive function, when <em data-effect="italics">n</em> is 0, the cumulative sum from 0 to 0 is intuitively 0, representing the most fundamental subproblem of the main issue. Armed with this base case, you can commence crafting the initial part of the function.</p>
+<pre class="c" data-lang="c" data-type="code"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">recursiveSum</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span>
+</span>{
+  <span class="hljs-comment">// Base case</span>
+  <span class="hljs-keyword">if</span> (x == <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</pre>
+<p id="para-00031">Recursion operates through a process of simplification, progressively reducing the value of <em data-effect="italics">x</em> until it meets the base condition, where <em data-effect="italics">x</em> equals 0. This technique presents an alternative method, offering a refined and effective algorithmic solution for the current problem:</p>
+<pre class="c" data-lang="c" data-type="code"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+    
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">recursiveSum</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>{
+  <span class="hljs-comment">// Base case</span>
+  <span class="hljs-keyword">if</span> (x == <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+  }
+  <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// Recursive step</span>
+    <span class="hljs-keyword">return</span> x + recursiveSum (x - <span class="hljs-number">1</span>);
+  }
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+<span class="hljs-built_in">cout</span> &lt;&lt; recursiveSum(<span class="hljs-number">10</span>); <span class="hljs-comment">// Output will be the sum = 55.</span>
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</pre>
+<p id="para-00032">While it looks like recursion amounts to calling the same function repeatedly, it is only partially true, and you should not think about it that way. What happens is much more than repeating the call of a function. It is more useful to think of it as a chain of deferred operations. These deferred operations are not visible in your code or your output—they are in memory. The program needs to hold them somehow, to be able to execute them at the end. In fact, if you had not specified the base case, the recursive process would never end. <a aria-label="View Figure 2.9" class="autogenerated-content" href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking#fig-00008">Figure 2.9</a> illustrates a flowchart for an iterative solution that adds <em data-effect="italics">N</em> numbers.</p>
+<div class="os-figure" id="fig-00008"><figure class="scaled-down ui-has-child-figcaption" data-id="fig-00008">
+<span data-alt="Iterative solution flowchart steps: Start, i=0; Sum=0, Read N; If i&lt;=N - Yes; Sum=Sum + I, i=i+1, then back to If i&lt;=N; - No; Print Sum; End." data-type="media">
+<img alt="Iterative solution flowchart steps: Start, i=0; Sum=0, Read N; If i&lt;=N - Yes; Sum=Sum + I, i=i+1, then back to If i&lt;=N; - No; Print Sum; End." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/7c15eca21e68e928aa3fc737bd471f3ed0bf416a" height="833" loading="lazy" src="1d6525e179724802234dcd8d.webp" width="520"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.9</span>
+<span class="os-divider"> </span>
+<span class="os-caption">A flowchart represents an iterative solution for adding <em data-effect="italics">N</em> numbers. (attribution: Copyright Rice University, OpenStax, under CC BY NC-SA 4.0 license)</span>
+</figcaption></figure></div>
+<div class="concepts-practice ui-has-child-title" data-type="note" id="note-00004"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Concepts In Practice</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Computational Thinking for Chess Problem-Solving</span>
+</h4>
+<p id="para-00033">Computers can be used to help us solve problems. However, before a problem can be tackled, the problem itself and how it could be solved need to be understood. Computational thinking transcends mere programming; it doesn’t equate to thinking in the binary fashion of computers, as they fundamentally lack the capacity for thought. Rather, while programming is the craft of instructing a computer on the actions to execute, computational thinking empowers you to meticulously determine what those instructions should be. Take, for instance, the strategic gameplay involved in chess. To excel in a chess match, a player must:</p>
+<ul id="list-00007">
+<li>Understand the unique movements and strategic values of each piece, recognizing how each can be maneuvered to control the board.</li>
+<li>Visualize the board’s layout, identifying potential threats and opportunities, and planning moves several steps ahead to secure an advantageous position.</li>
+<li>Recognize patterns from previous games, understanding common tactics and counters, to formulate a robust, adaptable strategy.</li>
+</ul>
+<p id="para-00034">In devising a winning strategy, computational thinking is the underpinning framework:</p>
+<ul id="list-00008">
+<li>The complex game is dissected into smaller, more manageable components (e.g., the function of each chess piece, the state of the board)—this is decomposition.</li>
+<li>Attention is concentrated on pivotal elements that influence the game’s outcome, such as the positioning of key pieces and the opponent’s tendencies, sidelining less critical factors—this is an abstraction.</li>
+<li>Drawing from prior knowledge and experiences in similar scenarios, a step-by-step approach is developed to navigate through the game—this is algorithmic thinking.</li>
+</ul>
+<p id="para-00035">Should you venture into developing your own chess program or strategy, these are precisely the types of considerations you would deliberate on and resolve before actual programming.</p>
+</div></section></div>
+</section>
+</section>
+<section data-depth="2" id="sect-00011"><h4 data-type="title">Testing and Debugging</h4>
+<p id="para-00036">Testing and debugging are techniques used to identify flaws in algorithms and defects in code to be able to correct them. Test cases rely on providing specific input data to check whether a software program functions correctly and meets its designed requirements. Test cases need to be identified to drive tests. If a test associated with a test case fails, debugging needs to be conducted to identify the source of the problem and correct it. In other words, debugging is about locating and fixing defects (i.e., bugs) in algorithms and processes to make them behave as expected. In programming, everyone makes mistakes, they are part of the learning process. The important thing is to identify the mistake and work out how to overcome it. There are those who feel that the deepest learning takes place when mistakes are made.</p>
+<p id="para-00037">In the jam sandwich algorithm, testing can be facilitated by taking turns to play the role of the programmer who gives instructions as well as the robot. If you are a programmer, your job is to read out the instructions and follow each step. You can choose to follow your pseudocode or your flowchart. Each instruction becomes a test case, and the test succeeds if the robot can follow every instruction exactly and successfully. In the alternative, you will need to debug the instruction to identify the source of the problem and correct it. <a aria-label="View Table 2.2" class="autogenerated-content" href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking#table-00002">Table 2.2</a> can be used to record problems encountered and improvements that need to be made.</p>
+<div class="os-table" id="table-00002"><div class="table-scroll"><table data-id="table-00002" data-summary=""><thead>
+<tr class="header-row" valign="top">
+<th data-align="center" data-valign="top" scope="col">Test Case</th>
+<th data-align="center" data-valign="top" scope="col">Input</th>
+<th data-align="center" data-valign="top" scope="col">Problem</th>
+<th data-align="center" data-valign="top" scope="col">Expected Outcomes</th>
+<th data-align="center" data-valign="top" scope="col">Observed Outcomes</th>
+<th data-align="center" data-valign="top" scope="col">Improvement</th>
+<th data-align="center" data-valign="top" scope="col">Responsible User</th>
+</tr>
+</thead><tbody>
+<tr valign="top">
+<td data-align="justify" data-valign="top">1.</td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+</tr>
+<tr valign="top">
+<td data-align="justify" data-valign="top">2.</td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+<td data-align="left" data-valign="top"> </td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.2</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Sample Table for Recording Test Problems and Improvements</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div class="industry-spotlight ui-has-child-title" data-type="note" id="note-00005"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Industry Spotlight</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">DNA Sequencing</span>
+</h4>
+<p id="para-00038">Computational thinking is important in every industry today. In DNA sequencing, computational thinking helps manage the massive and complex data involved. It starts by breaking the large DNA sequence into smaller pieces. Then, it involves identifying patterns or sequences within these pieces, which might indicate genetic information like the presence of certain genes. The focus is on the most relevant parts of the sequence, discarding unnecessary data to concentrate on potentially significant genetic regions. Finally, refined algorithms process and reconstruct the original sequence to identify genetic variations. This approach is used for efficiently handling massive datasets in DNA sequencing and extracting meaningful insights. The parts of computational thinking (CT) can be identified and highlighted in the process of DNA sequencing, a complex task within the field of genomics:</p>
+<ul id="list-00009">
+<li>Decomposition: Break down the DNA sequencing process into specific steps such as sample collection and DNA extraction.</li>
+<li>Pattern recognition: Identify similarities in DNA sequences that could indicate genetic traits or anomalies.</li>
+<li>Abstraction: Focus on the essential parts of the genetic information that are relevant for the study at hand.</li>
+<li>Algorithms: Create step-by-step protocols for each part of the sequencing process.</li>
+<li>Logical thinking: Determine the most accurate methods for sequencing based on the type of sample and the required depth of sequence analysis.</li>
+<li>Evaluation: Assess the quality and accuracy of the sequencing data obtained.</li>
+<li>Debugging: Identify issues that may arise during the sequencing process.</li>
+</ul>
+</div></section></div>
+</section>
+</section>
+<section data-depth="1" id="sect-00012"><h3 data-type="title">Practical Computational Thinking Examples</h3>
+<p id="para-00039">Here are different real-life scenarios of practical applications of computational thinking with suggested solution approaches to provide problem-solving and decision-making:</p>
+<ul id="list-00010">
+<li>Organizing a city’s recycling program to maximize efficiency. How can you ensure the most effective collection routes and times?</li>
+<li>Solution: Use a route optimization algorithm to analyze and plan the most efficient paths for collection trucks, considering factors like distance and traffic patterns.</li>
+</ul>
+<ul id="list-00013">
+<li>Planning the layout of a community garden to optimize space and sunlight exposure for different plant types. How do you decide where to plant each type of vegetable or flower?</li>
+<li>Solution: Employ a simulation algorithm that models sunlight patterns, plant growth rates, and space requirements to design a garden layout that maximizes space and plant health.</li>
+</ul>
+<ul id="list-00014">
+<li>Creating a schedule for a multistage music festival to minimize overlaps and ensure a smooth flow of audiences. How do you schedule the performances across different stages?</li>
+<li>Solution: Implement a scheduling algorithm that considers audience preferences, artist availability, and stage logistics to create a timetable that maximizes attendee satisfaction and minimizes conflicts.</li>
+</ul>
+<ul id="list-00015">
+<li>Determining the most efficient way to allocate computer resources in a cloud computing environment to handle varying user demands. How do you manage the computational load?</li>
+<li>Solution: Use load balancing algorithms to distribute tasks across servers dynamically, ensuring optimal resource utilization and maintaining system performance.</li>
+</ul>
+</section>
+</div></article><footer><p>Adapted from OpenStax, Introduction to Computer Science, 2.1 Computational Thinking. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introduction-computer-science/pages/2-1-computational-thinking">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

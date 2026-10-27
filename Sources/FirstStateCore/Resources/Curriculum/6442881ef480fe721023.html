@@ -1,0 +1,3671 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_aa3a6479-56b9-4e74-9b72-5817cfe5bf5a"><h2 data-rex-keep="true" data-type="document-title" id="page_aa3a6479-56b9-4e74-9b72-5817cfe5bf5a_titlecreatedbycookbook"><span class="os-number">6.8</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Fitting Exponential Models to Data</span>
+</h2><div class="ui-has-child-title" data-type="abstract"><header><h3 data-type="title">Learning Objectives</h3></header><section><p id="para-00001">In this section, you will:</p><ul id="list-00001">
+<li>Build an exponential model from data.</li>
+<li>Build a logarithmic model from data.</li>
+<li>Build a logistic model from data.</li>
+</ul></section></div>
+<p id="fs-id1677675">In previous sections of this chapter, we were either given a function explicitly to graph or evaluate, or we were given a set of points that were guaranteed to lie on the curve. Then we used algebra to find the equation that fit the points exactly. In this section, we use a modeling technique called <em data-effect="italics">regression analysis</em> to find a curve that models data collected from real-world observations. With <span class="no-emphasis" data-type="term" group-by="r" id="term-00004">regression analysis</span>, we don’t expect all the points to lie perfectly on the curve. The idea is to find a model that best fits the data. Then we use the model to make predictions about future events.</p><p id="fs-id1356390">Do not be confused by the word <em data-effect="italics">model</em>. In mathematics, we often use the terms <em data-effect="italics">function</em>, <em data-effect="italics">equation</em>, and <em data-effect="italics">model</em> interchangeably, even though they each have their own formal definition. The term <em data-effect="italics">model</em> is typically used to indicate that the equation or function approximates a real-world situation.</p>
+<p id="fs-id969059">We will concentrate on three types of regression models in this section: exponential, logarithmic, and logistic. Having already worked with each of these functions gives us an advantage. Knowing their formal definitions, the behavior of their graphs, and some of their real-world applications gives us the opportunity to deepen our understanding. As each regression model is presented, key features and definitions of its associated function are included for review. Take a moment to rethink each of these functions, reflect on the work we’ve done so far, and then explore the ways regression is used to model real-world phenomena.</p>
+<section data-depth="1" id="fs-id1527075"><h3 data-type="title">Building an Exponential Model from Data</h3>
+<p id="fs-id1637870">As we’ve learned, there are a multitude of situations that can be modeled by exponential functions, such as investment growth, radioactive decay, atmospheric pressure changes, and temperatures of a cooling object. What do these phenomena have in common? For one thing, all the models either increase or decrease as time moves forward. But that’s not the whole story. It’s the <em data-effect="italics">way</em> data increase or decrease that helps us determine whether it is best modeled by an exponential equation. Knowing the behavior of exponential functions in general allows us to recognize when to use exponential regression, so let’s review exponential growth and decay.</p>
+<p id="fs-id1365833">Recall that exponential functions have the form <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><msup>
+<mi>b</mi>
+<mi>x</mi>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><msup>
+<mi>b</mi>
+<mi>x</mi>
+</msup>
+</mrow></annotation-xml></semantics></math></span> or <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><msub>
+<mi>A</mi>
+<mn>0</mn>
+</msub>
+<msup>
+<mi>e</mi>
+<mrow>
+<mi>k</mi><mi>x</mi>
+</mrow>
+</msup>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><msub>
+<mi>A</mi>
+<mn>0</mn>
+</msub>
+<msup>
+<mi>e</mi>
+<mrow>
+<mi>k</mi><mi>x</mi>
+</mrow>
+</msup>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> When performing regression analysis, we use the form most commonly used on graphing utilities, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><msup>
+<mi>b</mi>
+<mi>x</mi>
+</msup>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><msup>
+<mi>b</mi>
+<mi>x</mi>
+</msup>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Take a moment to reflect on the characteristics we’ve already learned about the exponential function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><msup>
+<mi>b</mi>
+<mi>x</mi>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><msup>
+<mi>b</mi>
+<mi>x</mi>
+</msup>
+</mrow></annotation-xml></semantics></math></span> (assume <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>a</mi><mo>&gt;</mo><mn>0</mn><mo stretchy="false">)</mo><mo>:</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>a</mi><mo>&gt;</mo><mn>0</mn><mo stretchy="false">)</mo><mo>:</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+<ul id="fs-id1694862">
+<li> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>b</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>b</mi>
+</mrow></annotation-xml></semantics></math> must be greater than zero and not equal to one.</li>
+<li>The initial value of the model is <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math>
+<ul data-bullet-style="open-circle" id="fs-id1305009"><li>If <math display="inline"><semantics><mrow>
+<mrow>
+<mi>b</mi><mo>&gt;</mo><mn>1</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>b</mi><mo>&gt;</mo><mn>1</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math> the function models exponential growth. As <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math> increases, the outputs of the model increase slowly at first, but then increase more and more rapidly, without bound.</li>
+<li>If <math display="inline"><semantics><mrow>
+<mrow>
+<mn>0</mn><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mn>1</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>0</mn><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mn>1</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math> the function models <span class="no-emphasis" data-type="term" group-by="e" id="term-00005">exponential decay</span>. As <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math> increases, the outputs for the model decrease rapidly at first and then level off to become asymptotic to the <em data-effect="italics">x</em>-axis. In other words, the outputs never become equal to or less than zero.</li>
+</ul></li>
+</ul>
+<p id="fs-id1373960">As part of the results, your calculator will display a number known as the <em data-effect="italics">correlation coefficient</em>, labeled by the variable <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>r</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>r</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> or <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> (You may have to change the calculator’s settings for these to be shown.) The values are an indication of the “goodness of fit” of the regression equation to the data. We more commonly use the value of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+</mrow></annotation-xml></semantics></math></span> instead of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>r</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>r</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> but the closer either value is to 1, the better the regression equation approximates the data.</p><div class="ui-has-child-title" data-type="note" id="fs-id1424609"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Exponential Regression </span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1532328"><em data-effect="italics">Exponential regression</em> is used to model situations in which growth begins slowly and then accelerates rapidly without bound, or where decay begins rapidly and then slows down to get closer and closer to zero. We use the command “<strong>ExpReg</strong>” on a graphing utility to fit an exponential function to a set of data points. This returns an equation of the form, <span class="os-math-in-para"><div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><msup>
+<mi>b</mi>
+<mi>x</mi>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><msup>
+<mi>b</mi>
+<mi>x</mi>
+</msup>
+</mrow></annotation-xml></semantics></math></div></span> </p><p id="fs-id1585350">Note that:</p>
+<ul id="fs-id1534713"><li> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>b</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>b</mi>
+</mrow></annotation-xml></semantics></math> must be non-negative.</li>
+<li>when <math display="inline"><semantics><mrow>
+<mrow>
+<mi>b</mi><mo>&gt;</mo><mn>1</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>b</mi><mo>&gt;</mo><mn>1</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math> we have an exponential growth model.</li>
+<li>when <math display="inline"><semantics><mrow>
+<mrow>
+<mn>0</mn><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mn>1</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>0</mn><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mn>1</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math> we have an exponential decay model.</li>
+</ul></div></section></div>
+<div class="how-to-notitle ui-has-child-title" data-has-label="true" data-label="How To" data-type="note" id="fs-id1375157"><header><h3 class="os-title" data-label-parent="How To" data-type="title">
+<span class="os-title-label">How To</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1588505"><strong>Given a set of data, perform exponential regression using a graphing utility.</strong></p>
+<ol id="fs-id836076" type="1"><li>Use the <strong>STAT</strong> then <strong>EDIT</strong> menu to enter given data.
+<ol id="fs-id1293089" type="a">
+<li>Clear any existing data from the lists.</li>
+<li>List the input values in the L1 column.</li>
+<li>List the output values in the L2 column.</li>
+</ol>
+</li>
+<li>Graph and observe a scatter plot of the data using the <strong>STATPLOT</strong> feature.
+<ol id="fs-id900017" type="a">
+<li>Use <strong>ZOOM</strong> [<strong>9</strong>] to adjust axes to fit the data.</li>
+<li>Verify the data follow an exponential pattern.</li>
+</ol>
+</li>
+<li>Find the equation that models the data.
+<ol id="fs-id1677252" type="a">
+<li>Select “<strong>ExpReg</strong>” from the <strong>STAT</strong> then <strong>CALC</strong> menu.</li>
+<li>Use the values returned for <em data-effect="italics">a</em> and <em data-effect="italics">b</em> to record the model, <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><msup>
+<mi>b</mi>
+<mi>x</mi>
+</msup>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><msup>
+<mi>b</mi>
+<mi>x</mi>
+</msup>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math> </li>
+</ol>
+</li>
+<li>Graph the model in the same window as the scatterplot to verify it is a good fit for the data.</li>
+</ol></div></section></div>
+<div class="ui-has-child-title" data-type="example" id="Example_04_08_01"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">1</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><div class="unnumbered" data-type="exercise" id="fs-id1647375"><header></header><section><div data-type="problem" id="fs-id1338736"><div class="os-problem-container"><h4 data-type="title">Using Exponential Regression to Fit a Model to Data</h4>
+<p class="has-noteref" id="fs-id1424549">In 2007, a university study was published investigating the crash risk of alcohol impaired driving. Data from 2,871 crashes were used to measure the association of a person’s blood alcohol level (BAC) with the risk of being in an accident. <a aria-label="View Table 1" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_01">Table 1</a> shows results from the study <sup data-type="footnote-number" id="footnote-ref1"><a aria-label="Go to 9" data-type="footnote-link" epub:type="noteref" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#fs-id1570737" role="doc-noteref">9</a></sup>. The <em data-effect="italics">relative risk</em> is a measure of how many times more likely a person is to crash. So, for example, a person with a BAC of 0.09 is 3.54 times as likely to crash as a person who has not been drinking alcohol.</p><div class="os-table" id="Table_04_08_01"><div class="table-scroll"><table data-id="Table_04_08_01" data-summary="Two rows and thirteen columns. The first row is labeled, “BAC”, and the second row is labeled, “Relative Risk of Crashing”. Reading the columns as ordered pairs, we have the following values: (0, 1), (0.01, 1.03), (0.03, 1.06), (0.05, 1.38), (0.07, 2.09), (0.09, 3.54), (0.11, 6.41), (0.13, 12.6), (0.15, 22.1), (0.17, 39.05), (0.19, 65.32), and (0.21, 4.394)." role="presentation"><tbody>
+<tr>
+<td data-align="center"><strong>BAC</strong></td>
+<td data-align="center">0</td>
+<td data-align="center">0.01</td>
+<td data-align="center">0.03</td>
+<td data-align="center">0.05</td>
+<td data-align="center">0.07</td>
+<td data-align="center">0.09</td>
+</tr>
+<tr>
+<td data-align="center"><strong>Relative Risk of Crashing</strong></td>
+<td data-align="center">1</td>
+<td data-align="center">1.03</td>
+<td data-align="center">1.06</td>
+<td data-align="center">1.38</td>
+<td data-align="center">2.09</td>
+<td data-align="center">3.54</td>
+</tr>
+<tr>
+<td data-align="center"><strong>BAC</strong></td>
+<td data-align="center">0.11</td>
+<td data-align="center">0.13</td>
+<td data-align="center">0.15</td>
+<td data-align="center">0.17</td>
+<td data-align="center">0.19</td>
+<td data-align="center">0.21</td>
+</tr>
+<tr>
+<td data-align="center"><strong>Relative Risk of Crashing</strong></td>
+<td data-align="center">6.41</td>
+<td data-align="center">12.6</td>
+<td data-align="center">22.1</td>
+<td data-align="center">39.05</td>
+<td data-align="center">65.32</td>
+<td data-align="center">99.78</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">1</span>
+<span class="os-divider"> </span>
+</div>
+</div><ol id="fs-id1326068" type="a">
+<li>Let <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math> represent the BAC level, and let <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi>
+</mrow></annotation-xml></semantics></math> represent the corresponding relative risk. Use exponential regression to fit a model to these data.</li>
+<li>After 6 drinks, a person weighing 160 pounds will have a BAC of about <math display="inline"><semantics><mrow>
+<mrow>
+<mn>0.16.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>0.16.</mn>
+</mrow></annotation-xml></semantics></math> How many times more likely is a person with this weight to crash if they drive after having a 6-pack of beer? Round to the nearest hundredth.</li>
+</ol>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1282956">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<ol id="fs-id1588497" type="a"><li>Using the <strong>STAT</strong> then <strong>EDIT</strong> menu on a graphing utility, list the <strong>BAC</strong> values in L1 and the relative risk values in L2. Then use the <strong>STATPLOT</strong> feature to verify that the scatterplot follows the exponential pattern shown in <a aria-label="View Figure 1" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#CNX_Precalc_Figure_04_08_001">Figure 1</a>:
+
+<div class="os-figure" id="CNX_Precalc_Figure_04_08_001"><figure class="small ui-has-child-figcaption" data-id="CNX_Precalc_Figure_04_08_001">
+<span data-alt="Graph of a scattered plot." data-type="media" id="fs-id1650581">
+<img alt="Graph of a scattered plot." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/01891e7a7ee2dc7de864b6dc7313a3b73af67cbe" height="475" loading="lazy" src="363fbbdf2120b91018c7edd8.webp" width="487"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">1</span>
+</figcaption></figure></div>
+<p id="fs-id1300931">Use the “<strong>ExpReg</strong>” command from the <strong>STAT</strong> then <strong>CALC</strong> menu to obtain the exponential model,</p><div class="unnumbered" data-label="" data-type="equation" id="eip-id1165134361347"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mn>0.58304829</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2.20720213</mn><mtext>E</mtext><mn>10</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mi>x</mi>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mn>0.58304829</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2.20720213</mn><mtext>E</mtext><mn>10</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mi>x</mi>
+</msup>
+</mrow></annotation-xml></semantics></math></div> </div><p id="fs-id1370824">Converting from scientific notation, we have:</p><div class="unnumbered" data-label="" data-type="equation" id="eip-id1165134129943"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mn>0.58304829</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>22,072,021,300</mtext>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mi>x</mi>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mn>0.58304829</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>22,072,021,300</mtext>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mi>x</mi>
+</msup>
+</mrow></annotation-xml></semantics></math></div> </div><p id="fs-id1327158">Notice that <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>≈</mo><mn>0.97</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>r</mi>
+<mn>2</mn>
+</msup>
+<mo>≈</mo><mn>0.97</mn>
+</mrow></annotation-xml></semantics></math></span> which indicates the model is a good fit to the data. To see this, graph the model in the same window as the scatterplot to verify it is a good fit as shown in <a aria-label="View Figure 2" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#CNX_Precalc_Figure_04_08_002">Figure 2</a>:</p><div class="os-figure" id="CNX_Precalc_Figure_04_08_002"><figure class="small ui-has-child-figcaption" data-id="CNX_Precalc_Figure_04_08_002">
+<span data-alt="Graph of a scattered plot with an estimation line." data-type="media" id="fs-id1646833">
+<img alt="Graph of a scattered plot with an estimation line." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/f9e02774e342fd3a8121501493f6e8509ec283a7" height="475" loading="lazy" src="9fd9132e418a76f8de5e1ec8.webp" width="487"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2</span>
+</figcaption></figure></div>
+</li>
+<li>
+<p id="fs-id1598603">Use the model to estimate the risk associated with a BAC of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>0.16.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>0.16.</mn>
+</mrow></annotation-xml></semantics></math></span> Substitute <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>0.16</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>0.16</mn>
+</mrow></annotation-xml></semantics></math></span> for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> in the model and solve for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-id1165137430511"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mi>y</mi>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mn>0.58304829</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>22,072,021,300</mtext>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mi>x</mi>
+</msup>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Use the regression model found in part (a)</mtext><mtext>.</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mn>0.58304829</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>22,072,021,300</mtext>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mrow>
+<mn>0.16</mn>
+</mrow>
+</msup>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Substitute 0</mtext><mtext>.16 for </mtext><mi>x</mi><mtext>.</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>≈</mo><mtext>26</mtext><mtext>.35</mtext>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Round to the nearest hundredth</mtext><mtext>.</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mi>y</mi>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mn>0.58304829</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>22,072,021,300</mtext>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mi>x</mi>
+</msup>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Use the regression model found in part (a)</mtext><mtext>.</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mn>0.58304829</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>22,072,021,300</mtext>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mrow>
+<mn>0.16</mn>
+</mrow>
+</msup>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Substitute 0</mtext><mtext>.16 for </mtext><mi>x</mi><mtext>.</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>≈</mo><mtext>26</mtext><mtext>.35</mtext>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Round to the nearest hundredth</mtext><mtext>.</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div> </div>
+<p id="fs-id1644634">If a 160-pound person drives after having 6 drinks, they are about 26.35 times more likely to crash than if driving while sober.</p></li>
+</ol></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="precalculus try ui-has-child-title" data-has-label="true" data-label="Try It" data-type="note" id="fs-id1530201"><header><h3 class="os-title" data-label-parent="Try It">
+<span class="os-title-label">Try It </span>
+<span class="os-number">#1</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="ti_04_08_01"><header></header><section>
+<div data-type="problem" id="fs-id1433554"><div class="os-problem-container">
+<p id="fs-id1345853"><a aria-label="View Table 2" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_02">Table 2</a> shows a recent graduate’s credit card balance each month after graduation.</p>
+<div class="os-table" id="Table_04_08_02"><div class="table-scroll"><table data-id="Table_04_08_02" data-summary="Two rows and ten columns. The first row is labeled, “Month”, and the second row is labeled, “Debt ($)”. Reading the columns as ordered pairs, we have the following values: (1, 620.00), (2, 761.88), (3, 899.80), (4, 1039.93), (5, 1270.63), (6, 1589.04), (7, 1851.31), and (8, 2154.92)." role="presentation"><tbody>
+<tr>
+<td data-align="center"><strong>Month</strong></td>
+<td data-align="center">1</td>
+<td data-align="center">2</td>
+<td data-align="center">3</td>
+<td data-align="center">4</td>
+<td data-align="center">5</td>
+<td data-align="center">6</td>
+<td data-align="center">7</td>
+<td data-align="center">8</td>
+</tr>
+<tr>
+<td data-align="center"><strong>Debt ($)</strong></td>
+<td data-align="center">620.00</td>
+<td data-align="center">761.88</td>
+<td data-align="center">899.80</td>
+<td data-align="center">1039.93</td>
+<td data-align="center">1270.63</td>
+<td data-align="center">1589.04</td>
+<td data-align="center">1851.31</td>
+<td data-align="center">2154.92</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2</span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="id483222"><span class="token">ⓐ</span> Use exponential regression to fit a model to these data.<span data-type="newline"><br/></span>
+<span class="token">ⓑ</span> If spending continues at this rate, what will the graduate’s credit card debt be one year after graduating?</p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="precalculus qa ui-has-child-title" data-has-label="true" data-label="Q&amp;A" data-type="note" id="fs-id1395488"><header><h3 class="os-title" data-label-parent="Q&amp;A" data-type="title">
+<span class="os-title-label">Q&amp;A</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="eip-id1950428"><strong>Is it reasonable to assume that an exponential regression model will represent a situation indefinitely?</strong></p>
+<p id="fs-id1693939"><em data-effect="italics">No. Remember that models are formed by real-world data gathered for regression. It is usually reasonable to make estimates within the interval of original observation (interpolation). However, when a model is used to make predictions, it is important to use reasoning skills to determine whether the model makes sense for inputs far beyond the original observation interval (extrapolation).</em></p>
+</div></section></div></section>
+<section data-depth="1" id="fs-id1137429"><h3 data-type="title">Building a Logarithmic Model from Data</h3>
+<p id="fs-id1638611">Just as with exponential functions, there are many real-world applications for logarithmic functions: intensity of sound, pH levels of solutions, yields of chemical reactions, production of goods, and growth of infants. As with exponential models, data modeled by logarithmic functions are either always increasing or always decreasing as time moves forward. Again, it is the <em data-effect="italics">way</em> they increase or decrease that helps us determine whether a <span class="no-emphasis" data-type="term" group-by="l" id="term-00006">logarithmic model</span> is best.</p>
+<p id="fs-id1294851">Recall that logarithmic functions increase or decrease rapidly at first, but then steadily slow as time moves on. By reflecting on the characteristics we’ve already learned about this function, we can better analyze real world situations that reflect this type of growth or decay. When performing logarithmic <span class="no-emphasis" data-type="term" group-by="r" id="term-00007">regression analysis</span>, we use the form of the logarithmic function most commonly used on graphing utilities, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>ln</mi><mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>ln</mi><mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> For this function</p><ul id="fs-id1505796">
+<li>All input values, <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math> must be greater than zero.</li>
+<li>The point <math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1</mn><mo>,</mo><mi>a</mi>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1</mn><mo>,</mo><mi>a</mi>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> is on the graph of the model.</li>
+<li>If <math display="inline"><semantics><mrow>
+<mrow>
+<mi>b</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>b</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math> the model is increasing. Growth increases rapidly at first and then steadily slows over time.</li>
+<li>If <math display="inline"><semantics><mrow>
+<mrow>
+<mi>b</mi><mo>&lt;</mo><mn>0</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>b</mi><mo>&lt;</mo><mn>0</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math> the model is decreasing. Decay occurs rapidly at first and then steadily slows over time.</li>
+</ul>
+<div class="ui-has-child-title" data-type="note" id="fs-id1675578"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Logarithmic Regression </span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id882689"><em data-effect="italics">Logarithmic regression</em> is used to model situations where growth or decay accelerates rapidly at first and then slows over time. We use the command “LnReg” on a graphing utility to fit a logarithmic function to a set of data points. This returns an equation of the form,</p><div class="unnumbered" data-label="" data-type="equation" id="eip-id1165132974342"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>ln</mi><mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>ln</mi><mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></div> </div><p id="fs-id1638058">Note that</p>
+<ul id="fs-id934921">
+<li>all input values, <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math> must be non-negative.</li>
+<li>when <math display="inline"><semantics><mrow>
+<mrow>
+<mi>b</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>b</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math> the model is increasing.</li>
+<li>when <math display="inline"><semantics><mrow>
+<mrow>
+<mi>b</mi><mo>&lt;</mo><mn>0</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>b</mi><mo>&lt;</mo><mn>0</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math> the model is decreasing.</li>
+</ul>
+</div></section></div>
+<div class="how-to-notitle ui-has-child-title" data-has-label="true" data-label="How To" data-type="note" id="fs-id1530388"><header><h3 class="os-title" data-label-parent="How To" data-type="title">
+<span class="os-title-label">How To</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1395706"><strong>Given a set of data, perform logarithmic regression using a graphing utility.</strong></p>
+<ol id="fs-id1616209" type="1"><li>Use the <strong>STAT</strong> then <strong>EDIT</strong> menu to enter given data.
+<ol id="fs-id1528962" type="a">
+<li>Clear any existing data from the lists.</li>
+<li>List the input values in the L1 column.</li>
+<li>List the output values in the L2 column.</li>
+</ol>
+</li>
+<li>Graph and observe a scatter plot of the data using the <strong>STATPLOT</strong> feature.
+<ol id="fs-id882304" type="a">
+<li>Use <strong>ZOOM</strong> [<strong>9</strong>] to adjust axes to fit the data.</li>
+<li>Verify the data follow a logarithmic pattern.</li>
+</ol>
+</li>
+<li>Find the equation that models the data.
+<ol id="fs-id1107843" type="a">
+<li>Select “<strong>LnReg</strong>” from the <strong>STAT</strong> then <strong>CALC</strong> menu.</li>
+<li>Use the values returned for <em data-effect="italics">a</em> and <em data-effect="italics">b</em> to record the model, <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>ln</mi><mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>ln</mi><mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow></annotation-xml></semantics></math> </li>
+</ol>
+</li>
+<li>Graph the model in the same window as the scatterplot to verify it is a good fit for the data.</li>
+</ol></div></section></div>
+<div class="ui-has-child-title" data-type="example" id="Example_04_08_02"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><div class="unnumbered" data-type="exercise" id="fs-id1616172"><header></header><section><div data-type="problem" id="fs-id1586202"><div class="os-problem-container"><h4 data-type="title">Using Logarithmic Regression to Fit a Model to Data</h4>
+<p id="fs-id1675089">Due to advances in medicine and higher standards of living, life expectancy has been increasing in most developed countries since the beginning of the 20th century. </p>
+<p class="has-noteref" id="eip-id1165134068998"><a aria-label="View Table 3" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_03">Table 3</a> shows the average life expectancies, in years, of Americans from 1900–2010<sup data-type="footnote-number" id="footnote-ref2"><a aria-label="Go to 10" data-type="footnote-link" epub:type="noteref" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#fs-id1358041" role="doc-noteref">10</a></sup>.</p>
+<div class="os-table" id="Table_04_08_03"><div class="table-scroll"><table data-id="Table_04_08_03" data-summary="Two rows and twelve columns. The first row is labeled, “Year”, and the second row is labeled, “Life Expectancy (Years)”. Reading the columns as ordered pairs, we have the following values: (1900, 47.3), (1910, 50.0), (1920, 54.1), (1930, 59.7), (1940, 62.9), (1950, 68.2), (1960, 69.7), (1970, 70.8), (1980, 73,7), (1990, 75.4), (2000, 76.8) and (2010, 78.7)." role="presentation"><tbody>
+<tr>
+<td data-align="center"><strong>Year</strong></td>
+<td data-align="center">1900</td>
+<td data-align="center">1910</td>
+<td data-align="center">1920</td>
+<td data-align="center">1930</td>
+<td data-align="center">1940</td>
+<td data-align="center">1950</td>
+</tr>
+<tr>
+<td data-align="center"><strong>Life Expectancy(Years)</strong></td>
+<td data-align="center">47.3</td>
+<td data-align="center">50.0</td>
+<td data-align="center">54.1</td>
+<td data-align="center">59.7</td>
+<td data-align="center">62.9</td>
+<td data-align="center">68.2</td>
+</tr>
+<tr>
+<td data-align="center"><strong>Year</strong></td>
+<td data-align="center">1960</td>
+<td data-align="center">1970</td>
+<td data-align="center">1980</td>
+<td data-align="center">1990</td>
+<td data-align="center">2000</td>
+<td data-align="center">2010</td>
+</tr>
+<tr>
+<td data-align="center"><strong>Life Expectancy(Years)</strong></td>
+<td data-align="center">69.7</td>
+<td data-align="center">70.8</td>
+<td data-align="center">73.7</td>
+<td data-align="center">75.4</td>
+<td data-align="center">76.8</td>
+<td data-align="center">78.7</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3</span>
+<span class="os-divider"> </span>
+</div>
+</div><ol class="circled" id="fs-id899809" type="1">
+<li><span class="token">ⓐ</span> Let <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math> represent time in decades starting with <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mn>1</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mn>1</mn>
+</mrow></annotation-xml></semantics></math> for the year 1900, <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math> for the year 1910, and so on. Let <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi>
+</mrow></annotation-xml></semantics></math> represent the corresponding life expectancy. Use logarithmic regression to fit a model to these data.</li>
+<li><span class="token">ⓑ</span> Use the model to predict the average American life expectancy for the year 2030.</li>
+</ol>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1429110">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<ol class="circled" id="fs-id1601326" type="1"><li><span class="token">ⓐ</span> Using the <strong>STAT</strong> then <strong>EDIT</strong> menu on a graphing utility, list the years using values 1–12 in L1 and the corresponding life expectancy in L2. Then use the <strong>STATPLOT</strong> feature to verify that the scatterplot follows a logarithmic pattern as shown in <a aria-label="View Figure 3" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#CNX_Precalc_Figure_04_08_003">Figure 3</a>:
+<div class="os-figure" id="CNX_Precalc_Figure_04_08_003"><figure class="medium ui-has-child-figcaption" data-id="CNX_Precalc_Figure_04_08_003">
+<span data-alt="Graph of a scattered plot." data-type="media" id="fs-id1587927">
+<img alt="Graph of a scattered plot." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/9e6e207dd884651bd5dd9fb858ecf67e6f490275" height="437" loading="lazy" src="efbea0cb093f48e7634916c2.webp" width="731"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">3</span>
+</figcaption></figure></div>
+<p id="fs-id1381567">Use the “<strong>LnReg</strong>” command from the <strong>STAT</strong> then <strong>CALC</strong> menu to obtain the logarithmic model,</p><div class="unnumbered" data-label="" data-type="equation" id="eip-id1165137898768"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mn>42.52722583</mn><mo>+</mo><mn>13.85752327</mn><mi>ln</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mn>42.52722583</mn><mo>+</mo><mn>13.85752327</mn><mi>ln</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></div> </div>
+<p id="fs-id1677824">Next, graph the model in the same window as the scatterplot to verify it is a good fit as shown in <a aria-label="View Figure 4" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#CNX_Precalc_Figure_04_08_004">Figure 4</a>:</p><div class="os-figure" id="CNX_Precalc_Figure_04_08_004"><figure class="medium ui-has-child-figcaption" data-id="CNX_Precalc_Figure_04_08_004">
+<span data-alt="Graph of a scattered plot with an estimation line." data-type="media" id="fs-id1157626">
+<img alt="Graph of a scattered plot with an estimation line." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/fa74ac9218eba65b637ad20740d79a388ba51a97" height="440" loading="lazy" src="c1a87e39802dbb5a0fbe6fe2.webp" width="731"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">4</span>
+</figcaption></figure></div></li>
+<li><span class="token">ⓑ</span> To predict the life expectancy of an American in the year 2030, substitute <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mn>14</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mn>14</mn>
+</mrow></annotation-xml></semantics></math> for the in the model and solve for <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>:</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>:</mo>
+</mrow></annotation-xml></semantics></math>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-id1165132035969"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mi>y</mi>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mn>42.52722583</mn><mo>+</mo><mn>13.85752327</mn><mi>ln</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Use the regression model found in part (a)</mtext><mtext>.</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mn>42.52722583</mn><mo>+</mo><mn>13.85752327</mn><mi>ln</mi><mo stretchy="false">(</mo><mn>14</mn><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Substitute 14 for </mtext><mi>x</mi><mtext>.</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>≈</mo><mtext>79</mtext><mtext>.1</mtext>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Round to the nearest tenth.</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mi>y</mi>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mn>42.52722583</mn><mo>+</mo><mn>13.85752327</mn><mi>ln</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Use the regression model found in part (a)</mtext><mtext>.</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mn>42.52722583</mn><mo>+</mo><mn>13.85752327</mn><mi>ln</mi><mo stretchy="false">(</mo><mn>14</mn><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Substitute 14 for </mtext><mi>x</mi><mtext>.</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>≈</mo><mtext>79</mtext><mtext>.1</mtext>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Round to the nearest tenth.</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div> </div><p id="fs-id1628396">If life expectancy continues to increase at this pace, the average life expectancy of an American will be 79.1 by the year 2030.</p></li>
+</ol></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="precalculus try ui-has-child-title" data-has-label="true" data-label="Try It" data-type="note" id="fs-id1338539"><header><h3 class="os-title" data-label-parent="Try It">
+<span class="os-title-label">Try It </span>
+<span class="os-number">#2</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="ti_04_08_02"><header></header><section>
+<div data-type="problem" id="fs-id1527553"><div class="os-problem-container">
+<p id="fs-id899893">Sales of a video game released in the year 2000 took off at first, but then steadily slowed as time moved on. <a aria-label="View Table 4" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_04">Table 4</a> shows the number of games sold, in thousands, from the years 2000–2010.</p>
+<div class="os-table" id="Table_04_08_04"><div class="table-scroll"><table data-id="Table_04_08_04" data-summary="Two rows and twelve columns. The first row is labeled, “Year”, and the second row is labeled, “Number Sold (Thousands)”. Reading the columns as ordered pairs, we have the following values: (2000, 142), (2001, 149), (2002, 154), (2003, 155), (2004, 159), (2005, 161), (2006, 163), (2007, 164), (2008, 164), (2009, 166), and (2010, 167)." role="presentation"><tbody>
+<tr>
+<td data-align="center"><strong>Year</strong></td>
+<td data-align="center">2000</td>
+<td data-align="center">2001</td>
+<td data-align="center">2002</td>
+<td data-align="center">2003</td>
+<td data-align="center">2004</td>
+<td data-align="center">2005</td>
+</tr>
+<tr>
+<td data-align="center"><strong>Number Sold (thousands)</strong></td>
+<td data-align="center">142</td>
+<td data-align="center">149</td>
+<td data-align="center">154</td>
+<td data-align="center">155</td>
+<td data-align="center">159</td>
+<td data-align="center">161</td>
+</tr>
+<tr>
+<td data-align="center"><strong>Year</strong></td>
+<td data-align="center">2006</td>
+<td data-align="center">2007</td>
+<td data-align="center">2008</td>
+<td data-align="center">2009</td>
+<td data-align="center">2010</td>
+<td data-align="center">-</td>
+</tr>
+<tr>
+<td data-align="center"><strong>Number Sold (thousands)</strong></td>
+<td data-align="center">163</td>
+<td data-align="center">164</td>
+<td data-align="center">164</td>
+<td data-align="center">166</td>
+<td data-align="center">167</td>
+<td data-align="center">-</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">4</span>
+<span class="os-divider"> </span>
+</div>
+</div><ul data-labeled-item="true" id="fs-id1420568"><li><span class="token">ⓐ</span> Let <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math> represent time in years starting with <math display="inline"><semantics><mrow>
+<mrow><mi>x</mi><mo>=</mo><mn>1</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi><mo>=</mo><mn>1</mn>
+</mrow></annotation-xml></semantics></math> for the year 2000. Let <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi>
+</mrow></annotation-xml></semantics></math> represent the number of games sold in thousands. Use logarithmic regression to fit a model to these data.</li>
+<li><span class="token">ⓑ</span> If games continue to sell at this rate, how many games will sell in 2015? Round to the nearest thousand.</li>
+</ul></div></div>
+</section></div>
+</div></section></div></section><section data-depth="1" id="fs-id1599403"><h3 data-type="title">Building a Logistic Model from Data</h3>
+<p id="fs-id1316523">Like exponential and logarithmic growth, logistic growth increases over time. One of the most notable differences with logistic growth models is that, at a certain point, growth steadily slows and the function approaches an upper bound, or <em data-effect="italics">limiting value</em>. Because of this, logistic regression is best for modeling phenomena where there are limits in expansion, such as availability of living space or nutrients.</p>
+<p id="fs-id1677718">It is worth pointing out that logistic functions actually model resource-limited exponential growth. There are many examples of this type of growth in real-world situations, including population growth and spread of disease, rumors, and even stains in fabric. When performing logistic <span class="no-emphasis" data-type="term" group-by="r" id="term-00008">regression analysis</span>, we use the form most commonly used on graphing utilities:</p><div class="unnumbered" data-label="" data-type="equation" id="eip-154"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div> </div><p id="fs-id1310104">Recall that:</p>
+<ul id="fs-id1294720"><li> <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> is the initial value of the model.</li>
+<li>when <math display="inline"><semantics><mrow>
+<mrow>
+<mi>b</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>b</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math> the model increases rapidly at first until it reaches its point of maximum growth rate, <math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>ln</mi><mrow><mo>(</mo>
+<mi>a</mi>
+<mo>)</mo></mrow>
+</mrow>
+<mi>b</mi>
+</mfrac>
+<mo>,</mo><mfrac>
+<mi>c</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>ln</mi><mrow><mo>(</mo>
+<mi>a</mi>
+<mo>)</mo></mrow>
+</mrow>
+<mi>b</mi>
+</mfrac>
+<mo>,</mo><mfrac>
+<mi>c</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow></annotation-xml></semantics></math> At that point, growth steadily slows and the function becomes asymptotic to the upper bound <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>c</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>c</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math> </li>
+<li> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>c</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>c</mi>
+</mrow></annotation-xml></semantics></math>
+is the limiting value, sometimes called the <em data-effect="italics">carrying capacity</em>, of the model.</li>
+</ul><div class="ui-has-child-title" data-type="note" id="fs-id1454974"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Logistic Regression</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1583226"><em data-effect="italics">Logistic regression</em> is used to model situations where growth accelerates rapidly at first and then steadily slows to an upper limit. We use the command “Logistic” on a graphing utility to fit a logistic function to a set of data points. This returns an equation of the form</p><div class="unnumbered" data-label="" data-type="equation" id="eip-491"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div> </div><p id="fs-id1701600">Note that</p>
+<ul id="fs-id1358262">
+<li>The initial value of the model is <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math> </li>
+<li>Output values for the model grow closer and closer to <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>c</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>c</mi>
+</mrow></annotation-xml></semantics></math> as time increases.</li>
+</ul>
+</div></section></div>
+<div class="how-to-notitle ui-has-child-title" data-has-label="true" data-label="How To" data-type="note" id="fs-id1361145"><header><h3 class="os-title" data-label-parent="How To" data-type="title">
+<span class="os-title-label">How To</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1676582"><strong>Given a set of data, perform logistic regression using a graphing utility.</strong></p>
+<ol id="fs-id1690756" type="1"><li>Use the <strong>STAT</strong> then <strong>EDIT</strong> menu to enter given data.
+<ol id="fs-id1562359" type="a">
+<li>Clear any existing data from the lists.</li>
+<li>List the input values in the L1 column.</li>
+<li>List the output values in the L2 column.</li>
+</ol>
+</li>
+<li>Graph and observe a scatter plot of the data using the <strong>STATPLOT</strong> feature.
+<ol id="fs-id1431005" type="a">
+<li>Use <strong>ZOOM</strong> [<strong>9</strong>] to adjust axes to fit the data.</li>
+<li>Verify the data follow a logistic pattern.</li>
+</ol>
+</li>
+<li>Find the equation that models the data.
+<ol id="fs-id1585412" type="a"><li>Select “<strong>Logistic</strong>” from the <strong>STAT</strong> then <strong>CALC</strong> menu.</li>
+<li>Use the values returned for <math display="inline"><semantics><mrow>
+<mrow>
+<mi>a</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>a</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>b</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>b</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math> and <math display="inline"><semantics><mrow>
+<mrow>
+<mi>c</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>c</mi>
+</mrow></annotation-xml></semantics></math> to record the model, <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math> </li>
+</ol></li>
+<li>Graph the model in the same window as the scatterplot to verify it is a good fit for the data.</li>
+</ol></div></section></div>
+<div class="ui-has-child-title" data-type="example" id="Example_04_08_03"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><div class="unnumbered" data-type="exercise" id="fs-id1646727"><header></header><section><div data-type="problem" id="fs-id1523395"><div class="os-problem-container"><h4 data-type="title">Using Logistic Regression to Fit a Model to Data</h4>
+<p class="has-noteref" id="fs-id1422087">Mobile telephone service has increased rapidly in America since the mid 1990s. Today, almost all residents have cellular service. <a aria-label="View Table 5" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_05">Table 5</a> shows the percentage of Americans with cellular service between the years 1995 and 2012 <sup data-type="footnote-number" id="footnote-ref3"><a aria-label="Go to 11" data-type="footnote-link" epub:type="noteref" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#fs-id1646854" role="doc-noteref">11</a></sup>.</p><div class="os-table" id="Table_04_08_05"><div class="table-scroll"><table data-id="Table_04_08_05" data-summary="Nineteen rows and two columns. The first column is labeled, “Year”, and the second column is labeled, “Americans with Cellular Service (%)”. Reading the columns as ordered pairs, we have the following values: (1995, 12.69), (1996, 16.35), (1997, 20.29), (1998, 25.08), (1999, 30.81), (2000, 38.75), (2001, 45.00), (2002, 49.16), (2003, 55.15), (2004, 62.85), (2005, 68.63), (2006, 76.64), (2007, 82.47), (2008, 85.68), (2009, 89.14), (2010, 91.86), (2011, 95.28), and (2012, 98.17)."><thead>
+<tr>
+<th data-align="center" scope="col">Year</th>
+<th data-align="center" scope="col">Americans with Cellular Service (%)</th>
+<th data-align="center" scope="col">Year</th>
+<th data-align="center" scope="col">Americans with Cellular Service (%)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td data-align="center">1995</td>
+<td data-align="center">12.69</td>
+<td data-align="center">2004</td>
+<td data-align="center">62.852</td>
+</tr>
+<tr>
+<td data-align="center">1996</td>
+<td data-align="center">16.35</td>
+<td data-align="center">2005</td>
+<td data-align="center">68.63</td>
+</tr>
+<tr>
+<td data-align="center">1997</td>
+<td data-align="center">20.29</td>
+<td data-align="center">2006</td>
+<td data-align="center">76.64</td>
+</tr>
+<tr>
+<td data-align="center">1998</td>
+<td data-align="center">25.08</td>
+<td data-align="center">2007</td>
+<td data-align="center">82.47</td>
+</tr>
+<tr>
+<td data-align="center">1999</td>
+<td data-align="center">30.81</td>
+<td data-align="center">2008</td>
+<td data-align="center">85.68</td>
+</tr>
+<tr>
+<td data-align="center">2000</td>
+<td data-align="center">38.75</td>
+<td data-align="center">2009</td>
+<td data-align="center">89.14</td>
+</tr>
+<tr>
+<td data-align="center">2001</td>
+<td data-align="center">45.00</td>
+<td data-align="center">2010</td>
+<td data-align="center">91.86</td>
+</tr>
+<tr>
+<td data-align="center">2002</td>
+<td data-align="center">49.16</td>
+<td data-align="center">2011</td>
+<td data-align="center">95.28</td>
+</tr>
+<tr>
+<td data-align="center">2003</td>
+<td data-align="center">55.15</td>
+<td data-align="center">2012</td>
+<td data-align="center">98.17</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">5</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<ul data-labeled-item="true" id="fs-id1624806"><li><span class="token">ⓐ</span> Let <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math> represent time in years starting with <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mn>0</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mn>0</mn>
+</mrow></annotation-xml></semantics></math> for the year 1995. Let <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi>
+</mrow></annotation-xml></semantics></math> represent the corresponding percentage of residents with cellular service. Use logistic regression to fit a model to these data.</li>
+<li><span class="token">ⓑ</span> Use the model to calculate the percentage of Americans with cell service in the year 2013. Round to the nearest tenth of a percent.</li>
+<li><span class="token">ⓒ</span> Discuss the value returned for the upper limit, <math display="inline"><semantics><mrow>
+<mrow>
+<mi>c</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>c</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math> What does this tell you about the model? What would the limiting value be if the model were exact?</li>
+</ul></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1521160">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<ul data-labeled-item="true" id="fs-id1455761"><li><span class="token">ⓐ</span>
+ Using the <strong>STAT</strong> then <strong>EDIT</strong> menu on a graphing utility, list the years using values 0–15 in L1 and the corresponding percentage in L2. Then use the <strong>STATPLOT</strong> feature to verify that the scatterplot follows a logistic pattern as shown in <a aria-label="View Figure 5" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#CNX_Precalc_Figure_04_08_005">Figure 5</a>:
+
+	<div class="os-figure" id="CNX_Precalc_Figure_04_08_005"><figure class="ui-has-child-figcaption" data-id="CNX_Precalc_Figure_04_08_005">
+<span data-alt="Graph of a scattered plot." data-type="media" id="fs-id1430636">
+<img alt="Graph of a scattered plot." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/05dc3da96f0ffdb0ee4fd4ca649cd450ee359564" height="479" loading="lazy" src="e2c711cc5d25ed819eac8e30.webp" width="975"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">5</span>
+</figcaption></figure></div>
+<p id="fs-id1366003">Use the “<strong>Logistic</strong>” command from the <strong>STAT</strong> then <strong>CALC</strong> menu to obtain the logistic model,</p><div class="unnumbered" data-label="" data-type="equation" id="eip-id1165134104896"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mrow>
+<mn>105.7379526</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>6.88328979</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.2595440013</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mrow>
+<mn>105.7379526</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>6.88328979</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.2595440013</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div> </div><p id="fs-id1650001">Next, graph the model in the same window as shown in <a aria-label="View Figure 6" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#CNX_Precalc_Figure_04_08_006">Figure 6</a> the scatterplot to verify it is a good fit:</p>
+<div class="os-figure" id="CNX_Precalc_Figure_04_08_006"><figure class="ui-has-child-figcaption" data-id="CNX_Precalc_Figure_04_08_006">
+<span data-alt="Graph of a scattered plot with an estimation line." data-type="media" id="fs-id1246113">
+<img alt="Graph of a scattered plot with an estimation line." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/1dedffc714e34feb3e4e157eabd603fb0395ec19" height="479" loading="lazy" src="d41423b3a5be686a3273c3bb.webp" width="975"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">6</span>
+</figcaption></figure></div></li>
+<li><span class="token">ⓑ</span>
+<p id="fs-id1410550">To approximate the percentage of Americans with cellular service in the year 2013, substitute <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mn>18</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mn>18</mn>
+</mrow></annotation-xml></semantics></math></span> for the in the model and solve for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>:</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>:</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p><div class="unnumbered" data-label="" data-type="equation" id="eip-9"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mi>y</mi>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>105.7379526</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>6.88328979</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.2595440013</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Use the regression model found in part (a)</mtext><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>105.7379526</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>6.88328979</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.2595440013</mn><mo stretchy="false">(</mo><mn>18</mn><mo stretchy="false">)</mo>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Substitute 18 for </mtext><mi>x</mi><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>≈</mo><mtext>99</mtext><mtext>.3 </mtext>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Round to the nearest tenth</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mi>y</mi>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>105.7379526</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>6.88328979</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.2595440013</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Use the regression model found in part (a)</mtext><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>105.7379526</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>6.88328979</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.2595440013</mn><mo stretchy="false">(</mo><mn>18</mn><mo stretchy="false">)</mo>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Substitute 18 for </mtext><mi>x</mi><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mo>≈</mo><mtext>99</mtext><mtext>.3 </mtext>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>Round to the nearest tenth</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1569617">According to the model, about 99.3% of Americans had cellular service in 2013.</p></li>
+<li><span class="token">ⓒ</span>
+<p id="fs-id1428422">The model gives a limiting value of about 105. This means that the maximum possible percentage of Americans with cellular service would be 105%, which is impossible. (How could over 100% of a population have cellular service?) If the model were exact, the limiting value would be <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>c</mi><mo>=</mo><mn>100</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>c</mi><mo>=</mo><mn>100</mn>
+</mrow></annotation-xml></semantics></math></span> and the model’s outputs would get very close to, but never actually reach 100%. After all, there will always be someone out there without cellular service! </p>
+</li>
+</ul></div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="precalculus try ui-has-child-title" data-has-label="true" data-label="Try It" data-type="note" id="fs-id1394388"><header><h3 class="os-title" data-label-parent="Try It">
+<span class="os-title-label">Try It </span>
+<span class="os-number">#3</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="ti_04_08_03"><header></header><section>
+<div data-type="problem" id="fs-id1521431"><div class="os-problem-container">
+<p id="fs-id1638072"><a aria-label="View Table 6" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_06">Table 6</a> shows the population, in thousands, of harbor seals in the Wadden Sea over the years 1997 to 2012.</p>
+<div class="os-table" id="Table_04_08_06"><div class="table-scroll"><table data-id="Table_04_08_06" data-summary="Seventeen rows and two columns. The first column is labeled, “Year”, and the second column is labeled, “Seal Population (Thousands)”. Reading the columns as ordered pairs, we have the following values: (1997, 3.493), (1998, 5.282), (1999, 6.357), (2000, 9.201), (2001, 11.224), (2002, 12.964), (2003, 16.226), (2004, 18.137), (2005, 19.590), (2006, 21.955), (2007, 22.862), (2008, 23.869), (2009, 24.243), (2010, 24.344), (2011, 24.919), and (2012, 25.108)."><thead>
+<tr>
+<th data-align="center" scope="col">Year</th>
+<th data-align="center" scope="col">Seal Population (Thousands)</th>
+<th data-align="center" scope="col">Year</th>
+<th data-align="center" scope="col">Seal Population (Thousands)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td data-align="center">1997</td>
+<td data-align="center">3.493</td>
+<td data-align="center">2005</td>
+<td data-align="center">19.590</td>
+</tr>
+<tr>
+<td data-align="center">1998</td>
+<td data-align="center">5.282</td>
+<td data-align="center">2006</td>
+<td data-align="center">21.955</td>
+</tr>
+<tr>
+<td data-align="center">1999</td>
+<td data-align="center">6.357</td>
+<td data-align="center">2007</td>
+<td data-align="center">22.862</td>
+</tr>
+<tr>
+<td data-align="center">2000</td>
+<td data-align="center">9.201</td>
+<td data-align="center">2008</td>
+<td data-align="center">23.869</td>
+</tr>
+<tr>
+<td data-align="center">2001</td>
+<td data-align="center">11.224</td>
+<td data-align="center">2009</td>
+<td data-align="center">24.243</td>
+</tr>
+<tr>
+<td data-align="center">2002</td>
+<td data-align="center">12.964</td>
+<td data-align="center">2010</td>
+<td data-align="center">24.344</td>
+</tr>
+<tr>
+<td data-align="center">2003</td>
+<td data-align="center">16.226</td>
+<td data-align="center">2011</td>
+<td data-align="center">24.919</td>
+</tr>
+<tr>
+<td data-align="center">2004</td>
+<td data-align="center">18.137</td>
+<td data-align="center">2012</td>
+<td data-align="center">25.108</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">6</span>
+<span class="os-divider"> </span>
+</div>
+</div><ul data-labeled-item="true" id="fs-id1366862"><li><span class="token">ⓐ</span> Let <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math> represent time in years starting with <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mn>0</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mn>0</mn>
+</mrow></annotation-xml></semantics></math> for the year 1997. Let <math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi>
+</mrow></annotation-xml></semantics></math> represent the number of seals in thousands. Use logistic regression to fit a model to these data.</li>
+<li><span class="token">ⓑ</span> Use the model to predict the seal population for the year 2020.</li>
+<li><span class="token">ⓒ</span> To the nearest whole number, what is the limiting value of this model?</li>
+</ul></div></div>
+</section></div>
+</div></section></div>
+<div class="media-notitle ui-has-child-title" data-has-label="true" data-label="Media" data-type="note" id="fs-id1384374"><header><h3 class="os-title" data-label-parent="Media" data-type="title">
+<span class="os-title-label">Media</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1676985">Access this online resource for additional instruction and practice with exponential function models.</p>
+<ul id="fs-id1676988"><li><a aria-label="Go to Exponential Regression on a Calculator" href="https://openstax.org/l/pregresscalc" rel="noopener nofollow" target="_blank">Exponential Regression on a Calculator</a></li>
+</ul></div></section></div></section>
+<div class="os-eos os-section-exercises-container" data-uuid-key=".section-exercises"><h3 data-type="document-title">
+<span class="os-text">6.8 Section Exercises</span>
+</h3>
+<section class="section-exercises" data-depth="1" id="fs-id1700714"><section data-depth="2" id="fs-id1700718"><h4 data-type="title">Verbal</h4>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1402840"><header></header><section>
+<div data-type="problem" id="fs-id1402843">
+<a aria-label="Go to 1" class="os-number" data-page-fragment="fs-id1402840-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">1</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1424627">What situations are best modeled by a logistic equation? Give an example, and state a case for why the example is a good fit.</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1692586"><header></header><section>
+<div data-type="problem" id="fs-id1692588">
+<span class="os-number">2</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1033498">What is a carrying capacity? What kind of model has a carrying capacity built into its formula? Why does this make sense?</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1447042"><header></header><section>
+<div data-type="problem" id="fs-id1523478">
+<a aria-label="Go to 3" class="os-number" data-page-fragment="fs-id1447042-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">3</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1523480">What is regression analysis? Describe the process of performing regression analysis on a graphing utility.</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1562322"><header></header><section>
+<div data-type="problem" id="fs-id1562324">
+<span class="os-number">4</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1271600">What might a scatterplot of data points look like if it were best described by a logarithmic model?</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1638051"><header></header><section>
+<div data-type="problem" id="fs-id1638053">
+<a aria-label="Go to 5" class="os-number" data-page-fragment="fs-id1638051-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">5</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id916950">What does the <em data-effect="italics">y</em>-intercept on the graph of a logistic equation correspond to for a population modeled by that equation?</p>
+</div>
+</div>
+</section></div>
+</section>
+<section data-depth="2" id="fs-id1457107"><h4 data-type="title">Graphical</h4><p id="fs-id1404306">For the following exercises, match the given function of best fit with the appropriate scatterplot in <a aria-label="View Figure 7" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#CNX_PreCalc_Figure_04_08_201">Figure 7</a> through <a aria-label="View Figure 11" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#CNX_PreCalc_Figure_04_08_205">Figure 11</a>. Answer using the letter beneath the matching graph.</p><div class="os-figure" id="CNX_PreCalc_Figure_04_08_201"><figure class="small ui-has-child-figcaption" data-id="CNX_PreCalc_Figure_04_08_201">
+<span data-alt="Graph of a scattered plot." data-type="media" id="fs-id299196">
+<img alt="Graph of a scattered plot." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/353cfb0bce86d1a6078bcb1836d81a14fff60a5a" height="354" loading="lazy" src="9fd900a921ae87e80fac10cf.webp" width="242"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">7</span>
+</figcaption></figure></div>
+<div class="os-figure" id="CNX_PreCalc_Figure_04_08_202"><figure class="small ui-has-child-figcaption" data-id="CNX_PreCalc_Figure_04_08_202">
+<span data-alt="Graph of a scattered plot." data-type="media" id="fs-id1425423">
+<img alt="Graph of a scattered plot." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/d904d8659d830cf43dae6bc184407b1834bcdc86" height="416" loading="lazy" src="16215b4887d28a8df3a90a48.webp" width="250"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">8</span>
+</figcaption></figure></div>
+<div class="os-figure" id="CNX_PreCalc_Figure_04_08_203"><figure class="small ui-has-child-figcaption" data-id="CNX_PreCalc_Figure_04_08_203">
+<span data-alt="Graph of a scattered plot." data-type="media" id="fs-id1200734">
+<img alt="Graph of a scattered plot." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/aef01c7d7904ee664716928aa7b16c58bc6a78e1" height="479" loading="lazy" src="1e2bfa0dece568b43e9719f3.webp" width="377"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">9</span>
+</figcaption></figure></div>
+<div class="os-figure" id="CNX_PreCalc_Figure_04_08_204"><figure class="small ui-has-child-figcaption" data-id="CNX_PreCalc_Figure_04_08_204">
+<span data-alt="Graph of a scattered plot." data-type="media" id="fs-id1692902">
+<img alt="Graph of a scattered plot." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/c8ad90704fe08bb21e6b600f29170ebc3873c356" height="354" loading="lazy" src="b1fdc2faad3226ecfeb5db83.webp" width="377"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">10</span>
+</figcaption></figure></div>
+<div class="os-figure" id="CNX_PreCalc_Figure_04_08_205"><figure class="small ui-has-child-figcaption" data-id="CNX_PreCalc_Figure_04_08_205">
+<span data-alt="Graph of a scattered plot." data-type="media" id="fs-id1425975">
+<img alt="Graph of a scattered plot." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/86c34b5d475d9f6415812a34b2872e77364a2193" height="415" loading="lazy" src="b878eb45f70d0a8e91b8c81e.webp" width="252"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">11</span>
+</figcaption></figure></div>
+<div data-type="exercise" id="fs-id1670879"><header></header><section>
+<div data-type="problem" id="fs-id1670881">
+<span class="os-number">6</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1700443"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mn>10.209</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.294</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mn>10.209</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.294</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1701699"><header></header><section>
+<div data-type="problem" id="fs-id1701701">
+<a aria-label="Go to 7" class="os-number" data-page-fragment="fs-id1701699-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">7</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1428638"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mn>5.598</mn><mo>−</mo><mn>1.912</mn><mi>ln</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mn>5.598</mn><mo>−</mo><mn>1.912</mn><mi>ln</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1519709"><header></header><section>
+<div data-type="problem" id="fs-id1519711">
+<span class="os-number">8</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1422545"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mn>2.104</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.479</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mi>x</mi>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mn>2.104</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.479</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mi>x</mi>
+</msup>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1693326"><header></header><section>
+<div data-type="problem" id="fs-id1692337">
+<a aria-label="Go to 9" class="os-number" data-page-fragment="fs-id1693326-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">9</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1692340"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mn>4.607</mn><mo>+</mo><mn>2.733</mn><mi>ln</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mn>4.607</mn><mo>+</mo><mn>2.733</mn><mi>ln</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1410055"><header></header><section>
+<div data-type="problem" id="fs-id1385282">
+<span class="os-number">10</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1385284"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mrow>
+<mn>14.005</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>2.79</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.812</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mrow>
+<mn>14.005</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>2.79</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.812</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div>
+</section><section data-depth="2" id="fs-id1659453"><h4 data-type="title">Numeric</h4>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1522155"><header></header><section>
+<div data-type="problem" id="fs-id1522157">
+<a aria-label="Go to 11" class="os-number" data-page-fragment="fs-id1522155-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">11</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1522159">To the nearest whole number, what is the initial value of a population modeled by the logistic equation <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mrow>
+<mn>175</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>6.995</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.68</mn><mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>?</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mrow>
+<mn>175</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>6.995</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.68</mn><mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>?</mo>
+</mrow></annotation-xml></semantics></math></span> What is the carrying capacity?</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1346082"><header></header><section>
+<div data-type="problem" id="fs-id1346085">
+<span class="os-number">12</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1660230">Rewrite the exponential model <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>A</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1550</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.085</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mi>x</mi>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>A</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1550</mn><msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.085</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mi>x</mi>
+</msup>
+</mrow></annotation-xml></semantics></math></span> as an equivalent model with base <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>e</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>e</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Express the exponent to four significant digits.</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1697446"><header></header><section>
+<div data-type="problem" id="fs-id1675823">
+<a aria-label="Go to 13" class="os-number" data-page-fragment="fs-id1697446-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">13</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1675825">A logarithmic model is given by the equation <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>h</mi><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mn>67.682</mn><mo>−</mo><mn>5.792</mn><mi>ln</mi><mrow><mo>(</mo>
+<mi>p</mi>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>h</mi><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mn>67.682</mn><mo>−</mo><mn>5.792</mn><mi>ln</mi><mrow><mo>(</mo>
+<mi>p</mi>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> To the nearest hundredth, for what value of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>p</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>p</mi>
+</mrow></annotation-xml></semantics></math></span> does <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>h</mi><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mn>62</mn><mo>?</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>h</mi><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mn>62</mn><mo>?</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1405194"><header></header><section>
+<div data-type="problem" id="fs-id1405196">
+<span class="os-number">14</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1381601">A logistic model is given by the equation <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mrow>
+<mn>90</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>5</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.42</mn><mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mrow>
+<mn>90</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>5</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.42</mn><mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> To the nearest hundredth, for what value of <em data-effect="italics">t</em> does <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>45</mn><mo>?</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>45</mn><mo>?</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1439754"><header></header><section>
+<div data-type="problem" id="fs-id1439756">
+<a aria-label="Go to 15" class="os-number" data-page-fragment="fs-id1439754-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">15</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1569418">What is the <em data-effect="italics">y</em>-intercept on the graph of the logistic model given in the previous exercise?</p></div>
+</div>
+</section></div>
+</section>
+<section data-depth="2" id="fs-id1702994"><h4 data-type="title">Technology</h4>
+<p id="fs-id1422233">For the following exercises, use this scenario: The population <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi>
+</mrow></annotation-xml></semantics></math></span> of a koi pond over <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> months is modeled by the function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mrow>
+<mn>68</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>16</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.28</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mrow>
+<mn>68</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>16</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.28</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+<div data-type="exercise" id="fs-id1246586"><header></header><section>
+<div data-type="problem" id="fs-id1246589">
+<span class="os-number">16</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1457169">Graph the population model to show the population over a span of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn>
+</mrow></annotation-xml></semantics></math></span> years.</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1408601"><header></header><section>
+<div data-type="problem" id="fs-id1408603">
+<a aria-label="Go to 17" class="os-number" data-page-fragment="fs-id1408601-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">17</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1408605">What was the initial population of koi?</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1535423"><header></header><section>
+<div data-type="problem" id="fs-id1535425">
+<span class="os-number">18</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1678373">How many koi will the pond have after one and a half years?</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1678378"><header></header><section>
+<div data-type="problem" id="fs-id1423485">
+<a aria-label="Go to 19" class="os-number" data-page-fragment="fs-id1678378-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">19</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1423487">How many months will it take before there are <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>20</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>20</mn>
+</mrow></annotation-xml></semantics></math></span> koi in the pond?</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1582861"><header></header><section><div data-type="problem" id="fs-id1420623">
+<span class="os-number">20</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1420625">Use the intersect feature to approximate the number of months it will take before the population of the pond reaches half its carrying capacity.</p>
+</div>
+</div>
+<!--<solution id="eip-id2711495">
+
+<media id="fs-id1531876" alt="Graph of the intersection of P(t)=68/(1+16e^(-0.28t)) and y=34." display="block">
+<image mime-type="image/jpg" src="CNX_Precalc_Figure_04_08_207.jpg"/>
+</media>
+</solution>--></section></div><p id="fs-id1706412">For the following exercises, use this scenario: The population <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi>
+</mrow></annotation-xml></semantics></math></span> of an endangered species habitat for wolves is modeled by the function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mrow>
+<mn>558</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>54.8</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.462</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mrow>
+<mn>558</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>54.8</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.462</mn><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow><mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> is given in years.</p><div class="os-hasSolution" data-type="exercise" id="fs-id1658971"><header></header><section><div data-type="problem" id="fs-id1658973">
+<a aria-label="Go to 21" class="os-number" data-page-fragment="fs-id1658971-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">21</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1658975">Graph the population model to show the population over a span of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>10</mn>
+</mrow></annotation-xml></semantics></math></span> years.</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1701908"><header></header><section><div data-type="problem" id="fs-id1504971">
+<span class="os-number">22</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1504973">What was the initial population of wolves transported to the habitat?</p>
+</div>
+</div>
+<!--<solution id="fs-id1409589">
+<para id="fs-id1409591"> <m:math>
+ <m:mrow>
+  <m:mn>10</m:mn><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> wolves</para>
+</solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1505494"><header></header><section><div data-type="problem" id="fs-id1505496">
+<a aria-label="Go to 23" class="os-number" data-page-fragment="fs-id1505494-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">23</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1505498">How many wolves will the habitat have after <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn>
+</mrow></annotation-xml></semantics></math></span> years?</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1271453"><header></header><section><div data-type="problem" id="fs-id925282">
+<span class="os-number">24</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id925284">How many years will it take before there are <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>100</mn>
+</mrow></annotation-xml></semantics></math></span> wolves in the habitat?</p>
+</div>
+</div>
+<!--<solution id="fs-id1459667">
+<para id="fs-id1459669">about 5.4 years.</para></solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1601914"><header></header><section><div data-type="problem" id="fs-id1601916">
+<a aria-label="Go to 25" class="os-number" data-page-fragment="fs-id1601914-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">25</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1523061">Use the intersect feature to approximate the number of years it will take before the population of the habitat reaches half its carrying capacity.</p>
+</div>
+</div>
+</section></div><p id="fs-id1597787">For the following exercises, refer to <a aria-label="View Table 7" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_07">Table 7</a>.</p>
+<div class="os-table" id="Table_04_08_07"><div class="table-scroll"><table data-id="Table_04_08_07" data-summary="Two columns and seven row. The first column labeled, “x”, and the second column is labeled, “f(x)”. Reading the rows as ordered pairs, we have the following values: (1, 1125), (2, 1495), (3, 2310), (4, 3295), (5, 4650), and (6, 6361)." role="presentation"><tbody>
+<tr>
+<td data-align="center"><strong><em data-effect="italics">x</em></strong></td>
+<td data-align="center">1</td>
+<td data-align="center">2</td>
+<td data-align="center">3</td>
+<td data-align="center">4</td>
+<td data-align="center">5</td>
+<td data-align="center">6</td></tr>
+<tr>
+<td data-align="center"><strong><em data-effect="italics">f(x)</em></strong></td>
+<td data-align="center">1125</td>
+<td data-align="center">1495</td>
+<td data-align="center">2310</td>
+<td data-align="center">3294</td>
+<td data-align="center">4650</td>
+<td data-align="center">6361</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">7</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div data-type="exercise" id="fs-id1432918"><header></header><section><div data-type="problem" id="fs-id1699848">
+<span class="os-number">26</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1699850">Use a graphing calculator to create a scatter diagram of the data.</p>
+</div>
+</div>
+<!--<solution id="fs-id1648119">
+<media id="fs-id1803598" alt="Graph of the table&#8217;s values.">
+<image mime-type="image/jpg" src="CNX_PreCalc_Figure_04_08_210.jpg"/>
+</media>
+</solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1514386"><header></header><section><div data-type="problem" id="fs-id1648035">
+<a aria-label="Go to 27" class="os-number" data-page-fragment="fs-id1514386-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">27</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1648037">Use the regression feature to find an exponential function that best fits the data in the table.</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1586463"><header></header><section><div data-type="problem" id="fs-id1586466">
+<span class="os-number">28</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1597729">Write the exponential function as an exponential equation with base <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>e</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>e</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+<!--<solution id="fs-id1489944">
+<para id="fs-id1600227"> <m:math>
+ <m:mrow>
+  <m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>776.682</m:mn><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mn>0.3549</m:mn><m:mi>x</m:mi>
+   </m:mrow>
+  </m:msup>
+
+ </m:mrow>
+</m:math> </para>
+</solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1447084"><header></header><section><div data-type="problem" id="fs-id1447087">
+<a aria-label="Go to 29" class="os-number" data-page-fragment="fs-id1447084-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">29</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1447089">Graph the exponential equation on the scatter diagram.</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1447005"><header></header><section><div data-type="problem" id="fs-id1376767">
+<span class="os-number">30</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1376769">Use the intersect feature to find the value of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> for which <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>4000.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>4000.</mn>
+</mrow></annotation-xml></semantics></math></span> </p></div>
+</div>
+<!--<solution id="fs-id1447066">
+<para id="fs-id1221397">When <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>4000</m:mn><m:mo>,</m:mo>
+ </m:mrow>
+</m:math> <m:math>
+ <m:mrow>
+  <m:mi>x</m:mi><m:mo>&#8776;</m:mo><m:mn>4.6.</m:mn>
+ </m:mrow>
+</m:math> </para>
+<media id="fs-id1436308" alt="Graph of the intersection of a scattered plot with an estimation line and y=4,000.">
+<image mime-type="image/jpg" src="CNX_PreCalc_Figure_04_08_212.jpg"/>
+</media>
+</solution>-->
+</section></div><p id="fs-id1511970">For the following exercises, refer to <a aria-label="View Table 8" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_08">Table 8</a>.</p>
+<div class="os-table" id="Table_04_08_08"><div class="table-scroll"><table data-id="Table_04_08_08" data-summary="Two columns and seven rows. The first column is labeled, “x”, and the second column is labeled, “f(x)”. Reading the rows as ordered pairs, we have the following values: (1, 555), (2, 383), (3, 307), (4, 210), (5, 158), and (6, 122)." role="presentation"><tbody>
+<tr>
+<td data-align="center"><strong><em data-effect="italics">x</em></strong></td>
+<td data-align="center">1</td>
+<td data-align="center">2</td>
+<td data-align="center">3</td>
+<td data-align="center">4</td>
+<td data-align="center">5</td>
+<td data-align="center">6</td></tr>
+<tr>
+<td data-align="center"><strong><em data-effect="italics">f(x)</em></strong></td>
+<td data-align="center">555</td>
+<td data-align="center">383</td>
+<td data-align="center">307</td>
+<td data-align="center">210</td>
+<td data-align="center">158</td>
+<td data-align="center">122</td></tr></tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">8</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1407921"><header></header><section><div data-type="problem" id="fs-id1407923">
+<a aria-label="Go to 31" class="os-number" data-page-fragment="fs-id1407921-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">31</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1407925">Use a graphing calculator to create a scatter diagram of the data.</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1671727"><header></header><section><div data-type="problem" id="fs-id1692964">
+<span class="os-number">32</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1692966">Use the regression feature to find an exponential function that best fits the data in the table.</p>
+</div>
+</div>
+<!--<solution id="fs-id1405101">
+<para id="fs-id1405103"> <m:math>
+ <m:mrow>
+  <m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>731.92</m:mn><m:msup>
+   <m:mrow>
+    <m:mo stretchy="false">(</m:mo><m:mn>0.738</m:mn><m:mo stretchy="false">)</m:mo>
+   </m:mrow>
+   <m:mi>x</m:mi>
+  </m:msup>
+
+ </m:mrow>
+</m:math> </para>
+</solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1652039"><header></header><section><div data-type="problem" id="fs-id1652041">
+<a aria-label="Go to 33" class="os-number" data-page-fragment="fs-id1652039-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">33</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1652043">Write the exponential function as an exponential equation with base <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>e</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>e</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1590772"><header></header><section><div data-type="problem" id="fs-id1513210">
+<span class="os-number">34</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1513213">Graph the exponential equation on the scatter diagram.</p>
+</div>
+</div>
+<!--<solution id="fs-id1435902">
+<media id="fs-id1435907" alt="Graph of a scattered plot with an estimation line.">
+<image mime-type="image/jpg" src="CNX_PreCalc_Figure_04_08_214.jpg"/>
+</media>
+</solution>--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1606195"><header></header><section><div data-type="problem" id="fs-id1424979">
+<a aria-label="Go to 35" class="os-number" data-page-fragment="fs-id1606195-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">35</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1424981">Use the intersect feature to find the value of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> for which <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>250.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>250.</mn>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div><p id="fs-id1460953">For the following exercises, refer to <a aria-label="View Table 9" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_09">Table 9</a>.</p>
+<div class="os-table" id="Table_04_08_09"><div class="table-scroll"><table data-id="Table_04_08_09" data-summary="Two columns and seven rows. The first column is labeled, “x”, and the second column is labeled, “f(x)”. Reading the rows as ordered pairs, we have the following values: (1, 5.1), (2, 6.3), (3, 7.3), (4, 7.7), (5, 8.1), and (6, 8.6)." role="presentation"><tbody>
+<tr>
+<td data-align="center"><strong><em data-effect="italics">x</em></strong></td>
+<td data-align="center">1</td>
+<td data-align="center">2</td>
+<td data-align="center">3</td>
+<td data-align="center">4</td>
+<td data-align="center">5</td>
+<td data-align="center">6</td></tr>
+<tr>
+<td data-align="center"><strong><em data-effect="italics">f(x)</em></strong></td>
+<td data-align="center">5.1</td>
+<td data-align="center">6.3</td>
+<td data-align="center">7.3</td>
+<td data-align="center">7.7</td>
+<td data-align="center">8.1</td>
+<td data-align="center">8.6</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">9</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div data-type="exercise" id="fs-id1371063"><header></header><section><div data-type="problem" id="fs-id1371065">
+<span class="os-number">36</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1371067">Use a graphing calculator to create a scatter diagram of the data.</p>
+</div>
+</div>
+<!--<solution id="fs-id1380157">
+<media id="fs-id1588274" alt="Graph of the table&#8217;s values.">
+<image mime-type="image/jpg" src="CNX_PreCalc_Figure_04_08_216.jpg"/>
+</media>
+</solution>
+--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1650282"><header></header><section><div data-type="problem" id="fs-id1650285">
+<a aria-label="Go to 37" class="os-number" data-page-fragment="fs-id1650282-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">37</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1420307">Use the LOGarithm option of the REGression feature to find a logarithmic function of the form <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>ln</mi><mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>ln</mi><mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> that best fits the data in the table.</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1432678"><header></header><section><div data-type="problem" id="fs-id1432680">
+<span class="os-number">38</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1356158">Use the logarithmic function to find the value of the function when <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mn>10.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mn>10.</mn>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+<!--<solution id="fs-id1518346">
+<para id="fs-id1518348"> <m:math>
+ <m:mrow>
+  <m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mn>10</m:mn><m:mo stretchy="false">)</m:mo><m:mo>&#8776;</m:mo><m:mn>9.5</m:mn>
+ </m:mrow>
+</m:math> </para>
+</solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1392056"><header></header><section><div data-type="problem" id="fs-id1392058">
+<a aria-label="Go to 39" class="os-number" data-page-fragment="fs-id1392056-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">39</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1392060">Graph the logarithmic equation on the scatter diagram.</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1649251"><header></header><section><div data-type="problem" id="fs-id1649253">
+<span class="os-number">40</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1355295">Use the intersect feature to find the value of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> for which <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>7.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>7.</mn>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+<!--<solution id="fs-id1434779">
+<para id="fs-id1434551">When <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>7</m:mn><m:mo>,</m:mo>
+ </m:mrow>
+</m:math> <m:math>
+ <m:mrow>
+  <m:mi>x</m:mi><m:mo>&#8776;</m:mo><m:mn>2.7.</m:mn>
+ </m:mrow>
+</m:math> </para>
+<media id="fs-id1381504" alt="Graph of the intersection of a scattered plot with an estimation line and y=7.">
+<image mime-type="image/jpg" src="CNX_PreCalc_Figure_04_08_218.jpg"/>
+</media>
+</solution>-->
+</section></div><p id="fs-id1694168">For the following exercises, refer to <a aria-label="View Table 10" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_10">Table 10</a>.</p>
+<div class="os-table" id="Table_04_08_10"><div class="table-scroll"><table data-id="Table_04_08_10" data-summary="Two columns and nine nows. The first column is labeled, “x”, and the second column is labeled, “f(x)”. Reading the rows as ordered pairs, we have the following values: (1, 7.5), (2, 6), (3, 5.2), (4, 4.3), (5, 3.9), (6, 3.4), (7, 3.1), and (8, 2.9)." role="presentation"><tbody>
+<tr>
+<td data-align="center"><strong><em data-effect="italics">x</em></strong></td>
+<td data-align="center">1</td>
+<td data-align="center">2</td>
+<td data-align="center">3</td>
+<td data-align="center">4</td>
+<td data-align="center">5</td>
+<td data-align="center">6</td>
+<td data-align="center">7</td>
+<td data-align="center">8</td></tr>
+<tr>
+<td data-align="center"><strong><em data-effect="italics">f(x)</em></strong></td>
+<td data-align="center">7.5</td>
+<td data-align="center">6</td>
+<td data-align="center">5.2</td>
+<td data-align="center">4.3</td>
+<td data-align="center">3.9</td>
+<td data-align="center">3.4</td>
+<td data-align="center">3.1</td>
+<td data-align="center">2.9</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">10</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1432065"><header></header><section><div data-type="problem" id="fs-id1432067">
+<a aria-label="Go to 41" class="os-number" data-page-fragment="fs-id1432065-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">41</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1432069">Use a graphing calculator to create a scatter diagram of the data.</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1426060"><header></header><section><div data-type="problem" id="fs-id1426062">
+<span class="os-number">42</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1426064">Use the <strong>LOG</strong>arithm option of the <strong>REG</strong>ression feature to find a logarithmic function of the form <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>ln</mi><mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mi>ln</mi><mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> that best fits the data in the table.</p></div>
+</div>
+<!--<solution id="fs-id1393284">
+<para id="fs-id1393286"> <m:math>
+ <m:mrow>
+  <m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>7.544</m:mn><m:mo>&#8722;</m:mo><m:mn>2.268</m:mn><m:mi>ln</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo>
+ </m:mrow>
+</m:math> </para>
+</solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1424700"><header></header><section><div data-type="problem" id="fs-id1601388">
+<a aria-label="Go to 43" class="os-number" data-page-fragment="fs-id1424700-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">43</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1601390">Use the logarithmic function to find the value of the function when <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mn>10.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mn>10.</mn>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1649327"><header></header><section><div data-type="problem" id="fs-id1649329">
+<span class="os-number">44</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1649331">Graph the logarithmic equation on the scatter diagram.</p>
+</div>
+</div>
+<!--<solution id="fs-id1364732">
+<media id="fs-id1364738" alt="Graph of a scattered plot with an estimation line.">
+<image mime-type="image/jpg" src="CNX_PreCalc_Figure_04_08_220.jpg"/>
+</media>
+</solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1451593"><header></header><section><div data-type="problem" id="fs-id1451595">
+<a aria-label="Go to 45" class="os-number" data-page-fragment="fs-id1451593-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">45</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1211247">Use the intersect feature to find the value of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> for which <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>8.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>8.</mn>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div>
+</div>
+</section></div><p id="fs-id1661470">For the following exercises, refer to <a aria-label="View Table 11" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_11">Table 11</a>.</p>
+<div class="os-table" id="Table_04_08_11"><div class="table-scroll"><table data-id="Table_04_08_11" data-summary="Two columns and eleven rows. The first column is labeled, “x”, and the second column is labeled, “f(x)”. Reading the rows as ordered pairs, we have the following values: (1, 8.7), (2, 12.3), (3, 15.4), (4, 18.5), (5, 20.7), (6, 22.5), (7, 23.3), (8, 24), (9, 24.6), and (10, 24.8)." role="presentation"><tbody>
+<tr>
+<td data-align="center"><strong><em data-effect="italics">x</em></strong></td>
+<td data-align="center">1</td>
+<td data-align="center">2</td>
+<td data-align="center">3</td>
+<td data-align="center">4</td>
+<td data-align="center">5</td>
+<td data-align="center">6</td>
+<td data-align="center">7</td>
+<td data-align="center">8</td>
+<td data-align="center">9</td>
+<td data-align="center">10</td></tr>
+<tr>
+<td data-align="center"><strong><em data-effect="italics">f(x)</em></strong></td>
+<td data-align="center">8.7</td>
+<td data-align="center">12.3</td>
+<td data-align="center">15.4</td>
+<td data-align="center">18.5</td>
+<td data-align="center">20.7</td>
+<td data-align="center">22.5</td>
+<td data-align="center">23.3</td>
+<td data-align="center">24</td>
+<td data-align="center">24.6</td>
+<td data-align="center">24.8</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">11</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div data-type="exercise" id="fs-id1656649"><header></header><section><div data-type="problem" id="fs-id1407656">
+<span class="os-number">46</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1407658">Use a graphing calculator to create a scatter diagram of the data.</p>
+</div>
+</div>
+<!--<solution id="fs-id1407662">
+<media id="fs-id1439003" alt="Graph of the table&#8217;s values.">
+<image mime-type="image/jpg" src="CNX_PreCalc_Figure_04_08_222.jpg"/>
+</media>
+</solution>
+--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1423807"><header></header><section><div data-type="problem" id="fs-id1433666">
+<a aria-label="Go to 47" class="os-number" data-page-fragment="fs-id1423807-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">47</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1433668">Use the LOGISTIC regression option to find a logistic growth model of the form <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> that best fits the data in the table.</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1405629"><header></header><section><div data-type="problem" id="fs-id1405631">
+<span class="os-number">48</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1671038">Graph the logistic equation on the scatter diagram.</p>
+</div>
+</div>
+<!--<solution id="fs-id1671043">
+<media id="fs-id1523360" alt="Graph of a scattered plot with an estimation line.">
+<image mime-type="image/jpg" src="CNX_Precalc_Figure_04_08_223.jpg"/>
+</media>
+</solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1535974"><header></header><section><div data-type="problem" id="fs-id1508700">
+<a aria-label="Go to 49" class="os-number" data-page-fragment="fs-id1535974-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">49</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1508702">To the nearest whole number, what is the predicted carrying capacity of the model?</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1508707"><header></header><section><div data-type="problem" id="fs-id1609403">
+<span class="os-number">50</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1609405">Use the intersect feature to find the value of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow><mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> for which the model reaches half its carrying capacity.</p></div>
+</div>
+<!--<solution id="fs-id1370546">
+<para id="fs-id1370548">When <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>12.5</m:mn><m:mo>,</m:mo>
+ </m:mrow>
+</m:math> <m:math>
+ <m:mrow>
+  <m:mi>x</m:mi><m:mo>&#8776;</m:mo><m:mn>2.1.</m:mn>
+ </m:mrow>
+</m:math> </para><media id="fs-id1689750" alt="Graph of the intersection of a scattered plot with an estimation line and y=12.">
+<image mime-type="image/jpg" src="CNX_Precalc_Figure_04_08_224.jpg"/>
+</media></solution>-->
+</section></div><p id="fs-id1433707">For the following exercises, refer to <a aria-label="View Table 12" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data#Table_04_08_12">Table 12</a>.</p><div class="os-table" id="Table_04_08_12"><div class="table-scroll"><table data-id="Table_04_08_12" data-summary="Two columns and eleven rows. The first column is labeled, “x”, and the second column is labeled, “f(x)”. Reading the rows as ordered pairs, we have the following values: (0, 12), (2, 28.6), (4, 52.8), (5, 70.3), (7, 99.9), (8, 112.5), (10, 125.8), (11, 127.9), (15, 135.1), and (17, 135.9)." role="presentation"><tbody>
+<tr>
+<td data-align="center"> <math display="inline"><semantics><mrow><mi>x</mi></mrow><annotation-xml encoding="MathML-Content"><mi>x</mi></annotation-xml></semantics></math> </td>
+<td data-align="center">0</td>
+<td data-align="center">2</td>
+<td data-align="center">4</td>
+<td data-align="center">5</td>
+<td data-align="center">7</td>
+<td data-align="center">8</td>
+<td data-align="center">10</td>
+<td data-align="center">11</td>
+<td data-align="center">15</td>
+<td data-align="center">17</td></tr>
+<tr>
+<td data-align="center"> <math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math> </td>
+<td data-align="center">12</td>
+<td data-align="center">28.6</td>
+<td data-align="center">52.8</td>
+<td data-align="center">70.3</td>
+<td data-align="center">99.9</td>
+<td data-align="center">112.5</td>
+<td data-align="center">125.8</td>
+<td data-align="center">127.9</td>
+<td data-align="center">135.1</td>
+<td data-align="center">135.9</td></tr></tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">12</span>
+<span class="os-divider"> </span>
+</div>
+</div><div class="os-hasSolution" data-type="exercise" id="fs-id1440074"><header></header><section><div data-type="problem" id="fs-id1440076">
+<a aria-label="Go to 51" class="os-number" data-page-fragment="fs-id1440074-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">51</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1440079">Use a graphing calculator to create a scatter diagram of the data.</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1520217"><header></header><section><div data-type="problem" id="fs-id1520219">
+<span class="os-number">52</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1520221">Use the LOGISTIC regression option to find a logistic growth model of the form <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> that best fits the data in the table.</p>
+</div>
+</div>
+<!--<solution id="fs-id1375599">
+<para id="fs-id1375601"> <m:math>
+ <m:mrow>
+  <m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mfrac>
+   <m:mrow>
+    <m:mn>136.068</m:mn>
+   </m:mrow>
+   <m:mrow>
+    <m:mn>1</m:mn><m:mo>+</m:mo><m:mn>10.324</m:mn><m:msup>
+     <m:mi>e</m:mi>
+     <m:mrow>
+      <m:mo>&#8722;</m:mo><m:mn>0.480</m:mn><m:mi>x</m:mi>
+     </m:mrow>
+    </m:msup>
+
+   </m:mrow>
+  </m:mfrac>
+
+ </m:mrow>
+</m:math> </para>
+</solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1705222"><header></header><section><div data-type="problem" id="fs-id1705224">
+<a aria-label="Go to 53" class="os-number" data-page-fragment="fs-id1705222-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">53</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1705226">Graph the logistic equation on the scatter diagram.</p>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1531111"><header></header><section><div data-type="problem" id="fs-id1531113">
+<span class="os-number">54</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1531115">To the nearest whole number, what is the predicted carrying capacity of the model?</p>
+</div>
+</div>
+<!--<solution id="fs-id1405348">
+<para id="fs-id1405350">about <m:math>
+ <m:mrow>
+  <m:mn>136</m:mn>
+ </m:mrow>
+</m:math> </para>
+</solution>
+--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1406372"><header></header><section><div data-type="problem" id="fs-id1406374">
+<a aria-label="Go to 55" class="os-number" data-page-fragment="fs-id1406372-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">55</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1406377">Use the intersect feature to find the value of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow><mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> for which the model reaches half its carrying capacity.</p></div>
+</div>
+</section></div></section>
+<section data-depth="2" id="fs-id1583097"><h4 data-type="title">Extensions</h4><div class="material-set-2" data-type="exercise" id="fs-id1583102"><header></header><section><div data-type="problem" id="fs-id1583104">
+<span class="os-number">56</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1404836">Recall that the general form of a logistic equation for a population is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> such that the initial population at time <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>=</mo><mn>0</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>=</mo><mn>0</mn>
+</mrow></annotation-xml></semantics></math></span> is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><msub>
+<mi>P</mi>
+<mn>0</mn>
+</msub>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>=</mo><msub>
+<mi>P</mi>
+<mn>0</mn>
+</msub>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Show algebraically that <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mi>c</mi><mo>−</mo><mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mi>c</mi><mo>−</mo><msub>
+<mi>P</mi>
+<mn>0</mn>
+</msub>
+</mrow>
+<mrow>
+<msub>
+<mi>P</mi>
+<mn>0</mn>
+</msub>
+</mrow>
+</mfrac>
+<msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>t</mi>
+</mrow>
+</msup>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mi>c</mi><mo>−</mo><mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mi>c</mi><mo>−</mo><msub>
+<mi>P</mi>
+<mn>0</mn>
+</msub>
+</mrow>
+<mrow>
+<msub>
+<mi>P</mi>
+<mn>0</mn>
+</msub>
+</mrow>
+</mfrac>
+<msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>t</mi>
+</mrow>
+</msup>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p></div>
+</div>
+<!--<solution id="fs-id1655735">
+<para id="fs-id1366138">Working with the left side of the equation, we see that it can be rewritten as <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>a</m:mi><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+  <m:mo>:</m:mo>
+ </m:mrow>
+</m:math> </para>
+<para id="fs-id1457268"> <m:math>
+ <m:mrow>
+  <m:mfrac>
+   <m:mrow>
+    <m:mi>c</m:mi><m:mo>&#8722;</m:mo><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo>
+   </m:mrow>
+   <m:mrow>
+    <m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo>
+   </m:mrow>
+  </m:mfrac>
+  <m:mo>=</m:mo><m:mfrac>
+   <m:mrow>
+    <m:mi>c</m:mi><m:mo>&#8722;</m:mo><m:mfrac>
+     <m:mi>c</m:mi>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+       </m:mrow>
+      </m:msup>
+
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+   <m:mrow>
+    <m:mfrac>
+     <m:mi>c</m:mi>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+       </m:mrow>
+      </m:msup>
+
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+  </m:mfrac>
+  <m:mo>=</m:mo><m:mfrac>
+   <m:mrow>
+    <m:mfrac>
+     <m:mrow>
+      <m:mi>c</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup>
+         <m:mi>e</m:mi>
+         <m:mrow>
+          <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+         </m:mrow>
+        </m:msup>
+
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mo>&#8722;</m:mo><m:mi>c</m:mi>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+       </m:mrow>
+      </m:msup>
+
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+   <m:mrow>
+    <m:mfrac>
+     <m:mi>c</m:mi>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+       </m:mrow>
+      </m:msup>
+
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+  </m:mfrac>
+  <m:mo>=</m:mo><m:mfrac>
+   <m:mrow>
+    <m:mfrac>
+     <m:mrow>
+      <m:mi>c</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup>
+         <m:mi>e</m:mi>
+         <m:mrow>
+          <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+         </m:mrow>
+        </m:msup>
+        <m:mo>&#8722;</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+       </m:mrow>
+      </m:msup>
+
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+   <m:mrow>
+    <m:mfrac>
+     <m:mi>c</m:mi>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup>
+       <m:mi>e</m:mi>
+       <m:mrow>
+        <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+       </m:mrow>
+      </m:msup>
+
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+  </m:mfrac>
+  <m:mo>=</m:mo><m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+  <m:mo>&#8722;</m:mo><m:mn>1</m:mn><m:mo>=</m:mo><m:mi>a</m:mi><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+
+ </m:mrow>
+</m:math> </para>
+<para id="fs-id1460591">Working with the right side of the equation we show that it can also be rewritten as <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>a</m:mi><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+  <m:mo>.</m:mo><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> But first note that when <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>0</m:mn><m:mo>,</m:mo></m:mrow>
+</m:math>
+ <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:msub>
+   <m:mi>P</m:mi>
+   <m:mn>0</m:mn>
+  </m:msub>
+  <m:mo>=</m:mo><m:mfrac>
+   <m:mi>c</m:mi>
+   <m:mrow>
+    <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:msup>
+     <m:mi>e</m:mi>
+     <m:mrow>
+      <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo stretchy="false">)</m:mo>
+     </m:mrow>
+    </m:msup>
+
+   </m:mrow>
+  </m:mfrac>
+  <m:mo>=</m:mo><m:mfrac>
+   <m:mi>c</m:mi>
+   <m:mrow>
+    <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi>
+   </m:mrow>
+  </m:mfrac>
+  <m:mo>.</m:mo><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> Therefore,</para><para id="fs-id1283132"> <m:math>
+ <m:mrow>
+  <m:mfrac>
+   <m:mrow>
+    <m:mi>c</m:mi><m:mo>&#8722;</m:mo><m:msub>
+     <m:mi>P</m:mi>
+     <m:mn>0</m:mn>
+    </m:msub>
+
+   </m:mrow>
+   <m:mrow>
+    <m:msub>
+     <m:mi>P</m:mi>
+     <m:mn>0</m:mn>
+    </m:msub>
+
+   </m:mrow>
+  </m:mfrac>
+  <m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+  <m:mo>=</m:mo><m:mfrac>
+   <m:mrow>
+    <m:mi>c</m:mi><m:mo>&#8722;</m:mo><m:mfrac>
+     <m:mi>c</m:mi>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi>
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+   <m:mrow>
+    <m:mfrac>
+     <m:mi>c</m:mi>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi>
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+  </m:mfrac>
+  <m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+  <m:mo>=</m:mo><m:mfrac>
+   <m:mrow>
+    <m:mfrac>
+     <m:mrow>
+      <m:mi>c</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mo>&#8722;</m:mo><m:mi>c</m:mi>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi>
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+   <m:mrow>
+    <m:mfrac>
+     <m:mi>c</m:mi>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi>
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+  </m:mfrac>
+  <m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+  <m:mo>=</m:mo><m:mfrac>
+   <m:mrow>
+    <m:mfrac>
+     <m:mrow>
+      <m:mi>c</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:mo>&#8722;</m:mo><m:mn>1</m:mn>
+       </m:mrow>
+      <m:mo>)</m:mo></m:mrow>
+     </m:mrow>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi>
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+   <m:mrow>
+    <m:mfrac>
+     <m:mi>c</m:mi>
+     <m:mrow>
+      <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi>
+     </m:mrow>
+    </m:mfrac>
+
+   </m:mrow>
+  </m:mfrac>
+  <m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+  <m:mo>=</m:mo><m:mrow><m:mo>(</m:mo>
+   <m:mrow>
+    <m:mn>1</m:mn><m:mo>+</m:mo><m:mi>a</m:mi><m:mo>&#8722;</m:mo><m:mn>1</m:mn>
+   </m:mrow>
+  <m:mo>)</m:mo></m:mrow><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+  <m:mo>=</m:mo><m:mi>a</m:mi><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+
+ </m:mrow>
+</m:math> </para>
+<para id="fs-id1656949">Thus, <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mfrac>
+   <m:mrow>
+    <m:mi>c</m:mi><m:mo>&#8722;</m:mo><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo>
+   </m:mrow>
+   <m:mrow>
+    <m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo>
+   </m:mrow>
+  </m:mfrac>
+  <m:mo>=</m:mo><m:mfrac>
+   <m:mrow>
+    <m:mi>c</m:mi><m:mo>&#8722;</m:mo><m:msub>
+     <m:mi>P</m:mi>
+     <m:mn>0</m:mn>
+    </m:msub>
+
+   </m:mrow>
+   <m:mrow>
+    <m:msub>
+     <m:mi>P</m:mi>
+     <m:mn>0</m:mn>
+    </m:msub>
+
+   </m:mrow>
+  </m:mfrac>
+  <m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mi>b</m:mi><m:mi>t</m:mi>
+   </m:mrow>
+  </m:msup>
+  <m:mo>.</m:mo>
+ </m:mrow>
+</m:math> </para>
+</solution>
+--></section></div><div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1435401"><header></header><section><div data-type="problem" id="fs-id1435404">
+<a aria-label="Go to 57" class="os-number" data-page-fragment="fs-id1435401-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">57</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1658819">Use a graphing utility to find an exponential regression formula <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span> and a logarithmic regression formula <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span> for the points <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.5</mn><mo>,</mo><mn>1.5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.5</mn><mo>,</mo><mn>1.5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>8.5</mn><mo>,</mo><mspace width="0.5em"></mspace><mtext>8.5</mtext>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>8.5</mn><mo>,</mo><mspace width="0.5em"></mspace><mtext>8.5</mtext>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Round all numbers to 6 decimal places. Graph the points and both formulas along with the line <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>=</mo><mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>=</mo><mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> on the same axis. Make a conjecture about the relationship of the regression formulas.</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1583256"><header></header><section><div data-type="problem" id="fs-id1583258">
+<span class="os-number">58</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1658556">Verify the conjecture made in the previous exercise. Round all numbers to six decimal places when necessary.</p>
+</div>
+</div>
+<!--<solution id="fs-id1658561">
+<para id="fs-id1658563">First rewrite the exponential with base <emphasis effect="italics">e</emphasis>: <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>1.034341</m:mn><m:msup>
+   <m:mi>e</m:mi>
+   <m:mrow>
+    <m:mtext>0</m:mtext><m:mtext>.247800x</m:mtext>
+   </m:mrow>
+  </m:msup>
+  <m:mo>.</m:mo><m:mtext>&#8201; </m:mtext>
+ </m:mrow>
+</m:math> Then test to verify that <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>g</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mi>x</m:mi><m:mo>,</m:mo>
+ </m:mrow>
+</m:math> taking rounding error into consideration:</para><para id="fs-id1513342"> <m:math>
+ <m:mrow>
+  <m:mtable columnalign="left">
+   <m:mtr columnalign="left">
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mi>g</m:mi><m:mo stretchy="false">(</m:mo><m:mi>f</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo stretchy="false">)</m:mo></m:mrow>
+    </m:mtd>
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mo>=</m:mo><m:mn>4.035510</m:mn><m:mi>ln</m:mi><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mn>1.034341</m:mn><m:msup>
+         <m:mi>e</m:mi>
+         <m:mrow>
+          <m:mtext>0</m:mtext><m:mtext>.247800x</m:mtext></m:mrow>
+        </m:msup>
+        <m:mtext>&#8201;</m:mtext></m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mo>&#8722;</m:mo><m:mn>0.136259</m:mn></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr columnalign="left">
+    <m:mtd columnalign="left">
+     <m:mrow/>
+    </m:mtd>
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mo>=</m:mo><m:mn>4.03551</m:mn><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>ln</m:mi><m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mn>1.034341</m:mn></m:mrow>
+        <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mi>ln</m:mi><m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:msup>
+           <m:mi>e</m:mi>
+           <m:mrow>
+            <m:mtext>0</m:mtext><m:mtext>.2478</m:mtext><m:mi>x</m:mi></m:mrow>
+          </m:msup>
+          <m:mtext>&#8201;</m:mtext></m:mrow>
+        <m:mo>)</m:mo></m:mrow></m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mo>&#8722;</m:mo><m:mn>0.136259</m:mn></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr columnalign="left">
+    <m:mtd columnalign="left">
+     <m:mrow/>
+    </m:mtd>
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mo>=</m:mo><m:mn>4.03551</m:mn><m:mrow><m:mo>(</m:mo>
+       <m:mrow>
+        <m:mi>ln</m:mi><m:mrow><m:mo>(</m:mo>
+         <m:mrow>
+          <m:mn>1.034341</m:mn></m:mrow>
+        <m:mo>)</m:mo></m:mrow><m:mo>+</m:mo><m:mtext>0</m:mtext><m:mtext>.2478</m:mtext><m:mi>x</m:mi></m:mrow>
+      <m:mo>)</m:mo></m:mrow><m:mo>&#8722;</m:mo><m:mn>0.136259</m:mn></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr columnalign="left">
+    <m:mtd columnalign="left">
+     <m:mrow/>
+    </m:mtd>
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mo>=</m:mo><m:mn>0.136257</m:mn><m:mo>+</m:mo><m:mn>0.999999</m:mn><m:mi>x</m:mi><m:mo>&#8722;</m:mo><m:mn>0.136259</m:mn></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr columnalign="left">
+    <m:mtd columnalign="left">
+     <m:mrow/>
+    </m:mtd>
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mo>=</m:mo><m:mo>&#8722;</m:mo><m:mn>0.000002</m:mn><m:mo>+</m:mo><m:mn>0.999999</m:mn><m:mi>x</m:mi></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr columnalign="left">
+    <m:mtd columnalign="left">
+     <m:mrow/>
+    </m:mtd>
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mo>&#8776;</m:mo><m:mn>0</m:mn><m:mo>+</m:mo><m:mi>x</m:mi></m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr columnalign="left">
+    <m:mtd columnalign="left">
+     <m:mrow/>
+    </m:mtd>
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mo>=</m:mo><m:mi>x</m:mi></m:mrow>
+    </m:mtd>
+   </m:mtr>
+
+  </m:mtable></m:mrow>
+</m:math>
+</para></solution>-->
+</section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1700899"><header></header><section><div data-type="problem" id="fs-id1532222">
+<a aria-label="Go to 59" class="os-number" data-page-fragment="fs-id1700899-solution" data-page-slug="chapter-6" data-page-uuid="cf8ef218-9e46-5daa-bd6e-695fe7c338bb" href="https://openstax.org/books/college-algebra-2e/pages/chapter-6">59</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1532224">Find the inverse function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>f</mi>
+<mrow>
+<mo>−</mo><mn>1</mn>
+</mrow>
+</msup>
+<mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>f</mi>
+<mrow>
+<mo>−</mo><mn>1</mn>
+</mrow>
+</msup>
+<mrow><mo>(</mo>
+<mi>x</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> for the logistic function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mi>c</mi>
+<mrow>
+<mn>1</mn><mo>+</mo><mi>a</mi><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mi>b</mi><mi>x</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Show all steps.</p>
+</div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1631452"><header></header><section><div data-type="problem" id="fs-id1631454">
+<span class="os-number">60</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1631456">Use the result from the previous exercise to graph the logistic model <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow><mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mrow>
+<mn>20</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>4</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.5</mn><mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mrow>
+<mn>20</mn>
+</mrow>
+<mrow>
+<mn>1</mn><mo>+</mo><mn>4</mn><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>0.5</mn><mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> along with its inverse on the same axis. What are the intercepts and asymptotes of each function?</p></div>
+</div>
+<!--<solution id="fs-id1440685">
+<media id="fs-id1440690" alt="Graph of P(t)=20/(1+40.5e^(-0.5t)) and P(t)=(ln(4)-ln((20/t)-1)/0.5.">
+<image mime-type="image/jpg" src="CNX_PreCalc_Figure_04_08_228.jpg"/>
+</media>
+<para id="eip-id1165134486767">The graph of <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mtext>&#8201;</m:mtext></m:mrow>
+</m:math> has a <emphasis effect="italics">y</emphasis>-intercept at (0, 4) and horizontal asymptotes at <emphasis effect="italics">y</emphasis> = 0 and <emphasis effect="italics">y</emphasis> = 20. The graph of <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:msup>
+   <m:mi>P</m:mi>
+   <m:mrow>
+    <m:mo>&#8722;</m:mo><m:mn>1</m:mn></m:mrow>
+  </m:msup>
+  <m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mtext>&#8201;</m:mtext></m:mrow>
+</m:math> has an <emphasis effect="italics">x</emphasis>- intercept at (4, 0) and vertical asymptotes at <emphasis effect="italics">x</emphasis> = 0 and <emphasis effect="italics">x</emphasis> = 20.</para></solution>-->
+</section></div></section></section></div>
+</div></article><footer><p>Adapted from OpenStax, College Algebra 2e, 6.8 Fitting Exponential Models to Data. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/college-algebra-2e/pages/6-8-fitting-exponential-models-to-data">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

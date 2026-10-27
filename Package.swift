@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "FirstStateCore", targets: ["FirstStateCore"])
     ],
     targets: [
-        .target(name: "FirstStateCore"),
+        .target(name: "FirstStateCore", resources: [.copy("Resources/CourseMedia"), .copy("Resources/Curriculum")]),
         .testTarget(name: "FirstStateCoreTests", dependencies: ["FirstStateCore"])
     ]
 )

@@ -37,7 +37,7 @@ public enum CourseSubject: String, Codable, CaseIterable, Sendable {
 
     public var title: String {
         switch self {
-        case .history: "U.S. History"
+        case .history: "History"
         case .mathematics: "Mathematics"
         case .biology: "Biology"
         case .chemistry: "Chemistry"
@@ -53,11 +53,13 @@ public enum CourseSubject: String, Codable, CaseIterable, Sendable {
 public enum CourseLevel: String, Codable, CaseIterable, Sendable {
     case highSchool
     case college
+    case apPreparation
 
     public var title: String {
         switch self {
         case .highSchool: "High School"
         case .college: "College"
+        case .apPreparation: "AP preparation"
         }
     }
 }
@@ -231,7 +233,7 @@ public struct StudySession: Identifiable, Codable, Hashable, Sendable {
 }
 
 public struct ProgressSnapshot: Codable, Equatable, Sendable {
-    public static let currentSchemaVersion = 3
+    public static let currentSchemaVersion = 4
 
     public var schemaVersion: Int
     public var hasCompletedOnboarding: Bool
@@ -242,6 +244,7 @@ public struct ProgressSnapshot: Codable, Equatable, Sendable {
     public var communityResponses: [String: String]
     public var joinedChallengeIDs: Set<String>
     public var collegeChecklistIDs: Set<String>
+    public var workspace = LearnerWorkspace()
 
     public init(schemaVersion: Int = currentSchemaVersion, hasCompletedOnboarding: Bool = false, studyIntention: StudyIntention = .buildEvidenceSkills, attempts: [Attempt] = [], sessions: [StudySession] = [], profile: LearnerProfile = LearnerProfile(), communityResponses: [String: String] = [:], joinedChallengeIDs: Set<String> = [], collegeChecklistIDs: Set<String> = []) {
         self.schemaVersion = schemaVersion
@@ -257,7 +260,7 @@ public struct ProgressSnapshot: Codable, Equatable, Sendable {
 
     private enum CodingKeys: String, CodingKey {
         case schemaVersion, hasCompletedOnboarding, studyIntention, attempts, sessions, profile
-        case communityResponses, joinedChallengeIDs, collegeChecklistIDs
+        case communityResponses, joinedChallengeIDs, collegeChecklistIDs, workspace
     }
 
     public init(from decoder: Decoder) throws {
@@ -275,6 +278,7 @@ public struct ProgressSnapshot: Codable, Equatable, Sendable {
         communityResponses = try values.decodeIfPresent([String: String].self, forKey: .communityResponses) ?? [:]
         joinedChallengeIDs = try values.decodeIfPresent(Set<String>.self, forKey: .joinedChallengeIDs) ?? []
         collegeChecklistIDs = try values.decodeIfPresent(Set<String>.self, forKey: .collegeChecklistIDs) ?? []
+        workspace = try values.decodeIfPresent(LearnerWorkspace.self, forKey: .workspace) ?? LearnerWorkspace()
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -288,6 +292,7 @@ public struct ProgressSnapshot: Codable, Equatable, Sendable {
         try values.encode(communityResponses, forKey: .communityResponses)
         try values.encode(joinedChallengeIDs, forKey: .joinedChallengeIDs)
         try values.encode(collegeChecklistIDs, forKey: .collegeChecklistIDs)
+        try values.encode(workspace, forKey: .workspace)
     }
 }
 

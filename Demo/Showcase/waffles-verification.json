@@ -1,0 +1,51 @@
+{
+  "video": {
+    "file": "DelaStudy-Walkthrough-2m15.mp4",
+    "durationSeconds": 135,
+    "width": 1920,
+    "height": 1080,
+    "codec": "avc1",
+    "videoTracks": 1,
+    "audioTracks": 0,
+    "bytes": 37454588,
+    "sha256": "9b8a7ebb2494dd887889a6e0c7adece0962a3175ee607bec3292c77af7e5c7b8",
+    "hand": false,
+    "burnedInNarration": false,
+    "codePlacement": "lower-right",
+    "chaptersVisuallyInspected": 21,
+    "brandOCR": {"sampledFrames":135,"sampleIntervalSeconds":1,"oldBrandMatches":0,"scope":"Sampled frames only; OCR can miss text."}
+  },
+  "script": {
+    "file": "DelaStudy-Showcase-Script.docx",
+    "sha256": "d0d3d933971ee8c93f68efac670693a2e24b7f2b0839e549aed246afc0c3cc3d",
+    "pagesRenderedAndInspected": 3,
+    "spokenWords": 291,
+    "timestampedSections": 14,
+    "preset": "compact_reference_guide",
+    "accessibilityAuditFindings": 0,
+    "source": "waffles-narration.json"
+  },
+  "appVerification": {
+    "coreTestsPassed": 73,
+    "coreSuites": 13,
+    "captureDevice": "iPhone 14 Simulator, iOS 26.5",
+    "presentationArtwork": "iPhone 14 Pro-style frame with Dynamic Island",
+    "account": "Waffles123",
+    "progressSeeded": false,
+    "ordinaryAccountsTouched": false,
+    "nativeNotificationTapTest": "passed",
+    "notificationBundle": "/tmp/delastudy-waffles-4jUGKt/notification.xcresult",
+    "deliveredNotificationsShown": 1,
+    "notificationType": "Real local Focus-session completion, one-minute interval; waiting shortened in edit",
+    "normalPlaybackTest": "passed",
+    "normalBundle": "/tmp/delastudy-waffles-4jUGKt/sound-normal.xcresult",
+    "reducedMotionPlaybackTest": "passed",
+    "reducedMotionBundle": "/tmp/delastudy-waffles-4jUGKt/sound-reduced.xcresult",
+    "glyphChangedPixels": {"normalPlaying":2282,"normalPaused":0,"reduceMotionPlaying":0,"reduceMotionPaused":0},
+    "motionComparisonScope": "Two screenshot samples for each state; playback indicator, not measured audio spectrum.",
+    "originalSimulatorPreferencesRestored": true,
+    "captureSimulatorShutDown": true,
+    "initialAttempt": "Main capture completed onboarding, lesson, practice, resources, planning, sound and Zen. Its notification assertion failed because the Form-row tap did not enable the switch. The targeted retake confirms saved switch values, actual banner delivery and navigation, and passes.",
+    "limitations": ["Not a physical iPhone test", "Not the full historical UI suite", "No public app deployment or Git push", "No production-readiness claim"]
+  }
+}

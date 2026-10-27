@@ -1,0 +1,914 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_700a89f6-f4bf-4755-ad50-77d9ab183597"><h2 data-rex-keep="true" data-type="document-title" id="page_700a89f6-f4bf-4755-ad50-77d9ab183597_titlecreatedbycookbook"><span class="os-number">9.1</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Work, Power, and the Work–Energy Theorem</span>
+</h2>
+<div class="learning-objectives ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167064994174"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Section Learning Objectives</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167064899689">By the end of this section, you will be able to do the following:</p>
+<ul id="fs-id1167065985117"><li>Describe and apply the work–energy theorem</li>
+<li>Describe and calculate work and power</li>
+</ul></div></section></div>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167064746517"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167064877148">The learning objectives in this section will help your students master the following standards:</p>
+<ul id="fs-id1164561130528">
+<li>(6) Science concepts. The student knows that changes occur within a physical system and applies the laws of conservation of energy and momentum. The student is expected to:
+<ul id="fs-id1167065954760"><li>
+<span>(A)</span>
+<span>describe and apply the work–energy theorem;</span>
+</li>
+<li>
+<span>(C)</span>
+<span>describe and calculate work and power.</span>
+</li>
+</ul></li></ul>
+<p id="fs-id1169316153483">In addition, the High School Physics Laboratory Manual addresses the following standards:</p><ul id="fs-id1169316118115">
+<li>(6) Science concepts. The student knows that changes occur within a physical system and applies the laws of conservation of energy and momentum. The student is expected to:
+<ul id="fs-id1169316524686"><li>
+<span>(C)</span>
+<span>calculate the mechanical energy of, power generated within, impulse applied to, and momentum of a physical system.</span>
+</li>
+</ul></li>
+</ul>
+<p id="fs-id1164564794044">Use the lab titled Work and Energy as a supplement to address content in this section.</p>
+</div></section></div>
+<section data-depth="1" id="keyterms"><h3 data-type="title">Section Key Terms</h3>
+<div class="os-table os-unstyled-container" id="fs-id1167066032840"><div class="table-scroll"><table class="unnumbered unstyled section-key-terms" data-id="fs-id1167066032840" data-label="" data-summary="The list of Key Terms includes: energy, gravitational potential energy, joule, kinetic energy, mechanical energy, potential energy, power, watt, work, and work–energy theorem." role="presentation"><tbody>
+<tr>
+<td>energy</td>
+<td>gravitational potential energy</td>
+<td>joule</td>
+<td>kinetic energy</td>
+<td>mechanical energy</td>
+</tr>
+<tr>
+<td>potential energy</td>
+<td>power</td>
+<td>watt </td>
+<td>work</td>
+<td>work–energy theorem</td>
+</tr>
+</tbody></table></div></div>
+</section>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167065024367"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167065881993">In this section, students learn how work determines changes in kinetic energy and that power is the rate at which work is done.</p>
+<p id="fs-id1167065764062"><span>[BL]</span><span>[OL]</span> Review understanding of mass, velocity, and acceleration due to gravity. Define the general definitions of the words <em data-effect="italics">potential</em> and <em data-effect="italics">kinetic</em>.</p>
+<p id="fs-id1167065863553"><span>[AL]</span><span>[AL]</span> Remind students of the equation  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>=</mo><mi>P</mi><msub>
+<mi>E</mi>
+<mi>e</mi>
+</msub>
+<mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>m</mi><mi>g</mi></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>=</mo><mi>P</mi><msub>
+<mi>E</mi>
+<mi>e</mi>
+</msub>
+<mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>m</mi><mi>g</mi></mrow></annotation-xml></semantics></math></span> . Point out that acceleration due to gravity is a constant, therefore <em data-effect="italics">PE<sub>e</sub></em> that results from work done by gravity will also be constant. Compare this to acceleration due to other forces, such as applying muscles to lift a rock, which may not be constant.</p>
+</div></section></div>
+<section data-depth="1" id="fs-id1167064895401"><h3 data-type="title">The Work–Energy Theorem</h3><p id="fs-id1167065774089">In physics, the term <span data-type="term" group-by="w" id="term-00001">work</span> has a very specific definition. Work is application of force,  <span class="os-math-in-para"><math display="inline"><semantics><mrow><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle></mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle></annotation-xml></semantics></math></span>, to move an object over a distance, <em data-effect="italics">d</em>, in the direction that the force is applied. Work, <em data-effect="italics">W</em>, is described by the equation</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1167066123058">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>d</mi><mtext>.</mtext></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>d</mi><mtext>.</mtext></mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1167065937544">Some things that we typically consider to be work are not work in the scientific sense of the term. Let’s consider a few examples. Think about why each of the following statements is true.</p>
+<ul id="fs-id1167065773692">
+<li>Homework <em data-effect="italics">is not</em> work.</li>
+<li>Lifting a rock upwards off the ground <em data-effect="italics">is</em> work.</li>
+<li>Carrying a rock in a straight path across the lawn at a constant speed <em data-effect="italics">is not</em> work.</li>
+</ul>
+<p id="fs-id1167062339390">The first two examples are fairly simple. Homework is not work because objects are not being moved over a distance. Lifting a rock up off the ground is work because the rock is moving in the direction that force is applied. The last example is less obvious. Recall from the laws of motion that force is <em data-effect="italics">not </em>required to move an object at constant velocity. Therefore, while some force may be applied to keep the rock up off the ground, no net force is applied to keep the rock moving forward at constant velocity.</p>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167064994412"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167062408767"><span>[BL]</span><span>[OL]</span> Explain that, when this theorem is applied to an object that is initially at rest and then accelerates, the  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle></mstyle>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle></mstyle>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+</mrow></annotation-xml></semantics></math></span>  term equals zero.</p>
+<p id="fs-id1167066156469"><span>[OL]</span><span>[AL]</span> Work is measured in joules and  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>d</mi></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>d</mi></mrow></annotation-xml></semantics></math></span> . Force is measured in newtons and distance in meters, so joules are equivalent to newton-meters  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>N</mtext><mo>⋅</mo><mtext>m</mtext></mrow>
+<mo>)</mo></mrow></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>N</mtext><mo>⋅</mo><mtext>m</mtext></mrow>
+<mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> </p>
+</div></section></div>
+<p id="fs-id1167066027087">Work and <span data-type="term" group-by="e" id="term-00002">energy</span> are closely related. When you do work to move an object, you change the object’s energy. You (or an object) also expend energy to do work. In fact, energy can be defined as the ability to do work. Energy can take a variety of different forms, and one form of energy can transform to another. In this chapter we will be concerned with <span data-type="term" group-by="m" id="term-00003">mechanical energy</span>, which comes in two forms: <span data-type="term" group-by="k" id="term-00004">kinetic energy</span> and <span data-type="term" group-by="p" id="term-00005">potential energy</span>.</p>
+<ul id="fs-id1167064910557">
+<li>Kinetic energy is also called energy of motion. A moving object has kinetic energy.</li>
+<li>Potential energy, sometimes called stored energy, comes in several forms. <span data-type="term" group-by="G" id="term-00006">Gravitational potential energy</span> is the stored energy an object has as a result of its position above Earth’s surface (or another object in space). A roller coaster car at the top of a hill has gravitational potential energy.</li>
+</ul>
+<p id="fs-id1167065977760">Let’s examine how doing work on an object changes the object’s energy. If we apply force to lift a rock off the ground, we increase the rock’s potential energy, <em data-effect="italics">PE</em>. If we drop the rock, the force of gravity increases the rock’s kinetic energy as the rock moves downward until it hits the ground.</p>
+<p id="fs-id1167064979150">The force we exert to lift the rock is equal to its weight, <em data-effect="italics">w</em>, which is equal to its mass, <em data-effect="italics">m</em>, multiplied by acceleration due to gravity, <strong>g</strong>.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1167065688169">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mo>=</mo><mi>w</mi><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mo>=</mo><mi>w</mi><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle></mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1167065892166">The work we do on the rock equals the force we exert multiplied by the distance, <em data-effect="italics">d</em>, that we lift the rock. The work we do on the rock also equals the rock’s gain in gravitational potential energy, <em data-effect="italics">PE<sub>e</sub></em>.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1167065858370">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>=</mo><mi>P</mi><msub>
+<mi>E</mi>
+<mi>e</mi>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mstyle mathsize="normal" mathvariant="bold"><mi>d</mi></mstyle></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>=</mo><mi>P</mi><msub>
+<mi>E</mi>
+<mi>e</mi>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mstyle mathsize="normal" mathvariant="bold"><mi>d</mi></mstyle></mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1167065787997">Kinetic energy depends on the mass of an object and its velocity, <strong>v</strong>.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1167066046120">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>K</mi><mi>E</mi><mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>K</mi><mi>E</mi><mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+</msup>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1167065849344">When we drop the rock the force of gravity causes the rock to fall, giving the rock kinetic energy. When work done on an object increases only its kinetic energy, then the net work equals the change in the value of the quantity <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+</msup>
+</mrow></annotation-xml></semantics></math></span> . This is a statement of the <span data-type="term" group-by="w" id="term-00007">work–energy theorem</span>, which is expressed mathematically as</p><div class="unnumbered" data-label="" data-type="equation" id="fs-id1167064781430">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>=</mo><mtext>Δ</mtext><mi>K</mi><mi>E</mi><mtext> = </mtext><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+<mn>2</mn>
+</msubsup>
+<mo>−</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+<mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>=</mo><mtext>Δ</mtext><mi>K</mi><mi>E</mi><mtext> = </mtext><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+<mn>2</mn>
+</msubsup>
+<mo>−</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+<mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div> </div><p id="fs-id1167064775088">The subscripts <sub>2</sub> and <sub>1</sub> indicate the final and initial velocity, respectively. This theorem was proposed and successfully tested by James Joule, shown in <a aria-label="View Figure 9.2" class="autogenerated-content" href="https://openstax.org/books/physics/pages/9-1-work-power-and-the-work-energy-theorem#Figure_09_01_Joule">Figure 9.2</a>.</p>
+<p id="fs-id1167065862393">Does the name Joule sound familiar? The <span data-type="term" group-by="j" id="term-00008">joule</span> (J) is the metric unit of measurement for both work and energy. The measurement of work and energy with the same unit reinforces the idea that work and energy are related and can be converted into one another. 1.0 J = 1.0 N∙m, the units of force multiplied by distance. 1.0 N = 1.0 kg∙m/s<sup>2</sup>, so 1.0 J = 1.0 kg∙m<sup>2</sup>/s<sup>2</sup>. Analyzing the units of the term (1/2)<em data-effect="italics">m</em><strong>v</strong><sup>2</sup> will produce the same units for joules.</p><div class="os-figure" id="Figure_09_01_Joule"><figure class="ui-has-child-figcaption" data-id="Figure_09_01_Joule"><span data-alt="A black and white photograph of James Joule is shown." data-type="media" id="fs-id1167065825613">
+<img alt="A black and white photograph of James Joule is shown." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/634fe8b8cb9d84aed59de8fe0c533fc67645edde" height="314" loading="lazy" src="d2a1f5d08664d308e79b6eab.webp" width="300"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">9.2</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The joule is named after physicist James Joule (1818–1889).  (C. H. Jeens, Wikimedia Commons)</span>
+</figcaption></figure></div><div class="watch-physics ui-has-child-title" data-type="note" id="fs-id1167066029957"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Watch Physics</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Work and Energy</span>
+</h4>
+<p id="fs-id1167065868354">This video explains the work energy theorem and discusses how work done on an object increases the object’s KE.</p>
+<p id="para-00001"><a aria-label="Go to Introduction to work and energy | Work and energy | Physics | Khan Academy" href="https://openstax.org/l/02worknrgz" rel="noopener nofollow" target="_blank">Introduction to work and energy | Work and energy | Physics | Khan Academy</a></p>
+<div class="os-exercise grasp-check unnumbered ui-has-child-title" data-type="exercise" id="fs-id1167065878318"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Grasp Check</span>
+</h3></header><section>
+<div data-type="problem" id="fs-id1167066028639"><div class="os-problem-container">
+<p id="fs-id1164563097511">True or false—The energy increase of an object acted on only by a gravitational force is equal to the product of the object's weight and the distance the object falls.</p>
+<ol id="fs-id1164563100938" type="a">
+<li>True</li>
+<li>False</li></ol>
+<!--<para id="fs-id1167065814821"><link class="os-embed" url="#ost/api/ex/k12phys-ch09-ex001"/></para>-->
+</div></div>
+</section></div>
+</div></section></div><div class="os-teacher ui-has-child-title" data-type="note" id="eip-id1167065852541"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="eip-id1167064724035">Repeat the information on kinetic and potential energy discussed earlier in the section. Have the students distinguish between and understand the two ways of increasing the energy of an object (1) applying a horizontal force to increase KE and (2) applying a vertical force to increase PE.</p>
+</div></section></div></section><section data-depth="1" id="fs-id1167065800783"><h3 data-type="title">Calculations Involving Work and Power</h3>
+<p id="fs-id1167065785215">In applications that involve work, we are often interested in how fast the work is done. For example, in roller coaster design, the amount of time it takes to lift a roller coaster car to the top of the first hill is an important consideration. Taking a half hour on the ascent will surely irritate riders and decrease ticket sales. Let’s take a look at how to calculate the time it takes to do work.</p>
+<p id="fs-id1167064901864">Recall that a rate can be used to describe a quantity, such as work, over a period of time. <span data-type="term" group-by="P" id="term-00009">Power</span> is the rate at which work is done. In this case, rate means <em data-effect="italics">per unit of time</em>. Power is calculated by dividing the work done by the time it took to do the work.</p><div class="unnumbered" data-label="" data-type="equation" id="fs-id1167066034134">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo>=</mo><mfrac>
+<mi>W</mi>
+<mi>t</mi>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo>=</mo><mfrac>
+<mi>W</mi>
+<mi>t</mi>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1167065855335">Let’s consider an example that can help illustrate the differences among work, force, and power. Suppose the woman in <a aria-label="View Figure 9.3" class="autogenerated-content" href="https://openstax.org/books/physics/pages/9-1-work-power-and-the-work-energy-theorem#Figure_09_01_Lifting">Figure 9.3</a> lifting the TV with a pulley gets the TV to the fourth floor in two minutes, and the man carrying the TV up the stairs takes five minutes to arrive at the same place. They have done the same amount of work  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>d</mi></mrow>
+<mo>)</mo></mrow></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>d</mi></mrow>
+<mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span>  on the TV, because they have moved the same mass over the same vertical distance, which requires the same amount of upward force. However, the woman using the pulley has generated more power. This is because she did the work in a shorter amount of time, so the denominator of the power formula, <em data-effect="italics">t</em>, is smaller. (For simplicity’s sake, we will leave aside for now the fact that the man climbing the stairs has also done work on himself.)</p>
+<div class="os-figure" id="Figure_09_01_Lifting"><figure class="ui-has-child-figcaption" data-id="Figure_09_01_Lifting"><span data-alt="A cross-section view of a four-story elevator is shown. The first three floors are labeled with h. A person is carrying a television up a flight of stairs on the second floor. Another person is standing on the ground floor, using a pulley to move a television up the floors." data-type="media" id="fs-id1167064908163">
+<img alt="A cross-section view of a four-story elevator is shown. The first three floors are labeled with h. A person is carrying a television up a flight of stairs on the second floor. Another person is standing on the ground floor, using a pulley to move a television up the floors." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/e7fb4e9dbd1fd73c4d73be595a238103115634ad" height="620" loading="lazy" src="96a64bb30b17d736178dc88c.webp" width="300"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">9.3</span>
+<span class="os-divider"> </span>
+<span class="os-caption">No matter how you move a TV to the fourth floor, the amount of work performed and the potential energy gain are the same.</span>
+</figcaption></figure></div><p id="fs-id1167064646037">Power can be expressed in units of <span data-type="term" group-by="w" id="term-00010">watts</span> (W). This unit can be used to measure power related to any form of energy or work. You have most likely heard the term used in relation to electrical devices, especially light bulbs. Multiplying power by time gives the amount of energy. Electricity is sold in kilowatt-hours because that equals the amount of electrical energy consumed.</p>
+<p id="fs-id1167064775408">The watt unit was named after James Watt (1736–1819) (see <a aria-label="View Figure 9.4" class="autogenerated-content" href="https://openstax.org/books/physics/pages/9-1-work-power-and-the-work-energy-theorem#Figure_09_01_Watt">Figure 9.4</a>). He was a Scottish engineer and inventor who discovered how to coax more power out of steam engines.</p>
+<div class="os-figure" id="Figure_09_01_Watt"><figure class="ui-has-child-figcaption" data-id="Figure_09_01_Watt"><span data-alt="A painting of James Watt is shown." data-type="media" id="fs-id1167065071601">
+<img alt="A painting of James Watt is shown." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/76357ea05905b9fcae95844a3b10216adedb1808" height="376" loading="lazy" src="c7de04e0c1db44dbf83aa536.webp" width="300"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">9.4</span>
+<span class="os-divider"> </span>
+<span class="os-caption">Is James Watt thinking about watts?  (Carl Frederik von Breda, Wikimedia Commons)</span>
+</figcaption></figure></div><div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167066145780"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167065958842"><span>[BL]</span><span>[OL]</span> Review the concept that work changes the energy of an object or system. Review the units of work, energy, force, and distance. Use the equations for mechanical energy and work to show what is work and what is not. Make it clear why holding something off the ground or carrying something over a level surface is not work in the scientific sense.</p>
+<p id="fs-id1167065866120"><span>[OL]</span> Ask the students to use the mechanical energy equations to explain why each of these is or is not work. Ask them to provide more examples until they understand the difference between the scientific term <em data-effect="italics">work</em> and a task that is simply difficult but not literally work (in the scientific sense).</p>
+<p id="fs-id1167065852687"><span>[BL]</span><span>[OL]</span> Stress that power is a rate and that rate means "per unit of time." In the metric system this unit is usually seconds. End the section by clearing up any misconceptions about the distinctions between force, work, and power.</p><p id="fs-id1167065774538"><span>[AL]</span> Explain relationships between the units for force, work, and power. If  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>d</mi></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>d</mi></mrow></annotation-xml></semantics></math></span>  and work can be expressed in J, then  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo>=</mo><mfrac>
+<mi>W</mi>
+<mi>t</mi>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>d</mi></mrow>
+<mi>t</mi>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo>=</mo><mfrac>
+<mi>W</mi>
+<mi>t</mi>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mi>d</mi></mrow>
+<mi>t</mi>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>  so power can be expressed in units of  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>N</mtext><mo>⋅</mo><mtext>m</mtext></mrow>
+<mtext>s</mtext>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mtext>N</mtext><mo>⋅</mo><mtext>m</mtext></mrow>
+<mtext>s</mtext>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> </p>
+<p id="fs-id1167066025160">Also explain that we buy electricity in kilowatt-hours because, when power is multiplied by time, the time units cancel, which leaves work or energy.</p>
+</div></section></div>
+<div class="links-to-physics ui-has-child-title" data-type="note" id="fs-id1167065765517"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Links To Physics</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Watt’s Steam Engine</span>
+</h4>
+<p id="fs-id1167066103709">James Watt did not invent the steam engine, but by the time he was finished tinkering with it, it was more useful. The first steam engines were not only inefficient, they only produced a back and forth, or <span class="no-emphasis" data-type="term" group-by="r" id="term-00011">reciprocal</span>, motion. This was natural because pistons move in and out as the pressure in the chamber changes. This limitation was okay for simple tasks like pumping water or mashing potatoes, but did not work so well for moving a train. Watt was able build a steam engine that converted reciprocal motion to circular motion. With that one innovation, the industrial revolution was off and running. The world would never be the same. One of Watt's steam engines is shown in <a aria-label="View Figure 9.5" class="autogenerated-content" href="https://openstax.org/books/physics/pages/9-1-work-power-and-the-work-energy-theorem#Figure_09_01_engine">Figure 9.5</a>. The video that follows the figure explains the importance of the steam engine in the industrial revolution.</p>
+<div class="os-figure" id="Figure_09_01_engine"><figure class="ui-has-child-figcaption" data-id="Figure_09_01_engine"><span data-alt="A black and white illustration of an early steam engine is shown." data-type="media" id="fs-id1167065877369">
+<img alt="A black and white illustration of an early steam engine is shown." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/68a092334fd8ab3a21d224dbaedb6e75ad6949c7" height="377" loading="lazy" src="e3c3e91a86b40add02546569.webp" width="300"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">9.5</span>
+<span class="os-divider"> </span>
+<span class="os-caption">A late version of the Watt steam engine. (Nehemiah Hawkins, Wikimedia Commons)</span>
+</figcaption></figure></div><div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167066182853"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167065919767">Initiate a discussion on the historical significance of suddenly increasing the amount of power available to industries and transportation. Have students consider the fact that the speed of transportation increased roughly tenfold. Changes in how goods were manufactured were just as great. Ask students how they think the resulting changes in lifestyle compare to more recent changes brought about by innovations such as air travel and the Internet.</p>
+</div></section></div>
+</div></section></div>
+<div class="watch-physics ui-has-child-title" data-type="note" id="fs-id1167066112717"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Watch Physics</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Watt's Role in the Industrial Revolution</span>
+</h4>
+<p id="fs-id1167065860998">This video demonstrates how the watts that resulted from Watt's inventions helped make the industrial revolution possible and allowed England to enter a new historical era.</p>
+<p id="para-00002"><a aria-label="Go to Coal, Steam, and The Industrial Revolution: Crash Course World History #32" href="https://www.youtube.com/embed/zhL5DCizj5c" rel="noopener nofollow" target="_blank">Coal, Steam, and The Industrial Revolution: Crash Course World History #32</a></p>
+<div class="os-exercise grasp-check unnumbered ui-has-child-title" data-type="exercise" id="fs-id1167065725280"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Grasp Check</span>
+</h3></header><section>
+<div data-type="problem" id="fs-id1167065920087"><div class="os-problem-container">
+<p id="fs-id1164563518135">Which form of mechanical energy does the steam engine generate?</p>
+<ol id="fs-id1164565178550" type="a">
+<li>Potential energy</li>
+<li>Kinetic energy</li>
+<li>Nuclear energy</li>
+<li>Solar energy</li></ol>
+<!--<para id="fs-id1167065842363"><link class="os-embed" url="#ost/api/ex/k12phys-ch09-ex002"/></para>-->
+</div></div>
+</section></div></div></section></div><p id="fs-id1167064897065">Before proceeding, be sure you understand the distinctions among force, work, energy, and power. Force exerted on an object over a distance does work. Work can increase energy, and energy can do work. Power is the rate at which work is done.</p>
+<div class="worked-example ui-has-child-title" data-type="note" id="fs-id1167065701059"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Worked Example</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Applying the Work–Energy Theorem</span>
+</h4>
+<div class="09-ex003 unnumbered" data-label="" data-type="exercise" id="fs-id1167065855829"><header></header><section>
+<div data-type="problem" id="fs-id1167064941379"><div class="os-problem-container">
+<p id="fs-id1167065810530">An ice skater with a mass of 50 kg is gliding across the ice at a speed of 8 m/s when her friend comes up from behind and gives her a push, causing her speed to increase to 12 m/s. How much work did the friend do on the skater?</p>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167065827241"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Strategy</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167065700896">The work–energy theorem can be applied to the problem. Write the equation for the theorem and simplify it if possible.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1167065985099">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>=</mo><mtext>Δ</mtext><mtext>KE = </mtext><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+<mn>2</mn>
+</msubsup>
+<mo>−</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>=</mo><mtext>Δ</mtext><mtext>KE = </mtext><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+<mn>2</mn>
+</msubsup>
+<mo>−</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+</mrow></annotation-xml></semantics></math></div> </div>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1167064929630">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtext>Simplify to </mtext><mi>W</mi><mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><mo stretchy="false">(</mo><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+<mn>2</mn>
+</msubsup>
+<mo>−</mo><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+<mo stretchy="false">)</mo></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Simplify to </mtext><mi>W</mi><mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><mo stretchy="false">(</mo><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+<mn>2</mn>
+</msubsup>
+<mo>−</mo><msubsup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+<mo stretchy="false">)</mo></mrow></annotation-xml></semantics></math></div>
+</div>
+</div></section></div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-label="" data-type="solution" id="fs-id1167065771950">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><div class="os-solution-container"><div data-type="title">Solution</div>
+<p id="fs-id1167065824268">Identify the variables.
+<em data-effect="italics">m</em> = 50 kg,</p>
+<div data-type="equation" id="fs-id1164561211328"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+</msub>
+<mo>=</mo><mn>12</mn><mfrac>
+<mtext>m</mtext>
+<mtext>s</mtext>
+</mfrac>
+<mtext>, and</mtext><mspace width="0.25em"></mspace>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>1</mn>
+</msub>
+<mo>=</mo><mn>8</mn><mfrac>
+<mtext>m</mtext>
+<mtext>s</mtext>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+</msub>
+<mo>=</mo><mn>12</mn><mfrac>
+<mtext>m</mtext>
+<mtext>s</mtext>
+</mfrac>
+<mtext>, and</mtext><mspace width="0.25em"></mspace>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>1</mn>
+</msub>
+<mo>=</mo><mn>8</mn><mfrac>
+<mtext>m</mtext>
+<mtext>s</mtext>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">9.1</span>
+</div>
+</div><p id="fs-id1167065894110">Substitute. </p><div data-type="equation" id="fs-id1164566568225"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mn>50</mn><mo stretchy="false">(</mo><msup>
+<mrow>
+<mn>12</mn></mrow>
+<mn>2</mn>
+</msup>
+<mo>−</mo><msup>
+<mn>8</mn>
+<mn>2</mn>
+</msup>
+<mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mo>,</mo><mn>000</mn><mspace width="0.3em"></mspace><mtext> J</mtext></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mn>50</mn><mo stretchy="false">(</mo><msup>
+<mrow>
+<mn>12</mn></mrow>
+<mn>2</mn>
+</msup>
+<mo>−</mo><msup>
+<mn>8</mn>
+<mn>2</mn>
+</msup>
+<mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mo>,</mo><mn>000</mn><mspace width="0.3em"></mspace><mtext> J</mtext></mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">9.2</span>
+</div>
+</div>
+</div></section>
+</details>
+<div data-type="commentary" id="fs-id1167066139460"><div data-type="title">Discussion</div>
+<p id="fs-id1167065747608">Work done on an object or system increases its energy. In this case, the increase is to the skater’s kinetic energy. It follows that the increase in energy must be the difference in KE before and after the push.</p>
+</div>
+</section></div>
+<div class="tips-for-success ui-has-child-title" data-type="note" id="fs-id1167065770877"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Tips For Success</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167065978374">This problem illustrates a general technique for approaching problems that require you to apply formulas: Identify the unknown and the known variables, express the unknown variables in terms of the known variables, and then enter all the known values.</p>
+</div></section></div>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167065729949"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4><p id="fs-id1167065734105">Identify the three variables and choose the relevant equation. Distinguish between initial and final velocity and pay attention to the minus sign.</p>
+<p id="fs-id1167065796295">Identify the variables. <em data-effect="italics">m</em> = 50 kg,</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1164565050072"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+</msub>
+<mo>=</mo><mn>12</mn><mfrac>
+<mtext>m</mtext>
+<mtext>s</mtext>
+</mfrac>
+<mtext>, and</mtext><mspace width="0.25em"></mspace>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>1</mn>
+</msub>
+<mo>=</mo><mn>8</mn><mfrac>
+<mtext>m</mtext>
+<mtext>s</mtext>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+</msub>
+<mo>=</mo><mn>12</mn><mfrac>
+<mtext>m</mtext>
+<mtext>s</mtext>
+</mfrac>
+<mtext>, and</mtext><mspace width="0.25em"></mspace>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>1</mn>
+</msub>
+<mo>=</mo><mn>8</mn><mfrac>
+<mtext>m</mtext>
+<mtext>s</mtext>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div> </div><p id="fs-id1167065066626">Substitute.
+</p><div class="unnumbered" data-label="" data-type="equation" id="fs-id1164566690904">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mn>50</mn><mo stretchy="false">(</mo><msup>
+<mrow>
+<mn>12</mn></mrow>
+<mn>2</mn>
+</msup>
+<mo>−</mo><msup>
+<mn>8</mn>
+<mn>2</mn>
+</msup>
+<mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mo>,</mo><mn>000</mn><mspace width="0.3em"></mspace><mtext> J</mtext></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mn>50</mn><mo stretchy="false">(</mo><msup>
+<mrow>
+<mn>12</mn></mrow>
+<mn>2</mn>
+</msup>
+<mo>−</mo><msup>
+<mn>8</mn>
+<mn>2</mn>
+</msup>
+<mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mo>,</mo><mn>000</mn><mspace width="0.3em"></mspace><mtext> J</mtext></mrow></annotation-xml></semantics></math></div> </div>
+</div></section></div></div></section></div></section>
+<section class="practice-problems" data-depth="1" id="fs-id1167065764151"><h3 data-type="title">Practice Problems</h3><!--
+###################################WARNING###################################
+Fell back to HTML parsing for the following content
+###################################WARNING###################################
+--><div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch09-ex004" data-injected-from-version="9" data-is-vocab="false" data-tags="science-practice:mathematical-routines os-practice-problems k12phys-ch09 k12phys-ch09-s01 k12phys-ch09-s01-lo02 k12phys-ch09-ex004 lo:stax-phys:7-1-1 exid:k12phys-ch09-ex004 context-cnxmod:57fca8d4-daf0-4f43-a9a4-ac831005a64c context-cnxmod:beab5b21-3260-46fa-9c85-684a9f73184c context-cnxmod:b41a6a7a-5fa2-4400-b07e-a507e0529003 aplo:stax-apphys:3.E.1.3 aplo:stax-apphys:3.E.1.4 aplo:stax-apphys:5.B.5.5 dok:1 k12phys book:stax-phys book:stax-k12phys book:stax-apphys time:short blooms:3 assignment-type:homework filter-type:import:hs inbook-yes all type:practice book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:7-1-work-the-scientific-definition" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="537209"><span class="os-number">1</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stimulus">
+<div class="os-figure">
+<figure>
+<img alt="" data-original-src="/apps/archive/20260604.144757/resources/068153cbf590bdd262d84a03ac7d36129712510b" height="636" loading="lazy" src="9f1d844da4dd03129e0a71ac.webp" width="650"/>
+(credit: modification of work by Pass My Exams, CC BY-SA 4.0)
+</figure>
+</div>
+</div>
+<div data-type="question-stem">A weightlifter lifts a 200 N barbell from the floor to a height of 2 m. How much work is done?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="0\,\text{J}">
+<mn>0</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>J</mtext>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="100\,\text{J}">
+<mn>100</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>J</mtext>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="200\,\text{J}">
+<mn>200</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>J</mtext>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="400\,\text{J}">
+<mn>400</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>J</mtext>
+</math></div>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch09-ex005" data-injected-from-version="9" data-is-vocab="false" data-tags="k12phys-ch09-ex005 exid:k12phys-ch09-ex005 os-practice-problems k12phys-ch09 k12phys-ch09-s01 k12phys-ch09-s01-lo02 context-cnxmod:57fca8d4-daf0-4f43-a9a4-ac831005a64c aplo:stax-apphys:5.B.5.5 lo:stax-phys:7-7-1 context-cnxmod:5b71df6d-3437-4840-b78f-c0258a503ab9 context-cnxmod:57712284-c5a2-494a-9f67-ffba466f5d13 dok:2 k12phys book:stax-phys book:stax-k12phys blooms:3 assignment-type:homework filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:7-7-power time:medium" data-type="injected-exercise">
+<div data-formats="multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="537211"><span class="os-number">2</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem"><p>Identify which of the following actions generates more power. Show your work.</p>
+<ul>
+<li>carrying a <math alttext="100\,\text{N}">
+<mn>100</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> TV to the second floor in <math alttext="50\,\text{s}">
+<mn>50</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>s</mtext>
+</math> or</li>
+<li>carrying a <math alttext="24\,\text{N}">
+<mn>24</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> watermelon to the second floor in <math alttext="10\,\text{s}">
+<mn>10</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>s</mtext>
+</math>?</li>
+</ul>
+</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Carrying a <math alttext="100\,\text{N}">
+<mn>100</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> TV generates more power than carrying a <math alttext="24\,\text{N}">
+<mn>24</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> watermelon to the same height because power is defined as work done times the time interval.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Carrying a <math alttext="100\,\text{N}">
+<mn>100</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> TV generates more power than carrying a <math alttext="24\,\text{N}">
+<mn>24</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> watermelon to the same height because power is defined as the ratio of work done to the time interval.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Carrying a <math alttext="24\,\text{N}">
+<mn>24</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> watermelon generates more power than carrying a <math alttext="100\,\text{N}">
+<mn>100</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> TV to the same height because power is defined as work done times the time interval.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Carrying a <math alttext="24\,\text{N}">
+<mn>24</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> watermelon generates more power than carrying a <math alttext="100\,\text{N}">
+<mn>100</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> TV to the same height because power is defined as the ratio of work done and the time interval.</div>
+</li>
+</ol>
+</div>
+</div>
+</div></section><section class="check-understanding" data-depth="1" id="fs-id1167066091225"><h3 data-type="title">Check Your Understanding</h3>
+<div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch09-ex006" data-injected-from-version="10" data-is-vocab="false" data-tags="os-practice-concepts k12phys-ch09-s01-lo01 k12phys-ch09-ex006 exid:k12phys-ch09-ex006 type:conceptual-or-recall science-practice:making-connections k12phys-ch09 k12phys-ch09-s01 context-cnxmod:57fca8d4-daf0-4f43-a9a4-ac831005a64c aplo:stax-apphys:3.E.1.3 dok:1 lo:stax-phys:7-2-2 context-cnxmod:9a772436-b150-40c2-8316-8a4ade7a17d8 context-cnxmod:5035aeb8-8f6d-46e7-9552-55d5ea593368 aplo:stax-apphys:3.E.1.1 aplo:stax-apphys:3.E.1.2 k12phys book:stax-phys book:stax-k12phys book:stax-apphys time:short filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:7-2-kinetic-energy-and-the-work-energy-theorem assignment-type:reading blooms:1" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="537213"><span class="os-number">3</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">Identify two properties that are expressed in units of joules.</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">work and force</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">energy and weight</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">work and energy</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">weight and force</div>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="os-exercise" data-type="exercise" id="fs-id1167064896303"><header></header><section>
+<div data-type="problem" id="fs-id1167065733280">
+<span class="os-number">4</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1164562354779">When a coconut falls from a tree, work <em data-effect="italics">W</em> is done on it as it falls to the beach. This work is described by the equation</p>
+<div data-type="equation" id="fs-id1164564337583"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>=</mo><mtext> </mtext><mi>F</mi><mi>d</mi><mtext> = </mtext><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mi>v</mi>
+<mn>2</mn>
+<mn>2</mn>
+</msubsup>
+<mo>−</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mi>v</mi>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>=</mo><mtext> </mtext><mi>F</mi><mi>d</mi><mtext> = </mtext><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mi>v</mi>
+<mn>2</mn>
+<mn>2</mn>
+</msubsup>
+<mo>−</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mi>m</mi><msubsup>
+<mi>v</mi>
+<mn>1</mn>
+<mn>2</mn>
+</msubsup>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">9.3</span>
+</div>
+</div>
+<p id="fs-id1164567229472">Identify the quantities <em data-effect="italics">F</em>, <em data-effect="italics">d</em>, <em data-effect="italics">m</em>, <em data-effect="italics">v</em><sub>1</sub>, and <em data-effect="italics">v</em><sub>2</sub> in this event.</p>
+<ol id="fs-id1164562234692" type="a">
+<li><em data-effect="italics">F</em> is the force of gravity, which is equal to the weight of the coconut, <em data-effect="italics">d</em> is the distance the nut falls, <em data-effect="italics">m</em> is the mass of the earth, <em data-effect="italics">v</em><sub>1</sub> is the initial velocity, and <em data-effect="italics">v</em><sub>2</sub> is the velocity with which it hits the beach.</li>
+<li><em data-effect="italics">F</em> is the force of gravity, which is equal to the weight of the coconut, <em data-effect="italics">d</em> is the distance the nut falls, <em data-effect="italics">m</em> is the mass of the coconut, <em data-effect="italics">v</em><sub>1</sub> is the initial velocity, and <em data-effect="italics">v</em><sub>2</sub> is the velocity with which it hits the beach.</li>
+<li><em data-effect="italics">F</em> is the force of gravity, which is equal to the weight of the coconut, <em data-effect="italics">d</em> is the distance the nut falls, <em data-effect="italics">m</em> is the mass of the earth, <em data-effect="italics">v</em><sub>1</sub> is the velocity with which it hits the beach, and <em data-effect="italics">v</em><sub>2</sub> is the initial velocity.</li>
+<li><em data-effect="italics">F</em> is the force of gravity, which is equal to the weight of the coconut, <em data-effect="italics">d</em> is the distance the nut falls, <em data-effect="italics">m</em> is the mass of the coconut, <em data-effect="italics">v</em><sub>1</sub> is the velocity with which it hits the beach, and <em data-effect="italics">v</em><sub>2</sub> is the initial velocity.</li></ol>
+<!--<para id="fs-id1167065734278"><link class="os-embed" url="#ost/api/ex/k12phys-ch09-ex007"/></para>-->
+</div>
+</div>
+</section></div>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167064775122"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167065788986">Use Check Your Understanding questions to assess students’ achievement of the section’s learning objectives. If students are struggling with a specific objective, the Check Your Understanding will help identify which one and direct students to the relevant content.</p></div></section></div>
+</section>
+</div></article><footer><p>Adapted from OpenStax, Physics, 9.1 Work, Power, and the Work–Energy Theorem. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/physics/pages/9-1-work-power-and-the-work-energy-theorem">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a></p></footer></body></html>

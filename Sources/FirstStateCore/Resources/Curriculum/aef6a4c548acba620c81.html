@@ -1,0 +1,3708 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_147ddf25-f9d0-479f-be13-eab353ffee90"><h2 data-rex-keep="true" data-type="document-title" id="page_147ddf25-f9d0-479f-be13-eab353ffee90_titlecreatedbycookbook"><span class="os-number">3.5</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Derivatives of Trigonometric Functions</span>
+</h2><div class="ui-has-child-title" data-type="abstract"><header><h3 data-type="title">Learning Objectives</h3></header><section><ul class="os-abstract" id="list-00001">
+<li><span class="os-abstract-token">3.5.1</span>
+<span class="os-abstract-content">Find the derivatives of the sine and cosine function.</span>
+</li>
+<li><span class="os-abstract-token">3.5.2</span>
+<span class="os-abstract-content">Find the derivatives of the standard trigonometric functions.</span>
+</li>
+<li><span class="os-abstract-token">3.5.3</span>
+<span class="os-abstract-content">Calculate the higher-order derivatives of the sine and cosine.</span>
+</li>
+</ul></section></div>
+<p id="fs-id1169739301891">One of the most important types of motion in physics is simple harmonic motion, which is associated with such systems as an object with mass oscillating on a spring. Simple harmonic motion can be described by using either sine or cosine functions. In this section we expand our knowledge of derivative formulas to include derivatives of these and other trigonometric functions. We begin with the derivatives of the sine and cosine functions and then use them to obtain formulas for the derivatives of the remaining four trigonometric functions. Being able to calculate the derivatives of the sine and cosine functions will enable us to find the velocity and acceleration of simple harmonic motion.</p>
+<section data-depth="1" id="fs-id1169739300487"><h3 data-type="title">Derivatives of the Sine and Cosine Functions</h3>
+<p id="fs-id1169739274430">We begin our exploration of the derivative for the sine function by using the formula to make a reasonable guess at its derivative. Recall that for a function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>,</mo></mrow></annotation-xml></semantics></math></span></p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739055116"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo>)</mo></mrow><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>h</mi></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo>)</mo></mrow><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>h</mi></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></div></div>
+<p id="fs-id1169738837360">Consequently, for values of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>h</mi></mrow><annotation-xml encoding="MathML-Content"><mi>h</mi></annotation-xml></semantics></math></span> very close to 0, <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>≈</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo>)</mo></mrow><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>h</mi></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>≈</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo>)</mo></mrow><mo>−</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mi>h</mi></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></span> We see that by using <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>h</mi><mo>=</mo><mn>0.01</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>h</mi><mo>=</mo><mn>0.01</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span></p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169738997799"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy="false">(</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo stretchy="false">)</mo><mo>≈</mo><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>0.01</mn></mrow><mo>)</mo></mrow><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mrow><mn>0.01</mn></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy="false">(</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo stretchy="false">)</mo><mo>≈</mo><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>0.01</mn></mrow><mo>)</mo></mrow><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mrow><mn>0.01</mn></mrow></mfrac></mrow></annotation-xml></semantics></math></div></div>
+<p id="fs-id1169739223032">By setting <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>D</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>0.01</mn></mrow><mo>)</mo></mrow><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mrow><mn>0.01</mn></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>D</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mn>0.01</mn></mrow><mo>)</mo></mrow><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mrow><mn>0.01</mn></mrow></mfrac></mrow></annotation-xml></semantics></math></span> and using a graphing utility, we can get a graph of an approximation to the derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> (<a aria-label="View Figure 3.25" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/3-5-derivatives-of-trigonometric-functions#CNX_Calc_Figure_03_05_001">Figure 3.25</a>).</p>
+<div class="os-figure" id="CNX_Calc_Figure_03_05_001"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_03_05_001">
+<span data-alt="The function D(x) = (sin(x + 0.01) − sin x)/0.01 is graphed. It looks a lot like a cosine curve." data-type="media" id="fs-id1169739183166">
+<img alt="The function D(x) = (sin(x + 0.01) − sin x)/0.01 is graphed. It looks a lot like a cosine curve." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/85419958a0e3fbe2b21cc6afaabbfb290c80b3a6" height="392" loading="lazy" src="0cdc982251da39e2a976bf4d.webp" width="431"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">3.25</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The graph of the function <math display="inline"><semantics><mrow><mrow><mi>D</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>D</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math> looks a lot like a cosine curve.</span>
+</figcaption></figure></div>
+<p id="fs-id1169739302416">Upon inspection, the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>D</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>D</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></annotation-xml></semantics></math></span> appears to be very close to the graph of the cosine function. Indeed, we will show that</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739009210"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></div></div>
+<p id="fs-id1169738975910">If we were to follow the same steps to approximate the derivative of the cosine function, we would find that</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169738962070"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy="false">(</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>−</mtext><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x.</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy="false">(</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>−</mtext><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x.</mi></mrow></annotation-xml></semantics></math></div></div><div class="theorem ui-has-child-title" data-type="note" id="fs-id1169739098813" use-subtitle="true"><header><h3 class="os-title">
+<span class="os-title-label">Theorem</span>
+<span class="os-number">3.8</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">The Derivatives of sin <em data-effect="italics">x</em> and cos <em data-effect="italics">x</em></span>
+</h4>
+<p id="fs-id1169738998734">The derivative of the sine function is the cosine and the derivative of the cosine function is the negative sine.</p>
+<div data-type="equation" id="fs-id1169738884040"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(3.11)</span>
+</div>
+</div>
+<div data-type="equation" id="fs-id1169739096692"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>−</mtext><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>−</mtext><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(3.12)</span>
+</div>
+</div>
+</div></section></div>
+<section data-depth="2" id="fs-id1169738980720"><h4 data-type="title">Proof</h4>
+<p id="fs-id1169738916826">Because the proofs for <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>−</mtext><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>−</mtext><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> use similar techniques, we provide only the proof for <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> Before beginning, recall two important trigonometric limits we learned in <a aria-label="Go to Introduction to Limits" data-page-fragment="" data-page-slug="2-introduction" data-page-uuid="7ebb4d1b-98e5-4f5f-a950-b097168c8130" href="https://openstax.org/books/calculus-volume-1/pages/2-introduction">Introduction to Limits</a>:</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169738960853"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi></mrow><mi>h</mi></mfrac><mo>=</mo><mn>1</mn><mspace width="0.2em"></mspace><mtext>and</mtext><mspace width="0.2em"></mspace><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mn>1</mn></mrow><mi>h</mi></mfrac><mo>=</mo><mn>0</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi></mrow><mi>h</mi></mfrac><mo>=</mo><mn>1</mn><mspace width="0.2em"></mspace><mtext>and</mtext><mspace width="0.2em"></mspace><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mn>1</mn></mrow><mi>h</mi></mfrac><mo>=</mo><mn>0</mn><mo>.</mo></mrow></annotation-xml></semantics></math></div></div><p id="fs-id1169739273494">The graphs of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi></mrow><mo>)</mo></mrow></mrow><mi>h</mi></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi></mrow><mo>)</mo></mrow></mrow><mi>h</mi></mfrac></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mrow><mo>(</mo><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>h</mi></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mrow><mo>(</mo><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow><mi>h</mi></mfrac></mrow></annotation-xml></semantics></math></span> are shown in <a aria-label="View Figure 3.26" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/3-5-derivatives-of-trigonometric-functions#CNX_Calc_Figure_03_05_002">Figure 3.26</a>.</p>
+<div class="os-figure" id="CNX_Calc_Figure_03_05_002"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_03_05_002">
+<span data-alt="The function y = (sin h)/h and y = (cos h – 1)/h are graphed. They both have discontinuities on the y-axis." data-type="media" id="fs-id1169738972458">
+<img alt="The function y = (sin h)/h and y = (cos h – 1)/h are graphed. They both have discontinuities on the y-axis." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/487e80e20eed99b56e17538d1c1cd45b796f43a5" height="386" loading="lazy" src="bb7f147011e886ede0ed5734.webp" width="800"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">3.26</span>
+<span class="os-divider"> </span>
+<span class="os-caption">These graphs show two important limits needed to establish the derivative formulas for the sine and cosine functions.</span>
+</figcaption></figure></div>
+<p id="fs-id1169738970614">We also recall the following trigonometric identity for the sine of the sum of two angles:</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739027491"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>+</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>+</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>.</mo></mrow></annotation-xml></semantics></math></div></div>
+<p id="fs-id1169739036876">Now that we have gathered all the necessary equations and identities, we proceed with the proof.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169738881072"><div class="math-scroll"><math display="block"><semantics><mrow><mtable><mtr><mtd columnalign="right"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mtd><mtd columnalign="left"><mo>=</mo><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo>)</mo></mrow><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mi>h</mi></mfrac></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Apply the definition</mtext><mspace width="0.2em"></mspace><mtext>of the derivative.</mtext></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>+</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mi>h</mi></mfrac></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Use trig identity for the sine of the sum of two angles.</mtext></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mrow><mo>(</mo><mrow><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mi>h</mi></mfrac><mo>+</mo><mfrac><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi></mrow><mi>h</mi></mfrac></mrow><mo>)</mo></mrow></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Regroup.</mtext></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mrow><mo>(</mo><mrow><mfrac><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mn>1</mn></mrow><mi>h</mi></mfrac></mrow><mo>)</mo></mrow><mo>+</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mrow><mo>(</mo><mrow><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi></mrow><mi>h</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Factor out</mtext><mspace width="0.2em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.2em"></mspace><mtext>and</mtext><mspace width="0.2em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mtd></mtr>
+<mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mrow><mo>·</mo><mn>0</mn></mrow><mo>+</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mrow><mo>·</mo><mn>1</mn></mrow></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Apply trig limit formulas.</mtext></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Simplify.</mtext></mtd></mtr></mtable></mrow><annotation-xml encoding="MathML-Content"><mtable><mtr><mtd columnalign="right"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mtd><mtd columnalign="left"><mo>=</mo><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo>)</mo></mrow><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mi>h</mi></mfrac></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Apply the definition</mtext><mspace width="0.2em"></mspace><mtext>of the derivative.</mtext></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>+</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mi>h</mi></mfrac></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Use trig identity for the sine of the sum of two angles.</mtext></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mrow><mo>(</mo><mrow><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mi>h</mi></mfrac><mo>+</mo><mfrac><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi></mrow><mi>h</mi></mfrac></mrow><mo>)</mo></mrow></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Regroup.</mtext></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>h</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mrow><mo>(</mo><mrow><mfrac><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mn>1</mn></mrow><mi>h</mi></mfrac></mrow><mo>)</mo></mrow><mo>+</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mrow><mo>(</mo><mrow><mfrac><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi></mrow><mi>h</mi></mfrac></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Factor out</mtext><mspace width="0.2em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.2em"></mspace><mtext>and</mtext><mspace width="0.2em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mtd></mtr>
+<mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mrow><mo>·</mo><mn>0</mn></mrow><mo>+</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mrow><mo>·</mo><mn>1</mn></mrow></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Apply trig limit formulas.</mtext></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mtd><mtd></mtd><mtd></mtd><mtd columnalign="left"><mtext>Simplify.</mtext></mtd></mtr></mtable></annotation-xml></semantics></math></div></div><p id="fs-id1169739009931">□</p>
+<p id="fs-id1169739186572"><a aria-label="View Figure 3.27" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/3-5-derivatives-of-trigonometric-functions#CNX_Calc_Figure_03_05_003">Figure 3.27</a> shows the relationship between the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> and its derivative <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> Notice that at the points where <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> has a horizontal tangent, its derivative <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> takes on the value zero. We also see that where <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> is increasing, <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></annotation-xml></semantics></math></span> and where <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> is decreasing, <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>&lt;</mo><mn>0</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>&lt;</mo><mn>0</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div class="os-figure" id="CNX_Calc_Figure_03_05_003"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_03_05_003">
+<span data-alt="The functions f(x) = sin x and f’(x) = cos x are graphed. It is apparent that when f(x) has a maximum or a minimum that f’(x) = 0." data-type="media" id="fs-id1169738895003">
+<img alt="The functions f(x) = sin x and f’(x) = cos x are graphed. It is apparent that when f(x) has a maximum or a minimum that f’(x) = 0." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/f02b78e1c6bb1a873835a884fb1e173caf53b418" height="358" loading="lazy" src="1d5c9da268531109a17276ce.webp" width="487"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">3.27</span>
+<span class="os-divider"> </span>
+<span class="os-caption">Where <math display="inline"><semantics><mrow><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></annotation-xml></semantics></math> has a maximum or a minimum, <math display="inline"><semantics><mrow><mrow><mi>f</mi><mo>′</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mo>′</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></annotation-xml></semantics></math> that is, <math display="inline"><semantics><mrow><mrow><mi>f</mi><mo>′</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mo>′</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn></mrow></annotation-xml></semantics></math> where <math display="inline"><semantics><mrow><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></annotation-xml></semantics></math> has a horizontal tangent. These points are noted with dots on the graphs.</span>
+</figcaption></figure></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1169738999233"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.39</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1169738907624"><header></header><section>
+<div data-type="problem" id="fs-id1169739015112"><div class="os-problem-container"><h4 data-type="title">Differentiating a Function Containing sin <em data-effect="italics">x</em></h4>
+<p id="fs-id1169739269454">Find the derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>5</mn><msup><mi>x</mi><mn>3</mn></msup><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>5</mn><msup><mi>x</mi><mn>3</mn></msup><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1169739028319">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1169738858013">Using the product rule, we have</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739001004">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mi>f</mi>
+<mo>′</mo>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>5</mn>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>·</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>·</mo>
+<mn>5</mn>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mn>15</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>·</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>·</mo>
+<mn>5</mn>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mi>f</mi>
+<mo>′</mo>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>5</mn>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>·</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>·</mo>
+<mn>5</mn>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mn>15</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>·</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>·</mo>
+<mn>5</mn>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169739036358">After simplifying, we obtain</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739269866">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mn>15</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mn>5</mn>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mn>15</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mn>5</mn>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1169739304325"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">3.25</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1169739327353"><header></header><section>
+<div data-type="problem" id="fs-id1169739009945"><div class="os-problem-container">
+<p id="fs-id1169736660715">Find the derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1169738889578"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.40</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1169736615213"><header></header><section>
+<div data-type="problem" id="fs-id1169738994002"><div class="os-problem-container"><h4 data-type="title">Finding the Derivative of a Function Containing cos <em data-effect="italics">x</em></h4>
+<p id="fs-id1169739229519">Find the derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mrow><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mrow><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1169738924120">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1169738969705">By applying the quotient rule, we have</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169738960497">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<msup>
+<mi>g</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo>
+<mtext>−</mtext>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mn>4</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>8</mn>
+<mi>x</mi>
+<mo stretchy="false">(</mo>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<msup>
+<mrow>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>4</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msup>
+<mi>g</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo>
+<mtext>−</mtext>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mn>4</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>8</mn>
+<mi>x</mi>
+<mo stretchy="false">(</mo>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<msup>
+<mrow>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>4</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169738949562">Simplifying, we obtain</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739179211">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<msup>
+<mi>g</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>−4</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>−</mo>
+<mn>8</mn>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>16</mn>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+</mrow>
+</mfrac>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mtext>−</mtext>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>−</mo>
+<mn>2</mn>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>4</mn>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<msup>
+<mi>g</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>−4</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>−</mo>
+<mn>8</mn>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>16</mn>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+</mrow>
+</mfrac>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mtext>−</mtext>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>−</mo>
+<mn>2</mn>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>4</mn>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1169736615168"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">3.26</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1169738971411"><header></header><section>
+<div data-type="problem" id="fs-id1169738971413"><div class="os-problem-container">
+<p id="fs-id1169738971415">Find the derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mi>x</mi><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mi>x</mi><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1169739220928"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.41</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1169739220930"><header></header><section>
+<div data-type="problem" id="fs-id1169739220933"><div class="os-problem-container"><h4 data-type="title">An Application to Velocity</h4>
+<p id="fs-id1169739298225">A particle moves along a coordinate axis in such a way that its position at time <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>t</mi></mrow><annotation-xml encoding="MathML-Content"><mi>t</mi></annotation-xml></semantics></math></span> is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>t</mi><mo>−</mo><mi>t</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>t</mi><mo>−</mo><mi>t</mi></mrow></annotation-xml></semantics></math></span> for <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>2</mn><mi>π</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>2</mn><mi>π</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> At what times is the particle at rest?</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1169739105199">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1169739105201">To determine when the particle is at rest, set <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mi>s</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mi>v</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mi>s</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mi>v</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>0</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span> Begin by finding <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mi>s</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mi>s</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span> We obtain</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739000177">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<msup>
+<mi>s</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mn>2</mn>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>t</mi>
+<mo>−</mo>
+<mn>1</mn>
+<mo>,</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msup>
+<mi>s</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mn>2</mn>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>t</mi>
+<mo>−</mo>
+<mn>1</mn>
+<mo>,</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169738962954">so we must solve</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739188455">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mn>2</mn>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>t</mi>
+<mo>−</mo>
+<mn>1</mn>
+<mo>=</mo>
+<mn>0</mn>
+<mspace width="0.2em"></mspace>
+<mtext>for</mtext>
+<mspace width="0.2em"></mspace>
+<mn>0</mn>
+<mo>≤</mo>
+<mi>t</mi>
+<mo>≤</mo>
+<mn>2</mn>
+<mi>π</mi>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mn>2</mn>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>t</mi>
+<mo>−</mo>
+<mn>1</mn>
+<mo>=</mo>
+<mn>0</mn>
+<mspace width="0.2em"></mspace>
+<mtext>for</mtext>
+<mspace width="0.2em"></mspace>
+<mn>0</mn>
+<mo>≤</mo>
+<mi>t</mi>
+<mo>≤</mo>
+<mn>2</mn>
+<mi>π</mi>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169739300388">The solutions to this equation are <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mfrac><mi>π</mi><mn>3</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mfrac><mi>π</mi><mn>3</mn></mfrac></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mn>5</mn><mi>π</mi></mrow><mn>3</mn></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mn>5</mn><mi>π</mi></mrow><mn>3</mn></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></span> Thus the particle is at rest at times <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mfrac><mi>π</mi><mn>3</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mfrac><mi>π</mi><mn>3</mn></mfrac></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mn>5</mn><mi>π</mi></mrow><mn>3</mn></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mfrac><mrow><mn>5</mn><mi>π</mi></mrow><mn>3</mn></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1169739327874"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">3.27</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1169739327877"><header></header><section>
+<div data-type="problem" id="fs-id1169738824891"><div class="os-problem-container">
+<p id="fs-id1169738824893">A particle moves along a coordinate axis. Its position at time <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>t</mi></mrow><annotation-xml encoding="MathML-Content"><mi>t</mi></annotation-xml></semantics></math></span> is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msqrt><mn>3</mn></msqrt><mi>t</mi><mo>+</mo><mn>2</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>t</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msqrt><mn>3</mn></msqrt><mi>t</mi><mo>+</mo><mn>2</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>t</mi></mrow></annotation-xml></semantics></math></span> for <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>2</mn><mi>π</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>2</mn><mi>π</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> At what times is the particle at rest?</p>
+</div></div>
+</section></div>
+</div></section></div>
+</section>
+</section>
+<section data-depth="1" id="fs-id1169736662797"><h3 data-type="title">Derivatives of Other Trigonometric Functions</h3>
+<p id="fs-id1169739301871">Since the remaining four trigonometric functions may be expressed as quotients involving sine, cosine, or both, we can use the quotient rule to find formulas for their derivatives.</p>
+<div class="ui-has-child-title" data-type="example" id="fs-id1169736589199"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.42</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1169736589201"><header></header><section>
+<div data-type="problem" id="fs-id1169736589203"><div class="os-problem-container"><h4 data-type="title">The Derivative of the Tangent Function</h4>
+<p id="fs-id1169739303221">Find the derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1169739242782">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1169739242784">Start by expressing <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> as the quotient of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>:</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>:</mo></mrow></annotation-xml></semantics></math></span></p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169736655821">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mi>f</mi>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>f</mi>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169736615154">Now apply the quotient rule to obtain</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169736615157">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>−</mo>
+<mo stretchy="false">(</mo>
+<mtext>−</mtext>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msup>
+<mrow>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>−</mo>
+<mo stretchy="false">(</mo>
+<mtext>−</mtext>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msup>
+<mrow>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169739111151">Simplifying, we obtain</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739111154">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+<mo>+</mo>
+<msup>
+<mrow>
+<mspace width="0.2em"></mspace>
+<mtext>sin</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+<mo>+</mo>
+<msup>
+<mrow>
+<mspace width="0.2em"></mspace>
+<mtext>sin</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169736657080">Recognizing that <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mrow><mtext>cos</mtext></mrow><mn>2</mn></msup><mi>x</mi><mo>+</mo><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>x</mi><mo>=</mo><mn>1</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mrow><mtext>cos</mtext></mrow><mn>2</mn></msup><mi>x</mi><mo>+</mo><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>x</mi><mo>=</mo><mn>1</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span> by the Pythagorean theorem, we now have</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739190112">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169739225322">Finally, use the identity <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mfrac></mrow></annotation-xml></semantics></math></span> to obtain</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169736656627">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1169739273062"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">3.28</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1169739273066"><header></header><section>
+<div data-type="problem" id="fs-id1169739273068"><div class="os-problem-container">
+<p id="fs-id1169739273070">Find the derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<p id="fs-id1169739325693">The derivatives of the remaining trigonometric functions may be obtained by using similar techniques. We provide these formulas in the following theorem.</p>
+<div class="theorem ui-has-child-title" data-type="note" id="fs-id1169739325698" use-subtitle="true"><header><h3 class="os-title">
+<span class="os-title-label">Theorem</span>
+<span class="os-number">3.9</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Derivatives of <math display="inline"><semantics><mrow><mrow><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo></mrow></annotation-xml></semantics></math> and <math display="inline"><semantics><mrow><mrow><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span>
+</h4>
+<p id="fs-id1169739299818">The derivatives of the remaining trigonometric functions are as follows:</p>
+<div data-type="equation" id="fs-id1169739299822"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><msup><mrow><mtext>sec</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><msup><mrow><mtext>sec</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(3.13)</span>
+</div>
+</div>
+<div data-type="equation" id="fs-id1169739301143"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mspace width="0.72em"></mspace><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy="false">(</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>−</mtext><msup><mrow><mtext>csc</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mspace width="0.72em"></mspace><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy="false">(</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>−</mtext><msup><mrow><mtext>csc</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(3.14)</span>
+</div>
+</div>
+<div data-type="equation" id="fs-id1169739301181"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mspace width="1.4em"></mspace><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy="false">(</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mspace width="1.4em"></mspace><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy="false">(</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(3.15)</span>
+</div>
+</div>
+<div data-type="equation" id="fs-id1169736658480"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mspace width="2.2em"></mspace><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy="false">(</mo><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>−</mtext><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x.</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mspace width="2.2em"></mspace><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy="false">(</mo><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>−</mtext><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x.</mi></mrow></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(3.16)</span>
+</div>
+</div></div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1169739111296"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.43</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1169739111298"><header></header><section>
+<div data-type="problem" id="fs-id1169739111300"><div class="os-problem-container"><h4 data-type="title">Finding the Equation of a Tangent Line</h4>
+<p id="fs-id1169739111306">Find the equation of a line tangent to the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>x</mi><mo>=</mo><mfrac><mtext>π</mtext><mn>4</mn></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi><mo>=</mo><mfrac><mtext>π</mtext><mn>4</mn></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1169736658872">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1169736658874">To find an equation of the tangent line, we need a point and a slope at that point. To find the point, compute</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169736658878">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mi>f</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>cot</mtext>
+<mspace width="0.2em"></mspace>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+<mo>=</mo>
+<mn>1</mn>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>f</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>cot</mtext>
+<mspace width="0.2em"></mspace>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+<mo>=</mo>
+<mn>1</mn>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169736656804">Thus the tangent line passes through the point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>4</mn></mfrac><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>4</mn></mfrac><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span> Next, find the slope by finding the derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> and evaluating it at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mi>π</mi><mn>4</mn></mfrac><mtext>:</mtext></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>π</mi><mn>4</mn></mfrac><mtext>:</mtext></mrow></annotation-xml></semantics></math></span></p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169736589231">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>−</mtext>
+<msup>
+<mrow>
+<mtext>csc</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+<mspace width="0.2em"></mspace>
+<mtext>and</mtext>
+<mspace width="0.2em"></mspace>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>−</mtext>
+<msup>
+<mrow>
+<mtext>csc</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mn>−2</mn>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>−</mtext>
+<msup>
+<mrow>
+<mtext>csc</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+<mspace width="0.2em"></mspace>
+<mtext>and</mtext>
+<mspace width="0.2em"></mspace>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>−</mtext>
+<msup>
+<mrow>
+<mtext>csc</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mn>−2</mn>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169739111215">Using the point-slope equation of the line, we obtain</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739111218">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>−</mo>
+<mn>1</mn>
+<mo>=</mo>
+<mn>−2</mn>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>x</mi>
+<mo>−</mo>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>−</mo>
+<mn>1</mn>
+<mo>=</mo>
+<mn>−2</mn>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>x</mi>
+<mo>−</mo>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169739336035">or equivalently,</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739336038">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mn>−2</mn>
+<mi>x</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mfrac>
+<mi>π</mi>
+<mn>2</mn>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mn>−2</mn>
+<mi>x</mi>
+<mo>+</mo>
+<mn>1</mn>
+<mo>+</mo>
+<mfrac>
+<mi>π</mi>
+<mn>2</mn>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1169736655845"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.44</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1169736655848"><header></header><section>
+<div data-type="problem" id="fs-id1169736655850"><div class="os-problem-container"><h4 data-type="title">Finding the Derivative of Trigonometric Functions</h4>
+<p id="fs-id1169736655855">Find the derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>+</mo><mi>x</mi><mspace width="0.1em"></mspace><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>+</mo><mi>x</mi><mspace width="0.1em"></mspace><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1169736655894">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1169736655897">To find this derivative, we must use both the sum rule and the product rule. Using the sum rule, we find</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169736610100">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169736610172">In the first term, <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>−</mtext><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>−</mtext><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo></mrow></annotation-xml></semantics></math></span> and by applying the product rule to the second term we obtain</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739182390">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mo stretchy="false">(</mo>
+<mn>1</mn>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>+</mo>
+<mo stretchy="false">(</mo>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo stretchy="false">(</mo>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169739265934">Therefore, we have</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739265938">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>−</mtext>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msup>
+<mi>f</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>x</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>−</mtext>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1169739188143"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">3.29</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1169739188146"><header></header><section>
+<div data-type="problem" id="fs-id1169739188148"><div class="os-problem-container">
+<p id="fs-id1169739188150">Find the derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mspace width="0.1em"></mspace><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>−</mo><mn>3</mn><mspace width="0.1em"></mspace><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mspace width="0.1em"></mspace><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>−</mo><mn>3</mn><mspace width="0.1em"></mspace><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1169736662626"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">3.30</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1169736662630"><header></header><section>
+<div data-type="problem" id="fs-id1169736662632"><div class="os-problem-container">
+<p id="fs-id1169736662634">Find the slope of the line tangent to the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>x</mi><mo>=</mo><mfrac><mi>π</mi><mn>6</mn></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi><mo>=</mo><mfrac><mi>π</mi><mn>6</mn></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+</section>
+<section data-depth="1" id="fs-id1169739303779"><h3 data-type="title">Higher-Order Derivatives</h3>
+<p id="fs-id1169739303785">The higher-order derivatives of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> follow a repeating pattern. By following the pattern, we can find any higher-order derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div class="ui-has-child-title" data-type="example" id="fs-id1169739303827"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.45</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1169739303829"><header></header><section>
+<div data-type="problem" id="fs-id1169739303832"><div class="os-problem-container"><h4 data-type="title">Finding Higher-Order Derivatives of <math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></h4>
+<p id="fs-id1169739303850">Find the first four derivatives of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1169739303869">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1169739303871">Each step in the chain is straightforward:</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739303874">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mi>y</mi>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>y</mi>
+</mrow>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mn>2</mn>
+</msup>
+<mi>y</mi>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mtext>−</mtext>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mn>3</mn>
+</msup>
+<mi>y</mi>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+</mrow>
+</mfrac>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mtext>−</mtext>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mn>4</mn>
+</msup>
+<mi>y</mi>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+</mrow>
+</mfrac>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mi>y</mi>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>y</mi>
+</mrow>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mn>2</mn>
+</msup>
+<mi>y</mi>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mtext>−</mtext>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mn>3</mn>
+</msup>
+<mi>y</mi>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+</mrow>
+</mfrac>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mtext>−</mtext>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mn>4</mn>
+</msup>
+<mi>y</mi>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+</mrow>
+</mfrac>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+<div data-type="commentary" id="fs-id1169739284979"><h4 data-type="commentary-title"><span class="os-title-label">Analysis</span></h4>
+<p id="fs-id1169739284984">Once we recognize the pattern of derivatives, we can find any higher-order derivative by determining the step in the pattern to which it corresponds. For example, every fourth derivative of sin <em data-effect="italics">x</em> equals sin <em data-effect="italics">x</em>, so</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739284998"><div class="math-scroll"><math display="block"><semantics><mrow><mtable columnalign="left"><mtr><mtd><mfrac><mrow><msup><mi>d</mi><mn>4</mn></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>4</mn></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mn>8</mn></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>8</mn></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mrow><mn>12</mn></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>12</mn></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>…</mtext><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mrow><mn>4</mn><mi>n</mi></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>4</mn><mi>n</mi></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mtd></mtr><mtr><mtd><mfrac><mrow><msup><mi>d</mi><mn>5</mn></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>5</mn></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mn>9</mn></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>9</mn></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mrow><mn>13</mn></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>13</mn></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>…</mtext><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mrow><mn>4</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>4</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mtd></mtr></mtable></mrow><annotation-xml encoding="MathML-Content"><mtable columnalign="left"><mtr><mtd><mfrac><mrow><msup><mi>d</mi><mn>4</mn></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>4</mn></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mn>8</mn></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>8</mn></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mrow><mn>12</mn></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>12</mn></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>…</mtext><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mrow><mn>4</mn><mi>n</mi></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>4</mn><mi>n</mi></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mtd></mtr><mtr><mtd><mfrac><mrow><msup><mi>d</mi><mn>5</mn></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>5</mn></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mn>9</mn></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>9</mn></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mrow><mn>13</mn></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>13</mn></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>…</mtext><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mrow><mn>4</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>4</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mtd></mtr></mtable></annotation-xml></semantics></math></div></div>
+</div>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1169739298009"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">3.31</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1169739298012"><header></header><section>
+<div data-type="problem" id="fs-id1169739298015"><div class="os-problem-container">
+<p id="fs-id1169739298017">For <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo></mrow></annotation-xml></semantics></math></span> find <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>4</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>4</mn></msup></mrow></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><msup><mi>d</mi><mn>4</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>4</mn></msup></mrow></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1169739298086"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.46</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1169739298088"><header></header><section>
+<div data-type="problem" id="fs-id1169739298090"><div class="os-problem-container"><h4 data-type="title">Using the Pattern for Higher-Order Derivatives of <math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></h4>
+<p id="fs-id1169739293614">Find <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mrow><mn>74</mn></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>74</mn></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><msup><mi>d</mi><mrow><mn>74</mn></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>74</mn></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1169739293653">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1169739293655">We can see right away that for the 74th derivative of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mn>74</mn><mo>=</mo><mn>4</mn><mrow><mo>(</mo><mrow><mn>18</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>2</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mn>74</mn><mo>=</mo><mn>4</mn><mrow><mo>(</mo><mrow><mn>18</mn></mrow><mo>)</mo></mrow><mo>+</mo><mn>2</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span> so</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739293692">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mrow>
+<mn>74</mn>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mrow>
+<mn>74</mn>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mrow>
+<mn>72</mn>
+<mo>+</mo>
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mrow>
+<mn>72</mn>
+<mo>+</mo>
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>−</mtext>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mrow>
+<mn>74</mn>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mrow>
+<mn>74</mn>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mrow>
+<mn>72</mn>
+<mo>+</mo>
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mrow>
+<mn>72</mn>
+<mo>+</mo>
+<mn>2</mn>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<msup>
+<mi>d</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<mi>d</mi>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>−</mtext>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1169736595960"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">3.32</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1169736595964"><header></header><section>
+<div data-type="problem" id="fs-id1169736595966"><div class="os-problem-container">
+<p id="fs-id1169736595968">For <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo></mrow></annotation-xml></semantics></math></span> find <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mrow><mn>59</mn></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>59</mn></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><msup><mi>d</mi><mrow><mn>59</mn></mrow></msup></mrow><mrow><mi>d</mi><msup><mi>x</mi><mrow><mn>59</mn></mrow></msup></mrow></mfrac><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1169739376125"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.47</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1169739376127"><header></header><section>
+<div data-type="problem" id="fs-id1169739376129"><div class="os-problem-container"><h4 data-type="title">An Application to Acceleration</h4>
+<p id="fs-id1169739376135">A particle moves along a coordinate axis in such a way that its position at time <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>t</mi></mrow><annotation-xml encoding="MathML-Content"><mi>t</mi></annotation-xml></semantics></math></span> is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>t</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>t</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> Find <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>v</mi><mrow><mo>(</mo><mrow><mi>π</mi><mtext>/</mtext><mn>4</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>v</mi><mrow><mo>(</mo><mrow><mi>π</mi><mtext>/</mtext><mn>4</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mi>π</mi><mtext>/</mtext><mn>4</mn></mrow><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mi>π</mi><mtext>/</mtext><mn>4</mn></mrow><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span> Compare these values and decide whether the particle is speeding up or slowing down.</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1169739376209">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1169739376212">First find <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>v</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>s</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mtext>:</mtext></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>v</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>s</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mtext>:</mtext></mrow></annotation-xml></semantics></math></span></p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739345785">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mi>v</mi>
+<mrow>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<msup>
+<mi>s</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>−</mtext>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>t</mi>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>v</mi>
+<mrow>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<msup>
+<mi>s</mi>
+<mo>′</mo>
+</msup>
+<mrow>
+<mo>(</mo>
+<mi>t</mi>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mtext>−</mtext>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>t</mi>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169739345829">Thus,</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739345832">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mi>v</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mo>−</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>v</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mo>−</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169739345866">Next, find <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>a</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>v</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>a</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>v</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>.</mo></mrow></annotation-xml></semantics></math></span> Thus, <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>a</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>v</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>t</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>a</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>v</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>t</mi></mrow></annotation-xml></semantics></math></span> and we have</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1169739345937">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mi>a</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>a</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>4</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1169739273581">Since <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>v</mi><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mrow><msqrt><mn>2</mn></msqrt></mrow></mfrac><mo>&lt;</mo><mn>0</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>v</mi><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mrow><msqrt><mn>2</mn></msqrt></mrow></mfrac><mo>&lt;</mo><mn>0</mn></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><msqrt><mn>2</mn></msqrt></mrow></mfrac><mo>&gt;</mo><mn>0</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><msqrt><mn>2</mn></msqrt></mrow></mfrac><mo>&gt;</mo><mn>0</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span> we see that velocity and acceleration are acting in opposite directions; that is, the object is being accelerated in the direction opposite to the direction in which it is travelling. Consequently, the particle is slowing down.</p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1169739273655"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">3.33</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1169739273659"><header></header><section>
+<div data-type="problem" id="fs-id1169739273661"><div class="os-problem-container">
+<p id="fs-id1169739273663">A block attached to a spring is moving vertically. Its position at time <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>t</mi></mrow><annotation-xml encoding="MathML-Content"><mi>t</mi></annotation-xml></semantics></math></span> is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>t</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>t</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> Find <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>v</mi><mo>(</mo><mfrac><mrow><mn>5</mn><mi>π</mi></mrow><mn>6</mn></mfrac><mo>)</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>v</mi><mo>(</mo><mfrac><mrow><mn>5</mn><mi>π</mi></mrow><mn>6</mn></mfrac><mo>)</mo></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mfrac><mrow><mn>5</mn><mi>π</mi></mrow><mn>6</mn></mfrac></mrow><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>a</mi><mrow><mo>(</mo><mrow><mfrac><mrow><mn>5</mn><mi>π</mi></mrow><mn>6</mn></mfrac></mrow><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span> Compare these values and decide whether the block is speeding up or slowing down.</p>
+</div></div>
+</section></div>
+</div></section></div>
+</section>
+<div class="os-eos os-section-exercises-container" data-uuid-key=".section-exercises"><h3 data-type="document-title">
+<span class="os-text">Section 3.5 Exercises</span>
+</h3>
+<section class="section-exercises" data-depth="1" id="fs-id1169736597627">
+<p id="fs-id1169736597631">For the following exercises, find <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mrow></annotation-xml></semantics></math></span> for the given functions.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169736597649"><header></header><section>
+<div data-type="problem" id="fs-id1169736597652">
+<a aria-label="Go to 175" class="os-number" data-page-fragment="fs-id1169736597649-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">175</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736597654">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mtext>sec</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mtext>sec</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mn>1</mn>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169736597729"><header></header><section>
+<div data-type="problem" id="fs-id1169736597731">
+<span class="os-number">176</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736597733">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mn>3</mn>
+<mspace width="0.1em"></mspace>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mfrac>
+<mn>5</mn>
+<mi>x</mi>
+</mfrac>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mn>3</mn>
+<mspace width="0.1em"></mspace>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>+</mo>
+<mfrac>
+<mn>5</mn>
+<mi>x</mi>
+</mfrac>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169736658534"><header></header><section>
+<div data-type="problem" id="fs-id1169736658536">
+<a aria-label="Go to 177" class="os-number" data-page-fragment="fs-id1169736658534-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">177</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736658538">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169736658614"><header></header><section>
+<div data-type="problem" id="fs-id1169736658616">
+<span class="os-number">178</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736658618">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mi>x</mi>
+<mo>−</mo>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mi>x</mi>
+<mo>−</mo>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739275164"><header></header><section>
+<div data-type="problem" id="fs-id1169739275166">
+<a aria-label="Go to 179" class="os-number" data-page-fragment="fs-id1169739275164-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">179</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739275168">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mtext>sec</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mi>x</mi>
+</mfrac>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mtext>sec</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mi>x</mi>
+</mfrac>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739275253"><header></header><section>
+<div data-type="problem" id="fs-id1169739275255">
+<span class="os-number">180</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739275257">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739303603"><header></header><section>
+<div data-type="problem" id="fs-id1169739303605">
+<a aria-label="Go to 181" class="os-number" data-page-fragment="fs-id1169739303603-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">181</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739303607">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>x</mi>
+<mo>+</mo>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mi>x</mi>
+<mo>+</mo>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739303738"><header></header><section>
+<div data-type="problem" id="fs-id1169739303741">
+<span class="os-number">182</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739303743">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mtext>sec</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mtext>sec</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mfrac>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739350812"><header></header><section>
+<div data-type="problem" id="fs-id1169739350814">
+<a aria-label="Go to 183" class="os-number" data-page-fragment="fs-id1169739350812-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">183</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739350817">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mfrac>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169736593529"><header></header><section>
+<div data-type="problem" id="fs-id1169736593531">
+<span class="os-number">184</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736593533">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1169736593662">For the following exercises, find an equation of the tangent line to each of the given functions at the indicated values of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>x</mi><mo>.</mo></mrow><annotation-xml encoding="MathML-Content"><mi>x</mi><mo>.</mo></annotation-xml></semantics></math></span> Then use a calculator to graph both the function and the tangent line to ensure the equation for the tangent line is correct.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169736593674"><header></header><section>
+<div data-type="problem" id="fs-id1169739266595">
+<a aria-label="Go to 185" class="os-number" data-page-fragment="fs-id1169736593674-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">185</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739266597"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>−</mtext><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mi>x</mi><mo>=</mo><mn>0</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>−</mtext><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mi>x</mi><mo>=</mo><mn>0</mn></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739266669"><header></header><section>
+<div data-type="problem" id="fs-id1169739266671">
+<span class="os-number">186</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739266673"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mi>x</mi><mo>=</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>csc</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mi>x</mi><mo>=</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739266742"><header></header><section>
+<div data-type="problem" id="fs-id1169739266744">
+<a aria-label="Go to 187" class="os-number" data-page-fragment="fs-id1169739266742-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">187</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739266746"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>1</mn><mo>+</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>2</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>1</mn><mo>+</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mn>3</mn><mi>π</mi></mrow><mn>2</mn></mfrac></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169736655200"><header></header><section>
+<div data-type="problem" id="fs-id1169736655202">
+<span class="os-number">188</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736655204"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mi>x</mi><mo>=</mo><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mi>x</mi><mo>=</mo><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169736655301"><header></header><section>
+<div data-type="problem" id="fs-id1169736655303">
+<a aria-label="Go to 189" class="os-number" data-page-fragment="fs-id1169736655301-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">189</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736655305"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.2em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mtext>tan</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.2em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn></mrow></annotation-xml></semantics></math></span></p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739305492"><header></header><section>
+<div data-type="problem" id="fs-id1169739305494">
+<span class="os-number">190</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739305496"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>5</mn><mspace width="0.1em"></mspace><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.2em"></mspace><mi>x</mi><mo>=</mo><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>5</mn><mspace width="0.1em"></mspace><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>,</mo><mspace width="0.2em"></mspace><mi>x</mi><mo>=</mo><mfrac><mi>π</mi><mn>4</mn></mfrac></mrow></annotation-xml></semantics></math></span></p></div>
+</div>
+</section></div>
+<p id="fs-id1169739305590">For the following exercises, find <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></annotation-xml></semantics></math></span> for the given functions.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739305614"><header></header><section>
+<div data-type="problem" id="fs-id1169739305617">
+<a aria-label="Go to 191" class="os-number" data-page-fragment="fs-id1169739305614-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">191</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739305619">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>−</mo>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo>−</mo>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169736662308"><header></header><section>
+<div data-type="problem" id="fs-id1169736662310">
+<span class="os-number">192</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736662312">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>cos</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169736662371"><header></header><section>
+<div data-type="problem" id="fs-id1169736662373">
+<a aria-label="Go to 193" class="os-number" data-page-fragment="fs-id1169736662371-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">193</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736662375">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mi>x</mi>
+<mo>−</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mspace width="0.1em"></mspace>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mi>x</mi>
+<mo>−</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mspace width="0.1em"></mspace>
+<mtext>sin</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169736662423"><header></header><section>
+<div data-type="problem" id="fs-id1169736662425">
+<span class="os-number">194</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736662427">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mi>x</mi>
+</mfrac>
+<mo>+</mo>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mi>x</mi>
+</mfrac>
+<mo>+</mo>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739303429"><header></header><section>
+<div data-type="problem" id="fs-id1169739303431">
+<a aria-label="Go to 195" class="os-number" data-page-fragment="fs-id1169739303429-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">195</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739303433">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mn>2</mn>
+<mspace width="0.1em"></mspace>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<mn>2</mn>
+<mspace width="0.1em"></mspace>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739303516"><header></header><section>
+<div data-type="problem" id="fs-id1169739303518">
+<span class="os-number">196</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739303520">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>y</mi>
+<mo>=</mo>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739335809"><header></header><section>
+<div data-type="problem" id="fs-id1169739335812">
+<a aria-label="Go to 197" class="os-number" data-page-fragment="fs-id1169739335809-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">197</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739335814">Find all <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>x</mi></mrow><annotation-xml encoding="MathML-Content"><mi>x</mi></annotation-xml></semantics></math></span> values on the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>−3</mn><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>−3</mn><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> where the tangent line is horizontal.</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739335906"><header></header><section>
+<div data-type="problem" id="fs-id1169739335909">
+<span class="os-number">198</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739335911">Find all <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>x</mi></mrow><annotation-xml encoding="MathML-Content"><mi>x</mi></annotation-xml></semantics></math></span> values on the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi><mo>−</mo><mn>2</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mi>x</mi><mo>−</mo><mn>2</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> for <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn><mi>π</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn><mi>π</mi></mrow></annotation-xml></semantics></math></span> where the tangent line has slope 2.</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739335992"><header></header><section>
+<div data-type="problem" id="fs-id1169739335994">
+<a aria-label="Go to 199" class="os-number" data-page-fragment="fs-id1169739335992-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">199</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739335996">Let <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> Determine the points on the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi></mrow></annotation-xml></semantics></math></span> for <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn><mi>π</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>2</mn><mi>π</mi></mrow></annotation-xml></semantics></math></span> where the tangent line(s) is (are) parallel to the line <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mn>−2</mn><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mn>−2</mn><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169736613947"><header></header><section>
+<div data-type="problem" id="fs-id1169736613949">
+<span class="os-number">200</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736613952"><strong>[T]</strong> A mass on a spring bounces up and down in simple harmonic motion, modeled by the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>−6</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>t</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>−6</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>t</mi></mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>s</mi></mrow><annotation-xml encoding="MathML-Content"><mi>s</mi></annotation-xml></semantics></math></span> is measured in inches and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>t</mi></mrow><annotation-xml encoding="MathML-Content"><mi>t</mi></annotation-xml></semantics></math></span> is measured in seconds. Find the rate at which the spring is oscillating at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mn>5</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mn>5</mn></mrow></annotation-xml></semantics></math></span> s.</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169736614037"><header></header><section>
+<div data-type="problem" id="fs-id1169736614039">
+<a aria-label="Go to 201" class="os-number" data-page-fragment="fs-id1169736614037-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">201</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739341306">Let the position of a swinging pendulum in simple harmonic motion be given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mi>a</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>t</mi><mo>+</mo><mi>b</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>t</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mi>a</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>t</mi><mo>+</mo><mi>b</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>t</mi></mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>a</mi></mrow><annotation-xml encoding="MathML-Content"><mi>a</mi></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>b</mi></mrow><annotation-xml encoding="MathML-Content"><mi>b</mi></annotation-xml></semantics></math></span> are constants, <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>t</mi></mrow><annotation-xml encoding="MathML-Content"><mi>t</mi></annotation-xml></semantics></math></span> measures time in seconds, and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>s</mi></mrow><annotation-xml encoding="MathML-Content"><mi>s</mi></annotation-xml></semantics></math></span> measures position in centimeters. If the position is 0 cm and the velocity is 3 cm/s when <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></annotation-xml></semantics></math></span>, find the values of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>a</mi></mrow><annotation-xml encoding="MathML-Content"><mi>a</mi></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>b</mi></mrow><annotation-xml encoding="MathML-Content"><mi>b</mi></annotation-xml></semantics></math></span>.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739341409"><header></header><section>
+<div data-type="problem" id="fs-id1169739341411">
+<span class="os-number">202</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739341414">After a diver jumps off a diving board, the edge of the board oscillates with position given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>−5</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>t</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>−5</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>t</mi></mrow></annotation-xml></semantics></math></span> cm at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>t</mi></mrow><annotation-xml encoding="MathML-Content"><mi>t</mi></annotation-xml></semantics></math></span> seconds after the jump.</p>
+<ol id="fs-id1169739341452" type="a">
+<li>Sketch one period of the position function for <math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>≥</mo><mn>0</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn><mo>.</mo></mrow></annotation-xml></semantics></math></li>
+<li>Find the velocity function.</li>
+<li>Sketch one period of the velocity function for <math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>≥</mo><mn>0</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn><mo>.</mo></mrow></annotation-xml></semantics></math></li>
+<li>Determine the times when the velocity is 0 over one period.</li>
+<li>Find the acceleration function.</li>
+<li>Sketch one period of the acceleration function for <math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>≥</mo><mn>0</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn><mo>.</mo></mrow></annotation-xml></semantics></math></li>
+</ol>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739353376"><header></header><section>
+<div data-type="problem" id="fs-id1169739353378">
+<a aria-label="Go to 203" class="os-number" data-page-fragment="fs-id1169739353376-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">203</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739353380">The number of hamburgers sold at a fast-food restaurant in Pasadena, California, is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mn>10</mn><mo>+</mo><mn>5</mn><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mn>10</mn><mo>+</mo><mn>5</mn><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>y</mi></mrow><annotation-xml encoding="MathML-Content"><mi>y</mi></annotation-xml></semantics></math></span> is the number of hamburgers sold and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>x</mi></mrow><annotation-xml encoding="MathML-Content"><mi>x</mi></annotation-xml></semantics></math></span> represents the number of hours after the restaurant opened at 11 a.m. until 11 p.m., when the store closes. Find <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>′</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>′</mo></mrow></annotation-xml></semantics></math></span> and determine the intervals where the number of burgers being sold is increasing.</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739307888"><header></header><section>
+<div data-type="problem" id="fs-id1169739307890">
+<span class="os-number">204</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739307892"><strong>[T]</strong> The amount of rainfall per month in Phoenix, Arizona, can be approximated by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>0.5</mn><mo>+</mo><mn>0.3</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>t</mi><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>0.5</mn><mo>+</mo><mn>0.3</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>t</mi><mo>,</mo></mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi></mrow></annotation-xml></semantics></math></span> is months since January. Find <span class="os-math-in-para"><math display="inline"><semantics><mrow><msup><mi>y</mi><mo>′</mo></msup></mrow><annotation-xml encoding="MathML-Content"><msup><mi>y</mi><mo>′</mo></msup></annotation-xml></semantics></math></span> and use a calculator to determine the intervals where the amount of rain falling is decreasing.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1169739264125">For the following exercises, use the quotient rule to derive the given equations.</p>
+<div data-type="exercise" id="fs-id1169739264128"><header></header><section>
+<div data-type="problem" id="fs-id1169739264130">
+<span class="os-number">205</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739264132">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo stretchy="false">(</mo>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mtext>−</mtext>
+<msup>
+<mrow>
+<mtext>csc</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo stretchy="false">(</mo>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mtext>−</mtext>
+<msup>
+<mrow>
+<mtext>csc</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739264176"><header></header><section>
+<div data-type="problem" id="fs-id1169739264178">
+<span class="os-number">206</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739264180">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo stretchy="false">(</mo>
+<mtext>sec</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mtext>sec</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo stretchy="false">(</mo>
+<mtext>sec</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mtext>sec</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>tan</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739264230"><header></header><section>
+<div data-type="problem" id="fs-id1169739264233">
+<span class="os-number">207</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739264235">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo stretchy="false">(</mo>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mtext>−</mtext>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mfrac>
+<mi>d</mi>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+</mfrac>
+<mo stretchy="false">(</mo>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mo stretchy="false">)</mo>
+<mo>=</mo>
+<mtext>−</mtext>
+<mtext>csc</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+<mspace width="0.1em"></mspace>
+<mtext>cot</mtext>
+<mspace width="0.1em"></mspace>
+<mi>x</mi>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739264287"><header></header><section>
+<div data-type="problem" id="fs-id1169739264289">
+<span class="os-number">208</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739264292">Use the definition of derivative and the identity</p>
+<p id="fs-id1169739264295"><span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><mi>h</mi></mrow><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>h</mi><mo>−</mo><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>h</mi></mrow></annotation-xml></semantics></math></span> to prove that <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><mi>d</mi><mrow><mo>(</mo><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mtext>−</mtext><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><mi>d</mi><mrow><mo>(</mo><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mtext>−</mtext><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1169739289336">For the following exercises, find the requested higher-order derivative for the given functions.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739289340"><header></header><section>
+<div data-type="problem" id="fs-id1169739289343">
+<a aria-label="Go to 209" class="os-number" data-page-fragment="fs-id1169739289340-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">209</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739289345"><span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>3</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>3</mn></msup></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><msup><mi>d</mi><mn>3</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>3</mn></msup></mrow></mfrac></mrow></annotation-xml></semantics></math></span> of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mn>3</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mn>3</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169739289409"><header></header><section>
+<div data-type="problem" id="fs-id1169739289411">
+<span class="os-number">210</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739289414"><span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></annotation-xml></semantics></math></span> of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mn>3</mn><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mn>3</mn><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169736592467"><header></header><section>
+<div data-type="problem" id="fs-id1169736592469">
+<a aria-label="Go to 211" class="os-number" data-page-fragment="fs-id1169736592467-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">211</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736592471"><span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>4</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>4</mn></msup></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><msup><mi>d</mi><mn>4</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>4</mn></msup></mrow></mfrac></mrow></annotation-xml></semantics></math></span> of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mn>5</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mn>5</mn><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1169736592536"><header></header><section>
+<div data-type="problem" id="fs-id1169736592538">
+<span class="os-number">212</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169736592540"><span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></annotation-xml></semantics></math></span> of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>+</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>+</mo><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1169739301937"><header></header><section>
+<div data-type="problem" id="fs-id1169739301939">
+<a aria-label="Go to 213" class="os-number" data-page-fragment="fs-id1169739301937-solution" data-page-slug="chapter-3" data-page-uuid="a329ca25-ddf9-5b35-8d21-8a816d63bb2d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-3">213</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1169739301941"><span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mrow><msup><mi>d</mi><mn>3</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>3</mn></msup></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mrow><msup><mi>d</mi><mn>3</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>3</mn></msup></mrow></mfrac></mrow></annotation-xml></semantics></math></span> of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><msup><mi>x</mi><mrow><mn>10</mn></mrow></msup><mo>−</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><msup><mi>x</mi><mrow><mn>10</mn></mrow></msup><mo>−</mo><mtext>sec</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+</section></div>
+</div></article><footer><p>Adapted from OpenStax, Calculus Volume 1, 3.5 Derivatives of Trigonometric Functions. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/calculus-volume-1/pages/3-5-derivatives-of-trigonometric-functions">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

@@ -1,0 +1,65 @@
+{
+  "verifiedOn": "2026-10-26",
+  "capturedIn": "iPhone 14 Simulator, iOS 26.5",
+  "silent": true,
+  "narrationWords": 349,
+  "editedSceneCount": 13,
+  "durationSeconds": 168,
+  "files": [
+    {
+      "file": "DelaStudy-Walkthrough.mp4",
+      "width": 1920,
+      "height": 1080,
+      "durationSeconds": 168,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "codec": "avc1",
+      "bytes": 32150632,
+      "sha256": "b663e46da1cbee13464b2373777911aa3c2e3b85152582d05de399b1a8b2beee"
+    },
+    {
+      "file": "DelaStudy-Screen-Recording.mp4",
+      "width": 1170,
+      "height": 2532,
+      "durationSeconds": 168,
+      "videoTracks": 1,
+      "audioTracks": 0,
+      "codec": "avc1",
+      "bytes": 90426854,
+      "sha256": "28b759a70cc003f59bf9011984bbf331f48265d927da3bed3336a53454e62b6e"
+    }
+  ],
+  "checks": [
+    "Main showcase UI journey passed.",
+    "Final source-credit and Algebra mapping UI journey passed in 43.119 seconds.",
+    "All 13 landscape chapter midpoints decoded and visually reviewed.",
+    "Source-credit text, partial Algebra mapping, Zen and profile frames visually inspected.",
+    "Portrait closing frame decoded at 167 seconds; no premature end.",
+    "349-word plain narration matches the timed script.",
+    "Both videos have no audio tracks.",
+    "Authentication and test setup excluded from edited ranges.",
+    "Dedicated capture Simulator status override cleared and device returned to shutdown.",
+    "Ordinary iPhone 17 Pro Simulator and account data were not reset.",
+    "DelaStudy credit visually reviewed; exported media properties remeasured after branding update."
+  ],
+  "boundaries": [
+    "Footage is Simulator evidence, not physical-device or release verification.",
+    "AP paths cover selected practice, not an authorized or complete AP course.",
+    "Civics sources and a separate limited Algebra standards mapping are shown; no state approval is claimed.",
+    "Focus does not automatically control other apps' notifications.",
+    "Optional sound is not presented as a guaranteed study benefit."
+  ],
+  "reproduction": {
+    "editor": "scripts/render_showcase.swift",
+    "edit": "Demo/Showcase/edit-manifest.json",
+    "rawFootage": "Local temporary capture files; not included in the deliverables.",
+    "mainTestResult": "/tmp/Lens-Showcase-Capture-Final.xcresult",
+    "finalSourcesTestResult": "/tmp/Lens-Showcase-Source-Credit-Final.xcresult"
+  },
+  "brandingRevision": {
+    "appName": "DelaStudy",
+    "description": "DelaStudy branding applied to public filenames, titles, scripts and lesson credit. Two navigation transitions trimmed; all scene durations and study interactions preserved.",
+    "creditsComposited": true,
+    "projectIdentifiersUnchanged": true
+  }
+}

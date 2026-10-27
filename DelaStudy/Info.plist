@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>NSFaceIDUsageDescription</key><string>Verify this iPhone’s owner when resetting a forgotten local profile password.</string>
+    <key>UIAppFonts</key><array><string>Fonts/Manrope.ttf</string></array>
+    <key>NSSupportsLiveActivities</key><true/>
+    <key>CFBundleURLTypes</key><array><dict><key>CFBundleURLSchemes</key><array><string>firststatelens</string></array></dict></array>
+    <key>UIBackgroundModes</key>
+    <array><string>audio</string></array>
+</dict>
+</plist>

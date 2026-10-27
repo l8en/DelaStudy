@@ -94,7 +94,7 @@ public enum AppContent {
         let courses = [
             Course(id: "first-state-civics", title: "U.S. History", subtitle: "The Constitution and Delaware’s place in the founding era.", subject: .history, level: .highSchool, symbolName: "building.columns.fill", estimatedMinutes: 32, objectiveIDs: ["read-record", "purpose-perspective", "trace-process", "weigh-evidence"], source: archiveLesson, curriculum: historyCurriculum),
             Course(id: "algebra-i", title: "Algebra I", subtitle: "Linear equations and graphs from Illustrative Mathematics Algebra 1.", subject: .mathematics, level: .highSchool, symbolName: "function", estimatedMinutes: 22, objectiveIDs: ["algebra-equations", "algebra-graphs"], source: algebraText, curriculum: algebraCurriculum),
-            Course(id: "ap-biology", title: "AP Biology", subtitle: "Cell structure and membrane transport from OpenStax Biology for AP Courses.", subject: .biology, level: .highSchool, symbolName: "microbe.fill", estimatedMinutes: 22, objectiveIDs: ["biology-cells", "biology-membranes"], source: biologyText, curriculum: biologyCurriculum),
+            Course(id: "ap-biology", title: "Biology Foundations", subtitle: "An introduction to cells and membrane transport.", subject: .biology, level: .highSchool, symbolName: "microbe.fill", estimatedMinutes: 22, objectiveIDs: ["biology-cells", "biology-membranes"], source: biologyText, curriculum: biologyCurriculum),
             Course(id: "college-algebra", title: "College Algebra", subtitle: "Functions and quadratic models from OpenStax College Algebra 2e.", subject: .mathematics, level: .college, symbolName: "x.squareroot", estimatedMinutes: 24, objectiveIDs: ["college-functions", "college-quadratics"], source: collegeAlgebraText, curriculum: collegeAlgebraCurriculum),
             Course(id: "general-biology", title: "General Biology I", subtitle: "Gene expression and the cell cycle from OpenStax Biology 2e.", subject: .biology, level: .college, symbolName: "dna", estimatedMinutes: 24, objectiveIDs: ["college-bio-genes", "college-bio-cycle"], source: collegeBiologyText, curriculum: collegeBiologyCurriculum)
         ]
@@ -127,12 +127,13 @@ public enum AppContent {
             PracticeQuestion(id: "college-bio-metaphase", objectiveID: "college-bio-cycle", prompt: "What characterizes metaphase of mitosis?", choices: choices([("a", "Chromosomes align near the cell’s equator"), ("b", "DNA is first replicated"), ("c", "The nuclear envelope fully reforms around two nuclei"), ("d", "Homologous chromosomes pair for crossing over")]), correctChoiceID: "a", explanation: "During metaphase, duplicated chromosomes align at the metaphase plate before sister chromatids separate in anaphase.", source: collegeBiologyText)
         ]
         let expansion = ExpandedCatalog.content(accessedOn: accessed)
+        let preparation = APPreparation.content
         let lessons = lessonMaterials()
         return LearningContent(
-            courses: courses + expansion.courses,
-            objectives: objectives + expansion.objectives,
-            questions: questions + expansion.questions,
-            lessonMaterials: lessons + expansion.lessonMaterials
+            courses: courses + expansion.courses + preparation.courses,
+            objectives: objectives + expansion.objectives + preparation.objectives,
+            questions: questions + expansion.questions + preparation.questions,
+            lessonMaterials: lessons + expansion.lessonMaterials + preparation.lessonMaterials
         )
     }()
 

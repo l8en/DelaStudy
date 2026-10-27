@@ -1,0 +1,249 @@
+{
+  "appName": "DelaStudy",
+  "source": "/tmp/delastudy-waffles-4jUGKt/capture.mov",
+  "font": "/Users/machi/cac2026/cac2026/FirstStateLens/Fonts/Manrope.ttf",
+  "presentation": "code-windows",
+  "devicePresentation": "iphone-14-pro",
+  "codeWindowPlacement": "lower-right",
+  "shots": [
+    {
+      "id": "account",
+      "duration": 6,
+      "sourceStart": 18.319,
+      "sourceEnd": 22.087
+    },
+    {
+      "id": "setup_year",
+      "duration": 3,
+      "sourceStart": 23.318,
+      "sourceEnd": 28.087
+    },
+    {
+      "id": "setup_goal",
+      "duration": 2,
+      "sourceStart": 28.247,
+      "sourceEnd": 31.797
+    },
+    {
+      "id": "setup_subjects",
+      "duration": 3,
+      "sourceStart": 31.958,
+      "sourceEnd": 35.875
+    },
+    {
+      "id": "setup_route",
+      "duration": 2,
+      "sourceStart": 36.035,
+      "sourceEnd": 39.242
+    },
+    {
+      "id": "setup_school",
+      "duration": 3,
+      "sourceStart": 39.403,
+      "sourceEnd": 48.274
+    },
+    {
+      "id": "setup_rhythm",
+      "duration": 3,
+      "sourceStart": 48.434,
+      "sourceEnd": 51.969
+    },
+    {
+      "id": "setup_ready",
+      "duration": 2,
+      "sourceStart": 52.129,
+      "sourceEnd": 55.984
+    },
+    {
+      "id": "today",
+      "duration": 4,
+      "sourceStart": 57.237,
+      "sourceEnd": 60.587
+    },
+    {
+      "id": "library",
+      "duration": 8,
+      "sourceStart": 60.747,
+      "sourceEnd": 73.342
+    },
+    {
+      "id": "outline",
+      "duration": 5,
+      "sourceStart": 73.502,
+      "sourceEnd": 84.222
+    },
+    {
+      "id": "lesson",
+      "duration": 10,
+      "sourceStart": 84.382,
+      "sourceEnd": 95.873
+    },
+    {
+      "id": "practice",
+      "duration": 23,
+      "sourceStart": 96.033,
+      "sourceEnd": 113.393
+    },
+    {
+      "id": "resources",
+      "duration": 9,
+      "sourceStart": 118.064,
+      "sourceEnd": 127.369
+    },
+    {
+      "id": "college",
+      "duration": 7,
+      "sourceStart": 127.529,
+      "sourceEnd": 133.369
+    },
+    {
+      "id": "plan",
+      "duration": 6,
+      "sourceStart": 133.529,
+      "sourceEnd": 141.427
+    },
+    {
+      "id": "sounds",
+      "duration": 10,
+      "sourceStart": 165.91,
+      "sourceEnd": 180.01
+    },
+    {
+      "id": "zen",
+      "duration": 7,
+      "sourceStart": 182.711,
+      "sourceEnd": 192.243
+    },
+    {
+      "id": "permission",
+      "duration": 3,
+      "sourceStart": 31.027,
+      "sourceEnd": 33.872,
+      "source": "/tmp/delastudy-waffles-4jUGKt/notification.mov"
+    },
+    {
+      "id": "notification",
+      "duration": 11,
+      "sourceStart": 92.26,
+      "sourceEnd": 105.479,
+      "source": "/tmp/delastudy-waffles-4jUGKt/notification.mov"
+    },
+    {
+      "id": "profile",
+      "duration": 8,
+      "sourceStart": 110.268,
+      "sourceEnd": 117.568,
+      "source": "/tmp/delastudy-waffles-4jUGKt/notification.mov"
+    }
+  ],
+  "codePopups": [
+    {
+      "sourcePath": "FirstStateLens/AppModel.swift",
+      "firstLine": 82,
+      "lastLine": 89,
+      "start": 7,
+      "end": 23.7,
+      "highlightLines": [
+        84,
+        88
+      ]
+    },
+    {
+      "sourcePath": "FirstStateLens/CourseCatalogView.swift",
+      "firstLine": 16,
+      "lastLine": 23,
+      "start": 28.5,
+      "end": 35.8,
+      "highlightLines": [
+        18,
+        21
+      ]
+    },
+    {
+      "sourcePath": "FirstStateLens/BiteLessonView.swift",
+      "firstLine": 109,
+      "lastLine": 115,
+      "start": 41.4,
+      "end": 50.8,
+      "highlightLines": [
+        112,
+        114
+      ]
+    },
+    {
+      "sourcePath": "FirstStateLens/ReadingCheckView.swift",
+      "firstLine": 176,
+      "lastLine": 184,
+      "start": 51.5,
+      "end": 73.8,
+      "highlightLines": [
+        178,
+        183
+      ]
+    },
+    {
+      "sourcePath": "FirstStateLens/CourseResourcesView.swift",
+      "firstLine": 12,
+      "lastLine": 18,
+      "start": 74.4,
+      "end": 82.8,
+      "highlightLines": [
+        16,
+        17
+      ]
+    },
+    {
+      "sourcePath": "FirstStateLens/AppModel.swift",
+      "firstLine": 345,
+      "lastLine": 350,
+      "start": 90.3,
+      "end": 95.8,
+      "highlightLines": [
+        349
+      ]
+    },
+    {
+      "sourcePath": "FirstStateLens/SoundLibraryView.swift",
+      "firstLine": 66,
+      "lastLine": 72,
+      "start": 96.4,
+      "end": 105.8,
+      "highlightLines": [
+        66,
+        71
+      ]
+    },
+    {
+      "sourcePath": "Sources/FirstStateCore/Workspace.swift",
+      "firstLine": 170,
+      "lastLine": 174,
+      "start": 106.3,
+      "end": 112.8,
+      "highlightLines": [
+        173
+      ]
+    },
+    {
+      "sourcePath": "FirstStateLens/RootView.swift",
+      "firstLine": 56,
+      "lastLine": 65,
+      "start": 116.3,
+      "end": 126.8,
+      "highlightLines": [
+        61,
+        62,
+        64
+      ]
+    },
+    {
+      "sourcePath": "Sources/FirstStateCore/LearnerMetrics.swift",
+      "firstLine": 23,
+      "lastLine": 27,
+      "start": 127.4,
+      "end": 134.8,
+      "highlightLines": [
+        27
+      ]
+    }
+  ]
+}

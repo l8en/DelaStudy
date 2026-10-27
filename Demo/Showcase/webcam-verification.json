@@ -1,0 +1,62 @@
+{
+  "verifiedOn": "2026-10-26",
+  "file": "DelaStudy-Webcam-Ready.mp4",
+  "durationSeconds": 168,
+  "width": 1920,
+  "height": 1080,
+  "codec": "avc1",
+  "videoTracks": 1,
+  "audioTracks": 0,
+  "bytes": 85862319,
+  "sha256": "ffcbf5346565bac35ec12aba661af5284f59681cb91243d66ea13f7d9946573e",
+  "change": "Code windows remain lower-right and full size. DelaStudy branding applied to public filenames, titles, scripts and lesson credit. Two navigation transitions trimmed; all scene durations and study interactions preserved.",
+  "codeWindowLayout": {
+    "x": 730,
+    "width": 1070,
+    "bottom": 1020,
+    "bottomMargin": 60,
+    "largestWindowHeight": 614,
+    "highestCodeWindowTop": 406
+  },
+  "suggestedWebcams": [
+    {
+      "x": 760,
+      "y": 60,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "x": 1100,
+      "y": 60,
+      "width": 320,
+      "height": 240
+    },
+    {
+      "x": 1440,
+      "y": 60,
+      "width": 320,
+      "height": 240
+    }
+  ],
+  "checks": [
+    "Native renderer compiles.",
+    "All 13 chapter midpoints decoded and visually reviewed.",
+    "All eight code windows retain readable size and clear upper-right webcam space.",
+    "Full-size Library and practice frames checked with the tallest code windows.",
+    "Closing frame decoded at 167 seconds.",
+    "Handheld phone, hand animation, code excerpts, timing and silence preserved.",
+    "Earlier exports preserved; no production app or account data changed.",
+    "git diff --check passed.",
+    "DelaStudy credit visually reviewed; exported media properties remeasured after branding update."
+  ],
+  "boundaries": [
+    "Webcam regions are blank space for the presenters to overlay their own live cameras; no webcam footage was supplied or inserted.",
+    "The phone and hand remain presentation artwork around the original Simulator recording, not physical-device footage."
+  ],
+  "brandingRevision": {
+    "appName": "DelaStudy",
+    "description": "DelaStudy branding applied to public filenames, titles, scripts and lesson credit. Two navigation transitions trimmed; all scene durations and study interactions preserved.",
+    "creditsComposited": true,
+    "projectIdentifiersUnchanged": true
+  }
+}

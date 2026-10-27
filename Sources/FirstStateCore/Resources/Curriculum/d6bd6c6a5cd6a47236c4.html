@@ -1,0 +1,999 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_07ba477b-5df7-41a9-bce0-bc44ceab356a"><h2 data-rex-keep="true" data-type="document-title" id="page_07ba477b-5df7-41a9-bce0-bc44ceab356a_titlecreatedbycookbook"><span class="os-number">4.3</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Newton's Second Law of Motion</span>
+</h2>
+<div class="learning-objectives ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm47416528"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Section Learning Objectives</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm15638672">By the end of this section, you will be able to do the following:</p>
+<ul id="fs-idm90795248">
+<li>Describe Newton’s second law, both verbally and mathematically</li>
+<li>Use Newton’s second law to solve problems</li>
+</ul>
+</div></section></div>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-idp14534688"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-idm74395328">The learning objectives in this section will help students master the following standards:</p>
+<ul id="fs-idp8576352">
+<li>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The student is expected to:
+<ul id="fs-idm60653904">
+<li><span>(D)</span> <span>calculate the effect of forces on objects, including the law of inertia, the relationship between force and acceleration, and the nature of force pairs between objects.</span></li>
+</ul>
+</li>
+</ul>
+<p id="fs-id1167064996799">Before beginning this section, review forces, acceleration, acceleration due to gravity (g), friction, inertia, and Newton’s first law.</p>
+</div></section></div>
+<section data-depth="1" id="keyterms"><h3 data-type="title">Section Key Terms</h3> <div class="os-table os-unstyled-container" id="fs-idm75177232"><div class="table-scroll"><table class="unnumbered unstyled section-key-terms" data-id="fs-idm75177232" data-label="" data-summary="The list of Key Terms includes: freefall, Newton's second law of motion, and weight." role="presentation"><tbody>
+<tr>
+<td>freefall</td>
+<td>Newton’s second law of motion</td>
+<td>weight</td>
+</tr>
+</tbody></table></div></div></section>
+<section data-depth="1" id="fs-idp20261488"><h3 data-type="title">Describing Newton’s Second Law of Motion</h3>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-idm72906336"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-idm45977568"><span>[BL]</span><span>[OL]</span> Review the concepts of inertia and Newton’s first law. Explain that, according to Newton’s first law, a change in motion is caused by an external force. For instance, a ball that is pitched changes its speed and direction when it is hit by a bat.</p>
+<p id="fs-idm72414080"><span>[BL]</span><span>[OL]</span><span>[AL]</span> Write the equation for Newton’s second law and show how it can be solved for all three variables, <em data-effect="italics">F</em>, <em data-effect="italics">m</em>, and <em data-effect="italics">a</em>. Explain the practical implications for each case. Ask students how the other two variables would behave if one quantity is held constant.</p>
+<div class="misconception ui-has-child-title" data-type="note" id="fs-idm4606736"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Misconception Alert</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idp8197424">Students might confuse the terms <em data-effect="italics">equal</em> and <em data-effect="italics">proportional</em>.</p>
+</div></section></div>
+</div></section></div><p id="fs-idm90708784">Newton’s first law considered bodies at rest or bodies in motion at a constant <span class="no-emphasis" data-type="term" group-by="v" id="term-00001">velocity</span>. The other state of motion to consider is when an object is moving with a changing velocity, which means a change in the <span class="no-emphasis" data-type="term" group-by="s" id="term-00002">speed</span> and/or the direction of motion. This type of motion is addressed by <span data-type="term" group-by="N" id="term-00003">Newton’s second law of motion</span>, which states how force causes changes in motion. Newton’s second law of motion is used to calculate what happens in situations involving forces and motion, and it shows the mathematical relationship between force, <span class="no-emphasis" data-type="term" group-by="m" id="term-00004">mass</span>, and <span class="no-emphasis" data-type="term" group-by="a" id="term-00005"><em data-effect="italics">acceleration</em></span>. Mathematically, the second law is most often written as</p><div data-label="" data-type="equation" id="fs-idm29174544"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>F</mtext></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mspace width="0.5"></mspace><mtext>or</mtext><mspace width="0.5"></mspace><mtext>Σ</mtext><mstyle mathsize="normal" mathvariant="bold"><mtext>F</mtext></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mtext>,</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>F</mtext></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mspace width="0.5"></mspace><mtext>or</mtext><mspace width="0.5"></mspace><mtext>Σ</mtext><mstyle mathsize="normal" mathvariant="bold"><mtext>F</mtext></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mtext>,</mtext>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">4.2</span>
+</div>
+</div><p id="fs-idp13508224">where <strong>F</strong><sub>net</sub> (or ∑<strong>F</strong>) is the <span class="no-emphasis" data-type="term" group-by="n" id="term-00006">net external force</span>, <em data-effect="italics">m</em> is the mass of the system, and <strong>a</strong> is the acceleration. Note that <strong>F</strong><sub>net</sub> and ∑<strong>F</strong> are the same because the net external force is the sum of all the external forces acting on the system.</p><p id="fs-idm71566832">First, what do we mean by <em data-effect="italics">a change in motion</em>? A change in motion is simply a change in velocity: the speed of an object can become slower or faster, the direction in which the object is moving can change, or both of these variables may change. A change in velocity means, by definition, that an acceleration has occurred. Newton’s first law says that only a nonzero net external force can cause a change in motion, so a net external force must cause an acceleration. Note that acceleration can refer to slowing down or to speeding up. Acceleration can also refer to a change in the direction of motion with no change in speed, because acceleration is the change in velocity divided by the time it takes for that change to occur, <em data-effect="italics">and</em> velocity is defined by speed <em data-effect="italics">and</em> direction.</p><p id="fs-idm91738336">From the equation <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mtext>a</mtext><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mtext>a</mtext><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> we see that force is directly proportional to both mass and acceleration, which makes sense. To accelerate two objects from rest to the same velocity, you would expect more force to be required to accelerate the more massive object. Likewise, for two objects of the same mass, applying a greater force to one would accelerate it to a greater velocity.</p><p id="fs-idm29177680">Now, let’s rearrange Newton’s second law to solve for acceleration. We get</p>
+<div data-label="" data-type="equation" id="fs-idp1417744"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mo>=</mo><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>F</mtext></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow>
+<mi>m</mi>
+</mfrac>
+<mspace width="0.5"></mspace><mtext>or</mtext><mspace width="0.5"></mspace><mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mtext>Σ</mtext><mstyle mathsize="normal" mathvariant="bold"><mtext>F</mtext></mstyle>
+</mrow>
+<mi>m</mi>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mo>=</mo><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>F</mtext></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow>
+<mi>m</mi>
+</mfrac>
+<mspace width="0.5"></mspace><mtext>or</mtext><mspace width="0.5"></mspace><mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mtext>Σ</mtext><mstyle mathsize="normal" mathvariant="bold"><mtext>F</mtext></mstyle>
+</mrow>
+<mi>m</mi>
+</mfrac>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">4.3</span>
+</div>
+</div><p id="fs-idm40744528">In this form, we can see that acceleration is directly proportional to force, which we write as</p>
+<div data-label="" data-type="equation" id="fs-idm54176224"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mo>∝</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>F</mtext></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mo>∝</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>F</mtext></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>,</mo>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">4.4</span>
+</div>
+</div><p id="fs-idm13502704">where the symbol <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mo>∝</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo>∝</mo>
+</mrow></annotation-xml></semantics></math></span> means <em data-effect="italics">proportional to</em>. </p>
+<p id="fs-idm37812128">This <span class="no-emphasis" data-type="term" group-by="p" id="term-00007">proportionality</span> mathematically states what we just said in words: acceleration is directly proportional to the net external force. When two variables are directly proportional to each other, then if one variable doubles, the other variable must double. Likewise, if one variable is reduced by half, the other variable must also be reduced by half. In general, when one variable is multiplied by a number, the other variable is also multiplied by the same number. It seems reasonable that the acceleration of a system should be directly proportional to and in the same direction as the net external force acting on the system. An object experiences greater acceleration when acted on by a greater force.</p><p id="fs-idm13464640">It is also clear from the equation  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mrow><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow><mtext>/</mtext><mi>m</mi></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mrow><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow><mtext>/</mtext><mi>m</mi></mrow>
+</mrow></annotation-xml></semantics></math></span>  that acceleration is inversely proportional to mass, which we write as</p><div data-label="" data-type="equation" id="fs-idm67375568"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mtext> </mtext><mo>∝</mo><mtext> </mtext><mfrac>
+<mn>1</mn>
+<mi>m</mi>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mtext> </mtext><mo>∝</mo><mtext> </mtext><mfrac>
+<mn>1</mn>
+<mi>m</mi>
+</mfrac>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.5</span>
+</div>
+</div>
+<p id="fs-idm64278976"><span class="no-emphasis" data-type="term" group-by="I" id="term-00008"><em data-effect="italics">Inversely proportional</em></span> means that if one variable is multiplied by a number, the other variable must be <em data-effect="italics">divided</em> by the same number. Now, it also seems reasonable that acceleration should be inversely proportional to the mass of the system. In other words, the larger the mass (the inertia), the smaller the acceleration produced by a given force. This relationship is illustrated in <a aria-label="View Figure 4.5" class="autogenerated-content" href="https://openstax.org/books/physics/pages/4-3-newtons-second-law-of-motion#Figure_04_03_basketball">Figure 4.5</a>, which shows that a given net external force applied to a basketball produces a much greater acceleration than when applied to a car.</p><div class="os-figure" id="Figure_04_03_basketball"><figure class="ui-has-child-figcaption" data-id="Figure_04_03_basketball">
+<span data-alt="Three diagrams are shown: a, b, and c. Diagram a shows standing person facing to the right, pushing forward on a basketball. The basketball is labeled m one for mass one. A force vector is labeled F and is pointing to the right. An acceleration vector is labeled a one and is also pointing to the right. Diagram b shows the same person in the same standing position, pushing forward with the same force, but on a car. The car is labeled m two for mass two. A force vector is labeled F and is pointing to the right. An acceleration vector is labeled a two and is also pointing to the right. Diagram c shows free body diagrams for diagrams a and b, illustrating that the free body diagrams are identical because the forces acting on both masses were the same." data-type="media" id="fs-idm22396928">
+<img alt="Three diagrams are shown: a, b, and c. Diagram a shows standing person facing to the right, pushing forward on a basketball. The basketball is labeled m one for mass one. A force vector is labeled F and is pointing to the right. An acceleration vector is labeled a one and is also pointing to the right. Diagram b shows the same person in the same standing position, pushing forward with the same force, but on a car. The car is labeled m two for mass two. A force vector is labeled F and is pointing to the right. An acceleration vector is labeled a two and is also pointing to the right. Diagram c shows free body diagrams for diagrams a and b, illustrating that the free body diagrams are identical because the forces acting on both masses were the same." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/61192c4a135a23fc42b216ba2fd937fb9962e24a" height="347" loading="lazy" src="23e4ebe909b84217b85bb979.webp" width="731"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">4.5</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The same force exerted on systems of different masses produces different accelerations. (a) A boy pushes a basketball to make a pass. The effect of gravity on the ball is ignored. (b) The same boy pushing with identical force on a stalled car produces a far smaller acceleration (friction is negligible). Note that the free-body diagrams for the ball and for the car are identical, which allows us to compare the two situations.</span>
+</figcaption></figure></div>
+</section>
+<section data-depth="1" id="fs-idm86072848"><h3 data-type="title">Applying Newton’s Second Law</h3>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-idm40719536"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-idm71385712"><span>[BL]</span> Review how to convert between units.</p>
+<p id="fs-idm92823792"><span>[OL]</span><span>[AL]</span> Ask students to give examples of Newton’s second law.</p>
+<div class="misconception ui-has-child-title" data-type="note" id="fs-idm59462672"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Misconception Alert</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm64046288">Students might confuse weight, which is a force, and <strong>g</strong>, which is the acceleration due to gravity.</p>
+</div></section></div>
+<p id="fs-idp14154960"><span>[BL]</span><span>[OL]</span><span>[AL]</span> Ask students if they think an astronaut weighs the same on the moon as they do on Earth. Talk about the difference between mass and weight.</p>
+</div></section></div>
+<p id="fs-idm36962208">Before putting Newton’s second law into action, it is important to consider units.
+The equation <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle>
+</mrow></annotation-xml></semantics></math></span> is used to define the units of force in terms of the three basic units of mass, length, and time (recall that acceleration has units of length divided by time squared). The SI unit of force is called the <span class="no-emphasis" data-type="term" group-by="n" id="term-00009">newton</span> (abbreviated N) and is the force needed to accelerate a 1-kg system at the rate of 1 m/s<sup>2</sup>. That is, because  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span>  we have
+</p><div data-label="" data-type="equation" id="fs-idm47289184"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mn>1</mn><mspace width="0.3em"></mspace><mtext>N</mtext><mo>=</mo><mn>1</mn><mspace width="0.3em"></mspace><mtext>kg</mtext><mo>×</mo><mn>1</mn><msup>
+<mrow>
+<mtext>m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>=</mo><mn>1</mn><mfrac>
+<mrow>
+<mtext>kg</mtext><mo>⋅</mo><mtext>m</mtext>
+</mrow>
+<mrow>
+<msup>
+<mtext>s</mtext>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>1</mn><mspace width="0.3em"></mspace><mtext>N</mtext><mo>=</mo><mn>1</mn><mspace width="0.3em"></mspace><mtext>kg</mtext><mo>×</mo><mn>1</mn><msup>
+<mrow>
+<mtext>m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>=</mo><mn>1</mn><mfrac>
+<mrow>
+<mtext>kg</mtext><mo>⋅</mo><mtext>m</mtext>
+</mrow>
+<mrow>
+<msup>
+<mtext>s</mtext>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.6</span>
+</div>
+</div>
+<p id="fs-idm28564592">One of the most important applications of Newton’s second law is to calculate <span data-type="term" group-by="w" id="term-00010">weight</span> (also known as the <span class="no-emphasis" data-type="term" group-by="g" id="term-00011">gravitational force</span>), which is usually represented mathematically as <strong>W</strong>. When people talk about <span class="no-emphasis" data-type="term" group-by="g" id="term-00012">gravity</span>, they don’t always realize that it is an acceleration. When an object is dropped, it accelerates toward the center of Earth. Newton’s second law states that the net external force acting on an object is responsible for the acceleration of the object. If air resistance is negligible, the net external force on a falling object is only the gravitational force (i.e., the weight of the object).</p><p id="fs-idm126881024">Weight can be represented by a <span class="no-emphasis" data-type="term" group-by="v" id="term-00013">vector</span> because it has a direction. Down is defined as the direction in which gravity pulls, so weight is normally considered a downward force. By using Newton’s second law, we can figure out the equation for weight.</p><p id="fs-idm34669744">Consider an object with mass <em data-effect="italics">m</em> falling toward Earth. It experiences only the force of gravity (i.e., the gravitational force or weight), which is represented by W. Newton’s second law states that  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>  Because the only force acting on the object is the gravitational force, we have  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>W</mi></mstyle><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>W</mi></mstyle><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>  We know that the acceleration of an object due to gravity is <strong>g</strong>, so we have  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>  Substituting these two expressions into Newton’s second law gives</p><div data-label="" data-type="equation" id="fs-idm38619600"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>W</mtext></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mtext>g</mtext></mstyle><mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>W</mtext></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mtext>g</mtext></mstyle><mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">4.7</span>
+</div>
+</div><p id="fs-idm13922608">This is the equation for weight—the gravitational force on a mass <em data-effect="italics">m</em>. On Earth,  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mo>=</mo><mn>9.80</mn><msup>
+<mrow>
+<mtext> m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+<mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mo>=</mo><mn>9.80</mn><msup>
+<mrow>
+<mtext> m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+<mo>,</mo>
+</mrow></annotation-xml></semantics></math></span>  so the weight (disregarding for now the direction of the weight) of a 1.0-kg object on Earth is</p><div data-label="" data-type="equation" id="fs-idm46912016"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>W</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mo>=</mo><mtext>(1</mtext><mtext>.0 kg)(9</mtext><msup>
+<mrow>
+<mtext>.80 m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+<mo stretchy="false">)</mo><mo>=</mo><mn>9.8</mn><mspace width="0.3em"></mspace><mtext> N.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>W</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mo>=</mo><mtext>(1</mtext><mtext>.0 kg)(9</mtext><msup>
+<mrow>
+<mtext>.80 m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+<mo stretchy="false">)</mo><mo>=</mo><mn>9.8</mn><mspace width="0.3em"></mspace><mtext> N.</mtext>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">4.8</span>
+</div>
+</div>
+<p id="fs-idm58647840">Although most of the world uses newtons as the unit of force, in the United States the most familiar unit of force is the pound (lb), where 1 N = 0.225 lb.</p>
+<p id="fs-idm40674096">Recall that although gravity acts downward, it can be assigned a positive or negative value, depending on what the positive direction is in your chosen coordinate system. Be sure to take this into consideration when solving problems with weight. When the downward direction is taken to be negative, as is often the case, acceleration due to gravity becomes <strong>–g</strong> = −9.8 m/s<sup>2</sup> and the weight force is –mg.</p><p id="fs-idm73592496">When the net external force on an object is its weight, we say that it is in <span data-type="term" group-by="f" id="term-00014">freefall</span>. In this case, the only force acting on the object is the force of gravity. On the surface of Earth, when objects fall downward toward Earth, they are never truly in freefall because there is always some upward force due to air resistance that acts on the object (and there is also the buoyancy force of air, which is similar to the buoyancy force in water that keeps boats afloat).</p>
+<p id="fs-idm93340096">Gravity varies slightly over the surface of Earth, so the weight of an object depends very slightly on its location on Earth. Weight varies dramatically away from Earth’s surface. On the moon, for example, the acceleration due to gravity is only 1.67 m/s<sup>2</sup>. Because weight depends on the force of gravity, a 1.0-kg mass weighs 9.8 N on Earth and only about 1.7 N on the moon.</p>
+<p id="fs-idm77337856">It is important to remember that weight and mass are very different, although they are closely related. Mass is the quantity of matter in an object (how much <em data-effect="italics">stuff</em> there is, or how hard it is to accelerate it) and does not vary, but weight is the gravitational force on an object and is proportional to the force of gravity. It is easy to confuse the two, because our experience is confined to Earth, and the weight of an object is essentially the same no matter where you are on Earth. Adding to the confusion, the terms mass and weight are often used interchangeably in everyday language; for example, our medical records often show our weight in kilograms, but never in the correct unit of newtons.</p>
+<div class="snap-lab ui-has-child-title" data-type="note" id="fs-idp58007968"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Snap Lab</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Mass and Weight</span>
+</h4>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-idm28126368"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-idm105560704">Explain that even though a scale gives a mass, it actually measures weight. Scales are calibrated to show the correct mass on Earth. They would give different results on the moon, because the force of gravity is weaker on the moon.</p>
+</div></section></div>
+<p id="fs-idm88254704">In this activity, you will use a scale to investigate mass and weight.</p>
+<ul class="materials" id="fs-idm41931024">
+<li>1 bathroom scale</li>
+<li>1 table</li>
+</ul>
+<ol id="fs-idm48444112">
+<li>What do bathroom scales measure?</li>
+<li>When you stand on a bathroom scale, what happens to the scale? It depresses slightly. The scale contains springs that compress in proportion to your weight—similar to rubber bands expanding when pulled.</li>
+<li>The springs provide a measure of your weight (provided you are not accelerating). This is a force in newtons (or pounds). In most countries, the measurement is now divided by 9.80 to give a reading in kilograms, which is a of mass. The scale detects weight but is calibrated to display mass.</li>
+<li>If you went to the moon and stood on your scale, would it detect the same <em data-effect="italics">mass</em> as it did on Earth?</li>
+</ol>
+<div class="os-exercise grasp-check unnumbered ui-has-child-title" data-type="exercise" id="fs-idp13368080"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Grasp Check</span>
+</h3></header><section>
+<div data-type="problem" id="fs-idp10263168"><div class="os-problem-container">
+<!--<para id="fs-idm92816976">
+<link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex034"/>
+</para>-->
+<p id="fs-id1164565745882">While standing on a bathroom scale, push down on a table next to you. What happens to the reading? Why?</p>
+<ol id="fs-id1164565654361" type="a">
+<li>The reading increases because part of your weight is applied to the table and the table exerts a matching force on you that acts in the direction of your weight.</li>
+<li>The reading increases because part of your weight is applied to the table and the table exerts a matching force on you that acts in the direction opposite to your weight.</li>
+<li>The reading decreases because part of your weight is applied to the table and the table exerts a matching force on you that acts in the direction of your weight.</li>
+<li>The reading decreases because part of your weight is applied to the table and the table exerts a matching force on you that acts in the direction opposite to your weight.</li>
+</ol>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="tips-for-success ui-has-child-title" data-type="note" id="fs-idm30747168"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Tips For Success</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm71607600">Only <em data-effect="italics">net external force</em> impacts the acceleration of an object. If more than one force acts on an object and you calculate the acceleration by using only one of these forces, you will not get the correct acceleration for that object.</p></div></section></div>
+<div class="watch-physics ui-has-child-title" data-type="note" id="fs-idm72011248"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Watch Physics</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Newton’s Second Law of Motion</span>
+</h4>
+<p id="fs-idm87061200">This video reviews Newton’s second law of motion and how net external force and acceleration relate to one another and to mass. It also covers units of force, mass, and acceleration, and reviews a worked-out example.</p>
+<p id="para-00001"><a aria-label="Go to Newton's second law of motion | Forces and Newton's laws of motion | Physics | Khan Academy" href="https://openstax.org/l/02newlawtwo" rel="noopener nofollow" target="_blank">Newton's second law of motion | Forces and Newton's laws of motion | Physics | Khan Academy</a></p>
+<div class="os-exercise grasp-check unnumbered ui-has-child-title" data-type="exercise" id="fs-idm60179888"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Grasp Check</span>
+</h3></header><section>
+<div data-type="problem" id="fs-idm101830832"><div class="os-problem-container">
+<!--<para id="fs-idm13995552">
+<link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex035"/>
+</para>-->
+<p id="fs-id1164565409274">True or False —If you want to reduce the acceleration of an object to half its original value, then you would need to reduce the net external force by half.</p>
+<ol id="fs-id1164567634358" type="a">
+<li>True</li>
+<li>False</li>
+</ol>
+</div></div>
+</section></div>
+</div></section></div><div class="worked-example ui-has-child-title" data-type="note" id="fs-idm25204320"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Worked Example</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">What Acceleration Can a Person Produce when Pushing a Lawn Mower?</span>
+</h4>
+<div class="04-ex036 unnumbered" data-label="" data-type="exercise" id="fs-idm65041888"><header></header><section>
+<div data-type="problem" id="fs-idm47345968"><div class="os-problem-container"><p id="fs-idm38094816">Suppose that the net external force (push minus friction) exerted on a lawn mower is 51 N parallel to the ground. The mass of the mower is 240 kg. What is its acceleration?</p>
+<div class="os-figure" id="Figure_04_03_mower_img"><figure class="ui-has-child-figcaption" data-id="Figure_04_03_mower_img">
+<span data-alt="A man is facing to the right and is pushing a lawn mover forward. The force exerted on the lawn mower is labeled with a right-facing vector, F net." data-type="media" id="fs-idp1621360">
+<img alt="A man is facing to the right and is pushing a lawn mover forward. The force exerted on the lawn mower is labeled with a right-facing vector, F net." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/7e9d6cbc37cefad7db0e4c3f32849697efc03535" height="301" loading="lazy" src="92b89af1a2d529d71ed65fc6.webp" width="487"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">4.6</span>
+<span class="os-divider"> </span>
+<span class="os-caption">
+<!-- no-selfclose -->
+</span>
+</figcaption></figure></div>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167065775582"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Strategy</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm80633888">Because <strong>F<sub>net</sub></strong> and <em data-effect="italics">m</em> are given, the acceleration can be calculated directly from Newton’s second law: <strong>F<sub>net</sub></strong> = <em data-effect="italics">m</em><strong>a</strong>.<span data-type="newline"><br/></span></p>
+</div></section></div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-label="" data-type="solution" id="fs-idm39792288">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><div class="os-solution-container"><div data-type="title">Solution</div>
+<p id="fs-idm21754560">Solving Newton’s second law for the acceleration, we find that the magnitude of the acceleration, <strong>a</strong>, is  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow>
+<mi>m</mi>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow>
+<mi>m</mi>
+</mfrac>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>  Entering the given values for net external force and mass gives</p><div data-type="equation" id="fs-id1164565149961"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mn>51</mn><mspace width="0.3em"></mspace><mtext> N</mtext>
+</mrow>
+<mrow>
+<mn>240</mn><mspace width="0.3em"></mspace><mtext> kg</mtext>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mn>51</mn><mspace width="0.3em"></mspace><mtext> N</mtext>
+</mrow>
+<mrow>
+<mn>240</mn><mspace width="0.3em"></mspace><mtext> kg</mtext>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.9</span>
+</div>
+</div><p id="fs-idm66007552">Inserting the units  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>kg</mtext><mo>⋅</mo><msup>
+<mrow>
+<mtext>m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>kg</mtext><mo>⋅</mo><msup>
+<mrow>
+<mtext>m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+</mrow></annotation-xml></semantics></math></span>  for N yields</p><div data-type="equation" id="fs-id1164565054727"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mn>51</mn><mspace width="0.3em"></mspace><mtext> kg</mtext><mo>⋅</mo><msup>
+<mrow>
+<mtext>m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+</mrow>
+<mrow>
+<mn>240</mn><mspace width="0.3em"></mspace><mtext> kg</mtext>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>0.21</mn><msup>
+<mrow>
+<mtext> m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+<mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mn>51</mn><mspace width="0.3em"></mspace><mtext> kg</mtext><mo>⋅</mo><msup>
+<mrow>
+<mtext>m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+</mrow>
+<mrow>
+<mn>240</mn><mspace width="0.3em"></mspace><mtext> kg</mtext>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>0.21</mn><msup>
+<mrow>
+<mtext> m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+<mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.10</span>
+</div>
+</div></div></section>
+</details>
+<div data-type="commentary" id="fs-idp14123632"><div data-type="title">Discussion</div>
+<p id="fs-idm23247552">The acceleration is in the same direction as the net external force, which is parallel to the ground and to the right. There is no information given in this example about the individual external forces acting on the system, but we can say something about their relative magnitudes. For example, the force exerted by the person pushing the mower must be greater than the friction opposing the motion, because we are given that the net external force is in the direction in which the person pushes. Also, the vertical forces must cancel if there is no acceleration in the vertical direction (the mower is moving only horizontally). The acceleration found is reasonable for a person pushing a mower; the mower’s speed must increase by 0.21 m/s every second, which is possible. The time during which the mower accelerates would not be very long because the person’s top speed would soon be reached. At this point, the person could push a little less hard, because he only has to overcome friction.</p>
+</div>
+</section></div></div></section></div>
+<div class="worked-example ui-has-child-title" data-type="note" id="fs-idm79724688"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Worked Example</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">What Rocket Thrust Accelerates This Sled?</span>
+</h4>
+<div class="04-ex037 unnumbered" data-label="" data-type="exercise" id="fs-idm67694736"><header></header><section>
+<div data-type="problem" id="fs-idm46702736"><div class="os-problem-container"><p id="fs-idm46884768">Prior to manned space flights, rocket sleds were used to test aircraft, missile equipment, and physiological effects on humans at high accelerations. Rocket sleds consisted of a platform mounted on one or two rails and propelled by several rockets. Calculate the magnitude of force exerted by each rocket, called its thrust, <strong>T</strong>, for the four-rocket propulsion system shown below. The sled’s initial acceleration is  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>49</mn><msup>
+<mrow>
+<mtext> m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+<mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>49</mn><msup>
+<mrow>
+<mtext> m/s</mtext>
+</mrow>
+<mtext>2</mtext>
+</msup>
+<mo>,</mo>
+</mrow></annotation-xml></semantics></math></span>  the mass of the system is 2,100 kg, and the force of friction opposing the motion is 650 N.
+</p><div class="os-figure" id="Figure_04_03_rocket_img"><figure class="ui-has-child-figcaption" data-id="Figure_04_03_rocket_img">
+<span data-alt="An accelerating right-facing rocket sled is shown on tracks. Four thrust force vectors are behind the sled and are pointing to the right. An acceleration vector is above the sled and is pointing to the right. A friction force vector is in front of the sled and is pointing to the left. A Newton vector is below the sled and is pointing upward. A weight vector is also below the sled and is pointing downward. A free body diagram illustrates the force vectors." data-type="media" id="fs-idm28637824">
+<img alt="An accelerating right-facing rocket sled is shown on tracks. Four thrust force vectors are behind the sled and are pointing to the right. An acceleration vector is above the sled and is pointing to the right. A friction force vector is in front of the sled and is pointing to the left. A Newton vector is below the sled and is pointing upward. A weight vector is also below the sled and is pointing downward. A free body diagram illustrates the force vectors." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/4fbd8e0f91f2743410fee47978931bf4715f97ef" height="398" loading="lazy" src="bc9da40b35423ec2bfb5b25f.webp" width="488"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">4.7</span>
+<span class="os-divider"> </span>
+<span class="os-caption">
+<!-- no-selfclose -->
+</span>
+</figcaption></figure></div>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167065838153"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Strategy</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm84954848">The system of interest is the rocket sled. Although forces act vertically on the system, they must cancel because the system does not accelerate vertically. This leaves us with only horizontal forces to consider. We’ll assign the direction to the right as the positive direction. See the free-body diagram in Figure 4.8.</p>
+</div></section></div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-label="" data-type="solution" id="fs-idm73510992">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><div class="os-solution-container"><div data-type="title">Solution</div>
+<p id="fs-idm4203472">We start with Newton’s second law and look for ways to find the thrust <strong>T</strong> of the engines. Because all forces and acceleration are along a line, we need only consider the magnitudes of these quantities in the calculations. We begin with</p>
+<div data-type="equation" id="fs-idm13258160"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>,</mo>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">4.11</span>
+</div>
+</div><p id="fs-idp4832896">where  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span>  is the net external force in the horizontal direction. We can see from Figure 4.8 that the engine thrusts are in the same direction (which we call the positive direction), whereas friction opposes the thrust. In equation form, the net external force is</p>
+<div data-type="equation" id="fs-id1164567106550"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mn>4</mn><mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>−</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mn>4</mn><mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>−</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mo>.</mo>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.12</span>
+</div>
+</div>
+<p id="fs-idm79392576">Newton’s second law tells us that <strong>F</strong><sub>net</sub>= <em data-effect="italics">m</em><strong>a</strong>, so we get</p>
+<div data-type="equation" id="fs-id1164566066008"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mn>4</mn><mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>−</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mn>4</mn><mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>−</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mo>.</mo>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.13</span>
+</div>
+</div>
+<p id="fs-idm84602592">After a little algebra, we solve for the total thrust 4<strong>T</strong>:</p>
+<div data-type="equation" id="fs-id1164567318399"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mn>4</mn><mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>4</mn><mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mo>,</mo>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.14</span>
+</div>
+</div><p id="fs-idm68225184">which means that the individual thrust is</p>
+<div data-type="equation" id="fs-id1164566093142"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle>
+</mrow>
+<mn>4</mn>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle>
+</mrow>
+<mn>4</mn>
+</mfrac>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.15</span>
+</div>
+</div><p id="fs-idp13367440">Inserting the known values yields </p>
+<div data-type="equation" id="fs-id1164564471610"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mn>2100</mn><msup>
+<mrow>
+<mtext> kg)(49 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo stretchy="false">)</mo><mo>+</mo><mn>650</mn><mspace width="0.3em"></mspace><mtext> N</mtext>
+</mrow>
+<mn>4</mn>
+</mfrac>
+<mo>=</mo><mn>2.6</mn><mo>×</mo><msup>
+<mrow>
+<mn>10</mn>
+</mrow>
+<mn>4</mn>
+</msup>
+<mtext> N</mtext><mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mn>2100</mn><msup>
+<mrow>
+<mtext> kg)(49 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo stretchy="false">)</mo><mo>+</mo><mn>650</mn><mspace width="0.3em"></mspace><mtext> N</mtext>
+</mrow>
+<mn>4</mn>
+</mfrac>
+<mo>=</mo><mn>2.6</mn><mo>×</mo><msup>
+<mrow>
+<mn>10</mn>
+</mrow>
+<mn>4</mn>
+</msup>
+<mtext> N</mtext><mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.16</span>
+</div>
+</div>
+</div></section>
+</details>
+<div data-type="commentary" id="fs-idm27254896"><div data-type="title">Discussion</div>
+<p id="fs-idm70514512">The numbers are quite large, so the result might surprise you. Experiments such as this were performed in the early 1960s to test the limits of human endurance and to test the apparatus designed to protect fighter pilots in emergency ejections. Speeds of 1000 km/h were obtained, with accelerations of 45 <strong>g</strong>. (Recall that g, the acceleration due to gravity, is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>9</mtext><msup>
+<mrow>
+<mtext>.80 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>9</mtext><msup>
+<mrow>
+<mtext>.80 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>  An acceleration of 45 <strong>g</strong> is  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>45</mtext><mspace width="0.25em"></mspace><mo>×</mo><mspace width="0.25em"></mspace><mtext>9</mtext><msup>
+<mrow>
+<mtext>.80 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mtext>,</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>45</mtext><mspace width="0.25em"></mspace><mo>×</mo><mspace width="0.25em"></mspace><mtext>9</mtext><msup>
+<mrow>
+<mtext>.80 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mtext>,</mtext>
+</mrow></annotation-xml></semantics></math></span>  which is approximately  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mrow>
+<mtext>440 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mrow>
+<mtext>440 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> ) Living subjects are no longer used, and land speeds of 10,000 km/h have now been obtained with rocket sleds. In this example, as in the preceding example, the system of interest is clear. We will see in later examples that choosing the system of interest is crucial—and that the choice is not always obvious.</p></div>
+</section></div></div></section></div></section>
+<section class="practice-problems" data-depth="1" id="fs-idm119098912"><h3 data-type="title">Practice Problems</h3><div data-type="exercise" id="fs-id1167066054738"><header></header><section>
+<div data-type="problem" id="fs-idm73272384">
+<span class="os-number">9</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-idm76094704">
+<link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex038"/>
+</para>-->
+<p id="fs-id1164567160503">If 1 N is equal to 0.225 lb, how many pounds is 5 N of force?</p>
+<ol id="fs-id1164566979670" type="a">
+<li>0.045 lb</li>
+<li>1.125 lb</li>
+<li>2.025 lb</li>
+<li>5.000 lb</li>
+</ol>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1167064774755"><header></header><section>
+<div data-type="problem" id="fs-idm73550768">
+<span class="os-number">10</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-idm96981984">
+<link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex039"/>
+</para>-->
+<p id="fs-id1164567129743">How much force needs to be applied to a 5-kg object for it to accelerate at 20 m/s<sup>2</sup>?</p>
+<ol id="fs-id1164567800042" type="a">
+<li>1 N</li>
+<li>10 N</li>
+<li>100 N</li>
+<li>1,000 N</li>
+</ol>
+</div>
+</div>
+</section></div>
+</section>
+<section class="check-understanding" data-depth="1" id="fs-idm70911008"><h3 data-type="title">Check Your Understanding</h3><div class="os-teacher ui-has-child-title" data-type="note" id="fs-idp19864976"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-idm145965616">Use the questions in <em data-effect="italics">Check Your Understanding</em> to assess whether students have achieved the section learning objectives. If students are struggling with a specific objective, the <em data-effect="italics">Check Your Understanding</em> assessment will help identify which is causing the problem and direct students to the relevant content.</p></div></section></div>
+<div class="os-exercise" data-type="exercise" id="fs-idm72827552"><header></header><section><div data-type="problem" id="fs-idm46762016">
+<span class="os-number">11</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-idm29965680"><link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex040"/></para>-->
+<p id="fs-id1164565308880">What is the mathematical statement for Newton’s second law of motion?</p>
+<ol id="fs-id1164567999495" type="a">
+<li>F = <em data-effect="italics">m</em>a</li>
+<li>F = 2<em data-effect="italics">m</em>a</li>
+<li> <math display="inline"><semantics><mrow>
+<mrow>
+<mtext>F</mtext><mo>=</mo><mfrac>
+<mi>m</mi>
+<mtext>a</mtext>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>F</mtext><mo>=</mo><mfrac>
+<mi>m</mi>
+<mtext>a</mtext>
+</mfrac>
+</mrow></annotation-xml></semantics></math> </li>
+<li>F = <em data-effect="italics">m</em>a<sup>2</sup></li>
+</ol>
+</div>
+</div></section></div>
+<div class="os-exercise" data-type="exercise" id="fs-idm47302048"><header></header><section><div data-type="problem" id="fs-idm38755792">
+<span class="os-number">12</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-idm145850304"><link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex041"/></para>-->
+<p id="fs-id1164566007185">Newton’s second law describes the relationship between which quantities?</p>
+<ol id="fs-id1164567248442" type="a">
+<li>Force, mass, and time</li>
+<li>Force, mass, and displacement</li>
+<li>Force, mass, and velocity</li>
+<li>Force, mass, and acceleration</li>
+</ol>
+</div>
+</div></section></div>
+<div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch04-ot037" data-injected-from-version="9" data-is-vocab="false" data-tags="os-practice-concepts k12phys-ch04-s03 k12phys-ch04-s03-lo01 k12phys-ch04-ot037 lo:stax-phys:4-3-2 context-cnxmod:f4f0fa55-646a-4c18-b7ff-fac5bd4759f3 type:conceptual-or-recall context-cnxmod:920725c6-229b-4f50-870b-b87366ce4f9e context-cnxmod:ddb573f3-3ef8-4bc7-8169-2bf9c35b7bad aplo:stax-apphys:4.A.2.2 aplo:stax-apphys:4.A.1.1 aplo:stax-apphys:3.B.1.1 k12phys-ch04 aplo:stax-apphys:1.C.1.1 dok:1 k12phys book:stax-phys book:stax-k12phys book:stax-apphys time:short science-practice:argumentation filter-type:import:hs tutor-only book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:4-3-newtons-second-law-of-motion-concept-of-a-system assignment-type:reading blooms:1" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="515359"><span class="os-number">13</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">What is acceleration?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Acceleration is the rate at which displacement changes.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Acceleration is the rate at which force changes.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Acceleration is the rate at which velocity changes.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Acceleration is the rate at which mass changes.</div>
+</li>
+</ol>
+</div>
+</div>
+</div></section>
+</div></article><footer><p>Adapted from OpenStax, Physics, 4.3 Newton&#x27;s Second Law of Motion. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/physics/pages/4-3-newtons-second-law-of-motion">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a></p></footer></body></html>

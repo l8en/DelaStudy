@@ -1,0 +1,72 @@
+{
+  "verifiedOn": "2026-10-26",
+  "file": "DelaStudy-Code-Walkthrough.mp4",
+  "durationSeconds": 168,
+  "width": 1920,
+  "height": 1080,
+  "videoTracks": 1,
+  "audioTracks": 0,
+  "codec": "avc1",
+  "bytes": 38303075,
+  "sha256": "b502a2cbf5bd31c23427e2f3b5d35d7d5ad081be3677fb74c77db343a28acad2",
+  "background": "White (#FFFFFF render background)",
+  "phoneFootage": "Original iPhone 14 Simulator recording, with a composited DelaStudy credit and two trimmed navigation transitions.",
+  "codeWindowCount": 8,
+  "sourceExcerptPolicy": "Read directly from the project's current source files at render time. Shared indentation is removed and lines wrap visually; source tokens are not rewritten.",
+  "sourceFiles": [
+    {
+      "path": "FirstStateLens/CourseCatalogView.swift",
+      "sha256": "24b9ebfe76181a778de9669dadddba98e061fa860bb9331ae86bf154198b4ec1"
+    },
+    {
+      "path": "FirstStateLens/BiteLessonView.swift",
+      "sha256": "36fffb65d4c79530d8d2369c631769c5301d4d28bce4969a50e78800086616cc"
+    },
+    {
+      "path": "FirstStateLens/ReadingCheckView.swift",
+      "sha256": "0c5dc0693cfa9d52694461de1da7b4c6f0116ec2c6e048cc2bf3cb43c12eb1c3"
+    },
+    {
+      "path": "FirstStateLens/CourseResourcesView.swift",
+      "sha256": "3fca3d586db988ce5955a0087f51ac703c2bcf9d31c527ce66ff015e45644601"
+    },
+    {
+      "path": "FirstStateLens/AppModel.swift",
+      "sha256": "d20011b8353a337cd3f89b63177b9fdce0c64c82f2d975107ea0faaae7e659d7"
+    },
+    {
+      "path": "Sources/FirstStateCore/Workspace.swift",
+      "sha256": "2acf1c0ab11e4f217fea081adcc91cf371ee193b2b7698cdd5eb7361ac5a7da2"
+    },
+    {
+      "path": "Sources/FirstStateCore/LearnerMetrics.swift",
+      "sha256": "1388e609566c02485dd2a6bb4d31537e1e5c9faa6ecdaa576921c19c76d81b0b"
+    }
+  ],
+  "spokenPresenterNotesWords": 363,
+  "checked": [
+    "Native Swift renderer compiles.",
+    "Source ranges are validated against their actual files before rendering.",
+    "Every chapter midpoint decoded; all eight source windows visually reviewed.",
+    "Full-size practice and Focus frames reviewed for syntax readability and clipping.",
+    "Popup entrance and post-exit frames reviewed for animated visibility.",
+    "Closing frame decoded at 167 seconds with no caption or lingering code window.",
+    "No audio track included.",
+    "No presentation titles, marketing copy, footer, branding or progress rail rendered.",
+    "Phone walkthrough is not obscured by the code windows.",
+    "Original exports preserved; no production app files or user account data changed in this revision.",
+    "git diff --check passed."
+  ],
+  "limitations": [
+    "The Mac-style editor windows are explanatory overlays, not interactive editor recordings.",
+    "The app footage remains Simulator evidence, not new physical-device testing.",
+    "The source excerpts show selected functions, not complete standalone programs.",
+    "This is a local video export, not a publicly hosted video."
+  ],
+  "brandingRevision": {
+    "appName": "DelaStudy",
+    "description": "DelaStudy branding applied to public filenames, titles, scripts and lesson credit. Two navigation transitions trimmed; all scene durations and study interactions preserved.",
+    "creditsComposited": true,
+    "projectIdentifiersUnchanged": true
+  }
+}

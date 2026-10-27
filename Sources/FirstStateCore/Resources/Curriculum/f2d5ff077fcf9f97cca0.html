@@ -1,0 +1,4651 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_4f8c959d-d5aa-491b-a70e-c8d23285744c"><h2 data-rex-keep="true" data-type="document-title" id="page_4f8c959d-d5aa-491b-a70e-c8d23285744c_titlecreatedbycookbook"><span class="os-number">3.5</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Dividing Polynomials</span>
+</h2><div class="ui-has-child-title" data-type="abstract"><header><h3 data-type="title">Learning Objectives</h3></header><section><p id="para-00001">In this section, you will:</p><ul id="list-00001">
+<li>Use long division to divide polynomials.</li>
+<li>Use synthetic division to divide polynomials.</li>
+</ul></section></div>
+<div class="os-figure" id="Figure_03_05_001"><figure class="ui-has-child-figcaption" data-id="Figure_03_05_001"><span data-alt="Lincoln Memorial." data-type="media" id="fs-id1165137831283">
+<img alt="Lincoln Memorial." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/975951a618866688496b5d19f096409c6269b2d1" height="286" loading="lazy" src="0af663e79d995812f2b02934.webp" width="488"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">1</span>
+<span class="os-divider"> </span>
+<span class="os-caption">Lincoln Memorial, Washington, D.C. (credit: Ron Cogswell, Flickr)</span>
+</figcaption></figure></div><p class="has-noteref" id="fs-id1165135382145">The exterior of the Lincoln Memorial in Washington, D.C., is a large rectangular solid with length 61.5 meters (m), width 40 m, and height 30 m.<sup data-type="footnote-number" id="footnote-ref1"><a aria-label="Go to 1" data-type="footnote-link" epub:type="noteref" href="https://openstax.org/books/precalculus-2e/pages/3-5-dividing-polynomials#fs-id1165135149061" role="doc-noteref">1</a></sup> We can easily find the volume using elementary geometry.</p><div class="unnumbered" data-label="" data-type="equation" id="eip-435"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mi>V</mi><mo>=</mo><mi>l</mi><mo>⋅</mo><mi>w</mi><mo>⋅</mo><mi>h</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>  </mtext><mo>=</mo><mn>61.5</mn><mo>⋅</mo><mn>40</mn><mo>⋅</mo><mn>30</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>  </mtext><mo>=</mo><mn>73,800</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mi>V</mi><mo>=</mo><mi>l</mi><mo>⋅</mo><mi>w</mi><mo>⋅</mo><mi>h</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>  </mtext><mo>=</mo><mn>61.5</mn><mo>⋅</mo><mn>40</mn><mo>⋅</mo><mn>30</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>  </mtext><mo>=</mo><mn>73,800</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1165133214948">So the volume is 73,800 cubic meters <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>m</mtext><mo>³</mo>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>m</mtext><mo>³</mo>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span>
+   Suppose we knew the volume, length, and width. We could divide to find the height.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-312"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mi>h</mi><mo>=</mo><mfrac>
+<mi>V</mi>
+<mrow>
+<mi>l</mi><mo>⋅</mo><mi>w</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>  </mtext><mo>=</mo><mfrac>
+<mrow>
+<mn>73</mn><mo>,</mo><mn>800</mn>
+</mrow>
+<mrow>
+<mn>61.5</mn><mo>⋅</mo><mn>40</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>  </mtext><mo>=</mo><mn>30</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mi>h</mi><mo>=</mo><mfrac>
+<mi>V</mi>
+<mrow>
+<mi>l</mi><mo>⋅</mo><mi>w</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>  </mtext><mo>=</mo><mfrac>
+<mrow>
+<mn>73</mn><mo>,</mo><mn>800</mn>
+</mrow>
+<mrow>
+<mn>61.5</mn><mo>⋅</mo><mn>40</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>  </mtext><mo>=</mo><mn>30</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1165137892463">As we can confirm from the dimensions above, the height is 30 m. We can use similar methods to find any of the missing dimensions. We can also use the same method if any or all of the measurements contain variable expressions. For example, suppose the volume of a rectangular solid is given by the polynomial <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>33</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>54</mn><mi>x</mi><mo>.</mo></mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>33</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>54</mn><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span>
+   The length of the solid is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>;</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><mi>x</mi><mo>;</mo>
+</mrow></annotation-xml></semantics></math></span>
+   the width is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>−</mo><mn>2.</mn>
+</mrow></annotation-xml></semantics></math></span>    To find the height of the solid, we can use polynomial division, which is the focus of this section.</p><section data-depth="1" id="fs-id1165137676949"><h3 data-type="title">Using Long Division to Divide Polynomials</h3><p id="fs-id1165135191647">We are familiar with the <span class="no-emphasis" data-type="term" group-by="l" id="term-00001">long division</span> algorithm for ordinary arithmetic. We begin by dividing into the digits of the dividend that have the greatest place value. We divide, multiply, subtract, include the digit in the next place value position, and repeat. For example, let’s divide 178 by 3 using long division.</p>
+<span data-alt="Steps of long division for intergers." data-display="block" data-type="media" id="fs-id1165137564295">
+<img alt="Steps of long division for intergers." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/a3075d8a73f65e2ad04180a05fdea0723dc8cef6" height="181" loading="lazy" src="804e6bfd03259f33a10b4f83.webp" width="487"/>
+</span>
+<p id="fs-id1165134170235">Another way to look at the solution is as a sum of parts. This should look familiar, since it is the same method used to check division in elementary arithmetic.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-474"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>dividend = </mtext><mo stretchy="false">(</mo><mtext>divisor </mtext><mo>⋅</mo><mtext> quotient</mtext><mo stretchy="false">)</mo><mtext> + remainder</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow><mspace width="0.5em"></mspace><mn>178</mn><mo>=</mo><mo stretchy="false">(</mo><mn>3</mn><mo>⋅</mo><mn>59</mn><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow><mspace width="0.5em"></mspace><mo>=</mo><mn>177</mn><mo>+</mo><mn>1</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow><mspace width="0.5em"></mspace><mo>=</mo><mn>178</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>dividend = </mtext><mo stretchy="false">(</mo><mtext>divisor </mtext><mo>⋅</mo><mtext> quotient</mtext><mo stretchy="false">)</mo><mtext> + remainder</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow><mspace width="0.5em"></mspace><mn>178</mn><mo>=</mo><mo stretchy="false">(</mo><mn>3</mn><mo>⋅</mo><mn>59</mn><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow><mspace width="0.5em"></mspace><mo>=</mo><mn>177</mn><mo>+</mo><mn>1</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow><mspace width="0.5em"></mspace><mo>=</mo><mn>178</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1165137640958">We call this the <strong>Division Algorithm </strong>and will discuss it more formally after looking at an example.</p>
+<p id="fs-id1165137933942">Division of polynomials that contain more than one term has similarities to long division of whole numbers. We can write a polynomial dividend as the product of the divisor and the quotient added to the remainder. The terms of the polynomial division correspond to the digits (and place values) of the whole number division. This method allows us to divide two polynomials. For example, if we were to divide <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow></annotation-xml></semantics></math></span>     by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math></span>
+    using the long division algorithm, it would look like this:
+
+ </p><span data-alt="Steps of long division for polynomials." data-display="block" data-type="media" id="eip-id1167404718588">
+<img alt="Steps of long division for polynomials." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/6405515967a5671cb5ff219ec9a60a7a5aa0be94" height="324" loading="lazy" src="f3b218c98590081a9753ee67.webp" width="400"/>
+</span><p id="fs-id1165135191694">We have found</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-334"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>7</mn><mi>x</mi><mo>+</mo><mn>18</mn><mo>−</mo><mfrac>
+<mrow>
+<mn>31</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>7</mn><mi>x</mi><mo>+</mo><mn>18</mn><mo>−</mo><mfrac>
+<mrow>
+<mn>31</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1165137823279">or</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-212"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow><mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow>
+<mo>=</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>7</mn><mi>x</mi><mo>+</mo><mn>18</mn><mo stretchy="false">)</mo><mo>−</mo><mn>31</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow><mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn></mrow>
+<mo>=</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>7</mn><mi>x</mi><mo>+</mo><mn>18</mn><mo stretchy="false">)</mo><mo>−</mo><mn>31</mn>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1165135181270">We can identify the <span class="no-emphasis" data-type="term" group-by="d" id="term-00002">dividend</span>, the <span class="no-emphasis" data-type="term" group-by="d" id="term-00003">divisor</span>, the <span class="no-emphasis" data-type="term" group-by="q" id="term-00004">quotient</span>, and the <span class="no-emphasis" data-type="term" group-by="r" id="term-00005">remainder</span>.</p>
+<span data-alt="Identifying the dividend, divisor, quotient and remainder of the polynomial 2x^3-3x^2+4x+5, which is the dividend." data-display="block" data-type="media" id="fs-id1165134164979">
+<img alt="Identifying the dividend, divisor, quotient and remainder of the polynomial 2x^3-3x^2+4x+5, which is the dividend." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/fdefee7ce7430fca380493b18debaba5cf907531" height="99" loading="lazy" src="95ff3009c16f3d949dad0d00.webp" width="487"/>
+</span>
+<p id="fs-id1165135508592">Writing the result in this manner illustrates the Division Algorithm.</p>
+<div class="ui-has-child-title" data-type="note" id="fs-id1165135508595"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">The Division Algorithm</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1165137854177">The <span data-type="term" group-by="D" id="term-00006">Division Algorithm</span> states that, given a polynomial dividend <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>
+     and a non-zero polynomial divisor <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>      where the degree of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>      is less than or equal to the degree of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span>      there exist unique polynomials <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>      and <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>      such that</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1165135320405"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1165137664631"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>
+     is the quotient and <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>      is the remainder. The remainder is either equal to zero or has degree strictly less than <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+<p id="fs-id1165134540113">If <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>r</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span>
+     then <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>      divides evenly into <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>      This means that, in this case, both <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>d</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>      and <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>q</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>      are factors of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div></section></div><div class="how-to-notitle ui-has-child-title" data-has-label="true" data-label="How To" data-type="note" id="fs-id1165135638531"><header><h3 class="os-title" data-label-parent="How To" data-type="title">
+<span class="os-title-label">How To</span>
+</h3></header><section>
+<div class="os-note-body">
+<strong>Given a polynomial and a binomial, use long division to divide the polynomial by the binomial.</strong>
+<ol id="eip-id1165134557348" type="1">
+<li>Set up the division problem.</li>
+<li>Determine the first term of the quotient by dividing the leading term of the dividend by the leading term of the divisor.</li>
+<li>Multiply the answer by the divisor and write it below the like terms of the dividend.</li>
+<li>Subtract the bottom <span class="no-emphasis" data-type="term" group-by="b" id="term-00007">binomial</span> from the top binomial.</li>
+<li>Bring down the next term of the dividend.</li>
+<li>Repeat steps 2–5 until reaching the last term of the dividend.</li>
+<li>If the remainder is non-zero, express as a fraction using the divisor as the denominator.</li></ol>
+</div></section></div><div class="ui-has-child-title" data-type="example" id="Example_03_05_01"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">1</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><div class="unnumbered" data-type="exercise" id="fs-id1165137817675"><header></header><section><div data-type="problem" id="fs-id1165137817678"><div class="os-problem-container"><h4 data-type="title">Using Long Division to Divide a Second-Degree Polynomial</h4>
+<p id="fs-id1165137817683">Divide <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math></span>        by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow><mi>x</mi><mo>+</mo><mn>1.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi><mo>+</mo><mn>1.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1165135196885">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<span data-alt="Steps of long division for polynomials." data-display="block" data-type="media" id="eip-id1169254772605">
+<img alt="Steps of long division for polynomials." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/4bb541c24739a5393546f9b9b66831c8b9626fc2" height="203" loading="lazy" src="ff839238590b356f861a25fb.webp" width="300"/>
+</span><p id="fs-id1165137639118">The quotient is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>5</mn><mi>x</mi><mo>−</mo><mn>2.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>5</mn><mi>x</mi><mo>−</mo><mn>2.</mn>
+</mrow></annotation-xml></semantics></math></span>       The remainder is 0. We write the result as</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-id1165137701865"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1165134058382">or</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-id1165135533774"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo>=</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mn>5</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo>=</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mn>5</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></div>
+</div></div>
+</section>
+</details>
+<div data-type="commentary" id="fs-id1165132950610"><h4 data-type="commentary-title"><span class="os-title-label">Analysis </span></h4>
+<p id="fs-id1165135372071">This division problem had a remainder of 0. This tells us that the dividend is divided evenly by the divisor, and that the divisor is a factor of the dividend.</p>
+</div>
+</section></div></div></section></div><div class="ui-has-child-title" data-type="example" id="Example_03_05_02"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1165135372082"><header></header><section><div data-type="problem" id="fs-id1165135372084"><div class="os-problem-container"><h4 data-type="title">Using Long Division to Divide a Third-Degree Polynomial</h4>
+<p id="fs-id1165134352552">Divide <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>11</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>31</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>11</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>31</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow></annotation-xml></semantics></math></span>
+by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>2.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>2.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1165135503914">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<span data-alt="Steps of long division for polynomials." data-display="block" data-type="media" id="eip-id1169251430931">
+<img alt="Steps of long division for polynomials." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/5c1d58c86d624bbd19a2d68e7c4725b1ef41655f" height="128" loading="lazy" src="cea81a33f22c6be56107ad87.webp" width="600"/>
+</span><p id="fs-id1165135639821">There is a remainder of 1. We can express the result as:</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-id1165134294806"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>11</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>31</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>7</mn><mo>+</mo><mfrac>
+<mn>1</mn>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>11</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>31</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>7</mn><mo>+</mo><mfrac>
+<mn>1</mn>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div>
+</div></div>
+</section>
+</details>
+<div data-type="commentary" id="fs-id1165135340591"><h4 data-type="commentary-title"><span class="os-title-label">Analysis </span></h4>
+<p id="fs-id1165135340597">We can check our work by using the Division Algorithm to rewrite the solution. Then multiply.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-id1165135428302"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>7</mn><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn><mo>=</mo><mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>11</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>31</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>7</mn><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn><mo>=</mo><mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>11</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>31</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1165135152076">Notice, as we write our result,</p>
+<ul id="fs-id1165135152079"><li>the dividend is <math display="inline"><semantics><mrow>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>11</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>31</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>11</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>31</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow></annotation-xml></semantics></math>
+</li>
+<li>the divisor is <math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math>
+</li>
+<li>the quotient is <math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>7</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>7</mn>
+</mrow></annotation-xml></semantics></math>
+</li>
+<li>the remainder is <math display="inline"><semantics><mrow>
+<mrow>
+<mn>1</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>1</mn>
+</mrow></annotation-xml></semantics></math>
+</li>
+</ul></div>
+</section></div></div></section></div>
+<div class="precalculus try ui-has-child-title" data-has-label="true" data-label="Try It" data-type="note" id="fs-id1165134042317"><header><h3 class="os-title" data-label-parent="Try It">
+<span class="os-title-label">Try It </span>
+<span class="os-number">#1</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="ti_03_05_01"><header></header><section>
+<div data-type="problem" id="fs-id1165135545762"><div class="os-problem-container"><p id="fs-id1165135545763">Divide <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>16</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>12</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>20</mn><mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>16</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>12</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>20</mn><mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow></annotation-xml></semantics></math></span>
+by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>4</mn><mi>x</mi><mo>+</mo><mn>5.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>4</mn><mi>x</mi><mo>+</mo><mn>5.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div></div>
+</section></div>
+</div></section></div>
+</section><section data-depth="1" id="fs-id1165137932621"><h3 data-type="title">Using Synthetic Division to Divide Polynomials</h3><p id="fs-id1165137932627">As we’ve seen, long division of polynomials can involve many steps and be quite cumbersome. <strong>Synthetic division</strong> is a shorthand method of dividing polynomials for the special case of dividing by a linear factor whose leading coefficient is 1.</p>
+<p id="fs-id1165137932636">To illustrate the process, recall the example at the beginning of the section.</p>
+<p id="fs-id1165137932639">Divide <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow></annotation-xml></semantics></math></span>
+by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math></span>
+using the long division algorithm.</p>
+<p id="fs-id1165135170412">The final form of the process looked like this:</p>
+<span data-alt="A polynomial long division problem showing (2x^3 - 3x^2 + 4x + 5) divided by (x + 2), resulting in a quotient of (2x^2 - 7x + 18) and a remainder of -31." data-display="block" data-type="media" id="eip-id1163740536072">
+<img alt="A polynomial long division problem showing (2x^3 - 3x^2 + 4x + 5) divided by (x + 2), resulting in a quotient of (2x^2 - 7x + 18) and a remainder of -31." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/3b234ea3bc0eac29d1cf9ca1ff2f70fba76ca79b" height="153" loading="lazy" src="8905290c2049d47c86eff5c2.webp" width="250"/>
+</span><p id="fs-id1165137932377">There is a lot of repetition in the table. If we don’t write the variables but, instead, line up their coefficients in columns under the division sign and also eliminate the partial products, we already have a simpler version of the entire problem.</p>
+<span data-alt="Synthetic division of the polynomial 2x^3-3x^2+4x+5 by x+2 in which it only contains the coefficients of each polynomial." data-display="block" data-type="media" id="fs-id1165134305375">
+<img alt="Synthetic division of the polynomial 2x^3-3x^2+4x+5 by x+2 in which it only contains the coefficients of each polynomial." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/6e0d0074905bf0272d1d4cbe2690e6009aa46409" height="110" loading="lazy" src="3329aae5b94ea98dfd898531.webp" width="487"/>
+</span>
+<p id="fs-id1165134305388">Synthetic division carries this simplification even a few more steps. Collapse the table by moving each of the rows up to fill any vacant spots. Also, instead of dividing by 2, as we would in division of whole numbers, then multiplying and subtracting the middle product, we change the sign of the “divisor” to –2, multiply and add. The process starts by bringing down the leading coefficient.</p>
+<span data-alt="Synthetic division of the polynomial 2x^3-3x^2+4x+5 by x+2 in which it only contains the coefficients of each polynomial." data-display="block" data-type="media" id="fs-id1165137696374">
+<img alt="Synthetic division of the polynomial 2x^3-3x^2+4x+5 by x+2 in which it only contains the coefficients of each polynomial." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/e37af41cac58008922e2bf6b604119e15e778d23" height="74" loading="lazy" src="cbf7b469fcfcef1e2ea631b4.webp" width="487"/>
+</span>
+<p id="fs-id1165137696388">We then multiply it by the “divisor” and add, repeating this process column by column, until there are no entries left. The bottom row represents the coefficients of the quotient; the last entry of the bottom row is the remainder. In this case, the quotient is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>²</mo><mo>–</mo><mn>7</mn><mi>x</mi><mo>+</mo><mn>18</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><mi>x</mi><mo>²</mo><mo>–</mo><mn>7</mn><mi>x</mi><mo>+</mo><mn>18</mn>
+</mrow></annotation-xml></semantics></math></span>
+and the remainder is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>–31.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>–31.</mn>
+</mrow></annotation-xml></semantics></math></span>
+The process will be made more clear in <a aria-label="Go to Example 3" class="autogenerated-content" href="https://openstax.org/books/precalculus-2e/pages/3-5-dividing-polynomials#Example_03_05_03">Example 3</a>.</p><div class="ui-has-child-title" data-type="note" id="fs-id1165135383640"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Synthetic Division</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1165135383649">Synthetic division is a shortcut that can be used when the divisor is a binomial in the form <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mi>k</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>−</mo><mi>k</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>
+In <span data-type="term" group-by="s" id="term-00008">synthetic division</span>, only the coefficients are used in the division process.</p></div></section></div>
+<div class="how-to-notitle ui-has-child-title" data-has-label="true" data-label="How To" data-type="note" id="fs-id1165135393407"><header><h3 class="os-title" data-label-parent="How To" data-type="title">
+<span class="os-title-label">How To</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1165135393414"><strong>Given two polynomials, use synthetic division to divide.</strong></p>
+<ol id="fs-id1165135393418" type="1">
+<li>Write <math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi>
+</mrow></annotation-xml></semantics></math>
+for the divisor.</li>
+<li>Write the coefficients of the dividend.</li>
+<li>Bring the lead coefficient down.</li>
+<li>Multiply the lead coefficient by <math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math>
+Write the product in the next column.</li>
+<li>Add the terms of the second column.</li>
+<li>Multiply the result by <math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math>
+Write the product in the next column.</li>
+<li>Repeat steps 5 and 6 for the remaining columns.</li>
+<li>Use the bottom numbers to write the quotient. The number in the last column is the remainder. The next number from the right has degree 0, the next number has degree 1, and so on.</li>
+</ol>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="Example_03_05_03"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1165135383099"><header></header><section><div data-type="problem" id="fs-id1165135383101"><div class="os-problem-container"><h4 data-type="title">Using Synthetic Division to Divide a Second-Degree Polynomial</h4>
+<p id="fs-id1165135383107">Use synthetic division to divide <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>36</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>36</mn>
+</mrow></annotation-xml></semantics></math></span>
+by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>3.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>−</mo><mn>3.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1165135177606">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1165135177608">Begin by setting up the synthetic division. Write <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi>
+</mrow></annotation-xml></semantics></math></span>
+and the coefficients.</p>
+<span data-alt="A collapsed version of the previous synthetic division." data-display="block" data-type="media" id="fs-id1165135177629">
+<img alt="A collapsed version of the previous synthetic division." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/9f9b7c3f2afaf1c98578471f8ec6fd5c3b34749f" height="55" loading="lazy" src="818c123612970d3c78145e6a.webp" width="487"/>
+</span>
+<p id="fs-id1165135439942">Bring down the lead coefficient. Multiply the lead coefficient by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+<span data-alt="The set-up of the synthetic division for the polynomial 5x^2-3x-36 by x-3, which renders {5, -3, -36} by 3." data-display="block" data-type="media" id="fs-id1165135439966">
+<img alt="The set-up of the synthetic division for the polynomial 5x^2-3x-36 by x-3, which renders {5, -3, -36} by 3." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/8b638e9a3fafd6b1e6496583a605b4a0b4858d0e" height="74" loading="lazy" src="5cc097e237d9159183e9c80d.webp" width="487"/>
+</span>
+<p id="fs-id1165135179942">Continue by adding the numbers in the second column. Multiply the resulting number by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>
+Write the result in the next column. Then add the numbers in the third column.</p>
+<span data-alt="Multiplied by the lead coefficient, 5, in the second column, and the lead coefficient is brought down to the second row. " data-display="block" data-type="media" id="fs-id1165135179966">
+<img alt="Multiplied by the lead coefficient, 5, in the second column, and the lead coefficient is brought down to the second row. " data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/a77e7bc9a6d09d92cfe1e1f485fc8887a5ba4e6f" height="74" loading="lazy" src="4b6ad07ce2aebfc4ab17ee6b.webp" width="487"/>
+</span>
+<p id="fs-id1165135628639">The result is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>5</mn><mi>x</mi><mo>+</mo><mn>12.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>5</mn><mi>x</mi><mo>+</mo><mn>12.</mn>
+</mrow></annotation-xml></semantics></math></span>
+The remainder is 0. So <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow></annotation-xml></semantics></math></span>
+is a factor of the original polynomial.</p>
+</div>
+</section>
+</details>
+<div data-type="commentary" id="fs-id1165135463242"><h4 data-type="commentary-title"><span class="os-title-label">Analysis </span></h4>
+<p id="fs-id1165135463247">Just as with long division, we can check our work by multiplying the quotient by the divisor and adding the remainder.</p>
+<p id="fs-id1165135463251"> <span class="os-math-in-para"><div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>12</mn><mo stretchy="false">)</mo><mo>+</mo><mn>0</mn><mo>=</mo><mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>36</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>12</mn><mo stretchy="false">)</mo><mo>+</mo><mn>0</mn><mo>=</mo><mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>36</mn>
+</mrow></annotation-xml></semantics></math></div></span>
+</p></div>
+</section></div></div></section></div>
+<div class="ui-has-child-title" data-type="example" id="Example_03_05_04"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><div class="unnumbered" data-type="exercise" id="fs-id1165135549012"><header></header><section>
+<div data-type="problem" id="fs-id1165135549014"><div class="os-problem-container"><h4 data-type="title">Using Synthetic Division to Divide a Third-Degree Polynomial</h4>
+<p id="fs-id1165135549019">Use synthetic division to divide <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>20</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>20</mn>
+</mrow></annotation-xml></semantics></math></span>
+by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>2.</mn>
+</mrow></annotation-xml></semantics></math></span> </p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1165135173365">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1165135173367">The binomial divisor is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math></span>
+so <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mo>−</mo><mn>2.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mo>−</mo><mn>2.</mn>
+</mrow></annotation-xml></semantics></math></span>
+Add each column, multiply the result by –2, and repeat until the last column is reached.</p>
+<span data-alt="Synthetic division of 4x^3+10x^2-6x-20 divided by x+2." data-type="media" id="fs-id1165134176031">
+<img alt="Synthetic division of 4x^3+10x^2-6x-20 divided by x+2." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/94c7db45d83d1f51157c2e6b921b608c8e15f02f" height="74" loading="lazy" src="8a99f5bc9e330f1273a19268.webp" width="178"/>
+</span>
+<p id="fs-id1165134433356">The result is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>10.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>10.</mn>
+</mrow></annotation-xml></semantics></math></span>
+The remainder is 0. Thus, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math></span>
+is a factor of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>20.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>20.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+</div>
+</section>
+</details>
+<div data-type="commentary" id="fs-id1165133061700"><h4 data-type="commentary-title"><span class="os-title-label">Analysis </span></h4>
+<p id="fs-id1165133061705">The graph of the polynomial function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>20</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>20</mn>
+</mrow></annotation-xml></semantics></math></span>
+in <a aria-label="View Figure 2" class="autogenerated-content" href="https://openstax.org/books/precalculus-2e/pages/3-5-dividing-polynomials#Figure_03_05_009">Figure 2</a> shows a zero at <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mi>k</mi><mo>=</mo><mn>−2.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mi>k</mi><mo>=</mo><mn>−2.</mn>
+</mrow></annotation-xml></semantics></math></span>
+This confirms that <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math></span>
+is a factor of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>20.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>6</mn><mi>x</mi><mo>−</mo><mn>20.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p><div class="os-figure" id="Figure_03_05_009"><figure class="ui-has-child-figcaption" data-id="Figure_03_05_009">
+<span data-alt="Synthetic division of 4x^3+10x^2-6x-20 divided by x+2." data-type="media" id="fs-id1165133260451">
+<img alt="Synthetic division of 4x^3+10x^2-6x-20 divided by x+2." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/a36cade40224f0f08814c301d0a8ca455617eec2" height="528" loading="lazy" src="f864dfba1c7692ae1d89a2de.webp" width="425"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2</span>
+</figcaption></figure></div>
+</div>
+</section></div>
+</div></section></div><div class="ui-has-child-title" data-type="example" id="Example_03_05_05"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">5</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1165133260470"><header></header><section><div data-type="problem" id="fs-id1165133260472"><div class="os-problem-container"><h4 data-type="title">Using Synthetic Division to Divide a Fourth-Degree Polynomial</h4>
+<p id="fs-id1165135481144">Use synthetic division to divide <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mo>−</mo><mn>9</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>7</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>6</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo>−</mo><mn>9</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>7</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>6</mn>
+</mrow></annotation-xml></semantics></math></span>
+by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>−</mo><mn>1.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1165135571792">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1165135571794">Notice there is no <em data-effect="italics">x</em>-term. We will use a zero as the coefficient for that term.<span data-count="2" data-type="newline"><br/><br/></span></p>
+<span data-alt="A synthetic division problem is displayed, showing the division of a polynomial with coefficients -9, 10, 7, 0, -6 by a factor that corresponds to x=1. The result yields coefficients -9, 1, 8, 8 and a remainder of 2." data-display="block" data-type="media" id="eip-id6273758">
+<img alt="A synthetic division problem is displayed, showing the division of a polynomial with coefficients -9, 10, 7, 0, -6 by a factor that corresponds to x=1. The result yields coefficients -9, 1, 8, 8 and a remainder of 2." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/ebdea04f669c00e713642285f11b8551344c156e" height="98" loading="lazy" src="72f126bbb899b87ee8139c13.webp" width="230"/>
+</span><p id="fs-id1165135341342">The result is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mo>−</mo><mn>9</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>8</mn><mi>x</mi><mo>+</mo><mn>8</mn><mo>+</mo><mfrac>
+<mn>2</mn>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo>−</mo><mn>9</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>8</mn><mi>x</mi><mo>+</mo><mn>8</mn><mo>+</mo><mfrac>
+<mn>2</mn>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+</mfrac>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+</div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="precalculus try ui-has-child-title" data-has-label="true" data-label="Try It" data-type="note" id="fs-id1165134037571"><header><h3 class="os-title" data-label-parent="Try It">
+<span class="os-title-label">Try It </span>
+<span class="os-number">#2</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="ti_03_05_02"><header></header><section>
+<div data-type="problem" id="fs-id1165134037583"><div class="os-problem-container"><p id="fs-id1165134037584">Use synthetic division to divide <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>18</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>40</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>18</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>40</mn>
+</mrow></annotation-xml></semantics></math></span>
+by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>7.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>7.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div></div>
+</section></div>
+</div></section></div>
+</section><section data-depth="1" id="fs-id1165135403412"><h3 data-type="title">Using Polynomial Division to Solve Application Problems</h3>
+<p id="fs-id1165135403417">Polynomial division can be used to solve a variety of application problems involving expressions for area and volume. We looked at an application at the beginning of this section. Now we will solve that problem in the following example.</p>
+<div class="ui-has-child-title" data-type="example" id="Example_03_05_06"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">6</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1165135403427"><header></header><section><div data-type="problem" id="fs-id1165135403429"><div class="os-problem-container"><h4 data-type="title">Using Polynomial Division in an Application Problem</h4>
+<p id="fs-id1165135403434">The volume of a rectangular solid is given by the polynomial <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>33</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>54</mn><mi>x</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>33</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>54</mn><mi>x</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>
+The length of the solid is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><mi>x</mi>
+</mrow></annotation-xml></semantics></math></span>
+and the width is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>−</mo><mn>2.</mn>
+</mrow></annotation-xml></semantics></math></span>
+Find the height of the solid.</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1165135685835">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1165135685837">There are a few ways to approach this problem. We need to divide the expression for the volume of the solid by the expressions for the length and width. Let us create a sketch as in <a aria-label="View Figure 3" class="autogenerated-content" href="https://openstax.org/books/precalculus-2e/pages/3-5-dividing-polynomials#Figure_03_05_010">Figure 3</a>.</p>
+<div class="os-figure" id="Figure_03_05_010">
+<figure class="ui-has-child-figcaption" data-id="Figure_03_05_010">
+<span data-alt="Graph of f(x)=4x^3+10x^2-6x-20 with a close up on x+2." data-type="media" id="fs-id1165137843218">
+<img alt="Graph of f(x)=4x^3+10x^2-6x-20 with a close up on x+2." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/fc1a8c7d3dd929f331a9e0b414d36568e7f722dd" height="140" loading="lazy" src="a3263a2f7ebaafef71e31802.webp" width="487"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">3</span>
+</figcaption></figure>
+</div>
+<p id="fs-id1165137843229">We can now write an equation by substituting the known values into the formula for the volume of a rectangular solid.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-id1165135439925"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr>
+<mtd>
+<mrow><mspace width="0.5em"></mspace><mi>V</mi><mo>=</mo><mi>l</mi><mo>⋅</mo><mi>w</mi><mo>⋅</mo><mi>h</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>33</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>54</mn><mi>x</mi><mo>=</mo><mn>3</mn><mi>x</mi><mo>⋅</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo>⋅</mo><mi>h</mi>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr>
+<mtd>
+<mrow><mspace width="0.5em"></mspace><mi>V</mi><mo>=</mo><mi>l</mi><mo>⋅</mo><mi>w</mi><mo>⋅</mo><mi>h</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>33</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>54</mn><mi>x</mi><mo>=</mo><mn>3</mn><mi>x</mi><mo>⋅</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo>⋅</mo><mi>h</mi>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1165135457104">To solve for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>h</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>h</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> first divide both sides by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><mi>x</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-id1165135438421"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr>
+<mtd>
+<mrow>
+<mfrac>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>⋅</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo>⋅</mo><mi>h</mi>
+</mrow>
+<mrow>
+<mn>3</mn><mi>x</mi>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>33</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>54</mn><mi>x</mi>
+</mrow>
+<mrow>
+<mn>3</mn><mi>x</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mrow>
+<mspace width="0.5em"></mspace><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mi>h</mi><mo>=</mo><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>11</mn><mi>x</mi><mo>+</mo><mn>18</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr>
+<mtd>
+<mrow>
+<mfrac>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>⋅</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mo>⋅</mo><mi>h</mi>
+</mrow>
+<mrow>
+<mn>3</mn><mi>x</mi>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>33</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>54</mn><mi>x</mi>
+</mrow>
+<mrow>
+<mn>3</mn><mi>x</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mrow>
+<mspace width="0.5em"></mspace><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>2</mn><mo stretchy="false">)</mo><mi>h</mi><mo>=</mo><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>11</mn><mi>x</mi><mo>+</mo><mn>18</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1165135528878">Now solve for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>h</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>h</mi>
+</mrow></annotation-xml></semantics></math></span>
+using synthetic division.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-id1165134103025"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>h</mi><mo>=</mo><mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>11</mn><mi>x</mi><mo>+</mo><mn>18</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>h</mi><mo>=</mo><mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>11</mn><mi>x</mi><mo>+</mo><mn>18</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<div class="unnumbered" data-label="" data-type="equation" id="eip-id1165134550463"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mtable columnalign="left">
+<mtr>
+<mtd>
+<mrow></mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>2</mn><menclose notation="bottom left">
+<mrow>
+<mtable columnalign="right">
+<mtr columnalign="right">
+<mtd columnalign="right">
+<mn>1</mn>
+</mtd>
+<mtd columnalign="right">
+<mrow>
+<mo>−</mo><mn>1</mn>
+</mrow>
+</mtd>
+<mtd columnalign="right">
+<mrow>
+<mo>−</mo><mn>11</mn>
+</mrow>
+</mtd>
+<mtd columnalign="right">
+<mrow>
+<mn>18</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="right">
+<mtd columnalign="right">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="right">
+<mn>2</mn>
+</mtd>
+<mtd columnalign="right">
+<mn>2</mn>
+</mtd>
+<mtd columnalign="right">
+<mrow>
+<mo>−</mo><mn>18</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</menclose>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>   </mtext><mn>1</mn>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>   </mtext><mn>1</mn>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mspace width="0.5em"></mspace><mo>−</mo><mn>9</mn>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>    </mtext><mn>0</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mtd>
+</mtr>
+</mtable>
+</mrow><annotation-xml encoding="MathML-Content"><mtable columnalign="left">
+<mtr>
+<mtd>
+<mrow></mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mn>2</mn><menclose notation="bottom left">
+<mrow>
+<mtable columnalign="right">
+<mtr columnalign="right">
+<mtd columnalign="right">
+<mn>1</mn>
+</mtd>
+<mtd columnalign="right">
+<mrow>
+<mo>−</mo><mn>1</mn>
+</mrow>
+</mtd>
+<mtd columnalign="right">
+<mrow>
+<mo>−</mo><mn>11</mn>
+</mrow>
+</mtd>
+<mtd columnalign="right">
+<mrow>
+<mn>18</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="right">
+<mtd columnalign="right">
+<mrow></mrow>
+</mtd>
+<mtd columnalign="right">
+<mn>2</mn>
+</mtd>
+<mtd columnalign="right">
+<mn>2</mn>
+</mtd>
+<mtd columnalign="right">
+<mrow>
+<mo>−</mo><mn>18</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</menclose>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>   </mtext><mn>1</mn>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>   </mtext><mn>1</mn>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mspace width="0.5em"></mspace><mo>−</mo><mn>9</mn>
+</mrow>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>    </mtext><mn>0</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mtd>
+</mtr>
+</mtable></annotation-xml></semantics></math></div>
+</div><p id="fs-id1165134152722">The quotient is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>x</mi><mo>−</mo><mn>9</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>x</mi><mo>−</mo><mn>9</mn>
+</mrow></annotation-xml></semantics></math></span>
+and the remainder is 0. The height of the solid is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>x</mi><mo>−</mo><mn>9.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>x</mi><mo>−</mo><mn>9.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+</div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="precalculus try ui-has-child-title" data-has-label="true" data-label="Try It" data-type="note" id="fs-id1165135694534"><header><h3 class="os-title" data-label-parent="Try It">
+<span class="os-title-label">Try It </span>
+<span class="os-number">#3</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="ti_03_05_03"><header></header><section>
+<div data-type="problem" id="fs-id1165135694546"><div class="os-problem-container"><p id="fs-id1165135694547">The area of a rectangle is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>14</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>23</mn><mi>x</mi><mo>+</mo><mn>6.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>14</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>23</mn><mi>x</mi><mo>+</mo><mn>6.</mn>
+</mrow></annotation-xml></semantics></math></span>
+The width of the rectangle is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>6.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>6.</mn>
+</mrow></annotation-xml></semantics></math></span>
+Find an expression for the length of the rectangle.</p></div></div>
+</section></div>
+</div></section></div>
+<div class="precalculus media media-notitle ui-has-child-title" data-has-label="true" data-label="Media" data-type="note" id="fs-id1165135571867"><header><h3 class="os-title" data-label-parent="Media" data-type="title">
+<span class="os-title-label">Media</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1165135571875">Access these online resources for additional instruction and practice with polynomial division.</p>
+<ul id="fs-id1165135571879"><li><a aria-label="Go to Dividing a Trinomial by a Binomial Using Long Division" href="https://openstax.org/l/dividetribild" rel="noopener nofollow" target="_blank">Dividing a Trinomial by a Binomial Using Long Division</a></li>
+<li><a aria-label="Go to Dividing a Polynomial by a Binomial Using Long Division" href="https://openstax.org/l/dividepolybild" rel="noopener nofollow" target="_blank">Dividing a Polynomial by a Binomial Using Long Division </a></li>
+<li><a aria-label="Go to Ex 2: Dividing a Polynomial by a Binomial Using Synthetic Division" href="https://openstax.org/l/dividepolybisd2" rel="noopener nofollow" target="_blank">Ex 2: Dividing a Polynomial by a Binomial Using Synthetic Division</a></li>
+<li><a aria-label="Go to Ex 4: Dividing a Polynomial by a Binomial Using Synthetic Division" href="https://openstax.org/l/dividepolybisd4" rel="noopener nofollow" target="_blank">Ex 4: Dividing a Polynomial by a Binomial Using Synthetic Division</a></li>
+</ul></div></section></div>
+</section>
+<div class="os-eos os-section-exercises-container" data-uuid-key=".section-exercises"><h3 data-type="document-title">
+<span class="os-text">3.5 Section Exercises</span>
+</h3>
+<section class="section-exercises" data-depth="1" id="fs-id1165135255120"><section data-depth="2" id="fs-id1165135255124"><h4 data-type="title">Verbal</h4>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165135255129"><header></header><section>
+<div data-type="problem" id="fs-id1165135255131">
+<a aria-label="Go to 1" class="os-number" data-page-fragment="fs-id1165135255129-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">1</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135443966">If division of a polynomial by a binomial results in a remainder of zero, what can be conclude?</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165135443975"><header></header><section><div data-type="problem" id="fs-id1165135443976">
+<span class="os-number">2</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135443977">If a polynomial of degree <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>n</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>n</mi>
+</mrow></annotation-xml></semantics></math></span>
+is divided by a binomial of degree 1, what is the degree of the quotient?</p></div>
+</div></section></div>
+</section>
+<section data-depth="2" id="fs-id1165135443995"><h4 data-type="title">Algebraic </h4>
+<p id="fs-id1165135444000">For the following exercises, use long division to divide. Specify the quotient and the remainder.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135349098"><header></header><section><div data-type="problem" id="fs-id1165135349099">
+<a aria-label="Go to 3" class="os-number" data-page-fragment="fs-id1165135349098-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">3</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135349100"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165137932684"><header></header><section><div data-type="problem" id="fs-id1165137932685">
+<span class="os-number">4</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165137932686"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>9</mn><mi>x</mi><mo>−</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>9</mn><mi>x</mi><mo>−</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135643143"><header></header><section><div data-type="problem" id="fs-id1165135643144">
+<a aria-label="Go to 5" class="os-number" data-page-fragment="fs-id1165135643143-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">5</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135643146"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>23</mn><mi>x</mi><mo>+</mo><mn>14</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>7</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>23</mn><mi>x</mi><mo>+</mo><mn>14</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>7</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165135453058"><header></header><section><div data-type="problem" id="fs-id1165135453059">
+<span class="os-number">6</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135453060"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>10</mn><mi>x</mi><mo>+</mo><mn>6</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>10</mn><mi>x</mi><mo>+</mo><mn>6</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165137833881"><header></header><section><div data-type="problem" id="fs-id1165137833882">
+<a aria-label="Go to 7" class="os-number" data-page-fragment="fs-id1165137833881-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">7</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165137833883"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>25</mn><mi>x</mi><mo>−</mo><mn>25</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>6</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>25</mn><mi>x</mi><mo>−</mo><mn>25</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>6</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165135363204"><header></header><section><div data-type="problem" id="fs-id1165135363205">
+<span class="os-number">8</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135363206"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165134472270"><header></header><section><div data-type="problem" id="fs-id1165134472271">
+<a aria-label="Go to 9" class="os-number" data-page-fragment="fs-id1165134472270-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">9</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134472272"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165134352532"><header></header><section><div data-type="problem" id="fs-id1165134352533">
+<span class="os-number">10</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134352534"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>126</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>126</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135678617"><header></header><section><div data-type="problem" id="fs-id1165135678618">
+<a aria-label="Go to 11" class="os-number" data-page-fragment="fs-id1165135678617-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">11</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135678619"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>4</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>4</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165133093355"><header></header><section><div data-type="problem" id="fs-id1165133093356">
+<span class="os-number">12</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165133093357"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>6</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>6</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135435667"><header></header><section><div data-type="problem" id="fs-id1165135435668">
+<a aria-label="Go to 13" class="os-number" data-page-fragment="fs-id1165135435667-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">13</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135435669"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<p id="fs-id1165135321927">For the following exercises, use synthetic division to find the quotient.</p>
+<div class="material-set-2" data-type="exercise" id="fs-id1165135321931"><header></header><section><div data-type="problem" id="fs-id1165135321932">
+<span class="os-number">14</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135321933"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>x</mi><mo>−</mo><mn>4</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>x</mi><mo>−</mo><mn>4</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165134474179"><header></header><section><div data-type="problem" id="fs-id1165134474180">
+<a aria-label="Go to 15" class="os-number" data-page-fragment="fs-id1165134474179-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">15</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134474181"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>6</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>7</mn><mi>x</mi><mo>+</mo><mn>6</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>6</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>7</mn><mi>x</mi><mo>+</mo><mn>6</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mi>x</mi><mo>−</mo><mn>4</mn><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165135199519"><header></header><section><div data-type="problem" id="fs-id1165137680594">
+<span class="os-number">16</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165137680595"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>7</mn><mi>x</mi><mo>−</mo><mn>15</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>7</mn><mi>x</mi><mo>−</mo><mn>15</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165133233060"><header></header><section><div data-type="problem" id="fs-id1165133233062">
+<a aria-label="Go to 17" class="os-number" data-page-fragment="fs-id1165133233060-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">17</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165133233063"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>12</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>12</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>5</mn><mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165133311045"><header></header><section><div data-type="problem" id="fs-id1165133311046">
+<span class="os-number">18</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165133311047"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>9</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>9</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>18</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>9</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>9</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>18</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165135560630"><header></header><section><div data-type="problem" id="fs-id1165135560631">
+<a aria-label="Go to 19" class="os-number" data-page-fragment="fs-id1165135560630-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">19</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135560632"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>x</mi><mo>−</mo><mn>4</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>x</mi><mo>−</mo><mn>4</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165137642766"><header></header><section><div data-type="problem" id="fs-id1165137642767">
+<span class="os-number">20</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165137642768"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mo>−</mo><mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>4</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mo>−</mo><mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>4</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165135530633"><header></header><section><div data-type="problem" id="fs-id1165135530634">
+<a aria-label="Go to 21" class="os-number" data-page-fragment="fs-id1165135530633-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">21</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135530635"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>7</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>13</mn><mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>7</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>13</mn><mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165134173742"><header></header><section><div data-type="problem" id="fs-id1165134173743">
+<span class="os-number">22</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134173744"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>2</mn><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135443762"><header></header><section><div data-type="problem" id="fs-id1165135443764">
+<a aria-label="Go to 23" class="os-number" data-page-fragment="fs-id1165135443762-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">23</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135443765"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>13</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>4</mn><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>13</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>4</mn><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165135403522"><header></header><section><div data-type="problem" id="fs-id1165135403523">
+<span class="os-number">24</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135403524"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165134061948"><header></header><section><div data-type="problem" id="fs-id1165134061949">
+<a aria-label="Go to 25" class="os-number" data-page-fragment="fs-id1165134061948-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">25</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134061950"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>21</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>147</mn><mi>x</mi><mo>−</mo><mn>343</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>7</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>21</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>147</mn><mi>x</mi><mo>−</mo><mn>343</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>7</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165134156069"><header></header><section><div data-type="problem" id="fs-id1165134156070">
+<span class="os-number">26</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134156071"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>15</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>75</mn><mi>x</mi><mo>−</mo><mn>125</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>15</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>75</mn><mi>x</mi><mo>−</mo><mn>125</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165135344106"><header></header><section><div data-type="problem" id="fs-id1165135344107">
+<a aria-label="Go to 27" class="os-number" data-page-fragment="fs-id1165135344106-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">27</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135344108"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>9</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>9</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165135485710"><header></header><section><div data-type="problem" id="fs-id1165135485711">
+<span class="os-number">28</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135485712"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165135485136"><header></header><section><div data-type="problem" id="fs-id1165135485137">
+<a aria-label="Go to 29" class="os-number" data-page-fragment="fs-id1165135485136-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">29</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135485138"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165134357289"><header></header><section><div data-type="problem" id="fs-id1165134357290">
+<span class="os-number">30</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134357291"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165135390850"><header></header><section><div data-type="problem" id="fs-id1165135390852">
+<a aria-label="Go to 31" class="os-number" data-page-fragment="fs-id1165135390850-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">31</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135390853"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>6</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>6</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165137850245"><header></header><section><div data-type="problem" id="fs-id1165137850246">
+<span class="os-number">32</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165137850247"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>37</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>60</mn><mi>x</mi><mo>+</mo><mn>36</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>37</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>60</mn><mi>x</mi><mo>+</mo><mn>36</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165137705401"><header></header><section><div data-type="problem" id="fs-id1165137705402">
+<a aria-label="Go to 33" class="os-number" data-page-fragment="fs-id1165137705401-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">33</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165137705403"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>8</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>24</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>32</mn><mi>x</mi><mo>+</mo><mn>16</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>8</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>24</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>32</mn><mi>x</mi><mo>+</mo><mn>16</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165134389913"><header></header><section><div data-type="problem" id="fs-id1165134389914">
+<span class="os-number">34</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134389915"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>5</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>13</mn><mi>x</mi><mo>+</mo><mn>10</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>5</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>13</mn><mi>x</mi><mo>+</mo><mn>10</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165134484904"><header></header><section><div data-type="problem" id="fs-id1165134484905">
+<a aria-label="Go to 35" class="os-number" data-page-fragment="fs-id1165134484904-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">35</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134484906"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>12</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>54</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>108</mn><mi>x</mi><mo>+</mo><mn>81</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>12</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>54</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>108</mn><mi>x</mi><mo>+</mo><mn>81</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>3</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165137696095"><header></header><section><div data-type="problem" id="fs-id1165137696096">
+<span class="os-number">36</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165137696097"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>4</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135575253"><header></header><section><div data-type="problem" id="fs-id1165135575254">
+<a aria-label="Go to 37" class="os-number" data-page-fragment="fs-id1165135575253-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">37</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135575255"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>4</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>4</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+<mo>)</mo></mrow><mo>÷</mo><mrow><mo>(</mo>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<p id="fs-id1165135353027">For the following exercises, use synthetic division to determine whether the first expression is a factor of the second. If it is, indicate the factorization.</p>
+<div data-type="exercise" id="fs-id1165135353032"><header></header><section><div data-type="problem" id="fs-id1165135353033">
+<span class="os-number">38</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135353034"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn><mo>,</mo><mspace width="0.5em"></mspace><mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>8</mn><mi>x</mi><mo>+</mo><mn>4</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn><mo>,</mo><mspace width="0.5em"></mspace><mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>8</mn><mi>x</mi><mo>+</mo><mn>4</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165134031382"><header></header><section><div data-type="problem" id="fs-id1165134031383">
+<a aria-label="Go to 39" class="os-number" data-page-fragment="fs-id1165134031382-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">39</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134031384"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn><mo>,</mo><mspace width="0.5em"></mspace><mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>10</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn><mo>,</mo><mspace width="0.5em"></mspace><mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>6</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>5</mn><mi>x</mi><mo>+</mo><mn>10</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165135240972"><header></header><section><div data-type="problem" id="fs-id1165135240974">
+<span class="os-number">40</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135240975"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn><mo>,</mo><mspace width="0.5em"></mspace><mo>−</mo><mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>8</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn><mo>,</mo><mspace width="0.5em"></mspace><mo>−</mo><mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>5</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>8</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135394052"><header></header><section><div data-type="problem" id="fs-id1165135394053">
+<a aria-label="Go to 41" class="os-number" data-page-fragment="fs-id1165135394052-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">41</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135394054"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn><mo>,</mo><mspace width="0.5em"></mspace><mn>4</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>15</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>4</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn><mo>,</mo><mspace width="0.5em"></mspace><mn>4</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>15</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>4</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165137851216"><header></header><section><div data-type="problem" id="fs-id1165135397213">
+<span class="os-number">42</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135397214"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mo>,</mo><mspace width="0.5em"></mspace><mn>2</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>−</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mo>,</mo><mspace width="0.5em"></mspace><mn>2</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135547391"><header></header><section><div data-type="problem" id="fs-id1165135547392">
+<a aria-label="Go to 43" class="os-number" data-page-fragment="fs-id1165135547391-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">43</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135547394"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mo>,</mo><mspace width="0.5em"></mspace><mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mo>,</mo><mspace width="0.5em"></mspace><mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+</section>
+<section data-depth="2" id="fs-id1165135481299"><h4 data-type="title">Graphical</h4>
+<p id="fs-id1165135481304">For the following exercises, use the graph of the third-degree polynomial and one factor to write the factored form of the polynomial suggested by the graph. The leading coefficient is one.</p>
+<div class="material-set-2" data-type="exercise" id="fs-id1165135436617"><header></header><section><div data-type="problem" id="fs-id1165135436618">
+<span class="os-number">44</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135436619">Factor is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+<span data-alt="Graph of a polynomial that has a x-intercept at -1." data-type="media" id="fs-id1165135436654">
+<img alt="Graph of a polynomial that has a x-intercept at -1." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/c6d107e4540de20a05d0ec88e4a90387178d41b2" height="252" loading="lazy" src="ab15b5785c3b65d0da8c3b2a.webp" width="312"/>
+</span>
+</div>
+</div></section></div><div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165135423510"><header></header><section><div data-type="problem" id="fs-id1165135423511">
+<a aria-label="Go to 45" class="os-number" data-page-fragment="fs-id1165135423510-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">45</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135423512">Factor is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>4</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>4</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p><span data-alt="Graph of a polynomial that has a x-intercept at 1." data-type="media" id="fs-id1165134197955">
+<img alt="Graph of a polynomial that has a x-intercept at 1." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/7fb421522dcd4d4d0f220fdd9ceb28d54774ffcc" height="252" loading="lazy" src="7370c80356ee44fb30088e29.webp" width="313"/>
+</span>
+</div>
+</div>
+</section></div><div class="material-set-2" data-type="exercise" id="fs-id1165135412915"><header></header><section><div data-type="problem" id="fs-id1165135412916">
+<span class="os-number">46</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135412917">Factor is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+<span data-alt="Graph of a polynomial that has a x-intercept at 2." data-type="media" id="fs-id1165135176349">
+<img alt="Graph of a polynomial that has a x-intercept at 2." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/a592de91e6672cd41eef495d53d6002f85a9c36a" height="252" loading="lazy" src="4437920468624431a52cbcd9.webp" width="313"/>
+</span>
+</div>
+</div></section></div><div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165135176362"><header></header><section><div data-type="problem" id="fs-id1165135176363">
+<a aria-label="Go to 47" class="os-number" data-page-fragment="fs-id1165135176362-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">47</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135176364">Factor is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+<span data-alt="Graph of a polynomial that has a x-intercept at 5." data-type="media" id="fs-id1165134164936">
+<img alt="Graph of a polynomial that has a x-intercept at 5." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/0de0bff90e32c4df60909455bf7cbd34294d97fa" height="405" loading="lazy" src="16178944502b471e96871947.webp" width="465"/>
+</span>
+</div>
+</div>
+</section></div><div class="material-set-2" data-type="exercise" id="fs-id1165134089490"><header></header><section><div data-type="problem" id="fs-id1165134089491">
+<span class="os-number">48</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134089492">Factor is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+<span data-alt="Graph of a polynomial that has a x-intercept at -3." data-type="media" id="fs-id1165137888963">
+<img alt="Graph of a polynomial that has a x-intercept at -3." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/114159afe3f01422c1d30a88d66aa9b4d7844a93" height="314" loading="lazy" src="07c629a09db0d9eec9bc33ad.webp" width="377"/>
+</span>
+</div>
+</div></section></div><p id="fs-id1165137888975">For the following exercises, use synthetic division to find the quotient and remainder.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165137888978"><header></header><section><div data-type="problem" id="fs-id1165137888979">
+<a aria-label="Go to 49" class="os-number" data-page-fragment="fs-id1165137888978-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">49</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165137888980"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>33</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>33</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>2</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165135209652"><header></header><section><div data-type="problem" id="fs-id1165135209653">
+<span class="os-number">50</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135209654"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>25</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>25</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135443854"><header></header><section><div data-type="problem" id="fs-id1165135443855">
+<a aria-label="Go to 51" class="os-number" data-page-fragment="fs-id1165135443854-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">51</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135443856"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>5</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>3</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>5</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165135154363"><header></header><section><div data-type="problem" id="fs-id1165135154364">
+<span class="os-number">52</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135154366"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mo>−</mo><mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>12</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>4</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mo>−</mo><mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>12</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>4</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135155437"><header></header><section><div data-type="problem" id="fs-id1165135155438">
+<a aria-label="Go to 53" class="os-number" data-page-fragment="fs-id1165135155437-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">53</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135155439"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>22</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>22</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>2</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+</section>
+<section data-depth="2" id="fs-id1165135501101"><h4 data-type="title">Technology</h4>
+<p id="fs-id1165135501106">For the following exercises, use a calculator with CAS to answer the questions.</p>
+<div data-type="exercise" id="fs-id1165137889809"><header></header><section><div data-type="problem" id="fs-id1165137889810">
+<span class="os-number">54</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165137889811">Consider <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mi>k</mi>
+</msup>
+<mo>−</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mi>k</mi>
+</msup>
+<mo>−</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> with <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span>,<span class="os-math-in-para"><math display="inline"><semantics><mrow><mn>2</mn></mrow><annotation-xml encoding="MathML-Content"><mn>2</mn></annotation-xml></semantics></math></span>,<span class="os-math-in-para"><math display="inline"><semantics><mrow><mspace width="0.5em"></mspace><mn>3.</mn>
+</mrow><annotation-xml encoding="MathML-Content"><mspace width="0.5em"></mspace><mn>3.</mn></annotation-xml></semantics></math></span> What do you expect the result to be if <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mn>4</mn><mo>?</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mn>4</mn><mo>?</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135534969"><header></header><section><div data-type="problem" id="fs-id1165135534970">
+<a aria-label="Go to 55" class="os-number" data-page-fragment="fs-id1165135534969-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">55</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135534971">Consider <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mi>k</mi>
+</msup>
+<mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mi>k</mi>
+</msup>
+<mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span>,<span class="os-math-in-para"><math display="inline"><semantics><mrow><mn>3</mn></mrow><annotation-xml encoding="MathML-Content"><mn>3</mn></annotation-xml></semantics></math></span>,<span class="os-math-in-para"><math display="inline"><semantics><mrow><mn>5.</mn>
+</mrow><annotation-xml encoding="MathML-Content"><mn>5.</mn></annotation-xml></semantics></math></span> What do you expect the result to be if <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mn>7</mn><mo>?</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mn>7</mn><mo>?</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165135241323"><header></header><section><div data-type="problem" id="fs-id1165135241324">
+<span class="os-number">56</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135241326">Consider <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>k</mi>
+<mn>4</mn>
+</msup>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mi>k</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><msup>
+<mi>k</mi>
+<mn>4</mn>
+</msup>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mi>k</mi>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span>,<span class="os-math-in-para"><math display="inline"><semantics><mrow><mn>2</mn></mrow><annotation-xml encoding="MathML-Content"><mn>2</mn></annotation-xml></semantics></math></span>,<span class="os-math-in-para"><math display="inline"><semantics><mrow><mn>3.</mn>
+</mrow><annotation-xml encoding="MathML-Content"><mn>3.</mn></annotation-xml></semantics></math></span> What do you expect the result to be if <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mn>4</mn><mo>?</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mn>4</mn><mo>?</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165132939184"><header></header><section><div data-type="problem" id="fs-id1165132939185">
+<a aria-label="Go to 57" class="os-number" data-page-fragment="fs-id1165132939184-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">57</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165132939186">Consider <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mi>k</mi>
+</msup>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mi>k</mi>
+</msup>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> with <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span>,<span class="os-math-in-para"><math display="inline"><semantics><mrow><mn>2</mn></mrow><annotation-xml encoding="MathML-Content"><mn>2</mn></annotation-xml></semantics></math></span>,<span class="os-math-in-para"><math display="inline"><semantics><mrow><mn>3.</mn>
+</mrow><annotation-xml encoding="MathML-Content"><mn>3.</mn></annotation-xml></semantics></math></span> What do you expect the result to be if <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mn>4</mn><mo>?</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mn>4</mn><mo>?</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165134261659"><header></header><section><div data-type="problem" id="fs-id1165134261660">
+<span class="os-number">58</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134261661">Consider <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mi>k</mi>
+</msup>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mi>k</mi>
+</msup>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mn>1</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> with <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span>,<span class="os-math-in-para"><math display="inline"><semantics><mrow><mn>2</mn></mrow><annotation-xml encoding="MathML-Content"><mn>2</mn></annotation-xml></semantics></math></span>,<span class="os-math-in-para"><math display="inline"><semantics><mrow><mn>3.</mn>
+</mrow><annotation-xml encoding="MathML-Content"><mn>3.</mn></annotation-xml></semantics></math></span> What do you expect the result to be if <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>k</mi><mo>=</mo><mn>4</mn><mo>?</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>k</mi><mo>=</mo><mn>4</mn><mo>?</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+</section>
+<section data-depth="2" id="fs-id1165135191971"><h4 data-type="title">Extensions</h4>
+<p id="fs-id1165135191976">For the following exercises, use synthetic division to determine the quotient involving a complex number.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135191981"><header></header><section><div data-type="problem" id="fs-id1165135191982">
+<a aria-label="Go to 59" class="os-number" data-page-fragment="fs-id1165135191981-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">59</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135191983"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mi>i</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mi>i</mi>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165135593133"><header></header><section><div data-type="problem" id="fs-id1165135593134">
+<span class="os-number">60</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135593135"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mi>i</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mi>i</mi>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135593178"><header></header><section><div data-type="problem" id="fs-id1165135593179">
+<a aria-label="Go to 61" class="os-number" data-page-fragment="fs-id1165135593178-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">61</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135593180"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mi>i</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mi>i</mi>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165137777664"><header></header><section><div data-type="problem" id="fs-id1165137777665">
+<span class="os-number">62</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165137777666"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mi>i</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mi>i</mi>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165134248021"><header></header><section><div data-type="problem" id="fs-id1165134248022">
+<a aria-label="Go to 63" class="os-number" data-page-fragment="fs-id1165134248021-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">63</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134248023"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mi>i</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>1</mn>
+</mrow>
+<mrow>
+<mi>x</mi><mo>−</mo><mi>i</mi>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+</section>
+<section data-depth="2" id="fs-id1165135180069"><h4 data-type="title">Real-World Applications</h4>
+<p id="fs-id1165135180074">For the following exercises, use the given length and area of a rectangle to express the width algebraically.</p>
+<div data-type="exercise" id="fs-id1165135180078"><header></header><section><div data-type="problem" id="fs-id1165135440138">
+<span class="os-number">64</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135440139">Length is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>5</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>5</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> area is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>9</mn><mi>x</mi><mo>−</mo><mn>5.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>9</mn><mi>x</mi><mo>−</mo><mn>5.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1165135440195"><header></header><section><div data-type="problem" id="fs-id1165135440196">
+<a aria-label="Go to 65" class="os-number" data-page-fragment="fs-id1165135440195-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">65</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135440197">Length is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><mi>x</mi><mspace width="0.5em"></mspace><mo>+</mo><mspace width="0.5em"></mspace><mn>5</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><mi>x</mi><mspace width="0.5em"></mspace><mo>+</mo><mspace width="0.5em"></mspace><mn>5</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> area is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>10</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>15</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1165135264719"><header></header><section><div data-type="problem" id="fs-id1165135264720">
+<span class="os-number">66</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135264721">Length is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>–</mo><mn>4</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><mi>x</mi><mo>–</mo><mn>4</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> area is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>8</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>9</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>9</mn><mi>x</mi><mo>−</mo><mn>4</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>6</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo><mn>8</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>9</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>9</mn><mi>x</mi><mo>−</mo><mn>4</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<p id="fs-id1165135339554">For the following exercises, use the given volume of a box and its length and width to express the height of the box algebraically.</p>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165135339559"><header></header><section><div data-type="problem" id="fs-id1165135339560">
+<a aria-label="Go to 67" class="os-number" data-page-fragment="fs-id1165135339559-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">67</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135339561">Volume is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>12</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>20</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>21</mn><mi>x</mi><mo>−</mo><mn>36</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>12</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>20</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>21</mn><mi>x</mi><mo>−</mo><mn>36</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> length is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><mi>x</mi><mo>+</mo><mn>3</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> width is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>4.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><mi>x</mi><mo>−</mo><mn>4.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165134071557"><header></header><section><div data-type="problem" id="fs-id1165134071558">
+<span class="os-number">68</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134071559">Volume is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>18</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>21</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>40</mn><mi>x</mi><mo>+</mo><mn>48</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>18</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>21</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>40</mn><mi>x</mi><mo>+</mo><mn>48</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> length is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>–</mo><mn>4</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><mi>x</mi><mo>–</mo><mn>4</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span>
+width is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>3</mn><mi>x</mi><mo>–</mo><mn>4.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>3</mn><mi>x</mi><mo>–</mo><mn>4.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165132920308"><header></header><section><div data-type="problem" id="fs-id1165132920309">
+<a aria-label="Go to 69" class="os-number" data-page-fragment="fs-id1165132920308-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">69</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165132920310">Volume is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>10</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>27</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>24</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>10</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>27</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mi>x</mi><mo>−</mo><mn>24</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> length is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>5</mn><mi>x</mi><mo>–</mo><mn>4</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>5</mn><mi>x</mi><mo>–</mo><mn>4</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span>
+width is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>+</mo><mn>3.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><mi>x</mi><mo>+</mo><mn>3.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165135564178"><header></header><section><div data-type="problem" id="fs-id1165135564179">
+<span class="os-number">70</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135564180">Volume is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>10</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>30</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>8</mn><mi>x</mi><mo>−</mo><mn>24</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>10</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>30</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>8</mn><mi>x</mi><mo>−</mo><mn>24</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> length is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> width is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>3.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>3.</mn>
+</mrow></annotation-xml></semantics></math></span> </p></div>
+</div></section></div>
+<p id="fs-id1165135514530">For the following exercises, use the given volume and radius of a cylinder to express the height of the cylinder algebraically.</p>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165135514534"><header></header><section><div data-type="problem" id="fs-id1165135514535">
+<a aria-label="Go to 71" class="os-number" data-page-fragment="fs-id1165135514534-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">71</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165135514536">Volume is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>π</mi><mo stretchy="false">(</mo><mn>25</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>65</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>29</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>π</mi><mo stretchy="false">(</mo><mn>25</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>−</mo><mn>65</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>29</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo stretchy="false">)</mo><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> radius is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>5</mn><mi>x</mi><mo>+</mo><mn>1.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>5</mn><mi>x</mi><mo>+</mo><mn>1.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1165134031328"><header></header><section><div data-type="problem" id="fs-id1165134031329">
+<span class="os-number">72</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134031330">Volume is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>π</mi><mo stretchy="false">(</mo><mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>12</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>15</mn><mi>x</mi><mo>−</mo><mn>50</mn><mo stretchy="false">)</mo><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>π</mi><mo stretchy="false">(</mo><mn>4</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>12</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>15</mn><mi>x</mi><mo>−</mo><mn>50</mn><mo stretchy="false">)</mo><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> radius is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><mi>x</mi><mo>+</mo><mn>5.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><mi>x</mi><mo>+</mo><mn>5.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div></section></div>
+<div class="material-set-2 os-hasSolution" data-type="exercise" id="fs-id1165134258601"><header></header><section><div data-type="problem" id="fs-id1165134258602">
+<a aria-label="Go to 73" class="os-number" data-page-fragment="fs-id1165134258601-solution" data-page-slug="chapter-3" data-page-uuid="8cbd0d40-b6a4-5194-a805-52e6fca329a1" href="https://openstax.org/books/precalculus-2e/pages/chapter-3">73</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1165134258603">Volume is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>π</mi><mo stretchy="false">(</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>24</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>46</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>16</mn><mi>x</mi><mo>−</mo><mn>32</mn><mo stretchy="false">)</mo><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>π</mi><mo stretchy="false">(</mo><mn>3</mn><msup>
+<mi>x</mi>
+<mn>4</mn>
+</msup>
+<mo>+</mo><mn>24</mn><msup>
+<mi>x</mi>
+<mn>3</mn>
+</msup>
+<mo>+</mo><mn>46</mn><msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo><mn>16</mn><mi>x</mi><mo>−</mo><mn>32</mn><mo stretchy="false">)</mo><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> radius is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>+</mo><mn>4.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>+</mo><mn>4.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p></div>
+</div>
+</section></div>
+</section>
+</section></div>
+</div></article><footer><p>Adapted from OpenStax, Precalculus 2e, 3.5 Dividing Polynomials. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/precalculus-2e/pages/3-5-dividing-polynomials">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

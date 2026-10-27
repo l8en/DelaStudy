@@ -1,0 +1,4034 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_dcf784dc-acd1-46a8-b5b0-cd5d8673b83a"><h2 data-rex-keep="true" data-type="document-title" id="page_dcf784dc-acd1-46a8-b5b0-cd5d8673b83a_titlecreatedbycookbook"><span class="os-number">4.2</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Modeling with Linear Functions</span>
+</h2><div class="ui-has-child-title" data-type="abstract"><header><h3 data-type="title">Learning Objectives</h3></header><section><p id="para-00001">In this section, you will:</p><ul id="list-00001">
+<li>Build linear models from verbal descriptions.</li>
+<li>Model a set of data with a linear function.</li>
+</ul></section></div>
+<div class="os-figure" id="Figure_04_02_001"><figure class="ui-has-child-figcaption" data-id="Figure_04_02_001">
+<span data-alt="A skyline view of Seattle with a focus on the Space Needle." data-type="media" id="fs-id2651969">
+<img alt="A skyline view of Seattle with a focus on the Space Needle." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/8fba058fb2a85ebedc60b5000e8450e35fcce876" height="530" loading="lazy" src="53be40e014406386b2e68985.webp" width="794"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">1</span>
+<span class="os-divider"> </span>
+<span class="os-caption">(credit: EEK Photography/Flickr)</span>
+</figcaption></figure></div>
+<p id="fs-id1827977">Elan is a college student who plans to spend a summer in Seattle. Elan has saved $3,500 for their trip and anticipates spending $400 each week on rent, food, and activities. How can we write a linear model to represent this situation? What would be the <em data-effect="italics">x</em>-intercept, and what can Elan learn from it? To answer these and related questions, we can create a model using a linear function. Models such as this one can be extremely useful for analyzing relationships and making predictions based on those relationships. In this section, we will explore examples of linear function models.</p>
+<section data-depth="1" id="fs-id2476683"><h3 data-type="title">Building Linear Models from Verbal Descriptions </h3><p id="fs-id1293962">When building linear models to solve problems involving quantities with a constant rate of change, we typically follow the same problem strategies that we would use for any type of function. Let’s briefly review them:</p>
+<ol id="fs-id1472983" type="1">
+<li>Identify changing quantities, and then define descriptive variables to represent those quantities. When appropriate, sketch a picture or define a coordinate system.</li>
+<li>Carefully read the problem to identify important information. Look for information that provides values for the variables or values for parts of the functional model, such as slope and initial value.</li>
+<li>Carefully read the problem to determine what we are trying to find, identify, solve, or interpret.</li>
+<li>Identify a solution pathway from the provided information to what we are trying to find. Often this will involve checking and tracking units, building a table, or even finding a formula for the function being used to model the problem.</li>
+<li>When needed, write a formula for the function.</li>
+<li>Solve or evaluate the function using the formula.</li>
+<li>Reflect on whether your answer is reasonable for the given situation and whether it makes sense mathematically.</li>
+<li>Clearly convey your result using appropriate units, and answer in full sentences when necessary.</li></ol>
+<p id="fs-id1840951">Now let’s take a look at the student in Seattle. In Elan’s situation, there are two changing quantities: time and money. The amount of money they have remaining while on vacation depends on how long they stay. We can use this information to define our variables, including units.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id2581158">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mtable columnalign="left">
+<mtr>
+<mtd>
+<mtext>Output:</mtext><mspace width="0.5em"></mspace><mi>M</mi><mo>,</mo><mtext>money remaining, in dollars</mtext>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mtext>Input:</mtext><mspace width="0.5em"></mspace><mi>t</mi><mo>,</mo><mtext>time, in weeks</mtext>
+</mtd>
+</mtr>
+</mtable>
+</mrow><annotation-xml encoding="MathML-Content"><mtable columnalign="left">
+<mtr>
+<mtd>
+<mtext>Output:</mtext><mspace width="0.5em"></mspace><mi>M</mi><mo>,</mo><mtext>money remaining, in dollars</mtext>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mtext>Input:</mtext><mspace width="0.5em"></mspace><mi>t</mi><mo>,</mo><mtext>time, in weeks</mtext>
+</mtd>
+</mtr>
+</mtable></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1721100">So, the amount of money remaining depends on the number of weeks: <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>M</mi><mrow><mo>(</mo>
+<mi>t</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>M</mi><mrow><mo>(</mo>
+<mi>t</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> .</p><div class="unnumbered" data-label="" data-type="equation" id="fs-id2128337">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mtable columnalign="left">
+<mtr>
+<mtd>
+<mtext>We can also identify the initial value and the rate of change</mtext><mo>.</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mspace width="0.5em"></mspace><mtext>            Initial Value: She saved $3,500, so $3,500 is the initial value for</mtext><mspace width="0.5em"></mspace><mi>M</mi><mo>.</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mspace width="0.5em"></mspace><mtext>            Rate of Change: She anticipates spending $400 each week, so</mtext><mo>−</mo><mtext>$400 per week is the rate of change, or slope</mtext><mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</mrow><annotation-xml encoding="MathML-Content"><mtable columnalign="left">
+<mtr>
+<mtd>
+<mtext>We can also identify the initial value and the rate of change</mtext><mo>.</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mspace width="0.5em"></mspace><mtext>            Initial Value: She saved $3,500, so $3,500 is the initial value for</mtext><mspace width="0.5em"></mspace><mi>M</mi><mo>.</mo>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mspace width="0.5em"></mspace><mtext>            Rate of Change: She anticipates spending $400 each week, so</mtext><mo>−</mo><mtext>$400 per week is the rate of change, or slope</mtext><mo>.</mo>
+</mtd>
+</mtr>
+</mtable></annotation-xml></semantics></math></div>
+</div><p id="fs-id1710878">Notice that the unit of dollars per week matches the unit of our output variable divided by our input variable. Also, because the slope is negative, the linear function is decreasing. This should make sense because she is spending money each week.</p>
+<p id="fs-id1755504">The <span class="no-emphasis" data-type="term" group-by="r" id="term-00001">rate of change</span> is constant, so we can start with the <span class="no-emphasis" data-type="term" group-by="l" id="term-00002">linear model</span> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>M</mi><mrow><mo>(</mo>
+<mi>t</mi>
+<mo>)</mo></mrow><mo>=</mo><mi>m</mi><mi>t</mi><mo>+</mo><mi>b</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>M</mi><mrow><mo>(</mo>
+<mi>t</mi>
+<mo>)</mo></mrow><mo>=</mo><mi>m</mi><mi>t</mi><mo>+</mo><mi>b</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Then we can substitute the intercept and slope provided.</p>
+<span data-alt="Values m = -400 and b = 3500 are substituted into the general linear equation M(t) = mt + b, resulting in the specific function M(t) = -400t + 3500." data-type="media" id="fs-id2463828">
+<img alt="Values m = -400 and b = 3500 are substituted into the general linear equation M(t) = mt + b, resulting in the specific function M(t) = -400t + 3500." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/43891a9dc3d3d3da85df600f4003f93a6b5ce945" height="175" loading="lazy" src="c887fc7d92783c7d0ca66493.webp" width="244"/>
+</span>
+<p id="fs-id2180524">To find the <em data-effect="italics">t-</em>intercept (horizontal axis intercept), we set the output to zero, and solve for the input.</p><div class="unnumbered" data-label="" data-type="equation" id="fs-id2612253">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mn>0</mn>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>−400</mn><mi>t</mi><mo>+</mo><mn>3500</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>t</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>3500</mn>
+</mrow>
+<mrow>
+<mn>400</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>8.75</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mn>0</mn>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>−400</mn><mi>t</mi><mo>+</mo><mn>3500</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>t</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>3500</mn>
+</mrow>
+<mrow>
+<mn>400</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>8.75</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1582758">The <em data-effect="italics">t</em>-intercept (horizontal axis intercept) is 8.75 weeks. Because this represents the input value when the output will be zero, we could say that Elan will have no money left after 8.75 weeks.</p><p id="fs-id2247599">When modeling any real-life scenario with functions, there is typically a limited domain over which that model will be valid—almost no trend continues indefinitely. Here the domain refers to the number of weeks. In this case, it doesn’t make sense to talk about input values less than zero. A negative input value could refer to a number of weeks before Elan saved $3,500, but the scenario discussed poses the question once they saved $3,500 because this is when the trip and subsequent spending starts. It is also likely that this model is not valid after the <em data-effect="italics">t</em>-intercept (horizontal axis intercept), unless Elan uses a credit card and goes into debt. The domain represents the set of input values, so the reasonable domain for this function is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>8.75.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>8.75.</mn>
+</mrow></annotation-xml></semantics></math></span>
+</p><p id="fs-id1729498">In this example, we were given a written description of the situation. We followed the steps of modeling a problem to analyze the information. However, the information provided may not always be the same. Sometimes we might be provided with an intercept. Other times we might be provided with an output value. We must be careful to analyze the information we are given, and use it appropriately to build a linear model.</p>
+<section data-depth="2" id="fs-id1724612"><h4 data-type="title">Using a Given Intercept to Build a Model</h4>
+<p id="fs-id1706231">Some real-world problems provide the vertical axis intercept, which is the constant or initial value. Once the vertical axis intercept is known, the <em data-effect="italics">t</em>-intercept (horizontal axis intercept) can be calculated. Suppose, for example, that Hannah plans to pay off a no-interest loan from her parents. Her loan balance is $1,000. She plans to pay $250 per month until her balance is $0. The <em data-effect="italics">y</em>-intercept is the initial amount of her debt, or $1,000. The rate of change, or slope, is -$250 per month. We can then use the slope-intercept form and the given information to develop a linear model.</p><div class="unnumbered" data-label="" data-type="equation" id="fs-id1579958">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mi>m</mi><mi>x</mi><mo>+</mo><mi>b</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>−250</mn><mi>x</mi><mo>+</mo><mn>1000</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mi>m</mi><mi>x</mi><mo>+</mo><mi>b</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>−250</mn><mi>x</mi><mo>+</mo><mn>1000</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1258521">Now we can set the function equal to 0, and solve for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math></span> to find the <em data-effect="italics">x</em>-intercept.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1698598">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mn>0</mn>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>−250</mn><mi>x</mi><mo>+</mo><mn>1000</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>1000</mn>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>250</mn><mi>x</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mn>4</mn>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mi>x</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mi>x</mi>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mn>4</mn>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mn>0</mn>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>−250</mn><mi>x</mi><mo>+</mo><mn>1000</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>1000</mn>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>250</mn><mi>x</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mn>4</mn>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mi>x</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mi>x</mi>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mn>4</mn>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1550188">The <em data-effect="italics">x</em>-intercept is the number of months it takes her to reach a balance of $0. The <em data-effect="italics">x</em>-intercept is 4 months, so it will take Hannah four months to pay off her loan.</p>
+</section>
+<section data-depth="2" id="fs-id2568391"><h4 data-type="title"> Using a Given Input and Output to Build a Model</h4>
+<p id="fs-id1502595">Many real-world applications are not as direct as the ones we just considered. Instead they require us to identify some aspect of a linear function. We might sometimes instead be asked to evaluate the linear model at a given input or set the equation of the linear model equal to a specified output.</p>
+<div class="how-to-notitle ui-has-child-title" data-has-label="true" data-label="How To" data-type="note" id="fs-id1841313"><header><h3 class="os-title" data-label-parent="How To" data-type="title">
+<span class="os-title-label">How To</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="eip-id2177365"><strong>Given a word problem that includes two pairs of input and output values, use the linear function to solve a problem.</strong></p>
+<ol id="fs-id1625937" type="1">
+<li>Identify the input and output values.</li>
+<li>Convert the data to two coordinate pairs.</li>
+<li>Find the slope.</li>
+<li>Write the linear model.</li>
+<li>Use the model to make a prediction by evaluating the function at a given <em data-effect="italics">x</em>-value.</li>
+<li>Use the model to identify an <em data-effect="italics">x</em>-value that results in a given <em data-effect="italics">y</em>-value.</li>
+<li>Answer the question posed.</li>
+</ol>
+</div></section></div><div class="ui-has-child-title" data-type="example" id="Example_04_02_01"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">1</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><div class="unnumbered" data-type="exercise" id="fs-id1596288"><header></header><section>
+<div data-type="problem" id="fs-id1588819"><div class="os-problem-container"><h4 data-type="title">Using a Linear Model to Investigate a Town’s Population</h4>
+<p id="fs-id1768953">A town’s population has been growing linearly. In 2004, the population was 6,200. By 2009, the population had grown to 8,100. Assume this trend continues.</p>
+<ol class="circled" id="fs-id2178856" type="1">
+<li><span class="token">ⓐ</span>Predict the population in 2013.</li>
+<li><span class="token">ⓑ</span>Identify the year in which the population will reach 15,000.</li>
+</ol></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1740074">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id2095990">The two changing quantities are the population size and time. While we could use the actual year value as the input quantity, doing so tends to lead to very cumbersome equations because the <em data-effect="italics">y</em>-intercept would correspond to the year 0, more than 2000 years ago!</p>
+<p id="fs-id2064185">To make computation a little nicer, we will define our input as the number of years since 2004.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id2169348"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mtable columnalign="left">
+<mtr>
+<mtd>
+<mrow></mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>Input:</mtext><mspace width="0.5em"></mspace><mi>t</mi><mo>,</mo><mtext>years since 2004</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>Output:</mtext><mspace width="0.5em"></mspace><mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo><mtext>the town’s population</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mtd>
+</mtr>
+</mtable>
+</mrow><annotation-xml encoding="MathML-Content"><mtable columnalign="left">
+<mtr>
+<mtd>
+<mrow></mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>Input:</mtext><mspace width="0.5em"></mspace><mi>t</mi><mo>,</mo><mtext>years since 2004</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>Output:</mtext><mspace width="0.5em"></mspace><mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo><mtext>the town’s population</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mtd>
+</mtr>
+</mtable></annotation-xml></semantics></math></div>
+</div><p id="fs-id1589562">To predict the population in 2013 ( <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>=</mo><mn>9</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>=</mo><mn>9</mn>
+</mrow></annotation-xml></semantics></math></span> ), we would first need an equation for the population. Likewise, to find when the population would reach 15,000, we would need to solve for the input that would provide an output of 15,000. To write an equation, we need the initial value and the rate of change, or slope.</p><p id="fs-id1615853">To determine the rate of change, we will use the change in output per change in input.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1736784"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>m</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>change in output</mtext>
+</mrow>
+<mrow>
+<mtext>change in input</mtext>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>m</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>change in output</mtext>
+</mrow>
+<mrow>
+<mtext>change in input</mtext>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div> </div>
+<p id="fs-id1729037">The problem gives us two input-output pairs. Converting them to match our defined variables, the year 2004 would correspond to <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>=</mo><mn>0</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>=</mo><mn>0</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> giving the point <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>0</mn><mo>,</mo><mtext>6200</mtext>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>0</mn><mo>,</mo><mtext>6200</mtext>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Notice that through our clever choice of variable definition, we have “given” ourselves the <em data-effect="italics">y</em>-intercept of the function. The year 2009 would correspond to <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>=</mo><mtext>5,</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>=</mo><mtext>5,</mtext>
+</mrow></annotation-xml></semantics></math></span> giving the point <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mtext>8100</mtext><mo stretchy="false">)</mo><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo stretchy="false">(</mo><mn>5</mn><mo>,</mo><mtext>8100</mtext><mo stretchy="false">)</mo><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p><p id="fs-id1584436">The two coordinate pairs are <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>0</mn><mo>,</mo><mtext>6200</mtext>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>0</mn><mo>,</mo><mtext>6200</mtext>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>5</mn><mo>,</mo><mtext>8100</mtext>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>5</mn><mo>,</mo><mtext>8100</mtext>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Recall that we encountered examples in which we were provided two points earlier in the chapter. We can use these values to calculate the slope.</p><div class="unnumbered" data-label="" data-type="equation" id="fs-id1502309">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>m</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>8100</mn><mo>−</mo><mn>6200</mn>
+</mrow>
+<mrow>
+<mn>5</mn><mo>−</mo><mn>0</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>1900</mn>
+</mrow>
+<mn>5</mn>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>380</mn><mspace width="0.5em"></mspace><mtext>people per year</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>m</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>8100</mn><mo>−</mo><mn>6200</mn>
+</mrow>
+<mrow>
+<mn>5</mn><mo>−</mo><mn>0</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>1900</mn>
+</mrow>
+<mn>5</mn>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>380</mn><mspace width="0.5em"></mspace><mtext>people per year</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1552163">We already know the <em data-effect="italics">y</em>-intercept of the line, so we can immediately write the equation:</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id925237"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>380</mn><mi>t</mi><mo>+</mo><mn>6200</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>380</mn><mi>t</mi><mo>+</mo><mn>6200</mn>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id2052228">To predict the population in 2013, we evaluate our function at <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>=</mo><mn>9.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>=</mo><mn>9.</mn>
+</mrow></annotation-xml></semantics></math></span> </p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1450404">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>380</mn><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo><mo>+</mo><mn>6,200</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>9,620</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>380</mn><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo><mo>+</mo><mn>6,200</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>9,620</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1255422">If the trend continues, our model predicts a population of 9,620 in 2013.</p>
+<p id="fs-id1133923">To find when the population will reach 15,000, we can set <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>15000</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>15000</mn>
+</mrow></annotation-xml></semantics></math></span> and solve for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id2798855">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>15000</mn>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>380</mn><mi>t</mi><mo>+</mo><mn>6200</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>8800</mn>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>380</mn><mi>t</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mi>t</mi>
+</mtd>
+<mtd>
+<mo>≈</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>23.158</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>15000</mn>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>380</mn><mi>t</mi><mo>+</mo><mn>6200</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>8800</mn>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>380</mn><mi>t</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mi>t</mi>
+</mtd>
+<mtd>
+<mo>≈</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>23.158</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1451577">Our model predicts the population will reach 15,000 in a little more than 23 years after 2004, or somewhere around the year 2027.</p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="precalculus try ui-has-child-title" data-has-label="true" data-label="Try It" data-type="note" id="fs-id1167337081363"><header><h3 class="os-title" data-label-parent="Try It">
+<span class="os-title-label">Try It </span>
+<span class="os-number">#1</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="ti_04_02_01"><header></header><section><div data-type="problem" id="fs-id1694856"><div class="os-problem-container"><p id="fs-id1602982">A company sells doughnuts. They incur a fixed cost of $25,000 for rent, insurance, and other expenses. It costs $0.25 to produce each doughnut.</p>
+<p id="id437834743"><span class="token">ⓐ</span> Write a linear model to represent the cost <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mi>C</mi></mrow><annotation-xml encoding="MathML-Content"><mi>C</mi></annotation-xml></semantics></math></span> of the company as a function of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mi>x</mi><mo>,</mo>
+</mrow><annotation-xml encoding="MathML-Content"><mi>x</mi><mo>,</mo></annotation-xml></semantics></math></span> the number of doughnuts produced.<span data-type="newline"><br/></span>
+<span class="token">ⓑ</span> Find and interpret the <em data-effect="italics">y</em>-intercept.</p>
+</div></div>
+</section></div></div></section></div>
+<div class="precalculus try ui-has-child-title" data-has-label="true" data-label="Try It" data-type="note" id="fs-id2065536"><header><h3 class="os-title" data-label-parent="Try It">
+<span class="os-title-label">Try It </span>
+<span class="os-number">#2</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="ti_04_02_02"><header></header><section><div data-type="problem" id="fs-id1445659"><div class="os-problem-container"><p id="fs-id1590073">A city’s population has been growing linearly. In 2008, the population was 28,200. By 2012, the population was 36,800. Assume this trend continues.</p>
+<ol class="circled" id="fs-id2432324" type="1">
+<li><span class="token">ⓐ</span>Predict the population in 2014.</li>
+<li><span class="token">ⓑ</span>Identify the year in which the population will reach 54,000.</li>
+</ol></div></div>
+</section></div></div></section></div>
+</section>
+<section data-depth="2" id="fs-id1275258"><h4 data-type="title">Using a Diagram to Build a Model </h4>
+<p id="fs-id1706744">It is useful for many real-world applications to draw a picture to gain a sense of how the variables representing the input and output may be used to answer a question. To draw the picture, first consider what the problem is asking for. Then, determine the input and the output. The diagram should relate the variables. Often, geometrical shapes or figures are drawn. Distances are often traced out. If a right triangle is sketched, the Pythagorean Theorem relates the sides. If a rectangle is sketched, labeling width and height is helpful.</p>
+<div class="ui-has-child-title" data-type="example" id="Example_04_02_02"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1609985"><header></header><section><div data-type="problem" id="fs-id1487939"><div class="os-problem-container"><h4 data-type="title">Using a Diagram to Model Distance Walked</h4>
+<p id="fs-id1618744">Anna and Emanuel start at the same intersection. Anna walks east at 4 miles per hour while Emanuel walks south at 3 miles per hour. They are communicating with a two-way radio that has a range of 2 miles. How long after they start walking will they fall out of radio contact?</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1673530">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id2158876">In essence, we can partially answer this question by saying they will fall out of radio contact when they are 2 miles apart, which leads us to ask a new question:</p>
+<p id="fs-id1040739"><span data-count="50" data-type="space"> </span>"How long will it take them to be 2 miles apart"?</p><p id="fs-id1602454">In this problem, our changing quantities are time and position, but ultimately we need to know how long will it take for them to be 2 miles apart. We can see that time will be our input variable, so we’ll define our input and output variables.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1552842"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mtable columnalign="left">
+<mtr>
+<mtd>
+<mrow></mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>Input:</mtext><mspace width="0.5em"></mspace><mi>t</mi><mo>,</mo><mtext>time in hours</mtext><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>Output:</mtext><mspace width="0.5em"></mspace><mi>A</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo><mtext>distance in miles, and</mtext><mspace width="0.5em"></mspace><mi>E</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo><mtext>distance in miles</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mtd>
+</mtr>
+</mtable>
+</mrow><annotation-xml encoding="MathML-Content"><mtable columnalign="left">
+<mtr>
+<mtd>
+<mrow></mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>Input:</mtext><mspace width="0.5em"></mspace><mi>t</mi><mo>,</mo><mtext>time in hours</mtext><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mtext>Output:</mtext><mspace width="0.5em"></mspace><mi>A</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo><mtext>distance in miles, and</mtext><mspace width="0.5em"></mspace><mi>E</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo><mtext>distance in miles</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mtd>
+</mtr>
+</mtable></annotation-xml></semantics></math></div>
+</div><p id="fs-id892657">Because it is not obvious how to define our output variable, we’ll start by drawing a picture such as <a aria-label="View Figure 2" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Figure_04_02_003">Figure 2</a>.</p>
+<div class="os-figure" id="Figure_04_02_003">
+<figure class="small ui-has-child-figcaption" data-id="Figure_04_02_003">
+<span data-alt="Emanuel is walking south at 3 miles/hour, while Anna is walking east at 4 miles/hour. The image shows a dotted, diagonal line that is labeled as the distance between them." data-type="media" id="fs-id1609271">
+<img alt="Emanuel is walking south at 3 miles/hour, while Anna is walking east at 4 miles/hour. The image shows a dotted, diagonal line that is labeled as the distance between them." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/430a8e6cdc0c9517dbef4e61c668774a1ee5035f" height="376" loading="lazy" src="140afbcccd8c3830122f18ea.webp" width="599"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2</span>
+</figcaption></figure>
+</div>
+<p id="fs-id1420809">Initial Value: They both start at the same intersection so when <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>=</mo><mn>0</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>=</mo><mn>0</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> the distance traveled by each person should also be 0. Thus the initial value for each is 0.</p>
+<p id="fs-id1739199">Rate of Change: Anna is walking 4 miles per hour and Emanuel is walking 3 miles per hour, which are both rates of change. The slope for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>A</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>A</mi>
+</mrow></annotation-xml></semantics></math></span> is 4 and the slope for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>E</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>E</mi>
+</mrow></annotation-xml></semantics></math></span> is 3.</p>
+<p id="fs-id1695365">Using those values, we can write formulas for the distance each person has walked.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1584473">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>A</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>4</mn><mi>t</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>E</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>3</mn><mi>t</mi>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>A</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>4</mn><mi>t</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>E</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>3</mn><mi>t</mi>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1683731">For this problem, the distances from the starting point are important. To notate these, we can define a coordinate system, identifying the “starting point” at the intersection where they both started. Then we can use the variable, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>A</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>A</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> which we introduced above, to represent Anna’s position, and define it to be a measurement from the starting point in the eastward direction. Likewise, can use the variable, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>E</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>E</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> to represent Emanuel’s position, measured from the starting point in the southward direction. Note that in defining the coordinate system, we specified both the starting point of the measurement and the direction of measure.</p>
+<p id="fs-id1798328">We can then define a third variable, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>D</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>D</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> to be the measurement of the distance between Anna and Emanuel. Showing the variables on the diagram is often helpful, as we can see from <a aria-label="View Figure 3" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Figure_04_02_004">Figure 3</a>.</p><p id="fs-id1600343">Recall that we need to know how long it takes for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>D</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>D</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> the distance between them, to equal 2 miles. Notice that for any given input <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> the outputs <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>A</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo><mi>E</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>A</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo><mi>E</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>D</mi><mrow><mo>(</mo>
+<mi>t</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>D</mi><mrow><mo>(</mo>
+<mi>t</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> represent distances.</p><div class="os-figure" id="Figure_04_02_004">
+<figure class="small ui-has-child-figcaption" data-id="Figure_04_02_004"><span data-alt="The rate of change of Emanuel and Anna where the rise of the slope is labeled E, the run is labeled A, and the hypotenuse is labeled D. The lines EAD form a right triangle." data-type="media" id="fs-id2403479">
+<img alt="The rate of change of Emanuel and Anna where the rise of the slope is labeled E, the run is labeled A, and the hypotenuse is labeled D. The lines EAD form a right triangle." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/a9c89a9e6cecbcd039cf803cc6f76685a0e16308" height="376" loading="lazy" src="1862abfb7cff94fa7f62d7af.webp" width="600"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">3</span>
+</figcaption></figure>
+</div><p id="fs-id1610430"><a aria-label="View Figure 2" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Figure_04_02_003">Figure 2</a> shows us that we can use the Pythagorean Theorem because we have drawn a right angle.</p>
+<p id="fs-id1596257">Using the Pythagorean Theorem, we get:</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id2294438">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mi>D</mi><msup>
+<mrow>
+<mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mi>A</mi><msup>
+<mrow>
+<mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>E</mi><msup>
+<mrow>
+<mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<msup>
+<mrow>
+<mo stretchy="false">(</mo><mn>4</mn><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><msup>
+<mrow>
+<mo stretchy="false">(</mo><mn>3</mn><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>16</mn><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>9</mn><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>25</mn><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mspace width="0.5em"></mspace><mtext></mtext><mi>D</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mo>±</mo><msqrt>
+<mrow>
+<mn>25</mn><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow><mspace width="1em"></mspace>
+<mtext>Solve for </mtext><mi>D</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mspace width="0.5em"></mspace><mtext>using the square root.</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mo>±</mo><mn>5</mn><mo>|</mo><mi>t</mi><mo>|</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mi>D</mi><msup>
+<mrow>
+<mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mi>A</mi><msup>
+<mrow>
+<mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mi>E</mi><msup>
+<mrow>
+<mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<msup>
+<mrow>
+<mo stretchy="false">(</mo><mn>4</mn><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><msup>
+<mrow>
+<mo stretchy="false">(</mo><mn>3</mn><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>16</mn><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>9</mn><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>25</mn><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mspace width="0.5em"></mspace><mtext></mtext><mi>D</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mo>±</mo><msqrt>
+<mrow>
+<mn>25</mn><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow><mspace width="1em"></mspace>
+<mtext>Solve for </mtext><mi>D</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mspace width="0.5em"></mspace><mtext>using the square root.</mtext>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mo>±</mo><mn>5</mn><mo>|</mo><mi>t</mi><mo>|</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id2245160">In this scenario we are considering only positive values of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> so our distance <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>D</mi><mrow><mo>(</mo>
+<mi>t</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>D</mi><mrow><mo>(</mo>
+<mi>t</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> will always be positive. We can simplify this answer to <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>D</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>5</mn><mi>t</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>D</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>5</mn><mi>t</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> This means that the distance between Anna and Emanuel is also a linear function. Because <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>D</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>D</mi>
+</mrow></annotation-xml></semantics></math></span> is a linear function, we can now answer the question of when the distance between them will reach 2 miles. We will set the output <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>D</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>D</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn>
+</mrow></annotation-xml></semantics></math></span> and solve for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1686891">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>D</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mn>2</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>5</mn><mi>t</mi>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mn>2</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mi>t</mi>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mn>5</mn>
+</mfrac>
+<mo>=</mo><mn>0.4</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>D</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mn>2</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>5</mn><mi>t</mi>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mn>2</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mi>t</mi>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mfrac>
+<mn>2</mn>
+<mn>5</mn>
+</mfrac>
+<mo>=</mo><mn>0.4</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id2202270">They will fall out of radio contact in 0.4 hour, or 24 minutes.</p></div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="precalculus qa ui-has-child-title" data-has-label="true" data-label="Q&amp;A" data-type="note" id="fs-id2158634"><header><h3 class="os-title" data-label-parent="Q&amp;A" data-type="title">
+<span class="os-title-label">Q&amp;A</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id2722011"><strong>Should I draw diagrams when given information based on a geometric shape?</strong></p>
+<p id="fs-id1622235"><em data-effect="italics">Yes. Sketch the figure and label the quantities and unknowns on the sketch.</em></p>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="Example_04_02_03"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1632957"><header></header><section>
+<div data-type="problem" id="fs-id1390619"><div class="os-problem-container"><h4 data-type="title">Using a Diagram to Model Distance Between Cities</h4>
+<p id="fs-id1477278">There is a straight road leading from the town of Westborough to Agritown 30 miles east and 10 miles north. Partway down this road, it junctions with a second road, perpendicular to the first, leading to the town of Eastborough. If the town of Eastborough is located 20 miles directly east of the town of Westborough, how far is the road junction from Westborough?</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1409499">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id2257378">It might help here to draw a picture of the situation. See <a aria-label="View Figure 4" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Figure_04_02_005">Figure 4</a>. It would then be helpful to introduce a coordinate system. While we could place the origin anywhere, placing it at Westborough seems convenient. This puts Agritown at coordinates <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>3</mtext><mn>0</mn><mo>,</mo><mtext>1</mtext><mn>0</mn>
+</mrow>
+<mo>)</mo></mrow><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>3</mtext><mn>0</mn><mo>,</mo><mtext>1</mtext><mn>0</mn>
+</mrow>
+<mo>)</mo></mrow><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> and Eastborough at <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>2</mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>0</mn>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>2</mtext><mn>0</mn><mo>,</mo><mtext></mtext><mn>0</mn>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p><div class="os-figure" id="Figure_04_02_005">
+<figure class="small ui-has-child-figcaption" data-id="Figure_04_02_005">
+<span data-alt="Graph of the intersection of the three roads, Westborough, Eastborough, and Agritown.  Westborough is at the point (0,0) and Eastborough is is 20 miles east at the point (20,0).  Agritown is at the point (30,10) with a line connecting Westborough to Agritown.  A line perpendicular to the previously mentioned line extends from Eastborough." data-type="media" id="fs-id1441391">
+<img alt="Graph of the intersection of the three roads, Westborough, Eastborough, and Agritown.  Westborough is at the point (0,0) and Eastborough is is 20 miles east at the point (20,0).  Agritown is at the point (30,10) with a line connecting Westborough to Agritown.  A line perpendicular to the previously mentioned line extends from Eastborough." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/4b67aab8814a70b0803331a2e4694a204866181c" height="179" loading="lazy" src="c34f06b025f0c2c91035dbfd.webp" width="605"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">4</span>
+</figcaption></figure>
+</div>
+<p id="fs-id2597503">Using this point along with the origin, we can find the slope of the line from Westborough to Agritown.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1412382"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>m</mi><mo>=</mo><mfrac>
+<mrow>
+<mn>10</mn><mo>−</mo><mn>0</mn>
+</mrow>
+<mrow>
+<mn>30</mn><mo>−</mo><mn>0</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>m</mi><mo>=</mo><mfrac>
+<mrow>
+<mn>10</mn><mo>−</mo><mn>0</mn>
+</mrow>
+<mrow>
+<mn>30</mn><mo>−</mo><mn>0</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div> </div>
+<p id="fs-id1474230">Now we can write an equation to describe the road from Westborough to Agritown.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1676531"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mi>x</mi>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1680471">From this, we can determine the perpendicular road to Eastborough will have slope <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>m</mi><mo>=</mo><mo>–</mo><mn>3.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>m</mi><mo>=</mo><mo>–</mo><mn>3.</mn>
+</mrow></annotation-xml></semantics></math></span> Because the town of Eastborough is at the point (20, 0), we can find the equation.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id2159307">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mi>E</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>−3</mn><mi>x</mi><mo>+</mo><mi>b</mi>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mn>0</mn>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>−3</mn><mo stretchy="false">(</mo><mn>20</mn><mo stretchy="false">)</mo><mo>+</mo><mi>b</mi>
+</mrow>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow><mspace width="1em"></mspace>
+<mtext>Substitute </mtext><mo stretchy="false">(</mo><mn>20</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo><mspace width="0.8"></mspace><mtext>into the equation</mtext><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>b</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>60</mn>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mi>E</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>−3</mn><mi>x</mi><mo>+</mo><mn>60</mn>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mi>E</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>−3</mn><mi>x</mi><mo>+</mo><mi>b</mi>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mn>0</mn>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>−3</mn><mo stretchy="false">(</mo><mn>20</mn><mo stretchy="false">)</mo><mo>+</mo><mi>b</mi>
+</mrow>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow><mspace width="1em"></mspace>
+<mtext>Substitute </mtext><mo stretchy="false">(</mo><mn>20</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo><mspace width="0.8"></mspace><mtext>into the equation</mtext><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>b</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>60</mn>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mi>E</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>−3</mn><mi>x</mi><mo>+</mo><mn>60</mn>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1364629">We can now find the coordinates of the junction of the roads by finding the intersection of these lines. Setting them equal,</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id2157593">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mspace width="0.5em"></mspace><mtext></mtext><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mi>x</mi>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>60</mn>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>10</mn>
+</mrow>
+<mn>3</mn>
+</mfrac>
+<mi>x</mi>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>60</mn>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mo> </mo><mn>10</mn><mi>x</mi>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>180</mn>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>x</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>18</mn>
+</mrow>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow><mspace width="2em"></mspace>
+<mtext>Substitute this back into </mtext><mi>W</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>y</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mi>W</mi><mo stretchy="false">(</mo><mn>18</mn><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mo stretchy="false">(</mo><mn>18</mn><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mn>6</mn>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mspace width="0.5em"></mspace><mtext></mtext><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mi>x</mi>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mo>−</mo><mn>3</mn><mi>x</mi><mo>+</mo><mn>60</mn>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>10</mn>
+</mrow>
+<mn>3</mn>
+</mfrac>
+<mi>x</mi>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>60</mn>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mo> </mo><mn>10</mn><mi>x</mi>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>180</mn>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>x</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>18</mn>
+</mrow>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow><mspace width="2em"></mspace>
+<mtext>Substitute this back into </mtext><mi>W</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>y</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mi>W</mi><mo stretchy="false">(</mo><mn>18</mn><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mo stretchy="false">(</mo><mn>18</mn><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mn>6</mn>
+</mtd>
+<mtd rowalign="center"></mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1691413">The roads intersect at the point (18, 6). Using the distance formula, we can now find the distance from Westborough to the junction.</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id2674225">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mtext>distance</mtext>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<msqrt>
+<mrow>
+<msup>
+<mrow>
+<mo stretchy="false">(</mo><msub>
+<mi>x</mi>
+<mn>2</mn>
+</msub>
+<mo>−</mo><msub>
+<mi>x</mi>
+<mn>1</mn>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><msup>
+<mrow>
+<mo stretchy="false">(</mo><msub>
+<mi>y</mi>
+<mn>2</mn>
+</msub>
+<mo>−</mo><msub>
+<mi>y</mi>
+<mn>1</mn>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<msqrt>
+<mrow>
+<msup>
+<mrow>
+<mo stretchy="false">(</mo><mn>18</mn><mo>−</mo><mn>0</mn><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><msup>
+<mrow>
+<mo stretchy="false">(</mo><mn>6</mn><mo>−</mo><mn>0</mn><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>≈</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mspace width="0.5em"></mspace><mtext></mtext><mn>18.974</mn><mspace width="0.5em"></mspace><mtext>miles</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mtext>distance</mtext>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<msqrt>
+<mrow>
+<msup>
+<mrow>
+<mo stretchy="false">(</mo><msub>
+<mi>x</mi>
+<mn>2</mn>
+</msub>
+<mo>−</mo><msub>
+<mi>x</mi>
+<mn>1</mn>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><msup>
+<mrow>
+<mo stretchy="false">(</mo><msub>
+<mi>y</mi>
+<mn>2</mn>
+</msub>
+<mo>−</mo><msub>
+<mi>y</mi>
+<mn>1</mn>
+</msub>
+<mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<msqrt>
+<mrow>
+<msup>
+<mrow>
+<mo stretchy="false">(</mo><mn>18</mn><mo>−</mo><mn>0</mn><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><msup>
+<mrow>
+<mo stretchy="false">(</mo><mn>6</mn><mo>−</mo><mn>0</mn><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>≈</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mspace width="0.5em"></mspace><mtext></mtext><mn>18.974</mn><mspace width="0.5em"></mspace><mtext>miles</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div></div>
+</section>
+</details>
+<div data-type="commentary" id="fs-id1574537"><h4 data-type="commentary-title"><span class="os-title-label">Analysis</span></h4>
+<p id="fs-id2156889">One nice use of linear models is to take advantage of the fact that the graphs of these functions are lines. This means real-world applications discussing maps need linear functions to model the distances between reference points.</p>
+</div>
+</section></div>
+</div></section></div>
+<div class="precalculus try ui-has-child-title" data-has-label="true" data-label="Try It" data-type="note" id="fs-id1404608"><header><h3 class="os-title" data-label-parent="Try It">
+<span class="os-title-label">Try It </span>
+<span class="os-number">#3</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="ti_04_02_03"><header></header><section>
+<div data-type="problem" id="fs-id2188517"><div class="os-problem-container"><p id="fs-id2293573">There is a straight road leading from the town of Timpson to Ashburn 60 miles east and 12 miles north. Partway down the road, it junctions with a second road, perpendicular to the first, leading to the town of Garrison. If the town of Garrison is located 22 miles directly east of the town of Timpson, how far is the road junction from Timpson?</p></div></div>
+</section></div>
+</div></section></div>
+</section>
+</section><section data-depth="1" id="fs-id1462093"><h3 data-type="title">Modeling a Set of Data with Linear Functions</h3>
+<p id="fs-id2055095">Real-world situations including two or more linear functions may be modeled with a <span class="no-emphasis" data-type="term" group-by="s" id="term-00003">system of linear equations</span>. Remember, when solving a system of linear equations, we are looking for points the two lines have in common. Typically, there are three types of answers possible, as shown in <a aria-label="View Figure 5" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Figure_04_02_006">Figure 5</a>.</p>
+<div class="os-figure" id="Figure_04_02_006"><figure class="ui-has-child-figcaption" data-id="Figure_04_02_006">
+<span data-alt="The graph in (a) is of two intersecting lines.  The point of intersection is marked and labeled: exactly one solution.  Figure (b) shows one line and is labeled: infinitely many solutions.  Figure (c) shows two parallel lines labeled: no solutions." data-type="media" id="fs-id2058640">
+<img alt="The graph in (a) is of two intersecting lines.  The point of intersection is marked and labeled: exactly one solution.  Figure (b) shows one line and is labeled: infinitely many solutions.  Figure (c) shows two parallel lines labeled: no solutions." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/095d011ea2a456e4d1fab8156d3dc1f45bbcf6f4" height="351" loading="lazy" src="1c688ec0ea0e677a93a549b2.webp" width="936"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">5</span>
+</figcaption></figure></div>
+<div class="how-to-notitle ui-has-child-title" data-has-label="true" data-label="How To" data-type="note" id="fs-id2243270"><header><h3 class="os-title" data-label-parent="How To" data-type="title">
+<span class="os-title-label">How To</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="eip-id1169687368546"><strong>Given a situation that represents a system of linear equations, write the system of equations and identify the solution.</strong></p>
+<ol id="fs-id2559336" type="1">
+<li>Identify the input and output of each linear model.</li>
+<li>Identify the slope and <em data-effect="italics">y</em>-intercept of each linear model.</li>
+<li>Find the solution by setting the two linear functions equal to another and solving for <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math> or find the point of intersection on a graph.</li>
+</ol></div></section></div><div class="ui-has-child-title" data-type="example" id="Example_04_02_04"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1713599"><header></header><section>
+<div data-type="problem" id="fs-id1535106"><div class="os-problem-container"><h4 data-type="title">Building a System of Linear Models to Choose a Truck Rental Company</h4>
+<p class="has-noteref" id="fs-id2063128">Jamal is choosing between two truck-rental companies. The first, Keep on Trucking, Inc., charges an up-front fee of $20, then 59 cents a mile. The second, Move It Your Way, charges an up-front fee of $16, then 63 cents a mile<sup data-type="footnote-number" id="footnote-ref1"><a aria-label="Go to 4" data-type="footnote-link" epub:type="noteref" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#fs-id1582764" role="doc-noteref">4</a></sup>. When will Keep on Trucking, Inc. be the better choice for Jamal?</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1552602">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container"><p id="fs-id1633898">The two important quantities in this problem are the cost and the number of miles driven. Because we have two companies to consider, we will define two functions in <a aria-label="View Table 1" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Table_04_02_02">Table 1</a>.</p><div class="os-table" id="Table_04_02_02"><div class="table-scroll"><table data-id="Table_04_02_02" data-summary="Four rows and two columns. The first row is labeled: “Input”, the second: “Outputs”, the third: “Initial Value” and the fourth: “Rate of Change”. The first row of the second column is labeled: d, distance driven in miles. The second row of the second column is labeled: “K(d): cost, in dollars for renting from Keep on Trucking; M(d): cost in dollars for renting from Move It Your Way”. The third row of the second column is labeled: “Up-front fee: K(0) = 20 and M(0) = 16”. The fourth row of the second column is labeled: “K(d) = $0.59/mile and P(d) = $0.63/mile”." role="presentation"><tbody>
+<tr>
+<td data-align="center">Input</td>
+<td data-align="center"> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>d</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>d</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math> distance driven in miles</td>
+</tr>
+<tr>
+<td data-align="center">Outputs</td>
+<td data-align="center"><p id="eip-id2619045"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>K</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>:</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>K</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>:</mo>
+</mrow></annotation-xml></semantics></math></span> cost, in dollars, for renting from Keep on Trucking</p>
+<p id="eip-id1679192"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>M</mi><mrow><mo>(</mo>
+<mi>d</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>M</mi><mrow><mo>(</mo>
+<mi>d</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> cost, in dollars, for renting from Move It Your Way</p></td>
+</tr>
+<tr>
+<td data-align="center">Initial Value</td>
+<td data-align="center">Up-front fee: <math display="inline"><semantics><mrow>
+<mrow>
+<mi>K</mi><mrow><mo>(</mo>
+<mn>0</mn>
+<mo>)</mo></mrow><mo>=</mo><mtext>2</mtext><mn>0</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>K</mi><mrow><mo>(</mo>
+<mn>0</mn>
+<mo>)</mo></mrow><mo>=</mo><mtext>2</mtext><mn>0</mn>
+</mrow></annotation-xml></semantics></math> and <math display="inline"><semantics><mrow>
+<mrow>
+<mi>M</mi><mrow><mo>(</mo>
+<mn>0</mn>
+<mo>)</mo></mrow><mo>=</mo><mtext>16</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>M</mi><mrow><mo>(</mo>
+<mn>0</mn>
+<mo>)</mo></mrow><mo>=</mo><mtext>16</mtext>
+</mrow></annotation-xml></semantics></math> </td>
+</tr>
+<tr>
+<td data-align="center">Rate of Change</td>
+<td data-align="center"> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>K</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>$</mtext><mn>0.</mn><mtext>59</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>K</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>$</mtext><mn>0.</mn><mtext>59</mtext>
+</mrow></annotation-xml></semantics></math> /mile and <math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>$</mtext><mn>0.</mn><mtext>63</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>$</mtext><mn>0.</mn><mtext>63</mtext>
+</mrow></annotation-xml></semantics></math> /mile</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">1</span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="fs-id1630636">A linear function is of the form <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>b</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Using the rates of change and initial charges, we can write the equations</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1474084">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>K</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>0.59</mn><mi>d</mi><mo>+</mo><mn>20</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>M</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>0.63</mn><mi>d</mi><mo>+</mo><mn>16</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>K</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>0.59</mn><mi>d</mi><mo>+</mo><mn>20</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>M</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>0.63</mn><mi>d</mi><mo>+</mo><mn>16</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id2204706">Using these equations, we can determine when Keep on Trucking, Inc., will be the better choice. Because all we have to make that decision from is the costs, we are looking for when Move It Your Way, will cost less, or when <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>K</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>&lt;</mo><mi>M</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>K</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>&lt;</mo><mi>M</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> The solution pathway will lead us to find the equations for the two functions, find the intersection, and then see where the <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>K</mi><mrow><mo>(</mo>
+<mi>d</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>K</mi><mrow><mo>(</mo>
+<mi>d</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> function is smaller.</p><p id="fs-id1580679">These graphs are sketched in <a aria-label="View Figure 6" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Figure_04_02_007">Figure 6</a>, with <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>K</mi><mrow><mo>(</mo>
+<mi>d</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>K</mi><mrow><mo>(</mo>
+<mi>d</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> in blue.</p>
+<div class="os-figure" id="Figure_04_02_007">
+<figure class="medium ui-has-child-figcaption" data-id="Figure_04_02_007">
+<span data-alt="Graph of M(d) = 0.63 +16 and K(d) = 0.59m + 20.  The x-axis goes from 0 to 160 and the y-axis goes from 0 to 120 both in intervals of 10. M(d) has a slope of 0.63 and a y-intercept of 20 while K(d) has a slope of 0.59 and a y-intercept of 16.  The two lines intersect at (100, 80)." data-type="media" id="fs-id1859115">
+<img alt="Graph of M(d) = 0.63 +16 and K(d) = 0.59m + 20.  The x-axis goes from 0 to 160 and the y-axis goes from 0 to 120 both in intervals of 10. M(d) has a slope of 0.63 and a y-intercept of 20 while K(d) has a slope of 0.59 and a y-intercept of 16.  The two lines intersect at (100, 80)." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/4eedb22ad9d1c613e738f4bb5a916a7da62560eb" height="360" loading="lazy" src="dc6b960499eac1ad8b579c5d.webp" width="751"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">6</span>
+</figcaption></figure>
+</div>
+<p id="fs-id1534720">To find the intersection, we set the equations equal and solve:</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id2196872">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>K</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mi>M</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>0.59</mn><mi>d</mi><mo>+</mo><mn>20</mn>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>0.63</mn><mi>d</mi><mo>+</mo><mn>16</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mn>4</mn>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>0.04</mn><mi>d</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mspace width="0.5em"></mspace><mtext></mtext><mn>100</mn>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mi>d</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mi>d</mi>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>100</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mi>K</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mi>M</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>0.59</mn><mi>d</mi><mo>+</mo><mn>20</mn>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>0.63</mn><mi>d</mi><mo>+</mo><mn>16</mn>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mn>4</mn>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>0.04</mn><mi>d</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mspace width="0.5em"></mspace><mtext></mtext><mn>100</mn>
+</mrow>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mi>d</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mi>d</mi>
+</mtd>
+<mtd>
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mn>100</mn>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+</div><p id="fs-id1623088">This tells us that the cost from the two companies will be the same if 100 miles are driven. Either by looking at the graph, or noting that <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>K</mi><mrow><mo>(</mo>
+<mi>d</mi>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>K</mi><mrow><mo>(</mo>
+<mi>d</mi>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> is growing at a slower rate, we can conclude that Keep on Trucking, Inc. will be the cheaper price when more than 100 miles are driven, that is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>d</mi><mo>&gt;</mo><mn>100</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>d</mi><mo>&gt;</mo><mn>100</mn>
+</mrow></annotation-xml></semantics></math></span> .</p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="media-notitle ui-has-child-title" data-has-label="true" data-label="Media" data-type="note" id="fs-id1542442"><header><h3 class="os-title" data-label-parent="Media" data-type="title">
+<span class="os-title-label">Media</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1309455">Access this online resource for additional instruction and practice with linear function models.</p>
+<ul id="fs-id2146773">
+<li><a aria-label="Go to Interpreting a Linear Function" href="https://openstax.org/l/interpretlinear" rel="noopener nofollow" target="_blank">Interpreting a Linear Function</a></li>
+</ul>
+</div></section></div>
+</section>
+<div class="os-eos os-section-exercises-container" data-uuid-key=".section-exercises"><h3 data-type="document-title">
+<span class="os-text">4.2 Section Exercises</span>
+</h3>
+<section class="section-exercises" data-depth="1" id="fs-id1853050"><section data-depth="2" id="fs-id2040608"><h4 data-type="title">Verbal</h4>
+<div class="os-hasSolution" data-type="exercise" id="fs-id958788"><header></header><section><div data-type="problem" id="fs-id958789">
+<a aria-label="Go to 1" class="os-number" data-page-fragment="fs-id958788-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">1</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1693696">Explain how to find the input variable in a word problem that uses a linear function.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1625907"><header></header><section><div data-type="problem" id="fs-id1535096">
+<span class="os-number">2</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1535097">Explain how to find the output variable in a word problem that uses a linear function.</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1433437"><header></header><section><div data-type="problem" id="fs-id1433438">
+<a aria-label="Go to 3" class="os-number" data-page-fragment="fs-id1433437-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">3</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1612336">Explain how to interpret the initial value in a word problem that uses a linear function.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1308731"><header></header><section><div data-type="problem" id="fs-id1738133">
+<span class="os-number">4</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1738134">Explain how to determine the slope in a word problem that uses a linear function.
+</p></div>
+</div></section></div>
+</section>
+<section data-depth="2" id="fs-id1605116"><h4 data-type="title">Algebraic</h4><div class="os-hasSolution" data-type="exercise" id="fs-id2437711"><header></header><section><div data-type="problem" id="fs-id2437712">
+<a aria-label="Go to 5" class="os-number" data-page-fragment="fs-id2437711-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">5</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1531527">Find the area of a parallelogram bounded by the <em data-effect="italics">y</em>-axis, the line <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mn>3</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mn>3</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> the line <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mi>x</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>+</mo><mn>2</mn><mi>x</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> and the line parallel to <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span> passing through <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>2</mtext><mo>,</mo><mtext>7</mtext>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>2</mtext><mo>,</mo><mtext>7</mtext>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p></div>
+</div></section></div>
+<div data-type="exercise" id="fs-id1484514"><header></header><section><div data-type="problem" id="fs-id2133818">
+<span class="os-number">6</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2133819">Find the area of a triangle bounded by the <em data-effect="italics">x</em>-axis, the line <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>12</mn><mo>–</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mi>x</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>12</mn><mo>–</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mi>x</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> and the line perpendicular to <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span> that passes through the origin.</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id2107494"><header></header><section><div data-type="problem" id="fs-id1683110">
+<a aria-label="Go to 7" class="os-number" data-page-fragment="fs-id2107494-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">7</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1683111">Find the area of a triangle bounded by the <em data-effect="italics">y</em>-axis, the line <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>9</mn><mo>–</mo><mfrac>
+<mn>6</mn>
+<mn>7</mn>
+</mfrac>
+<mi>x</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>9</mn><mo>–</mo><mfrac>
+<mn>6</mn>
+<mn>7</mn>
+</mfrac>
+<mi>x</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> and the line perpendicular to <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span> that passes through the origin.</p></div>
+</div>
+</section></div>
+<div class="material-set-2" data-type="exercise" id="fs-id1541290"><header></header><section><div data-type="problem" id="fs-id1541291">
+<span class="os-number">8</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1375432">Find the area of a parallelogram bounded by the <em data-effect="italics">x</em>-axis, the line <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> the line <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>3</mn><mi>x</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>3</mn><mi>x</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> and the line parallel to <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span> passing through <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mo stretchy="false">(</mo><mn>6</mn><mo>,</mo><mo></mo><mn>1</mn><mo stretchy="false">)</mo><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo stretchy="false">(</mo><mn>6</mn><mo>,</mo><mo></mo><mn>1</mn><mo stretchy="false">)</mo><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p></div>
+</div></section></div>
+<p id="fs-id1494319">For the following exercises, consider this scenario: A town’s population has been decreasing at a constant rate. In 2010 the population was 5,900. By 2012 the population had dropped to 4,700. Assume this trend continues.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1727719"><header></header><section><div data-type="problem" id="fs-id1326052">
+<a aria-label="Go to 9" class="os-number" data-page-fragment="fs-id1727719-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">9</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1326053">Predict the population in 2016.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1843477"><header></header><section><div data-type="problem" id="fs-id1843478">
+<span class="os-number">10</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2482385">Identify the year in which the population will reach 0.</p></div>
+</div></section></div>
+<p id="fs-id1703106">For the following exercises, consider this scenario: A town’s population has been increased at a constant rate. In 2010 the population was 46,020. By 2012 the population had increased to 52,070. Assume this trend continues.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1485112"><header></header><section><div data-type="problem" id="fs-id1485113">
+<a aria-label="Go to 11" class="os-number" data-page-fragment="fs-id1485112-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">11</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1629483">Predict the population in 2016.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1676249"><header></header><section><div data-type="problem" id="fs-id2525286">
+<span class="os-number">12</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2525287">Identify the year in which the population will reach 75,000.</p></div>
+</div></section></div>
+<p id="fs-id1275651">For the following exercises, consider this scenario: A town has an initial population of 75,000. It grows at a constant rate of 2,500 per year for 5 years.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id2096441"><header></header><section><div data-type="problem" id="fs-id1503152">
+<a aria-label="Go to 13" class="os-number" data-page-fragment="fs-id2096441-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">13</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1503153">Find the linear function that models the town’s population <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi>
+</mrow></annotation-xml></semantics></math></span> as a function of the year, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi>
+</mrow></annotation-xml></semantics></math></span> is the number of years since the model began.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1621572"><header></header><section><div data-type="problem" id="fs-id1711860">
+<span class="os-number">14</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1711861">Find a reasonable domain and range for the function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1373760"><header></header><section><div data-type="problem" id="fs-id1373761">
+<a aria-label="Go to 15" class="os-number" data-page-fragment="fs-id1373760-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">15</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1692797">If the function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi>
+</mrow></annotation-xml></semantics></math></span> is graphed, find and interpret the <em data-effect="italics">x</em>- and <em data-effect="italics">y</em>-intercepts.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id2270594"><header></header><section><div data-type="problem" id="fs-id1324721">
+<span class="os-number">16</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1324722">If the function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi>
+</mrow></annotation-xml></semantics></math></span> is graphed, find and interpret the slope of the function.</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id2159611"><header></header><section><div data-type="problem" id="fs-id2054683">
+<a aria-label="Go to 17" class="os-number" data-page-fragment="fs-id2159611-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">17</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2054684">When will the population reach 100,000?</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id2270628"><header></header><section><div data-type="problem" id="fs-id2270629">
+<span class="os-number">18</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2270630">What is the population in the year 12 years from the onset of the model?</p></div>
+</div></section></div>
+<p id="fs-id2176751">For the following exercises, consider this scenario: The weight of a newborn is 7.5 pounds. The baby gained one-half pound a month for its first year.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id2757821"><header></header><section><div data-type="problem" id="fs-id2757822">
+<a aria-label="Go to 19" class="os-number" data-page-fragment="fs-id2757821-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">19</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2757823">Find the linear function that models the baby’s weight <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>W</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi>
+</mrow></annotation-xml></semantics></math></span> as a function of the age of the baby, in months, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1676671"><header></header><section><div data-type="problem" id="fs-id1676672">
+<span class="os-number">20</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1633086">Find a reasonable domain and range for the function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>W</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1595316"><header></header><section><div data-type="problem" id="fs-id2552884">
+<a aria-label="Go to 21" class="os-number" data-page-fragment="fs-id1595316-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">21</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2552885">If the function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>W</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>W</mi>
+</mrow></annotation-xml></semantics></math></span> is graphed, find and interpret the <em data-effect="italics">x</em>- and <em data-effect="italics">y</em>-intercepts.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id2476729"><header></header><section><div data-type="problem" id="fs-id2476730">
+<span class="os-number">22</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2476731">If the function <em data-effect="italics">W</em> is graphed, find and interpret the slope of the function.</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id2354398"><header></header><section><div data-type="problem" id="fs-id2354399">
+<a aria-label="Go to 23" class="os-number" data-page-fragment="fs-id2354398-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">23</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2354400">When did the baby weigh 10.4 pounds?</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id2270621"><header></header><section><div data-type="problem" id="fs-id2270622">
+<span class="os-number">24</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2270623">What is the output when the input is 6.2?</p></div>
+</div></section></div>
+<p id="fs-id2601994">For the following exercises, consider this scenario: The number of people afflicted with the common cold in the winter months steadily decreased by 205 each year from 2005 until 2010. In 2005, 12,025 people were inflicted.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id2601999"><header></header><section><div data-type="problem" id="fs-id2270474">
+<a aria-label="Go to 25" class="os-number" data-page-fragment="fs-id2601999-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">25</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2270475">Find the linear function that models the number of people inflicted with the common cold <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>C</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>C</mi>
+</mrow></annotation-xml></semantics></math></span> as a function of the year, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1675337"><header></header><section><div data-type="problem" id="fs-id1497962">
+<span class="os-number">26</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1497961">Find a reasonable domain and range for the function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>C</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>C</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id2059898"><header></header><section><div data-type="problem" id="fs-id2059899">
+<a aria-label="Go to 27" class="os-number" data-page-fragment="fs-id2059898-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">27</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2786691">If the function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>C</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>C</mi>
+</mrow></annotation-xml></semantics></math></span> is graphed, find and interpret the <em data-effect="italics">x</em>- and <em data-effect="italics">y</em>-intercepts.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id2578742"><header></header><section><div data-type="problem" id="fs-id2578744">
+<span class="os-number">28</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2578743">If the function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>C</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>C</mi>
+</mrow></annotation-xml></semantics></math></span> is graphed, find and interpret the slope of the function.</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id2458311"><header></header><section><div data-type="problem" id="fs-id2458312">
+<a aria-label="Go to 29" class="os-number" data-page-fragment="fs-id2458311-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">29</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2458313">When will the number of people afflicted with the common cold reach 0?</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id2522962"><header></header><section><div data-type="problem" id="fs-id2804355">
+<span class="os-number">30</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2804356">In what year will the number of people afflicted with the common cold be 9,700?</p></div>
+</div></section></div>
+</section><section data-depth="2" id="fs-id2804361"><h4 data-type="title">Graphical</h4><p id="fs-id2281172">For the following exercises, use the graph in <a aria-label="View Figure 7" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Figure_04_02_201">Figure 7</a>, which shows the profit, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> in thousands of dollars, of a company in a given year, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi>
+</mrow></annotation-xml></semantics></math></span> represents the number of years since 1980.</p>
+<div class="os-figure" id="Figure_04_02_201"><figure class="small ui-has-child-figcaption" data-id="Figure_04_02_201"><span data-alt="Graph of a decreasing line from (15, 150) to (25, 130).  The x-axis goes from 0 to 30 in intervals of 5 and the y-axis goes from 125 to 155 in intervals of 5." data-type="media" id="eip-id3137261">
+<img alt="Graph of a decreasing line from (15, 150) to (25, 130).  The x-axis goes from 0 to 30 in intervals of 5 and the y-axis goes from 125 to 155 in intervals of 5." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/34f0cc291a897806fe5d3167f482b25a192653c6" height="325" loading="lazy" src="d28d594e8b967269a18877b6.webp" width="534"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">7</span>
+</figcaption></figure></div><div class="os-hasSolution" data-type="exercise" id="fs-id1862880"><header></header><section><div data-type="problem" id="fs-id1862881">
+<a aria-label="Go to 31" class="os-number" data-page-fragment="fs-id1862880-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">31</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1862882">Find the linear function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi>
+</mrow></annotation-xml></semantics></math></span> depends on <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> the number of years since 1980.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id2468170"><header></header><section><div data-type="problem" id="fs-id2468171">
+<span class="os-number">32</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2468172">Find and interpret the <em data-effect="italics">y</em>-intercept.</p></div>
+</div></section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id2212332"><header></header><section><div data-type="problem" id="fs-id2212333">
+<a aria-label="Go to 33" class="os-number" data-page-fragment="fs-id2212332-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">33</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2212334">Find and interpret the <em data-effect="italics">x</em>-intercept.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id2552843"><header></header><section><div data-type="problem" id="fs-id2552844">
+<span class="os-number">34</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2552845">Find and interpret the slope.</p></div>
+</div></section></div>
+<p id="fs-id2552848">For the following exercises, use the graph in <a aria-label="View Figure 8" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Figure_04_02_202">Figure 8</a>, which shows the profit, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> in thousands of dollars, of a company in a given year, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi>
+</mrow></annotation-xml></semantics></math></span> represents the number of years since 1980.</p>
+<div class="os-figure" id="Figure_04_02_202"><figure class="small ui-has-child-figcaption" data-id="Figure_04_02_202">
+<span data-alt="Graph of a line from (15, 150) to (25, 450).  The x-axis goes from 0 to 30 in intervals of 5 and the y-axis goes from 0 to 500 in intervals of 50." data-type="media" id="fs-id2558285">
+<img alt="Graph of a line from (15, 150) to (25, 450).  The x-axis goes from 0 to 30 in intervals of 5 and the y-axis goes from 0 to 500 in intervals of 50." data-media-type="image/jpg" data-original-src="/apps/archive/20260604.144757/resources/6910447826d60a85a55f51a304183f6f51be6c92" height="344" loading="lazy" src="587a985ea4574b9266d28678.webp" width="534"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">8</span>
+</figcaption></figure></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1843372"><header></header><section><div data-type="problem" id="fs-id1595293">
+<a aria-label="Go to 35" class="os-number" data-page-fragment="fs-id1843372-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">35</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1595294">Find the linear function <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>y</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>y</mi>
+</mrow></annotation-xml></semantics></math></span> depends on <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span> the number of years since 1980.</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id2382606"><header></header><section><div data-type="problem" id="fs-id2382607">
+<span class="os-number">36</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2382608">Find and interpret the <em data-effect="italics">y</em>-intercept.</p></div>
+</div>
+<!--<solution id="fs-id2651746"><para id="fs-id2651748"> <m:math>
+ <m:mrow>
+  <m:mrow><m:mo>(</m:mo>
+   <m:mrow>
+    <m:mn>0</m:mn><m:mo>,</m:mo><m:mo>&#8722;</m:mo><m:mn>300</m:mn>
+   </m:mrow>
+  <m:mo>)</m:mo></m:mrow><m:mo>;</m:mo>
+ </m:mrow>
+</m:math> In 1980, the company lost $300,000.</para></solution>--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id2477439"><header></header><section><div data-type="problem" id="fs-id2477440">
+<a aria-label="Go to 37" class="os-number" data-page-fragment="fs-id2477439-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">37</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2477441">Find and interpret the <em data-effect="italics">x</em>-intercept.</p></div>
+</div>
+</section></div><div data-type="exercise" id="fs-id2188429"><header></header><section><div data-type="problem" id="fs-id2188430">
+<span class="os-number">38</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2188431">Find and interpret the slope.</p></div>
+</div>
+<!--<solution id="fs-id1692952"><para id="fs-id1692953"> <m:math>
+ <m:mrow>
+  <m:mi>y</m:mi><m:mo>=</m:mo><m:mn>30</m:mn><m:mi>t</m:mi><m:mo>&#8722;</m:mo><m:mn>300</m:mn><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> of form <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>,</m:mo><m:mtext>m</m:mtext><m:mo>=</m:mo><m:mn>30.</m:mn>
+ </m:mrow>
+</m:math> </para><para id="fs-id2202361">For each year after 1980, the company's profits increased $30,000 per year</para></solution>--></section></div></section><section data-depth="2" id="fs-id2458296"><h4 data-type="title">Numeric</h4>
+<p id="fs-id2458302">For the following exercises, use the median home values in Mississippi and Hawaii (adjusted for inflation) shown in <a aria-label="View Table 2" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Table_04_02_03">Table 2</a>. Assume that the house values are changing linearly.</p>
+<div class="os-table" id="Table_04_02_03"><div class="table-scroll"><table data-id="Table_04_02_03" data-summary="This table shows three rows and three columns.  The first column is labeled: “Year”, the second: “Mississippi” and the third: “Hawaii”.  The two year entries are: “1950” and “2000”.  The two Mississippi entries are: “$25,200” and “$71,400”.  The two Hawaii entries are: “$74,400” and “$272,700”."><thead>
+<tr>
+<th data-align="center" scope="col">Year</th>
+<th data-align="center" scope="col">Mississippi</th>
+<th data-align="center" scope="col">Hawaii</th>
+</tr>
+</thead><tbody>
+<tr>
+<td data-align="center">1950</td>
+<td data-align="center">$25,200</td>
+<td data-align="center">$74,400</td>
+</tr>
+<tr>
+<td data-align="center">2000</td>
+<td data-align="center">$71,400</td>
+<td data-align="center">$272,700</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2</span>
+<span class="os-divider"> </span>
+<span class="os-caption">
+<span data-type="title">
+<!-- no-selfclose -->
+</span>
+</span>
+</div>
+</div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1861575"><header></header><section><div data-type="problem" id="fs-id1861576">
+<a aria-label="Go to 39" class="os-number" data-page-fragment="fs-id1861575-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">39</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1861578">In which state have home values increased at a higher rate?</p></div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1861581"><header></header><section><div data-type="problem" id="fs-id1861582">
+<span class="os-number">40</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1861583">If these trends were to continue, what would be the median home value in Mississippi in 2010?</p></div>
+</div>
+<!--<solution id="fs-id2632033"><para id="fs-id2632034">$80,640</para></solution>--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id2632037"><header></header><section><div data-type="problem" id="fs-id2632038">
+<a aria-label="Go to 41" class="os-number" data-page-fragment="fs-id2632037-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">41</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1724088">If we assume the linear trend existed before 1950 and continues after 2000, the two states’ median house values will be (or were) equal in what year? (The answer might be absurd.)</p></div>
+</div>
+</section></div><p id="fs-id1724094">For the following exercises, use the median home values in Indiana and Alabama (adjusted for inflation) shown in <a aria-label="View Table 3" class="autogenerated-content" href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions#Table_04_02_04">Table 3</a>. Assume that the house values are changing linearly.</p>
+<div class="os-table" id="Table_04_02_04"><div class="table-scroll"><table data-id="Table_04_02_04" data-summary="This table shows three rows and three columns.  The first column is labeled: “Year”, the second: “Indiana” and the third: “Alabama”.  The two year entries are: “1950” and “2000”.  The two Indiana entries are: “$37,700” and “$94,300”.  The two Alabama entries are: “$27,100” and “$85,100”."><thead>
+<tr>
+<th data-align="center" scope="col">Year</th>
+<th data-align="center" scope="col">Indiana</th>
+<th data-align="center" scope="col">Alabama</th>
+</tr>
+</thead><tbody>
+<tr>
+<td data-align="center">1950</td>
+<td data-align="center">$37,700</td>
+<td data-align="center">$27,100</td>
+</tr>
+<tr>
+<td data-align="center">2000</td>
+<td data-align="center">$94,300</td>
+<td data-align="center">$85,100</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3</span>
+<span class="os-divider"> </span>
+<span class="os-caption">
+<span data-type="title">
+<!-- no-selfclose -->
+</span>
+</span>
+</div>
+</div>
+<div data-type="exercise" id="fs-id2524290"><header></header><section><div data-type="problem" id="fs-id2524291">
+<span class="os-number">42</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2524292">In which state have home values increased at a higher rate?</p></div>
+</div>
+<!--<solution id="fs-id2524295"><para id="fs-id2524296">Alabama</para></solution>--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id2632168"><header></header><section><div data-type="problem" id="fs-id2632170">
+<a aria-label="Go to 43" class="os-number" data-page-fragment="fs-id2632168-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">43</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2632171">If these trends were to continue, what would be the median home value in Indiana in 2010?</p></div>
+</div>
+</section></div><div data-type="exercise" id="fs-id2632174"><header></header><section><div data-type="problem" id="fs-id2632175">
+<span class="os-number">44</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2632176">If we assume the linear trend existed before 1950 and continues after 2000, the two states’ median house values will be (or were) equal in what year? (The answer might be absurd.)</p></div>
+</div>
+<!--<solution id="fs-id2522920"><para id="fs-id2522921">2328</para></solution>--></section></div></section>
+<section data-depth="2" id="fs-id2192834"><h4 data-type="title">Real-World Applications</h4>
+<div class="os-hasSolution" data-type="exercise" id="fs-id2192840"><header></header><section><div data-type="problem" id="fs-id2192841">
+<a aria-label="Go to 45" class="os-number" data-page-fragment="fs-id2192840-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">45</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2477300">In 2004, a school population was 1001. By 2008 the population had grown to 1697. Assume the population is changing linearly.</p>
+<ol class="circled" id="fs-id2477304" type="1">
+<li><span class="token">ⓐ</span>How much did the population grow between the year 2004 and 2008?</li>
+<li><span class="token">ⓑ</span>How long did it take the population to grow from 1001 students to 1697 students?</li>
+<li><span class="token">ⓒ</span>What is the average population growth per year?</li>
+<li> <span class="token">ⓓ</span>What was the population in the year 2000?</li>
+<li><span class="token">ⓔ</span>Find an equation for the population, <math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math> of the school <em data-effect="italics">t</em> years after 2000.</li>
+<li><span class="token">ⓕ</span>Using your equation, predict the population of the school in 2011.</li>
+</ol></div>
+</div>
+</section></div><div data-type="exercise" id="fs-id2786621"><header></header><section><div data-type="problem" id="fs-id2786622">
+<span class="os-number">46</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2786623">In 2003, a town’s population was 1431. By 2007 the population had grown to 2134. Assume the population is changing linearly.</p>
+<ol class="circled" id="fs-id2786628" type="1">
+<li><span class="token">ⓐ</span>How much did the population grow between the year 2003 and 2007?</li>
+<li><span class="token">ⓑ</span>How long did it take the population to grow from 1431 people to 2134 people?</li>
+<li><span class="token">ⓒ</span>What is the average population growth per year?</li>
+<li><span class="token">ⓓ</span>What was the population in the year 2000?</li>
+<li><span class="token">ⓔ</span>Find an equation for the population, <math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math> of the town <math display="inline"><semantics><mrow>
+<mrow>
+<mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>t</mi>
+</mrow></annotation-xml></semantics></math> years after 2000.</li>
+<li><span class="token">ⓕ</span>Using your equation, predict the population of the town in 2014.</li>
+</ol>
+</div>
+</div>
+<!--<solution id="fs-id2459532">
+<list id="fs-id2459534" list-type="enumerated" number-style="lower-alpha"><item> <m:math>
+ <m:mrow>
+  <m:mn>2134</m:mn><m:mo>&#8722;</m:mo><m:mn>1431</m:mn><m:mo>=</m:mo><m:mn>703</m:mn><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> people</item>
+<item> <m:math>
+ <m:mrow>
+  <m:mn>2007</m:mn><m:mo>&#8722;</m:mo><m:mn>2003</m:mn><m:mo>=</m:mo><m:mn>4</m:mn><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> years</item>
+<item>Average rate of growth <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mo>=</m:mo><m:mfrac>
+   <m:mrow>
+    <m:mn>703</m:mn>
+   </m:mrow>
+   <m:mn>4</m:mn>
+  </m:mfrac>
+  <m:mo>=</m:mo><m:mn>175.75</m:mn><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> people per year
+<para id="fs-id2482865">So, using <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>y</m:mi><m:mo>=</m:mo><m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi><m:mo>,</m:mo>
+ </m:mrow>
+</m:math> we have <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>175.75</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1431.</m:mn>
+ </m:mrow>
+</m:math>
+
+</para></item>
+<item>The year 2000 corresponds to <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>t</m:mi><m:mo>=</m:mo><m:mo>&#8722;</m:mo><m:mn>3.</m:mn>
+ </m:mrow>
+</m:math>
+<para id="fs-id2521171">So, <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>175.75</m:mn><m:mo stretchy="false">(</m:mo><m:mo>&#8722;</m:mo><m:mn>3</m:mn><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>1431</m:mn><m:mo>=</m:mo><m:mn>903.75</m:mn><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> or roughly 904 people in year 2000</para></item>
+<item>If the year 2000 corresponds to <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>t</m:mi><m:mtext>=0,</m:mtext>
+ </m:mrow>
+</m:math> then we have ordered pair <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>903.75</m:mn><m:mo stretchy="false">)</m:mo>
+ </m:mrow>
+</m:math> <para id="fs-id2164264"> <m:math>
+ <m:mrow>
+  <m:mi>y</m:mi><m:mo>=</m:mo><m:mn>175.75</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>903.75</m:mn><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> corresponds to <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>175.75</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>903.75</m:mn>
+ </m:mrow>
+</m:math> </para></item>
+<item>The year 2014 corresponds to <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>t</m:mi><m:mo>=</m:mo><m:mn>14.</m:mn><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> Therefore, <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mn>14</m:mn><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>175.75</m:mn><m:mo stretchy="false">(</m:mo><m:mn>14</m:mn><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>903.75</m:mn><m:mo>=</m:mo><m:mn>3364.25</m:mn>
+ </m:mrow>
+</m:math> .
+<para id="fs-id2549762">So, a population of 3364.</para></item>
+</list></solution>--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id2601780"><header></header><section><div data-type="problem" id="fs-id2601781">
+<a aria-label="Go to 47" class="os-number" data-page-fragment="fs-id2601780-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">47</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2601782">A phone company has a monthly cellular plan where a customer pays a flat monthly fee and then a certain amount of money per minute used for voice or video calling. If a customer uses 410 minutes, the monthly cost will be $71.50. If the customer uses 720 minutes, the monthly cost will be $118.</p>
+<ol class="circled" id="fs-id2601788" type="1">
+<li><span class="token">ⓐ</span>Find a linear equation for the monthly cost of the cell plan as a function of <em data-effect="italics">x</em>, the number of monthly minutes used.</li>
+<li><span class="token">ⓑ</span>Interpret the slope and <em data-effect="italics">y</em>-intercept of the equation.</li>
+<li><span class="token">ⓒ</span>Use your equation to find the total monthly cost if 687 minutes are used.</li>
+</ol></div>
+</div>
+</section></div><div data-type="exercise" id="fs-id2482530"><header></header><section><div data-type="problem" id="fs-id2482532">
+<span class="os-number">48</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2482533">A phone company has a monthly cellular data plan where a customer pays a flat monthly fee of $10 and then a certain amount of money per megabyte (MB) of data used on the phone. If a customer uses 20 MB, the monthly cost will be $11.20. If the customer uses 130 MB, the monthly cost will be $17.80.</p>
+<ol class="circled" id="fs-id2482538" type="1">
+<li><span class="token">ⓐ</span>Find a linear equation for the monthly cost of the data plan as a function of <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math> the number of MB used.</li>
+<li><span class="token">ⓑ</span>Interpret the slope and <em data-effect="italics">y</em>-intercept of the equation.</li>
+<li><span class="token">ⓒ</span>Use your equation to find the total monthly cost if 250 MB are used.</li>
+</ol>
+</div>
+</div>
+<!--<solution id="fs-id2263565">
+<list id="fs-id2263567" mark-suffix=".)" list-type="enumerated" number-style="lower-alpha"><item> <m:math>
+ <m:mtable columnalign="left">
+  <m:mtr rowalign="center">
+   <m:mtd columnalign="left" rowalign="center">
+    <m:mtext>Ordered&#160;pairs&#160;are&#160;</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>20</m:mn><m:mo>,</m:mo><m:mn>11.20</m:mn><m:mo stretchy="false">)</m:mo><m:mtext>&#160;and&#160;</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>130</m:mn><m:mo>,</m:mo><m:mn>17.80</m:mn><m:mo stretchy="false">)</m:mo>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr rowalign="center">
+   <m:mtd rowalign="center"/>
+  </m:mtr>
+  <m:mtr rowalign="center">
+   <m:mtd rowalign="center">
+    <m:mtable>
+     <m:mtr rowalign="center">
+      <m:mtd columnalign="right" rowalign="center">
+       <m:mi>m</m:mi>
+      </m:mtd>
+      <m:mtd rowalign="center">
+       <m:mo>=</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left" rowalign="center">
+       <m:mrow>
+        <m:mfrac>
+         <m:mrow>
+          <m:mn>17.80</m:mn><m:mo>&#8722;</m:mo><m:mn>11.20</m:mn>
+         </m:mrow>
+         <m:mrow>
+          <m:mn>130</m:mn><m:mo>&#8722;</m:mo><m:mn>20</m:mn>
+         </m:mrow>
+        </m:mfrac>
+        <m:mo>=</m:mo><m:mn>0.06</m:mn><m:mtext>&#160;and&#160;</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>10</m:mn><m:mo stretchy="false">)</m:mo>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr rowalign="center">
+      <m:mtd columnalign="right" rowalign="center">
+       <m:mi>y</m:mi>
+      </m:mtd>
+      <m:mtd rowalign="center">
+       <m:mo>=</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left" rowalign="center">
+       <m:mrow>
+        <m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr rowalign="center">
+      <m:mtd columnalign="right" rowalign="center">
+       <m:mi>y</m:mi>
+      </m:mtd>
+      <m:mtd rowalign="center">
+       <m:mo>=</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left" rowalign="center">
+       <m:mrow>
+        <m:mn>0.06</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>10</m:mn><m:mtext>&#160;or&#160;</m:mtext><m:mi>C</m:mi><m:mo stretchy="false">(</m:mo><m:mi>x</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>0.06</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>10</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+
+    </m:mtable>
+   </m:mtd>
+  </m:mtr>
+ </m:mtable>
+
+</m:math>
+
+
+</item>
+<item>0.06 For every MB, the client is charged 6 cents. <m:math>
+ <m:mrow>
+  <m:mtext>&#8201;</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>10</m:mn><m:mo stretchy="false">)</m:mo><m:mtext>&#8201;</m:mtext>
+ </m:mrow>
+</m:math> If no usage occurs, the client is charged $10</item>
+<item> <m:math>
+ <m:mrow>
+  <m:mtable>
+   <m:mtr rowalign="center">
+    <m:mtd columnalign="right" rowalign="center">
+     <m:mrow>
+      <m:mi>C</m:mi><m:mo stretchy="false">(</m:mo><m:mn>250</m:mn><m:mo stretchy="false">)</m:mo>
+     </m:mrow>
+    </m:mtd>
+    <m:mtd rowalign="center">
+     <m:mo>=</m:mo>
+    </m:mtd>
+    <m:mtd columnalign="left" rowalign="center">
+     <m:mrow>
+      <m:mn>0.06</m:mn><m:mo stretchy="false">(</m:mo><m:mn>250</m:mn><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>10</m:mn>
+     </m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr rowalign="center">
+    <m:mtd rowalign="center"/>
+    <m:mtd rowalign="center">
+     <m:mo>=</m:mo>
+    </m:mtd>
+    <m:mtd columnalign="left" rowalign="center">
+     <m:mrow>
+      <m:mi>$</m:mi><m:mn>25</m:mn>
+     </m:mrow>
+    </m:mtd>
+   </m:mtr>
+
+  </m:mtable>
+ </m:mrow>
+</m:math>
+</item>
+ </list></solution>--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id2176702"><header></header><section><div data-type="problem" id="fs-id2176703">
+<a aria-label="Go to 49" class="os-number" data-page-fragment="fs-id2176702-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">49</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2176704">In 1990, the moose population in a park was measured to be 4,360. By 1999, the population was measured again to be 5,880. Assume the population continues to change linearly.</p>
+<ol class="circled" id="fs-id2176709" type="1">
+<li><span class="token">ⓐ</span>Find a formula for the moose population, <em data-effect="italics">P </em>since 1991.</li>
+<li><span class="token">ⓑ</span>What does your model predict the moose population to be in 2003?</li>
+</ol>
+</div>
+</div>
+</section></div><div data-type="exercise" id="fs-id893526"><header></header><section><div data-type="problem" id="fs-id893527">
+<span class="os-number">50</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id893528">In 2003, the owl population in a park was measured to be 340. By 2007, the population was measured again to be 285. The population changes linearly. Let the input be years since 2003.</p>
+<ol class="circled" id="fs-id893533" type="1">
+<li><span class="token">ⓐ</span>Find a formula for the owl population, <math display="inline"><semantics><mrow>
+<mrow>
+<mi>P</mi><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>P</mi><mo>.</mo>
+</mrow></annotation-xml></semantics></math> Let the input be years since 2003.</li>
+<li><span class="token">ⓑ</span>What does your model predict the owl population to be in 2012?</li>
+</ol>
+</div>
+</div>
+<!--<solution id="fs-id2598223">
+<list id="fs-id2598225" list-type="enumerated" number-style="lower-alpha"><item> <m:math>
+ <m:mtable columnalign="left">
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>Ordered&#160;pairs&#160;are&#160;</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>340</m:mn><m:mo stretchy="false">)</m:mo><m:mtext>&#160;and&#160;</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>4</m:mn><m:mo>,</m:mo><m:mn>285</m:mn><m:mo stretchy="false">)</m:mo>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mi>m</m:mi>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>=</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mfrac>
+         <m:mrow>
+          <m:mn>285</m:mn><m:mo>&#8722;</m:mo><m:mn>340</m:mn>
+         </m:mrow>
+         <m:mrow>
+          <m:mn>4</m:mn><m:mo>&#8722;</m:mo><m:mn>0</m:mn>
+         </m:mrow>
+        </m:mfrac>
+        <m:mo>=</m:mo><m:mo>&#8722;</m:mo><m:mn>13.75</m:mn><m:mtext>&#160;and&#160;</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>340</m:mn><m:mo stretchy="false">)</m:mo>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mi>y</m:mi>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>=</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mi>y</m:mi>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>=</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>&#8722;13.75</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>340</m:mn><m:mtext>&#160;or&#160;</m:mtext><m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>&#8722;13.75</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>340</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+
+    </m:mtable>
+   </m:mtd>
+  </m:mtr>
+ </m:mtable>
+
+</m:math>
+</item>
+<item> <m:math>
+ <m:mtable columnalign="left">
+  <m:mtr columnalign="left" rowalign="center">
+   <m:mtd columnalign="left" rowalign="center">
+    <m:mtext>The&#160;year&#160;2012&#160;corresponds&#160;to&#160;t&#160;=&#160;9</m:mtext>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr columnalign="left" rowalign="center">
+   <m:mtd columnalign="left" rowalign="center">
+    <m:mtable>
+     <m:mtr rowalign="center">
+      <m:mtd columnalign="right" rowalign="center">
+       <m:mrow>
+        <m:mi>P</m:mi><m:mo stretchy="false">(</m:mo><m:mn>9</m:mn><m:mo stretchy="false">)</m:mo>
+       </m:mrow>
+      </m:mtd>
+      <m:mtd rowalign="center">
+       <m:mo>=</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left" rowalign="center">
+       <m:mrow>
+        <m:mn>&#8722;13.75</m:mn><m:mo stretchy="false">(</m:mo><m:mn>9</m:mn><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>340</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr rowalign="center">
+      <m:mtd columnalign="right" rowalign="center"/>
+      <m:mtd rowalign="center">
+       <m:mo>=</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left" rowalign="center">
+       <m:mrow>
+        <m:mn>216.25</m:mn><m:mtext>&#160;or&#160;216&#160;owls</m:mtext>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+
+    </m:mtable>
+   </m:mtd>
+  </m:mtr>
+ </m:mtable>
+
+</m:math>
+</item>
+</list></solution>-->
+</section></div><div class="os-hasSolution" data-type="exercise" id="fs-id1828789"><header></header><section><div data-type="problem" id="fs-id1828791">
+<a aria-label="Go to 51" class="os-number" data-page-fragment="fs-id1828789-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">51</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1828792">The Federal Helium Reserve held about 16 billion cubic feet of helium in 2010 and is being depleted by about 2.1 billion cubic feet each year.</p>
+<ol class="circled" id="fs-id1828797" type="1"><li><span class="token">ⓐ</span> Give a linear equation for the remaining federal helium reserves, <math display="inline"><semantics><mrow>
+<mi>R</mi><mo>,</mo>
+</mrow><annotation-xml encoding="MathML-Content"><mi>R</mi><mo>,</mo></annotation-xml></semantics></math> in terms of <math display="inline"><semantics><mrow>
+<mi>t</mi><mo>,</mo>
+</mrow><annotation-xml encoding="MathML-Content"><mi>t</mi><mo>,</mo></annotation-xml></semantics></math> the number of years since 2010.</li>
+<li><span class="token">ⓑ</span> In 2015, what will the helium reserves be?</li>
+<li><span class="token">ⓒ</span> If the rate of depletion doesn’t change, in what year will the Federal Helium Reserve be depleted?</li></ol></div>
+</div>
+</section></div><div data-type="exercise" id="fs-id2529750"><header></header><section><div data-type="problem" id="fs-id2529751">
+<span class="os-number">52</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2529752">Suppose the world’s oil reserves in 2014 are 1,820 billion barrels. If, on average, the total reserves are decreasing by 25 billion barrels of oil each year:</p>
+<ol class="circled" id="fs-id2529758" type="1"><li><span class="token">ⓐ</span> Give a linear equation for the remaining oil reserves, <math display="inline"><semantics><mrow>
+<mi>R</mi><mo>,</mo>
+</mrow><annotation-xml encoding="MathML-Content"><mi>R</mi><mo>,</mo></annotation-xml></semantics></math> in terms of <math display="inline"><semantics><mrow>
+<mi>t</mi><mo>,</mo>
+</mrow><annotation-xml encoding="MathML-Content"><mi>t</mi><mo>,</mo></annotation-xml></semantics></math> the number of years since now.</li>
+<li><span class="token">ⓑ</span> Seven years from now, what will the oil reserves be?</li>
+<li><span class="token">ⓒ</span> If the rate at which the reserves are decreasing is constant, when will the world’s oil reserves be depleted?</li></ol></div>
+</div>
+<!--<solution id="fs-id2560766">
+<list id="fs-id2560769" list-type="enumerated" number-style="lower-alpha"><item> <m:math>
+ <m:mtable columnalign="left">
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>The&#160;year&#160;2014&#160;corresponds&#160;to&#160;t&#160;=&#160;0</m:mtext><m:mo>.</m:mo>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>We&#160;have&#160;</m:mtext><m:mi>m</m:mi><m:mo>=</m:mo><m:mn>&#8722;25</m:mn><m:mtext>&#160;and&#160;</m:mtext><m:mo stretchy="false">(</m:mo><m:mn>0</m:mn><m:mo>,</m:mo><m:mn>1820</m:mn><m:mo stretchy="false">)</m:mo>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mi>y</m:mi>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>=</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mi>m</m:mi><m:mi>x</m:mi><m:mo>+</m:mo><m:mi>b</m:mi>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mi>y</m:mi>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>=</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mo>&#8722;</m:mo><m:mn>25</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>1820</m:mn><m:mtext>&#160;or&#160;</m:mtext><m:mi>R</m:mi><m:mo stretchy="false">(</m:mo><m:mi>t</m:mi><m:mo stretchy="false">)</m:mo><m:mo>=</m:mo><m:mn>&#8722;25</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1820</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+
+    </m:mtable>
+   </m:mtd>
+  </m:mtr>
+ </m:mtable>
+
+</m:math>
+</item>
+<item> <m:math>
+ <m:mrow>
+  <m:mtable>
+   <m:mtr rowalign="center">
+    <m:mtd columnalign="right" rowalign="center">
+     <m:mrow>
+      <m:mi>R</m:mi><m:mo stretchy="false">(</m:mo><m:mn>7</m:mn><m:mo stretchy="false">)</m:mo>
+     </m:mrow>
+    </m:mtd>
+    <m:mtd rowalign="center">
+     <m:mo>=</m:mo>
+    </m:mtd>
+    <m:mtd columnalign="left" rowalign="center">
+     <m:mrow>
+      <m:mn>&#8722;25</m:mn><m:mo stretchy="false">(</m:mo><m:mn>7</m:mn><m:mo stretchy="false">)</m:mo><m:mo>+</m:mo><m:mn>1820</m:mn>
+     </m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr rowalign="center">
+    <m:mtd rowalign="center"/>
+    <m:mtd rowalign="center">
+     <m:mo>=</m:mo>
+    </m:mtd>
+    <m:mtd columnalign="left" rowalign="center">
+     <m:mrow>
+      <m:mtext>645&#160;billion&#160;cubic&#160;feet</m:mtext>
+     </m:mrow>
+    </m:mtd>
+   </m:mtr>
+
+  </m:mtable>
+ </m:mrow>
+</m:math>
+</item>
+<item> <m:math>
+ <m:mrow>
+  <m:mtable>
+   <m:mtr>
+    <m:mtd columnalign="right">
+     <m:mn>0</m:mn>
+    </m:mtd>
+    <m:mtd>
+     <m:mo>=</m:mo>
+    </m:mtd>
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mn>&#8722;25</m:mn><m:mi>t</m:mi><m:mo>+</m:mo><m:mn>1820</m:mn>
+     </m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd columnalign="right">
+     <m:mrow>
+      <m:mn>&#8722;1820</m:mn>
+     </m:mrow>
+    </m:mtd>
+    <m:mtd>
+     <m:mo>=</m:mo>
+    </m:mtd>
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mo/><m:mn>&#8722;25</m:mn><m:mi>t</m:mi>
+     </m:mrow>
+    </m:mtd>
+   </m:mtr>
+   <m:mtr>
+    <m:mtd columnalign="right">
+     <m:mrow>
+      <m:mn>72.8</m:mn>
+     </m:mrow>
+    </m:mtd>
+    <m:mtd>
+     <m:mo>=</m:mo>
+    </m:mtd>
+    <m:mtd columnalign="left">
+     <m:mrow>
+      <m:mi>t</m:mi><m:mo stretchy="false">&#8658;</m:mo><m:mtext>&#160;2014&#160;+&#160;72</m:mtext><m:mtext>.8&#160;=&#160;2086</m:mtext><m:mtext>.8</m:mtext><m:mtext>.&#160;So,&#160;in&#160;the&#160;year&#160;2086</m:mtext>
+     </m:mrow>
+    </m:mtd>
+   </m:mtr>
+
+  </m:mtable>
+ </m:mrow>
+</m:math>
+
+</item></list></solution> --></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id2486146"><header></header><section><div data-type="problem" id="fs-id2486147">
+<a aria-label="Go to 53" class="os-number" data-page-fragment="fs-id2486146-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">53</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1803075">You are choosing between two different prepaid cell phone plans. The first plan charges a rate of 26 cents per minute. The second plan charges a monthly fee of $19.95 <em data-effect="italics">plus</em> 11 cents per minute. How many minutes would you have to use in a month in order for the second plan to be preferable?</p></div>
+</div>
+</section></div><div data-type="exercise" id="fs-id1803085"><header></header><section><div data-type="problem" id="fs-id1803086">
+<span class="os-number">54</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id1803088">You are choosing between two different window washing companies. The first charges $5 per window. The second charges a base fee of $40 plus $3 per window. How many windows would you need to have for the second company to be preferable?</p></div>
+</div>
+<!--<solution id="fs-id1803093"><equation id="eip-id2197472" class="unnumbered"><label/>
+ <m:math>
+ <m:mtable columnalign="left">
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>Plan&#160;1:&#160;</m:mtext><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>5</m:mn><m:mi>x</m:mi><m:mtext>&#160;where&#160;x&#160;is&#160;number&#160;of&#160;windows</m:mtext>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>Plan&#160;2:&#160;</m:mtext><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>40</m:mn><m:mtext>&#160;where&#160;x&#160;is&#160;number&#160;of&#160;windows</m:mtext>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtable>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mrow>
+        <m:mn>3</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>40</m:mn>
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8804;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>5</m:mn><m:mi>x</m:mi>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mrow>
+        <m:mn>40</m:mn>
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8804;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>2</m:mn><m:mi>x</m:mi>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mrow>
+        <m:mn>20</m:mn>
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8804;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mi>x</m:mi>
+      </m:mtd>
+     </m:mtr>
+
+    </m:mtable>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>So,&#160;more&#160;than&#160;20&#160;windows</m:mtext>
+   </m:mtd>
+  </m:mtr>
+ </m:mtable>
+
+</m:math>
+</equation></solution>--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id2672525"><header></header><section><div data-type="problem" id="fs-id2672526">
+<a aria-label="Go to 55" class="os-number" data-page-fragment="fs-id2672525-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">55</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2672527">When hired at a new job selling jewelry, you are given two pay options:</p>
+<p id="fs-id2672530">Option A: Base salary of $17,000 a year with a commission of 12% of your sales</p>
+<p id="fs-id2672533">Option B: Base salary of $20,000 a year with a commission of 5% of your sales</p>
+<p id="fs-id2672536">How much jewelry would you need to sell for option A to produce a larger income?</p></div>
+</div>
+</section></div><div data-type="exercise" id="fs-id2672540"><header></header><section><div data-type="problem" id="fs-id2672541">
+<span class="os-number">56</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2672542">When hired at a new job selling electronics, you are given two pay options:</p>
+<p id="fs-id2672545">Option A: Base salary of $14,000 a year with a commission of 10% of your sales</p>
+<p id="fs-id2672548">Option B: Base salary of $19,000 a year with a commission of 4% of your sales</p>
+<p id="fs-id2672551">How much electronics would you need to sell for option A to produce a larger income?</p></div>
+</div>
+<!--<solution id="fs-id2672554">
+<equation id="eip-id3585354" class="unnumbered"><label/>
+ <m:math>
+ <m:mtable columnalign="left">
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>Option&#160;A:&#160;</m:mtext><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0.10</m:mn><m:mi>x</m:mi><m:mtext>&#160;+&#160;14,000&#160;where&#160;</m:mtext><m:mi>x</m:mi><m:mtext>&#160;is&#160;dollars&#160;of&#160;sales</m:mtext><m:mo>.</m:mo>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>Option&#160;B:&#160;</m:mtext><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0.04</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>19</m:mn><m:mo>,</m:mo><m:mn>000</m:mn><m:mtext>&#160;where&#160;</m:mtext><m:mi>x</m:mi><m:mtext>&#160;is&#160;dollars&#160;of&#160;sales</m:mtext>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mrow>
+        <m:mn>0</m:mn><m:mtext>&#8201;</m:mtext><m:mn>.10</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>14</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8805;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>0.04</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>19</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mrow>
+        <m:mn>0.06</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>14</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8805;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>19</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mrow>
+        <m:mn>0.06</m:mn><m:mi>x</m:mi>
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8805;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>5</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mi>x</m:mi>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8805;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>83</m:mn><m:mo>,</m:mo><m:mn>333.33</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+
+    </m:mtable>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>So,&#160;more&#160;than&#160;$83,333</m:mtext><m:mtext>.33&#160;in&#160;sales</m:mtext>
+   </m:mtd>
+  </m:mtr>
+ </m:mtable>
+
+</m:math>
+</equation></solution>--></section></div><div class="os-hasSolution" data-type="exercise" id="fs-id2176822"><header></header><section><div data-type="problem" id="fs-id2176824">
+<a aria-label="Go to 57" class="os-number" data-page-fragment="fs-id2176822-solution" data-page-slug="chapter-4" data-page-uuid="9b243f17-7ca7-5ccb-a050-461bbd5bf001" href="https://openstax.org/books/college-algebra-2e/pages/chapter-4">57</a><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2176825">When hired at a new job selling electronics, you are given two pay options:</p>
+<p id="fs-id2176828">Option A: Base salary of $20,000 a year with a commission of 12% of your sales</p>
+<p id="fs-id2176831">Option B: Base salary of $26,000 a year with a commission of 3% of your sales</p>
+<p id="fs-id2176834">How much electronics would you need to sell for option A to produce a larger income?</p></div>
+</div>
+</section></div><div data-type="exercise" id="fs-id2176837"><header></header><section><div data-type="problem" id="fs-id2176838">
+<span class="os-number">58</span><span class="os-divider">. </span>
+<div class="os-problem-container"><p id="fs-id2176840">When hired at a new job selling electronics, you are given two pay options:</p>
+<p id="fs-id2176843">Option A: Base salary of $10,000 a year with a commission of 9% of your sales</p>
+<p id="fs-id2176846">Option B: Base salary of $20,000 a year with a commission of 4% of your sales</p>
+<p id="fs-id2176849">How much electronics would you need to sell for option A to produce a larger income?</p></div>
+</div>
+<!--<solution id="fs-id2176852"><equation id="fs-id1416096" class="unnumbered"><label/>
+ <m:math>
+ <m:mtable columnalign="left">
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>Option&#160;A:&#160;</m:mtext><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0.09</m:mn><m:mi>x</m:mi><m:mtext>&#160;+&#160;10,000&#160;where&#160;x&#160;is&#160;dollars&#160;of&#160;sales</m:mtext>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>Option&#160;B:&#160;</m:mtext><m:mi>y</m:mi><m:mo>=</m:mo><m:mn>0.04</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>20</m:mn><m:mo>,</m:mo><m:mn>000</m:mn><m:mtext>&#160;where&#160;x&#160;is&#160;dollars&#160;of&#160;sales</m:mtext>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd>
+    <m:mtable>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mrow>
+        <m:mn>0.09</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>10</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8805;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>0.04</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>20</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mrow>
+        <m:mn>0.05</m:mn><m:mi>x</m:mi><m:mo>+</m:mo><m:mn>10</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8805;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>20</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mrow>
+        <m:mn>0.05</m:mn><m:mi>x</m:mi>
+       </m:mrow>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8805;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>10</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+     <m:mtr>
+      <m:mtd columnalign="right">
+       <m:mi>x</m:mi>
+      </m:mtd>
+      <m:mtd>
+       <m:mo>&#8805;</m:mo>
+      </m:mtd>
+      <m:mtd columnalign="left">
+       <m:mrow>
+        <m:mn>200</m:mn><m:mo>,</m:mo><m:mn>000</m:mn>
+       </m:mrow>
+      </m:mtd>
+     </m:mtr>
+
+    </m:mtable>
+   </m:mtd>
+  </m:mtr>
+  <m:mtr>
+   <m:mtd columnalign="left">
+    <m:mtext>So,&#160;more&#160;than&#160;$200,000&#160;in&#160;sales</m:mtext><m:mo>.</m:mo>
+   </m:mtd>
+  </m:mtr>
+ </m:mtable>
+
+</m:math>
+</equation></solution>--></section></div></section>
+</section></div>
+</div></article><footer><p>Adapted from OpenStax, College Algebra 2e, 4.2 Modeling with Linear Functions. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/college-algebra-2e/pages/4-2-modeling-with-linear-functions">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

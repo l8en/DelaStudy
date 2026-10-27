@@ -1,0 +1,1471 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_541ebd77-2d9a-43ee-9d52-40c4d4261f6f"><h2 data-rex-keep="true" data-type="document-title" id="page_541ebd77-2d9a-43ee-9d52-40c4d4261f6f_titlecreatedbycookbook"><span class="os-number">6.1</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Angle of Rotation and Angular Velocity</span>
+</h2>
+<div class="learning-objectives ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167065651127"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Section Learning Objectives</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167065977047">By the end of this section, you will be able to do the following:</p>
+<ul id="fs-id1167064981179">
+<li>Describe the angle of rotation and relate it to its linear counterpart</li>
+<li>Describe angular velocity and relate it to its linear counterpart</li>
+<li>Solve problems involving angle of rotation and angular velocity</li>
+</ul>
+</div></section></div>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167065899465"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167065020991">The learning objectives in this section will help your students master the following standards:</p><ul id="fs-id1167064978822">
+<li>
+          (4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The student is expected to:
+        <ul id="fs-id1167065860166"><li><span>(C)</span> <span>analyze and describe accelerated motion in two dimensions using equations, including projectile and circular examples.</span></li>
+</ul></li>
+</ul>
+</div></section></div>
+<section data-depth="1" id="keyterms"><h3 data-type="title">Section Key Terms</h3>
+<div class="os-table os-unstyled-container" id="fs-id1167064908228"><div class="table-scroll"><table class="unnumbered unstyled section-key-terms" data-id="fs-id1167064908228" data-label="" data-summary="The list of Key Terms includes: angle of rotation, angular velocity, arc length, circular motion, radius of curvature, rotational motion, spin, and tangential velocity." role="presentation"><tbody>
+<tr>
+<td>angle of rotation</td>
+<td>angular velocity</td>
+<td>arc length</td>
+<td>circular motion</td>
+</tr>
+<tr>
+<td>radius of curvature</td>
+<td>rotational motion</td>
+<td>spin</td>
+<td>tangential velocity</td>
+</tr>
+</tbody></table></div></div>
+</section>
+<section data-depth="1" id="fs-id1167065826383"><h3 data-type="title">Angle of Rotation</h3>
+<p id="fs-id1167066012376">What exactly do we mean by <em data-effect="italics">circular motion</em> or <em data-effect="italics">rotation</em>? <span data-type="term" group-by="R" id="term-00001">Rotational motion</span> is the circular motion of an object about an axis of rotation. We will discuss specifically circular motion and spin. <span data-type="term" group-by="C" id="term-00002">Circular motion</span> is when an object moves in a circular path. Examples of circular motion include a race car speeding around a circular curve, a toy attached to a string swinging in a circle around your head, or the circular <em data-effect="italics">loop-the-loop</em> on a roller coaster. <span data-type="term" group-by="S" id="term-00003">Spin</span> is rotation about an axis that goes through the center of mass of the object, such as Earth rotating on its axis, a wheel turning on its axle, the spin of a tornado on its path of destruction, or a figure skater spinning during a performance at the Olympics. Sometimes, objects will be spinning while in circular motion, like the Earth spinning on its axis while revolving around the Sun, but we will focus on these two motions separately.</p>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167065711348"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167065976376"><span>[BL]</span><span>[OL]</span> Explain the difference between circular and rotational motions by using the Earth’s rotation about its axis and its revolution about the Sun. Explain that Earth’s rotation is slightly elliptical, although it is very nearly circular.</p>
+<p id="fs-id1167065897746"><span>[OL]</span><span>[AL]</span> Ask students to come up with examples of circular motion.</p>
+</div></section></div>
+<p id="fs-id1167065811287">When solving problems involving rotational motion, we use variables that are similar to linear variables (distance, velocity, acceleration, and force) but take into account the curvature or rotation of the motion. Here, we define the <span data-type="term" group-by="a" id="term-00004">angle of rotation</span>, which is the angular equivalence of distance; and <span data-type="term" group-by="a" id="term-00005">angular velocity</span>, which is the angular equivalence of linear velocity.</p>
+<p id="fs-id1167065001525">When objects rotate about some axis—for example, when the CD in <a aria-label="View Figure 6.2" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-1-angle-of-rotation-and-angular-velocity#Figure_06_01_CD">Figure 6.2</a> rotates about its center—each point in the object follows a circular path. </p>
+<div class="os-figure" id="Figure_06_01_CD"><figure class="ui-has-child-figcaption" data-id="Figure_06_01_CD"><span data-alt="The diagram shows a picture of a CD with about an eighth of the shiny surface peeled away to display the inside of the CD with pits (dots) arranged in lines from the center. An angle theta is marked from one line of dots to another." data-type="media" id="fs-id1167065812517">
+<img alt="The diagram shows a picture of a CD with about an eighth of the shiny surface peeled away to display the inside of the CD with pits (dots) arranged in lines from the center. An angle theta is marked from one line of dots to another." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/c7d0c07e1c9425d7bebbcfc56ee7d8be4c2c7712" height="300" loading="lazy" src="ebfffe162f8a95ee5a71a4ac.webp" width="300"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">6.2</span>
+<span class="os-divider"> </span>
+<span class="os-caption">All points on a CD travel in circular paths. The pits (dots) along a line from the center to the edge all move through the same angle  <math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>θ</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>θ</mi>
+</mrow></annotation-xml></semantics></math>  in time  <math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow></annotation-xml></semantics></math> .</span>
+</figcaption></figure></div><p id="fs-id1167065846392">The <span data-type="term" group-by="a" id="term-00006">arc length</span>, <strong>Δ<em data-effect="italics">s</em></strong>, is the distance traveled along a circular path. The <span data-type="term" group-by="r" id="term-00007">radius of curvature</span>,<strong> <em data-effect="italics"><!-- no-selfclose --></em>r</strong>, is the radius of the circular path. Both are shown in <a aria-label="View Figure 6.3" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-1-angle-of-rotation-and-angular-velocity#Figure_06_01_RotationAngle">Figure 6.3</a>.</p>
+<div class="os-figure" id="Figure_06_01_RotationAngle"><figure class="ui-has-child-figcaption" data-id="Figure_06_01_RotationAngle"><span data-alt="The diagram shows a circle with the center marked O, a radius r ending on the circumference at A, an arc change of s starting at A and ending at B. The angle for the arc is change of theta. A formula to the right of the circle says change of theta is equal to change of s divided by r." data-type="media" id="fs-id1167065892392">
+<img alt="The diagram shows a circle with the center marked O, a radius r ending on the circumference at A, an arc change of s starting at A and ending at B. The angle for the arc is change of theta. A formula to the right of the circle says change of theta is equal to change of s divided by r." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/a760473cfa5edae30f01bbf94b55ae6f864a9699" height="211" loading="lazy" src="a5094defa5de2740306eaeaf.webp" width="296"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">6.3</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The radius (<em data-effect="italics">r</em>) of a circle is rotated through an angle  <math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>θ</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>θ</mi>
+</mrow></annotation-xml></semantics></math> . The arc length,  <math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow></annotation-xml></semantics></math>, is the distance covered along the circumference.</span>
+</figcaption></figure></div><p id="fs-id1167066039788">Consider a line from the center of the CD to its edge. In a given time, each <em data-effect="italics">pit</em> (used to record information) on this line moves through the same angle. The angle of rotation is the amount of rotation and is the angular analog of distance. The angle of rotation  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>θ</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>θ</mi>
+</mrow></annotation-xml></semantics></math></span>  is the arc length divided by the radius of curvature.</p><div class="unnumbered" data-label="" data-type="equation" id="fs-id1167065743836">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>θ</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mi>r</mi>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>θ</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mi>r</mi>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1167064927682">The angle of rotation is often measured by using a unit called the <span class="no-emphasis" data-type="term" group-by="r" id="term-00008">radian</span>. (Radians are actually dimensionless, because a radian is defined as the ratio of two distances, radius and arc length.) A <span class="no-emphasis" data-type="term" group-by="r" id="term-00009">revolution</span> is one complete rotation, where every point on the circle returns to its original position. One revolution covers  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><mi>π</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><mi>π</mi>
+</mrow></annotation-xml></semantics></math></span>  radians (or 360 degrees), and therefore has an angle of rotation of  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><mi>π</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><mi>π</mi>
+</mrow></annotation-xml></semantics></math></span>  radians, and an arc length that is the same as the circumference of the circle. We can convert between radians, revolutions, and degrees using the relationship</p>
+<p id="fs-id1167065913594">1 revolution =  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><mi>π</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><mi>π</mi>
+</mrow></annotation-xml></semantics></math></span> rad = 360°. See <a aria-label="View Table 6.1" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-1-angle-of-rotation-and-angular-velocity#Table_06_01">Table 6.1</a> for the conversion of degrees to radians for some common angles.</p>
+<div data-type="equation" id="fs-id1164567109270"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>2</mn><mi>π</mi><mtext> rad</mtext>
+</mrow>
+</mtd>
+<mtd>
+<mtext>=</mtext>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>360</mtext><mo>°</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>1</mn><mi>rad</mi>
+</mrow>
+</mtd>
+<mtd>
+<mtext>=</mtext>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mfrac>
+<mrow>
+<mn>360</mn><mo>°</mo>
+</mrow>
+<mrow>
+<mn>2</mn><mspace width="0.3em"></mspace><mtext>π</mtext>
+</mrow>
+</mfrac>
+<mo>≈</mo><mn>57.3</mn><mo>°</mo>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>2</mn><mi>π</mi><mtext> rad</mtext>
+</mrow>
+</mtd>
+<mtd>
+<mtext>=</mtext>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mtext>360</mtext><mo>°</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd columnalign="right">
+<mrow>
+<mn>1</mn><mi>rad</mi>
+</mrow>
+</mtd>
+<mtd>
+<mtext>=</mtext>
+</mtd>
+<mtd columnalign="left">
+<mrow>
+<mfrac>
+<mrow>
+<mn>360</mn><mo>°</mo>
+</mrow>
+<mrow>
+<mn>2</mn><mspace width="0.3em"></mspace><mtext>π</mtext>
+</mrow>
+</mfrac>
+<mo>≈</mo><mn>57.3</mn><mo>°</mo>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">6.1</span>
+</div>
+</div>
+<div class="os-table" id="Table_06_01"><div class="table-scroll"><table data-id="Table_06_01" data-summary="The table shows two columns with the headers Degree Measures and Radian Measures. The first row under the labels shows that 30 degrees is pi over six. 60 degrees is pi over three. 90 degrees is pi over two. 120 degrees is two times pi over three. 135 degrees is three times pi over four. 180 degrees is pi."><thead>
+<tr>
+<th data-align="center" scope="col">Degree Measures</th>
+<th data-align="center" scope="col">Radian Measures</th>
+</tr>
+</thead><tbody>
+<tr>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mrow>
+<mn>30</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mrow>
+<mn>30</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow></annotation-xml></semantics></math> </td>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>6</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>π</mi>
+<mn>6</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math> </td>
+</tr>
+<tr>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mrow>
+<mn>60</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mrow>
+<mn>60</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow></annotation-xml></semantics></math> </td>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>3</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>π</mi>
+<mn>3</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math> </td>
+</tr>
+<tr>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mrow>
+<mn>90</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mrow>
+<mn>90</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow></annotation-xml></semantics></math>
+</td>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>π</mi>
+<mn>2</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+<tr>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mrow>
+<mn>120</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mrow>
+<mn>120</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow></annotation-xml></semantics></math>
+</td>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>2</mn><mi>π</mi>
+</mrow>
+<mn>3</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>2</mn><mi>π</mi>
+</mrow>
+<mn>3</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+<tr>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mrow>
+<mn>135</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mrow>
+<mn>135</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow></annotation-xml></semantics></math>
+</td>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>3</mn><mi>π</mi>
+</mrow>
+<mn>4</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>3</mn><mi>π</mi>
+</mrow>
+<mn>4</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+<tr>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mrow>
+<mn>180</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mrow>
+<mn>180</mn>
+</mrow>
+<mo>∘</mo>
+</msup>
+</mrow></annotation-xml></semantics></math>
+</td>
+<td> <math display="inline"><semantics><mrow>
+<mi>π</mi>
+</mrow><annotation-xml encoding="MathML-Content"><mi>π</mi></annotation-xml></semantics></math>
+</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">6.1</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Commonly Used Angles in Terms of Degrees and Radians </span>
+<span class="os-divider"> </span>
+</div>
+</div></section>
+<section data-depth="1" id="fs-id1167065808336"><h3 data-type="title">Angular Velocity</h3>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167066029330"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167066153786"><span>[BL]</span> Review displacement, speed, velocity, acceleration.</p>
+<p id="fs-id1167065823102"><span>[AL]</span> Ask students whether or not velocity changes in uniform circular motion. What about speed? What about acceleration?</p>
+</div></section></div>
+<p id="fs-id1167064903318">How fast is an object rotating? We can answer this question by using the concept of angular velocity. Consider first the angular speed  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>  is the rate at which the angle of rotation changes. In equation form, the angular speed is</p>
+<div data-type="equation" id="fs-id1164565533858"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>ω</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>θ</mi>
+</mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mfrac>
+<mtext>,</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>ω</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>θ</mi>
+</mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mfrac>
+<mtext>,</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">6.2</span>
+</div>
+</div>
+<p id="fs-id1167064979370">which means that an angular rotation  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mo stretchy="false">(</mo><mi>Δ</mi><mi>θ</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo stretchy="false">(</mo><mi>Δ</mi><mi>θ</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></span>  occurs in a time,  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow></annotation-xml></semantics></math></span> . If an object rotates through a greater angle of rotation in a given time, it has a greater angular speed. The units for angular speed are radians per second (rad/s).</p>
+<p id="fs-id1167065823797">Now let’s consider the direction of the angular speed, which means we now must call it the angular velocity. The direction of the angular velocity is along the axis of rotation. For an object rotating clockwise, the angular velocity points away from you along the axis of rotation. For an object rotating counterclockwise, the angular velocity points toward you along the axis of rotation.</p>
+<p id="fs-id1167065853790">Angular velocity (ω) is the angular version of linear velocity <strong>v</strong>. <span data-type="term" group-by="T" id="term-00010">Tangential velocity</span> is the instantaneous linear velocity of an object in rotational motion<strong>. </strong>To get the precise relationship between angular velocity and tangential velocity, consider again a pit on the rotating CD. This pit moves through an arc length  <span class="os-math-in-para"><div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mo stretchy="false">(</mo><mi>Δ</mi><mi>s</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo stretchy="false">(</mo><mi>Δ</mi><mi>s</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></div></span>  in a <em data-effect="italics">short</em> time  <span class="os-math-in-para"><div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mo stretchy="false">(</mo><mi>Δ</mi><mi>t</mi><mo stretchy="false">)</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo stretchy="false">(</mo><mi>Δ</mi><mi>t</mi><mo stretchy="false">)</mo>
+</mrow></annotation-xml></semantics></math></div></span>  so its tangential <em data-effect="italics">speed</em> is</p>
+<div data-label="" data-type="equation" id="eip-289">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>v</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mfrac>
+<mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>v</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mfrac>
+<mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">6.3</span>
+</div>
+</div><p id="fs-id1167065844590">From the definition of the angle of rotation,  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>θ</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mi>r</mi>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>θ</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mi>r</mi>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>, we see that  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi><mo>=</mo><mi>r</mi><mtext>Δ</mtext><mi>θ</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>s</mi><mo>=</mo><mi>r</mi><mtext>Δ</mtext><mi>θ</mi>
+</mrow></annotation-xml></semantics></math></span> . Substituting this into the expression for <em data-effect="italics">v </em>gives</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1167065909764">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>v</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>r</mtext><mtext>Δ</mtext><mi>θ</mi>
+</mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mfrac>
+<mo>=</mo><mi>r</mi><mi>ω</mi>
+<mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>v</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>r</mtext><mtext>Δ</mtext><mi>θ</mi>
+</mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mfrac>
+<mo>=</mo><mi>r</mi><mi>ω</mi>
+<mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1167065974178">The equation  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>v</mi><mo>=</mo><mi>r</mi><mi>ω</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>v</mi><mo>=</mo><mi>r</mi><mi>ω</mi>
+</mrow></annotation-xml></semantics></math></span>  says that the tangential speed <em data-effect="italics">v</em> is proportional to the distance <em data-effect="italics">r</em> from the center of rotation. Consequently, tangential speed is greater for a point on the outer edge of the CD (with larger <em data-effect="italics">r</em>) than for a point closer to the center of the CD (with smaller <em data-effect="italics">r</em>). This makes sense because a point farther out from the center has to cover a longer arc length in the same amount of time as a point closer to the center. Note that both points will still have the same angular speed, regardless of their distance from the center of rotation. See <a aria-label="View Figure 6.4" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-1-angle-of-rotation-and-angular-velocity#Figure_06_01_ArcLength">Figure 6.4</a>.</p>
+<div class="os-figure" id="Figure_06_01_ArcLength"><figure class="ui-has-child-figcaption" data-id="Figure_06_01_ArcLength"><span data-alt="The picture shows a circle with a radius r2 going from the center, through a point 1 half-way on the radius and point 2 on the circumference. The distance from center to point 1 is labeled r1. A second radius line is drawn with an angle of change in theta. The arc from point 1 to the second radius is labeled change s1. The arc at point 2 is labeled change s2. There are two formulas to the right of the diagram: theta is equal to change of s1 over r1 and theta is equal to change of s2 over r2." data-type="media" id="fs-id1167065867330">
+<img alt="The picture shows a circle with a radius r2 going from the center, through a point 1 half-way on the radius and point 2 on the circumference. The distance from center to point 1 is labeled r1. A second radius line is drawn with an angle of change in theta. The arc from point 1 to the second radius is labeled change s1. The arc at point 2 is labeled change s2. There are two formulas to the right of the diagram: theta is equal to change of s1 over r1 and theta is equal to change of s2 over r2." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/e9c51e2735d62f5ccf829ee6719b5c3f8b3f76d1" height="449" loading="lazy" src="5d8ee8dd6da51ff23ad3cb87.webp" width="450"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">6.4</span>
+<span class="os-divider"> </span>
+<span class="os-caption">Points 1 and 2 rotate through the same angle ( <math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>θ</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>θ</mi>
+</mrow></annotation-xml></semantics></math> ), but point 2 moves through a greater arc length ( <math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><msub>
+<mi>s</mi>
+<mn>2</mn>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><msub>
+<mi>s</mi>
+<mn>2</mn>
+</msub>
+</mrow></annotation-xml></semantics></math> ) because it is farther from the center of rotation.</span>
+</figcaption></figure></div><div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167064894115"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167066033722"><span>[AL]</span> Explain that the time period  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow></annotation-xml></semantics></math></span>  in the equation that defines tangential velocity ( <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> ) must be short so that the arc described by the moving object can be approximated as a straight line. This allows us to define the direction of the tangential velocity as being tangent to the circle. This approximation becomes increasingly accurate as  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow></annotation-xml></semantics></math></span>  becomes increasingly small.</p>
+</div></section></div>
+<p id="fs-id1167062400309">Now, consider another example: the tire of a moving car (see <a aria-label="View Figure 6.5" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-1-angle-of-rotation-and-angular-velocity#Figure_06_01_TireRotates">Figure 6.5</a>). The faster the tire spins, the faster the car moves—large  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mi>ω</mi>
+</mrow><annotation-xml encoding="MathML-Content"><mi>ω</mi></annotation-xml></semantics></math></span>  means large <em data-effect="italics">v</em> because  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>v</mi><mo>=</mo><mi>r</mi><mi>ω</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>v</mi><mo>=</mo><mi>r</mi><mi>ω</mi>
+</mrow></annotation-xml></semantics></math></span> . Similarly, a larger-radius tire rotating at the same angular velocity,  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>ω</mi></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mi>ω</mi></mstyle></annotation-xml></semantics></math></span>, will produce a greater linear (tangential) velocity, <strong>v,</strong> for the car. This is because a larger radius means a longer arc length must contact the road, so the car must move farther in the same amount of time.</p>
+<div class="os-figure" id="Figure_06_01_TireRotates"><figure class="ui-has-child-figcaption" data-id="Figure_06_01_TireRotates"><span data-alt="The diagram shows an illustration of the front part of a car. The diagram shows an arrow on the wheel pointing clockwise and labeled omega (angular velocity). There is a green arrow pointing toward the front of the car labeled v (velocity). The radius of the wheel is labeled r. To the right of the wheel is an equation v equals r times omega." data-type="media" id="fs-id1167064854595">
+<img alt="The diagram shows an illustration of the front part of a car. The diagram shows an arrow on the wheel pointing clockwise and labeled omega (angular velocity). There is a green arrow pointing toward the front of the car labeled v (velocity). The radius of the wheel is labeled r. To the right of the wheel is an equation v equals r times omega." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/cc85ac5465759f6ac1dbb331667ddbaec18fcc9e" height="417" loading="lazy" src="61946dafabb0f1e04da88165.webp" width="450"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">6.5</span>
+<span class="os-divider"> </span>
+<span class="os-caption">A car moving at a velocity, <strong>v,</strong> to the right has a tire rotating with angular velocity  <math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>ω</mi></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mi>ω</mi></mstyle></annotation-xml></semantics></math> . The speed of the tread of the tire relative to the axle is <em data-effect="italics">v</em>, the same as if the car were jacked up and the wheels spinning without touching the road. Directly below the axle, where the tire touches the road, the tire tread moves backward with respect to the axle with tangential velocity  <math display="inline"><semantics><mrow>
+<mrow>
+<mi>v</mi><mo>=</mo><mi>r</mi><mi>ω</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>v</mi><mo>=</mo><mi>r</mi><mi>ω</mi>
+</mrow></annotation-xml></semantics></math>, where <em data-effect="italics">r </em>is the tire radius. Because the road is stationary with respect to this point of the tire, the car must move forward at the linear velocity <strong>v</strong>. A larger angular velocity for the tire means a greater linear velocity for the car.</span>
+</figcaption></figure></div><p id="fs-id1167065800430">However, there are cases where linear velocity and tangential velocity are not equivalent, such as a car spinning its tires on ice. In this case, the linear velocity will be less than the tangential velocity. Due to the lack of friction under the tires of a car on ice, the arc length through which the tire treads move is greater than the linear distance through which the car moves. It’s similar to running on a treadmill or pedaling a stationary bike; you are literally going nowhere fast.</p>
+<div class="tips-for-success ui-has-child-title" data-type="note" id="fs-id1167065747609"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Tips For Success</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167065812100">Angular velocity <strong>ω</strong> and tangential velocity <strong>v</strong> are vectors, so we must include magnitude and direction. The direction of the angular velocity is along the axis of rotation, and points away from you for an object rotating clockwise, and toward you for an object rotating counterclockwise. In mathematics this is described by the right-hand rule. Tangential velocity is usually described as up, down, left, right, north, south, east, or west, as shown in <a aria-label="View Figure 6.6" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-1-angle-of-rotation-and-angular-velocity#Figure_06_01_Vinyl">Figure 6.6</a>.</p>
+<div class="os-figure" id="Figure_06_01_Vinyl"><figure class="ui-has-child-figcaption" data-id="Figure_06_01_Vinyl"><span data-alt="The figure shows an illustration of a vinyl record with an arrow omega (angular velocity) pointing in a clockwise direction. There are two lines for the radius, marked r, one going from the center up and the other going from the center to the right. There are three flies on the record. One is positioned at the top of the record on the vertical radius. A v (velocity) arrow points to the right. A second fly is half-way around the circumference toward the horizontal radius and an arrow v is pointing tangential to the fly. The third fly is on the circumference at the horizontal radius and an arrow v is pointing down." data-type="media" id="fs-id1167065886396">
+<img alt="The figure shows an illustration of a vinyl record with an arrow omega (angular velocity) pointing in a clockwise direction. There are two lines for the radius, marked r, one going from the center up and the other going from the center to the right. There are three flies on the record. One is positioned at the top of the record on the vertical radius. A v (velocity) arrow points to the right. A second fly is half-way around the circumference toward the horizontal radius and an arrow v is pointing tangential to the fly. The third fly is on the circumference at the horizontal radius and an arrow v is pointing down." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/8316d0b0d32788630b187c0bc23d144098bcb069" height="459" loading="lazy" src="1b0d86f207742187e1ae69bd.webp" width="450"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">6.6</span>
+<span class="os-divider"> </span>
+<span class="os-caption">As the fly on the edge of an old-fashioned vinyl record moves in a circle, its instantaneous velocity is always at a tangent to the circle. The direction of the angular velocity is into the page this case.</span>
+</figcaption></figure></div></div></section></div>
+<div class="watch-physics ui-has-child-title" data-type="note" id="fs-id1167064901840"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Watch Physics</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Relationship between Angular Velocity and Speed</span>
+</h4>
+<p id="fs-id1167065897265">This video reviews the definition and units of angular velocity and relates it to linear speed. It also shows how to convert between revolutions and radians.</p>
+<div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex001" data-injected-from-version="15" data-is-vocab="false" data-tags="k12phys-ch06 k12phys-ch06-s01 k12phys-ch06-s01-lo01 k12phys-ch06-ex001 exid:k12phys-ch06-ex001 context-cnxmod:daa0af29-7563-488e-aa62-b5c284bb28dd context-cnxmod:316775f2-8777-474c-b787-e64ea38cb026 lo:stax-phys:6-1-1 aplo:stax-apphys:3.A.2.1 aplo:stax-apphys:3.F.2.1 dok:2 k12phys book:stax-phys book:stax-k12phys filter-type:import:has-context aplo:stax-apphys:4.D.1.1 grasp-check time:short assignment-type:homework blooms:2 filter-type:import:hs inbook-yes all" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="613681">
+<div data-type="question-stimulus"><div class="os-has-iframe os-has-link" data-type="switch"><a aria-label="Go to Access multimedia content" class="os-is-link" data-media="print" href="http://openstax.org/books/physics/pages/6-1-angle-of-rotation-and-angular-velocity" rel="noopener nofollow" target="_blank">Access multimedia content</a>
+</div></div>
+<div data-type="question-stem">For an object traveling in a circular path at a constant angular speed, would the linear speed of the object change if the radius of the path increases?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Yes, because tangential speed is independent of the radius.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Yes, because tangential speed depends on the radius.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">No, because tangential speed is independent of the radius.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">No, because tangential speed depends on the radius.</div>
+</li>
+</ol>
+</div>
+</div></div></section></div></section>
+<section data-depth="1" id="fs-id1167066031732"><h3 data-type="title">Solving Problems Involving Angle of Rotation and Angular Velocity</h3>
+<div class="snap-lab ui-has-child-title" data-type="note" id="fs-id1167066091922"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Snap Lab</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Measuring Angular Speed</span>
+</h4>
+<p id="fs-id1167062408046">In this activity, you will create and measure uniform circular motion and then contrast it with circular motions with different radii.</p>
+<ul class="materials" id="fs-id1167065824464">
+<li>One string (1 m long)</li>
+<li>One object (two-hole rubber stopper) to tie to the end</li>
+<li>One timer</li>
+</ul><div data-type="list" id="fs-id1167065955105"><div data-type="title">Procedure</div><ol type="1">
+<li>Tie an object to the end of a string.</li>
+<li>Swing the object around in a horizontal circle above your head (swing from your wrist). It is important that the circle be horizontal!</li>
+<li>Maintain the object at uniform speed as it swings.</li>
+<li>Measure the angular speed of the object in this manner. Measure the time it takes in seconds for the object to travel 10 revolutions. Divide 10 revolutions by that time to get the angular speed in revolutions per second, which you can convert to radians per second.</li>
+<li>What is the approximate linear speed of the object?</li>
+<li>Move your hand up the string so that the length of the string is 90 cm. Repeat steps 2–5.</li>
+<li>Move your hand up the string so that its length is 80 cm. Repeat steps 2–5.</li>
+<li>Move your hand up the string so that its length is 70 cm. Repeat steps 2–5.</li>
+<li>Move your hand up the string so that its length is 60 cm. Repeat steps 2–5</li>
+<li>Move your hand up the string so that its length is 50 cm. Repeat steps 2–5</li>
+<li>Make graphs of angular speed vs. radius (i.e. string length) and linear speed vs. radius. Describe what each graph looks like.</li>
+</ol></div><div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex002" data-injected-from-version="9" data-is-vocab="false" data-tags="k12phys-ch06 k12phys-ch06-s01 k12phys-ch06-s01-lo03 k12phys-ch06-ex002 lo:stax-phys:6-1-2 exid:k12phys-ch06-ex002 context-cnxmod:daa0af29-7563-488e-aa62-b5c284bb28dd context-cnxmod:316775f2-8777-474c-b787-e64ea38cb026 context-cnxmod:33836eec-f196-4963-a304-2949346b26d4 aplo:stax-apphys:3.A.2.1 aplo:stax-apphys:3.F.2.1 k12phys book:stax-phys book:stax-k12phys filter-type:import:has-context aplo:stax-apphys:4.D.1.1 grasp-check blooms:3 assignment-type:homework filter-type:import:hs inbook-yes dok:3 book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:6-1-rotation-angle-and-angular-velocity time:medium" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="522484">
+<div data-type="question-stem">If you swing an object slowly, it may rotate at less than one revolution per second. What would be the revolutions per second for an object that makes one revolution in five seconds? What would be its angular speed in radians per second?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">The object would spin at <math alttext="\frac{1}{5}\,\text{rev/s}">
+<mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac>
+<mspace width="thinmathspace"></mspace>
+<mtext>rev/s</mtext>
+</math>. The angular speed of the object would be <math alttext="\frac{2\pi}{5}\,\text{rad/s}">
+<mfrac>
+<mrow>
+<mn>2</mn>
+<mi>π<!-- &#960; --></mi>
+</mrow>
+<mn>5</mn>
+</mfrac>
+<mspace width="thinmathspace"></mspace>
+<mtext>rad/s</mtext>
+</math>.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">The object would spin at <math alttext="\frac{1}{5}\,\text{rev/s}">
+<mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac>
+<mspace width="thinmathspace"></mspace>
+<mtext>rev/s</mtext>
+</math>. The angular speed of the object would be <math alttext="\frac{\pi}{5}\,\text{rad/s}">
+<mfrac>
+<mi>π<!-- &#960; --></mi>
+<mn>5</mn>
+</mfrac>
+<mspace width="thinmathspace"></mspace>
+<mtext>rad/s</mtext>
+</math>.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">The object would spin at <math alttext="5\,\text{rev/s}">
+<mn>5</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>rev/s</mtext>
+</math>. The angular speed of the object would be <math alttext="10\pi\,\text{rad/s}">
+<mn>10</mn>
+<mi>π<!-- &#960; --></mi>
+<mspace width="thinmathspace"></mspace>
+<mtext>rad/s</mtext>
+</math>.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">The object would spin at <math alttext="5\,\text{rev/s}">
+<mn>5</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>rev/s</mtext>
+</math>. The angular speed of the object would be <math alttext="5\pi\,\text{rad/s}">
+<mn>5</mn>
+<mi>π<!-- &#960; --></mi>
+<mspace width="thinmathspace"></mspace>
+<mtext>rad/s</mtext>
+</math>.</div>
+</li>
+</ol>
+</div>
+</div></div></section></div>
+<p id="fs-id1167064697578">Now that we have an understanding of the concepts of angle of rotation and angular velocity, we’ll apply them to the real-world situations of a clock tower and a spinning tire.</p>
+<div class="worked-example ui-has-child-title" data-type="note" id="fs-id1167066094605"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Worked Example</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Angle of rotation at a Clock Tower</span>
+</h4>
+<div class="06-ex003 unnumbered" data-label="" data-type="exercise" id="fs-id1167064649222"><header></header><section>
+<div data-type="problem" id="fs-id1167066000952"><div class="os-problem-container">
+<p id="fs-id1167065720622">The clock on a clock tower has a radius of 1.0 m. (a) What angle of rotation does the hour hand of the clock travel through when it moves from 12 p.m. to 3 p.m.? (b) What’s the arc length along the outermost edge of the clock between the hour hand at these two times?</p>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167065729740"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Strategy</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167065714387">We can figure out the angle of rotation by multiplying a full revolution ( <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mn>2</mn><mi>π</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mn>2</mn><mi>π</mi>
+</mrow></annotation-xml></semantics></math></span>  radians) by the fraction of the 12 hours covered by the hour hand in going from 12 to 3. Once we have the angle of rotation, we can solve for the arc length by rearranging the equation  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>θ</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mi>r</mi>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>θ</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mi>r</mi>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>  since the radius is given.</p>
+</div></section></div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-label="" data-type="solution" id="fs-id1167065795863">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><div class="os-solution-container"><div data-type="title">Solution to (a)</div>
+<p id="fs-id1167065971825">In going from 12 to 3, the hour hand covers 1/4 of the 12 hours needed to make a complete revolution. Therefore, the angle between the hour hand at 12 and at 3 is  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac>
+<mo>×</mo><mn>2</mn><mspace width="0.3em"></mspace><mtext>π</mtext><mi>rad</mi><mo>=</mo><mfrac>
+<mtext>π</mtext>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac>
+<mo>×</mo><mn>2</mn><mspace width="0.3em"></mspace><mtext>π</mtext><mi>rad</mi><mo>=</mo><mfrac>
+<mtext>π</mtext>
+<mn>2</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>  (i.e., 90 degrees).</p>
+</div></section>
+</details>
+<details aria-label="Show/Hide Solution" data-label="" data-type="solution" id="fs-id1167063416631">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><div class="os-solution-container"><div data-type="title">Solution to (b)</div>
+<p id="fs-id1167066097061">Rearranging the equation</p>
+<div data-type="equation" id="fs-id1164564513784"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>θ</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mi>r</mi>
+</mfrac>
+<mtext>,</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>θ</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+<mi>r</mi>
+</mfrac>
+<mtext>,</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">6.4</span>
+</div>
+</div>
+<p id="fs-id1167064873328">we get</p>
+<div data-type="equation" id="fs-id1164567422096"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>s</mi><mo>=</mo><mi>r</mi><mtext>Δ</mtext><mi>θ</mi>
+<mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>s</mi><mo>=</mo><mi>r</mi><mtext>Δ</mtext><mi>θ</mi>
+<mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">6.5</span>
+</div>
+</div>
+<p id="fs-id1167065877301">Inserting the known values gives an arc length of</p>
+<div data-type="equation" id="fs-id1164567275303"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.0</mn><mspace width="0.3em"></mspace><mtext>m</mtext>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mtext>π</mtext>
+<mn>2</mn>
+</mfrac>
+<mtext>rad</mtext>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>1.6</mn><mspace width="0.3em"></mspace><mtext>m</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mrow>
+<mtext>Δ</mtext><mi>s</mi>
+</mrow>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.0</mn><mspace width="0.3em"></mspace><mtext>m</mtext>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mtext>π</mtext>
+<mn>2</mn>
+</mfrac>
+<mtext>rad</mtext>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>1.6</mn><mspace width="0.3em"></mspace><mtext>m</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">6.6</span>
+</div>
+</div>
+</div></section>
+</details>
+<div data-type="commentary" id="fs-id1167064551084"><div data-type="title">Discussion</div>
+<p id="fs-id1167064873191">We were able to drop the radians from the final solution to part (b) because radians are actually dimensionless. This is because the radian is defined as the ratio of two distances (radius and arc length). Thus, the formula gives an answer in units of meters, as expected for an arc length.</p>
+</div>
+</section></div>
+</div></section></div>
+<div class="worked-example ui-has-child-title" data-type="note" id="fs-id1167065888579"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Worked Example</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">How Fast Does a Car Tire Spin?</span>
+</h4>
+<div class="06-ex004 unnumbered" data-label="" data-type="exercise" id="fs-id1167065877421"><header></header><section>
+<div data-type="problem" id="fs-id1167065794922"><div class="os-problem-container">
+<p id="fs-id1167064914605">Calculate the angular speed of a 0.300 m radius car tire when the car travels at 15.0 m/s (about 54 km/h). See <a aria-label="View Figure 6.5" class="has-default-text autogenerated-content" href="https://openstax.org/books/physics/pages/6-1-angle-of-rotation-and-angular-velocity#Figure_06_01_TireRotates">Figure 6.5</a>.</p>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167064634906"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Strategy</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167065845337">In this case, the speed of the tire tread with respect to the tire axle is the same as the speed of the car with respect to the road, so we have <em data-effect="italics">v </em>= 15.0 m/s. The radius of the tire is <em data-effect="italics">r </em>= 0.300 m. Since we know <em data-effect="italics">v </em>and <em data-effect="italics">r</em>, we can rearrange the equation  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>v</mi><mo>=</mo><mi>r</mi><mi>ω</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>v</mi><mo>=</mo><mi>r</mi><mi>ω</mi>
+</mrow></annotation-xml></semantics></math></span>, to get  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>ω</mi><mo>=</mo><mfrac>
+<mi>v</mi>
+<mi>r</mi>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>ω</mi><mo>=</mo><mfrac>
+<mi>v</mi>
+<mi>r</mi>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>  and find the angular speed.</p>
+</div></section></div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-label="" data-type="solution" id="fs-id1167066137663">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><div class="os-solution-container"><div data-type="title">Solution</div>
+<p id="fs-id1167065771481">To find the angular speed, we use the relationship:  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>ω</mi><mo>=</mo><mfrac>
+<mi>v</mi>
+<mi>r</mi>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>ω</mi><mo>=</mo><mfrac>
+<mi>v</mi>
+<mi>r</mi>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> .</p>
+<p id="fs-id1167066056981">Inserting the known quantities gives</p>
+<div data-type="equation" id="fs-id1164565363133"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>ω</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>15.0</mn><mspace width="0.3em"></mspace><mtext>m/s</mtext>
+</mrow>
+<mrow>
+<mn>0.300</mn><mspace width="0.3em"></mspace><mtext>m</mtext>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>50.0</mn><mspace width="0.3em"></mspace><mtext>rad/s.</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>ω</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>15.0</mn><mspace width="0.3em"></mspace><mtext>m/s</mtext>
+</mrow>
+<mrow>
+<mn>0.300</mn><mspace width="0.3em"></mspace><mtext>m</mtext>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>50.0</mn><mspace width="0.3em"></mspace><mtext>rad/s.</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">6.7</span>
+</div>
+</div>
+</div></section>
+</details>
+<div data-type="commentary" id="fs-id1167064794720"><div data-type="title">Discussion</div>
+<p id="fs-id1167066120352">When we cancel units in the above calculation, we get 50.0/s (i.e., 50.0 per second, which is usually written as 50.0 s<sup>−1</sup>). But the angular speed must have units of rad/s. Because radians are dimensionless, we can insert them into the answer for the angular speed because we know that the motion is circular. Also note that, if an earth mover with much larger tires, say 1.20 m in radius, were moving at the same speed of 15.0 m/s, its tires would rotate more slowly. They would have an angular speed of</p>
+<div data-type="equation" id="fs-id1164564475561"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>ω</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>15.0</mn><mspace width="0.3em"></mspace><mtext>m/s</mtext>
+</mrow>
+<mrow>
+<mn>1.20</mn><mspace width="0.3em"></mspace><mtext>m</mtext>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>12.5</mn><mspace width="0.3em"></mspace><mtext>rad/s</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>ω</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>15.0</mn><mspace width="0.3em"></mspace><mtext>m/s</mtext>
+</mrow>
+<mrow>
+<mn>1.20</mn><mspace width="0.3em"></mspace><mtext>m</mtext>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>12.5</mn><mspace width="0.3em"></mspace><mtext>rad/s</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">6.8</span>
+</div>
+</div>
+</div>
+</section></div>
+</div></section></div>
+</section>
+<section class="practice-problems" data-depth="1" id="fs-id1167065942000"><h3 data-type="title">Practice Problems</h3><div data-type="exercise" id="fs-id1167065956422"><header></header><section>
+<div data-type="problem" id="fs-id1167064780713">
+<span class="os-number">1</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-id1167062371685">
+<link class="os-embed" url="#ost/api/ex/k12phys-ch06-ex005"/>
+</para>-->
+<p id="fs-id1164567839675">What is the angle in degrees between the hour hand and the minute hand of a clock showing 9:00 a.m.?</p>
+<ol id="fs-id1164565431315" type="a">
+<li>0°</li>
+<li>90°</li>
+<li>180°</li>
+<li>360°</li>
+</ol>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1167066096104"><header></header><section>
+<div data-type="problem" id="fs-id1167066167520">
+<span class="os-number">2</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-id1167064825997">
+<link class="os-embed" url="#ost/api/ex/k12phys-ch06-ex006"/>
+</para>-->
+<p id="fs-id1164567608743">What is the approximate value of the arc length between the hour hand and the minute hand of a clock showing 10:00 a.m if the radius of the clock is 0.2 m?</p>
+<ol id="fs-id1164565474640" type="a">
+<li>0.1 m</li>
+<li>0.2 m</li>
+<li>0.3 m</li>
+<li>0.6 m</li>
+</ol>
+</div>
+</div>
+</section></div>
+</section><section class="check-understanding" data-depth="1" id="fs-id1167064909460"><h3 data-type="title">Check Your Understanding</h3>
+<div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex007" data-injected-from-version="11" data-is-vocab="false" data-tags="os-practice-concepts k12phys-ch06 k12phys-ch06-s01 k12phys-ch06-s01-lo01 k12phys-ch06-ex007 exid:k12phys-ch06-ex007 context-cnxmod:daa0af29-7563-488e-aa62-b5c284bb28dd type:conceptual-or-recall context-cnxmod:316775f2-8777-474c-b787-e64ea38cb026 lo:stax-phys:6-1-1 context-cnxmod:33836eec-f196-4963-a304-2949346b26d4 aplo:stax-apphys:3.A.2.1 aplo:stax-apphys:3.A.1.1 dok:1 aplo:stax-apphys:3.F.2.1 k12phys book:stax-phys book:stax-k12phys aplo:stax-apphys:4.D.1.1 book:stax-apphys time:short blooms:2 science-practice:argumentation filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:6-1-rotation-angle-and-angular-velocity assignment-type:reading" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="522494"><span class="os-number">3</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">What is circular motion?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Circular motion is the motion of an object when it follows a linear path.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Circular motion is the motion of an object when it follows a zigzag path.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Circular motion is the motion of an object when it follows a circular path.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Option D is confusing as a distractor</div>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="os-exercise" data-type="exercise" id="fs-id1167065853027"><header></header><section>
+<div data-type="problem" id="fs-id1167065736752">
+<span class="os-number">4</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-id1167065736754">
+            <link class="os-embed" url="#ost/api/ex/k12phys-ch06-ex008"/>
+          </para>-->
+<p id="fs-id1164565680302">What is meant by radius of curvature when describing rotational motion?</p>
+<ol id="fs-id1164567446286" type="a">
+<li>The radius of curvature is the radius of a circular path.</li>
+<li>The radius of curvature is the diameter of a circular path.</li>
+<li>The radius of curvature is the circumference of a circular path.</li>
+<li>The radius of curvature is the area of a circular path.</li>
+</ol>
+</div>
+</div>
+</section></div>
+<div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex009" data-injected-from-version="10" data-is-vocab="false" data-tags="os-practice-concepts k12phys-ch06 k12phys-ch06-s01 k12phys-ch06-s01-lo02 k12phys-ch06-ex009 exid:k12phys-ch06-ex009 context-cnxmod:daa0af29-7563-488e-aa62-b5c284bb28dd type:conceptual-or-recall context-cnxmod:316775f2-8777-474c-b787-e64ea38cb026 lo:stax-phys:6-1-1 context-cnxmod:33836eec-f196-4963-a304-2949346b26d4 aplo:stax-apphys:3.A.2.1 aplo:stax-apphys:3.A.1.1 dok:1 aplo:stax-apphys:3.F.2.1 k12phys book:stax-phys book:stax-k12phys aplo:stax-apphys:4.D.1.1 book:stax-apphys time:short blooms:2 science-practice:argumentation filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:6-1-rotation-angle-and-angular-velocity assignment-type:reading blooms:1" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="522498"><span class="os-number">5</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">What is angular velocity?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Angular velocity is the rate of change of the diameter of the circular path.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Angular velocity is the rate of change of the angle subtended by the circular path.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Angular velocity is the rate of change of the area of the circular path.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Angular velocity is the rate of change of the radius of the circular path.</div>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex010" data-injected-from-version="11" data-is-vocab="false" data-tags="os-practice-concepts k12phys-ch06 k12phys-ch06-s01 k12phys-ch06-s01-lo02 k12phys-ch06-ex010 exid:k12phys-ch06-ex010 context-cnxmod:daa0af29-7563-488e-aa62-b5c284bb28dd type:conceptual-or-recall context-cnxmod:316775f2-8777-474c-b787-e64ea38cb026 lo:stax-phys:6-1-1 context-cnxmod:33836eec-f196-4963-a304-2949346b26d4 science-practice:mathematical-routines aplo:stax-apphys:3.A.2.1 aplo:stax-apphys:3.A.1.1 aplo:stax-apphys:3.F.2.1 dok:2 k12phys book:stax-phys book:stax-k12phys aplo:stax-apphys:4.D.1.1 book:stax-apphys time:short filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:6-1-rotation-angle-and-angular-velocity assignment-type:reading blooms:1" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="522500"><span class="os-number">6</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">What equation defines angular velocity, ω when r is the radius of curvature, θ is the angle, and t is the time?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="\omega = \frac{\Delta\theta}{\Delta{t}}">
+<mi>ω<!-- &#969; --></mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi mathvariant="normal">Δ<!-- &#916; --></mi>
+<mi>θ<!-- &#952; --></mi>
+</mrow>
+<mrow>
+<mi mathvariant="normal">Δ<!-- &#916; --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>t</mi>
+</mrow>
+</mrow>
+</mfrac>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="\omega = \frac{\Delta{t}}{\Delta\theta}">
+<mi>ω<!-- &#969; --></mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi mathvariant="normal">Δ<!-- &#916; --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>t</mi>
+</mrow>
+</mrow>
+<mrow>
+<mi mathvariant="normal">Δ<!-- &#916; --></mi>
+<mi>θ<!-- &#952; --></mi>
+</mrow>
+</mfrac>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="\omega = \frac{\Delta{r}}{\Delta{t}}">
+<mi>ω<!-- &#969; --></mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi mathvariant="normal">Δ<!-- &#916; --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>r</mi>
+</mrow>
+</mrow>
+<mrow>
+<mi mathvariant="normal">Δ<!-- &#916; --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>t</mi>
+</mrow>
+</mrow>
+</mfrac>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="\omega = \frac{\Delta{t}}{\Delta{r}}">
+<mi>ω<!-- &#969; --></mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi mathvariant="normal">Δ<!-- &#916; --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>t</mi>
+</mrow>
+</mrow>
+<mrow>
+<mi mathvariant="normal">Δ<!-- &#916; --></mi>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>r</mi>
+</mrow>
+</mrow>
+</mfrac>
+</math></div>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex011" data-injected-from-version="11" data-is-vocab="false" data-tags="os-practice-concepts k12phys-ch06 k12phys-ch06-s01 k12phys-ch06-s01-lo01 k12phys-ch06-ex011 exid:k12phys-ch06-ex011 context-cnxmod:daa0af29-7563-488e-aa62-b5c284bb28dd type:conceptual-or-recall context-cnxmod:316775f2-8777-474c-b787-e64ea38cb026 lo:stax-phys:6-1-1 context-cnxmod:33836eec-f196-4963-a304-2949346b26d4 aplo:stax-apphys:3.A.2.1 aplo:stax-apphys:3.A.1.1 aplo:stax-apphys:3.F.2.1 dok:2 k12phys book:stax-phys book:stax-k12phys aplo:stax-apphys:4.D.1.1 book:stax-apphys time:short blooms:2 science-practice:argumentation filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:6-1-rotation-angle-and-angular-velocity assignment-type:reading" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="522502"><span class="os-number">7</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">Identify three examples of an object in circular motion.</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">an artificial satellite orbiting the Earth, a race car moving in the circular race track, and a top spinning on its axis</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">an artificial satellite orbiting the Earth, a race car moving in the circular race track, and a ball tied to a string being swung in a circle around a person's head</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Earth spinning on its own axis, a race car moving in the circular race track, and a ball tied to a string being swung in a circle around a person's head</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Earth spinning on its own axis, blades of a working ceiling fan, and a top spinning on its own axis</div>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex012" data-injected-from-version="11" data-is-vocab="false" data-tags="os-practice-concepts k12phys-ch06 k12phys-ch06-s01 k12phys-ch06-s01-lo02 k12phys-ch06-ex012 exid:k12phys-ch06-ex012 context-cnxmod:daa0af29-7563-488e-aa62-b5c284bb28dd type:conceptual-or-recall context-cnxmod:316775f2-8777-474c-b787-e64ea38cb026 lo:stax-phys:6-1-1 context-cnxmod:33836eec-f196-4963-a304-2949346b26d4 aplo:stax-apphys:3.A.2.1 aplo:stax-apphys:3.F.2.1 dok:2 k12phys book:stax-phys book:stax-k12phys aplo:stax-apphys:4.D.1.1 book:stax-apphys time:short blooms:2 science-practice:argumentation filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:6-1-rotation-angle-and-angular-velocity assignment-type:reading" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="522504"><span class="os-number">8</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">What is the relative orientation of the radius and tangential velocity vectors of an object in uniform circular motion?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Tangential velocity vector is always parallel to the radius of the circular path along which the object moves.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Tangential velocity vector is always perpendicular to the radius of the circular path along which the object moves.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Tangential velocity vector is always at an acute angle to the radius of the circular path along which the object moves.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Tangential velocity vector is always at an obtuse angle to the radius of the circular path along which the object moves.</div>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167065878497"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167065048362">Use the <em data-effect="italics">Check Your Understanding</em> questions to assess whether students master the learning objectives of this section. If students are struggling with a specific objective, the formative assessment will help identify which objective is causing the problem and direct students to the relevant content.</p></div></section></div>
+</section>
+</div></article><footer><p>Adapted from OpenStax, Physics, 6.1 Angle of Rotation and Angular Velocity. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/physics/pages/6-1-angle-of-rotation-and-angular-velocity">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a></p></footer></body></html>

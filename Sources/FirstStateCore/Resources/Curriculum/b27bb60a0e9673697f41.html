@@ -1,0 +1,759 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_caf3fc11-a5f5-49c6-b3c3-31d84cb93751"><h2 data-rex-keep="true" data-type="document-title" id="page_caf3fc11-a5f5-49c6-b3c3-31d84cb93751_titlecreatedbycookbook"><span class="os-number">2.1</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">A Preview of Calculus</span>
+</h2><div class="ui-has-child-title" data-type="abstract"><header><h3 data-type="title">Learning Objectives</h3></header><section><ul class="os-abstract" id="list-00001">
+<li><span class="os-abstract-token">2.1.1</span>
+<span class="os-abstract-content">Describe the tangent problem and how it led to the idea of a derivative.</span>
+</li>
+<li><span class="os-abstract-token">2.1.2</span>
+<span class="os-abstract-content">Explain how the idea of a limit is involved in solving the tangent problem.</span>
+</li>
+<li><span class="os-abstract-token">2.1.3</span>
+<span class="os-abstract-content">Recognize a tangent to a curve at a point as the limit of secant lines.</span>
+</li>
+<li><span class="os-abstract-token">2.1.4</span>
+<span class="os-abstract-content">Identify instantaneous velocity as the limit of average velocity over a small time interval.</span>
+</li>
+<li><span class="os-abstract-token">2.1.5</span>
+<span class="os-abstract-content">Describe the area problem and how it was solved by the integral.</span>
+</li>
+<li><span class="os-abstract-token">2.1.6</span>
+<span class="os-abstract-content">Explain how the idea of a limit is involved in solving the area problem.</span>
+</li>
+<li><span class="os-abstract-token">2.1.7</span>
+<span class="os-abstract-content">Recognize how the ideas of limit, derivative, and integral led to the studies of infinite series and multivariable calculus.
+</span>
+</li>
+</ul></section></div>
+<p id="fs-id1170571068193">As we embark on our study of calculus, we shall see how its development arose from common solutions to practical problems in areas such as engineering physics—like the space travel problem posed in the chapter opener. Two key problems led to the initial formulation of calculus: (1) the tangent problem, or how to determine the slope of a line tangent to a curve at a point; and (2) the area problem, or how to determine the area under a curve.</p>
+<section data-depth="1" id="fs-id1170573393290"><h3 data-type="title">The Tangent Problem and Differential Calculus</h3>
+<p id="fs-id1170573581969">Rate of change is one of the most critical concepts in calculus. We begin our investigation of rates of change by looking at the graphs of the three lines <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>−2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>,</mo><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>−2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>,</mo><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>x</mi><mo>+</mo><mn>1</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span> shown in <a aria-label="View Figure 2.2" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#CNX_Calc_Figure_02_01_001">Figure 2.2</a>.</p>
+<div class="os-figure" id="CNX_Calc_Figure_02_01_001"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_02_01_001">
+<span data-alt="Three graphs of different linear functions are shown. The first is f(x) = -2x – 3, with slope of -2 and y intercept of -3. The second is g(x) = x / 2 + 1, with slope of 1/2 and y intercept of 1. The third is h(x) = 2, with slope of 0 and y intercept of 2. The rate of change of each is constant, as determined by the slope." data-type="media" id="fs-id1170570998445">
+<img alt="Three graphs of different linear functions are shown. The first is f(x) = -2x – 3, with slope of -2 and y intercept of -3. The second is g(x) = x / 2 + 1, with slope of 1/2 and y intercept of 1. The third is h(x) = 2, with slope of 0 and y intercept of 2. The rate of change of each is constant, as determined by the slope." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/c46cdd6570133912992599406683801cf482859d" height="357" loading="lazy" src="3c7a64359b5b1222ca89009a.webp" width="975"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.2</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The rate of change of a linear function is constant in each of these three graphs, with the constant determined by the slope.</span>
+</figcaption></figure></div>
+<p id="fs-id1170573436660">As we move from left to right along the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>−2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>−2</mn><mi>x</mi><mo>−</mo><mn>3</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span> we see that the graph decreases at a constant rate. For every 1 unit we move to the right along the <em data-effect="italics">x</em>-axis, the <em data-effect="italics">y</em>-coordinate decreases by 2 units. This <span class="no-emphasis" data-type="term" group-by="r" id="term-00001">rate of change</span> is determined by the slope (−2) of the line. Similarly, the slope of 1/2 in the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> tells us that for every change in <em data-effect="italics">x</em> of 1 unit there is a corresponding change in <em data-effect="italics">y</em> of 1/2 unit. The function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>h</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mn>2</mn></mrow></annotation-xml></semantics></math></span> has a slope of zero, indicating that the values of the function remain constant. We see that the slope of each linear function indicates the rate of change of the function.</p>
+<p id="fs-id1170573403364">Compare the graphs of these three functions with the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>k</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>k</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></annotation-xml></semantics></math></span> (<a aria-label="View Figure 2.3" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#CNX_Calc_Figure_02_01_002">Figure 2.3</a>). The graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>k</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>k</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></annotation-xml></semantics></math></span> starts from the left by decreasing rapidly, then begins to decrease more slowly and level off, and then finally begins to increase—slowly at first, followed by an increasing rate of increase as it moves toward the right. Unlike a linear function, no single number represents the rate of change for this function. We quite naturally ask: How do we measure the rate of change of a nonlinear function?</p>
+<div class="os-figure" id="CNX_Calc_Figure_02_01_002"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_02_01_002">
+<span data-alt="A graph of the parabola k(x) = x^2, which opens up and has its vertex at the origin." data-type="media" id="fs-id1170573429353">
+<img alt="A graph of the parabola k(x) = x^2, which opens up and has its vertex at the origin." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/56d310e4ac3362283f7d0f9db8c751e5558ea3fc" height="499" loading="lazy" src="b3df97695512381b09539415.webp" width="487"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.3</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The function <math display="inline"><semantics><mrow><mrow><mi>k</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>k</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></annotation-xml></semantics></math> does not have a constant rate of change.</span>
+</figcaption></figure></div>
+<p id="fs-id1170573328521">We can approximate the rate of change of a function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> at a point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> on its graph by taking another point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> on the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>,</mo></mrow></annotation-xml></semantics></math></span> drawing a line through the two points, and calculating the slope of the resulting line. Such a line is called a <span data-type="term" group-by="s" id="term-00002">secant</span> line. <a aria-label="View Figure 2.4" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#CNX_Calc_Figure_02_01_003">Figure 2.4</a> shows a secant line to a function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> at a point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div class="os-figure" id="CNX_Calc_Figure_02_01_003"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_02_01_003">
+<span data-alt="A graph showing a generic curved function going through the points (0,0), (a, fa.), and (x, f(x)). A straight line called the secant line is drawn through the points (a, fa.), and (x, f(x)), going below the curved function between a and x and going above the curved function at values greater than x or less than a. The curved function and the secant line cross once more at some point in the third quadrant. The slope of the secant line is ( f(x) – fa. ) / (x – a)." data-type="media" id="fs-id1170573436389">
+<img alt="A graph showing a generic curved function going through the points (0,0), (a, fa.), and (x, f(x)). A straight line called the secant line is drawn through the points (a, fa.), and (x, f(x)), going below the curved function between a and x and going above the curved function at values greater than x or less than a. The curved function and the secant line cross once more at some point in the third quadrant. The slope of the secant line is ( f(x) – fa. ) / (x – a)." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/906df5e7cc42d79bd508d2b4b53fdc25f5ac2f06" height="350" loading="lazy" src="278a3288233a098f255c34d8.webp" width="487"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.4</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The slope of a secant line through a point <math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math> estimates the rate of change of the function at the point <math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span>
+</figcaption></figure></div>
+<p id="fs-id1170573399408">We formally define a secant line as follows:</p>
+<div class="ui-has-child-title" data-type="note" id="fs-id1170573442415"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Definition</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1170571120822">The <strong>secant</strong> to the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> through the points <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mi>a</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> is the line passing through these points. Its slope is given by</p>
+<div data-type="equation" id="fs-id1170573290247"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><msub><mi>m</mi><mrow><mtext>sec</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>−</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mrow><mi>x</mi><mo>−</mo><mi>a</mi></mrow></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msub><mi>m</mi><mrow><mtext>sec</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>−</mo><mi>f</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mrow><mi>x</mi><mo>−</mo><mi>a</mi></mrow></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(2.1)</span>
+</div>
+</div>
+</div></section></div>
+<p id="fs-id1170573384217">The accuracy of approximating the rate of change of the function with a secant line depends on how close <em data-effect="italics">x</em> is to <em data-effect="italics">a</em>. As we see in <a aria-label="View Figure 2.5" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#CNX_Calc_Figure_02_01_004">Figure 2.5</a>, if <em data-effect="italics">x</em> is closer to <em data-effect="italics">a</em>, the slope of the secant line is a better measure of the rate of change of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> at <em data-effect="italics">a</em>.</p>
+<div class="os-figure" id="CNX_Calc_Figure_02_01_004"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_02_01_004">
+<span data-alt="This graph is the same as the previous secant line and generic curved function graph. However, another point x is added, this time plotted closer to a on the x-axis. As such, another secant line is drawn through the points (a, fa.) and the new, closer (x, f(x)). The line stays much closer to the generic curved function around (a, fa.). The slope of this secant line has become a better approximation of the rate of change of the generic function." data-type="media" id="fs-id1170573430103">
+<img alt="This graph is the same as the previous secant line and generic curved function graph. However, another point x is added, this time plotted closer to a on the x-axis. As such, another secant line is drawn through the points (a, fa.) and the new, closer (x, f(x)). The line stays much closer to the generic curved function around (a, fa.). The slope of this secant line has become a better approximation of the rate of change of the generic function." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/02e78ec1bf99abab5c8a48ae9a9b54dc805b0e54" height="350" loading="lazy" src="90c031423ba5492abb6af72c.webp" width="487"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.5</span>
+<span class="os-divider"> </span>
+<span class="os-caption">As <em data-effect="italics">x</em> gets closer to <em data-effect="italics">a</em>, the slope of the secant line becomes a better approximation to the rate of change of the function <math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math> at <em data-effect="italics">a</em>.</span>
+</figcaption></figure></div>
+<p id="fs-id1170573570406">The secant lines themselves approach a line that is called the <span data-type="term" group-by="t" id="term-00003">tangent</span> to the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> at <em data-effect="italics">a</em> (<a aria-label="View Figure 2.6" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#CNX_Calc_Figure_02_01_005">Figure 2.6</a>). The slope of the tangent line to the graph at <em data-effect="italics">a</em> measures the rate of change of the function at <em data-effect="italics">a</em>. This value also represents the derivative of the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> at <em data-effect="italics">a</em>, or the rate of change of the function at <em data-effect="italics">a</em>. This derivative is denoted by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span> <span data-type="term" group-by="D" id="term-00004">Differential calculus</span> is the field of calculus concerned with the study of derivatives and their applications.</p>
+<div class="media-2 ui-has-child-title" data-type="note" id="fs-id1170573582868"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Media</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1170571137117">For an interactive demonstration of the slope of a secant line that you can manipulate yourself, visit this applet (<em data-effect="italics">Note:</em> this site requires a Java browser plugin): <a aria-label="Go to Math Insight" href="http://www.openstax.org/l/20_mathinsight" rel="noopener nofollow" target="_blank">Math Insight</a>.</p></div></section></div>
+<div class="os-figure" id="CNX_Calc_Figure_02_01_005"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_02_01_005">
+<span data-alt="This graph is a continuation of the previous two. This time, the graph contains the curved function, the two secant lines, and a tangent line. As x approaches a, the secant lines approach the tangent line." data-type="media" id="fs-id1170573421769">
+<img alt="This graph is a continuation of the previous two. This time, the graph contains the curved function, the two secant lines, and a tangent line. As x approaches a, the secant lines approach the tangent line." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/606fb20435c4d5399e2915b1c29a37530d8047d2" height="350" loading="lazy" src="ea6b13d2727678ebbcbfec39.webp" width="487"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.6</span>
+<span class="os-divider"> </span>
+<span class="os-caption">Solving the <span class="no-emphasis" data-type="term" group-by="T" id="term-00005">Tangent Problem</span>: As <em data-effect="italics">x</em> approaches <em data-effect="italics">a</em>, the secant lines approach the tangent line.</span>
+</figcaption></figure></div>
+<p id="fs-id1170573360908"><a aria-label="Go to Example 2.1" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#fs-id1170573387465">Example 2.1</a> illustrates how to find slopes of secant lines. These slopes estimate the slope of the tangent line or, equivalently, the rate of change of the function at the point at which the slopes are calculated.</p>
+<div class="ui-has-child-title" data-type="example" id="fs-id1170573387465"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.1</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1170573426580"><header></header><section>
+<div data-type="problem" id="fs-id1170573409161"><div class="os-problem-container"><h4 data-type="title">Finding Slopes of Secant Lines</h4>
+<p id="fs-id1170573581550">Estimate the slope of the tangent line (rate of change) to <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></annotation-xml></semantics></math></span> at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span> by finding slopes of secant lines through <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and each of the following points on the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<ol id="fs-id1170573502433" type="a">
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>9</mn><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>9</mn><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></li>
+</ol>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1170573405502">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1170573397397">Use the formula for the slope of a secant line from the definition.</p>
+<ol id="fs-id1170573397100" type="a">
+<li><math display="inline"><semantics><mrow><mrow><msub><mi>m</mi><mrow><mtext>sec</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mn>4</mn><mo>−</mo><mn>1</mn></mrow><mrow><mn>2</mn><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>3</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msub><mi>m</mi><mrow><mtext>sec</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mn>4</mn><mo>−</mo><mn>1</mn></mrow><mrow><mn>2</mn><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mn>3</mn></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><msub><mi>m</mi><mrow><mtext>sec</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mfrac><mn>9</mn><mn>4</mn></mfrac><mo>−</mo><mn>1</mn></mrow><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mo>=</mo><mn>2.5</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msub><mi>m</mi><mrow><mtext>sec</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mfrac><mn>9</mn><mn>4</mn></mfrac><mo>−</mo><mn>1</mn></mrow><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mo>=</mo><mn>2.5</mn></mrow></annotation-xml></semantics></math></li>
+</ol>
+<p id="fs-id1170573421632">The point in part b. is closer to the point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>,</mo></mrow></annotation-xml></semantics></math></span> so the slope of 2.5 is closer to the slope of the tangent line. A good estimate for the slope of the tangent would be in the range of 2 to 2.5 (<a aria-label="View Figure 2.7" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#CNX_Calc_Figure_02_01_011">Figure 2.7</a>).</p>
+<div class="os-figure" id="CNX_Calc_Figure_02_01_011"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_02_01_011">
+<span data-alt="Two graphs of the parabola f(x) = x^2 are shown. The first has a secant line drawn, intersecting the parabola at (1,1) and (2,4). The second has a secant line drawn, intersecting the parabola at (1,1) and (3/2, 9/4). These lines provide successively closer approximations to the tangent line to the function at (1,1)." data-type="media" id="fs-id1170573405748">
+<img alt="Two graphs of the parabola f(x) = x^2 are shown. The first has a secant line drawn, intersecting the parabola at (1,1) and (2,4). The second has a secant line drawn, intersecting the parabola at (1,1) and (3/2, 9/4). These lines provide successively closer approximations to the tangent line to the function at (1,1)." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/3c42d2dbf61fd354f1ec5d673e7ebd516f0567ad" height="461" loading="lazy" src="350303c4281ca2dc0e64cd0d.webp" width="483"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.7</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The secant lines to <math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></annotation-xml></semantics></math> at <math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math> through (a) <math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mn>4</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math> and (b) <math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>9</mn><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>9</mn><mn>4</mn></mfrac></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math> provide successively closer approximations to the tangent line to <math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></annotation-xml></semantics></math> at <math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span>
+</figcaption></figure></div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1170573399904"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">2.1</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1170571257812"><header></header><section>
+<div data-type="problem" id="fs-id1170570995740"><div class="os-problem-container">
+<p id="fs-id1170573289693">Estimate the slope of the tangent line (rate of change) to <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></annotation-xml></semantics></math></span> at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span> by finding the slope of the secant line through <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and the point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mfrac><mn>5</mn><mn>4</mn></mfrac><mo>,</mo><mfrac><mrow><mn>25</mn></mrow><mrow><mn>16</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mfrac><mn>5</mn><mn>4</mn></mfrac><mo>,</mo><mfrac><mrow><mn>25</mn></mrow><mrow><mn>16</mn></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> on the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<p id="fs-id1170573414802">We continue our investigation by exploring a related question. Keeping in mind that velocity may be thought of as the rate of change of position, suppose that we have a function, <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>,</mo></mrow></annotation-xml></semantics></math></span> that gives the position of an object along a coordinate axis at any given time <em data-effect="italics">t</em>. Can we use these same ideas to create a reasonable definition of the instantaneous velocity at a given time <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mi>a</mi><mo>?</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mi>a</mi><mo>?</mo></mrow></annotation-xml></semantics></math></span> We start by approximating the instantaneous velocity with an average velocity. First, recall that the speed of an object traveling at a constant rate is the ratio of the distance traveled to the length of time it has traveled. We define the <span data-type="term" group-by="a" id="term-00006">average velocity</span> of an object over a time period to be the change in its position divided by the length of the time period.</p>
+<div class="ui-has-child-title" data-type="note" id="fs-id1170573503064"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Definition</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1170573360519">Let <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> be the position of an object moving along a coordinate axis at time <em data-effect="italics">t</em>. The <strong>average velocity</strong> of the object over a time interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>t</mi></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>t</mi></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span> where <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>a</mi><mo>&lt;</mo><mi>t</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>a</mi><mo>&lt;</mo><mi>t</mi></mrow></annotation-xml></semantics></math></span> (or <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mi>t</mi><mo>,</mo><mi>a</mi></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mi>t</mi><mo>,</mo><mi>a</mi></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span> if <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>&lt;</mo><mi>a</mi><mo>)</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>&lt;</mo><mi>a</mi><mo>)</mo></mrow></annotation-xml></semantics></math></span> is</p>
+<div data-type="equation" id="fs-id1170573390058"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><msub><mi>v</mi><mrow><mtext>ave</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>−</mo><mi>s</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mrow><mi>t</mi><mo>−</mo><mi>a</mi></mrow></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msub><mi>v</mi><mrow><mtext>ave</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>−</mo><mi>s</mi><mrow><mo>(</mo><mi>a</mi><mo>)</mo></mrow></mrow><mrow><mi>t</mi><mo>−</mo><mi>a</mi></mrow></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(2.2)</span>
+</div>
+</div>
+</div></section></div>
+<p id="fs-id1170573309855">As <em data-effect="italics">t</em> is chosen closer to <em data-effect="italics">a</em>, the average velocity becomes closer to the instantaneous velocity. Note that finding the average velocity of a position function over a time interval is essentially the same as finding the slope of a secant line to a function. Furthermore, to find the slope of a tangent line at a point <em data-effect="italics">a</em>, we let the <em data-effect="italics">x</em>-values approach <em data-effect="italics">a</em> in the slope of the secant line. Similarly, to find the instantaneous velocity at time <em data-effect="italics">a</em>, we let the <em data-effect="italics">t</em>-values approach <em data-effect="italics">a</em> in the average velocity. This process of letting <em data-effect="italics">x</em> or <em data-effect="italics">t</em> approach <em data-effect="italics">a</em> in an expression is called taking a <span data-type="term" group-by="l" id="term-00007">limit</span>. Thus, we may define the <span data-type="term" group-by="i" id="term-00008">instantaneous velocity</span> as follows.</p>
+<div class="ui-has-child-title" data-type="note" id="fs-id1170573364091"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Definition</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1170573571261">For a position function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>,</mo></mrow></annotation-xml></semantics></math></span> the <strong>instantaneous velocity</strong> at a time <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mi>a</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mi>a</mi></mrow></annotation-xml></semantics></math></span> is the value that the average velocities approach on intervals of the form <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>t</mi></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>t</mi></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mi>t</mi><mo>,</mo><mi>a</mi></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mi>t</mi><mo>,</mo><mi>a</mi></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span> as the values of <em data-effect="italics">t</em> become closer to <em data-effect="italics">a</em>, provided such a value exists.</p>
+</div></section></div>
+<p id="fs-id1170570997278"><a aria-label="Go to Example 2.2" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#fs-id1170573397285">Example 2.2</a> illustrates this concept of limits and average velocity.</p>
+<div class="ui-has-child-title" data-type="example" id="fs-id1170573397285"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.2</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1170573570896"><header></header><section>
+<div data-type="problem" id="fs-id1170573366500"><div class="os-problem-container"><h4 data-type="title">Finding Average Velocity</h4>
+<p id="fs-id1170573405085">A rock is dropped from a height of 64 ft. It is determined that its height (in feet) above ground <em data-effect="italics">t</em> seconds later (for <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>2</mn><mo>)</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>2</mn><mo>)</mo></mrow></annotation-xml></semantics></math></span> is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>−16</mn><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>64</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>−16</mn><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mn>64</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span> Find the average velocity of the rock over each of the given time intervals. Use this information to guess the instantaneous velocity of the rock at time <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mn>0.5</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mn>0.5</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<ol id="fs-id1170570998751" type="a">
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>0.49</mn><mo>,</mo><mn>0.5</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>0.49</mn><mo>,</mo><mn>0.5</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>0.5</mn><mo>,</mo><mn>0.51</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>0.5</mn><mo>,</mo><mn>0.51</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+</ol>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1170573406320">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1170573428397">Substitute the data into the formula for the definition of average velocity.</p>
+<ol id="fs-id1170573271242" type="a"><li><math display="inline"><semantics><mrow><mrow><msub><mi>v</mi><mrow><mtext>ave</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mi>s</mi><mrow><mo>(</mo><mrow><mn>0.5</mn></mrow><mo>)</mo></mrow><mo>−</mo><mi>s</mi><mrow><mo>(</mo><mrow><mn>0.49</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>0.5</mn><mo>−</mo><mn>0.49</mn></mrow></mfrac><mo>=</mo><mn>−15.84</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msub><mi>v</mi><mrow><mtext>ave</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mi>s</mi><mrow><mo>(</mo><mrow><mn>0.5</mn></mrow><mo>)</mo></mrow><mo>−</mo><mi>s</mi><mrow><mo>(</mo><mrow><mn>0.49</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>0.5</mn><mo>−</mo><mn>0.49</mn></mrow></mfrac><mo>=</mo><mn>−15.84</mn></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><msub><mi>v</mi><mrow><mtext>ave</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mi>s</mi><mrow><mo>(</mo><mrow><mn>0.51</mn></mrow><mo>)</mo></mrow><mo>−</mo><mi>s</mi><mrow><mo>(</mo><mrow><mn>0.5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>0.51</mn><mo>−</mo><mn>0.5</mn></mrow></mfrac><mo>=</mo><mn>−16.16</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msub><mi>v</mi><mrow><mtext>ave</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mi>s</mi><mrow><mo>(</mo><mrow><mn>0.51</mn></mrow><mo>)</mo></mrow><mo>−</mo><mi>s</mi><mrow><mo>(</mo><mrow><mn>0.5</mn></mrow><mo>)</mo></mrow></mrow><mrow><mn>0.51</mn><mo>−</mo><mn>0.5</mn></mrow></mfrac><mo>=</mo><mn>−16.16</mn></mrow></annotation-xml></semantics></math></li>
+</ol><p id="fs-id1170573577674">The instantaneous velocity is somewhere between −15.84 and −16.16 ft/sec. A good guess might be −16 ft/sec.</p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1170573306956"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">2.2</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1170573409999"><header></header><section>
+<div data-type="problem" id="fs-id1170573307243"><div class="os-problem-container">
+<p id="fs-id1170573399707">An object moves along a coordinate axis so that its position at time <em data-effect="italics">t</em> is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>t</mi><mn>3</mn></msup><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>t</mi><mn>3</mn></msup><mo>.</mo></mrow></annotation-xml></semantics></math></span> Estimate its instantaneous velocity at time <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mn>2</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mn>2</mn></mrow></annotation-xml></semantics></math></span> by computing its average velocity over the time interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>,</mo><mn>2.001</mn></mrow><mo>]</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>,</mo><mn>2.001</mn></mrow><mo>]</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+</section>
+<section data-depth="1" id="fs-id1170573230979"><h3 data-type="title">The Area Problem and Integral Calculus</h3>
+<p id="fs-id1170571096292">We now turn our attention to a classic question from calculus. Many quantities in physics—for example, quantities of work—may be interpreted as the area under a curve. This leads us to ask the question: How can we find the area between the graph of a function and the <em data-effect="italics">x</em>-axis over an interval (<a aria-label="View Figure 2.8" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#CNX_Calc_Figure_02_01_006">Figure 2.8</a>)?</p>
+<div class="os-figure" id="CNX_Calc_Figure_02_01_006"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_02_01_006">
+<span data-alt="A graph is shown of a generic curved function f(x) shaped like a hill in quadrant one. An area under the function is shaded above the x-axis and between x=a and x=b." data-type="media" id="fs-id1170573262592">
+<img alt="A graph is shown of a generic curved function f(x) shaped like a hill in quadrant one. An area under the function is shaded above the x-axis and between x=a and x=b." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/71a2f6d8e2d7782087e979dd737c4b4f40d0dbdb" height="237" loading="lazy" src="7290fe6df36b4b5294108e90.webp" width="325"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.8</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The <span class="no-emphasis" data-type="term" group-by="A" id="term-00009">Area Problem</span>: How do we find the area of the shaded region?</span>
+</figcaption></figure></div>
+<p id="fs-id1170573290874">As in the answer to our previous questions on velocity, we first try to approximate the solution. We approximate the area by dividing up the interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span> into smaller intervals in the shape of rectangles. The approximation of the area comes from adding up the areas of these rectangles (<a aria-label="View Figure 2.9" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#CNX_Calc_Figure_02_01_007">Figure 2.9</a>).</p>
+<div class="os-figure" id="CNX_Calc_Figure_02_01_007"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_02_01_007">
+<span data-alt="The graph is the same as the previous image, with one difference. Instead of the area completely shaded under the curved function, the interval [a, b] is divided into smaller intervals in the shape of rectangles. The rectangles have the same small width. The height of each rectangle is the height of the function at the midpoint of the base of that specific rectangle." data-type="media" id="fs-id1170573287769">
+<img alt="The graph is the same as the previous image, with one difference. Instead of the area completely shaded under the curved function, the interval [a, b] is divided into smaller intervals in the shape of rectangles. The rectangles have the same small width. The height of each rectangle is the height of the function at the midpoint of the base of that specific rectangle." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/6912ded3fcc1c31aa30966265573f527dba262d5" height="237" loading="lazy" src="c2e5523bec30ef57a09aa490.webp" width="325"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.9</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The area of the region under the curve is approximated by summing the areas of thin rectangles.</span>
+</figcaption></figure></div>
+<p id="fs-id1170573402146">As the widths of the rectangles become smaller (approach zero), the sums of the areas of the rectangles approach the area between the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and the <em data-effect="italics">x</em>-axis over the interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>]</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>]</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span> Once again, we find ourselves taking a limit. Limits of this type serve as a basis for the definition of the definite integral. <span data-type="term" group-by="I" id="term-00010">Integral calculus</span> is the study of integrals and their applications.</p>
+<div class="ui-has-child-title" data-type="example" id="fs-id1170573406196"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.3</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1170573256580"><header></header><section>
+<div data-type="problem" id="fs-id1170573436687"><div class="os-problem-container"><h4 data-type="title">Estimation Using Rectangles</h4>
+<p id="fs-id1170573425705">Estimate the area between the <em data-effect="italics">x</em>-axis and the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span> over the interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>3</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>3</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span> by using the three rectangles shown in <a aria-label="View Figure 2.10" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#CNX_Calc_Figure_02_01_008">Figure 2.10</a>.</p>
+<div class="os-figure" id="CNX_Calc_Figure_02_01_008"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_02_01_008">
+<span data-alt="A graph of the parabola f(x) – x^2 + 1 drawn on graph paper with all units shown. The rectangles completely contained under the function and above the x-axis in the interval [0,3] are shaded. This strategy sets the heights of the rectangles as the smaller of the two corners that could intersect with the function. As such, the rectangles are shorter than the height of the function." data-type="media" id="fs-id1170573429458">
+<img alt="A graph of the parabola f(x) – x^2 + 1 drawn on graph paper with all units shown. The rectangles completely contained under the function and above the x-axis in the interval [0,3] are shaded. This strategy sets the heights of the rectangles as the smaller of the two corners that could intersect with the function. As such, the rectangles are shorter than the height of the function." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/d4457bd2517519c5bcc61c262d3b39341a1a9a5e" height="538" loading="lazy" src="09c279bb91d4fb694ac6c51e.webp" width="325"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.10</span>
+<span class="os-divider"> </span>
+<span class="os-caption">The area of the region under the curve of <math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></annotation-xml></semantics></math> can be estimated using rectangles.</span>
+</figcaption></figure></div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1170573398981">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1170573420317">The areas of the three rectangles are 1 unit<sup>2</sup>, 2 unit<sup>2</sup>, and 5 unit<sup>2</sup>. Using these rectangles, our area estimate is 8 unit<sup>2</sup>.</p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1170573571035"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">2.3</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1170573502534"><header></header><section>
+<div data-type="problem" id="fs-id1170573442120"><div class="os-problem-container">
+<p id="fs-id1170573310917">Estimate the area between the <em data-effect="italics">x</em>-axis and the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span> over the interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>3</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>3</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span> by using the three rectangles shown here:</p>
+<span data-alt="A graph of the same parabola f(x) = x^2 + 1, but with a different shading strategy over the interval [0,3]. This time, the shaded rectangles are given the height of the taller corner that could intersect with the function. As such, the rectangles go higher than the height of the function." data-type="media" id="fs-id1170573422153">
+<img alt="A graph of the same parabola f(x) = x^2 + 1, but with a different shading strategy over the interval [0,3]. This time, the shaded rectangles are given the height of the taller corner that could intersect with the function. As such, the rectangles go higher than the height of the function." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/ecb2cd485e83f43fb0d4c37af052a4b0c11661de" height="538" loading="lazy" src="995960faec12a02835d44e41.webp" width="325"/>
+</span>
+</div></div>
+</section></div>
+</div></section></div>
+</section>
+<section data-depth="1" id="fs-id1170573368474"><h3 data-type="title">Other Aspects of Calculus</h3>
+<p id="fs-id1170573406539">So far, we have studied functions of one variable only. Such functions can be represented visually using graphs in two dimensions; however, there is no good reason to restrict our investigation to two dimensions. Suppose, for example, that instead of determining the velocity of an object moving along a coordinate axis, we want to determine the velocity of a rock fired from a catapult at a given time, or of an airplane moving in three dimensions. We might want to graph real-value functions of two variables or determine volumes of solids of the type shown in <a aria-label="View Figure 2.11" class="autogenerated-content" href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus#CNX_Calc_Figure_02_01_010">Figure 2.11</a>. These are only a few of the types of questions that can be asked and answered using <span data-type="term" group-by="m" id="term-00011">multivariable calculus</span>. Informally, multivariable calculus can be characterized as the study of the calculus of functions of two or more variables. However, before exploring these and other ideas, we must first lay a foundation for the study of calculus in one variable by exploring the concept of a limit.</p>
+<div class="os-figure" id="CNX_Calc_Figure_02_01_010"><figure class="ui-has-child-figcaption" data-id="CNX_Calc_Figure_02_01_010">
+<span data-alt="A diagram in three dimensional space, over the x, y, and z axis where z = f(x,y). The base is the x,y axis, and the height is the z axis. The base is a rectangle contained in the x,y axis plane. The top is a surface of changing height with corners located directly above those of the rectangle in the x,y plane.. The highest point is above the corner at x=0, y=0. The lowest point is at the corner somewhere in the first quadrant of the x, y plane. The other two points are roughly the same height and located above the corners on the x axis and y axis. Lines are drawn connecting the corners of the rectangle to those of the surface." data-type="media" id="fs-id1170573217136">
+<img alt="A diagram in three dimensional space, over the x, y, and z axis where z = f(x,y). The base is the x,y axis, and the height is the z axis. The base is a rectangle contained in the x,y axis plane. The top is a surface of changing height with corners located directly above those of the rectangle in the x,y plane.. The highest point is above the corner at x=0, y=0. The lowest point is at the corner somewhere in the first quadrant of the x, y plane. The other two points are roughly the same height and located above the corners on the x axis and y axis. Lines are drawn connecting the corners of the rectangle to those of the surface." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/55f918e3af5c2fbb475f9a83d83a42e30c309309" height="307" loading="lazy" src="8e377d4eb5624d1c17eb586e.webp" width="325"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.11</span>
+<span class="os-divider"> </span>
+<span class="os-caption">We can use multivariable calculus to find the volume between a surface defined by a function of two variables and a plane.</span>
+</figcaption></figure></div>
+</section>
+<div class="os-eos os-section-exercises-container" data-uuid-key=".section-exercises"><h3 data-type="document-title">
+<span class="os-text">Section 2.1 Exercises</span>
+</h3>
+<section class="section-exercises" data-depth="1" id="fs-id1170573580495">
+<p id="fs-id1170573593926">For the following exercises, points <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> are on the graph of the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170570997908"><header></header><section>
+<div data-type="problem" id="fs-id1170571069411">
+<a aria-label="Go to 1" class="os-number" data-page-fragment="fs-id1170570997908-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">1</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573355696"><strong>[T]</strong> Complete the following table with the appropriate values: <em data-effect="italics">y</em>-coordinate of <em data-effect="italics">Q</em>, the point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>,</mo></mrow></annotation-xml></semantics></math></span> and the slope of the secant line passing through points <em data-effect="italics">P</em> and <em data-effect="italics">Q</em>. Round your answer to eight significant digits.</p>
+<div class="os-table" id="fs-id1170573319637"><div class="table-scroll"><table class="unnumbered" data-id="fs-id1170573319637" data-summary="A table with four columns and five rows. The first row has the headings x, y, Q(x,y), and msec, the slope of the secant line. The values under x are 1.1, 1.01, 1.001, and 1.0001. The values under y are a, b, c, and d. The values under Q(x,y) are e, f, g, and h. The values under msec¬  are i, j, k, and l.">
+<thead>
+<tr valign="top">
+<th data-align="left" scope="col"><em data-effect="italics">x</em></th>
+<th data-align="left" scope="col"><em data-effect="italics">y</em></th>
+<th data-align="left" scope="col"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></th>
+<th data-align="left" scope="col"><em data-effect="italics">m</em><sub>sec</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td data-align="left">1.1</td>
+<td data-align="left">a.</td>
+<td data-align="left">e.</td>
+<td data-align="left">i.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">1.01</td>
+<td data-align="left">b.</td>
+<td data-align="left">f.</td>
+<td data-align="left">j.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">1.001</td>
+<td data-align="left">c.</td>
+<td data-align="left">g.</td>
+<td data-align="left">k.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">1.0001</td>
+<td data-align="left">d.</td>
+<td data-align="left">h.</td>
+<td data-align="left">l.</td>
+</tr>
+</tbody>
+</table></div></div>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170570990874"><header></header><section>
+<div data-type="problem" id="fs-id1170573382636">
+<span class="os-number">2</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170570998096">Use the values in the right column of the table in the preceding exercise to guess the value of the slope of the line tangent to <em data-effect="italics">f</em> at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>x</mi><mo>=</mo><mn>1</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi><mo>=</mo><mn>1</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170573369540"><header></header><section>
+<div data-type="problem" id="fs-id1170570995180">
+<a aria-label="Go to 3" class="os-number" data-page-fragment="fs-id1170573369540-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">3</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573361009">Use the value in the preceding exercise to find an equation of the tangent line at point <em data-effect="italics">P</em>. Graph <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and the tangent line.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170570999797">For the following exercises, points <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> are on the graph of the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div data-type="exercise" id="fs-id1170573414344"><header></header><section>
+<div data-type="problem" id="fs-id1170573361428">
+<span class="os-number">4</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573583105"><strong>[T]</strong> Complete the following table with the appropriate values: <em data-effect="italics">y</em>-coordinate of <em data-effect="italics">Q</em>, the point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>,</mo></mrow></annotation-xml></semantics></math></span> and the slope of the secant line passing through points <em data-effect="italics">P</em> and <em data-effect="italics">Q</em>. Round your answer to eight significant digits.</p>
+<div class="os-table" id="fs-id1170573581648"><div class="table-scroll"><table class="unnumbered" data-id="fs-id1170573581648" data-summary="A table with four columns and five rows. The first row has the headings x, y, Q(x,y), and msec, the slope of the secant line. The values under x are 1.1, 1.01, 1.001, and 1.0001. The values under y are a, b, c, and d. The values under Q(x,y) are e, f, g, and h. The values under msec¬  are i, j, k, and l.">
+<thead>
+<tr valign="top">
+<th data-align="left" scope="col"><em data-effect="italics">x</em></th>
+<th data-align="left" scope="col"><em data-effect="italics">y</em></th>
+<th data-align="left" scope="col"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></th>
+<th data-align="left" scope="col"><em data-effect="italics">m</em><sub>sec</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td data-align="left">1.1</td>
+<td data-align="left">a.</td>
+<td data-align="left">e.</td>
+<td data-align="left">i.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">1.01</td>
+<td data-align="left">b.</td>
+<td data-align="left">f.</td>
+<td data-align="left">j.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">1.001</td>
+<td data-align="left">c.</td>
+<td data-align="left">g.</td>
+<td data-align="left">k.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">1.0001</td>
+<td data-align="left">d.</td>
+<td data-align="left">h.</td>
+<td data-align="left">l.</td>
+</tr>
+</tbody>
+</table></div></div>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571048191"><header></header><section>
+<div data-type="problem" id="fs-id1170571121629">
+<a aria-label="Go to 5" class="os-number" data-page-fragment="fs-id1170571048191-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">5</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573406189">Use the values in the right column of the table in the preceding exercise to guess the value of the slope of the tangent line to <em data-effect="italics">f</em> at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>x</mi><mo>=</mo><mn>1</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi><mo>=</mo><mn>1</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170573263712"><header></header><section>
+<div data-type="problem" id="fs-id1170570996505">
+<span class="os-number">6</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571138298">Use the value in the preceding exercise to find an equation of the tangent line at point <em data-effect="italics">P</em>. Graph <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and the tangent line.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170573501916">For the following exercises, points <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mn>4</mn><mo>,</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mn>4</mn><mo>,</mo><mn>2</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> are on the graph of the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170573371452"><header></header><section>
+<div data-type="problem" id="fs-id1170573442500">
+<a aria-label="Go to 7" class="os-number" data-page-fragment="fs-id1170573371452-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">7</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573429382"><strong>[T]</strong> Complete the following table with the appropriate values: <em data-effect="italics">y</em>-coordinate of <em data-effect="italics">Q</em>, the point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>,</mo></mrow></annotation-xml></semantics></math></span> and the slope of the secant line passing through points <em data-effect="italics">P</em> and <em data-effect="italics">Q</em>. Round your answer to eight significant digits.</p>
+<div class="os-table" id="fs-id1170573423698"><div class="table-scroll"><table class="unnumbered" data-id="fs-id1170573423698" data-summary="A table with four columns and five rows. The first row has the headings x, y, Q(x,y), and msec, the slope of the secant line. The values under x are 4.1, 4.01, 4.001, and 4.0001. The values under y are a, b, c, and d. The values under Q(x,y) are e, f, g, and h. The values under msec¬  are i, j, k, and l.">
+<thead>
+<tr valign="top">
+<th data-align="left" scope="col"><em data-effect="italics">x</em></th>
+<th data-align="left" scope="col"><em data-effect="italics">y</em></th>
+<th data-align="left" scope="col"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></th>
+<th data-align="left" scope="col"><em data-effect="italics">m</em><sub>sec</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td data-align="left">4.1</td>
+<td data-align="left">a.</td>
+<td data-align="left">e.</td>
+<td data-align="left">i.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">4.01</td>
+<td data-align="left">b.</td>
+<td data-align="left">f.</td>
+<td data-align="left">j.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">4.001</td>
+<td data-align="left">c.</td>
+<td data-align="left">g.</td>
+<td data-align="left">k.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">4.0001</td>
+<td data-align="left">d.</td>
+<td data-align="left">h.</td>
+<td data-align="left">l.</td>
+</tr>
+</tbody>
+</table></div></div>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170573419319"><header></header><section>
+<div data-type="problem" id="fs-id1170573419321">
+<span class="os-number">8</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170570976425">Use the values in the right column of the table in the preceding exercise to guess the value of the slope of the tangent line to <em data-effect="italics">f</em> at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>x</mi><mo>=</mo><mn>4</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi><mo>=</mo><mn>4</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170570997493"><header></header><section>
+<div data-type="problem" id="fs-id1170570997495">
+<a aria-label="Go to 9" class="os-number" data-page-fragment="fs-id1170570997493-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">9</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573396387">Use the value in the preceding exercise to find an equation of the tangent line at point <em data-effect="italics">P</em>.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170571068221">For the following exercises, points <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mn>1.5</mn><mo>,</mo><mn>0</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mn>1.5</mn><mo>,</mo><mn>0</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>φ</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>φ</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> are on the graph of the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>φ</mi><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>π</mi><mi>φ</mi></mrow><mo>)</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>φ</mi><mo>)</mo></mrow><mo>=</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mrow><mo>(</mo><mrow><mi>π</mi><mi>φ</mi></mrow><mo>)</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div data-type="exercise" id="fs-id1170573350763"><header></header><section>
+<div data-type="problem" id="fs-id1170571118641">
+<span class="os-number">10</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571118644"><strong>[T]</strong> Complete the following table with the appropriate values: <em data-effect="italics">y</em>-coordinate of <em data-effect="italics">Q</em>, the point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>φ</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>φ</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>,</mo></mrow></annotation-xml></semantics></math></span> and the slope of the secant line passing through points <em data-effect="italics">P</em> and <em data-effect="italics">Q</em>. Round your answer to eight significant digits.</p><div class="os-table" id="fs-id1170570997485"><div class="table-scroll"><table class="unnumbered" data-id="fs-id1170570997485" data-summary="A table with four columns and five rows. The first row has the headings x, y, Q(phi,y), and msec, the slope of the secant line. The values under x are 1.4, 1.49, 1.499, and 1.4999. The values under y are a, b, c, and d. The values under Q(phi,y) are e, f, g, and h. The values under msec¬  are i, j, k, and l.">
+<thead>
+<tr valign="top">
+<th data-align="left" scope="col"><em data-effect="italics">φ</em></th>
+<th data-align="left" scope="col"><em data-effect="italics">y</em></th>
+<th data-align="left" scope="col"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>φ</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>φ</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></th>
+<th data-align="left" scope="col"><em data-effect="italics">m</em><sub>sec</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td data-align="left">1.4</td>
+<td data-align="left">a.</td>
+<td data-align="left">e.</td>
+<td data-align="left">i.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">1.49</td>
+<td data-align="left">b.</td>
+<td data-align="left">f.</td>
+<td data-align="left">j.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">1.499</td>
+<td data-align="left">c.</td>
+<td data-align="left">g.</td>
+<td data-align="left">k.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">1.4999</td>
+<td data-align="left">d.</td>
+<td data-align="left">h.</td>
+<td data-align="left">l.</td>
+</tr>
+</tbody>
+</table></div></div>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170573449494"><header></header><section>
+<div data-type="problem" id="fs-id1170573575349">
+<a aria-label="Go to 11" class="os-number" data-page-fragment="fs-id1170573449494-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">11</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573575351">Use the values in the right column of the table in the preceding exercise to guess the value of the slope of the tangent line to <em data-effect="italics">f</em> at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>φ</mi><mo>=</mo><mn>1.5</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>φ</mi><mo>=</mo><mn>1.5</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span></p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170573589729"><header></header><section>
+<div data-type="problem" id="fs-id1170573589731">
+<span class="os-number">12</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573589733">Use the value in the preceding exercise to find an equation of the tangent line at point <em data-effect="italics">P</em>.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170573396155">For the following exercises, points <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mn>−1</mn><mo>,</mo><mn>−1</mn></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>P</mi><mrow><mo>(</mo><mrow><mn>−1</mn><mo>,</mo><mn>−1</mn></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></span> are on the graph of the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170573419372"><header></header><section>
+<div data-type="problem" id="fs-id1170573430365">
+<a aria-label="Go to 13" class="os-number" data-page-fragment="fs-id1170573419372-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">13</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573430367"><strong>[T]</strong> Complete the following table with the appropriate values: <em data-effect="italics">y</em>-coordinate of <em data-effect="italics">Q</em>, the point <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow><mo>,</mo></mrow></annotation-xml></semantics></math></span> and the slope of the secant line passing through points <em data-effect="italics">P</em> and <em data-effect="italics">Q</em>. Round your answer to eight significant digits.</p>
+<div class="os-table" id="fs-id1170573396260"><div class="table-scroll"><table class="unnumbered" data-id="fs-id1170573396260" data-summary="A table with four columns and five rows. The first row has the headings x, y, Q(x,y), and msec, the slope of the secant line. The values under x are -1.05, -1.01, -1.005, and -1.001. The values under y are a, b, c, and d. The values under Q(x,y) are e, f, g, and h. The values under msec¬  are i, j, k, and l.">
+<thead>
+<tr valign="top">
+<th data-align="left" scope="col"><em data-effect="italics">x</em></th>
+<th data-align="left" scope="col"><em data-effect="italics">y</em></th>
+<th data-align="left" scope="col"><math display="inline"><semantics><mrow><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>Q</mi><mrow><mo>(</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>)</mo></mrow></mrow></annotation-xml></semantics></math></th>
+<th data-align="left" scope="col"><em data-effect="italics">m</em><sub>sec</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr valign="top">
+<td data-align="left">−1.05</td>
+<td data-align="left">a.</td>
+<td data-align="left">e.</td>
+<td data-align="left">i.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">−1.01</td>
+<td data-align="left">b.</td>
+<td data-align="left">f.</td>
+<td data-align="left">j.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">−1.005</td>
+<td data-align="left">c.</td>
+<td data-align="left">g.</td>
+<td data-align="left">k.</td>
+</tr>
+<tr valign="top">
+<td data-align="left">−1.001</td>
+<td data-align="left">d.</td>
+<td data-align="left">h.</td>
+<td data-align="left">l.</td>
+</tr>
+</tbody>
+</table></div></div>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170573408094"><header></header><section>
+<div data-type="problem" id="fs-id1170573408096">
+<span class="os-number">14</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573381197">Use the values in the right column of the table in the preceding exercise to guess the value of the slope of the line tangent to <em data-effect="italics">f</em> at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>x</mi><mo>=</mo><mn>−1</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>x</mi><mo>=</mo><mn>−1</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170573382504"><header></header><section>
+<div data-type="problem" id="fs-id1170573382506">
+<a aria-label="Go to 15" class="os-number" data-page-fragment="fs-id1170573382504-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">15</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573406148">Use the value in the preceding exercise to find an equation of the tangent line at point <em data-effect="italics">P</em>.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170573392558">For the following exercises, the position function of a ball dropped from the top of a 200-meter tall building is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>200</mn><mo>−</mo><mn>4.9</mn><msup><mi>t</mi><mn>2</mn></msup><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>s</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>200</mn><mo>−</mo><mn>4.9</mn><msup><mi>t</mi><mn>2</mn></msup><mo>,</mo></mrow></annotation-xml></semantics></math></span> where position <em data-effect="italics">s</em> is measured in meters and time <em data-effect="italics">t</em> is measured in seconds. Round your answer to eight significant digits.</p>
+<div data-type="exercise" id="fs-id1170573393541"><header></header><section>
+<div data-type="problem" id="fs-id1170573393543">
+<span class="os-number">16</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170570997263"><strong>[T]</strong> Compute the average velocity of the ball over the given time intervals.</p>
+<ol id="fs-id1170573429346" type="a">
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>4.99</mn><mo>,</mo><mn>5</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>4.99</mn><mo>,</mo><mn>5</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>5</mn><mo>,</mo><mn>5.01</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>5</mn><mo>,</mo><mn>5.01</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>4.999</mn><mo>,</mo><mn>5</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>4.999</mn><mo>,</mo><mn>5</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>5</mn><mo>,</mo><mn>5.001</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>5</mn><mo>,</mo><mn>5.001</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+</ol>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170570997916"><header></header><section>
+<div data-type="problem" id="fs-id1170570997918">
+<a aria-label="Go to 17" class="os-number" data-page-fragment="fs-id1170570997916-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">17</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170570997920">Use the preceding exercise to guess the instantaneous velocity of the ball at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mn>5</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mn>5</mn></mrow></annotation-xml></semantics></math></span> sec.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170573396248">For the following exercises, consider a stone tossed into the air from ground level with an initial velocity of 15 m/sec. Its height in meters at time <em data-effect="italics">t</em> seconds is <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>15</mn><mi>t</mi><mo>−</mo><mn>4.9</mn><msup><mi>t</mi><mn>2</mn></msup><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>h</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>15</mn><mi>t</mi><mo>−</mo><mn>4.9</mn><msup><mi>t</mi><mn>2</mn></msup><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div data-type="exercise" id="fs-id1170573430332"><header></header><section>
+<div data-type="problem" id="fs-id1170573430334">
+<span class="os-number">18</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573430336"><strong>[T]</strong> Compute the average velocity of the stone over the given time intervals.</p>
+<ol id="fs-id1170573364356" type="a">
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>1</mn><mo>,</mo><mn>1.05</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>1</mn><mo>,</mo><mn>1.05</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>1</mn><mo>,</mo><mn>1.01</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>1</mn><mo>,</mo><mn>1.01</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>1</mn><mo>,</mo><mn>1.005</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>1</mn><mo>,</mo><mn>1.005</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>1</mn><mo>,</mo><mn>1.001</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>1</mn><mo>,</mo><mn>1.001</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+</ol>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170573324864"><header></header><section>
+<div data-type="problem" id="fs-id1170573324866">
+<a aria-label="Go to 19" class="os-number" data-page-fragment="fs-id1170573324864-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">19</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571101644">Use the preceding exercise to guess the instantaneous velocity of the stone at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span> sec.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170573442443">For the following exercises, consider a rocket shot into the air that then returns to Earth. The height of the rocket in meters is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>h</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>600</mn><mo>+</mo><mn>78.4</mn><mi>t</mi><mo>−</mo><mn>4.9</mn><msup><mi>t</mi><mn>2</mn></msup><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>h</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mn>600</mn><mo>+</mo><mn>78.4</mn><mi>t</mi><mo>−</mo><mn>4.9</mn><msup><mi>t</mi><mn>2</mn></msup><mo>,</mo></mrow></annotation-xml></semantics></math></span> where <em data-effect="italics">t</em> is measured in seconds.</p>
+<div data-type="exercise" id="fs-id1170573425872"><header></header><section>
+<div data-type="problem" id="fs-id1170571262060">
+<span class="os-number">20</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571262062"><strong>[T]</strong> Compute the average velocity of the rocket over the given time intervals.</p>
+<ol id="fs-id1170570999667" type="a">
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>9</mn><mo>,</mo><mn>9.01</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>9</mn><mo>,</mo><mn>9.01</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>8.99</mn><mo>,</mo><mn>9</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>8.99</mn><mo>,</mo><mn>9</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>9</mn><mo>,</mo><mn>9.001</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>9</mn><mo>,</mo><mn>9.001</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>8.999</mn><mo>,</mo><mn>9</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>8.999</mn><mo>,</mo><mn>9</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+</ol>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170573369087"><header></header><section>
+<div data-type="problem" id="fs-id1170573593195">
+<a aria-label="Go to 21" class="os-number" data-page-fragment="fs-id1170573369087-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">21</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573593197">Use the preceding exercise to guess the instantaneous velocity of the rocket at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mn>9</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mn>9</mn></mrow></annotation-xml></semantics></math></span> sec.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170570997261">For the following exercises, consider an athlete running a 40-m dash. The position of the athlete is given by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>d</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msup><mi>t</mi><mn>3</mn></msup></mrow><mn>6</mn></mfrac><mo>+</mo><mn>4</mn><mi>t</mi><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>d</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><msup><mi>t</mi><mn>3</mn></msup></mrow><mn>6</mn></mfrac><mo>+</mo><mn>4</mn><mi>t</mi><mo>,</mo></mrow></annotation-xml></semantics></math></span> where <em data-effect="italics">d</em> is the position in meters and <em data-effect="italics">t</em> is the time elapsed, measured in seconds.</p>
+<div data-type="exercise" id="fs-id1170571136683"><header></header><section>
+<div data-type="problem" id="fs-id1170571136686">
+<span class="os-number">22</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571136688"><strong>[T]</strong> Compute the average velocity of the runner over the given time intervals.</p>
+<ol id="fs-id1170573590290" type="a">
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>1.95</mn><mo>,</mo><mn>2.05</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>1.95</mn><mo>,</mo><mn>2.05</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>1.995</mn><mo>,</mo><mn>2.005</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>1.995</mn><mo>,</mo><mn>2.005</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>1.9995</mn><mo>,</mo><mn>2.0005</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>1.9995</mn><mo>,</mo><mn>2.0005</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>,</mo><mn>2.00001</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>,</mo><mn>2.00001</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></li>
+</ol>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571123766"><header></header><section>
+<div data-type="problem" id="fs-id1170571258656">
+<a aria-label="Go to 23" class="os-number" data-page-fragment="fs-id1170571123766-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">23</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571258658">Use the preceding exercise to guess the instantaneous velocity of the runner at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>t</mi><mo>=</mo><mn>2</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>t</mi><mo>=</mo><mn>2</mn></mrow></annotation-xml></semantics></math></span> sec.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170573392317">For the following exercises, consider the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div data-type="exercise" id="fs-id1170573582782"><header></header><section>
+<div data-type="problem" id="fs-id1170573582785">
+<span class="os-number">24</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571138902">Sketch the graph of <em data-effect="italics">f</em> over the interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>2</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>2</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span> and shade the region above the <em data-effect="italics">x</em>-axis.</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571259931"><header></header><section>
+<div data-type="problem" id="fs-id1170571259933">
+<a aria-label="Go to 25" class="os-number" data-page-fragment="fs-id1170571259931-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">25</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571259935">Use the preceding exercise to find the aproximate value of the area between the <em data-effect="italics">x</em>-axis and the graph of <em data-effect="italics">f</em> over the interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>2</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>2</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span> using rectangles. For the rectangles, use the square units, and approximate both above and below the lines. Use geometry to find the exact answer.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170573255256">For the following exercises, consider the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mo>.</mo></mrow></annotation-xml></semantics></math></span> (<em data-effect="italics">Hint</em>: This is the upper half of a circle of radius 1 positioned at <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mn>0</mn></mrow><mo>)</mo></mrow><mtext>.)</mtext></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mn>0</mn></mrow><mo>)</mo></mrow><mtext>.)</mtext></mrow></annotation-xml></semantics></math></span></p>
+<div data-type="exercise" id="fs-id1170571050086"><header></header><section>
+<div data-type="problem" id="fs-id1170571050088">
+<span class="os-number">26</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571050090">Sketch the graph of <em data-effect="italics">f</em> over the interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170573615200"><header></header><section>
+<div data-type="problem" id="fs-id1170573615202">
+<a aria-label="Go to 27" class="os-number" data-page-fragment="fs-id1170573615200-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">27</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573615204">Use the preceding exercise to find the aproximate area between the <em data-effect="italics">x</em>-axis and the graph of <em data-effect="italics">f</em> over the interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span> using rectangles. For the rectangles, use squares 0.4 by 0.4 units, and approximate both above and below the lines. Use geometry to find the exact answer.</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170573594037">For the following exercises, consider the function <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>−</mtext><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mtext>−</mtext><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<div data-type="exercise" id="fs-id1170573750527"><header></header><section>
+<div data-type="problem" id="fs-id1170573413761">
+<span class="os-number">28</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170573413763">Sketch the graph of <em data-effect="italics">f</em> over the interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571137056"><header></header><section>
+<div data-type="problem" id="fs-id1170571137058">
+<a aria-label="Go to 29" class="os-number" data-page-fragment="fs-id1170571137056-solution" data-page-slug="chapter-2" data-page-uuid="3d449028-80b8-5707-89b2-35672d46f26d" href="https://openstax.org/books/calculus-volume-1/pages/chapter-2">29</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571137060">Approximate the area of the region between the <em data-effect="italics">x</em>-axis and the graph of <em data-effect="italics">f</em> over the interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+</section></div>
+</div></article><footer><p>Adapted from OpenStax, Calculus Volume 1, 2.1 A Preview of Calculus. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/calculus-volume-1/pages/2-1-a-preview-of-calculus">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

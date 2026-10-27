@@ -1,0 +1,1109 @@
+{
+  "appName": "DelaStudy",
+  "source": "/tmp/delastudy-waffles-4jUGKt/capture.mov",
+  "font": "/Users/machi/cac2026/cac2026/FirstStateLens/Fonts/Manrope.ttf",
+  "presentation": "code-windows",
+  "devicePresentation": "iphone-14-pro",
+  "codeWindowPlacement": "lower-right",
+  "shots": [
+    {
+      "id": "account",
+      "duration": 6,
+      "sourceStart": 18.319,
+      "sourceEnd": 22.087
+    },
+    {
+      "id": "setup_year",
+      "duration": 3,
+      "sourceStart": 23.318,
+      "sourceEnd": 28.087
+    },
+    {
+      "id": "setup_goal",
+      "duration": 2,
+      "sourceStart": 28.247,
+      "sourceEnd": 31.797
+    },
+    {
+      "id": "setup_subjects",
+      "duration": 3,
+      "sourceStart": 31.958,
+      "sourceEnd": 35.875
+    },
+    {
+      "id": "setup_route",
+      "duration": 2,
+      "sourceStart": 36.035,
+      "sourceEnd": 39.242
+    },
+    {
+      "id": "setup_school",
+      "duration": 3,
+      "sourceStart": 39.403,
+      "sourceEnd": 48.274
+    },
+    {
+      "id": "setup_rhythm",
+      "duration": 3,
+      "sourceStart": 48.434,
+      "sourceEnd": 51.969
+    },
+    {
+      "id": "setup_ready",
+      "duration": 2,
+      "sourceStart": 52.129,
+      "sourceEnd": 55.984
+    },
+    {
+      "id": "today",
+      "duration": 4,
+      "sourceStart": 57.237,
+      "sourceEnd": 60.587
+    },
+    {
+      "id": "library",
+      "duration": 8,
+      "sourceStart": 60.747,
+      "sourceEnd": 73.342
+    },
+    {
+      "id": "outline",
+      "duration": 5,
+      "sourceStart": 73.502,
+      "sourceEnd": 84.222
+    },
+    {
+      "id": "lesson",
+      "duration": 10,
+      "sourceStart": 84.382,
+      "sourceEnd": 95.873
+    },
+    {
+      "id": "practice",
+      "duration": 23,
+      "sourceStart": 96.033,
+      "sourceEnd": 113.393
+    },
+    {
+      "id": "resources",
+      "duration": 9,
+      "sourceStart": 118.064,
+      "sourceEnd": 127.369
+    },
+    {
+      "id": "college",
+      "duration": 7,
+      "sourceStart": 127.529,
+      "sourceEnd": 133.369
+    },
+    {
+      "id": "plan",
+      "duration": 6,
+      "sourceStart": 133.529,
+      "sourceEnd": 141.427
+    },
+    {
+      "id": "sounds",
+      "duration": 10,
+      "sourceStart": 165.91,
+      "sourceEnd": 180.01
+    },
+    {
+      "id": "zen",
+      "duration": 7,
+      "sourceStart": 182.711,
+      "sourceEnd": 192.243
+    },
+    {
+      "id": "permission",
+      "duration": 3,
+      "sourceStart": 31.027,
+      "sourceEnd": 33.872,
+      "source": "/tmp/delastudy-waffles-4jUGKt/notification.mov"
+    },
+    {
+      "id": "notification",
+      "duration": 11,
+      "sourceStart": 92.26,
+      "sourceEnd": 105.479,
+      "source": "/tmp/delastudy-waffles-4jUGKt/notification.mov"
+    },
+    {
+      "id": "profile",
+      "duration": 8,
+      "sourceStart": 110.268,
+      "sourceEnd": 117.568,
+      "source": "/tmp/delastudy-waffles-4jUGKt/notification.mov"
+    }
+  ],
+  "codePopups": [
+    {
+      "sourcePath": "FirstStateLens/BiteLessonView.swift",
+      "firstLine": 109,
+      "lastLine": 115,
+      "start": 41.4,
+      "end": 50.8,
+      "highlightLines": [
+        112,
+        114
+      ]
+    },
+    {
+      "sourcePath": "FirstStateLens/RootView.swift",
+      "firstLine": 61,
+      "lastLine": 64,
+      "start": 116.4,
+      "end": 126.8,
+      "highlightLines": [
+        61,
+        62,
+        64
+      ]
+    }
+  ],
+  "basePresentation": "/Users/machi/cac2026/cac2026/Demo/Showcase/DelaStudy-Walkthrough-2m15.mp4",
+  "diagramPopups": [
+    {
+      "id": "personal_plan",
+      "title": "Your choices become a saved plan",
+      "impact": "Your next visit starts with your choices",
+      "start": 6.4,
+      "end": 27.8,
+      "width": 900,
+      "height": 340,
+      "nodes": [
+        {
+          "id": "grade",
+          "label": "Grade + goal",
+          "x": 0,
+          "y": 58,
+          "width": 220,
+          "height": 58,
+          "activeFrom": 6.6,
+          "activeUntil": 11
+        },
+        {
+          "id": "subjects",
+          "label": "Subjects + route",
+          "x": 0,
+          "y": 140,
+          "width": 220,
+          "height": 58,
+          "activeFrom": 11,
+          "activeUntil": 16
+        },
+        {
+          "id": "school",
+          "label": "School + rhythm",
+          "x": 0,
+          "y": 222,
+          "width": 220,
+          "height": 58,
+          "activeFrom": 16,
+          "activeUntil": 22
+        },
+        {
+          "id": "join",
+          "label": "",
+          "x": 276,
+          "y": 166,
+          "width": 10,
+          "height": 10,
+          "shape": "junction"
+        },
+        {
+          "id": "plan",
+          "label": "Saved plan",
+          "x": 360,
+          "y": 133,
+          "width": 240,
+          "height": 76,
+          "detail": "On this iPhone",
+          "activeFrom": 22,
+          "activeUntil": 24
+        },
+        {
+          "id": "today",
+          "label": "Today",
+          "x": 690,
+          "y": 142,
+          "width": 206,
+          "height": 58,
+          "activeFrom": 24,
+          "activeUntil": 27.8
+        }
+      ],
+      "edges": [
+        {
+          "to": "join",
+          "arrow": false,
+          "from": "grade",
+          "points": [
+            [
+              220,
+              87
+            ],
+            [
+              281,
+              87
+            ],
+            [
+              281,
+              171
+            ]
+          ]
+        },
+        {
+          "to": "join",
+          "arrow": false,
+          "from": "subjects",
+          "points": [
+            [
+              220,
+              169
+            ],
+            [
+              281,
+              169
+            ],
+            [
+              281,
+              171
+            ]
+          ]
+        },
+        {
+          "to": "join",
+          "arrow": false,
+          "from": "school",
+          "points": [
+            [
+              220,
+              251
+            ],
+            [
+              281,
+              251
+            ],
+            [
+              281,
+              171
+            ]
+          ]
+        },
+        {
+          "to": "plan",
+          "arrow": true,
+          "from": "join",
+          "points": [
+            [
+              281,
+              171
+            ],
+            [
+              360,
+              171
+            ]
+          ]
+        },
+        {
+          "to": "today",
+          "arrow": true,
+          "from": "plan"
+        }
+      ]
+    },
+    {
+      "id": "course_discovery",
+      "title": "Find the right course path",
+      "impact": "Choose a level, then search a course",
+      "start": 28.3,
+      "end": 35.8,
+      "width": 900,
+      "height": 340,
+      "nodes": [
+        {
+          "id": "high",
+          "label": "High school",
+          "x": 0,
+          "y": 66,
+          "width": 240,
+          "height": 66,
+          "activeFrom": 33,
+          "activeUntil": 35.8
+        },
+        {
+          "id": "ap",
+          "label": "AP preparation",
+          "x": 325,
+          "y": 66,
+          "width": 240,
+          "height": 66,
+          "activeFrom": 29,
+          "activeUntil": 31
+        },
+        {
+          "id": "college",
+          "label": "Intro college",
+          "x": 650,
+          "y": 66,
+          "width": 240,
+          "height": 66,
+          "activeFrom": 31,
+          "activeUntil": 33
+        },
+        {
+          "id": "join",
+          "label": "",
+          "x": 440,
+          "y": 167,
+          "width": 10,
+          "height": 10,
+          "shape": "junction"
+        },
+        {
+          "id": "search",
+          "label": "Course search",
+          "x": 310,
+          "y": 218,
+          "width": 270,
+          "height": 62,
+          "activeFrom": 34,
+          "activeUntil": 35.8
+        }
+      ],
+      "edges": [
+        {
+          "to": "join",
+          "arrow": false,
+          "from": "high",
+          "points": [
+            [
+              120,
+              132
+            ],
+            [
+              120,
+              172
+            ],
+            [
+              445,
+              172
+            ]
+          ]
+        },
+        {
+          "to": "join",
+          "arrow": false,
+          "from": "ap",
+          "points": [
+            [
+              445,
+              132
+            ],
+            [
+              445,
+              172
+            ]
+          ]
+        },
+        {
+          "to": "join",
+          "arrow": false,
+          "from": "college",
+          "points": [
+            [
+              770,
+              132
+            ],
+            [
+              770,
+              172
+            ],
+            [
+              445,
+              172
+            ]
+          ]
+        },
+        {
+          "to": "search",
+          "arrow": true,
+          "from": "join",
+          "points": [
+            [
+              445,
+              172
+            ],
+            [
+              445,
+              218
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "course_structure",
+      "title": "Five units. A visible course path.",
+      "impact": "5 units \u00d7 6 activities = 30 activities",
+      "start": 36.3,
+      "end": 40.8,
+      "width": 900,
+      "height": 300,
+      "nodes": [
+        {
+          "id": "unit1",
+          "label": "Unit 1",
+          "x": 0,
+          "y": 110,
+          "width": 150,
+          "height": 80,
+          "detail": "6 activities",
+          "activeFrom": 36.5,
+          "activeUntil": 40.8
+        },
+        {
+          "id": "unit2",
+          "label": "Unit 2",
+          "x": 174,
+          "y": 110,
+          "width": 150,
+          "height": 80,
+          "detail": "6 activities"
+        },
+        {
+          "id": "unit3",
+          "label": "Unit 3",
+          "x": 348,
+          "y": 110,
+          "width": 150,
+          "height": 80,
+          "detail": "6 activities"
+        },
+        {
+          "id": "unit4",
+          "label": "Unit 4",
+          "x": 522,
+          "y": 110,
+          "width": 150,
+          "height": 80,
+          "detail": "6 activities"
+        },
+        {
+          "id": "unit5",
+          "label": "Unit 5",
+          "x": 696,
+          "y": 110,
+          "width": 150,
+          "height": 80,
+          "detail": "6 activities"
+        }
+      ],
+      "edges": [
+        {
+          "to": "unit2",
+          "arrow": true,
+          "from": "unit1"
+        },
+        {
+          "to": "unit3",
+          "arrow": true,
+          "from": "unit2"
+        },
+        {
+          "to": "unit4",
+          "arrow": true,
+          "from": "unit3"
+        },
+        {
+          "to": "unit5",
+          "arrow": true,
+          "from": "unit4"
+        }
+      ]
+    },
+    {
+      "id": "practice_loop",
+      "title": "Use the idea. Get feedback. Save the work.",
+      "impact": "A completed activity awards its XP only once",
+      "start": 51.4,
+      "end": 73.8,
+      "width": 900,
+      "height": 340,
+      "nodes": [
+        {
+          "id": "mcq",
+          "label": "Multiple choice",
+          "x": 0,
+          "y": 60,
+          "width": 205,
+          "height": 50,
+          "activeFrom": 51.6,
+          "activeUntil": 55
+        },
+        {
+          "id": "blank",
+          "label": "Fill the blank",
+          "x": 0,
+          "y": 136,
+          "width": 205,
+          "height": 50,
+          "activeFrom": 55,
+          "activeUntil": 59
+        },
+        {
+          "id": "match",
+          "label": "Matching",
+          "x": 0,
+          "y": 212,
+          "width": 205,
+          "height": 50,
+          "activeFrom": 59,
+          "activeUntil": 69
+        },
+        {
+          "id": "join",
+          "label": "",
+          "x": 251,
+          "y": 161,
+          "width": 10,
+          "height": 10,
+          "shape": "junction"
+        },
+        {
+          "id": "feedback",
+          "label": "Feedback",
+          "x": 330,
+          "y": 130,
+          "width": 220,
+          "height": 72,
+          "detail": "Check the idea",
+          "activeFrom": 67,
+          "activeUntil": 69
+        },
+        {
+          "id": "save",
+          "label": "Save activity",
+          "x": 660,
+          "y": 130,
+          "width": 220,
+          "height": 72,
+          "detail": "XP awarded once",
+          "activeFrom": 69,
+          "activeUntil": 73.8
+        }
+      ],
+      "edges": [
+        {
+          "to": "join",
+          "arrow": false,
+          "from": "mcq",
+          "points": [
+            [
+              205,
+              85
+            ],
+            [
+              256,
+              85
+            ],
+            [
+              256,
+              166
+            ]
+          ]
+        },
+        {
+          "to": "join",
+          "arrow": false,
+          "from": "blank",
+          "points": [
+            [
+              205,
+              161
+            ],
+            [
+              256,
+              161
+            ],
+            [
+              256,
+              166
+            ]
+          ]
+        },
+        {
+          "to": "join",
+          "arrow": false,
+          "from": "match",
+          "points": [
+            [
+              205,
+              237
+            ],
+            [
+              256,
+              237
+            ],
+            [
+              256,
+              166
+            ]
+          ]
+        },
+        {
+          "to": "feedback",
+          "arrow": true,
+          "from": "join",
+          "points": [
+            [
+              256,
+              166
+            ],
+            [
+              330,
+              166
+            ]
+          ]
+        },
+        {
+          "to": "save",
+          "arrow": true,
+          "from": "feedback"
+        }
+      ]
+    },
+    {
+      "id": "resource_tree",
+      "title": "Extra depth has its own place",
+      "impact": "Go deeper without interrupting a short lesson",
+      "start": 74.3,
+      "end": 82.8,
+      "width": 900,
+      "height": 340,
+      "nodes": [
+        {
+          "id": "resources",
+          "label": "Resources",
+          "x": 0,
+          "y": 136,
+          "width": 220,
+          "height": 62
+        },
+        {
+          "id": "join",
+          "label": "",
+          "x": 326,
+          "y": 163,
+          "width": 8,
+          "height": 8,
+          "shape": "junction"
+        },
+        {
+          "id": "books",
+          "label": "Textbooks",
+          "x": 430,
+          "y": 58,
+          "width": 330,
+          "height": 60,
+          "activeFrom": 74.5,
+          "activeUntil": 77
+        },
+        {
+          "id": "readings",
+          "label": "Full readings",
+          "x": 430,
+          "y": 137,
+          "width": 330,
+          "height": 60,
+          "activeFrom": 77,
+          "activeUntil": 80
+        },
+        {
+          "id": "videos",
+          "label": "Videos",
+          "x": 430,
+          "y": 216,
+          "width": 330,
+          "height": 60,
+          "activeFrom": 80,
+          "activeUntil": 82.8
+        }
+      ],
+      "edges": [
+        {
+          "to": "join",
+          "arrow": false,
+          "from": "resources",
+          "points": [
+            [
+              220,
+              167
+            ],
+            [
+              330,
+              167
+            ]
+          ]
+        },
+        {
+          "to": "books",
+          "arrow": true,
+          "from": "join",
+          "points": [
+            [
+              330,
+              167
+            ],
+            [
+              330,
+              88
+            ],
+            [
+              430,
+              88
+            ]
+          ]
+        },
+        {
+          "to": "readings",
+          "arrow": true,
+          "from": "join",
+          "points": [
+            [
+              330,
+              167
+            ],
+            [
+              430,
+              167
+            ]
+          ]
+        },
+        {
+          "to": "videos",
+          "arrow": true,
+          "from": "join",
+          "points": [
+            [
+              330,
+              167
+            ],
+            [
+              330,
+              246
+            ],
+            [
+              430,
+              246
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "college_steps",
+      "title": "College preparation, made concrete",
+      "impact": "Small steps toward a college plan",
+      "start": 83.3,
+      "end": 89.8,
+      "width": 900,
+      "height": 300,
+      "nodes": [
+        {
+          "id": "fields",
+          "label": "Explore fields",
+          "x": 0,
+          "y": 110,
+          "width": 260,
+          "height": 80,
+          "activeFrom": 83.5,
+          "activeUntil": 89.8
+        },
+        {
+          "id": "costs",
+          "label": "Compare routes",
+          "x": 310,
+          "y": 110,
+          "width": 260,
+          "height": 80
+        },
+        {
+          "id": "counselor",
+          "label": "Ask a counselor",
+          "x": 620,
+          "y": 110,
+          "width": 260,
+          "height": 80
+        }
+      ],
+      "edges": [
+        {
+          "to": "costs",
+          "arrow": true,
+          "from": "fields"
+        },
+        {
+          "to": "counselor",
+          "arrow": true,
+          "from": "costs"
+        }
+      ]
+    },
+    {
+      "id": "task_to_focus",
+      "title": "Turn an intention into a session",
+      "impact": "Carry the same task into focused study",
+      "start": 90.3,
+      "end": 95.8,
+      "width": 900,
+      "height": 300,
+      "nodes": [
+        {
+          "id": "goal",
+          "label": "Study goal",
+          "x": 0,
+          "y": 110,
+          "width": 260,
+          "height": 80,
+          "detail": "Review angles"
+        },
+        {
+          "id": "task",
+          "label": "Saved task",
+          "x": 310,
+          "y": 110,
+          "width": 260,
+          "height": 80,
+          "activeFrom": 91,
+          "activeUntil": 95.8
+        },
+        {
+          "id": "focus",
+          "label": "Focus session",
+          "x": 620,
+          "y": 110,
+          "width": 260,
+          "height": 80
+        }
+      ],
+      "edges": [
+        {
+          "to": "task",
+          "arrow": true,
+          "from": "goal"
+        },
+        {
+          "to": "focus",
+          "arrow": true,
+          "from": "task"
+        }
+      ]
+    },
+    {
+      "id": "sound_states",
+      "title": "Playback you can see",
+      "impact": "Reduce Motion keeps the indicator static",
+      "start": 96.4,
+      "end": 105.8,
+      "width": 900,
+      "height": 340,
+      "nodes": [
+        {
+          "id": "play",
+          "label": "Play",
+          "x": 0,
+          "y": 66,
+          "width": 220,
+          "height": 58,
+          "activeFrom": 96.6,
+          "activeUntil": 100.6
+        },
+        {
+          "id": "moving",
+          "label": "Moving waves",
+          "x": 410,
+          "y": 66,
+          "width": 330,
+          "height": 58,
+          "activeFrom": 96.6,
+          "activeUntil": 100.6
+        },
+        {
+          "id": "pause",
+          "label": "Pause",
+          "x": 0,
+          "y": 202,
+          "width": 220,
+          "height": 58,
+          "activeFrom": 100.6,
+          "activeUntil": 102.6
+        },
+        {
+          "id": "still",
+          "label": "Still waves",
+          "x": 410,
+          "y": 202,
+          "width": 330,
+          "height": 58,
+          "activeFrom": 100.6,
+          "activeUntil": 102.6
+        }
+      ],
+      "edges": [
+        {
+          "to": "moving",
+          "arrow": true,
+          "from": "play"
+        },
+        {
+          "to": "still",
+          "arrow": true,
+          "from": "pause"
+        }
+      ]
+    },
+    {
+      "id": "zen_layout",
+      "title": "Zen keeps the timer central",
+      "impact": "Keep the timer. Hide upcoming tasks.",
+      "start": 106.3,
+      "end": 112.8,
+      "width": 900,
+      "height": 340,
+      "nodes": [
+        {
+          "id": "timer",
+          "label": "Pomodoro",
+          "x": 0,
+          "y": 95,
+          "width": 160,
+          "height": 150,
+          "shape": "circle",
+          "activeFrom": 106.5,
+          "activeUntil": 112.8
+        },
+        {
+          "id": "current",
+          "label": "Current task",
+          "x": 390,
+          "y": 70,
+          "width": 300,
+          "height": 70
+        },
+        {
+          "id": "upcoming",
+          "label": "Upcoming tasks",
+          "x": 390,
+          "y": 206,
+          "width": 300,
+          "height": 70,
+          "detail": "Show or hide",
+          "activeFrom": 109,
+          "activeUntil": 112.8
+        }
+      ],
+      "edges": [
+        {
+          "to": "current",
+          "arrow": true,
+          "from": "timer",
+          "points": [
+            [
+              160,
+              170
+            ],
+            [
+              270,
+              170
+            ],
+            [
+              270,
+              105
+            ],
+            [
+              390,
+              105
+            ]
+          ]
+        },
+        {
+          "to": "upcoming",
+          "arrow": true,
+          "from": "timer",
+          "points": [
+            [
+              160,
+              170
+            ],
+            [
+              270,
+              170
+            ],
+            [
+              270,
+              241
+            ],
+            [
+              390,
+              241
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "earned_progress",
+      "title": "Progress comes from completed work",
+      "impact": "Replaying a completed activity does not duplicate XP",
+      "start": 127.4,
+      "end": 134.8,
+      "width": 900,
+      "height": 300,
+      "nodes": [
+        {
+          "id": "work",
+          "label": "Saved activities",
+          "x": 0,
+          "y": 110,
+          "width": 260,
+          "height": 80
+        },
+        {
+          "id": "xp",
+          "label": "Earned XP",
+          "x": 310,
+          "y": 110,
+          "width": 260,
+          "height": 80,
+          "detail": "20 XP in this demo",
+          "activeFrom": 127.6,
+          "activeUntil": 131
+        },
+        {
+          "id": "level",
+          "label": "Level progress",
+          "x": 620,
+          "y": 110,
+          "width": 260,
+          "height": 80,
+          "activeFrom": 131,
+          "activeUntil": 134.8
+        }
+      ],
+      "edges": [
+        {
+          "to": "xp",
+          "arrow": true,
+          "from": "work"
+        },
+        {
+          "to": "level",
+          "arrow": true,
+          "from": "xp"
+        }
+      ]
+    }
+  ]
+}

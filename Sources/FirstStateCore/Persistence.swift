@@ -56,3 +56,21 @@ public struct FileProgressStore: ProgressStore, Sendable {
         let decoder = JSONDecoder(); decoder.dateDecodingStrategy = .iso8601; return decoder
     }
 }
+
+/// UUID paths keep account identity independent of display names and login handles.
+public struct AccountProgressFiles: Sendable {
+    public let legacy: FileProgressStore
+    public let directory: URL
+    public init(legacy: FileProgressStore) {
+        self.legacy = legacy
+        directory = legacy.fileURL.deletingLastPathComponent().appendingPathComponent("Accounts", isDirectory: true)
+    }
+    public func store(for id: UUID) -> FileProgressStore {
+        FileProgressStore(fileURL: directory.appendingPathComponent(id.uuidString, isDirectory: true).appendingPathComponent("progress-v1.json"))
+    }
+    public func load(for id: UUID, inheritLegacy: Bool) throws -> ProgressSnapshot {
+        let target = store(for: id)
+        if FileManager.default.fileExists(atPath: target.fileURL.path) { return try target.load() }
+        return inheritLegacy ? try legacy.load() : ProgressSnapshot()
+    }
+}

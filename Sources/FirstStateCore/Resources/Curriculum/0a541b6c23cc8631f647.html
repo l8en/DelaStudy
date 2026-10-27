@@ -1,0 +1,4501 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_100d4b89-50fd-47f5-b530-99221cb6a5bd"><h2 data-rex-keep="true" data-type="document-title" id="page_100d4b89-50fd-47f5-b530-99221cb6a5bd_titlecreatedbycookbook"><span class="os-number">5.7</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Integrals Resulting in Inverse Trigonometric Functions</span>
+</h2><div class="ui-has-child-title" data-type="abstract"><header><h3 data-type="title">Learning Objectives</h3></header><section><ul class="os-abstract" id="list-00001">
+<li><span class="os-abstract-token">5.7.1</span>
+<span class="os-abstract-content">Integrate functions resulting in inverse trigonometric functions</span>
+</li>
+</ul></section></div>
+<p id="fs-id1170572244141">In this section we focus on integrals that result in inverse trigonometric functions. We have worked with these functions before. Recall from <a aria-label="Go to Functions and Graphs" data-page-fragment="" data-page-slug="1-introduction" data-page-uuid="1f64cb6f-6f92-4ee8-a4e7-9c20c6eed1e7" href="https://openstax.org/books/calculus-volume-1/pages/1-introduction">Functions and Graphs</a> that trigonometric functions are not one-to-one unless the domains are restricted. When working with inverses of trigonometric functions, we always need to be careful to take these restrictions into account. Also in <a aria-label="Go to Derivatives" data-page-fragment="" data-page-slug="3-introduction" data-page-uuid="b56f3f62-f26d-4a04-a9fd-dd9bb6e23fda" href="https://openstax.org/books/calculus-volume-1/pages/3-introduction">Derivatives</a>, we developed formulas for derivatives of inverse trigonometric functions. The formulas developed there give rise directly to integration formulas involving inverse trigonometric functions.</p>
+<section data-depth="1" id="fs-id1170572168266"><h3 data-type="title">Integrals that Result in Inverse Sine Functions</h3>
+<p id="fs-id1170571596362">Let us begin this last section of the chapter with the three formulas. Along with these formulas, we use substitution to evaluate the integrals. We prove the formula for the inverse sine integral.</p>
+<div class="ui-has-child-title" data-type="note" id="fs-id1170571609338"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Rule: Integration Formulas Resulting in Inverse Trigonometric Functions</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1170571528516">The following integration formulas yield inverse trigonometric functions. Assume <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation-xml encoding="MathML-Content"><mi>a</mi><mo>&gt;</mo><mn>0</mn></annotation-xml></semantics></math></span>:</p>
+<ol id="fs-id1170572178178" type="1">
+<li><span data-type="newline"><br/></span><div data-type="equation" id="fs-id1170572554001"><div class="math-scroll"><math display="block"><semantics><mrow><mo stretchy="true">∫</mo><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><msqrt><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></msqrt></mfrac><mo>=</mo><msup><mtext>sin</mtext><mrow><mo>-</mo><mn>1</mn></mrow></msup><mfenced><mfrac><mi>u</mi><mi>a</mi></mfrac></mfenced><mi mathvariant="normal">+</mi><mi>C</mi></mrow><annotation-xml encoding="MathML-Content"><mo stretchy="true">∫</mo><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><msqrt><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></msqrt></mfrac><mo>=</mo><msup><mtext>sin</mtext><mrow><mo>-</mo><mn>1</mn></mrow></msup><mfenced><mfrac><mi>u</mi><mi>a</mi></mfrac></mfenced><mi mathvariant="normal">+</mi><mi>C</mi></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(5.23)</span>
+</div>
+</div></li>
+<li><span data-type="newline"><br/></span><div data-type="equation" id="fs-id1170572607870"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mstyle><mo>=</mo><mfrac><mn>1</mn><mi>a</mi></mfrac><mspace width="0.05em"></mspace><msup><mrow><mtext>tan</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mfrac><mi>u</mi><mi>a</mi></mfrac><mo>+</mo><mi>C</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mstyle><mo>=</mo><mfrac><mn>1</mn><mi>a</mi></mfrac><mspace width="0.05em"></mspace><msup><mrow><mtext>tan</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mfrac><mi>u</mi><mi>a</mi></mfrac><mo>+</mo><mi>C</mi></mrow></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(5.24)</span>
+</div>
+</div></li>
+<li><span data-type="newline"><br/></span><div data-type="equation" id="fs-id1170572482564"><div class="math-scroll"><math display="block"><semantics><mrow><mo stretchy="true">∫</mo><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><mrow><mi>u</mi><msqrt><msup><mi>u</mi><mn>2</mn></msup><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup></msqrt></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>a</mi></mfrac><mspace width="0.05em"></mspace><msup><mtext>sec</mtext><mn>−1</mn></msup><mfrac><mrow><mo>|</mo><mi>u</mi><mo>|</mo></mrow><mi>a</mi></mfrac><mo>+</mo><mi>C</mi></mrow><annotation-xml encoding="MathML-Content"><mo stretchy="true">∫</mo><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><mrow><mi>u</mi><msqrt><msup><mi>u</mi><mn>2</mn></msup><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup></msqrt></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>a</mi></mfrac><mspace width="0.05em"></mspace><msup><mtext>sec</mtext><mn>−1</mn></msup><mfrac><mrow><mo>|</mo><mi>u</mi><mo>|</mo></mrow><mi>a</mi></mfrac><mo>+</mo><mi>C</mi></annotation-xml></semantics></math></div><div class="os-equation-number">
+<span class="os-number">(5.25)</span>
+</div>
+</div></li>
+</ol>
+</div></section></div>
+<section data-depth="2" id="fs-id1170572216525"><h4 data-type="title">Proof</h4>
+<p id="fs-id1170571652151">Let <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mfrac><mi>x</mi><mi>a</mi></mfrac><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>y</mi><mo>=</mo><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mfrac><mi>x</mi><mi>a</mi></mfrac><mo>.</mo></mrow></annotation-xml></semantics></math></span> Then <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>a</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>y</mi><mo>=</mo><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>a</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>y</mi><mo>=</mo><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> Now let’s use implicit differentiation. We obtain</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1170572150624"><div class="math-scroll"><math display="block"><semantics><mrow><mtable><mtr><mtd columnalign="right"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mspace width="0.2em"></mspace><mrow><mo>(</mo><mrow><mi>a</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>y</mi></mrow><mo>)</mo></mrow></mtd><mtd columnalign="left"><mo>=</mo></mtd><mtd columnalign="left"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mspace width="0.2em"></mspace><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mtd></mtr><mtr></mtr><mtr><mtd columnalign="right"><mi>a</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>y</mi><mspace width="0.2em"></mspace><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mtd><mtd columnalign="left"><mo>=</mo></mtd><mtd columnalign="left"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mtd><mtd columnalign="left"><mo>=</mo></mtd><mtd columnalign="left"><mfrac><mn>1</mn><mrow><mi>a</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>y</mi></mrow></mfrac><mo>.</mo></mtd></mtr></mtable></mrow><annotation-xml encoding="MathML-Content"><mtable><mtr><mtd columnalign="right"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mspace width="0.2em"></mspace><mrow><mo>(</mo><mrow><mi>a</mi><mspace width="0.1em"></mspace><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>y</mi></mrow><mo>)</mo></mrow></mtd><mtd columnalign="left"><mo>=</mo></mtd><mtd columnalign="left"><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mspace width="0.2em"></mspace><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mtd></mtr><mtr></mtr><mtr><mtd columnalign="right"><mi>a</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>y</mi><mspace width="0.2em"></mspace><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mtd><mtd columnalign="left"><mo>=</mo></mtd><mtd columnalign="left"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mtd><mtd columnalign="left"><mo>=</mo></mtd><mtd columnalign="left"><mfrac><mn>1</mn><mrow><mi>a</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>y</mi></mrow></mfrac><mo>.</mo></mtd></mtr></mtable></annotation-xml></semantics></math></div></div>
+<p id="fs-id1170572163738">For <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>≤</mo><mi>y</mi><mo>≤</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>,</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mo>−</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>≤</mo><mi>y</mi><mo>≤</mo><mfrac><mi>π</mi><mn>2</mn></mfrac><mo>,</mo><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span> Thus, applying the Pythagorean identity <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>y</mi><mo>+</mo><msup><mrow><mtext>cos</mtext></mrow><mn>2</mn></msup><mi>y</mi><mo>=</mo><mn>1</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>y</mi><mo>+</mo><msup><mrow><mtext>cos</mtext></mrow><mn>2</mn></msup><mi>y</mi><mo>=</mo><mn>1</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span> we have <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>y</mi><mo>=</mo><msqrt><mrow><mn>1</mn><mo>–</mo><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>y</mi></mrow></msqrt><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>y</mi><mo>=</mo><msqrt><mrow><mn>1</mn><mo>–</mo><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>y</mi></mrow></msqrt><mo>.</mo></mrow></annotation-xml></semantics></math></span> This gives</p><div class="unnumbered" data-label="" data-type="equation" id="fs-id1170571660097"><div class="math-scroll"><math display="block"><semantics><mrow><mtable><mtr><mtd columnalign="left"><mfrac><mn>1</mn><mrow><mi>a</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>y</mi></mrow></mfrac></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mrow><mi>a</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>y</mi></mrow></msqrt></mrow></mfrac></mtd></mtr><mtr></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>y</mi></mrow></msqrt></mrow></mfrac></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>.</mo></mtd></mtr></mtable></mrow><annotation-xml encoding="MathML-Content"><mtable><mtr><mtd columnalign="left"><mfrac><mn>1</mn><mrow><mi>a</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>y</mi></mrow></mfrac></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mrow><mi>a</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>y</mi></mrow></msqrt></mrow></mfrac></mtd></mtr><mtr></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>a</mi><mn>2</mn></msup><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>y</mi></mrow></msqrt></mrow></mfrac></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mo>=</mo><mfrac><mn>1</mn><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>.</mo></mtd></mtr></mtable></annotation-xml></semantics></math></div></div>
+<p id="fs-id1170572101851">Then for <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>−</mtext><mi>a</mi><mo>≤</mo><mi>x</mi><mo>≤</mo><mi>a</mi><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>−</mtext><mi>a</mi><mo>≤</mo><mi>x</mi><mo>≤</mo><mi>a</mi><mo>,</mo></mrow></annotation-xml></semantics></math></span> and generalizing to <em data-effect="italics">u</em>, we have</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1170572175143"><div class="math-scroll"><math display="block"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mi>d</mi><mi>u</mi><mo>=</mo><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup></mrow></mrow></mstyle><mrow><mo>(</mo><mrow><mfrac><mi>u</mi><mi>a</mi></mfrac></mrow><mo>)</mo></mrow><mo>+</mo><mi>C</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mi>d</mi><mi>u</mi><mo>=</mo><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup></mrow></mrow></mstyle><mrow><mo>(</mo><mrow><mfrac><mi>u</mi><mi>a</mi></mfrac></mrow><mo>)</mo></mrow><mo>+</mo><mi>C</mi><mo>.</mo></mrow></annotation-xml></semantics></math></div></div>
+<p id="fs-id1170572346856">□</p>
+<div class="ui-has-child-title" data-type="example" id="fs-id1170571696734"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">5.49</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1170571596198"><header></header><section>
+<div data-type="problem" id="fs-id1170571678921"><div class="os-problem-container"><h4 data-type="title">Evaluating a Definite Integral Using Inverse Trigonometric Functions</h4>
+<p id="fs-id1170571618979">Evaluate the definite integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mn>0</mn><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mn>0</mn><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1170572296931">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1170572106837">We can go directly to the formula for the antiderivative in the rule on integration formulas resulting in inverse trigonometric functions, and then evaluate the definite integral. We have</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1170572203987">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mtable>
+<mtr></mtr>
+<mtr></mtr>
+<mtr>
+<mtd columnalign="left">
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>x</mi>
+<mrow>
+<msubsup>
+<mo>|</mo>
+<mrow>
+<mn>0</mn>
+</mrow>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msubsup>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>−</mo>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mi>π</mi>
+<mn>6</mn>
+</mfrac>
+<mo>−</mo>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mi>π</mi>
+<mn>6</mn>
+</mfrac>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mtable>
+<mtr></mtr>
+<mtr></mtr>
+<mtr>
+<mtd columnalign="left">
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>x</mi>
+<mrow>
+<msubsup>
+<mo>|</mo>
+<mrow>
+<mn>0</mn>
+</mrow>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msubsup>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>−</mo>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mi>π</mi>
+<mn>6</mn>
+</mfrac>
+<mo>−</mo>
+<mn>0</mn>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mi>π</mi>
+<mn>6</mn>
+</mfrac>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1170572151257"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">5.40</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1170572373474"><header></header><section>
+<div data-type="problem" id="fs-id1170572393424"><div class="os-problem-container">
+<p id="fs-id1170572212397">Evaluate the integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><mn>16</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mrow></mrow></mstyle><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><mn>16</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mrow></mrow></mstyle><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1170572167984"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">5.50</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1170571659174"><header></header><section>
+<div data-type="problem" id="fs-id1170572375674"><div class="os-problem-container"><h4 data-type="title">Finding an Antiderivative Involving an Inverse Trigonometric Function</h4>
+<p id="fs-id1170572570050">Evaluate the integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><msqrt><mrow><mn>4</mn><mo>−</mo><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mrow></mrow></mstyle><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><msqrt><mrow><mn>4</mn><mo>−</mo><mn>9</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mrow></mrow></mstyle><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1170571655282">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1170571657334">Substitute <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>u</mi><mo>=</mo><mn>3</mn><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>u</mi><mo>=</mo><mn>3</mn><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> Then <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>d</mi><mi>u</mi><mo>=</mo><mn>3</mn><mi>d</mi><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>d</mi><mi>u</mi><mo>=</mo><mn>3</mn><mi>d</mi><mi>x</mi></mrow></annotation-xml></semantics></math></span> and we have</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1170571618996">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>4</mn>
+<mo>−</mo>
+<mn>9</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>u</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>4</mn>
+<mo>−</mo>
+<msup>
+<mi>u</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>4</mn>
+<mo>−</mo>
+<mn>9</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>u</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>4</mn>
+<mo>−</mo>
+<msup>
+<mi>u</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="fs-id1170572141145">Applying the formula with <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span> we obtain</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1170572130022">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mtable>
+<mtr>
+<mtd columnalign="left">
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>4</mn>
+<mo>−</mo>
+<mn>9</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>u</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>4</mn>
+<mo>−</mo>
+<msup>
+<mi>u</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mtd>
+</mtr>
+<mtr></mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>u</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<mi>C</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>3</mn>
+<mi>x</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<mi>C</mi>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mtable>
+<mtr>
+<mtd columnalign="left">
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>4</mn>
+<mo>−</mo>
+<mn>9</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>u</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>4</mn>
+<mo>−</mo>
+<msup>
+<mi>u</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mtd>
+</mtr>
+<mtr></mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>u</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<mi>C</mi>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>3</mn>
+<mi>x</mi>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<mi>C</mi>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1170572141583"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">5.41</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1170571698177"><header></header><section>
+<div data-type="problem" id="fs-id1170572114666"><div class="os-problem-container">
+<p id="fs-id1170572209051">Find the indefinite integral using an inverse trigonometric function and substitution for <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><msqrt><mrow><mn>9</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mrow></mrow></mstyle><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><msqrt><mrow><mn>9</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mrow></mrow></mstyle><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1170572546542"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">5.51</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1170572299153"><header></header><section>
+<div data-type="problem" id="fs-id1170572233785"><div class="os-problem-container"><h4 data-type="title">Evaluating a Definite Integral</h4>
+<p id="fs-id1170572223111">Evaluate the definite integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><msubsup><mo>∫</mo><mn>0</mn><mrow><msqrt><mn>3</mn></msqrt><mtext>/</mtext><mn>2</mn></mrow></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><msubsup><mo>∫</mo><mn>0</mn><mrow><msqrt><mn>3</mn></msqrt><mtext>/</mtext><mn>2</mn></mrow></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1170572446817">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1170572150550">The format of the problem matches the inverse sine formula. Thus,</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1170572130146">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mtable>
+<mtr></mtr>
+<mtr></mtr>
+<mtr>
+<mtd columnalign="left">
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>u</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>u</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>u</mi>
+<mrow>
+<msubsup>
+<mo>|</mo>
+<mrow>
+<mn>0</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>sin</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>]</mo>
+</mrow>
+<mo>−</mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>sin</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mn>0</mn>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>]</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mi>π</mi>
+<mn>3</mn>
+</mfrac>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mtable>
+<mtr></mtr>
+<mtr></mtr>
+<mtr>
+<mtd columnalign="left">
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>u</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>u</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<msup>
+<mtext>sin</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>u</mi>
+<mrow>
+<msubsup>
+<mo>|</mo>
+<mrow>
+<mn>0</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>sin</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>]</mo>
+</mrow>
+<mo>−</mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>sin</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mn>0</mn>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>]</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mi>π</mi>
+<mn>3</mn>
+</mfrac>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+</section>
+</section>
+<section data-depth="1" id="fs-id1170572223136"><h3 data-type="title">Integrals Resulting in Other Inverse Trigonometric Functions</h3>
+<p id="fs-id1170572106889">There are six inverse trigonometric functions. However, only three integration formulas are noted in the rule on integration formulas resulting in inverse trigonometric functions because the remaining three are negative versions of the ones we use. The only difference is whether the integrand is positive or negative. Rather than memorizing three more formulas, if the integrand is negative, simply factor out −1 and evaluate the integral using one of the formulas already provided. To close this section, we examine one more formula: the integral resulting in the inverse tangent function.</p>
+<div class="ui-has-child-title" data-type="example" id="fs-id1170572206423"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">5.52</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1170572215711"><header></header><section>
+<div data-type="problem" id="fs-id1170572134367"><div class="os-problem-container"><h4 data-type="title">Finding an Antiderivative Involving the Inverse Tangent Function</h4>
+<p id="fs-id1170572563030">Evaluate the integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mi>d</mi><mi>x</mi><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mi>d</mi><mi>x</mi><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1170571635955">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1170572449549">Comparing this problem with the formulas stated in the rule on integration formulas resulting in inverse trigonometric functions, the integrand looks similar to the formula for <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mrow><mtext>tan</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>u</mi><mo>+</mo><mi>C</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mrow><mtext>tan</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>u</mi><mo>+</mo><mi>C</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> So we use substitution, letting <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>u</mi><mo>=</mo><mn>2</mn><mi>x</mi><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>u</mi><mo>=</mo><mn>2</mn><mi>x</mi><mo>,</mo></mrow></annotation-xml></semantics></math></span> then <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>d</mi><mi>u</mi><mo>=</mo><mn>2</mn><mi>d</mi><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>d</mi><mi>u</mi><mo>=</mo><mn>2</mn><mi>d</mi><mi>x</mi></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mn>1</mn><mtext>/</mtext><mn>2</mn></mrow><mi>d</mi><mi>u</mi><mo>=</mo><mi>d</mi><mi>x</mi><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mn>1</mn><mtext>/</mtext><mn>2</mn></mrow><mi>d</mi><mi>u</mi><mo>=</mo><mi>d</mi><mi>x</mi><mo>.</mo></mrow></annotation-xml></semantics></math></span> Then, we have</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1170572548844">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>u</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>u</mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mspace width="0.05em"></mspace>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>u</mi>
+<mo>+</mo>
+<mi>C</mi>
+</mrow>
+</mrow>
+</mstyle>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mspace width="0.05em"></mspace>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>2</mn>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<mi>C</mi>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mn>1</mn>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>u</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>u</mi>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mspace width="0.05em"></mspace>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>u</mi>
+<mo>+</mo>
+<mi>C</mi>
+</mrow>
+</mrow>
+</mstyle>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mspace width="0.05em"></mspace>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>2</mn>
+<mi>x</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<mi>C</mi>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1170572608152"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">5.42</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1170572308096"><header></header><section>
+<div data-type="problem" id="fs-id1170572130797"><div class="os-problem-container">
+<p id="fs-id1170572207276">Use substitution to find the antiderivative  <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>25</mn><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>25</mn><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1170572350769"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">5.53</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1170572230273"><header></header><section>
+<div data-type="problem" id="fs-id1170572216196"><div class="os-problem-container"><h4 data-type="title">Applying the Integration Formulas</h4>
+<p id="fs-id1170571619028">Evaluate the integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mn>9</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mi>d</mi><mi>x</mi><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mn>9</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mi>d</mi><mi>x</mi><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1170572230035">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1170572237513">Apply the formula with <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>a</mi><mo>=</mo><mn>3</mn><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>a</mi><mo>=</mo><mn>3</mn><mo>.</mo></mrow></annotation-xml></semantics></math></span> Then,</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1170572221498">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>9</mn>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mspace width="0.05em"></mspace>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>x</mi>
+<mn>3</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<mi>C</mi>
+<mo>.</mo>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>9</mn>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+<mo>=</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mspace width="0.05em"></mspace>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>x</mi>
+<mn>3</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+<mo>+</mo>
+<mi>C</mi>
+<mo>.</mo>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1170571681250"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">5.43</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1170572243063"><header></header><section>
+<div data-type="problem" id="fs-id1170572294817"><div class="os-problem-container">
+<p id="fs-id1170572294820">Evaluate the integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>16</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>16</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-id1170571714255"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">5.54</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered" data-type="exercise" id="fs-id1170572220235"><header></header><section>
+<div data-type="problem" id="fs-id1170572220237"><div class="os-problem-container"><h4 data-type="title">Evaluating a Definite Integral</h4>
+<p id="fs-id1170571600573">Evaluate the definite integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mrow><msqrt><mn>3</mn></msqrt><mtext>/</mtext><mn>3</mn></mrow><mrow><msqrt><mn>3</mn></msqrt></mrow></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mrow><msqrt><mn>3</mn></msqrt><mtext>/</mtext><mn>3</mn></mrow><mrow><msqrt><mn>3</mn></msqrt></mrow></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-id1170572099712">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-id1170572099768">Use the formula for the inverse tangent. We have</p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1170572099771">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mtable>
+<mtr></mtr>
+<mtr></mtr>
+<mtr>
+<mtd columnalign="left">
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+<mtext>/</mtext>
+<mn>3</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<msup>
+<mtext>tan</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>x</mi>
+<mrow>
+<msubsup>
+<mo>|</mo>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+<mtext>/</mtext>
+<mn>3</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+</msubsup>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>]</mo>
+</mrow>
+<mo>−</mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+<mn>3</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>]</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mi>π</mi>
+<mn>6</mn>
+</mfrac>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mtable>
+<mtr></mtr>
+<mtr></mtr>
+<mtr>
+<mtd columnalign="left">
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+<mtext>/</mtext>
+<mn>3</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<msup>
+<mtext>tan</mtext>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>x</mi>
+<mrow>
+<msubsup>
+<mo>|</mo>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+<mtext>/</mtext>
+<mn>3</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+</msubsup>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>]</mo>
+</mrow>
+<mo>−</mo>
+<mrow>
+<mo>[</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+<mn>3</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mo>]</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr>
+<mtd></mtd>
+<mtd columnalign="left">
+<mo>=</mo>
+<mfrac>
+<mi>π</mi>
+<mn>6</mn>
+</mfrac>
+<mo>.</mo>
+</mtd>
+</mtr>
+</mtable>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="checkpoint ui-has-child-title" data-type="note" id="fs-id1170572528694"><header><h3 class="os-title">
+<span class="os-title-label">Checkpoint</span>
+<span class="os-number">5.44</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="fs-id1170572480548"><header></header><section>
+<div data-type="problem" id="fs-id1170572480550"><div class="os-problem-container">
+<p id="fs-id1170572369374">Evaluate the definite integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mn>0</mn><mn>2</mn></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>4</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mstyle><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mn>0</mn><mn>2</mn></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>4</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mstyle><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div></div>
+</section></div>
+</div></section></div>
+</section>
+<div class="os-eos os-section-exercises-container" data-uuid-key=".section-exercises"><h3 data-type="document-title">
+<span class="os-text">Section 5.7 Exercises</span>
+</h3>
+<section class="section-exercises" data-depth="1" id="fs-id1170572307264">
+<p id="fs-id1170572180184">In the following exercises, evaluate each integral in terms of an inverse trigonometric function.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572180188"><header></header><section>
+<div data-type="problem" id="fs-id1170572180190">
+<a aria-label="Go to 391" class="os-number" data-page-fragment="fs-id1170572180188-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">391</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572180192">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572369231"><header></header><section>
+<div data-type="problem" id="fs-id1170572369233">
+<span class="os-number">392</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572369235">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mn>−1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<msqrt>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</msqrt>
+</mrow>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mn>−1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<msqrt>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</msqrt>
+</mrow>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p></div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571609291"><header></header><section>
+<div data-type="problem" id="fs-id1170571660171">
+<a aria-label="Go to 393" class="os-number" data-page-fragment="fs-id1170571609291-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">393</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571660173">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+<mn>1</mn>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+<mn>1</mn>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p></div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571712219"><header></header><section>
+<div data-type="problem" id="fs-id1170571712221">
+<span class="os-number">394</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571712224">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+<mrow>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572625745"><header></header><section>
+<div data-type="problem" id="fs-id1170572625748">
+<a aria-label="Go to 395" class="os-number" data-page-fragment="fs-id1170572625745-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">395</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572509844">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mfrac>
+</mrow>
+<mrow>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<mo>|</mo>
+<mi>x</mi>
+<mo>|</mo>
+</mrow>
+<msqrt>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>1</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mn>2</mn>
+<msqrt>
+<mn>3</mn>
+</msqrt>
+</mfrac>
+</mrow>
+<mrow>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<mo>|</mo>
+<mi>x</mi>
+<mo>|</mo>
+</mrow>
+<msqrt>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>1</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572560653"><header></header><section>
+<div data-type="problem" id="fs-id1170572560655">
+<span class="os-number">396</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572560657">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+</mrow>
+<mrow>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<mo>|</mo>
+<mi>x</mi>
+<mo>|</mo>
+</mrow>
+<msqrt>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>1</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<msqrt>
+<mn>2</mn>
+</msqrt>
+</mrow>
+<mrow>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<mo>|</mo>
+<mi>x</mi>
+<mo>|</mo>
+</mrow>
+<msqrt>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>1</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170572333181">In the following exercises, find each indefinite integral, using appropriate substitutions.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572333184"><header></header><section>
+<div data-type="problem" id="fs-id1170572333187">
+<a aria-label="Go to 397" class="os-number" data-page-fragment="fs-id1170572333184-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">397</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572333189">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>9</mn>
+<mo>−</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>9</mn>
+<mo>−</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571543108"><header></header><section>
+<div data-type="problem" id="fs-id1170572163833">
+<span class="os-number">398</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572163835">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mn>16</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mn>16</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571630356"><header></header><section>
+<div data-type="problem" id="fs-id1170571630358">
+<a aria-label="Go to 399" class="os-number" data-page-fragment="fs-id1170571630356-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">399</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571630360">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>9</mn>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>9</mn>
+<mo>+</mo>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571719603"><header></header><section>
+<div data-type="problem" id="fs-id1170572425059">
+<span class="os-number">400</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572425061">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>25</mn>
+<mo>+</mo>
+<mn>16</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mn>25</mn>
+<mo>+</mo>
+<mn>16</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571712540"><header></header><section>
+<div data-type="problem" id="fs-id1170571712542">
+<a aria-label="Go to 401" class="os-number" data-page-fragment="fs-id1170571712540-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">401</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571712545">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<mo>|</mo>
+<mi>x</mi>
+<mo>|</mo>
+</mrow>
+<msqrt>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>9</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<mo>|</mo>
+<mi>x</mi>
+<mo>|</mo>
+</mrow>
+<msqrt>
+<mrow>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>9</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571609447"><header></header><section>
+<div data-type="problem" id="fs-id1170571609449">
+<span class="os-number">402</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571609451">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<mo>|</mo>
+<mi>x</mi>
+<mo>|</mo>
+</mrow>
+<msqrt>
+<mrow>
+<mn>4</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>16</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>x</mi>
+</mrow>
+<mrow>
+<mrow>
+<mo>|</mo>
+<mi>x</mi>
+<mo>|</mo>
+</mrow>
+<msqrt>
+<mrow>
+<mn>4</mn>
+<msup>
+<mi>x</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>16</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572274931"><header></header><section>
+<div data-type="problem" id="fs-id1170572274933">
+<a aria-label="Go to 403" class="os-number" data-page-fragment="fs-id1170572274931-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">403</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572274935">Explain the relationship <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mtext>−</mtext><msup><mrow><mtext>cos</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>+</mo><mi>C</mi><mo>=</mo><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>=</mo><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>+</mo><mi>C</mi><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mtext>−</mtext><msup><mrow><mtext>cos</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>+</mo><mi>C</mi><mo>=</mo><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>=</mo><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>+</mo><mi>C</mi><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> Is it true, in general, that <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mrow><mtext>cos</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>=</mo><mtext>−</mtext><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>?</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mrow><mtext>cos</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>=</mo><mtext>−</mtext><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>?</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572563040"><header></header><section>
+<div data-type="problem" id="fs-id1170572563042">
+<span class="os-number">404</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572563044">Explain the relationship <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mrow><mtext>sec</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>+</mo><mi>C</mi><mo>=</mo><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><mrow><mo>|</mo><mi>t</mi><mo>|</mo></mrow><msqrt><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac><mo>=</mo><mtext>−</mtext><msup><mrow><mtext>csc</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>+</mo><mi>C</mi><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mrow><mtext>sec</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>+</mo><mi>C</mi><mo>=</mo><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><mrow><mo>|</mo><mi>t</mi><mo>|</mo></mrow><msqrt><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac><mo>=</mo><mtext>−</mtext><msup><mrow><mtext>csc</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>+</mo><mi>C</mi><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> Is it true, in general, that <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mrow><mtext>sec</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>=</mo><mtext>−</mtext><msup><mrow><mtext>csc</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>?</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mrow><mtext>sec</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>=</mo><mtext>−</mtext><msup><mrow><mtext>csc</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>t</mi><mo>?</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571609258"><header></header><section>
+<div data-type="problem" id="fs-id1170571609260">
+<a aria-label="Go to 405" class="os-number" data-page-fragment="fs-id1170571609258-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">405</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571638317">Explain what is wrong with the following integral: <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mn>1</mn><mn>2</mn></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mn>1</mn><mn>2</mn></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572163878"><header></header><section>
+<div data-type="problem" id="fs-id1170572163880">
+<span class="os-number">406</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572163882">Explain what is wrong with the following integral: <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mrow><mn>−1</mn></mrow><mn>1</mn></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><mrow><mo>|</mo><mi>t</mi><mo>|</mo></mrow><msqrt><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mrow><mn>−1</mn></mrow><mn>1</mn></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><mrow><mo>|</mo><mi>t</mi><mo>|</mo></mrow><msqrt><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170571599292">In the following exercises, solve for the antiderivative <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mi>f</mi></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mi>f</mi></mrow></mstyle></mrow></annotation-xml></semantics></math></span> of <em data-effect="italics">f</em> with <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>C</mi><mo>=</mo><mn>0</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>C</mi><mo>=</mo><mn>0</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span> then use a calculator to graph <em data-effect="italics">f</em> and the antiderivative over the given interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>]</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>]</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span> Identify a value of <em data-effect="italics">C</em> such that adding <em data-effect="italics">C</em> to the antiderivative recovers the definite integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>F</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mi>a</mi><mi>x</mi></msubsup><mrow><mi>f</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mi>d</mi><mi>t</mi><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>F</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mi>a</mi><mi>x</mi></msubsup><mrow><mi>f</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mi>d</mi><mi>t</mi><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571699012"><header></header><section>
+<div data-type="problem" id="fs-id1170571699014">
+<a aria-label="Go to 407" class="os-number" data-page-fragment="fs-id1170571699012-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">407</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571699016"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><msqrt><mrow><mn>9</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><msqrt><mrow><mn>9</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−3</mn><mo>,</mo><mn>3</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−3</mn><mo>,</mo><mn>3</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571649965"><header></header><section>
+<div data-type="problem" id="fs-id1170571649967">
+<span class="os-number">408</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571649969"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>9</mn><mrow><mn>9</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>9</mn><mrow><mn>9</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−6</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−6</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572565396"><header></header><section>
+<div data-type="problem" id="fs-id1170572565398">
+<a aria-label="Go to 409" class="os-number" data-page-fragment="fs-id1170572565396-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">409</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572565400"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mrow><mn>4</mn><mo>+</mo><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mrow><mn>4</mn><mo>+</mo><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−6</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−6</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572368670"><header></header><section>
+<div data-type="problem" id="fs-id1170572368672">
+<span class="os-number">410</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572368675"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−6</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−6</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170571769590">In the following exercises, compute the antiderivative using appropriate substitutions.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571769593"><header></header><section>
+<div data-type="problem" id="fs-id1170571769595">
+<a aria-label="Go to 411" class="os-number" data-page-fragment="fs-id1170571769593-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">411</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571769597">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mtext>sin</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mtext>sin</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571636151"><header></header><section>
+<div data-type="problem" id="fs-id1170571636153">
+<span class="os-number">412</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571636155">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+<mrow>
+<msup>
+<mrow>
+<mtext>sin</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+<mrow>
+<msup>
+<mrow>
+<mtext>sin</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572628413"><header></header><section>
+<div data-type="problem" id="fs-id1170572628415">
+<a aria-label="Go to 413" class="os-number" data-page-fragment="fs-id1170572628413-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">413</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572628417">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>2</mn>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mn>4</mn>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>2</mn>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<mn>4</mn>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572331872"><header></header><section>
+<div data-type="problem" id="fs-id1170572331874">
+<span class="os-number">414</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572331876">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>t</mi>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>t</mi>
+<mn>4</mn>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>t</mi>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>t</mi>
+<mn>4</mn>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572558294"><header></header><section>
+<div data-type="problem" id="fs-id1170572558296">
+<a aria-label="Go to 415" class="os-number" data-page-fragment="fs-id1170572558294-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">415</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572558299">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>t</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mrow>
+<mo>|</mo>
+<mi>t</mi>
+<mo>|</mo>
+</mrow>
+<msqrt>
+<mrow>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>4</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mfrac>
+<mi>t</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mrow>
+<mo>|</mo>
+<mi>t</mi>
+<mo>|</mo>
+</mrow>
+<msqrt>
+<mrow>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+<mo>−</mo>
+<mn>4</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571733959"><header></header><section>
+<div data-type="problem" id="fs-id1170571733961">
+<span class="os-number">416</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571733963">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>t</mi>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+<msqrt>
+<mrow>
+<msup>
+<mi>t</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo>
+<mn>1</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>t</mi>
+<msup>
+<mrow>
+<mtext>sec</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+<msqrt>
+<mrow>
+<msup>
+<mi>t</mi>
+<mn>4</mn>
+</msup>
+<mo>−</mo>
+<mn>1</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170572510096">In the following exercises, use a calculator to graph the antiderivative <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mi>f</mi></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mi>f</mi></mrow></mstyle></mrow></annotation-xml></semantics></math></span> with <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>C</mi><mo>=</mo><mn>0</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>C</mi><mo>=</mo><mn>0</mn></mrow></annotation-xml></semantics></math></span> over the given interval <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>]</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>]</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span> Approximate a value of <em data-effect="italics">C</em>, if possible, such that adding <em data-effect="italics">C</em> to the antiderivative gives the same value as the definite integral <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>F</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mi>a</mi><mi>x</mi></msubsup><mrow><mi>f</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mi>d</mi><mi>t</mi><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>F</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mi>a</mi><mi>x</mi></msubsup><mrow><mi>f</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mi>d</mi><mi>t</mi><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span></p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572601262"><header></header><section>
+<div data-type="problem" id="fs-id1170572601264">
+<a aria-label="Go to 417" class="os-number" data-page-fragment="fs-id1170572601262-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">417</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572601266"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mi>x</mi><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow></msqrt></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mi>x</mi><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn></mrow></msqrt></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>2</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571679862"><header></header><section>
+<div data-type="problem" id="fs-id1170571679864">
+<span class="os-number">418</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571679866"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow><msqrt><mi>x</mi></msqrt></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mrow><mo>(</mo><mrow><mn>2</mn><mi>x</mi><mo>+</mo><mn>2</mn></mrow><mo>)</mo></mrow><msqrt><mi>x</mi></msqrt></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572249934"><header></header><section>
+<div data-type="problem" id="fs-id1170572249937">
+<a aria-label="Go to 419" class="os-number" data-page-fragment="fs-id1170572249934-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">419</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572249939"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>+</mo><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mrow><mo>(</mo><mrow><mtext>sin</mtext><mspace width="0.1em"></mspace><mi>x</mi><mo>+</mo><mi>x</mi><mspace width="0.1em"></mspace><mtext>cos</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><msup><mrow><mtext>sin</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−6</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−6</mn><mo>,</mo><mn>6</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571810858"><header></header><section>
+<div data-type="problem" id="fs-id1170571810860">
+<span class="os-number">420</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571810862"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mn>2</mn><msup><mi>e</mi><mrow><mn>−2</mn><mi>x</mi></mrow></msup></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mn>−4</mn><mi>x</mi></mrow></msup></mrow></msqrt></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mn>2</mn><msup><mi>e</mi><mrow><mn>−2</mn><mi>x</mi></mrow></msup></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mn>−4</mn><mi>x</mi></mrow></msup></mrow></msqrt></mrow></mfrac><mi>d</mi><mi>x</mi></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>2</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>2</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571697193"><header></header><section>
+<div data-type="problem" id="fs-id1170571697196">
+<a aria-label="Go to 421" class="os-number" data-page-fragment="fs-id1170571697193-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">421</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571697198"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mi>x</mi><mo>+</mo><mi>x</mi><msup><mrow><mtext>ln</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac></mrow></mrow></mstyle></mrow><mi>d</mi><mi>x</mi></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mn>1</mn><mrow><mi>x</mi><mo>+</mo><mi>x</mi><msup><mrow><mtext>ln</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac></mrow></mrow></mstyle></mrow><mi>d</mi><mi>x</mi></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>2</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>0</mn><mo>,</mo><mn>2</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571539209"><header></header><section>
+<div data-type="problem" id="fs-id1170571543184">
+<span class="os-number">422</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571543187"><strong>[T]</strong> <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>x</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mrow></mrow></mstyle></mrow><mi>d</mi><mi>x</mi></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>x</mi></mrow><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac></mrow></mrow></mstyle></mrow><mi>d</mi><mi>x</mi></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mn>−1</mn><mo>,</mo><mn>1</mn></mrow><mo>]</mo></mrow></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170572456361">In the following exercises, compute each integral using appropriate substitutions.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572456364"><header></header><section>
+<div data-type="problem" id="fs-id1170572456366">
+<a aria-label="Go to 423" class="os-number" data-page-fragment="fs-id1170572456364-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">423</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572456369">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>e</mi>
+<mi>t</mi>
+</msup>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>e</mi>
+<mrow>
+<mn>2</mn>
+<mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>e</mi>
+<mi>t</mi>
+</msup>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>e</mi>
+<mrow>
+<mn>2</mn>
+<mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571580944"><header></header><section>
+<div data-type="problem" id="fs-id1170571580946">
+<span class="os-number">424</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571580948">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>e</mi>
+<mi>t</mi>
+</msup>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>e</mi>
+<mrow>
+<mn>2</mn>
+<mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>e</mi>
+<mi>t</mi>
+</msup>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>e</mi>
+<mrow>
+<mn>2</mn>
+<mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572396478"><header></header><section>
+<div data-type="problem" id="fs-id1170572396480">
+<a aria-label="Go to 425" class="os-number" data-page-fragment="fs-id1170572396478-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">425</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572396482">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+<mrow>
+<mi>t</mi>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mrow>
+<mtext>ln</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>t</mi>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+<mrow>
+<mi>t</mi>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mrow>
+<mtext>ln</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>t</mi>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572396552"><header></header><section>
+<div data-type="problem" id="fs-id1170572396554">
+<span class="os-number">426</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572396556">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+<mrow>
+<mi>t</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mrow>
+<mtext>ln</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+<mrow>
+<mi>t</mi>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mrow>
+<mtext>ln</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+</mfrac>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572218636"><header></header><section>
+<div data-type="problem" id="fs-id1170572218638">
+<a aria-label="Go to 427" class="os-number" data-page-fragment="fs-id1170572218636-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">427</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572218640">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>2</mn>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mn>4</mn>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<mn>2</mn>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<mn>4</mn>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572386173"><header></header><section>
+<div data-type="problem" id="fs-id1170572386175">
+<span class="os-number">428</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572386177">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>e</mi>
+<mi>t</mi>
+</msup>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mi>e</mi>
+<mi>t</mi>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>e</mi>
+<mrow>
+<mn>2</mn>
+<mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>e</mi>
+<mi>t</mi>
+</msup>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mi>e</mi>
+<mi>t</mi>
+</msup>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>e</mi>
+<mrow>
+<mn>2</mn>
+<mi>t</mi>
+</mrow>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<p id="fs-id1170572643268">In the following exercises, compute each definite integral.</p>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572643272"><header></header><section>
+<div data-type="problem" id="fs-id1170572643274">
+<a aria-label="Go to 429" class="os-number" data-page-fragment="fs-id1170572643272-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">429</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572643276">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>tan</mtext>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>sin</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>tan</mtext>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>sin</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572373740"><header></header><section>
+<div data-type="problem" id="fs-id1170572373742">
+<span class="os-number">430</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572373744">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>4</mn>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>tan</mtext>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>4</mn>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>tan</mtext>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>cos</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>1</mn>
+<mo>−</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571710706"><header></header><section>
+<div data-type="problem" id="fs-id1170571710708">
+<a aria-label="Go to 431" class="os-number" data-page-fragment="fs-id1170571710706-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">431</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571710711">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>sin</mtext>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>sin</mtext>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572399032"><header></header><section>
+<div data-type="problem" id="fs-id1170572399034">
+<span class="os-number">432</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572399036">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>cos</mtext>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mstyle displaystyle="true">
+<mrow>
+<msubsup>
+<mo stretchy="true">∫</mo>
+<mn>0</mn>
+<mrow>
+<mn>1</mn>
+<mtext>/</mtext>
+<mn>2</mn>
+</mrow>
+</msubsup>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>cos</mtext>
+<mrow>
+<mo>(</mo>
+<mrow>
+<msup>
+<mrow>
+<mtext>tan</mtext>
+</mrow>
+<mrow>
+<mn>−1</mn>
+</mrow>
+</msup>
+<mi>t</mi>
+</mrow>
+<mo>)</mo>
+</mrow>
+</mrow>
+<mrow>
+<mn>1</mn>
+<mo>+</mo>
+<msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+<mi>d</mi>
+<mi>t</mi>
+</mrow>
+</mrow>
+</mstyle>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572415152"><header></header><section>
+<div data-type="problem" id="fs-id1170572415154">
+<a aria-label="Go to 433" class="os-number" data-page-fragment="fs-id1170572415152-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">433</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572415156">For <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>A</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>A</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo></mrow></annotation-xml></semantics></math></span> compute <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>I</mi><mrow><mo>(</mo><mi>A</mi><mo>)</mo></mrow><mo>=</mo><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mrow><mtext>−</mtext><mi>A</mi></mrow><mi>A</mi></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>I</mi><mrow><mo>(</mo><mi>A</mi><mo>)</mo></mrow><mo>=</mo><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mrow><mtext>−</mtext><mi>A</mi></mrow><mi>A</mi></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> and evaluate <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>A</mi><mo stretchy="false">→</mo><mo>∞</mo></mrow></munder><mi>I</mi><mrow><mo>(</mo><mi>A</mi><mo>)</mo></mrow><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>A</mi><mo stretchy="false">→</mo><mo>∞</mo></mrow></munder><mi>I</mi><mrow><mo>(</mo><mi>A</mi><mo>)</mo></mrow><mo>,</mo></mrow></annotation-xml></semantics></math></span> the area under the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow></annotation-xml></semantics></math></span> on <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mrow><mo>[</mo><mrow><mtext>−</mtext><mo>∞</mo><mo>,</mo><mo>∞</mo></mrow><mo>]</mo></mrow><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mrow><mo>[</mo><mrow><mtext>−</mtext><mo>∞</mo><mo>,</mo><mo>∞</mo></mrow><mo>]</mo></mrow><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572629160"><header></header><section>
+<div data-type="problem" id="fs-id1170572629162">
+<span class="os-number">434</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572629164">For <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mn>1</mn><mo>&lt;</mo><mi>B</mi><mo>&lt;</mo><mi>∞</mi><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mn>1</mn><mo>&lt;</mo><mi>B</mi><mo>&lt;</mo><mi>∞</mi><mo>,</mo></mrow></annotation-xml></semantics></math></span> compute <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>I</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mn>1</mn><mi>B</mi></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><mi>t</mi><msqrt><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>I</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mn>1</mn><mi>B</mi></msubsup><mrow><mfrac><mrow><mi>d</mi><mi>t</mi></mrow><mrow><mi>t</mi><msqrt><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> and evaluate <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>B</mi><mo stretchy="false">→</mo><mi>∞</mi></mrow></munder><mi>I</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo><mo>,</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><munder><mrow><mtext>lim</mtext></mrow><mrow><mi>B</mi><mo stretchy="false">→</mo><mi>∞</mi></mrow></munder><mi>I</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo><mo>,</mo></mrow></annotation-xml></semantics></math></span> the area under the graph of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mfrac><mn>1</mn><mrow><mi>t</mi><msqrt><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mfrac><mn>1</mn><mrow><mi>t</mi><msqrt><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></msqrt></mrow></mfrac></mrow></annotation-xml></semantics></math></span> over <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mi>∞</mi><mo stretchy="false">)</mo><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>,</mo><mi>∞</mi><mo stretchy="false">)</mo><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170572569940"><header></header><section>
+<div data-type="problem" id="fs-id1170572569942">
+<a aria-label="Go to 435" class="os-number" data-page-fragment="fs-id1170572569940-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">435</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572569944">Use the substitution <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>u</mi><mo>=</mo><msqrt><mn>2</mn></msqrt><mspace width="0.2em"></mspace><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>u</mi><mo>=</mo><msqrt><mn>2</mn></msqrt><mspace width="0.2em"></mspace><mtext>cot</mtext><mspace width="0.1em"></mspace><mi>x</mi></mrow></annotation-xml></semantics></math></span> and the identity <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mn>1</mn><mo>+</mo><msup><mrow><mtext>cot</mtext></mrow><mn>2</mn></msup><mi>x</mi><mo>=</mo><msup><mrow><mtext>csc</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mn>1</mn><mo>+</mo><msup><mrow><mtext>cot</mtext></mrow><mn>2</mn></msup><mi>x</mi><mo>=</mo><msup><mrow><mtext>csc</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></annotation-xml></semantics></math></span> to evaluate <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mrow><mtext>cos</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><mo stretchy="true">∫</mo><mrow><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mn>1</mn><mo>+</mo><msup><mrow><mtext>cos</mtext></mrow><mn>2</mn></msup><mi>x</mi></mrow></mfrac><mo>.</mo></mrow></mrow></mstyle></mrow></annotation-xml></semantics></math></span> (<em data-effect="italics">Hint:</em> Multiply the top and bottom of the integrand by <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><msup><mrow><mtext>csc</mtext></mrow><mn>2</mn></msup><mi>x</mi><mo>.</mo><mtext>)</mtext></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><msup><mrow><mtext>csc</mtext></mrow><mn>2</mn></msup><mi>x</mi><mo>.</mo><mtext>)</mtext></mrow></annotation-xml></semantics></math></span></p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170572310020"><header></header><section>
+<div data-type="problem" id="fs-id1170572310022">
+<span class="os-number">436</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170572310024"><strong>[T]</strong> Approximate the points at which the graphs of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mrow><mn>−3</mn><mtext>/</mtext><mn>2</mn></mrow></msup></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>=</mo><msup><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mn>4</mn><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mrow><mn>−3</mn><mtext>/</mtext><mn>2</mn></mrow></msup></mrow></annotation-xml></semantics></math></span> intersect to four decimal places, and approximate the area between their graphs to three decimal places.</p>
+</div>
+</div>
+</section></div>
+<div class="os-hasSolution" data-type="exercise" id="fs-id1170571613771"><header></header><section>
+<div data-type="problem" id="fs-id1170571613774">
+<a aria-label="Go to 437" class="os-number" data-page-fragment="fs-id1170571613771-solution" data-page-slug="chapter-5" data-page-uuid="ef79875c-6cea-55f7-8864-af5f8f593b5a" href="https://openstax.org/books/calculus-volume-1/pages/chapter-5">437</a><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571613776"><strong>[T]</strong> Approximate the points at which the graphs of <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow></annotation-xml></semantics></math></span> and <span class="os-math-in-para"><math display="inline"><semantics><mrow><msup><mrow><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>)</mo></mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup></mrow><annotation-xml encoding="MathML-Content"><msup><mrow><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo>(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn><mo>)</mo></mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup></annotation-xml></semantics></math></span> intersect to four decimal places, and approximate the area between their graphs to three decimal places.</p>
+</div>
+</div>
+</section></div>
+<div data-type="exercise" id="fs-id1170571661806"><header></header><section>
+<div data-type="problem" id="fs-id1170571661808">
+<span class="os-number">438</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<p id="fs-id1170571661810">Use the following graph to prove that <span class="os-math-in-para"><math display="inline"><semantics><mrow><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mn>0</mn><mi>x</mi></msubsup><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></msqrt><mi>d</mi><mi>t</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>x</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mspace width="0.05em"></mspace><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>x</mi></mrow></mrow></mstyle><mo>.</mo></mrow></mrow><annotation-xml encoding="MathML-Content"><mrow><mstyle displaystyle="true"><mrow><msubsup><mo stretchy="true">∫</mo><mn>0</mn><mi>x</mi></msubsup><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></msqrt><mi>d</mi><mi>t</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>x</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mspace width="0.05em"></mspace><msup><mrow><mtext>sin</mtext></mrow><mrow><mn>−1</mn></mrow></msup><mi>x</mi></mrow></mrow></mstyle><mo>.</mo></mrow></annotation-xml></semantics></math></span></p>
+<p id="fs-id1170572331306"><span data-type="newline"><br/></span>
+</p><span data-alt="A diagram containing two shapes, a wedge from a circle shaded in blue on top of a triangle shaded in brown. The triangle’s hypotenuse is one of the radii edges of the wedge of the circle and is 1 unit long. There is a dotted red line forming a rectangle out of part of the wedge and the triangle, with the hypotenuse of the triangle as the diagonal of the rectangle. The curve of the circle is described by the equation sqrt(1-x^2)." data-type="media" id="fs-id1170572331317">
+<img alt="A diagram containing two shapes, a wedge from a circle shaded in blue on top of a triangle shaded in brown. The triangle’s hypotenuse is one of the radii edges of the wedge of the circle and is 1 unit long. There is a dotted red line forming a rectangle out of part of the wedge and the triangle, with the hypotenuse of the triangle as the diagonal of the rectangle. The curve of the circle is described by the equation sqrt(1-x^2)." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/ca31b9b7b697cc80c5631bd822ae87dbd1ebffc6" height="255" loading="lazy" src="7b4f4c01bfe4e473df490fe7.webp" width="200"/>
+</span>
+</div>
+</div>
+</section></div>
+</section></div>
+</div></article><footer><p>Adapted from OpenStax, Calculus Volume 1, 5.7 Integrals Resulting in Inverse Trigonometric Functions. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/calculus-volume-1/pages/5-7-integrals-resulting-in-inverse-trigonometric-functions">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

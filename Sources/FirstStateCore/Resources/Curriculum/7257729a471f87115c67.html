@@ -1,0 +1,817 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_bd5b0c24-7512-4a08-9e41-8596a670a97f"><h2 data-rex-keep="true" data-type="document-title" id="page_bd5b0c24-7512-4a08-9e41-8596a670a97f_titlecreatedbycookbook"><span class="os-number">4.4</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Newton's Third Law of Motion</span>
+</h2>
+<div class="learning-objectives ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm40024768"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Section Learning Objectives</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm8424352">By the end of this section, you will be able to do the following:</p>
+<ul id="fs-idm8100384">
+<li>Describe Newton’s third law, both verbally and mathematically</li>
+<li>Use Newton’s third law to solve problems</li>
+</ul>
+</div></section></div>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-idp1344656"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-idp75208960">The learning objectives in this section will help your students master the following standards:</p>
+<ul id="fs-idp67857824">
+<li>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The student is expected to:
+<ul id="fs-idm13986384"><li><span>(D)</span> <span>calculate the effect of forces on objects, including the law of inertia, the relationship between force and acceleration, and the nature of force pairs between objects.</span></li>
+</ul></li>
+</ul>
+</div></section></div>
+<section data-depth="1" id="keyterms"><h3 data-type="title">Section Key Terms</h3> <div class="os-table os-unstyled-container" id="fs-idm31350832"><div class="table-scroll"><table class="unnumbered unstyled section-key-terms" data-id="fs-idm31350832" data-label="" data-summary="The list of Key Terms includes: Newton's third law of motion, normal force, tension, and thrust." role="presentation"><tbody>
+<tr>
+<td>Newton’s third law of motion</td>
+<td>normal force</td>
+<td>tension</td>
+<td>thrust</td>
+</tr>
+</tbody></table></div></div></section>
+<section data-depth="1" id="fs-idp73502000"><h3 data-type="title">Describing Newton’s Third Law of Motion</h3>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-idp75564256"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-idp64100352"><span>[BL]</span><span>[OL]</span> Review Newton’s first and second laws.</p>
+<p id="fs-idp68482448"><span>[AL]</span> Start a discussion about action and reaction by giving examples.
+Introduce the concepts of systems and systems of interest. Explain how forces can be classified as internal or external to the system of interest. Give examples of systems. Ask students which forces are internal and which are external in each scenario.
+</p>
+</div></section></div>
+<p id="fs-idp30183856">If you have ever stubbed your toe, you have noticed that although your toe initiates the impact, the surface that you stub it on exerts a force back on your toe. Although the first thought that crosses your mind is probably “ouch, that hurt” rather than “this is a great example of Newton’s third law,” both statements are true.</p>
+<p id="fs-idp62593200">This is exactly what happens whenever one object exerts a force on another—each object experiences a force that is the same strength as the force acting on the other object but that acts in the opposite direction. Everyday experiences, such as stubbing a toe or throwing a ball, are all perfect examples of Newton’s third law in action.</p>
+<p id="fs-idm14932656"><span data-type="term" group-by="N" id="term-00001">Newton’s third law of motion</span> states that whenever a first object exerts a force on a second object, the first object experiences a force equal in magnitude but opposite in direction to the force that it exerts.</p>
+<p id="fs-idp73541968">Newton’s third law of motion tells us that forces always occur in pairs, and one object cannot exert a force on another without experiencing the same strength force in return. We sometimes refer to these force pairs as <em data-effect="italics">action-reaction</em> pairs, where the force exerted is the action, and the force experienced in return is the reaction (although which is which depends on your point of view). </p>
+<p id="fs-idp68039024">Newton’s third law is useful for figuring out which forces are external to a system. Recall that identifying external forces is important when setting up a problem, because the external forces must be added together to find the <span class="no-emphasis" data-type="term" group-by="n" id="term-00002">net force</span>.</p><p id="fs-idp5085584">We can see Newton’s third law at work by looking at how people move about. Consider a swimmer pushing off from the side of a pool, as illustrated in <a aria-label="View Figure 4.8" class="autogenerated-content" href="https://openstax.org/books/physics/pages/4-4-newtons-third-law-of-motion#Figure_04_04_swimmer">Figure 4.8</a>. She pushes against the pool wall with her feet and accelerates in the direction opposite to her push. The wall has thus exerted on the swimmer a force of equal magnitude but in the direction opposite that of her push. You might think that two forces of equal magnitude but that act in opposite directions would cancel, <em data-effect="italics">but they do not because they act on different systems.</em></p>
+<p id="fs-idm31221936">In this case, there are two different systems that we could choose to investigate: the swimmer or the wall. If we choose the swimmer to be the system of interest, as in the figure, then  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>wall on feet</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>wall on feet</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span>  is an external force on the swimmer and affects her motion. Because <span class="no-emphasis" data-type="term" group-by="a" id="term-00003">acceleration</span> is in the same direction as the <span class="no-emphasis" data-type="term" group-by="n" id="term-00004">net external force</span>, the swimmer moves in the direction of  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>wall on feet</mtext>
+</mrow>
+</msub>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>wall on feet</mtext>
+</mrow>
+</msub>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Because the swimmer is our system (or object of interest) and not the wall, we do not need to consider the force <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>feet on wall</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>feet on wall</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span> because it originates <em data-effect="italics">from</em> the swimmer rather than <em data-effect="italics">acting on</em> the swimmer. Therefore, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>feet on wall</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>feet on wall</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span> does not directly affect the motion of the system and does not cancel <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>wall on feet</mtext>
+</mrow>
+</msub>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mtext>F</mtext>
+<mrow>
+<mtext>wall on feet</mtext>
+</mrow>
+</msub>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> Note that the swimmer pushes in the direction opposite to the direction in which she wants to move.</p><div class="os-figure" id="Figure_04_04_swimmer"><figure class="ui-has-child-figcaption" data-id="Figure_04_04_swimmer"><span data-alt="A swimmer is underwater and is facing to the left. Her feet are on a wall and she is using her feet to get ready to push forward off the wall. She will accelerate in a direction opposite to the force of her feet pushing on the wall. This opposition is the result of Newton’s third law of motion, which dictates that the wall exerts a force on the swimmer that is equal in magnitude but that acts in the direction opposite to the force that the swimmer exerts on the wall. A free body diagram is shown to illustrate the force of the wall on the feet, the buoyancy force pushing upward on the girl, and the weight of the girl pushing downward." data-type="media" id="fs-idp78935376">
+<img alt="A swimmer is underwater and is facing to the left. Her feet are on a wall and she is using her feet to get ready to push forward off the wall. She will accelerate in a direction opposite to the force of her feet pushing on the wall. This opposition is the result of Newton’s third law of motion, which dictates that the wall exerts a force on the swimmer that is equal in magnitude but that acts in the direction opposite to the force that the swimmer exerts on the wall. A free body diagram is shown to illustrate the force of the wall on the feet, the buoyancy force pushing upward on the girl, and the weight of the girl pushing downward." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/a3f898f8fe15aa37f9fa6abb704f7eab7c6ac629" height="275" loading="lazy" src="e4bca9d96690924e0d2a6fb9.webp" width="731"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">4.8</span>
+<span class="os-divider"> </span>
+<span class="os-caption">When the swimmer exerts a force <math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>feet on wall</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>feet on wall</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math> on the wall, she accelerates in the direction opposite to that of her push. This means that the net external force on her is in the direction opposite to <math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>feet on wall</mtext>
+</mrow>
+</msub>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>feet on wall</mtext>
+</mrow>
+</msub>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math> This opposition is the result of Newton’s third law of motion, which dictates that the wall exerts a force <math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>wall on feet</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>wall on feet</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math> on the swimmer that is equal in magnitude but that acts in the direction opposite to the force that the swimmer exerts on the wall.</span>
+</figcaption></figure></div><p id="fs-idp73597328">Other examples of Newton’s third law are easy to find. As a teacher paces in front of a whiteboard, he exerts a force backward on the floor. The floor exerts a reaction force in the forward direction on the teacher that causes him to accelerate forward. Similarly, a car accelerates because the ground pushes forward on the car's wheels in reaction to the car's wheels pushing backward on the ground. You can see evidence of the wheels pushing backward when tires spin on a gravel road and throw rocks backward.</p>
+<p id="fs-idp80457040">Another example is the force of a baseball as it makes contact with the bat. Helicopters create lift by pushing air down, creating an upward reaction force. Birds fly by exerting force on air in the direction opposite that in which they wish to fly. For example, the wings of a bird force air downward and backward in order to get lift and move forward. An octopus propels itself forward in the water by ejecting water backward through a funnel in its body, which is similar to how a jet ski is propelled. In these examples, the octopus or jet ski push the water backward, and the water, in turn, pushes the octopus or jet ski forward.</p>
+</section>
+<section data-depth="1" id="fs-idp18501184"><h3 data-type="title">Applying Newton’s Third Law</h3>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-idm31795056"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-idp36233824"><span>[BL]</span> Review the concept of weight as a force.</p>
+<p id="fs-idp5428672"><span>[OL]</span> Ask students what happens when an object is dropped from a height. Why does it stop when it hits the ground? Introduce the term normal force.</p>
+<div class="teacher-demonstration ui-has-child-title" data-type="note" id="fs-idp59922928"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Demonstration</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm10562800"><span>[BL]</span><span>[OL]</span><span>[AL]</span> Demonstrate the concept of tension by using physical objects. Suspend an object such as an eraser from a peg by using a rubber band. Hang another rubber band beside the first but with no object attached. Ask students what the difference is between the two. What are the forces acting on the first peg? Explain how the rubber band (i.e., the connector) transmits force. Now ask students what the direction of the external forces acting on the connectoris. Also, ask what internal forces are acting on the connector. If you remove the eraser, in which direction will the rubber band move? This is the direction of the force the rubber band applied to the eraser.</p>
+</div></section></div>
+</div></section></div>
+<p id="fs-idp59478640">Forces are classified and given names based on their source, how they are transmitted, or their effects. In previous sections, we discussed the forces called <em data-effect="italics">push</em>, <em data-effect="italics">weight</em>, and <em data-effect="italics">friction</em>. In this section, applying Newton’s third law of motion will allow us to explore three more forces: the <span data-type="term" group-by="n" id="term-00005">normal force</span>, <span data-type="term" group-by="t" id="term-00006">tension</span>, and <span data-type="term" group-by="t" id="term-00007">thrust</span>. However, because we haven’t yet covered vectors in depth, we’ll only consider one-dimensional situations in this chapter. Another chapter will consider forces acting in two dimensions. As we will see, we often apply the third law in conjunction with the second law in order to analyze the forces.</p>
+<p id="fs-idm15080864">The <span class="no-emphasis" data-type="term" group-by="g" id="term-00008">gravitational</span> force (or <span class="no-emphasis" data-type="term" group-by="w" id="term-00009">weight</span>) acts on objects at all times and everywhere on Earth. We know from Newton’s second law that a <span class="no-emphasis" data-type="term" group-by="n" id="term-00010">net force</span> produces an acceleration; so, why is everything not in a constant state of freefall toward the center of Earth? The answer is the normal force. The normal force is the outward force that a surface applies to an object perpendicular to the surface, and it prevents the object from penetrating it. The normal force is a third law reaction force to the object’s force into the surface. In the case of an object at rest on a horizontal surface, it is the force needed to support the weight of that object. If an object on a flat surface is not accelerating, the net external force is zero and, as a consequence of Newton's second (not third!) law, the normal force has the same magnitude as the weight of the system but acts in the opposite direction. In equation form, we write that</p><div data-label="" data-type="equation" id="fs-idm31189056">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>N</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>N</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mo>.</mo>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">4.17</span>
+</div>
+</div>
+<p id="fs-idp24334256">Note that this equation is only true for a horizontal surface. This does not violate the third law since gravity and the normal force are not third law pairs.</p>
+<p id="fs-idp67863456">The word <em data-effect="italics">tension</em> comes from the Latin word meaning <em data-effect="italics">to stretch</em>. Tension is the force along the length of a flexible connector, such as a string, rope, chain, or cable. Regardless of the type of connector attached to the object of interest, one must remember that the connector can only pull (or <em data-effect="italics">exert tension</em>) in the direction <em data-effect="italics">parallel</em> to its length. Tension is a pull that acts parallel to the connector, and that acts in opposite directions at the two ends of the connector. This is possible because a flexible connector is simply a long series of action-reaction forces, except at the two ends where outside objects provide one member of the action-reaction forces.</p>
+<p id="fs-idm5482704">Consider a person holding a mass on a rope, as shown in <a aria-label="View Figure 4.9" class="autogenerated-content" href="https://openstax.org/books/physics/pages/4-4-newtons-third-law-of-motion#Figure_04_04_rope">Figure 4.9</a>.</p>
+<div class="os-figure" id="Figure_04_04_rope"><figure class="ui-has-child-figcaption" data-id="Figure_04_04_rope">
+<span data-alt="A hand is pulling downward on a rope with an object labeled m for mass attached to the bottom of the rope. A tension force vector from the hand points downward and another tension force vector from the object points upward. A weight force vector from the object points downward. The rope is the medium that transmits between the two objects' forces of equal magnitude but that act in opposite directions." data-type="media" id="fs-idp21617728">
+<img alt="A hand is pulling downward on a rope with an object labeled m for mass attached to the bottom of the rope. A tension force vector from the hand points downward and another tension force vector from the object points upward. A weight force vector from the object points downward. The rope is the medium that transmits between the two objects' forces of equal magnitude but that act in opposite directions." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/898117791d81b7a6b4bdad050ed28fa42a3042c5" height="509" loading="lazy" src="6362ee75298a885d07278f9f.webp" width="187"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">4.9</span>
+<span class="os-divider"> </span>
+<span class="os-caption">When a perfectly flexible connector (one requiring no force to bend it) such as a rope transmits a force <strong>T</strong>, this force must be parallel to the length of the rope, as shown. The pull that such a flexible connector exerts is a tension. The rope pulls at one end on the hand with equal magnitude force but in opposite directions to the hand’s pull. At the other end, it pulls on the mass with equal magnitude force and in the opposite direction to the mass’s pull. These are examples of Newton’s third law. If we neglect the weight of the rope, or if the system is at rest, Newton’s second law then leads to the forces at the two ends being equal.</span>
+</figcaption></figure></div>
+<p id="fs-idm12280880">Tension in the rope must equal the weight of the supported mass, as we can prove by using Newton’s second law. If the 5.00 kg mass in the figure is stationary, then its acceleration is zero, so <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mn>0.</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mn>0.</mn>
+</mrow></annotation-xml></semantics></math></span> The only external forces acting on the mass are its weight <strong>W</strong> and the tension <strong>T</strong> supplied by the rope. Summing the external forces to find the net force, we obtain</p>
+<div data-label="" data-type="equation" id="fs-idp4076592"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>−</mo><mstyle mathsize="normal" mathvariant="bold"><mi>W</mi></mstyle><mo>=</mo><mn>0</mn><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>−</mo><mstyle mathsize="normal" mathvariant="bold"><mi>W</mi></mstyle><mo>=</mo><mn>0</mn><mo>,</mo>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.18</span>
+</div>
+</div>
+<p id="fs-idp68649680">where <strong>T</strong> and <strong>W</strong> are the magnitudes of the tension and weight, respectively, and their signs indicate direction, with up being positive. By substituting <em data-effect="italics">m</em><strong>g</strong> for <strong>F</strong><sub>net</sub> and rearranging the equation, the tension equals the weight of the supported mass, just as you would expect</p>
+<div data-label="" data-type="equation" id="fs-idm13005664"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>W</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g.</mi></mstyle>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>W</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g.</mi></mstyle>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.19</span>
+</div>
+</div>
+<p id="fs-idp4750896">For a 5.00-kg mass (neglecting the mass of the rope), we see that </p>
+<div data-label="" data-type="equation" id="fs-idm4932496"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mo>=</mo><mo stretchy="false">(</mo><mn>5.00</mn><mspace width="0.3em"></mspace><mtext> kg)(9</mtext><msup>
+<mrow>
+<mtext>.80 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo stretchy="false">)</mo><mo>=</mo><mn>49.0</mn><mspace width="0.3em"></mspace><mtext> N</mtext><mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathsize="normal" mathvariant="bold"><mi>g</mi></mstyle><mo>=</mo><mo stretchy="false">(</mo><mn>5.00</mn><mspace width="0.3em"></mspace><mtext> kg)(9</mtext><msup>
+<mrow>
+<mtext>.80 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+<mo stretchy="false">)</mo><mo>=</mo><mn>49.0</mn><mspace width="0.3em"></mspace><mtext> N</mtext><mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.20</span>
+</div>
+</div>
+<p id="fs-idm18302416">Another example of Newton’s third law in action is thrust. Rockets move forward by expelling gas backward at a high velocity. This means that the rocket exerts a large force backward on the gas in the rocket combustion chamber, and the gas, in turn, exerts a large force forward on the rocket in response. This reaction force is called <em data-effect="italics">thrust</em>.</p>
+<div class="tips-for-success ui-has-child-title" data-type="note" id="fs-idp60554048"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Tips For Success</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idp4926240">A common misconception is that rockets propel themselves by pushing on the ground or on the air behind them. They actually work better in a vacuum, where they can expel exhaust gases more easily.</p>
+</div></section></div>
+<div class="links-to-physics ui-has-child-title" data-type="note" id="fs-idp60493840"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Links To Physics</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Math: Problem-Solving Strategy for Newton’s Laws of Motion</span>
+</h4>
+<p id="fs-idp30254272">The basics of problem solving, presented earlier in this text, are followed here with specific strategies for applying Newton’s laws of motion. These techniques also reinforce concepts that are useful in many other areas of physics.</p>
+<p id="fs-idp60895040">First, identify the physical principles involved. If the problem involves forces, then Newton’s laws of motion are involved, and it is important to draw a careful sketch of the situation. An example of a sketch is shown in <a aria-label="View Figure 4.10" class="autogenerated-content" href="https://openstax.org/books/physics/pages/4-4-newtons-third-law-of-motion#Figure_04_04_Tarzan">Figure 4.10</a>. Next, as in <a aria-label="View Figure 4.10" class="autogenerated-content" href="https://openstax.org/books/physics/pages/4-4-newtons-third-law-of-motion#Figure_04_04_Tarzan">Figure 4.10</a>, use vectors to represent all forces. Label the forces carefully, and make sure that their lengths are proportional to the magnitude of the forces and that the arrows point in the direction in which the forces act.</p>
+<div class="os-figure" id="Figure_04_04_Tarzan"><figure class="ui-has-child-figcaption" data-id="Figure_04_04_Tarzan"><span data-alt="Four diagrams are shown: a, b, c, and d. Diagram a shows a sketch of Tarzan hanging motionless from a vine. Diagram b shows the same sketch as diagram a, but includes force vectors. A tension force vector points upward from Tarzan's hands to show tension exerted on Tarzan by the vine. Another tension force vector points downward from Tarzan's hands to show the force exerted on the vine by Tarzan. A weight force vector points from Tarzan downward to show the force exerted on Tarzan by Earth’s gravity. All other forces, such as a nudge of a breeze, are assumed to be negligible. Diagram c shows a system of interest in the event that Tarzan’s mass is known and we are asked to find the tension in the vine. This diagram shows the same sketch as diagram b, but it does not include the tension force vector downward from Tarzan's hands to show the force exerted on the vine by Tarzan because this force does not act on the system of interest. It only acts on the outside world. Diagram d shows a free-body diagram with only the external forces acting on Tarzan, with force T, tension, pointing upward and equal to force w, weight, pointing downward." data-type="media" id="fs-idp45179584">
+<img alt="Four diagrams are shown: a, b, c, and d. Diagram a shows a sketch of Tarzan hanging motionless from a vine. Diagram b shows the same sketch as diagram a, but includes force vectors. A tension force vector points upward from Tarzan's hands to show tension exerted on Tarzan by the vine. Another tension force vector points downward from Tarzan's hands to show the force exerted on the vine by Tarzan. A weight force vector points from Tarzan downward to show the force exerted on Tarzan by Earth’s gravity. All other forces, such as a nudge of a breeze, are assumed to be negligible. Diagram c shows a system of interest in the event that Tarzan’s mass is known and we are asked to find the tension in the vine. This diagram shows the same sketch as diagram b, but it does not include the tension force vector downward from Tarzan's hands to show the force exerted on the vine by Tarzan because this force does not act on the system of interest. It only acts on the outside world. Diagram d shows a free-body diagram with only the external forces acting on Tarzan, with force T, tension, pointing upward and equal to force w, weight, pointing downward." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/8a06d072803f775f2593c4c258a44a95cb405567" height="494" loading="lazy" src="884fbe0d8cc0fbd9af1a2d14.webp" width="731"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">4.10</span>
+<span class="os-divider"> </span>
+<span class="os-caption">(a) A sketch of Tarzan hanging motionless from a vine. (b) Arrows are used to represent all forces. <strong>T</strong> is the tension exerted on Tarzan by the vine,  <math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mtext>T</mtext>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mtext>T</mtext>
+</msub>
+</mrow></annotation-xml></semantics></math>  is the force exerted on the vine by Tarzan, and <strong>W</strong> is Tarzan’s weight (i.e., the force exerted on Tarzan by Earth’s gravity). All other forces, such as a nudge of a breeze, are assumed to be negligible. (c) Suppose we are given Tarzan’s mass and asked to find the tension in the vine. We define the system of interest as shown and draw a free-body diagram, as shown in (d). <math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mtext>T</mtext>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mtext>T</mtext>
+</msub>
+</mrow></annotation-xml></semantics></math> is no longer shown because it does not act on the system of interest; rather, <math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mtext>T</mtext>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mtext>T</mtext>
+</msub>
+</mrow></annotation-xml></semantics></math> acts on the outside world. (d) The free-body diagram shows only the external forces acting on Tarzan. For these to sum to zero, we must have <math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>W</mi></mstyle><mi> </mi><mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>T</mi></mstyle><mo>=</mo><mstyle mathsize="normal" mathvariant="bold"><mi>W</mi></mstyle><mi> </mi><mtext>.</mtext>
+</mrow></annotation-xml></semantics></math> </span>
+</figcaption></figure></div><p id="fs-idp28715504">Next, make a list of knowns and unknowns and assign variable names to the quantities given in the problem. Figure out which variables need to be calculated; these are the unknowns. Now carefully define the system: which objects are of interest for the problem. This decision is important, because Newton’s second law involves only external forces. Once the system is identified, it’s possible to see which forces are external and which are internal (see <a aria-label="View Figure 4.10" class="autogenerated-content" href="https://openstax.org/books/physics/pages/4-4-newtons-third-law-of-motion#Figure_04_04_Tarzan">Figure 4.10</a>).</p>
+<p id="fs-idm14068592">If the system acts on an object outside the system, then you know that the outside object exerts a force of equal magnitude but in the opposite direction on the system.</p>
+<p id="fs-idm20343184">A diagram showing the system of interest and all the external forces acting on it is called a free-body diagram. Only external forces are shown on free-body diagrams, not acceleration or velocity. <a aria-label="View Figure 4.10" class="autogenerated-content" href="https://openstax.org/books/physics/pages/4-4-newtons-third-law-of-motion#Figure_04_04_Tarzan">Figure 4.10</a> shows a free-body diagram for the system of interest.</p>
+<p id="fs-idp24347664">After drawing a free-body diagram, apply Newton’s second law to solve the problem. This is done in <a aria-label="View Figure 4.10" class="autogenerated-content" href="https://openstax.org/books/physics/pages/4-4-newtons-third-law-of-motion#Figure_04_04_Tarzan">Figure 4.10</a> for the case of Tarzan hanging from a vine. When external forces are clearly identified in the free-body diagram, translate the forces into equation form and solve for the unknowns. Note that forces acting in opposite directions have opposite signs. By convention, forces acting downward or to the left are usually negative.</p>
+<div class="os-exercise grasp-check unnumbered ui-has-child-title" data-type="exercise" id="fs-idp69725840"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Grasp Check</span>
+</h3></header><section>
+<div data-type="problem" id="fs-idp61242528"><div class="os-problem-container">
+<!--<para id="fs-idp32889392">
+<link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex054"/>
+</para>-->
+<p id="fs-id1164566432162">If a problem has more than one system of interest, more than one free-body diagram is required to describe the external forces acting on the different systems.</p>
+<ol id="fs-id1164564728166" type="a">
+<li>True</li>
+<li>False</li>
+</ol>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="watch-physics ui-has-child-title" data-type="note" id="fs-idm10949600"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Watch Physics</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Newton’s Third Law of Motion</span>
+</h4>
+<p id="fs-idp13524336">This video explains Newton’s third law of motion through examples involving push, normal force, and thrust (the force that propels a rocket or a jet).</p>
+<div class="os-embed" data-alt="This link takes you to a lecture that explains Newton's third law of motion." data-type="media" id="fs-idm900720">
+<div class="os-has-iframe os-has-link" data-type="switch"><a aria-label="Go to Access multimedia content" class="os-is-link" data-media="print" href="http://openstax.org/books/physics/pages/4-4-newtons-third-law-of-motion" rel="noopener nofollow" target="_blank">Access multimedia content</a>
+</div>
+</div>
+<div class="os-exercise grasp-check unnumbered ui-has-child-title" data-type="exercise" id="fs-idm5491072"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Grasp Check</span>
+</h3></header><section>
+<div data-type="problem" id="fs-idm21754928"><div class="os-problem-container">
+<!--<para id="fs-idm15184448">
+<link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex055"/>
+</para>-->
+<p id="fs-id1164565167447">If the astronaut in the video wanted to move upward, in which direction should he throw the object? Why?</p>
+<ol id="fs-id1164564934365" type="a">
+<li>He should throw the object upward because according to Newton’s third law, the object will then exert a force on him in the same direction (i.e., upward).</li>
+<li>He should throw the object upward because according to Newton’s third law, the object will then exert a force on him in the opposite direction (i.e., downward).</li>
+<li>He should throw the object downward because according to Newton’s third law, the object will then exert a force on him in the opposite direction (i.e., upward).</li>
+<li>He should throw the object downward because according to Newton’s third law, the object will then exert a force on him in the same direction (i.e., downward).</li>
+</ol>
+</div></div>
+</section></div>
+</div></section></div><div class="worked-example ui-has-child-title" data-type="note" id="fs-idm40566592"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Worked Example</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">An Accelerating Equipment Cart</span>
+</h4><div class="04-ex056 unnumbered" data-label="" data-type="exercise" id="fs-idp12359984"><header></header><section>
+<div data-type="problem" id="fs-idp21799952"><div class="os-problem-container"><p id="fs-idm18481504">A physics teacher pushes a cart of demonstration equipment to a classroom, as in <a aria-label="View Figure 4.11" class="autogenerated-content" href="https://openstax.org/books/physics/pages/4-4-newtons-third-law-of-motion#Figure_04_04_teacher_img">Figure 4.11</a>. Her mass is 65.0 kg, the cart’s mass is 12.0 kg, and the equipment’s mass is 7.0 kg. To push the cart forward, the teacher’s foot applies a force of 150 N in the opposite direction (backward) on the floor. Calculate the acceleration produced by the teacher. The force of friction, which opposes the motion, is 24.0 N.</p>
+<div class="os-figure" id="Figure_04_04_teacher_img"><figure class="ui-has-child-figcaption" data-id="Figure_04_04_teacher_img">
+<span data-alt="A teacher is standing and facing to the right. She is pushing a cart with various items on it including books and boxes. The teacher and cart are labeled, &quot;System.&quot; A force vector labeled F teacher shows the force of the teacher's push on the cart and points to the right. A force vector of equal length labeled F cart show the force exerted by the cart and points to the left. A friction force vector at the bottom area of the cart points to the left. A force vector labeled F floor shows the force of the floor on the teacher's feet and points to the right. A force vector of equal length labeled F foot show the force exerted by teacher foot as she walks and points to the left. A free-body diagram of the system illustrates the friction force pointing to the left, the weight force pointing downward, the Newton force pointing upward, and the F floor force pointing to the right." data-type="media" id="fs-idp63282816">
+<img alt="A teacher is standing and facing to the right. She is pushing a cart with various items on it including books and boxes. The teacher and cart are labeled, &quot;System.&quot; A force vector labeled F teacher shows the force of the teacher's push on the cart and points to the right. A force vector of equal length labeled F cart show the force exerted by the cart and points to the left. A friction force vector at the bottom area of the cart points to the left. A force vector labeled F floor shows the force of the floor on the teacher's feet and points to the right. A force vector of equal length labeled F foot show the force exerted by teacher foot as she walks and points to the left. A free-body diagram of the system illustrates the friction force pointing to the left, the weight force pointing downward, the Newton force pointing upward, and the F floor force pointing to the right." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/aea20d7a7b36cc1cd540a65dcb5fa1d3fa09fbae" height="426" loading="lazy" src="6e97e28738be055b61d65bdd.webp" width="731"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">4.11</span>
+<span class="os-divider"> </span>
+<span class="os-caption">
+<!-- no-selfclose -->
+</span>
+</figcaption></figure></div>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167065940538"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Strategy</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm21167840">Because they accelerate together, we define the system to be the teacher, the cart, and the equipment. The teacher pushes backward with a force <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>foot</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>foot</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span> of 150 N. According to Newton’s third law, the floor exerts a forward force  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>floor</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>floor</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span> of 150 N on the system. Because all motion is horizontal, we can assume that no net force acts in the vertical direction, and the problem becomes one dimensional. As noted in the figure, the friction f opposes the motion and therefore acts opposite the direction of  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>floor</mtext>
+</mrow>
+</msub>
+<mo>.</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>floor</mtext>
+</mrow>
+</msub>
+<mo>.</mo>
+</mrow></annotation-xml></semantics></math></span> </p><p id="fs-idp71535232">We should not include the forces  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>teacher</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>teacher</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span>,  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>cart</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>cart</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span>, or  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>foot</mtext>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>foot</mtext>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span> because these are exerted <em data-effect="italics">by</em> the system, not <em data-effect="italics">on</em> the system. We find the net external force by adding together the external forces acting on the system (see the free-body diagram in the figure) and then use Newton’s second law to find the acceleration.</p></div></section></div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-label="" data-type="solution" id="fs-idp61035120">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><div class="os-solution-container"><div data-type="title">Solution</div>
+<p id="fs-idm36857376">Newton’s second law is</p>
+<div data-label="" data-type="equation" id="fs-idm40957840"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mi> </mi><mo>=</mo><mi> </mi><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow>
+<mi>m</mi>
+</mfrac>
+<mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mi> </mi><mo>=</mo><mi> </mi><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow>
+<mi>m</mi>
+</mfrac>
+<mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.21</span>
+</div>
+</div><p id="fs-idm32231440">The net external force on the system is the sum of the external forces: the force of the floor acting on the teacher, cart, and equipment (in the horizontal direction) and the force of friction. Because friction acts in the opposite direction, we assign it a negative value. Thus, for the net force, we obtain</p>
+<div data-label="" data-type="equation" id="fs-idm17057056"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mi> </mi><mo>=</mo><mi> </mi><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>floor</mtext>
+</mrow>
+</msub>
+<mo>−</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mtext> </mtext><mo>=</mo><mtext>150 N</mtext><mo>−</mo><mtext>24</mtext><mtext>.0 N</mtext><mo>=</mo><mtext>126 N.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+<mi> </mi><mo>=</mo><mi> </mi><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>floor</mtext>
+</mrow>
+</msub>
+<mo>−</mo><mstyle mathsize="normal" mathvariant="bold"><mi>f</mi></mstyle><mtext> </mtext><mo>=</mo><mtext>150 N</mtext><mo>−</mo><mtext>24</mtext><mtext>.0 N</mtext><mo>=</mo><mtext>126 N.</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.22</span>
+</div>
+</div><p id="fs-idp23566944">The mass of the system is the sum of the mass of the teacher, cart, and equipment.</p>
+<div data-label="" data-type="equation" id="fs-idm17969744"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>m</mi><mtext> = (65</mtext><mtext>.0 + 12</mtext><mtext>.0 + 7</mtext><mtext>.0) kg = 84 kg</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>m</mi><mtext> = (65</mtext><mtext>.0 + 12</mtext><mtext>.0 + 7</mtext><mtext>.0) kg = 84 kg</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">4.23</span>
+</div>
+</div><p id="fs-idp55490448">Insert these values of net F and <em data-effect="italics">m</em> into Newton’s second law to obtain the acceleration of the system.</p>
+<div data-label="" data-type="equation" id="fs-idp14220304">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow>
+<mi>m</mi>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mi>a</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>126 N</mtext>
+</mrow>
+<mrow>
+<mtext>84 kg</mtext>
+</mrow>
+</mfrac>
+<mo>=</mo><mtext>1</mtext><msup>
+<mrow>
+<mtext>.5 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable columnalign="left">
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle>
+<mrow>
+<mtext>net</mtext>
+</mrow>
+</msub>
+</mrow>
+<mi>m</mi>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr columnalign="left">
+<mtd columnalign="left">
+<mrow>
+<mi>a</mi><mo>=</mo><mfrac>
+<mrow>
+<mtext>126 N</mtext>
+</mrow>
+<mrow>
+<mtext>84 kg</mtext>
+</mrow>
+</mfrac>
+<mo>=</mo><mtext>1</mtext><msup>
+<mrow>
+<mtext>.5 m/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">4.24</span>
+</div>
+</div><div data-type="equation" id="fs-id1164564959355">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<msub>
+<mi>F</mi>
+<mn>1</mn>
+</msub>
+<mo>&lt;</mo><msub>
+<mi>F</mi>
+<mn>2</mn>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mi>F</mi>
+<mn>1</mn>
+</msub>
+<mo>&lt;</mo><msub>
+<mi>F</mi>
+<mn>2</mn>
+</msub>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">4.25</span>
+</div>
+</div></div></section>
+</details>
+<div data-type="commentary" id="fs-idm6518272"><div data-type="title">Discussion</div>
+<p id="fs-idm35244080">None of the forces between components of the system, such as between the teacher’s hands and the cart, contribute to the net external force because they are internal to the system. Another way to look at this is to note that the forces between components of a system cancel because they are equal in magnitude and opposite in direction. For example, the force exerted by the teacher on the cart is of equal magnitude but in the opposite direction of the force exerted by the cart on the teacher. In this case, both forces act on the same system, so they cancel. Defining the system was crucial to solving this problem.</p></div>
+</section></div></div></section></div></section>
+<section class="practice-problems" data-depth="1" id="fs-idm25655008"><h3 data-type="title">Practice Problems</h3><div data-type="exercise" id="fs-id1167065948876"><header></header><section>
+<div data-type="problem" id="fs-id1167065863396">
+<span class="os-number">14</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-id1167065733367"><link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex057"/></para>-->
+<p id="fs-id1164565062884">What is the equation for the normal force for a body with mass <em data-effect="italics">m</em> that is at rest on a horizontal surface?</p>
+<ol id="fs-id1164564986499" type="a">
+<li>N = <em data-effect="italics">m</em></li>
+<li>N = <em data-effect="italics">mg</em></li>
+<li>N = <em data-effect="italics">mv</em></li>
+<li>N = <em data-effect="italics">g</em></li>
+</ol>
+</div>
+</div></section></div>
+<div data-type="exercise" id="fs-id1167065820624"><header></header><section>
+<div data-type="problem" id="fs-idp17879680">
+<span class="os-number">15</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-idp30936416"><link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex058"/></para>-->
+<p id="fs-id1164562403300">An object with mass <em data-effect="italics">m</em> is at rest on the floor. What is the magnitude and direction of the normal force acting on it?</p>
+<ol id="fs-id1164566477334" type="a">
+<li>N = <em data-effect="italics">mv</em> in upward direction</li>
+<li>N = <em data-effect="italics">mg</em> in upward direction</li>
+<li>N = <em data-effect="italics">mv</em> in downward direction</li>
+<li>N = <em data-effect="italics">mg</em> in downward direction</li>
+</ol>
+</div>
+</div></section></div>
+</section>
+<section class="check-understanding" data-depth="1" id="fs-idm59636240"><h3 data-type="title">Check Your Understanding</h3>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-idm34267888"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-idm11630576">Use the questions in Check Your Understanding to assess whether students have mastered the learning objectives of this section. If students are struggling with a specific objective, the Check Your Understanding assessment will help identify which objective is causing the problem and direct students to the relevant content.</p>
+</div></section></div>
+<div class="os-exercise" data-type="exercise" id="fs-idp21612848"><header></header><section><div data-type="problem" id="fs-idm11874336">
+<span class="os-number">16</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-idp5417120"><link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex059"/></para>-->
+<p id="fs-id1164564929017">What is Newton’s third law of motion?</p>
+<ol id="fs-id1164560914017" type="a">
+<li>Whenever a first body exerts a force on a second body, the first body experiences a force that is twice the magnitude and acts in the direction of the applied force.</li>
+<li>Whenever a first body exerts a force on a second body, the first body experiences a force that is equal in magnitude and acts in the direction of the applied force.</li>
+<li>Whenever a first body exerts a force on a second body, the first body experiences a force that is twice the magnitude but acts in the direction opposite the direction of the applied force.</li>
+<li>Whenever a first body exerts a force on a second body, the first body experiences a force that is equal in magnitude but acts in the direction opposite the direction of the applied force.</li>
+</ol>
+</div>
+</div></section></div>
+<div class="os-exercise" data-type="exercise" id="fs-idm26069024"><header></header><section><div data-type="problem" id="fs-idm33945504">
+<span class="os-number">17</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-idp21755808"><link class="os-embed" url="#ost/api/ex/k12phys-ch04-ex060"/></para>-->
+<p id="fs-id1164561333004">Considering Newton’s third law, why don’t two equal and opposite forces cancel out each other?</p>
+<ol id="fs-id1164560861799" type="a">
+<li>Because the two forces act in the same direction</li>
+<li>Because the two forces have different magnitudes</li>
+<li>Because the two forces act on different systems</li>
+<li>Because the two forces act in perpendicular directions</li>
+</ol>
+</div>
+</div></section></div>
+</section>
+</div></article><footer><p>Adapted from OpenStax, Physics, 4.4 Newton&#x27;s Third Law of Motion. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/physics/pages/4-4-newtons-third-law-of-motion">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a></p></footer></body></html>

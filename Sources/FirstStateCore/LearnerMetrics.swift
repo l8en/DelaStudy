@@ -24,7 +24,7 @@ public enum LearnerMetrics {
         let uniqueAttempted = Set(snapshot.attempts.map(\.questionID)).count
         let uniqueCorrect = Set(snapshot.attempts.filter(\.isCorrect).map(\.questionID)).count
         let completedSessions = snapshot.sessions.filter { $0.completedAt != nil }.count
-        let xp = uniqueAttempted * 5 + uniqueCorrect * 15 + completedSessions * 10
+        let xp = uniqueAttempted * 5 + uniqueCorrect * 15 + completedSessions * 10 + StudyCurriculum.earnedXP(workspace: snapshot.workspace)
         let completedCourses = content.courses.filter { course in
             let states = MasteryEngine.progress(content: content, attempts: snapshot.attempts, courseID: course.id)
             return !states.isEmpty && states.allSatisfy { $0.status == .demonstrated }
@@ -53,16 +53,18 @@ public enum LearnerMetrics {
             return expected > 0 && attempts.count == expected && attempts.allSatisfy(\.isCorrect)
         }.count
         return [
-            AwardProgress(id: "first-session", title: "First Step", detail: "Complete your first lesson.", symbolName: "figure.walk.motion", current: completed.count, target: 1),
-            AwardProgress(id: "perfect-lens", title: "Crystal Clear", detail: "Finish a lesson with every answer correct.", symbolName: "sparkles", current: perfectSessions, target: 1),
+            AwardProgress(id: "first-session", title: "First Step", detail: "Complete your first foundation test.", symbolName: "figure.walk.motion", current: completed.count, target: 1),
+            AwardProgress(id: "perfect-lens", title: "Crystal Clear", detail: "Finish a foundation test with every answer correct.", symbolName: "sparkles", current: perfectSessions, target: 1),
             AwardProgress(id: "five-correct", title: "Quick Study", detail: "Answer five different questions correctly.", symbolName: "bolt.fill", current: correctQuestions, target: 5),
             AwardProgress(id: "explorer", title: "Course Explorer", detail: "Practice in two different courses.", symbolName: "safari.fill", current: practicedCourses, target: 2),
-            AwardProgress(id: "streak", title: "Three-Day Rhythm", detail: "Study on three consecutive days.", symbolName: "flame.fill", current: stats.streakDays, target: 3),
-            AwardProgress(id: "course-complete", title: "Course Complete", detail: "Demonstrate every lesson in a course.", symbolName: "trophy.fill", current: stats.completedCourses, target: 1),
+            AwardProgress(id: "streak", title: "Three-Day Rhythm", detail: "Complete practice on three consecutive days.", symbolName: "flame.fill", current: stats.streakDays, target: 3),
+            AwardProgress(id: "course-complete", title: "Foundation Scholar", detail: "Demonstrate every assessed foundation lesson in one course.", symbolName: "trophy.fill", current: stats.completedCourses, target: 1),
             AwardProgress(id: "five-lessons", title: "Study Sprint", detail: "Complete five lesson tests.", symbolName: "flag.checkered", current: completed.count, target: 5),
             AwardProgress(id: "three-subjects", title: "Renaissance Learner", detail: "Practice in three different subjects.", symbolName: "circles.hexagongrid.fill", current: practicedSubjects, target: 3),
             AwardProgress(id: "college-start", title: "Campus Ready", detail: "Begin a college-level course.", symbolName: "building.columns.fill", current: collegeCoursesStarted, target: 1),
-            AwardProgress(id: "high-school-course", title: "High School Scholar", detail: "Complete a high-school course.", symbolName: "graduationcap.fill", current: completedHighSchoolCourses, target: 1)
+            AwardProgress(id: "high-school-course", title: "High School Scholar", detail: "Demonstrate a high-school foundation module.", symbolName: "graduationcap.fill", current: completedHighSchoolCourses, target: 1),
+            AwardProgress(id: "unit-studies", title: "Field Scholar", detail: "Finish every reading and practice round in one unit.", symbolName: "book.closed.fill", current: content.courses.flatMap { StudyCurriculum.units(for: $0.id) }.filter { StudyCurriculum.completedCount(in: [$0], workspace: snapshot.workspace) == $0.activities.count }.count, target: 1),
+            AwardProgress(id: "full-study-path", title: "Thirty Steps", detail: "Study all thirty activities in a course. Self-reviewed, not a course credit.", symbolName: "books.vertical.fill", current: content.courses.filter { let units = StudyCurriculum.units(for: $0.id); return !units.isEmpty && StudyCurriculum.completedCount(in: units, workspace: snapshot.workspace) == units.flatMap(\.activities).count }.count, target: 1)
         ]
     }
 

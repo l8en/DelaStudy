@@ -1,0 +1,1988 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_1fdc29df-516a-4452-9b49-fe2e9de2a872"><h2 data-rex-keep="true" data-type="document-title" id="page_1fdc29df-516a-4452-9b49-fe2e9de2a872_titlecreatedbycookbook"><span class="os-number">8.1</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">A Single Population Mean using the Normal Distribution</span>
+</h2>
+<p id="eip-351">A confidence interval for a population mean, when the population standard deviation is known, is based on the conclusion of the Central Limit Theorem that the sampling distribution of the sample means follow an approximately normal distribution. Suppose that our sample has a mean of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mtext> = 10</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mtext> = 10</mtext>
+</mrow></annotation-xml></semantics></math></span> and we have constructed the 90% confidence interval (5, 15) where <em data-effect="italics">EBM</em> = 5. </p>
+<section data-depth="1" id="eip-548"><h3 data-type="title">Calculating the Confidence Interval</h3>
+<p id="eip-id1171249700620">To construct a confidence interval for a single unknown population mean <em data-effect="italics">μ</em>, <strong>where the population standard deviation is known</strong>, we need <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> as an estimate for <em data-effect="italics">μ</em> and we need the margin of error. Here, the margin of error (<em data-effect="italics">EBM</em>) is called the <span data-type="term" group-by="e" id="term-00001">error bound for a population mean</span> (abbreviated <strong><em data-effect="italics">EBM</em></strong>). The sample mean <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> is the <strong>point estimate</strong> of the unknown population mean <em data-effect="italics">μ</em>.</p>
+<p id="eip-660"><strong>The confidence interval estimate will have the form:</strong></p>
+<p id="fs-idm11177728">(point estimate - error bound, point estimate + error bound) or, in symbols,(<span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>–</mo><mi>E</mi><mi>B</mi><mi>M</mi><mo>,</mo><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mtext>+</mtext><mi>E</mi><mi>B</mi><mi>M</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>–</mo><mi>E</mi><mi>B</mi><mi>M</mi><mo>,</mo><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mtext>+</mtext><mi>E</mi><mi>B</mi><mi>M</mi>
+</mrow></annotation-xml></semantics></math></span>)</p><p id="eip-id1171253180187">The margin of error (<em data-effect="italics">EBM</em>) depends on the <span data-type="term" group-by="c" id="term-00002">confidence level</span> (abbreviated <strong><em data-effect="italics">CL</em></strong>). The confidence level is often considered the probability that the calculated confidence interval estimate will contain the true population parameter. However, it is more accurate to state that the confidence level is the percent of confidence intervals that contain the true population parameter when repeated samples are taken. Most often, it is the choice of the person constructing the confidence interval to choose a confidence level of 90% or higher because that person wants to be reasonably certain of their conclusions.</p>
+<p id="eip-id1171259743972">There is another probability called alpha (<em data-effect="italics">α</em>). <em data-effect="italics">α</em> is related to the confidence level, <em data-effect="italics">CL</em>. <em data-effect="italics">α</em> is the probability that the interval does not contain the unknown population parameter.
+    <span data-type="newline"><br/></span>Mathematically, <em data-effect="italics">α</em> + <em data-effect="italics">CL</em> = 1.</p>
+<div class="ui-has-child-title" data-type="example" id="eip-id1171253594561"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">8.1</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<ul data-labeled-item="true" id="eip-37">
+<li>Suppose we have collected data from a sample. We know the sample mean but we do not know the mean for the entire population.</li>
+<li>The sample mean is seven, and the error bound for the mean is 2.5.</li>
+</ul>
+<p id="eip-id1171253752196"><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> = 7 and <em data-effect="italics">EBM</em> = 2.5</p>
+<p id="eip-id1171253247744"> The confidence interval is (7 – 2.5, 7 + 2.5), and calculating the values gives (4.5, 9.5).</p>
+<p id="eip-id1171248980360">If the confidence level (<em data-effect="italics">CL</em>) is 95%, then we say that, "We estimate with 95% confidence that the true value of the population mean is between 4.5 and 9.5."</p>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp2956752"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">8.1</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="eip-273"><header></header><section><div data-type="problem" id="eip-404"><div class="os-problem-container">
+<p id="eip-488">Suppose we have data from a sample. The sample mean is 15, and the error bound for the mean is 3.2.</p>
+<p id="eip-idm56205568">What is the confidence interval estimate for the population mean?</p>
+</div></div>
+</section></div></div></section></div>
+<p id="eip-id1171249556158">A confidence interval for a population mean with a known standard deviation is based on the fact that the sample means follow an approximately normal distribution. Suppose that our sample has a mean of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>=</mo><mn>2</mn>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover><mo>=</mo><mn>2</mn></annotation-xml></semantics></math></span>, and we have constructed the 90% confidence interval (1.8, 2.2) where <em data-effect="italics">EBM</em> = 0.1.</p><p id="eip-id1171249132425">To get a 90% confidence interval, we must include the central 90% of the probability of the normal distribution. If we include the central 90%, we leave out a total of <em data-effect="italics">α</em> = 10% in both tails, or 5% in each tail, of the normal distribution.</p>
+<div class="os-figure" id="fs-idm23539888"><figure class="scaled-down ui-has-child-figcaption" data-id="fs-idm23539888"><span data-alt="This is a normal distribution curve. The peak of the curve coincides with the point 10 on the horizontal axis. The points 5 and 15 are labeled on the axis. Vertical lines are drawn from these points to the curve, and the region between the lines is shaded. The shaded region has area equal to 0.90." data-type="media" id="id1164459043434">
+<img alt="This is a normal distribution curve. The peak of the curve coincides with the point 10 on the horizontal axis. The points 5 and 15 are labeled on the axis. Vertical lines are drawn from these points to the curve, and the region between the lines is shaded. The shaded region has area equal to 0.90." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/313621a8fc0aea2a6d79db7e262f3663b963ff7a" height="716" loading="lazy" src="6daf925157bf3664b0db0303.webp" width="798"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">8.2</span>
+</figcaption></figure></div>
+<div class="unnumbered" data-type="equation" id="eq-00006"><div class="math-scroll"><math display="block"><semantics><mrow><mover accent="true"><mi>X</mi><mo>¯</mo></mover><mo> </mo><mo>±</mo><msub><mi>Z</mi><mrow><mi>a</mi><mo>/</mo><mn>2</mn></mrow></msub><mfenced><mfrac><mi>σ</mi><msqrt><mi>n</mi></msqrt></mfrac></mfenced><mspace linebreak="newline"></mspace><mrow><mo>=</mo><mo> </mo><mn>2</mn><mo>±</mo><mn>1</mn><mo>.</mo><mn>645</mn><mo>(</mo><mn>0</mn><mo>.</mo><mn>1</mn><mo>)</mo><mo> </mo><mspace linebreak="newline"></mspace><mo>=</mo><mo> </mo><mn>2</mn><mo>±</mo><mn>0</mn><mo>.</mo><mn>1645</mn></mrow><mspace linebreak="newline"></mspace><mn>1</mn><mo>.</mo><mn>8355</mn><mo>≤</mo><mi>μ</mi><mo>≤</mo><mn>2</mn><mo>.</mo><mn>1645</mn></mrow><annotation-xml encoding="MathML-Content"><mover accent="true"><mi>X</mi><mo>¯</mo></mover><mo> </mo><mo>±</mo><msub><mi>Z</mi><mrow><mi>a</mi><mo>/</mo><mn>2</mn></mrow></msub><mfenced><mfrac><mi>σ</mi><msqrt><mi>n</mi></msqrt></mfrac></mfenced><mspace linebreak="newline"></mspace><mrow><mo>=</mo><mo> </mo><mn>2</mn><mo>±</mo><mn>1</mn><mo>.</mo><mn>645</mn><mo>(</mo><mn>0</mn><mo>.</mo><mn>1</mn><mo>)</mo><mo> </mo><mspace linebreak="newline"></mspace><mo>=</mo><mo> </mo><mn>2</mn><mo>±</mo><mn>0</mn><mo>.</mo><mn>1645</mn></mrow><mspace linebreak="newline"></mspace><mn>1</mn><mo>.</mo><mn>8355</mn><mo>≤</mo><mi>μ</mi><mo>≤</mo><mn>2</mn><mo>.</mo><mn>1645</mn></annotation-xml></semantics></math></div></div>
+<p id="eip-id1171253598112">To capture the central 90%, we must go out 1.645 "standard deviations" on either side of the calculated sample mean. The value 1.645 is the <em data-effect="italics">z</em>-score from a standard normal probability distribution that puts an area of 0.90 in the center, an area of 0.05 in the far left tail, and an area of 0.05 in the far right tail.</p>
+<p id="eip-id1171249345209">It is important that the "standard deviation" used must be appropriate for the parameter we are estimating, so in this section we need to use the standard deviation that applies to sample means, which is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>. The fraction <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>, is commonly called the "standard error of the mean" in order to distinguish clearly the standard deviation for a mean from the population standard deviation <em data-effect="italics">σ</em>.</p>
+<div data-type="list" id="eip-id1171260540557"><div data-type="title"><strong>In summary, as a result of the central limit theorem:</strong></div><ul>
+<li><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math> is normally distributed, that is, <math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math> ~ <em data-effect="italics">N</em><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>μ</mi>
+<mi>X</mi>
+</msub>
+<mo>,</mo><mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>μ</mi>
+<mi>X</mi>
+</msub>
+<mo>,</mo><mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math>.</li>
+<li><strong>When the population standard deviation <em data-effect="italics">σ</em> is known, we use a normal distribution to calculate the error bound.</strong></li>
+</ul></div>
+<section data-depth="2" id="fs-idm57905968"><h4 data-type="title">Calculating the Confidence Interval</h4><p id="fs-idp100429424">To construct a confidence interval estimate for an unknown population mean, we need data from a random sample.  The steps to construct and interpret the confidence interval are:</p>
+<ul id="eip-id1171253322089">
+<li> Calculate the sample mean <math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math> from the sample data. Remember, in this section we already know the population standard deviation  <em data-effect="italics">σ</em>.</li>
+<li>Find the <em data-effect="italics">z</em>-score that corresponds to the confidence level.</li>
+<li>Calculate the error bound <em data-effect="italics">EBM</em>.</li>
+<li>Construct the confidence interval.</li>
+<li>Write a sentence that interprets the estimate in the context of the situation in the problem. (Explain what the confidence interval means, in the words of the problem.)</li>
+</ul>
+<p id="eip-id1171252935175">We will first examine each step in more detail, and then illustrate the process with some examples.</p>
+</section>
+<section data-depth="2" id="fs-idm60964192"><h4 data-type="title">Finding the <em data-effect="italics">z</em>-score for the Stated Confidence Level</h4><p id="fs-idp7628608">When we know the population standard deviation <em data-effect="italics">σ</em>, we use a standard normal distribution to calculate the error bound EBM and construct the confidence interval. We need to find the value of <em data-effect="italics">z</em> that puts an area equal to the confidence level (in decimal form) in the middle of the standard normal distribution <em data-effect="italics">Z</em> ~ <em data-effect="italics">N</em>(0, 1).</p>
+<p id="eip-id1171249080440">The confidence level, <em data-effect="italics">CL</em>, is the area in the middle of the standard normal distribution. <em data-effect="italics">CL</em> = 1 – <em data-effect="italics">α</em>, so <em data-effect="italics">α</em> is the area that is split equally between the two tails. Each of the tails contains an area equal to <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>.</p>
+<p id="eip-id1171266449435">The z-score that has an area to the right of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> is denoted by <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span>.</p>
+<p id="eip-id1171258387350">For example, when <em data-effect="italics">CL</em> = 0.95, <em data-effect="italics">α</em> = 0.05 and <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> = 0.025; we write <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span> = <em data-effect="italics">z</em><sub>0.025</sub>.</p>
+<p id="eip-id1171262711575">The area to the right of <em data-effect="italics">z</em><sub>0.025</sub> is 0.025 and the area to the left of <em data-effect="italics">z</em><sub>0.025</sub> is 1 – 0.025 = 0.975.</p>
+<p id="eip-id1171249206094"><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+<mtext> = </mtext><msub>
+<mi>z</mi>
+<mrow>
+<mn>0.</mn><mtext>025</mtext>
+</mrow>
+</msub>
+<mtext> = 1</mtext><mtext>.96</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+<mtext> = </mtext><msub>
+<mi>z</mi>
+<mrow>
+<mn>0.</mn><mtext>025</mtext>
+</mrow>
+</msub>
+<mtext> = 1</mtext><mtext>.96</mtext>
+</mrow></annotation-xml></semantics></math></span>, using a calculator, computer or a standard normal probability table.</p>
+<div class="statistics calculator ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm6917168"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Using the TI-83, 83+, 84, 84+ Calculator</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idp47831024"><code data-type="code">invNorm</code>(0.975, 0, 1) = 1.96</p>
+</div></section></div>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="eip-831"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">NOTE</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm49071376">Remember to use the area to the LEFT of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span>; in this chapter the last two inputs in the invNorm command are 0, 1, because you are using a standard normal distribution <em data-effect="italics">Z</em> ~ <em data-effect="italics">N</em>(0, 1).</p>
+</div></section></div>
+</section>
+<section data-depth="2" id="fs-idm103016896"><h4 data-type="title">Writing the Interpretation</h4><p id="fs-idp86836496">The interpretation should clearly state the confidence level (<em data-effect="italics">CL</em>), explain what population parameter is being estimated (here, a <strong>population mean</strong>), and state the confidence interval (both endpoints). "We estimate with ___% confidence that the true population mean (include the context of the problem) is between ___ and ___ (include appropriate units)."</p>
+<div class="ui-has-child-title" data-type="example" id="eip-id1171257291379"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">8.2</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><p id="eip-id1171249543224">Suppose scores on exams in statistics are normally distributed with an unknown population mean and a population standard deviation of three points. A random sample of 36 scores is taken and gives a sample mean (sample mean score) of 68. Find a confidence interval estimate for the population mean exam score (the mean score on all exams).</p>
+<div class="unnumbered has-problem-title" data-type="exercise" id="eip-id1171264272125"><header></header><section><div data-type="problem" id="id1164450499992"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="eip-id1171254920718">Find a 90% confidence interval for the true (population) mean of statistics exam scores.
+
+    </p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id1164449849393">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<ul id="eip-id1170665387344"><li>You can use technology to calculate the confidence interval directly.</li>
+<li>The first solution is shown step-by-step.</li>
+<li>The second solution uses the TI-83, 83+, and 84+ calculators.<span data-type="newline"><br/></span></li>
+</ul>
+<div class="os-figure" id="fs-idp113086400"><figure class="scaled-down ui-has-child-figcaption" data-id="fs-idp113086400"><span data-alt="90% confidence interval with two normal distributions. Top shows x-bar (66.63 to 69.37) centered at 68. Bottom shows Z-scores (+/-1.645) defining 90% area; each tail is alpha/2 = 0.05." data-type="media" id="id1164466599913">
+<img alt="90% confidence interval with two normal distributions. Top shows x-bar (66.63 to 69.37) centered at 68. Bottom shows Z-scores (+/-1.645) defining 90% area; each tail is alpha/2 = 0.05." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/e9dafce9b91ab40d3068f894f7246bc5744ea0da" height="716" loading="lazy" src="a6e372458cfd972680e335b8.webp" width="724"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">8.3</span>
+</figcaption></figure></div>
+<p id="para-00003">The solution is shown step by step:</p>
+<p id="para-00004">The formula for a confidence interval for an unknown population mean assuming we know the population standard deviation is:</p>
+<div class="unnumbered" data-type="equation" id="eq-00001">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mover>
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+<mo>-</mo>
+<msub>
+<mi>Z</mi>
+<mi>α</mi>
+</msub>
+<mfenced>
+<mfrac>
+<mi>σ</mi>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mfrac>
+</mfenced>
+<mo>≤</mo>
+<mi>μ</mi>
+<mo>≤</mo>
+<mover>
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+<mo>+</mo>
+<msub>
+<mi>Z</mi>
+<mi>α</mi>
+</msub>
+<mo>(</mo>
+<mfrac>
+<mi>σ</mi>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mover>
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+<mo>-</mo>
+<msub>
+<mi>Z</mi>
+<mi>α</mi>
+</msub>
+<mfenced>
+<mfrac>
+<mi>σ</mi>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mfrac>
+</mfenced>
+<mo>≤</mo>
+<mi>μ</mi>
+<mo>≤</mo>
+<mover>
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+<mo>+</mo>
+<msub>
+<mi>Z</mi>
+<mi>α</mi>
+</msub>
+<mo>(</mo>
+<mfrac>
+<mi>σ</mi>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mfrac>
+<mo>)</mo>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="para-00005">For a 90% confidence interval, visualize an area of 0.90 centered under the normal curve (See <a aria-label="View Figure 8.3" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution#fs-idp113086400">Figure 8.3</a>). The remaining area for the two tails of the normal distribution is then 0.10, which indicates that the area in the left tail is one-half of 0.10, which is 0.05. The corresponding z-score that cuts off an area of 0.05 in the left tail is 1.645.</p>
+<p id="para-00006">In this example we are given that the population standard deviation <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>σ</mi><mo> </mo><mo>=</mo><mo> </mo><mn>3</mn></mrow><annotation-xml encoding="MathML-Content"><mi>σ</mi><mo> </mo><mo>=</mo><mo> </mo><mn>3</mn></annotation-xml></semantics></math></span>.</p>
+<p id="para-00007">We are also given that the sample size n = 36 and the sample mean <span class="os-math-in-para"><math display="inline"><semantics><mrow><mover><mi>X</mi><mo>¯</mo></mover><mo>=</mo><mn>68</mn></mrow><annotation-xml encoding="MathML-Content"><mover><mi>X</mi><mo>¯</mo></mover><mo>=</mo><mn>68</mn></annotation-xml></semantics></math></span>.</p>
+<p id="para-00008">Substituting these values in the confidence interval formula results in the following:</p>
+<div class="unnumbered" data-type="equation" id="eq-00002">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mover>
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+<mo>-</mo>
+<msub>
+<mi>Z</mi>
+<mi>α</mi>
+</msub>
+<mfenced>
+<mfrac>
+<mi>σ</mi>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mfrac>
+</mfenced>
+<mo>≤</mo>
+<mi>μ</mi>
+<mo>≤</mo>
+<mover>
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+<mo>+</mo>
+<msub>
+<mi>Z</mi>
+<mi>α</mi>
+</msub>
+<mo>(</mo>
+<mfrac>
+<mi>σ</mi>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mfrac>
+<mo>)</mo>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mover>
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+<mo>-</mo>
+<msub>
+<mi>Z</mi>
+<mi>α</mi>
+</msub>
+<mfenced>
+<mfrac>
+<mi>σ</mi>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mfrac>
+</mfenced>
+<mo>≤</mo>
+<mi>μ</mi>
+<mo>≤</mo>
+<mover>
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+<mo>+</mo>
+<msub>
+<mi>Z</mi>
+<mi>α</mi>
+</msub>
+<mo>(</mo>
+<mfrac>
+<mi>σ</mi>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mfrac>
+<mo>)</mo>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<div class="unnumbered" data-type="equation" id="eq-00003">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mn>68</mn>
+<mo>-</mo>
+<mn>1</mn>
+<mo>.</mo>
+<mn>645</mn>
+<mfenced>
+<mfrac>
+<mn>3</mn>
+<msqrt>
+<mn>36</mn>
+</msqrt>
+</mfrac>
+</mfenced>
+<mo>≤</mo>
+<mi>μ</mi>
+<mo>≤</mo>
+<mn>68</mn>
+<mo>+</mo>
+<mn>1</mn>
+<mo>.</mo>
+<mn>645</mn>
+<mfenced>
+<mfrac>
+<mn>3</mn>
+<msqrt>
+<mn>36</mn>
+</msqrt>
+</mfrac>
+</mfenced>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mn>68</mn>
+<mo>-</mo>
+<mn>1</mn>
+<mo>.</mo>
+<mn>645</mn>
+<mfenced>
+<mfrac>
+<mn>3</mn>
+<msqrt>
+<mn>36</mn>
+</msqrt>
+</mfrac>
+</mfenced>
+<mo>≤</mo>
+<mi>μ</mi>
+<mo>≤</mo>
+<mn>68</mn>
+<mo>+</mo>
+<mn>1</mn>
+<mo>.</mo>
+<mn>645</mn>
+<mfenced>
+<mfrac>
+<mn>3</mn>
+<msqrt>
+<mn>36</mn>
+</msqrt>
+</mfrac>
+</mfenced>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<div class="unnumbered" data-type="equation" id="eq-00004">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mn>68</mn>
+<mo>-</mo>
+<mn>0</mn>
+<mo>.</mo>
+<mn>8225</mn>
+<mo>≤</mo>
+<mo> </mo>
+<mi>μ</mi>
+<mo>≤</mo>
+<mn>68</mn>
+<mo>+</mo>
+<mn>0</mn>
+<mo>.</mo>
+<mn>8225</mn>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mn>68</mn>
+<mo>-</mo>
+<mn>0</mn>
+<mo>.</mo>
+<mn>8225</mn>
+<mo>≤</mo>
+<mo> </mo>
+<mi>μ</mi>
+<mo>≤</mo>
+<mn>68</mn>
+<mo>+</mo>
+<mn>0</mn>
+<mo>.</mo>
+<mn>8225</mn>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<div class="unnumbered" data-type="equation" id="eq-00005">
+<div class="math-scroll"><math display="block">
+<semantics>
+<mrow>
+<mn>67</mn>
+<mo>.</mo>
+<mn>1775</mn>
+<mo>≤</mo>
+<mo> </mo>
+<mi>μ</mi>
+<mo>≤</mo>
+<mn>68</mn>
+<mo>.</mo>
+<mn>8225</mn>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mn>67</mn>
+<mo>.</mo>
+<mn>1775</mn>
+<mo>≤</mo>
+<mo> </mo>
+<mi>μ</mi>
+<mo>≤</mo>
+<mn>68</mn>
+<mo>.</mo>
+<mn>8225</mn>
+</annotation-xml>
+</semantics>
+</math></div>
+</div>
+<p id="para-00009">We estimate with 90% confidence that the true population mean exam score for all statistics students is between 67.18 and 68.82.</p>
+</div>
+</section>
+</details>
+<details aria-label="Show/Hide Solution" data-type="solution" id="eip-idp129183584">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="eip-idm50696864">
+</p><div class="statistics calculator ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp129429152"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Using the TI-83, 83+, 84, 84+ Calculator</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="eip-542">Press <code data-type="code">STAT</code> and arrow over to <code data-type="code">TESTS</code>.
+    <span data-type="newline"><br/></span>Arrow down to <code data-type="code">7:ZInterval</code>.
+    <span data-type="newline"><br/></span>Press <code data-type="code">ENTER</code>.
+    <span data-type="newline"><br/></span>Arrow to <code data-type="code">Stats</code> and press <code data-type="code">ENTER</code>.
+    <span data-type="newline"><br/></span>Arrow down and enter three for <em data-effect="italics">σ</em>, 68 for <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span>, 36 for <em data-effect="italics">n</em>, and .90 for <code data-type="code">C-level</code>.
+    <span data-type="newline"><br/></span>Arrow down to <code data-type="code">Calculate</code> and press <code data-type="code">ENTER</code>.
+    <span data-type="newline"><br/></span>The confidence interval is (to three decimal places)(67.178, 68.822).</p>
+</div></section></div>
+<p id="eip-id1171264042411">Explanation of 90% Confidence Level:
+    Ninety percent of all confidence intervals constructed in this way contain the true mean statistics exam score. For example, if we constructed 100 of these confidence intervals, we would expect 90 of them to contain the true population mean exam score.</p>
+</div>
+</section>
+</details>
+</section></div></div></section></div><div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm85249264"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">8.2</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="eip-idm104826624">Suppose average pizza delivery times are normally distributed with an unknown population mean and a population standard deviation of six minutes. A random sample of 28 pizza delivery restaurants is taken and has a sample mean delivery time of 36 minutes.</p>
+<div class="unnumbered os-hasSolution" data-type="exercise" id="eip-24"><header></header><section>
+<div data-type="problem" id="eip-140"><div class="os-problem-container">
+<p id="eip-887">Find a 90% confidence interval estimate for the population mean delivery time.</p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="example3"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">8.3</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><p id="eip-431">The Specific Absorption Rate (SAR) for a cell phone measures the amount of radio frequency (RF) energy absorbed by the user’s body when using the handset. Every cell phone emits RF energy. Different phone models have different SAR measures. To receive certification from the Federal Communications Commission (FCC) for sale in the United States, the SAR level for a cell phone must be no more than 1.6 watts per kilogram. <a aria-label="View Table 8.1" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution#M02_CH08-tbl001">Table 8.1</a> shows the highest SAR level for a random selection of cell phone models as measured by the FCC.</p>
+<div class="os-table" id="M02_CH08-tbl001"><div class="table-scroll"><table data-id="M02_CH08-tbl001" data-summary=".."><thead>
+<tr>
+<th colspan="3" scope="colgroup">SAR Data for a sample of 30 cell phones</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1.11</td><td>1.36</td><td>0.74</td>
+</tr>
+<tr>
+<td>1.48</td><td>1.34</td><td>0.5</td>
+</tr>
+<tr>
+<td>1.43</td><td>1.18</td><td>0.4</td>
+</tr>
+<tr>
+<td>1.3</td><td>1.3</td><td>0.867</td>
+</tr>
+<tr>
+<td>1.09</td><td>1.26</td><td>0.68</td>
+</tr>
+<tr>
+<td>0.455</td><td>1.29</td><td>0.51</td>
+</tr>
+<tr>
+<td>1.41</td><td>0.36</td><td>1.13</td>
+</tr>
+<tr>
+<td>0.82</td><td>0.52</td><td>0.3</td>
+</tr>
+<tr>
+<td>0.78</td><td>1.6</td><td>1.48</td>
+</tr>
+<tr>
+<td>1.25</td><td>1.39</td><td>1.38</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">8.1</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div class="unnumbered has-problem-title" data-type="exercise" id="eip-377"><header></header><section><div data-type="problem" id="eip-199"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="eip-289">Find a 98% confidence interval for the true (population) mean of the Specific Absorption Rates (SARs) for cell phones. Assume that the population standard deviation is <em data-effect="italics">σ</em> = 0.337.</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="eip-311">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="eip-303">To find the confidence interval, start by finding the point estimate: the sample mean.</p>
+<p id="eip-idm144115024">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>=</mo><mn>1.024</mn>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>=</mo><mn>1.024</mn>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p><p id="eip-idm41535920">Next, find the <em data-effect="italics">EBM</em>. Because you are creating a 98% confidence interval, <em data-effect="italics">CL</em> = 0.98.</p>
+<div class="os-figure" id="fs-idp138152784"><figure class="scaled-down ui-has-child-figcaption" data-id="fs-idp138152784"><span data-alt="This is a normal distribution curve. The point z0.01 is labeled at the right edge of the curve and the region to the right of this point is shaded. The area of this shaded region equals 0.01. The unshaded area equals 0.99." data-type="media" id="eip-idp25198592">
+<img alt="This is a normal distribution curve. The point z0.01 is labeled at the right edge of the curve and the region to the right of this point is shaded. The area of this shaded region equals 0.01. The unshaded area equals 0.99." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/4a3d2659ae3ee8c2de6e74291caae928abbb1d1b" height="436" loading="lazy" src="413d1e0de6e8de6ef193efaa.webp" width="884"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">8.4</span>
+</figcaption></figure></div>
+<p id="eip-idp4350608">You need to find <em data-effect="italics">z</em><sub>0.01</sub> having the property that the area under the normal density curve to the right of <em data-effect="italics">z</em><sub>0.01</sub> is 0.01 and the area to the left is 0.99. Use your calculator, a computer, or a probability table for the standard normal distribution to find <em data-effect="italics">z</em><sub>0.01</sub> = 2.326.</p>
+<p id="eip-idm15410448">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mi>E</mi><mi>B</mi><mi>M</mi><mo>=</mo><mo stretchy="false">(</mo><msub>
+<mi>z</mi>
+<mrow>
+<mn>0.01</mn>
+</mrow>
+</msub>
+<mo stretchy="false">)</mo><mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>=</mo><mo stretchy="false">(</mo><mn>2.326</mn><mo stretchy="false">)</mo><mfrac>
+<mrow>
+<mn>0.337</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>30</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>0.1431</mn>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mi>E</mi><mi>B</mi><mi>M</mi><mo>=</mo><mo stretchy="false">(</mo><msub>
+<mi>z</mi>
+<mrow>
+<mn>0.01</mn>
+</mrow>
+</msub>
+<mo stretchy="false">)</mo><mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>=</mo><mo stretchy="false">(</mo><mn>2.326</mn><mo stretchy="false">)</mo><mfrac>
+<mrow>
+<mn>0.337</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>30</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>0.1431</mn>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+<p id="eip-idm15410192">To find the 98% confidence interval, find <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mo> </mo><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>±</mo><mi>E</mi><mi>B</mi><mi>M</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mo> </mo><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>±</mo><mi>E</mi><mi>B</mi><mi>M</mi>
+</mrow></annotation-xml></semantics></math></span>.</p>
+<p id="eip-idm89961776"><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> – <em data-effect="italics">EBM</em> = 1.024 – 0.1431 = 0.8809</p>
+<p id="eip-idm89961520"><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> – <em data-effect="italics">EBM</em> = 1.024 – 0.1431 = 1.1671</p><p id="eip-idm89961264">We estimate with 98% confidence that the true SAR mean for the population of cell phones in the United States is between 0.8809 and 1.1671 watts per kilogram.</p>
+</div>
+</section>
+</details>
+<details aria-label="Show/Hide Solution" data-type="solution" id="eip-idm108144592">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="eip-idm52012352">
+</p><div class="statistics calculator ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm71087104"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Using the TI-83, 83+, 84, 84+ Calculator</span>
+</h3></header><section>
+<div class="os-note-body">
+<ul data-labeled-item="true" id="eip-idp8586624">
+<li>Press <code data-type="code">STAT</code> and arrow over to <code data-type="code">TESTS</code>.</li>
+<li>Arrow down to <code data-type="code">7:ZInterval</code>.</li>
+<li>Press <code data-type="code">ENTER</code>.</li>
+<li>Arrow to Stats and press <code data-type="code">ENTER</code>.</li>
+<li>Arrow down and enter the following values:
+    <ul data-labeled-item="true" id="eip-idm28766480"><li><em data-effect="italics">σ</em>: 0.337</li>
+<li><math display="inline"><semantics><mrow>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>:</mo><mn>1.024</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+<mo>:</mo><mn>1.024</mn>
+</mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">n</em>: 30</li>
+<li><em data-effect="italics">C</em>-level: 0.98</li>
+</ul></li>
+<li>Arrow down to Calculate and press ENTER.</li>
+<li>The confidence interval is (to three decimal places) (0.881, 1.167).</li>
+</ul></div></section></div>
+</div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp77326048"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">8.3</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="eip-158"><header></header><section>
+<div data-type="problem" id="eip-555"><div class="os-problem-container">
+<p id="eip-136"><a aria-label="View Table 8.2" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution#M02_CH08-tbl002">Table 8.2</a> shows a different random sampling of 20 cell phone models. Use this data to calculate a 93% confidence interval for the true mean SAR for cell phones certified for use in the United States. As previously, assume that the population standard deviation is <em data-effect="italics">σ</em> = 0.337.</p>
+<div class="os-table" id="M02_CH08-tbl002"><div class="table-scroll"><table data-id="M02_CH08-tbl002" data-summary=".."><thead>
+<tr>
+<th colspan="2" scope="colgroup">SAR Data for a sample of 20 cell phones</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1.48</td><td>1.53</td>
+</tr>
+<tr>
+<td>0.8</td><td>0.68</td>
+</tr>
+<tr>
+<td>1.15</td><td>1.4</td>
+</tr>
+<tr>
+<td>1.36</td><td>1.24</td>
+</tr>
+<tr>
+<td>0.77</td><td>0.57</td>
+</tr>
+<tr>
+<td>0.462</td><td>0.2</td>
+</tr>
+<tr>
+<td>1.36</td><td>0.51</td>
+</tr>
+<tr>
+<td>1.39</td><td>0.3</td>
+</tr>
+<tr>
+<td>1.3</td><td>0.73</td>
+</tr>
+<tr>
+<td>0.7</td><td>0.869</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">8.2</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div></div>
+</section></div>
+</div></section></div>
+<p id="eip-idp5304592">Notice the difference in the confidence intervals calculated in <a aria-label="Go to Example 8.3" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution#example3">Example 8.3</a> and the following <a aria-label="Go to Try It" href="https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution#fs-idp77326048">Try It</a> exercise. These intervals are different for several reasons: they were calculated from different samples, the samples were different sizes, and the intervals were calculated for different levels of confidence. Even though the intervals are different, they do not yield conflicting information. The effects of these kinds of changes are the subject of the next section in this chapter.</p></section><section data-depth="2" id="eip-783"><h4 data-type="title">Changing the Confidence Level or Sample Size</h4><div class="ui-has-child-title" data-type="example" id="element-1217"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">8.4</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="element-971"><header></header><section><div data-type="problem" id="id1164450104012"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-214">Suppose we change the original problem in <a aria-label="Go to Example 8.2" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution#eip-id1171257291379">Example 8.2</a> by using a 95% confidence level. Find a 95% confidence interval for the true (population) mean statistics exam score.</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id1164461631257">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-701">To find the confidence interval, you need the sample mean, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span>, and the <em data-effect="italics">EBM</em>.</p>
+<ul data-labeled-item="true" id="element-5">
+<li><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math> = 68</li>
+<li><em data-effect="italics">EBM</em> = <math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">σ</em> = 3; <em data-effect="italics">n</em> = 36; The confidence level is 95% (<em data-effect="italics">CL</em> = 0.95).</li>
+</ul>
+<p id="element-547"><em data-effect="italics">CL</em> = 0.95 so <em data-effect="italics">α</em> = 1 – <em data-effect="italics">CL</em> = 1 – 0.95 = 0.05</p>
+<p id="element-769">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo><mn>0.025</mn><mtext> </mtext><mtext> </mtext><mtext> </mtext><msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+<mo>=</mo><msub>
+<mi>z</mi>
+<mrow>
+<mn>0.025</mn>
+</mrow>
+</msub>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+<mo>=</mo><mn>0.025</mn><mtext> </mtext><mtext> </mtext><mtext> </mtext><msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+<mo>=</mo><msub>
+<mi>z</mi>
+<mrow>
+<mn>0.025</mn>
+</mrow>
+</msub>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+<p id="element-370">The area to the right of <em data-effect="italics">z</em><sub>0.025</sub> is 0.025 and the area to the left of <em data-effect="italics">z</em><sub>0.025</sub> is 1 – 0.025 = 0.975.</p>
+<p id="element-669">
+<span class="os-math-in-para"><math display="inline">
+<semantics>
+<mrow>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+<mo>=</mo><msub>
+<mi>z</mi>
+<mrow>
+<mn>0.025</mn>
+</mrow>
+</msub>
+<mo>=</mo><mn>1.96</mn>
+</mrow>
+</mrow>
+<annotation-xml encoding="MathML-Content">
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+<mo>=</mo><msub>
+<mi>z</mi>
+<mrow>
+<mn>0.025</mn>
+</mrow>
+</msub>
+<mo>=</mo><mn>1.96</mn>
+</mrow>
+</annotation-xml>
+</semantics>
+</math></span>
+</p>
+<p id="fs-idm2686672">when using invnorm(0.975,0,1) on the TI-83, 83+, or 84+ calculators. (This can also be found using appropriate commands on other calculators, using a computer, or using a probability table for the standard normal distribution.)</p><p id="element-88"><em data-effect="italics">EBM</em> = (1.96)<span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>36</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>36</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> = 0.98</p>
+<p id="element-956"><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> – <em data-effect="italics">EBM</em> = 68 – 0.98 = 67.02</p>
+<p id="element-64"><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> + <em data-effect="italics">EBM</em> = 68 + 0.98 = 68.98</p>
+<p id="fs-idp120322464">Notice that the <em data-effect="italics">EBM</em> is larger for a 95% confidence level in the original problem.</p>
+</div>
+</section>
+</details><div data-type="commentary" id="examplecomment">
+<p id="fs-idp25970000">We estimate with 95% confidence that the true population mean for all statistics exam scores is between 67.02 and 68.98.</p><p id="fs-idp48227696">
+    Explanation of 95% Confidence Level:
+    Ninety-five percent of all confidence intervals constructed in this way contain the true value of the population mean statistics exam score.</p>
+<p id="fs-idp38701776">
+    Comparing the results:
+    The 90% confidence interval is (67.18, 68.82). The 95% confidence interval is (67.02, 68.98). The 95% confidence interval is wider. If you look at the graphs, because the area 0.95 is larger than the area 0.90, it makes sense that the 95% confidence interval is wider. To be more confident that the confidence interval actually does contain the true value of the population mean for all statistics exam scores, the confidence interval necessarily needs to be wider.</p>
+<div class="os-figure" id="conf_intvls_cfpm3"><figure class="scaled-down ui-has-child-figcaption" data-id="conf_intvls_cfpm3"><span data-alt="A normal distribution diagram illustrating a 95% confidence interval. It shows critical z-values (+/- 1.96) and corresponding data points (66.37 to 69.63) around a mean of 68 (x-bar)." data-type="media" id="id1164459044969">
+<img alt="A normal distribution diagram illustrating a 95% confidence interval. It shows critical z-values (+/- 1.96) and corresponding data points (66.37 to 69.63) around a mean of 68 (x-bar)." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/52e55fda522395e6efa7d09dc1fc23501d9f87f8" height="729" loading="lazy" src="56a813ecdd1d0546b38ec9a5.webp" width="745"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">8.5</span>
+</figcaption></figure></div>
+<p id="para-00001"><strong>Summary: Effect of Changing the Confidence Level</strong>
+</p><ul id="eip-703">
+<li>Increasing the confidence level increases the error bound, making the confidence interval wider.</li>
+<li>Decreasing the confidence level decreases the error bound, making the confidence interval narrower.</li>
+</ul>
+</div>
+</section></div></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm35811600"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">8.4</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="eip-847"><header></header><section><div data-type="problem" id="eip-565"><div class="os-problem-container">
+<p id="eip-idp138029248">Refer back to the pizza-delivery <a aria-label="Go to Try It" href="https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution#fs-idm85249264">Try It</a> exercise. The population standard deviation is six minutes and the sample mean deliver time is 36 minutes. Use a sample size of 20. Find a 95% confidence interval estimate for the true mean pizza delivery time.</p></div></div>
+</section></div></div></section></div></section>
+<div class="ui-has-child-title" data-type="example" id="element-542"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">8.5</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><p id="element-338">Suppose we change the original problem in <a aria-label="Go to Example 8.2" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution#eip-id1171257291379">Example 8.2</a> to see what happens to the error bound if the sample size is changed.</p><div class="unnumbered has-problem-title" data-type="exercise" id="element-442"><header></header><section>
+<div data-type="problem" id="id1164455008611"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-98">Leave everything the same except the sample size.  Use the original 90% confidence level. What happens to the error bound and the confidence interval if we increase the sample size and use <em data-effect="italics">n</em> = 100 instead of <em data-effect="italics">n</em> = 36?  What happens if we decrease the sample size to <em data-effect="italics">n</em> = 25 instead of <em data-effect="italics">n</em> = 36? </p>
+<ul id="element-119"><li><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math> = 68</li>
+<li><em data-effect="italics">EBM</em> = <math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">σ</em> = 3; The confidence level is 90% (<em data-effect="italics">CL</em>=0.90); <math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math> = <em data-effect="italics">z</em><sub>0.05</sub> = 1.645.</li>
+</ul></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id5851674">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-124">If we <strong>increase</strong> the sample size <em data-effect="italics">n</em> to 100, we <strong>decrease</strong> the error bound.</p>
+<p id="element-412">When <em data-effect="italics">n</em> = 100: <em data-effect="italics">EBM</em> = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> = (1.645)<span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>100</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>100</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> = 0.4935.</p>
+</div>
+</section>
+</details>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id1164463763522">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-125">If we <strong>decrease</strong> the sample size <em data-effect="italics">n</em> to 25, we <strong>increase</strong> the error bound.
+    </p>
+<p id="element-9">When <em data-effect="italics">n</em> = 25: <em data-effect="italics">EBM</em> = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> = (1.645)<span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>25</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>3</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>25</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> = 0.987.</p>
+</div>
+</section>
+</details>
+</section></div>
+<p id="para-00002">Summary: Effect of Changing the Sample Size
+    </p><ul id="element-364">
+<li>Increasing the sample size causes the  error bound to decrease, making the confidence interval narrower.</li>
+<li>Decreasing the sample size causes the error bound to increase, making the confidence interval wider.</li>
+</ul>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm59608800"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">8.5</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="eip-159"><header></header><section>
+<div data-type="problem" id="eip-53"><div class="os-problem-container">
+<p id="eip-929">Refer back to the pizza-delivery <a aria-label="Go to Try It" href="https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution#fs-idm85249264">Try It</a> exercise. The mean delivery time is 36 minutes and the population standard deviation is six minutes. Assume the sample size is changed to 50 restaurants with the same sample mean. Find a 90% confidence interval estimate for the population mean delivery time.</p></div></div>
+</section></div>
+</div></section></div>
+</section>
+<section data-depth="1" id="eip-710"><h3 data-type="title">Working Backwards to Find the Error Bound or Sample Mean</h3>
+<p id="eip-719">When we calculate a confidence interval, we find the sample mean, calculate the error bound, and use them to calculate the confidence interval. However, sometimes when we read statistical studies, the study may state the confidence interval only. If we know the confidence interval, we can work backwards to find both the error bound and the sample mean.</p>
+<div data-type="list" id="eip-109"><div data-type="title"><strong>Finding the Error Bound</strong></div><ul>
+<li>From the upper value for the interval, subtract the sample mean,</li>
+<li>OR, from the upper value for the interval, subtract the lower value.  Then divide the difference by two.</li>
+</ul></div>
+<div data-type="list" id="eip-364"><div data-type="title"><strong>Finding the Sample Mean</strong></div><ul>
+<li>Subtract the error bound from the upper value of the confidence interval,</li>
+<li>OR, average the upper and lower endpoints of the confidence interval.</li>
+</ul></div>
+<p id="eip-117">Notice that there are two methods to perform each calculation. You can choose the method that is easier to use with the information you know.</p>
+<div class="ui-has-child-title" data-type="example" id="eip-209"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">8.6</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-108">Suppose we know that a confidence interval is <strong>(67.18, 68.82)</strong> and we want to find the error bound. We may know that the sample mean is 68, or perhaps our source only gave the confidence interval and did not tell us the value of the sample mean.</p><div data-type="list" id="element-733"><h4 data-type="title">Calculate the Error Bound:</h4><ul>
+<li>If we know that the sample mean is 68: <em data-effect="italics">EBM</em> = 68.82 – 68 = 0.82.</li>
+<li>If we don't know the sample mean: <em data-effect="italics">EBM</em> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mn>68.82</mn><mo>−</mo><mn>67.18</mn><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mn>68.82</mn><mo>−</mo><mn>67.18</mn><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = 0.82.</li>
+</ul></div>
+<div data-type="list" id="fs-idm83129664"><h4 data-type="title">Calculate the Sample Mean:</h4><ul><li>If we know the error bound:
+    <math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math> = 68.82 – 0.82 = 68</li>
+<li>If we don't know the error bound: <math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mn>67.18</mn><mo>+</mo><mn>68.82</mn><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mn>67.18</mn><mo>+</mo><mn>68.82</mn><mo stretchy="false">)</mo>
+</mrow>
+<mn>2</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = 68.</li>
+</ul></div></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm38498176"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">8.6</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="eip-998"><header></header><section>
+<div data-type="problem" id="eip-253"><div class="os-problem-container">
+<p id="eip-94">Suppose we know that a confidence interval is (42.12, 47.88). Find the error bound and the sample mean.</p>
+</div></div>
+</section></div>
+</div></section></div></section>
+<section data-depth="1" id="eip-865"><h3 data-type="title">Calculating the Sample Size <em data-effect="italics">n</em></h3>
+<p id="eip-630">If researchers desire a specific margin of error, then they can use the error bound formula to calculate the required sample size.</p>
+<p id="eip-517">The error bound formula for a population mean when the population standard deviation is known is <span data-type="newline"><br/></span><em data-effect="italics">EBM</em> = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>.</p>
+<p id="eip-975">The formula for sample size is <em data-effect="italics">n</em> = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>z</mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>σ</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<mi>E</mi><mi>B</mi><msup>
+<mi>M</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>z</mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>σ</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<mi>E</mi><mi>B</mi><msup>
+<mi>M</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>, found by solving the error bound formula for <em data-effect="italics">n</em>.</p><p id="eip-409">In this formula, <em data-effect="italics">z</em> is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mi>z</mi>
+<mrow>
+<mfrac>
+<mi>α</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</msub>
+</mrow></annotation-xml></semantics></math></span>, corresponding to the desired confidence level. A researcher planning a study who wants a specified confidence level and error bound can use this formula to calculate the size of the sample needed for the study.</p>
+<div class="ui-has-child-title" data-type="example" id="eip-324"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">8.7</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="eip-796">The population standard deviation for the age of Foothill College students is 15 years. If we want to be 95% confident that the sample mean age is within two years of the true population mean age of Foothill College students, how many randomly selected Foothill College students must be surveyed?</p>
+<ul data-labeled-item="true" id="eip-110">
+<li>From the problem, we know that <em data-effect="italics">σ</em> = 15 and <em data-effect="italics">EBM</em> = 2.</li>
+<li><em data-effect="italics">z</em> = <em data-effect="italics">z</em><sub>0.025</sub> = 1.96, because the confidence level is 95%.</li>
+</ul>
+<ul data-labeled-item="true" id="eip-501">
+<li><em data-effect="italics">n</em> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>z</mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>σ</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<mi>E</mi><mi>B</mi><msup>
+<mi>M</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mi>z</mi>
+<mn>2</mn>
+</msup>
+<msup>
+<mi>σ</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<mi>E</mi><mi>B</mi><msup>
+<mi>M</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.96</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mn>2</mn>
+</msup>
+<msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<msup>
+<mn>2</mn>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.96</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mn>2</mn>
+</msup>
+<msup>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+<mrow>
+<msup>
+<mn>2</mn>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = 216.09 using the sample size equation.</li>
+<li> Use <em data-effect="italics">n</em> = 217: Always round the answer UP to the next higher integer to ensure that the sample size is large enough.</li>
+</ul><p id="eip-893">Therefore, 217 Foothill College students should be surveyed in order to be 95% confident that we are within two years of the true population mean age of Foothill College students.</p>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm26211984"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">8.7</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="eip-669"><header></header><section>
+<div data-type="problem" id="eip-635"><div class="os-problem-container">
+<p id="eip-731">The population standard deviation for the height of high school basketball players is three inches. If we want to be 95% confident that the sample mean height is within one inch of the true population mean height, how many randomly selected students must be surveyed?</p>
+</div></div>
+</section></div>
+</div></section></div>
+</section>
+</div></article><footer><p>Adapted from OpenStax, Introductory Statistics 2e, 8.1 A Single Population Mean using the Normal Distribution. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introductory-statistics-2e/pages/8-1-a-single-population-mean-using-the-normal-distribution">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

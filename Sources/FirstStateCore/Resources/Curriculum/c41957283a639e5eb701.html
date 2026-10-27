@@ -1,0 +1,245 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_09fba364-913d-4f15-82a4-08f951b148fa"><h2 data-rex-keep="true" data-type="document-title" id="page_09fba364-913d-4f15-82a4-08f951b148fa_titlecreatedbycookbook"><span class="os-number">4.5</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Hypergeometric Distribution</span>
+</h2>
+<p id="element-408">There are five characteristics of a hypergeometric experiment.</p>
+<ol id="element-999"><li>You take samples from <strong>two</strong> groups.</li>
+<li>You are concerned with a group of interest, called the first group.</li>
+<li>You sample <strong>without replacement</strong> from the combined groups. For example, you want to choose a softball team from a combined group of 11 men and 13 women. The team consists of ten players.</li>
+<li>Each pick is <strong>not</strong> independent, since sampling is without replacement. In the softball example, the probability of picking a woman first is <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>13</mn>
+</mrow>
+<mrow>
+<mn>24</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>13</mn>
+</mrow>
+<mrow>
+<mn>24</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>. The probability of picking a man second is <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>11</mn>
+<mrow>
+<mn>23</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>11</mn>
+<mrow>
+<mn>23</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> if a woman was picked first. It is <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mn>10</mn>
+<mrow>
+<mn>23</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mn>10</mn>
+<mrow>
+<mn>23</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> if a man was picked first. The probability of the second pick depends on what happened in the first pick.</li>
+<li>You are <strong>not</strong> dealing with Bernoulli Trials.</li>
+</ol>
+<p id="fs-idp102799616">The outcomes of a hypergeometric experiment fit a <span data-type="term" group-by="h" id="term-00001">hypergeometric probability</span> distribution. The random variable <em data-effect="italics">X</em> = the number of items from the group of interest.</p><div class="ui-has-child-title" data-type="example" id="element-84"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4.22</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idp41303504"><header></header><section><div data-type="problem" id="fs-idm310432"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container"><p id="element-88">A candy dish contains 100 jelly beans and 80 gumdrops. Fifty candies are picked at random. What is the probability that 35 of the 50 are gumdrops? The two groups are jelly beans and gumdrops. Since the probability question asks for the probability of picking gumdrops, the group of interest (first group) is gumdrops. The size of the group of interest (first group) is 80. The size of the second group is 100. The size of the sample is 50 (jelly beans or gumdrops). Let <em data-effect="italics">X</em> = the number of gumdrops in the sample of 50. <em data-effect="italics">X</em> takes on the values <em data-effect="italics">x</em> = 0, 1, 2, ..., 50. What is the probability statement written mathematically?</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idm31176384">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-idm45247120"><em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 35)</p></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm112699744"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">4.22</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm3161264"><header></header><section><div data-type="problem" id="fs-idp72756304"><div class="os-problem-container">
+<p id="fs-idp107407200">A bag contains letter tiles. Forty-four of the tiles are vowels, and 56 are consonants. Seven tiles are picked at random. You want to know the probability that four of the seven tiles are vowels. What is the group of interest, the size of the group of interest, and the size of the sample?</p></div></div>
+</section></div></div></section></div><div class="ui-has-child-title" data-type="example" id="element-968"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4.23</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idm83529440"><header></header><section>
+<div data-type="problem" id="fs-idm47818416"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-661">Suppose a shipment of 100 laptops is known to have ten defective laptops. An inspector randomly chooses 12 for inspection. He is interested in determining the probability that, among the 12 laptops, at most two are defective. The two groups are the 90 non-defective laptops and the 10 defective laptops. The group of interest (first group) is the defective group because the probability question asks for the probability of at most two defective laptops. The size of the sample is 12 laptops. (They may be non-defective or defective.) Let <em data-effect="italics">X</em> = the number of defective laptops in the sample of 12. <em data-effect="italics">X</em> takes on the values 0, 1, 2, ..., 10. <em data-effect="italics">X</em> may not take on the values 11 or 12. The sample size is 12, but there are only 10 defective laptops. Write the probability statement mathematically.</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idp28452128">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-idm89520464"><em data-effect="italics">P</em>(<em data-effect="italics">x</em> ≤ 2)</p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm96082960"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">4.23</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idp7372528"><header></header><section><div data-type="problem" id="fs-idp85406816"><div class="os-problem-container">
+<p id="fs-idp85729168">A gross of eggs contains 144 eggs. A particular gross is known to have 12 cracked eggs. An inspector randomly chooses 15 for inspection. She wants to know the probability that, among the 15, at most three are cracked. What is <em data-effect="italics">X</em>, and what values does it take on?</p></div></div>
+</section></div></div></section></div><div class="ui-has-child-title" data-type="example" id="element-582"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4.24</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-885">You are president of an on-campus special events organization. You need a committee of seven students to plan a special birthday party for the president of the college. Your organization consists of 18 women and 15 men. You are interested in the number of men on your committee. If the members of the committee are randomly selected, what is the probability that your committee has more than four men?</p>
+<p id="element-990">This is a hypergeometric problem because you are choosing your committee from two groups (men and women).</p><div class="unnumbered has-problem-title" data-type="exercise" id="element-720"><header></header><section><div data-type="problem" id="id43788540"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-965">a. Are you choosing with or without replacement?</p>
+<p id="element-356">b. What is the group of interest?</p>
+<p id="element-378">c. How many are in the group of interest?</p>
+<p id="element-730">d. How many are in the other group?</p>
+<p id="element-304">e. Let <em data-effect="italics">X</em> = _________ on the committee. What values does <em data-effect="italics">X</em> take on?</p>
+<p id="element-49">f. The probability question is <em data-effect="italics">P</em>(_______).</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id43788559">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-142">a. without<span data-count="2" data-type="newline"><br/><br/></span></p>
+<p id="element-80">b. the men<span data-count="2" data-type="newline"><br/><br/></span></p>
+<p id="element-597">c. 15 men<span data-count="2" data-type="newline"><br/><br/></span></p>
+<p id="element-465">d. 18 women<span data-count="2" data-type="newline"><br/><br/></span></p>
+<p id="element-529">e. Let <em data-effect="italics">X</em> = <strong>the number of men</strong> on the committee. <em data-effect="italics">x</em> = 0, 1, 2, …, 7.<span data-count="2" data-type="newline"><br/><br/></span></p>
+<p id="element-0836">f. <em data-effect="italics">P</em>(<em data-effect="italics">x</em> &gt; 4)</p></div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm11539184"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">4.24</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm40312064"><header></header><section>
+<div data-type="problem" id="fs-idp112379936"><div class="os-problem-container">
+<p id="fs-idm31607136">A palette has 200 milk cartons. Of the 200 cartons, it is known that ten of them have leaked and cannot be sold. A stock clerk randomly chooses 18 for inspection. He wants to know the probability that among the 18, no more than two are leaking. Give five reasons why this is a hypergeometric problem.</p></div></div>
+</section></div>
+</div></section></div><section data-depth="1" id="element-516"><h3 data-type="title">Notation for the Hypergeometric: H = Hypergeometric Probability Distribution Function</h3>
+<p id="element-870"><em data-effect="italics">X</em> ~ <em data-effect="italics">H</em>(<em data-effect="italics">r</em>, <em data-effect="italics">b</em>, <em data-effect="italics">n</em>)</p>
+<p id="element-869">Read this as "<em data-effect="italics">X</em> is a random variable with a hypergeometric distribution." The parameters are <em data-effect="italics">r</em>, <em data-effect="italics">b</em>, and <em data-effect="italics">n</em>; <em data-effect="italics">r</em> = the size of the group of interest (first group), <em data-effect="italics">b</em> = the size of the second group, <em data-effect="italics">n</em> = the size of the chosen sample.</p>
+</section>
+<div class="ui-has-child-title" data-type="example" id="element-180"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">4.25</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-874">A school site committee is to be chosen randomly from six men and five women. If the committee consists of four members chosen randomly, what is the probability that two of them are men? How many men do you expect to be on the committee?</p>
+<p id="element-875">Let <em data-effect="italics">X</em> = the number of men on the committee of four. The men are the group of interest (first group).</p>
+<p id="element-876"><em data-effect="italics">X</em> takes on the values 0, 1, 2, 3, 4, where <em data-effect="italics">r = 6</em>, <em data-effect="italics">b = 5</em>, and <em data-effect="italics">n = 4</em>. <em data-effect="italics">X ~ H</em>(6, 5, 4)</p>
+<p id="element-877">Find <em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 2). <em data-effect="italics">P</em>(<em data-effect="italics">x</em> = 2) = 0.4545 (calculator or computer)</p><div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="id43780917"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">NOTE</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm9108464">Currently, the TI-83+ and TI-84 do not have hypergeometric probability functions. There are a number of computer packages, including Microsoft Excel, that do.</p>
+</div></section></div><p id="element-879">The probability that there are two men on the committee is about 0.45.</p>
+<p id="element-136">The graph of <em data-effect="italics">X</em> ~ <em data-effect="italics">H</em>(6, 5, 4) is:</p><div class="os-figure" id="fs-idp36734864"><figure class="scaled-down ui-has-child-figcaption" data-id="fs-idp36734864"><span data-alt="This graph shows a hypergeometric probability distribution. It has five bars that are slightly normally distributed. The x-axis shows values from 0 to 4 in increments of 1, representing the number of men on the four-person committee. The y-axis ranges from 0 to 0.5 in increments of 0.1." data-display="block" data-type="media" id="id43780967"><img alt="This graph shows a hypergeometric probability distribution. It has five bars that are slightly normally distributed. The x-axis shows values from 0 to 4 in increments of 1, representing the number of men on the four-person committee. The y-axis ranges from 0 to 0.5 in increments of 0.1." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/839fb57724373d5ac396c63f6d8e272e1062e29d" height="598" loading="lazy" src="dc26eeb3e86ccbaff7ccbd05.webp" width="986"/></span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">4.5</span>
+</figcaption></figure></div><p id="element-704">The <em data-effect="italics">y</em>-axis contains the probability of <em data-effect="italics">X</em>, where <em data-effect="italics">X</em> = the number of men on the committee.</p>
+<p id="element-369">You would expect <em data-effect="italics">m</em> = 2.18 (about two) men on the committee.</p>
+<p id="element-702">The formula for the mean is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>μ</mi><mo>=</mo><mfrac>
+<mrow>
+<mi>n</mi><mi>r</mi>
+</mrow>
+<mrow>
+<mi>r</mi><mo>+</mo><mi>b</mi>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mn>6</mn><mo>+</mo><mn>5</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>2.18</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>μ</mi><mo>=</mo><mfrac>
+<mrow>
+<mi>n</mi><mi>r</mi>
+</mrow>
+<mrow>
+<mi>r</mi><mo>+</mo><mi>b</mi>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mrow>
+<mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo>
+</mrow>
+<mrow>
+<mn>6</mn><mo>+</mo><mn>5</mn>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>2.18</mn>
+</mrow></annotation-xml></semantics></math></span></p></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm54957120"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">4.25</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm10553104"><header></header><section>
+<div data-type="problem" id="fs-idm142583216"><div class="os-problem-container">
+<p id="fs-idp43780624">An intramural basketball team is to be chosen randomly from 15 boys and 12 girls. The team has ten slots. You want to know the probability that eight of the players will be boys. What is the group of interest and the sample?</p></div></div>
+</section></div>
+</div></section></div>
+</div></article><footer><p>Adapted from OpenStax, Introductory Statistics 2e, 4.5 Hypergeometric Distribution. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introductory-statistics-2e/pages/4-5-hypergeometric-distribution">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

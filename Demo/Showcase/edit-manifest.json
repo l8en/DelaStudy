@@ -1,0 +1,162 @@
+{
+  "source": "/tmp/lens-showcase-WN7tLB/capture-final.mov",
+  "font": "/Users/machi/cac2026/cac2026/FirstStateLens/Fonts/Manrope.ttf",
+  "recordingEpoch": 1793060963.4786587,
+  "shots": [
+    {
+      "id": "today",
+      "duration": 10,
+      "title": "DelaStudy.",
+      "lines": [
+        "A study app by M'hamed.",
+        "Learn, practice, and plan your next step."
+      ],
+      "sourceStart": 41.584,
+      "sourceEnd": 50.318
+    },
+    {
+      "id": "library",
+      "duration": 15,
+      "title": "Choose your\nnext subject.",
+      "lines": [
+        "High school · AP preparation · College",
+        "39 course paths, with source links."
+      ],
+      "sourceStart": 50.598,
+      "sourceEnd": 66.305
+    },
+    {
+      "id": "outline",
+      "duration": 10,
+      "title": "See the path.\nStart a lesson.",
+      "lines": [
+        "Five selected units per course.",
+        "A clear place to start or continue."
+      ],
+      "sourceStart": 66.585,
+      "sourceEnd": 76.695
+    },
+    {
+      "id": "lesson",
+      "duration": 18,
+      "title": "One idea\nat a time.",
+      "lines": [
+        "Three short explanations.",
+        "Examples before practice."
+      ],
+      "sourceStart": 77.8,
+      "sourceEnd": 89.903
+    },
+    {
+      "id": "practice",
+      "duration": 25,
+      "title": "Try. Learn.\nTry again.",
+      "lines": [
+        "Multiple choice, blanks and matching.",
+        "Feedback you can use."
+      ],
+      "sourceStart": 90.65,
+      "sourceEnd": 113.251
+    },
+    {
+      "id": "resources",
+      "duration": 18,
+      "title": "Resources,\nwithin reach.",
+      "lines": [
+        "Videos, textbooks and full readings.",
+        "Separate from the lesson sequence."
+      ],
+      "sourceStart": 118.142,
+      "sourceEnd": 141.063
+    },
+    {
+      "id": "delaware_sources",
+      "duration": 6,
+      "title": "Civics, with\nits sources.",
+      "lines": [
+        "Delaware Public Archives references.",
+        "Original, source-grounded practice."
+      ],
+      "source": "/tmp/lens-showcase-WN7tLB/capture-credit-final.mov",
+      "sourceStart": 39.785,
+      "sourceEnd": 47.545
+    },
+    {
+      "id": "delaware_standards",
+      "duration": 6,
+      "title": "Check the\npublished alignment.",
+      "lines": [
+        "Selected modules have explicit mappings.",
+        "Coverage limits stay visible."
+      ],
+      "source": "/tmp/lens-showcase-WN7tLB/capture-sources.mov",
+      "sourceStart": 44.901,
+      "sourceEnd": 51.764
+    },
+    {
+      "id": "plan",
+      "duration": 10,
+      "title": "Make the next\nstep specific.",
+      "lines": [
+        "Save a study task.",
+        "Start a Focus session from it."
+      ],
+      "sourceStart": 155.028,
+      "sourceEnd": 164.124
+    },
+    {
+      "id": "focus",
+      "duration": 20,
+      "title": "Room to focus.",
+      "lines": [
+        "Timed work and breaks.",
+        "Optional sound. A timer-first Zen view."
+      ],
+      "sourceStart": 164.404,
+      "sourceEnd": 183.281
+    },
+    {
+      "id": "profile",
+      "duration": 12,
+      "title": "Progress from\nreal practice.",
+      "lines": [
+        "Study XP, levels and achievements.",
+        "Activity saved to your local account."
+      ],
+      "sourceStart": 185.16,
+      "sourceEnd": 196.304
+    },
+    {
+      "id": "college",
+      "duration": 10,
+      "title": "Beyond the\nnext test.",
+      "lines": [
+        "Interests, applications and counselor notes.",
+        "College-planning sources in one place."
+      ],
+      "sourceStart": 197.81,
+      "sourceEnd": 205.54
+    },
+    {
+      "id": "closing",
+      "duration": 8,
+      "title": "DelaStudy.",
+      "lines": [
+        "Learn. Practice. Make room to focus.",
+        "Built by M'hamed."
+      ],
+      "sourceStart": 209.125,
+      "sourceEnd": 216.857
+    }
+  ],
+  "appName": "DelaStudy",
+  "creditReplacement": {
+    "text": "DelaStudy · original instruction",
+    "start": 35,
+    "end": 53,
+    "x": 125,
+    "y": 2120,
+    "width": 640,
+    "height": 64
+  }
+}

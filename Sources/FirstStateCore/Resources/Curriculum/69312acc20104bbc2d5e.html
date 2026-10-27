@@ -1,0 +1,1368 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_0807ecd4-619a-4540-b58a-f38b43b09fff"><h2 data-rex-keep="true" data-type="document-title" id="page_0807ecd4-619a-4540-b58a-f38b43b09fff_titlecreatedbycookbook"><span class="os-number">6.3</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Rotational Motion</span>
+</h2>
+<div class="learning-objectives ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167067202821"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Section Learning Objectives</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167067095612">By the end of this section, you will be able to do the following:</p>
+<ul id="fs-id1167067019536">
+<li>Describe rotational kinematic variables and equations and relate them to their linear counterparts</li>
+<li>Describe torque and lever arm</li>
+<li>Solve problems involving torque and rotational kinematics</li>
+</ul>
+</div></section></div>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167063726159"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167067026003">The learning objectives in this section will help your students master the following standards:</p><ul id="fs-id1167063615289">
+<li>
+          (4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The student is expected to:
+        <ul id="fs-id1167067112218"><li>
+<span>(C)</span><span class="oat-standards-description"> analyze and describe accelerated motion in two dimensions using equations, including projectile and circular examples.</span></li>
+<li>(D)<span class="oat-standards-description"> calculate the effect of forces on objects, including the law of inertia, the relationship between force and acceleration, and the nature of force pairs between objects.</span></li>
+</ul></li>
+</ul>
+<p id="fs-id1169317499244">In addition, the High School Physics Laboratory Manual addresses content in this section in the lab titled: Circular and Rotational Motion, as well as the following standards:</p><ul id="fs-id1169317372223">
+<li>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The student is expected to:
+<ul id="fs-id1169317582154"><li>
+<span>(D)</span> <span>calculate the effect of forces on objects, including the law of inertia, the relationship between force and acceleration, and the nature of force pairs between objects.</span>
+</li>
+</ul></li>
+</ul>
+</div></section></div>
+<section data-depth="1" id="keyterms"><h3 data-type="title">Section Key Terms</h3>
+<div class="os-table os-unstyled-container" id="fs-id1167067031542"><div class="table-scroll"><table class="unnumbered unstyled section-key-terms" data-id="fs-id1167067031542" data-label="" data-summary="The list of Key Terms includes: angular acceleration, kinematics of rotational motion, lever arm, tangential acceleration, and torque." role="presentation"><tbody>
+<tr>
+<td>angular acceleration</td>
+<td>kinematics of rotational motion</td>
+<td>lever arm</td>
+</tr>
+<tr>
+<td>tangential acceleration</td>
+<td>torque</td>
+<td>
+</td></tr>
+</tbody></table></div></div></section>
+<section data-depth="1" id="fs-id1167067272386"><h3 data-type="title">Rotational Kinematics</h3>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167067165836"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167067024113"><span>[BL]</span><span>[OL]</span> Review linear kinematic equations.</p>
+<div class="misconception ui-has-child-title" data-type="note" id="fs-id1167067032670"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Misconception Alert</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167067179503">Students may get confused between deceleration and increasing acceleration in the negative direction.</p>
+</div></section></div>
+</div></section></div>
+<p id="fs-id1167063459079">In the section on uniform circular motion, we discussed motion in a circle at constant speed and, therefore, constant angular velocity. However, there are times when angular velocity is not constant—rotational motion can speed up, slow down, or reverse directions. Angular velocity is not constant when a spinning skater pulls in her arms, when a child pushes a merry-go-round to make it rotate, or when a CD slows to a halt when switched off. In all these cases, <span data-type="term" group-by="a" id="term-00001">angular acceleration</span> occurs because the angular velocity  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle></annotation-xml></semantics></math></span>  changes. The faster the change occurs, the greater is the angular acceleration. Angular acceleration  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle></annotation-xml></semantics></math></span>  is the rate of change of angular velocity. In equation form, average angular acceleration is </p><div class="unnumbered" data-label="" data-type="equation" id="fs-id1167063813314">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+</mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mfrac>
+<mtext>,</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mo>=</mo><mfrac>
+<mrow>
+<mtext>Δ</mtext><mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+</mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mfrac>
+<mtext>,</mtext>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1167066958470">
+where  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+</mrow></annotation-xml></semantics></math></span>  is the change in angular velocity and  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtext>Δ</mtext><mi>t</mi>
+</mrow></annotation-xml></semantics></math></span>  is the change in time. The units of angular acceleration are (rad/s)/s, or rad/s<sup>2</sup>. If  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle></annotation-xml></semantics></math></span>  increases, then  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle></annotation-xml></semantics></math></span>  is positive. If  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle></annotation-xml></semantics></math></span>  decreases, then  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle></annotation-xml></semantics></math></span>  is negative. Keep in mind that, by convention, counterclockwise is the positive direction and clockwise is the negative direction. For example, the skater in <a aria-label="View Figure 6.9" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-3-rotational-motion#Figure_06_03_IceSkater">Figure 6.9</a> is rotating counterclockwise as seen from above, so her angular velocity is positive. Acceleration would be negative, for example, when an object that is rotating counterclockwise slows down. It would be positive when an object that is rotating counterclockwise speeds up.
+</p>
+<div class="os-figure" id="Figure_06_03_IceSkater"><figure class="ui-has-child-figcaption" data-id="Figure_06_03_IceSkater"><span data-alt="The diagram shows a picture of an ice skater with an arrow pointing around her leg indicating that she is spinning in a counterclockwise direction." data-type="media" id="fs-id1167067142958">
+<img alt="The diagram shows a picture of an ice skater with an arrow pointing around her leg indicating that she is spinning in a counterclockwise direction." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/ae6f7ab32b4f37902f242571b451e461e0254571" height="678" loading="lazy" src="4a3fb9312facd20b6514f841.webp" width="450"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">6.9</span>
+<span class="os-divider"> </span>
+<span class="os-caption">A figure skater spins in the counterclockwise direction, so her angular velocity is normally considered to be positive. (Luu, Wikimedia Commons)</span>
+</figcaption></figure></div><p id="fs-id1167066825514">The relationship between the magnitudes of <span data-type="term" group-by="t" id="term-00002">tangential acceleration</span>, <strong>a</strong>, and angular acceleration,</p>
+<div data-label="" data-type="equation" id="fs-id1167067084360">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mo>,</mo><mtext>is</mtext><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mi>r</mi><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mtext>or</mtext><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mo>=</mo><mfrac>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle>
+<mi>r</mi>
+</mfrac>
+<mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mo>,</mo><mtext>is</mtext><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mi>r</mi><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mtext>or</mtext><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mo>=</mo><mfrac>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle>
+<mi>r</mi>
+</mfrac>
+<mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">6.10</span>
+</div>
+</div>
+<p id="fs-id1167063470309">These equations mean that the magnitudes of tangential acceleration and angular acceleration are directly proportional to each other. The greater the angular acceleration, the larger the change in tangential acceleration, and vice versa. For example, consider riders in their pods on a Ferris wheel at rest. A Ferris wheel with greater angular acceleration will give the riders greater tangential acceleration because, as the Ferris wheel increases its rate of spinning, it also increases its <span class="no-emphasis" data-type="term" group-by="t" id="term-00003">tangential velocity</span>. Note that the radius of the spinning object also matters. For example, for a given angular acceleration  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle></annotation-xml></semantics></math></span>, a smaller Ferris wheel leads to a smaller tangential acceleration for the riders.</p>
+<div class="tips-for-success ui-has-child-title" data-type="note" id="fs-id1167066808542"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Tips For Success</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167067176090">Tangential acceleration is sometimes denoted <strong>a</strong><sub>t</sub>. It is a <span class="no-emphasis" data-type="term" group-by="l" id="term-00004">linear acceleration</span> in a direction tangent to the circle at the point of interest in circular or rotational motion. Remember that tangential acceleration is parallel to the tangential velocity (either in the same direction or in the opposite direction.) <span class="no-emphasis" data-type="term" group-by="C" id="term-00005">Centripetal acceleration</span> is always perpendicular to the tangential velocity.</p>
+</div></section></div>
+<p id="fs-id1167063589397">So far, we have defined three rotational variables:  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mi>θ</mi>
+</mrow><annotation-xml encoding="MathML-Content"><mi>θ</mi></annotation-xml></semantics></math></span>,  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal"><mtext>ω</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal"><mtext>ω</mtext></mstyle></annotation-xml></semantics></math></span>, and  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal"><mtext>α</mtext></mstyle></annotation-xml></semantics></math></span>.  These are the angular versions of the linear variables x, v, and a. The following equations in the table represent the magnitude of the rotational variables and only when the radius is constant and perpendicular to the rotational variable. <a aria-label="View Table 6.2" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-3-rotational-motion#Table_06_02">Table 6.2</a> shows how they are related.</p>
+<div class="os-table" id="Table_06_02"><div class="table-scroll"><table data-id="Table_06_02" data-summary="The table has three columns labeled Rotational, Linear, and Relationship. The first row under these labels has a theta under Rotational, an x under Linear and theta equals x over r in the Relationship column. The values for the next row are omega, v and omega equals v over r. The last row’s values are alpha, a, and alpha equals a sub t over r."><thead> <tr>
+<th data-align="center" scope="col">Rotational</th>
+<th data-align="center" scope="col">Linear</th>
+<th data-align="center" scope="col">Relationship</th>
+</tr>
+</thead><tbody>
+<tr>
+<td data-align="center"> <math display="inline"><semantics><mrow>
+<mi>θ</mi>
+</mrow><annotation-xml encoding="MathML-Content"><mi>θ</mi></annotation-xml></semantics></math>
+</td>
+<td data-align="center">x</td>
+<td data-align="center"> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>θ</mi><mo>=</mo><mfrac>
+<mi>x</mi>
+<mi>r</mi>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>θ</mi><mo>=</mo><mfrac>
+<mi>x</mi>
+<mi>r</mi>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+<tr>
+<td data-align="center"> <math display="inline"><semantics><mrow>
+<mstyle mathsize="normal"><mtext>ω</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal"><mtext>ω</mtext></mstyle></annotation-xml></semantics></math>
+</td>
+<td data-align="center">v</td>
+<td data-align="center"> <math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal"><mtext>ω</mtext></mstyle><mo>=</mo><mfrac>
+<mstyle mathsize="normal"><mi>v</mi></mstyle>
+<mi>r</mi>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal"><mtext>ω</mtext></mstyle><mo>=</mo><mfrac>
+<mstyle mathsize="normal"><mi>v</mi></mstyle>
+<mi>r</mi>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+<tr>
+<td data-align="center"> <math display="inline"><semantics><mrow>
+<mstyle mathsize="normal"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal"><mtext>α</mtext></mstyle></annotation-xml></semantics></math>
+</td>
+<td data-align="center">a</td>
+<td data-align="center"> <math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal"><mtext>α</mtext></mstyle><mo>=</mo><mfrac>
+<mstyle mathsize="normal"><mi>a</mi></mstyle>
+<mi>r</mi>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal"><mtext>α</mtext></mstyle><mo>=</mo><mfrac>
+<mstyle mathsize="normal"><mi>a</mi></mstyle>
+<mi>r</mi>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">6.2</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Rotational and Linear Variables</span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="fs-id1167063572785">We can now begin to see how rotational quantities like  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mi>θ</mi>
+</mrow><annotation-xml encoding="MathML-Content"><mi>θ</mi></annotation-xml></semantics></math></span>,  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal"><mtext>ω</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal"><mtext>ω</mtext></mstyle></annotation-xml></semantics></math></span>, and  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal"><mtext>α</mtext></mstyle></annotation-xml></semantics></math></span>   are related to each other. For example, if a motorcycle wheel that starts at rest has a large angular acceleration for a fairly long time, it ends up spinning rapidly and rotates through many revolutions. Putting this in terms of the variables, if the wheel’s angular acceleration  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal"><mtext>α</mtext></mstyle></annotation-xml></semantics></math></span>  is large for a long period of time <em data-effect="italics">t</em>, then the final angular velocity  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal"><mtext>ω</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal"><mtext>ω</mtext></mstyle></annotation-xml></semantics></math></span>  and angle of rotation  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mi>θ</mi>
+</mrow><annotation-xml encoding="MathML-Content"><mi>θ</mi></annotation-xml></semantics></math></span>  are large. In the case of linear motion, if an object starts at rest and undergoes a large linear acceleration, then it has a large final velocity and will have traveled a large distance.</p>
+<p id="fs-id1167067085294">The <span data-type="term" group-by="k" id="term-00006">kinematics of rotational motion</span> describes the relationships between the angle of rotation, angular velocity, angular acceleration, and time. It only <em data-effect="italics">describes</em> motion—it does not include any forces or masses that may affect rotation (these are part of dynamics). Recall the kinematics equation for linear motion:  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mi>t</mi>
+</mrow></annotation-xml></semantics></math></span>  (constant <strong>a</strong>).</p>
+<p id="fs-id1167066854116">As in linear kinematics, we assume <strong>a</strong> is constant, which means that angular acceleration  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle></annotation-xml></semantics></math></span>  is also a constant, because  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mi>r</mi><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>a</mi></mstyle><mo>=</mo><mi>r</mi><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow></annotation-xml></semantics></math></span> . The equation for the kinematics relationship between  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle></annotation-xml></semantics></math></span>,  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle></annotation-xml></semantics></math></span>, and <em data-effect="italics">t</em> is</p>
+<p id="fs-id1167067042841"> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mi>t</mi><mo stretchy="false">(</mo><mtext>constant</mtext><mtext>α</mtext><mo stretchy="false">)</mo><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mi>t</mi><mo stretchy="false">(</mo><mtext>constant</mtext><mtext>α</mtext><mo stretchy="false">)</mo><mo>,</mo>
+</mrow></annotation-xml></semantics></math></span>
+</p>
+<p id="fs-id1167067021212">where  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+</mrow></annotation-xml></semantics></math></span>  is the initial angular velocity. Notice that the equation is identical to the linear version, except with angular analogs of the linear variables. In fact, all of the linear kinematics equations have rotational analogs, which are given in <a aria-label="View Table 6.3" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-3-rotational-motion#Table_06_03">Table 6.3</a>. These equations can be used to solve rotational or linear kinematics problem in which <strong>a</strong> and  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle></annotation-xml></semantics></math></span>  are constant.</p>
+<div class="os-table" id="Table_06_03"><div class="table-scroll"><table data-id="Table_06_03" data-summary="The table has two columns labeled Rotational and Linear, and a third unlabeled column. The first row under these labels has a theta equals macron omega times t under Rotational and x equals macron v times t. The first cell of the next row contains omega equals omega sub 0 plus alpha times t. The second cell on the row contains v equals v sub 0 plus alpha times t. The third unlabeled column on this row and the next two indicates constant alpha and a. The third set of formulas includes theta equals omega sub 0 times t plus one-half of alpha times t squared. The last row of formulas has the following formula in the first column: omega squared is equal to omega sub 0 squared plus two times alpha times theta. The formula in the second column is v squared equals v sub 0 squared plus two times alpha times x."><thead> <tr>
+<th data-align="center" scope="col">Rotational</th>
+<th data-align="center" scope="col">Linear</th>
+<th scope="col">
+</th></tr>
+</thead><tbody>
+<tr>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>θ</mi><mo>=</mo><mover accent="true">
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mo>¯</mo>
+</mover>
+<mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>θ</mi><mo>=</mo><mover accent="true">
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mo>¯</mo>
+</mover>
+<mi>t</mi>
+</mrow></annotation-xml></semantics></math>
+</td>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><mover accent="true">
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mo>¯</mo>
+</mover>
+<mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><mover accent="true">
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mo>¯</mo>
+</mover>
+<mi>t</mi>
+</mrow></annotation-xml></semantics></math> </td>
+<td>
+</td></tr>
+<tr>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mi>t</mi>
+</mrow></annotation-xml></semantics></math> </td>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mi>t</mi>
+</mrow></annotation-xml></semantics></math> </td>
+<td>constant  <math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle></annotation-xml></semantics></math>, <strong>a</strong></td>
+</tr>
+<tr>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>θ</mi><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mi>t</mi><mo>+</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>θ</mi><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mi>t</mi><mo>+</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow></annotation-xml></semantics></math> </td>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>x</mi><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+<mi>t</mi><mo>+</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>x</mi><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+<mi>t</mi><mo>+</mo><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><msup>
+<mi>t</mi>
+<mn>2</mn>
+</msup>
+</mrow></annotation-xml></semantics></math> </td>
+<td>constant  <math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle></annotation-xml></semantics></math>, <strong>a</strong></td>
+</tr>
+<tr>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>2</mn>
+</msup>
+<mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<msup>
+<mrow></mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mi>θ</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>2</mn>
+</msup>
+<mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<msup>
+<mrow></mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mi>θ</mi>
+</mrow></annotation-xml></semantics></math> </td>
+<td> <math display="inline"><semantics><mrow>
+<mrow>
+<msup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+</msup>
+<mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+<msup>
+<mrow></mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mi>x</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msup>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>2</mn>
+</msup>
+<mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+<msup>
+<mrow></mrow>
+<mn>2</mn>
+</msup>
+<mo>+</mo><mn>2</mn><mstyle mathsize="normal" mathvariant="bold"><mtext>a</mtext></mstyle><mi>x</mi>
+</mrow></annotation-xml></semantics></math>
+</td>
+<td>constant  <math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle></annotation-xml></semantics></math>, <strong>a</strong></td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">6.3</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Equations for Rotational Kinematics</span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="fs-id1167066862605">In these equations,  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+</mrow></annotation-xml></semantics></math></span>  and  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+</mrow></annotation-xml></semantics></math></span>  are initial values,  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mi>t</mi>
+<mn>0</mn>
+</msub>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mi>t</mi>
+<mn>0</mn>
+</msub>
+</mrow></annotation-xml></semantics></math></span>  is zero, and the average angular velocity  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span>  and average velocity  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span>  are </p>
+<div data-type="equation" id="fs-id1164567569936"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mover accent="true">
+<mtext>ω</mtext>
+<mo>¯</mo>
+</mover></mstyle>
+<mo>=</mo><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mtext>and</mtext><mover accent="true">
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mo>¯</mo>
+</mover>
+<mo>=</mo><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mtext>.</mtext>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mover accent="true">
+<mtext>ω</mtext>
+<mo>¯</mo>
+</mover></mstyle>
+<mo>=</mo><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mtext>and</mtext><mover accent="true">
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mo>¯</mo>
+</mover>
+<mo>=</mo><mfrac>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mi>v</mi></mstyle>
+</mrow>
+<mn>2</mn>
+</mfrac>
+<mtext>.</mtext>
+</mrow></annotation-xml></semantics></math></div> <div class="os-equation-number">
+<span class="os-number">6.11</span>
+</div>
+</div>
+<div class="fun-in-physics ui-has-child-title" data-type="note" id="fs-id1167067087780"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Fun In Physics</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Storm Chasing</span>
+</h4>
+<div class="os-figure" id="Figure_06_03_Tornado"><figure class="ui-has-child-figcaption" data-id="Figure_06_03_Tornado">
+<span data-alt="The figure shows a photograph of a dark tornado funnel cloud touching the ground and kicking up a lot of debris." data-type="media" id="fs-id1167067174243">
+<img alt="The figure shows a photograph of a dark tornado funnel cloud touching the ground and kicking up a lot of debris." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/bf7ccb759dff3fdd5d6f6226960642f734c10808" height="323" loading="lazy" src="b394422712b6c80401cda91e.webp" width="488"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">6.10</span>
+<span class="os-divider"> </span>
+<span class="os-caption">Tornadoes descend from clouds in funnel-like shapes that spin violently. (Daphne Zaras, U.S. National Oceanic and Atmospheric Administration)</span>
+</figcaption></figure></div>
+<p id="fs-id1167066880265">Storm chasers tend to fall into one of four groups: Amateurs chasing tornadoes as a hobby, atmospheric scientists gathering data for research, weather watchers for news media, or scientists having fun under the guise of work. Storm chasing is a dangerous pastime because tornadoes can change course rapidly with little warning. Since storm chasers follow in the wake of the destruction left by tornadoes, changing flat tires due to debris left on the highway is common. The most active part of the world for tornadoes, called <em data-effect="italics">tornado alley</em>, is in the central United States, between the Rocky Mountains and Appalachian Mountains.</p>
+<p id="fs-id1167067107305">Tornadoes are perfect examples of rotational motion in action in nature. They come out of severe thunderstorms called supercells, which have a column of air rotating around a horizontal axis, usually about four miles across. The difference in wind speeds between the strong cold winds higher up in the atmosphere in the jet stream and weaker winds traveling north from the Gulf of Mexico causes the axis of the column of rotating air to shift as the storm travels so that the axis becomes vertical, creating a tornado.</p>
+<p id="fs-id1167063514018">Tornadoes produce wind speeds as high as 500 km/h (approximately 300 miles/h), particularly at the bottom where the funnel is narrowest because the rate of rotation increases as the radius decreases. They blow houses away as if they were made of paper and have been known to pierce tree trunks with pieces of straw.</p>
+</div></section></div>
+</section>
+<section data-depth="1" id="fs-id1167067154476"><h3 data-type="title">Torque</h3>
+<p id="fs-id1167067276602">If you have ever spun a bike wheel or pushed a merry-go-round, you know that force is needed to change angular velocity. The farther the force is applied from the <span class="no-emphasis" data-type="term" group-by="p" id="term-00007">pivot point</span> (or <span class="no-emphasis" data-type="term" group-by="f" id="term-00008">fulcrum</span>), the greater the angular acceleration. For example, a door opens slowly if you push too close to its hinge, but opens easily if you push far from the hinges. Furthermore, we know that the more massive the door is, the more slowly it opens; this is because angular acceleration is inversely proportional to mass. These relationships are very similar to the relationships between force, mass, and acceleration from Newton’s second law of motion. Since we have already covered the angular versions of distance, velocity and time, you may wonder what the angular version of force is, and how it relates to linear force.</p>
+<p id="fs-id1167066840204">The angular version of force is <span data-type="term" group-by="t" id="term-00009">torque</span> <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>τ</mi></mstyle>
+</mrow><annotation-xml encoding="MathML-Content"><mstyle mathsize="normal" mathvariant="bold"><mi>τ</mi></mstyle></annotation-xml></semantics></math></span>, which is the turning effectiveness of a force. See <a aria-label="View Figure 6.11" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-3-rotational-motion#Figure_06_03_MerryGoRound">Figure 6.11</a>. The equation for the magnitude of torque is </p>
+<div class="unnumbered" data-label="" data-type="equation" id="fs-id1167067092506">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>τ</mi></mstyle><mo>=</mo><mi>r</mi><mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle><mi>sin</mi><mi>θ</mi><mo>,</mo>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mi>τ</mi></mstyle><mo>=</mo><mi>r</mi><mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle><mi>sin</mi><mi>θ</mi><mo>,</mo>
+</mrow></annotation-xml></semantics></math></div>
+</div>
+<p id="fs-id1167067133758">where <em data-effect="italics">r</em> is the distance from the pivot point to the point where the force is applied, <strong>F</strong> is the magnitude of the linear force, and  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mi>θ</mi>
+</mrow><annotation-xml encoding="MathML-Content"><mi>θ</mi></annotation-xml></semantics></math></span>  is the angle between the lever arm and the force. The <span data-type="term" group-by="l" id="term-00010">lever arm</span> is the vector from the point of rotation (pivot point or fulcrum) to the location where force is applied. Since the magnitude of the lever arm is a distance, its units are in meters, and torque has units of N⋅m. Torque is a vector quantity and has the same direction as the angular acceleration that it produces.</p>
+<div class="os-figure" id="Figure_06_03_MerryGoRound"><figure class="ui-has-child-figcaption" data-id="Figure_06_03_MerryGoRound">
+<span data-alt="The figure shows an illustration of a merry-go-round with a radius of r and a man pushing on a bar on the circumference with an arrow indicating a force of F. To the right of the diagram, it is noted that F is perpendicular to r for maximum alpha." data-type="media" id="fs-id1167067216859">
+<img alt="The figure shows an illustration of a merry-go-round with a radius of r and a man pushing on a bar on the circumference with an arrow indicating a force of F. To the right of the diagram, it is noted that F is perpendicular to r for maximum alpha." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/7d210841a4dd2c86c7187ebd4e8e8aeb535e3490" height="382" loading="lazy" src="6fcbc0653a950dc6372884c1.webp" width="450"/>
+</span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">6.11</span>
+<span class="os-divider"> </span>
+<span class="os-caption">A man pushes a merry-go-round at its edge and perpendicular to the lever arm to achieve maximum torque.</span>
+</figcaption></figure></div>
+<p id="fs-id1167063519501">Applying a stronger torque will produce a greater angular acceleration. For example, the harder the man pushes the merry-go-round in <a aria-label="View Figure 6.11" class="autogenerated-content" href="https://openstax.org/books/physics/pages/6-3-rotational-motion#Figure_06_03_MerryGoRound">Figure 6.11</a>, the faster it accelerates. Furthermore, the more massive the merry-go-round is, the slower it accelerates for the same torque. If the man wants to maximize the effect of his force on the merry-go-round, he should push as far from the center as possible to get the largest lever arm and, therefore, the greatest torque and angular acceleration. Torque is also maximized when the force is applied perpendicular to the lever arm.</p>
+<div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167067080489"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167067032148"><span>[BL]</span><span>[OL]</span><span>[AL]</span> Demonstrate the physical relationships between torque, force, angle of application of force, and length of lever arm by using levers of different lengths. Help students make the connections between the physical observations and mathematical relationships. For instance, torque is maximum when the force is applied exactly perpendicular to the lever arm because  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>sin</mi><mi>θ</mi><mo>=</mo><mn>1</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>sin</mi><mi>θ</mi><mo>=</mo><mn>1</mn>
+</mrow></annotation-xml></semantics></math></span>  for  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>θ</mi><mo>=</mo><mn>90</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>θ</mi><mo>=</mo><mn>90</mn>
+</mrow></annotation-xml></semantics></math></span>  degrees.</p>
+</div></section></div>
+</section>
+<section data-depth="1" id="fs-id1167066946926"><h3 data-type="title">Solving Rotational Kinematics and Torque Problems</h3>
+<p id="fs-id1167067000304">Just as linear forces can balance to produce zero net force and no linear acceleration, the same is true of rotational motion. When two torques of equal magnitude act in opposing directions, there is no net torque and no angular acceleration, as you can see in the following video. If zero net torque acts on a system spinning at a constant angular velocity, the system will continue to spin at the same angular velocity.</p>
+<div class="watch-physics ui-has-child-title" data-type="note" id="fs-id1167066945228"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Watch Physics</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Introduction to Torque</span>
+</h4>
+<p id="fs-id1167063504147">This <a aria-label="Go to video" href="https://openstax.org/l/28torque" rel="noopener nofollow" target="_blank">video</a> defines torque in terms of moment arm (which is the same as lever arm). It also covers a problem with forces acting in opposing directions about a pivot point. (At this stage, you can ignore Sal’s references to work and mechanical advantage.)</p>
+<!--     <para><link url="https://openstax.org/l/28torque">Introduction to torque | Moments, torque, and angular momentum | Physics | Khan Academy</link></para>-->
+<div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex061" data-injected-from-version="11" data-is-vocab="false" data-tags="k12phys-ch06 k12phys-ch06-s03 k12phys-ch06-s03-lo02 k12phys-ch06-ex061 lo:stax-phys:9-3-2 exid:k12phys-ch06-ex061 context-cnxmod:8d08196a-2a03-4ab9-981b-fbc0d4239ad4 dok:2 context-cnxmod:1957734f-0995-487c-835f-646793a721c5 context-cnxmod:c1505a0e-a9a3-413a-a1e1-ee34b19f44b7 aplo:stax-apphys:3.F.1.4 aplo:stax-apphys:3.F.1.5 k12phys book:stax-phys book:stax-k12phys filter-type:import:has-context grasp-check time:short blooms:3 assignment-type:homework filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:9-3-stability" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="530780">
+<div data-type="question-stem"><div class="os-has-iframe os-has-link" data-type="switch"><a aria-label="Go to Access multimedia content" class="os-is-link" data-media="print" href="http://openstax.org/books/physics/pages/6-3-rotational-motion" rel="noopener nofollow" target="_blank">Access multimedia content</a>
+</div>
+<p>If the net torque acting on the ruler from the example was positive instead of zero, what would this say about the angular acceleration? What would happen to the ruler over time?</p></div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">The ruler is in a state of rotational equilibrium so it will not rotate about its center of mass. Thus, the angular acceleration will be zero.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">The ruler is not in a state of rotational equilibrium so it will not rotate about its center of mass. Thus, the angular acceleration will be zero.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">The ruler is not in a state of rotational equilibrium so it will rotate about its center of mass. Thus, the angular acceleration will be non-zero.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">The ruler is in a state of rotational equilibrium so it will rotate about its center of mass. Thus, the angular acceleration will be non-zero.</div>
+</li>
+</ol>
+</div>
+</div></div></section></div><p id="fs-id1167067199067">Now let’s look at examples applying rotational kinematics to a fishing reel and the concept of torque to a merry-go-round.</p>
+<div class="worked-example ui-has-child-title" data-type="note" id="fs-id1167067143114"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Worked Example</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Calculating the Time for a Fishing Reel to Stop Spinning</span>
+</h4>
+<div class="06-ex062 unnumbered" data-label="" data-type="exercise" id="fs-id1167067060995"><header></header><section>
+<div data-type="problem" id="fs-id1167067239651"><div class="os-problem-container">
+<p id="fs-id1167067101836">A deep-sea fisherman uses a fishing rod with a reel of radius 4.50 cm. A big fish takes the bait and swims away from the boat, pulling the fishing line from his fishing reel. As the fishing line unwinds from the reel, the reel spins at an angular velocity of 220 rad/s. The fisherman applies a brake to the spinning reel, creating an angular acceleration of −300 rad/s<sup>2</sup>. How long does it take the reel to come to a stop?</p>
+<span data-alt="The figure shows an illustration of a fishing reel. The fishing line has an arrow pointing away from the reel with a Linear or translational qualities label pointing to x, v, and a. The radius of the reel to where the string is labeled r=4.5. The Direction of rotation is labeled with an arrow pointing counterclockwise and a Rotational qualities label pointing to theta, omega, and alpha." data-type="media" id="fs-id1167067067074">
+<img alt="The figure shows an illustration of a fishing reel. The fishing line has an arrow pointing away from the reel with a Linear or translational qualities label pointing to x, v, and a. The radius of the reel to where the string is labeled r=4.5. The Direction of rotation is labeled with an arrow pointing counterclockwise and a Rotational qualities label pointing to theta, omega, and alpha." data-media-type="image/jpeg" data-original-src="/apps/archive/20260604.144757/resources/d5eb27afc2bab7edcda4024a4b59125a5fc53c5e" height="272" loading="lazy" src="802a06391eaf59fec57de807.webp" width="450"/>
+</span>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167067071744"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Strategy</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167067012137">We are asked to find the time <em data-effect="italics">t </em>for the reel to come to a stop. The magnitude of the initial angular velocity is  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>=</mo><mn>220</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>=</mo><mn>220</mn>
+</mrow></annotation-xml></semantics></math></span>  rad/s, and the magnitude of the final angular velocity  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle><mo>=</mo><mn>0</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle><mo>=</mo><mn>0</mn>
+</mrow></annotation-xml></semantics></math></span> . The signed magnitude of the angular acceleration is  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mo>=</mo><mo>−</mo><mn>3</mn><mn>0</mn><mn>0</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mo>=</mo><mo>−</mo><mn>3</mn><mn>0</mn><mn>0</mn>
+</mrow></annotation-xml></semantics></math></span>  rad/s<sup>2</sup>, where the minus sign indicates that it acts in the direction opposite to the angular velocity. Looking at the rotational kinematic equations, we see all quantities but <em data-effect="italics">t </em>are known in the equation  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mi>t</mi>
+</mrow></annotation-xml></semantics></math></span>, making it the easiest equation to use for this problem.</p>
+</div></section></div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-label="" data-type="solution" id="fs-id1167067153503">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><div class="os-solution-container"><div data-type="title">Solution</div>
+<p id="fs-id1167066828770">The equation to use is  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle><mo>=</mo><msub>
+<mstyle mathsize="normal" mathvariant="bold"><mtext>ω</mtext></mstyle>
+<mn>0</mn>
+</msub>
+<mo>+</mo><mstyle mathsize="normal" mathvariant="bold"><mtext>α</mtext></mstyle><mi>t</mi>
+</mrow></annotation-xml></semantics></math></span> .</p>
+<p id="fs-id1167067083914">We solve the equation algebraically for <em data-effect="italics">t</em>, and then insert the known values.</p>
+<div data-label="" data-type="equation" id="fs-id1167067049878"> <div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>t</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mtext>ω</mtext><mo>−</mo><msub>
+<mtext>ω</mtext>
+<mn>0</mn>
+</msub>
+</mrow>
+<mtext>α</mtext>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>0</mn><mo>−</mo><mn>220</mn><mspace width="0.3em"></mspace><mtext>rad/s</mtext>
+</mrow>
+<mrow>
+<mo>−</mo><mn>300</mn><msup>
+<mrow>
+<mtext>rad/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>0.733</mn><mspace width="0.3em"></mspace><mtext>s</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>t</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mtext>ω</mtext><mo>−</mo><msub>
+<mtext>ω</mtext>
+<mn>0</mn>
+</msub>
+</mrow>
+<mtext>α</mtext>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mfrac>
+<mrow>
+<mn>0</mn><mo>−</mo><mn>220</mn><mspace width="0.3em"></mspace><mtext>rad/s</mtext>
+</mrow>
+<mrow>
+<mo>−</mo><mn>300</mn><msup>
+<mrow>
+<mtext>rad/s</mtext>
+</mrow>
+<mn>2</mn>
+</msup>
+</mrow>
+</mfrac>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>0.733</mn><mspace width="0.3em"></mspace><mtext>s</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">6.12</span>
+</div>
+</div>
+</div></section>
+</details>
+<div data-type="commentary" id="fs-id1167066881467"><div data-type="title">Discussion</div>
+<p id="fs-id1167066961284">The time to stop the reel is fairly small because the acceleration is fairly large. Fishing lines sometimes snap because of the forces involved, and fishermen often let the fish swim for a while before applying brakes on the reel. A tired fish will be slower, requiring a smaller acceleration and therefore a smaller force.</p>
+</div>
+</section></div>
+</div></section></div><div class="worked-example ui-has-child-title" data-type="note" id="fs-id1167063518693"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Worked Example</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Calculating the Torque on a Merry-Go-Round</span>
+</h4>
+<div class="06-ex063 unnumbered" data-label="" data-type="exercise" id="fs-id1167067317415"><header></header><section>
+<div data-type="problem" id="fs-id1167063515166"><div class="os-problem-container">
+<p id="fs-id1167063515168">Consider the man pushing the playground merry-go-round in <a aria-label="View Figure 6.11" class="has-default-text autogenerated-content" href="https://openstax.org/books/physics/pages/6-3-rotational-motion#Figure_06_03_MerryGoRound">Figure 6.11</a>. He exerts a force of 250 N at the edge of the merry-go-round and perpendicular to the radius, which is 1.50 m. How much torque does he produce? Assume that friction acting on the merry-go-round is negligible.</p>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-id1167063798554"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">Strategy</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-id1167063725991">To find the torque, note that the applied force is perpendicular to the radius and that friction is negligible.</p></div></section></div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-label="" data-type="solution" id="fs-id1167066957436">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><div class="os-solution-container"><div data-type="title">Solution</div>
+<div data-label="" data-type="equation" id="fs-id1167067016015">
+<div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>τ</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mi>r</mi><mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle><mi>sin</mi><mi>θ</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.50</mn><mspace width="0.3em"></mspace><mtext>m</mtext>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mn>250</mn><mspace width="0.3em"></mspace><mtext>N</mtext>
+</mrow>
+<mo>)</mo></mrow><mi>sin</mi><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>375</mn><mspace width="0.3em"></mspace><mtext>N</mtext><mo>⋅</mo><mtext>m</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mtable>
+<mtr rowalign="center">
+<mtd columnalign="right" rowalign="center">
+<mi>τ</mi>
+</mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mi>r</mi><mstyle mathsize="normal" mathvariant="bold"><mi>F</mi></mstyle><mi>sin</mi><mi>θ</mi>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.50</mn><mspace width="0.3em"></mspace><mtext>m</mtext>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mn>250</mn><mspace width="0.3em"></mspace><mtext>N</mtext>
+</mrow>
+<mo>)</mo></mrow><mi>sin</mi><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mi>π</mi>
+<mn>2</mn>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mo>.</mo>
+</mrow>
+</mtd>
+</mtr>
+<mtr rowalign="center">
+<mtd rowalign="center"></mtd>
+<mtd rowalign="center">
+<mo>=</mo>
+</mtd>
+<mtd columnalign="left" rowalign="center">
+<mrow>
+<mn>375</mn><mspace width="0.3em"></mspace><mtext>N</mtext><mo>⋅</mo><mtext>m</mtext>
+</mrow>
+</mtd>
+</mtr>
+</mtable>
+</mrow></annotation-xml></semantics></math></div>
+<div class="os-equation-number">
+<span class="os-number">6.13</span>
+</div>
+</div></div></section>
+</details>
+<div data-type="commentary" id="fs-id1167067061024"><div data-type="title">Discussion</div>
+<p id="fs-id1167063491386">The man maximizes the torque by applying force perpendicular to the lever arm, so that  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>θ</mi><mo>=</mo><mfrac>
+<mtext>π</mtext>
+<mn>2</mn>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>θ</mi><mo>=</mo><mfrac>
+<mtext>π</mtext>
+<mn>2</mn>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>  and  <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>sin</mi><mi>θ</mi><mo>=</mo><mn>1</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>sin</mi><mi>θ</mi><mo>=</mo><mn>1</mn>
+</mrow></annotation-xml></semantics></math></span> . The man also maximizes his torque by pushing at the outer edge of the merry-go-round, so that he gets the largest-possible lever arm. </p>
+</div>
+</section></div>
+</div></section></div>
+</section>
+<section class="practice-problems" data-depth="1" id="fs-id1167067275771"><h3 data-type="title">Practice Problems</h3><div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex064" data-injected-from-version="11" data-is-vocab="false" data-tags="k12phys-ch06 k12phys-ch06-s03 k12phys-ch06-s03-lo03 k12phys-ch06-ex064 exid:k12phys-ch06-ex064 context-cnxmod:8d08196a-2a03-4ab9-981b-fbc0d4239ad4 context-cnxmod:68822020-6b21-44a5-b553-c7500036c370 lo:stax-phys:10-3-2 os-practice-problems dok:1 k12phys book:stax-phys book:stax-k12phys aplo:stax-apphys:4.D.1.1 aplo:stax-apphys:4.D.3.1 blooms:3 assignment-type:homework filter-type:import:hs inbook-yes time:medium" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="613709"><span class="os-number">15</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">How much torque does a person produce if he applies a <math alttext="12\,\text{N}">
+<mn>12</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N</mtext>
+</math> force <math alttext="1.0\,\text{m}">
+<mn>1.0</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>m</mtext>
+</math> away from the pivot point, perpendicularly to the lever arm?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="\frac{1}{144}\,\text{N-m}">
+<mfrac>
+<mn>1</mn>
+<mn>144</mn>
+</mfrac>
+<mspace width="thinmathspace"></mspace>
+<mtext>N-m</mtext>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="\frac{1}{12}\,\text{N-m}">
+<mfrac>
+<mn>1</mn>
+<mn>12</mn>
+</mfrac>
+<mspace width="thinmathspace"></mspace>
+<mtext>N-m</mtext>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="12\,\text{N-m}">
+<mn>12</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N-m</mtext>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="144\,\text{N-m}">
+<mn>144</mn>
+<mspace width="thinmathspace"></mspace>
+<mtext>N-m</mtext>
+</math></div>
+</li>
+</ol>
+</div>
+</div>
+</div><div data-type="exercise" id="fs-id1167066955812"><header></header><section>
+<div data-type="problem" id="fs-id1167066955817">
+<span class="os-number">16</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-id1167063514150">
+<link class="os-embed" url="#ost/api/ex/k12phys-ch06-ex065"/>
+</para>-->
+<p id="fs-id1164566927649">An object’s angular velocity changes from 3 rad/s clockwise to 8 rad/s clockwise in 5 s. What is its angular acceleration?</p>
+<ol id="fs-id1164563482727" type="a">
+<li>0.6 rad/s<sup>2</sup></li>
+<li>1.6 rad/s<sup>2</sup></li>
+<li>1 rad/s<sup>2</sup></li>
+<li>5 rad/s<sup>2</sup></li>
+</ol>
+</div>
+</div>
+</section></div>
+</section><section class="check-understanding" data-depth="1" id="fs-id1167066860767"><h3 data-type="title">Check Your Understanding</h3>
+<div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex066" data-injected-from-version="10" data-is-vocab="false" data-tags="os-practice-concepts k12phys-ch06 k12phys-ch06-s03 k12phys-ch06-s03-lo01 k12phys-ch06-ex066 exid:k12phys-ch06-ex066 context-cnxmod:8d08196a-2a03-4ab9-981b-fbc0d4239ad4 type:conceptual-or-recall context-cnxmod:316775f2-8777-474c-b787-e64ea38cb026 lo:stax-phys:6-1-1 context-cnxmod:33836eec-f196-4963-a304-2949346b26d4 aplo:stax-apphys:3.A.2.1 aplo:stax-apphys:3.A.1.1 dok:1 aplo:stax-apphys:3.F.2.1 k12phys book:stax-phys book:stax-k12phys aplo:stax-apphys:4.D.1.1 book:stax-apphys time:short science-practice:argumentation filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:6-1-rotation-angle-and-angular-velocity assignment-type:reading blooms:1" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="530790"><span class="os-number">17</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">What is angular acceleration?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Angular acceleration is the rate of change of the angular displacement.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Angular acceleration is the rate of change of the angular velocity.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Angular acceleration is the rate of change of the linear displacement.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">Angular acceleration is the rate of change of the linear velocity.</div>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="os-exercise" data-type="exercise" id="fs-id1167066968052"><header></header><section>
+<div data-type="problem" id="fs-id1167066960164">
+<span class="os-number">18</span><span class="os-divider">. </span>
+<div class="os-problem-container">
+<!--<para id="fs-id1167066960167">
+            <link class="os-embed" url="#ost/api/ex/k12phys-ch06-ex067"/>
+          </para>-->
+<p id="fs-id1164566566267">What is the equation for angular acceleration, 	<em data-effect="italics">α</em>? Assume <em data-effect="italics">θ</em> is the angle, <em data-effect="italics">ω</em> is the angular velocity, and <em data-effect="italics">t</em> is time.</p>
+<ol id="fs-id1164565201338" type="a">
+<li> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>α</mi><mo>=</mo><mfrac>
+<mrow>
+<mi>Δ</mi><mi>ω</mi>
+</mrow>
+<mrow>
+<mi>Δ</mi><mi>t</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>α</mi><mo>=</mo><mfrac>
+<mrow>
+<mi>Δ</mi><mi>ω</mi>
+</mrow>
+<mrow>
+<mi>Δ</mi><mi>t</mi>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> </li>
+<li> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>α</mi><mo>=</mo><mi>Δ</mi><mi>ω</mi><mi>Δ</mi><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>α</mi><mo>=</mo><mi>Δ</mi><mi>ω</mi><mi>Δ</mi><mi>t</mi>
+</mrow></annotation-xml></semantics></math> </li>
+<li> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>α</mi><mo>=</mo><mfrac>
+<mrow>
+<mi>Δ</mi><mi>θ</mi>
+</mrow>
+<mrow>
+<mi>Δ</mi><mi>t</mi>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>α</mi><mo>=</mo><mfrac>
+<mrow>
+<mi>Δ</mi><mi>θ</mi>
+</mrow>
+<mrow>
+<mi>Δ</mi><mi>t</mi>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> </li>
+<li> <math display="inline"><semantics><mrow>
+<mrow>
+<mi>α</mi><mo>=</mo><mi>Δ</mi><mi>θ</mi><mi>Δ</mi><mi>t</mi>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>α</mi><mo>=</mo><mi>Δ</mi><mi>θ</mi><mi>Δ</mi><mi>t</mi>
+</mrow></annotation-xml></semantics></math> </li>
+</ol>
+</div>
+</div>
+</section></div>
+<div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex068" data-injected-from-version="10" data-is-vocab="false" data-tags="os-practice-concepts k12phys-ch06 k12phys-ch06-s03 k12phys-ch06-s03-lo02 k12phys-ch06-ex068 exid:k12phys-ch06-ex068 context-cnxmod:8d08196a-2a03-4ab9-981b-fbc0d4239ad4 context-cnxmod:68822020-6b21-44a5-b553-c7500036c370 lo:stax-phys:10-3-2 context-cnxmod:0857d897-d418-456a-bb95-4263bfc4f956 dok:1 k12phys book:stax-phys book:stax-k12phys aplo:stax-apphys:4.D.3.1 time:short filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:10-3-dynamics-of-rotational-motion-rotational-inertia assignment-type:reading blooms:1" data-type="injected-exercise">
+<div data-formats="multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="530796"><span class="os-number">19</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">Which of the following best describes torque?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">It is the rotational equivalent of a force.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">It is the force that affects linear motion.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">It is the rotational equivalent of acceleration.</div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content">It is the acceleration that affects linear motion.</div>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="os-embed autogenerated-content" data-injected-from-nickname="" data-injected-from-url="https://exercises.openstax.org/api/exercises?q=tag:k12phys-ch06-ex069" data-injected-from-version="9" data-is-vocab="false" data-tags="os-practice-concepts k12phys-ch06 k12phys-ch06-s03 k12phys-ch06-s03-lo02 k12phys-ch06-ex069 exid:k12phys-ch06-ex069 context-cnxmod:8d08196a-2a03-4ab9-981b-fbc0d4239ad4 context-cnxmod:68822020-6b21-44a5-b553-c7500036c370 lo:stax-phys:10-3-2 context-cnxmod:0857d897-d418-456a-bb95-4263bfc4f956 dok:2 k12phys book:stax-phys book:stax-k12phys aplo:stax-apphys:4.D.3.1 time:short filter-type:import:hs inbook-yes book-slug:college-physics-ap-courses module-slug:college-physics-ap-courses:10-3-dynamics-of-rotational-motion-rotational-inertia assignment-type:reading blooms:1" data-type="injected-exercise">
+<div data-formats="free-response multiple-choice" data-is-answer-order-important="true" data-type="exercise-question" id="531241"><span class="os-number">20</span>
+<span class="os-divider">. </span>
+<div class="os-problem-container">
+<div data-type="question-stem">What is the equation for torque?</div>
+<ol data-type="question-answers" type="a">
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="\tau = {F\,cos\theta}\,{r}">
+<mi>τ<!-- &#964; --></mi>
+<mo>=</mo>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>F</mi>
+<mspace width="thinmathspace"></mspace>
+<mi>c</mi>
+<mi>o</mi>
+<mi>s</mi>
+<mi>θ<!-- &#952; --></mi>
+</mrow>
+<mspace width="thinmathspace"></mspace>
+<mrow class="MJX-TeXAtom-ORD">
+<mi>r</mi>
+</mrow>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="\tau = \frac{F\sin \theta}{r}">
+<mi>τ<!-- &#964; --></mi>
+<mo>=</mo>
+<mfrac>
+<mrow>
+<mi>F</mi>
+<mi>sin</mi>
+<mo>⁡<!-- &#8289; --></mo>
+<mi>θ<!-- &#952; --></mi>
+</mrow>
+<mi>r</mi>
+</mfrac>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="\tau = rF\!\cos \theta">
+<mi>τ<!-- &#964; --></mi>
+<mo>=</mo>
+<mi>r</mi>
+<mi>F</mi>
+<mspace width="negativethinmathspace"></mspace>
+<mi>cos</mi>
+<mo>⁡<!-- &#8289; --></mo>
+<mi>θ<!-- &#952; --></mi>
+</math></div>
+</li>
+<li data-correctness="" data-type="question-answer">
+<div data-type="answer-content"><math alttext="\tau = rF\!\sin \theta">
+<mi>τ<!-- &#964; --></mi>
+<mo>=</mo>
+<mi>r</mi>
+<mi>F</mi>
+<mspace width="negativethinmathspace"></mspace>
+<mi>sin</mi>
+<mo>⁡<!-- &#8289; --></mo>
+<mi>θ<!-- &#952; --></mi>
+</math></div>
+</li>
+</ol>
+</div>
+</div>
+</div><div class="os-teacher ui-has-child-title" data-type="note" id="fs-id1167067150218"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Teacher Support</span>
+</h3></header><section>
+<div class="os-note-body"><h4 class="os-subtitle" data-type="title">
+<span class="os-subtitle-label">Teacher Support</span>
+</h4>
+<p id="fs-id1167067226478">Use the Check Your Understanding questions to assess whether students master the learning objectives of this section. If students are struggling with a specific objective, these questions will help identify which objective is causing the problem and direct students to the relevant content.</p></div></section></div>
+</section>
+</div></article><footer><p>Adapted from OpenStax, Physics, 6.3 Rotational Motion. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/physics/pages/6-3-rotational-motion">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a></p></footer></body></html>

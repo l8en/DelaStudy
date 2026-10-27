@@ -1,0 +1,70 @@
+{
+  "verifiedOn": "2026-10-26",
+  "appName": "DelaStudy",
+  "currentVideo": "DelaStudy-Webcam-Ready.mp4",
+  "brandingChanges": [
+    "All five public MP4 filenames use DelaStudy.",
+    "Both narration scripts and code presenter notes use DelaStudy.",
+    "Earlier presentation title cards and the renderer's brand label use DelaStudy.",
+    "Captured lesson-credit branding is replaced with DelaStudy in every export.",
+    "Preview images regenerated from the updated movies.",
+    "Technical project identifiers and native app persistence paths remain unchanged."
+  ],
+  "currentVideoProperties": {
+    "audioTracks": 0,
+    "bytes": 85862319,
+    "codec": "avc1",
+    "creationEpoch": 1793066311.2726953,
+    "duration": 168,
+    "height": 1080,
+    "videoTracks": 1,
+    "width": 1920
+  },
+  "currentVideoSHA256": "ffcbf5346565bac35ec12aba661af5284f59681cb91243d66ea13f7d9946573e",
+  "narrationWords": 349,
+  "codePresenterSpokenWords": 363,
+  "screenTextAudits": [
+    {
+      "file": "DelaStudy-Webcam-Ready.mp4",
+      "sampledFrames": 168,
+      "sampleIntervalSeconds": 1,
+      "oldBrandMatchCount": 0
+    },
+    {
+      "file": "DelaStudy-Screen-Recording.mp4",
+      "sampledFrames": 19,
+      "sampleIntervalSeconds": 1,
+      "sampledRangeSeconds": [
+        35,
+        53
+      ],
+      "oldBrandMatchCount": 0
+    },
+    {
+      "file": "DelaStudy-Walkthrough.mp4",
+      "sampledFrames": 168,
+      "sampleIntervalSeconds": 1,
+      "oldBrandMatchCount": 0
+    },
+    {
+      "file": "DelaStudy-Code-Walkthrough.mp4",
+      "sampledFrames": 84,
+      "sampleIntervalSeconds": 2,
+      "oldBrandMatchCount": 0
+    },
+    {
+      "file": "DelaStudy-Handheld-Walkthrough.mp4",
+      "sampledFrames": 84,
+      "sampleIntervalSeconds": 2,
+      "oldBrandMatchCount": 0
+    }
+  ],
+  "auditMethod": "Apple Vision accurate OCR plus visual inspection of the updated credit, title cards and all 13 current-video chapter midpoints.",
+  "auditControl": "The same scanner detected retired-brand text in all five sampled frames of the earlier title-card export.",
+  "limitations": [
+    "OCR samples can miss text and are not an exhaustive every-frame proof.",
+    "Only the video package is rebranded; the native app project and data-store identifiers are not renamed.",
+    "The lesson-credit label is a disclosed compositing edit over original Simulator footage, not a new app capture."
+  ],
+  "earlierExportsLocation": "/tmp/delastudy-showcase-dNbknZ"
+}

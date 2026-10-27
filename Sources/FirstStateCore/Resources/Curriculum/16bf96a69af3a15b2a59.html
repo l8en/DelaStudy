@@ -1,0 +1,740 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_28539d2b-16e2-4356-9ba8-9fcceaa27765"><h2 data-rex-keep="true" data-type="document-title" id="page_28539d2b-16e2-4356-9ba8-9fcceaa27765_titlecreatedbycookbook"><span class="os-number">2.1</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Stem-and-Leaf Graphs (Stemplots), Line Graphs, and Bar Graphs</span>
+</h2>
+<p id="id6999853">One simple graph, the <strong>stem-and-leaf graph</strong> or <strong>stemplot</strong>, comes from the field of exploratory data analysis. It is a good choice when the data sets are small. To create the plot, divide each observation of data into a stem and a leaf. The leaf consists of a <strong>final significant digit</strong>. For example, 23 has stem two and leaf three. The number 432 has stem 43 and leaf two. Likewise, the number 5,432 has stem 543 and leaf two. The decimal 9.3 has stem nine and leaf three. Write the stems in a vertical line from smallest to largest. Draw a vertical line to the right of the stems. Then write the leaves in increasing order next to their corresponding stem.</p>
+<div class="ui-has-child-title" data-type="example" id="element-696"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.1</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-948">For Professor Dean's spring pre-calculus class, scores for the first exam were as follows (smallest to largest):
+<span data-type="newline"><br/></span>
+ 33; 42; 49; 49; 53; 55; 55; 61; 63; 67; 68; 68; 69; 69; 72; 73; 74; 78; 80; 83; 88; 88; 88; 90; 92; 94; 94; 94; 94; 96; 100</p><div class="os-table" id="element-185"><div class="table-scroll"><table data-id="element-185" data-summary="Table displaying stem in first column and leaf in second column for the values listed above."><thead>
+<tr>
+<th scope="col">Stem</th>
+<th scope="col">Leaf</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>3</td><td>3</td>
+</tr>
+<tr>
+<td>4</td><td>2 9 9</td>
+</tr>
+<tr>
+<td>5</td><td>3 5 5</td>
+</tr>
+<tr>
+<td>6</td><td>1 3 7 8 8 9 9</td>
+</tr>
+<tr>
+<td>7</td><td>2 3 4 8</td>
+</tr>
+<tr>
+<td>8</td><td>0 3 8 8 8</td>
+</tr>
+<tr>
+<td>9</td><td>0 2 4 4 4 4 6</td>
+</tr>
+<tr>
+<td>10</td><td>0</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.1</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Stem-and-Leaf Graph</span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="element-541">The stemplot shows that most scores fell in the 60s, 70s, 80s, and 90s.  Eight out of the 31 scores or approximately 26% <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>8</mn>
+<mrow>
+<mn>31</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mn>8</mn>
+<mrow>
+<mn>31</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> were in the 90s or 100, a fairly high number of As.</p>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp6114880"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.1</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idp3142256"><header></header><section>
+<div data-type="problem" id="fs-idm28250320"><div class="os-problem-container">
+<p id="fs-idp29192512">For the Park City basketball team, scores for the last 30 games were as follows (smallest to largest):
+<span data-type="newline"><br/></span>
+ 32; 32; 33; 34; 38; 40; 42; 42; 43; 44; 46; 47; 47; 48; 48; 48; 49; 50; 50; 51; 52; 52; 52; 53; 54; 56; 57; 57; 60; 61
+<span data-type="newline"><br/></span>Construct a stem plot for the data.</p></div></div>
+</section></div></div></section></div>
+<p id="eip-522">The stemplot is a quick way to graph data and gives an exact picture of the data. You want to look for an overall pattern and any outliers. An <span data-type="term" group-by="o" id="term-00001">outlier</span> is an observation of data that does not fit the rest of the data. It is sometimes called an <strong>extreme value.</strong> When you graph an outlier, it will appear not to fit the pattern of the graph. Some outliers are due to mistakes (for example, writing down 50 instead of 500) while others may indicate that something unusual is happening. It takes some background information to explain outliers, so we will cover them in more detail later.</p><div class="ui-has-child-title" data-type="example" id="element-798"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.2</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-534">The data are the distances (in kilometers) from a home to local supermarkets. Create a stemplot using the data:
+<span data-type="newline"><br/></span>1.1; 1.5; 2.3; 2.5; 2.7; 3.2; 3.3; 3.3; 3.5; 3.8; 4.0; 4.2; 4.5; 4.5; 4.7; 4.8; 5.5; 5.6; 6.5; 6.7; 12.3</p><div class="unnumbered has-problem-title" data-type="exercise" id="element-6923"><header></header><section><div data-type="problem" id="id8567884"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idp11807920">Do the data seem to have any concentration of values?</p>
+<div class="ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="id8559724"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label" data-type="">NOTE</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idp145995424">The leaves are to the right of the decimal.</p>
+</div></section></div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id8559734">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-23523">The value 12.3 may be an outlier. Values appear to concentrate at three and four kilometers.</p>
+<div class="os-table" id="element-533"><div class="table-scroll"><table data-id="element-533" data-summary="This is a Stem-Leaf graph with stems 1, 2, 3, 4, 5, 6, 12 and leaves to the right of the decimal point.">
+<thead>
+<tr>
+<th scope="col">Stem</th>
+<th scope="col">Leaf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td><td>1 5</td>
+</tr>
+<tr>
+<td>2</td><td>3 5 7</td>
+</tr>
+<tr>
+<td>3</td><td>2 3 3 5 8</td>
+</tr>
+<tr>
+<td>4</td><td>0 2 5 5 7 8</td>
+</tr>
+<tr>
+<td>5</td><td>5 6</td>
+</tr>
+<tr>
+<td>6</td><td>5 7</td>
+</tr>
+<tr>
+<td>7</td><td>
+</td></tr>
+<tr>
+<td>8</td><td>
+</td></tr>
+<tr>
+<td>9</td><td>
+</td></tr>
+<tr>
+<td>10</td><td>
+</td></tr>
+<tr>
+<td>11</td><td>
+</td></tr>
+<tr>
+<td>12</td><td>3</td>
+</tr>
+</tbody>
+</table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.2</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp4001472"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.2</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm40603312"><header></header><section>
+<div data-type="problem" id="fs-idm28790944"><div class="os-problem-container">
+<p id="fs-idp73770272">The following data show the distances (in miles) from the homes of off-campus statistics students to the college. Create a stem plot using the data and identify any outliers:</p>
+<p id="fs-idp20460656">0.5; 0.7; 1.1; 1.2; 1.2; 1.3; 1.3; 1.5; 1.5; 1.7; 1.7; 1.8; 1.9; 2.0; 2.2; 2.5; 2.6; 2.8; 2.8; 2.8; 3.5; 3.8; 4.4; 4.8; 4.9; 5.2; 5.5; 5.7; 5.8; 8.0
+</p></div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-idp11879648"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.3</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><div class="unnumbered has-problem-title" data-type="exercise" id="fs-idp161531440"><header></header><section><div data-type="problem" id="fs-idp99219856"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idp93832256">A <strong>side-by-side stem-and-leaf plot</strong> allows a comparison of the two data sets in two columns. In a side-by-side stem-and-leaf plot, two sets of leaves share the same stem. The leaves are to the left and the right of the stems. <a aria-label="View Table 2.3" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs#M01_Ch02_tbl005">Table 2.3</a> and <a aria-label="View Table 2.4" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs#M01_Ch02_tbl006">Table 2.4</a> show the ages of presidents at their inauguration and at their death. Construct a side-by-side stem-and-leaf plot using this data.</p>
+<div class="os-table" id="M01_Ch02_tbl005"><div class="table-scroll"><table data-id="M01_Ch02_tbl005" data-summary=""><thead>
+<tr><th scope="col">President</th><th scope="col">Age</th><th scope="col">President</th><th scope="col">Age</th><th scope="col">President</th><th scope="col">Age</th></tr>
+</thead><tbody>
+<tr><td>Washington</td><td>57</td><td>Lincoln</td><td>52</td><td>Hoover</td><td>54</td></tr>
+<tr><td>J. Adams</td><td>61</td><td>A. Johnson</td><td>56</td><td>F. Roosevelt</td><td>51</td></tr>
+<tr><td>Jefferson</td><td>57</td><td>Grant</td><td>46</td><td>Truman</td><td>60</td></tr>
+<tr><td>Madison</td><td>57</td><td>Hayes</td><td>54</td><td>Eisenhower</td><td>62</td></tr>
+<tr><td>Monroe</td><td>58</td><td>Garfield</td><td>49</td><td>Kennedy</td><td>43</td></tr>
+<tr><td>J. Q. Adams</td><td>57</td><td>Arthur</td><td>51</td><td>L. Johnson</td><td>55</td></tr>
+<tr><td>Jackson</td><td>61</td><td>Cleveland</td><td>47</td><td>Nixon</td><td>56</td></tr>
+<tr><td>Van Buren</td><td>54</td><td>B. Harrison</td><td>55</td><td>Ford</td><td>61</td></tr>
+<tr><td>W. H. Harrison</td><td>68</td><td>Cleveland</td><td>55</td><td>Carter</td><td>52</td></tr>
+<tr><td>Tyler</td><td>51</td><td>McKinley</td><td>54</td><td>Reagan</td><td>69</td></tr>
+<tr><td>Polk</td><td>49</td><td>T. Roosevelt</td><td>42</td><td>G.H.W. Bush</td><td>64</td></tr>
+<tr><td>Taylor</td><td>64</td><td>Taft</td><td>51</td><td>Clinton</td><td>47</td></tr>
+<tr><td>Fillmore</td><td>50</td><td>Wilson</td><td>56</td><td>G. W. Bush</td><td>54</td></tr>
+<tr><td>Pierce</td><td>48</td><td>Harding</td><td>55</td><td>Obama</td><td>47</td></tr>
+<tr><td>Buchanan</td><td>65</td><td>Coolidge</td><td>51</td><td></td><td></td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.3</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Presidential Ages at Inauguration</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div class="os-table" id="M01_Ch02_tbl006"><div class="table-scroll"><table data-id="M01_Ch02_tbl006" data-summary=""><thead>
+<tr><th scope="col">President</th><th scope="col">Age</th><th scope="col">President</th><th scope="col">Age</th><th scope="col">President</th><th scope="col">Age</th></tr>
+</thead><tbody>
+<tr><td>Washington</td><td>67</td><td>Lincoln</td><td>56</td><td>Hoover</td><td>90</td></tr>
+<tr><td>J. Adams</td><td>90</td><td>A. Johnson</td><td>66</td><td>F. Roosevelt</td><td>63</td></tr>
+<tr><td>Jefferson</td><td>83</td><td>Grant</td><td>63</td><td>Truman</td><td>88</td></tr>
+<tr><td>Madison</td><td>85</td><td>Hayes</td><td>70</td><td>Eisenhower</td><td>78</td></tr>
+<tr><td>Monroe</td><td>73</td><td>Garfield</td><td>49</td><td>Kennedy</td><td>46</td></tr>
+<tr><td>J. Q. Adams</td><td>80</td><td>Arthur</td><td>56</td><td>L. Johnson</td><td>64</td></tr>
+<tr><td>Jackson</td><td>78</td><td>Cleveland</td><td>71</td><td>Nixon</td><td>81</td></tr>
+<tr><td>Van Buren</td><td>79</td><td>B. Harrison</td><td>67</td><td>Ford</td><td>93</td></tr>
+<tr><td>W. H. Harrison</td><td>68</td><td>Cleveland</td><td>71</td><td>Reagan</td><td>93</td></tr>
+<tr><td>Tyler</td><td>71</td><td>McKinley</td><td>58</td><td></td><td></td></tr>
+<tr><td>Polk</td><td>53</td><td>T. Roosevelt</td><td>60</td><td></td><td></td></tr>
+<tr><td>Taylor</td><td>65</td><td>Taft</td><td>72</td><td></td><td></td></tr>
+<tr><td>Fillmore</td><td>74</td><td>Wilson</td><td>67</td><td></td><td></td></tr>
+<tr><td>Pierce</td><td>64</td><td>Harding</td><td>57</td><td></td><td></td></tr>
+<tr><td>Buchanan</td><td>77</td><td>Coolidge</td><td>60</td><td></td><td></td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.4</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Presidential Age at Death</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idp107817952">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<div class="os-table" id="M01_Ch02_tbl007"><div class="table-scroll"><table data-id="M01_Ch02_tbl007" data-summary="---">
+<colgroup>
+<col data-align="right"/>
+<col data-align="center"/>
+<col data-align="left"/>
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Ages at Inauguration</th>
+<th scope="col">
+</th><th scope="col">Ages at Death</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9 9 8 7 7 7 6 3 2</td><td>4</td><td>6 9</td>
+</tr>
+<tr>
+<td>8 7 7 7 7 6 6 6 5 5 5 5 4 4 4 4 4 2 2 1 1 1 1 1 0</td><td>5</td><td>3 6 6 7 7 8</td>
+</tr>
+<tr>
+<td>9 8 5 4 4 2 1 1 1 0</td><td>6</td><td>0 0 3 3 4 4 5 6 7 7 7 8</td>
+</tr>
+<tr>
+<td></td><td>7</td><td>0 1 1 1 2 3 4 7 8 8 9</td>
+</tr>
+<tr>
+<td></td><td>8</td><td>0 1 3 5 8</td>
+</tr>
+<tr>
+<td></td><td>9</td><td>0 0 3 3</td>
+</tr>
+</tbody>
+</table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.5</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div></div>
+</section>
+</details></section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp9770768"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.3</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idp35107968"><header></header><section>
+<div data-type="problem" id="fs-idm2063072"><div class="os-problem-container">
+<p id="fs-idm4586448">The table shows the number of wins and losses the Atlanta Hawks have had in 42 seasons. Create a side-by-side stemand-leaf plot of these wins and losses.</p>
+<div class="os-table" id="fs-idm25873440"><div class="table-scroll"><table data-id="fs-idm25873440" data-summary=".."><thead>
+<tr>
+<th scope="col">Losses</th>
+<th scope="col">Wins</th>
+<th scope="col">Season</th>
+<th scope="col">Losses</th>
+<th scope="col">Wins</th>
+<th scope="col">Season</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>34</td>
+<td>48</td>
+<td>1</td>
+<td>41</td>
+<td>41</td>
+<td>22</td>
+</tr>
+<tr>
+<td>34</td>
+<td>48</td>
+<td>2</td>
+<td>39</td>
+<td>43</td>
+<td>23</td>
+</tr>
+<tr>
+<td>46</td>
+<td>36</td>
+<td>3</td>
+<td>44</td>
+<td>38</td>
+<td>24</td>
+</tr>
+<tr>
+<td>46</td>
+<td>36</td>
+<td>4</td>
+<td>39</td>
+<td>43</td>
+<td>25</td>
+</tr>
+<tr>
+<td>36</td>
+<td>46</td>
+<td>5</td>
+<td>25</td>
+<td>57</td>
+<td>26</td>
+</tr>
+<tr>
+<td>47</td>
+<td>35</td>
+<td>6</td>
+<td>40</td>
+<td>42</td>
+<td>27</td>
+</tr>
+<tr>
+<td>51</td>
+<td>31</td>
+<td>7</td>
+<td>36</td>
+<td>46</td>
+<td>28</td>
+</tr>
+<tr>
+<td>53</td>
+<td>29</td>
+<td>8</td>
+<td>26</td>
+<td>56</td>
+<td>29</td>
+</tr>
+<tr>
+<td>51</td>
+<td>31</td>
+<td>9</td>
+<td>32</td>
+<td>50</td>
+<td>30</td>
+</tr>
+<tr>
+<td>41</td>
+<td>41</td>
+<td>10</td>
+<td>19</td>
+<td>31</td>
+<td>31</td>
+</tr>
+<tr>
+<td>36</td>
+<td>46</td>
+<td>11</td>
+<td>54</td>
+<td>28</td>
+<td>32</td>
+</tr>
+<tr>
+<td>32</td>
+<td>50</td>
+<td>12</td>
+<td>57</td>
+<td>25</td>
+<td>33</td>
+</tr>
+<tr>
+<td>51</td>
+<td>31</td>
+<td>13</td>
+<td>49</td>
+<td>33</td>
+<td>34</td>
+</tr>
+<tr>
+<td>40</td>
+<td>42</td>
+<td>14</td>
+<td>47</td>
+<td>35</td>
+<td>35</td>
+</tr>
+<tr>
+<td>39</td>
+<td>43</td>
+<td>15</td>
+<td>54</td>
+<td>28</td>
+<td>36</td>
+</tr>
+<tr>
+<td>42</td>
+<td>40</td>
+<td>16</td>
+<td>69</td>
+<td>13</td>
+<td>37</td>
+</tr>
+<tr>
+<td>48</td>
+<td>34</td>
+<td>17</td>
+<td>56</td>
+<td>26</td>
+<td>38</td>
+</tr>
+<tr>
+<td>32</td>
+<td>50</td>
+<td>18</td>
+<td>52</td>
+<td>30</td>
+<td>39</td>
+</tr>
+<tr>
+<td>25</td>
+<td>57</td>
+<td>19</td>
+<td>45</td>
+<td>37</td>
+<td>40</td>
+</tr>
+<tr>
+<td>32</td>
+<td>50</td>
+<td>20</td>
+<td>35</td>
+<td>47</td>
+<td>41</td>
+</tr>
+<tr>
+<td>30</td>
+<td>52</td>
+<td>21</td>
+<td>29</td>
+<td>53</td>
+<td>42</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.6</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div></div>
+</section></div>
+</div></section></div>
+<p id="eip-313">Another type of graph that is useful for specific data values is a <strong>line graph</strong>. In the particular line graph shown in <a aria-label="Go to Example 2.4" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs#example4">Example 2.4</a>, the <strong><em data-effect="italics">x</em>-axis</strong> (horizontal axis) consists of <strong>data values</strong> and the <strong><em data-effect="italics">y</em>-axis</strong> (vertical axis) consists of <strong>frequency points</strong>. The frequency points are connected  using line segments.</p>
+<div class="ui-has-child-title" data-type="example" id="example4"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.4</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="eip-682">In a survey, 40 parents were asked how many times per week a teenager must be reminded to do their chores. The results are shown in <a aria-label="View Table 2.7" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs#M01_Ch02_tbl008">Table 2.7</a> and in <a aria-label="View Figure 2.2" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs#M01_Ch02_fig001">Figure 2.2</a>.</p><div class="os-table" id="M01_Ch02_tbl008"><div class="table-scroll"><table data-id="M01_Ch02_tbl008" data-summary="The first column of the table consists of the number of times a teenager must be reminded to do his/her chores and the second column consists of frequency."><thead>
+<tr>
+<th scope="col">Number of times
+teenager is reminded</th>
+<th scope="col">Frequency</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td><td>2</td>
+</tr>
+<tr>
+<td>1</td><td>5</td>
+</tr>
+<tr>
+<td>2</td><td>8</td>
+</tr>
+<tr>
+<td>3</td><td>14</td>
+</tr>
+<tr>
+<td>4</td><td>7</td>
+</tr>
+<tr>
+<td>5</td><td>4</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.7</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div class="os-figure" id="M01_Ch02_fig001"><figure class="scaled-down ui-has-child-figcaption" data-id="M01_Ch02_fig001">
+<span data-alt="A line graph showing the number of times a teenager needs to be reminded to do chores on the x-axis and  frequency on the y-axis." data-display="block" data-type="media" id="fs-idp107902784">
+<img alt="A line graph showing the number of times a teenager needs to be reminded to do chores on the x-axis and  frequency on the y-axis." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/2da274ccddeb7a3717a22e412340306d2fe45bc0" height="602" loading="lazy" src="d55795379791d5338b0b3d72.webp" width="924"/></span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.2</span>
+</figcaption></figure></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm28536512"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.4</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm95574864"><header></header><section><div data-type="problem" id="fs-idp19862832"><div class="os-problem-container">
+<p id="fs-idp28849584">In a survey, 40 people were asked how many times per year they had their car in the shop for repairs. The results are shown in <a aria-label="View Table 2.8" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs#M01_Ch02_tbl009">Table 2.8</a>. Construct a line graph.</p>
+<div class="os-table" id="M01_Ch02_tbl009"><div class="table-scroll"><table data-id="M01_Ch02_tbl009" data-summary=""><thead>
+<tr><th scope="col">Number of times in shop</th><th scope="col">Frequency</th></tr>
+</thead><tbody>
+<tr><td>0</td><td>7</td></tr>
+<tr><td>1</td><td>10</td></tr>
+<tr><td>2</td><td>14</td></tr>
+<tr><td>3</td><td>9</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.8</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div></div>
+</section></div></div></section></div>
+<p id="eip-136"><strong>Bar graphs</strong> consist of bars that are separated from each other. The bars can be rectangles or they can be rectangular boxes (used in three-dimensional plots), and they can be vertical or horizontal. The <strong>bar graph</strong> shown in <a aria-label="Go to Example 2.5" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs#example5">Example 2.5</a> has age groups represented on the <strong><em data-effect="italics">x</em>-axis</strong> and proportions on the <strong><em data-effect="italics">y</em>-axis</strong>.</p><div class="ui-has-child-title" data-type="example" id="example5"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.5</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idm7260336"><header></header><section>
+<div data-type="problem" id="fs-idp99169968"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="eip-666">The percentage of U.S.-based TikTok users by age is shown in <a aria-label="View Table 2.9" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs#M01_Ch02_tbl010">Table 2.9</a>. Construct a bar graph using this data.</p><div class="os-table" id="M01_Ch02_tbl010"><div class="table-scroll"><table data-id="M01_Ch02_tbl010" data-summary="The information is from Facebook. The first row of the table displays age groups, the second row displays number of Facebook users and the third row displays percentages."><thead>
+<tr>
+<th scope="col">Age groups</th>
+<th scope="col">Proportion (%) of TikTok users</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>10–19</td>
+<td>32.5%</td>
+</tr>
+<tr>
+<td>20–29</td>
+<td>29.5%</td>
+</tr>
+<tr>
+<td>30–39</td>
+<td>16.4%</td>
+</tr>
+<tr>
+<td>40–49</td>
+<td>13.9%</td>
+</tr>
+<tr>
+<td>50+</td>
+<td>7.1%</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.9</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idp32850832">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<div class="os-figure" id="fs-idm25485824"><figure class="scaled-down ui-has-child-figcaption" data-id="fs-idm25485824"><span data-alt="Bar graph of age groups against percentage of TikTok users. The percentage ranges from 0 to 35 in increments of 5. Bar of age group 10 to 19 has height of 32 percent, 20 to 29 has height of 29 percent, 30 to 39 has height of 16 percent, 40 to 49 has height of 14 percent, 50 plus has height of 7 percent." data-display="block" data-type="media" id="bar_graph_Facebook">
+<img alt="Bar graph of age groups against percentage of TikTok users. The percentage ranges from 0 to 35 in increments of 5. Bar of age group 10 to 19 has height of 32 percent, 20 to 29 has height of 29 percent, 30 to 39 has height of 16 percent, 40 to 49 has height of 14 percent, 50 plus has height of 7 percent." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/ea3dd41143d50fb2949894cc20fe06e4de09aab6" height="608" loading="lazy" src="ca5852378478c2dc15118e0a.webp" width="1108"/></span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.3</span>
+</figcaption></figure></div></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp2492880"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.5</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm47906688"><header></header><section>
+<div data-type="problem" id="fs-idm7708128"><div class="os-problem-container">
+<p id="fs-idp6746384">The population in Park City is made up of children, working-age adults, and retirees. <a aria-label="View Table 2.10" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs#M01_Ch02_tbl011">Table 2.10</a> shows the three age groups, the number of people in the town from each age group, and the proportion (%) of people in each age group. Construct a bar graph showing the proportions.</p>
+<div class="os-table" id="M01_Ch02_tbl011"><div class="table-scroll"><table data-id="M01_Ch02_tbl011" data-summary=""><thead>
+<tr><th scope="col">Age groups</th><th scope="col">Number of people</th><th scope="col">Proportion of population</th></tr>
+</thead><tbody>
+<tr><td>Children</td> <td>67,059</td> <td>19%</td></tr>
+<tr><td>Working-age adults</td> <td>152,198</td> <td>43%</td></tr>
+<tr><td>Retirees</td> <td>131,662</td> <td>38%</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.10</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="eip-708"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">2.6</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idm25526448"><header></header><section>
+<div data-type="problem" id="fs-idm19535184"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="eip-655">The columns in <a aria-label="View Table 2.11" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs#M01_Ch02_tbl012">Table 2.11</a> show the projected data for the year 2030 for the number and percentages of high school graduates by geographic region in the United States.  Create a bar graph for this data with the geographic region (qualitative data) on the <em data-effect="italics">x</em>-axis and the percentage of high school data (quantitative data) on the <em data-effect="italics">y</em>-axis.</p><div class="os-table" id="M01_Ch02_tbl012"><div class="table-scroll"><table data-id="M01_Ch02_tbl012" data-summary="The table shows Race and Ethnicity in the first column, Advanced Placement Examinee Population in the second column and Overall Student Population in the third column."><thead>
+<tr>
+<th scope="col">Region</th>
+<th scope="col">Number of Graduates</th>
+<th scope="col">Percentage of Graduates</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Northeast</td>
+<td>517,720</td>
+<td>16.1%</td>
+</tr>
+<tr>
+<td>Midwest</td>
+<td>695,170</td>
+<td>21.6%</td>
+</tr>
+<tr>
+<td>South</td>
+<td>1,253,540</td>
+<td>39.0%</td>
+</tr>
+<tr>
+<td>West</td>
+<td>749,400</td>
+<td>23.3%</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.11</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idp30402432">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<div class="os-figure" id="M01_Ch02_fig003"><figure class="scaled-down ui-has-child-figcaption" data-id="M01_Ch02_fig003"><span data-alt="Bar graph of geographic region against percentage of graduates. Percent of graduates ranges from 0 to 45 in increments of 5. Bar of northeast has height of 16 percent, midwest has height of 22 percent, south has height of 39 percent, west has height of 23 percent." data-display="block" data-type="media" id="bar_graph_Ap_Examinee">
+<img alt="Bar graph of geographic region against percentage of graduates. Percent of graduates ranges from 0 to 45 in increments of 5. Bar of northeast has height of 16 percent, midwest has height of 22 percent, south has height of 39 percent, west has height of 23 percent." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/f4f7662ae5d5e70951f8f484f4a0f7f3b28d9de7" height="771" loading="lazy" src="079115686fbb3fe8cdefdfd8.webp" width="1038"/></span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">2.4</span>
+</figcaption></figure></div></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp41522672"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">2.6</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm43065520"><header></header><section>
+<div data-type="problem" id="fs-idp3652336"><div class="os-problem-container">
+<p id="fs-idp31379616">Park city is broken down into six voting districts. The table shows the percent of the total registered voter population that lives in each district as well as the percent total of the entire population that lives in each district. Construct a bar graph that shows the registered voter population by district.</p><div class="os-table" id="M01_Ch02_tbl013"><div class="table-scroll"><table data-id="M01_Ch02_tbl013" data-summary=""><colgroup><col data-align="center"/><col/><col/></colgroup><thead>
+<tr><th scope="col">District</th><th scope="col">Registered voter population</th><th scope="col">Overall city population</th></tr>
+</thead><tbody>
+<tr><td>1</td><td>15.5%</td><td>19.4%</td></tr>
+<tr><td>2</td><td>12.2%</td><td>15.6%</td></tr>
+<tr><td>3</td><td>9.8%</td><td>9.0%</td></tr>
+<tr><td>4</td><td>17.4%</td><td>18.5%</td></tr>
+<tr><td>5</td><td>22.8%</td><td>20.7%</td></tr>
+<tr><td>6</td><td>22.3%</td><td>16.8%</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">2.12</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div></div>
+</section></div>
+</div></section></div>
+</div></article><footer><p>Adapted from OpenStax, Introductory Statistics 2e, 2.1 Stem-and-Leaf Graphs (Stemplots), Line Graphs, and Bar Graphs. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introductory-statistics-2e/pages/2-1-stem-and-leaf-graphs-stemplots-line-graphs-and-bar-graphs">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

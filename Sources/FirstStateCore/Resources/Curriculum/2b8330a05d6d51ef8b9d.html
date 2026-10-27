@@ -1,0 +1,1223 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_3428f908-8445-4b02-8b19-9806ddd8965e"><h2 data-rex-keep="true" data-type="document-title" id="page_3428f908-8445-4b02-8b19-9806ddd8965e_titlecreatedbycookbook"><span class="os-number">3.4</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Contingency Tables</span>
+</h2>
+<p id="element-864">A <span data-type="term" group-by="c" id="term-00001">contingency table</span> provides a way of portraying data that can facilitate calculating probabilities. The table helps in determining conditional probabilities quite easily. The table displays sample values in relation to two different variables that may be dependent or contingent on one another. Later on, we will use contingency tables again, but in another manner.</p>
+<div class="ui-has-child-title" data-type="example" id="element-775"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.20</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="add1"><header></header><section><div data-type="problem" id="add2"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-557">Suppose a study of speeding violations and drivers who use cell phones produced the following fictional data:
+</p><div class="os-table" id="element-838"><div class="table-scroll"><table data-id="element-838" data-summary="A study of speeding violations"><thead>
+<tr>
+<th scope="col">
+</th><th scope="col">Speeding violation in the last year</th>
+<th scope="col">No speeding violation in the last year</th>
+<th scope="col">Total</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Uses cell phone while driving</td>
+<td>25</td>
+<td>280</td>
+<td>305</td>
+</tr>
+<tr>
+<td>Does not use cell phone while driving</td>
+<td>45</td>
+<td>405</td>
+<td>450</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>70</td>
+<td>685</td>
+<td>755</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.3</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div><p id="element-42">The total number of people in the sample is 755. The row totals are 305 and 450. The column totals are 70 and 685. Notice that 305 + 450 = 755 and 70 + 685 = 755.</p>
+<p id="element-818">Calculate the following probabilities using the table.<span data-count="2" data-type="newline"><br/><br/></span></p><p id="eip-150">a. Find <em data-effect="italics">P</em>(Driver is a cell phone user).<span data-type="newline"><br/></span>
+
+b. Find <em data-effect="italics">P</em>(driver had no violation in the last year).<span data-type="newline"><br/></span>
+c. Find <em data-effect="italics">P</em>(Driver had no violation in the last year AND was a cell phone user).<span data-type="newline"><br/></span>
+d. Find <em data-effect="italics">P</em>(Driver is a cell phone user OR driver had no violation in the last year).<span data-type="newline"><br/></span>
+e. Find <em data-effect="italics">P</em>(Driver is a cell phone user GIVEN driver had a violation in the last year).<span data-type="newline"><br/></span>
+f. Find <em data-effect="italics">P</em>(Driver had no violation last year GIVEN driver was not a cell phone user)</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="add">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container"><p id="eip-276">a. <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>number of cell phone users</mtext>
+</mrow>
+<mrow>
+<mtext>total number in study</mtext>
+</mrow>
+</mfrac>
+<mtext> </mtext><mo>=</mo><mtext> </mtext><mfrac>
+<mrow>
+<mn>305</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mtext>number of cell phone users</mtext>
+</mrow>
+<mrow>
+<mtext>total number in study</mtext>
+</mrow>
+</mfrac>
+<mtext> </mtext><mo>=</mo><mtext> </mtext><mfrac>
+<mrow>
+<mn>305</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span><span data-count="2" data-type="newline"><br/><br/></span>b. <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mtext>number that had no violation</mtext>
+</mrow>
+<mrow>
+<mtext>total number in study</mtext>
+</mrow>
+</mfrac>
+<mtext> </mtext><mo>=</mo><mtext> </mtext><mfrac>
+<mrow>
+<mn>685</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mtext>number that had no violation</mtext>
+</mrow>
+<mrow>
+<mtext>total number in study</mtext>
+</mrow>
+</mfrac>
+<mtext> </mtext><mo>=</mo><mtext> </mtext><mfrac>
+<mrow>
+<mn>685</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span><span data-count="2" data-type="newline"><br/><br/></span>c. <span class="os-math-in-para"><math display="inline"><semantics><mrow><mfrac>
+<mn>280</mn>
+<mn>755</mn>
+</mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>280</mn>
+<mn>755</mn>
+</mfrac></annotation-xml></semantics></math></span><span data-count="2" data-type="newline"><br/><br/></span>
+d. <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>305</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+<mtext> </mtext><mo>+</mo><mtext> </mtext><mfrac>
+<mrow>
+<mn>685</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mtext> </mtext><mo>−</mo><mtext> </mtext><mfrac>
+<mrow>
+<mn>280</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+<mtext> </mtext><mo>=</mo><mtext> </mtext><mfrac>
+<mrow>
+<mn>710</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>305</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+<mtext> </mtext><mo>+</mo><mtext> </mtext><mfrac>
+<mrow>
+<mn>685</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mtext> </mtext><mo>−</mo><mtext> </mtext><mfrac>
+<mrow>
+<mn>280</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+<mtext> </mtext><mo>=</mo><mtext> </mtext><mfrac>
+<mrow>
+<mn>710</mn>
+</mrow>
+<mrow>
+<mn>755</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span><span data-count="2" data-type="newline"><br/><br/></span>e. <span class="os-math-in-para"><math display="inline"><semantics><mrow><mfrac>
+<mn>25</mn>
+<mn>70</mn>
+</mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>25</mn>
+<mn>70</mn>
+</mfrac></annotation-xml></semantics></math></span> (The sample space is reduced to the number of drivers who had a violation.)<span data-count="2" data-type="newline"><br/><br/></span>f. <span class="os-math-in-para"><math display="inline"><semantics><mrow><mfrac>
+<mn>405</mn>
+<mn>450</mn>
+</mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>405</mn>
+<mn>450</mn>
+</mfrac></annotation-xml></semantics></math></span> (The sample space is reduced to the number of drivers who were not cell phone users.)</p></div>
+</section>
+</details></section></div></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm8469088"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">3.20</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm7340080"><header></header><section>
+<div data-type="problem" id="fs-idm53303712"><div class="os-problem-container">
+<p id="fs-idp10168704"><a aria-label="View Table 3.4" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables#M05_ch03-tbl002">Table 3.4</a> shows the number of athletes who stretch before exercising and how many had injuries within the past year.
+</p><div class="os-table" id="M05_ch03-tbl002"><div class="table-scroll"><table data-id="M05_ch03-tbl002" data-summary=""><thead>
+<tr>
+<th scope="col">
+</th><th scope="col">Injury in last year</th>
+<th scope="col">No injury in last year</th>
+<th scope="col">Total</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Stretches</td>
+<td>55</td>
+<td>295</td>
+<td>350</td>
+</tr>
+<tr>
+<td>Does not stretch</td>
+<td>231</td>
+<td>219</td>
+<td>450</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>286</td>
+<td>514</td>
+<td>800</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.4</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<ol id="fs-idm56428944" type="a"><li>What is <em data-effect="italics">P</em>(athlete stretches before exercising)?</li>
+<li>What is <em data-effect="italics">P</em>(athlete stretches before exercising|no injury in the last year)?</li>
+</ol></div></div>
+</section></div>
+</div></section></div><div class="ui-has-child-title" data-type="example" id="element-511"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.21</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-98">
+<a aria-label="View Table 3.5" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables#M05_ch03-tbl003">Table 3.5</a> shows a random sample of 100 hikers and the areas of hiking they prefer.</p>
+<div class="os-table" id="M05_ch03-tbl003"><div class="table-scroll"><table data-id="M05_ch03-tbl003" data-summary=""><thead>
+<tr>
+<th scope="col">Sex</th>
+<th scope="col">The Coastline</th>
+<th scope="col">Near Lakes and Streams</th>
+<th scope="col">On Mountain Peaks</th>
+<th scope="col">Total</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Women</td>
+<td>18</td>
+<td>16</td>
+<td>
+</td><td>45</td>
+</tr>
+<tr>
+<td>Men</td>
+<td>
+</td><td>
+</td><td>14</td>
+<td>55</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>
+</td><td>41</td>
+<td>
+</td><td>
+</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.5</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Hiking Area Preference</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div class="unnumbered has-problem-title" data-type="exercise" id="element-227"><header></header><section>
+<div data-type="problem" id="id41647708"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-665">a. Complete the table.</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id41647726">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container"><p id="fs-idm12745968">a. </p><div class="os-table" id="element-850s"><div class="table-scroll"><table data-id="element-850s" data-summary="">
+<thead>
+<tr>
+<th scope="col">Sex</th>
+<th scope="col">The Coastline</th>
+<th scope="col">Near Lakes and Streams</th>
+<th scope="col">On Mountain Peaks</th>
+<th scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Women</td>
+<td>18</td>
+<td>16</td>
+<td><strong>11</strong></td>
+<td>45</td>
+</tr>
+<tr>
+<td>Men</td>
+<td><strong>16</strong></td>
+<td><strong>25</strong></td>
+<td>14</td>
+<td>55</td>
+</tr>
+<tr>
+<td>Total</td>
+<td><strong>34</strong></td>
+<td>41</td>
+<td><strong>25</strong></td>
+<td><strong>100</strong></td>
+</tr>
+</tbody>
+</table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.6</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Hiking Area Preference</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+</div>
+</section>
+</details>
+</section></div>
+<div class="unnumbered has-problem-title" data-type="exercise" id="element-754"><header></header><section><div data-type="problem" id="id41524865"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-891">b. Are the events "being a woman" and "preferring the coastline" independent events?</p>
+<p id="element-123">Let <em data-effect="italics">F</em> = being a woman and let <em data-effect="italics">C</em> = preferring the coastline.</p>
+<ol id="element-1242">
+<li>Find <em data-effect="italics">P</em>(<em data-effect="italics">F</em> AND <em data-effect="italics">C</em>).</li>
+<li>Find <em data-effect="italics">P</em>(<em data-effect="italics">F</em>)<em data-effect="italics">P</em>(<em data-effect="italics">C</em>)</li>
+</ol>
+<p id="element-3532">Are these two numbers the same? If they are, then <em data-effect="italics">F</em> and <em data-effect="italics">C</em> are independent. If they are not, then <em data-effect="italics">F</em> and <em data-effect="italics">C</em> are not independent.</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id41524993">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="eip-idp6169056">b.</p><ol id="eip-idm12758816"><li><em data-effect="italics">P</em>(<em data-effect="italics">F</em> AND <em data-effect="italics">C</em>) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>18</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>18</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = 0.18</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em>)<em data-effect="italics">P</em>(<em data-effect="italics">C</em>) = <math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>45</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>34</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>45</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow><mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>34</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> = (0.45)(0.34) = 0.153</li>
+</ol><p id="element-404"><em data-effect="italics">P</em>(<em data-effect="italics">F</em> AND <em data-effect="italics">C</em>) ≠ <em data-effect="italics">P</em>(<em data-effect="italics">F</em>)<em data-effect="italics">P</em>(<em data-effect="italics">C</em>), so the events <em data-effect="italics">F</em> and <em data-effect="italics">C</em> are not independent.<span data-count="2" data-type="newline"><br/><br/></span></p></div>
+</section>
+</details>
+</section></div><div class="unnumbered has-problem-title" data-type="exercise" id="element-414"><header></header><section>
+<div data-type="problem" id="id41525175"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-717">c. Find the probability that a person is a man given that the person prefers hiking near lakes and streams. Let <em data-effect="italics">M</em> = being a man, and let <em data-effect="italics">L</em> = prefers hiking near lakes and streams.</p><ol id="element-2341" type="1"><li>What word tells you this is a conditional? </li>
+<li>Fill in the blanks and calculate the probability: <em data-effect="italics">P</em>(___|___) = ___.</li>
+<li>Is the sample space for this problem all 100 hikers? If not, what is it?</li>
+</ol></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id41525272">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-idm47502368">c. </p><ol id="element-2341s" type="1">
+<li>The word 'given' tells you that this is a conditional.</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">M</em>|<em data-effect="italics">L</em>) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>25</mn>
+</mrow>
+<mrow>
+<mn>41</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>25</mn>
+</mrow>
+<mrow>
+<mn>41</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</li>
+<li>No, the sample space for this problem is the 41 hikers who prefer lakes and streams.</li>
+</ol><p><span data-count="2" data-type="newline"><br/><br/></span>
+</p></div>
+</section>
+</details>
+</section></div>
+<div class="unnumbered has-problem-title" data-type="exercise" id="element-402"><header></header><section>
+<div data-type="problem" id="id41525358"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-715">d. Find the probability that a person is a woman or prefers hiking on mountain peaks. Let <em data-effect="italics">F</em> = being a woman, and let <em data-effect="italics">P</em> = prefers mountain peaks.</p>
+<ol id="list1213">
+<li>Find <em data-effect="italics">P</em>(<em data-effect="italics">F</em>).</li>
+<li>Find <em data-effect="italics">P</em>(<em data-effect="italics">P</em>).</li>
+<li>Find <em data-effect="italics">P</em>(<em data-effect="italics">F</em> AND <em data-effect="italics">P</em>).</li>
+<li>Find <em data-effect="italics">P</em>(<em data-effect="italics">F</em> OR <em data-effect="italics">P</em>).</li>
+</ol>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id41669265">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-idm40596864">d. </p><ol id="list1213s">
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em>) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>45</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>45</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math>
+</li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">P</em>) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>25</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>25</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em> AND <em data-effect="italics">P</em>) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>11</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>11</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></li>
+<li><em data-effect="italics">P</em>(<em data-effect="italics">F</em> OR <em data-effect="italics">P</em>) = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>45</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>45</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> + <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>25</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>25</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> - <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>11</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>11</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>59</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>59</mn>
+</mrow>
+<mrow>
+<mn>100</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></li>
+</ol>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm2360992"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">3.21</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idp7366752"><header></header><section>
+<div data-type="problem" id="fs-idm68351312"><div class="os-problem-container">
+<p id="eip-520"><a aria-label="View Table 3.7" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables#M05_ch03-tbl005">Table 3.7</a> shows a random sample of 200 cyclists and the routes they prefer. Let <em data-effect="italics">O</em> = older and <em data-effect="italics">H</em> = hilly path.
+</p><div class="os-table" id="M05_ch03-tbl005"><div class="table-scroll"><table data-id="M05_ch03-tbl005" data-summary=""><thead>
+<tr>
+<th scope="col">Age Group</th>
+<th scope="col">Lake Path</th>
+<th scope="col">Hilly Path</th>
+<th scope="col">Wooded Path</th>
+<th scope="col">Total</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Younger</td>
+<td>45</td>
+<td>38</td>
+<td>27</td>
+<td>110</td>
+</tr>
+<tr>
+<td>Older</td>
+<td>26</td>
+<td>52</td>
+<td>12</td>
+<td>90</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>71</td>
+<td>90</td>
+<td>39</td>
+<td>200</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.7</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div><ol id="fs-idm26020880" type="a"><li>Out of the older group, what is the probability that the cyclist prefers a hilly path?</li>
+<li>Are the events “being older” and “preferring the hilly path” independent events?</li>
+</ol></div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="element-883"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.22</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-700">Muddy Mouse lives in a cage with three doors. If Muddy goes out the first door, the probability that he gets caught by Alissa the cat is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac>
+<mtext></mtext>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac><mtext></mtext></annotation-xml></semantics></math></span> and the probability he is not caught is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>4</mn>
+<mn>5</mn>
+</mfrac>
+<mtext></mtext>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>4</mn>
+<mn>5</mn>
+</mfrac><mtext></mtext></annotation-xml></semantics></math></span>. If he goes out the second door, the probability he gets caught by Alissa is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>4</mn>
+</mfrac></annotation-xml></semantics></math></span> and the probability he is not caught is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>3</mn>
+<mn>4</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>3</mn>
+<mn>4</mn>
+</mfrac></annotation-xml></semantics></math></span>. The probability that Alissa catches Muddy coming out of the third door is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac></annotation-xml></semantics></math></span> and the probability she does not catch Muddy is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>2</mn>
+</mfrac></annotation-xml></semantics></math></span>. It is equally likely that Muddy will choose any of the three doors so the probability of choosing each door is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac></annotation-xml></semantics></math></span>.</p><div class="os-table" id="element-666"><div class="table-scroll"><table data-id="element-666" data-summary=""><thead>
+<tr>
+<th scope="col">Caught or Not</th>
+<th scope="col">Door One</th>
+<th scope="col">Door Two</th>
+<th scope="col">Door Three</th>
+<th scope="col">Total</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Caught</td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>15</mn>
+</mfrac>
+<mtext></mtext>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>15</mn>
+</mfrac><mtext></mtext></annotation-xml></semantics></math></td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>12</mn>
+</mfrac>
+<mtext></mtext>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>12</mn>
+</mfrac><mtext></mtext></annotation-xml></semantics></math></td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>6</mn>
+</mfrac>
+<mtext></mtext>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>6</mn>
+</mfrac><mtext></mtext></annotation-xml></semantics></math></td>
+<td>
+</td></tr>
+<tr>
+<td>Not Caught</td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>4</mn>
+<mn>15</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>4</mn>
+<mn>15</mn>
+</mfrac></annotation-xml></semantics></math></td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>3</mn>
+<mn>12</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>3</mn>
+<mn>12</mn>
+</mfrac></annotation-xml></semantics></math></td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>6</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>6</mn>
+</mfrac></annotation-xml></semantics></math></td>
+<td>
+</td></tr>
+<tr>
+<td>Total</td>
+<td>
+</td><td>
+</td><td>
+</td><td>1</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.8</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Door Choice</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<ul id="element-791">
+<li>The first entry <math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>15</mn>
+</mfrac>
+<mo> = </mo><mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac>
+<mo>)</mo>
+<mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mo>)</mo></mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>15</mn>
+</mfrac><mo> = </mo><mo>(</mo><mfrac>
+<mn>1</mn>
+<mn>5</mn>
+</mfrac><mo>)</mo><mo>(</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac><mo>)</mo></annotation-xml></semantics></math> is <em data-effect="italics">P</em>(Door One AND Caught)</li>
+<li>The entry
+<math display="inline"><semantics><mrow><mfrac>
+<mn>4</mn>
+<mn>15</mn>
+</mfrac>
+<mo>=</mo> <mo>(</mo>
+<mfrac>
+<mn>4</mn>
+<mn>5</mn>
+</mfrac>
+<mo>)</mo><mo>(</mo>
+<mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac>
+<mo>)</mo></mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>4</mn>
+<mn>15</mn>
+</mfrac><mo>=</mo><mo>(</mo><mfrac>
+<mn>4</mn>
+<mn>5</mn>
+</mfrac><mo>)</mo><mo>(</mo><mfrac>
+<mn>1</mn>
+<mn>3</mn>
+</mfrac><mo>)</mo></annotation-xml></semantics></math> is <em data-effect="italics">P</em>(Door One AND Not Caught)</li>
+</ul><p id="element-94">Verify the remaining entries.<span data-count="2" data-type="newline"><br/><br/></span></p>
+<div class="unnumbered has-problem-title" data-type="exercise" id="element-919"><header></header><section>
+<div data-type="problem" id="id41669984"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-910">a. Complete the probability contingency table. Calculate the entries for the totals. Verify that the lower-right corner entry is 1.</p>
+<p id="element-117">b. What is the probability that Alissa does not catch Muddy?</p>
+<p id="element-45">c. What is the probability that Muddy chooses Door One OR Door Two given that Muddy is caught by Alissa?</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id41670004">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container"><p id="fs-idm19141920">a. </p><div class="os-table" id="element-6166"><div class="table-scroll"><table data-id="element-6166" data-summary="Displayed is a contingency table showing all the entries for the Muddy Mouse problem.">
+<thead>
+<tr>
+<th scope="col">Caught or Not</th>
+<th scope="col">Door One</th>
+<th scope="col">Door Two</th>
+<th scope="col">Door Three</th>
+<th scope="col">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Caught</td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>15</mn>
+</mfrac>
+<mtext></mtext>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>15</mn>
+</mfrac><mtext></mtext></annotation-xml></semantics></math></td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>12</mn>
+</mfrac>
+<mtext></mtext>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>12</mn>
+</mfrac><mtext></mtext></annotation-xml></semantics></math></td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>6</mn>
+</mfrac>
+<mtext></mtext>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>6</mn>
+</mfrac><mtext></mtext></annotation-xml></semantics></math></td>
+<td><strong><math display="inline"><semantics><mrow><mfrac><mn>19</mn><mn>60</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>19</mn><mn>60</mn></mfrac></annotation-xml></semantics></math></strong></td>
+</tr>
+<tr>
+<td>Not Caught</td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>4</mn>
+<mn>15</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>4</mn>
+<mn>15</mn>
+</mfrac></annotation-xml></semantics></math></td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>3</mn>
+<mn>12</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>3</mn>
+<mn>12</mn>
+</mfrac></annotation-xml></semantics></math></td>
+<td><math display="inline"><semantics><mrow>
+<mfrac>
+<mn>1</mn>
+<mn>6</mn>
+</mfrac>
+</mrow><annotation-xml encoding="MathML-Content"><mfrac>
+<mn>1</mn>
+<mn>6</mn>
+</mfrac></annotation-xml></semantics></math></td>
+<td><strong><math display="inline"><semantics><mrow><mfrac><mn>41</mn><mn>60</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>41</mn><mn>60</mn></mfrac></annotation-xml></semantics></math></strong></td>
+</tr>
+<tr>
+<td>Total</td>
+<td><strong><math display="inline"><semantics><mrow><mfrac><mn>5</mn><mn>15</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>5</mn><mn>15</mn></mfrac></annotation-xml></semantics></math></strong></td>
+<td><strong><math display="inline"><semantics><mrow><mfrac><mn>4</mn><mn>12</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>4</mn><mn>12</mn></mfrac></annotation-xml></semantics></math></strong></td>
+<td><strong><math display="inline"><semantics><mrow><mfrac><mn>2</mn><mn>6</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>2</mn><mn>6</mn></mfrac></annotation-xml></semantics></math></strong></td>
+<td>1</td>
+</tr>
+</tbody>
+</table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.9</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">Door Choice</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<p id="element-70">b. <span class="os-math-in-para"><math display="inline"><semantics><mrow><mfrac><mn>41</mn><mn>60</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>41</mn><mn>60</mn></mfrac></annotation-xml></semantics></math></span><span data-count="2" data-type="newline"><br/><br/></span></p>
+<p id="element-63">c. <span class="os-math-in-para"><math display="inline"><semantics><mrow><mfrac><mn>9</mn><mn>19</mn></mfrac></mrow><annotation-xml encoding="MathML-Content"><mfrac><mn>9</mn><mn>19</mn></mfrac></annotation-xml></semantics></math></span></p>
+</div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="note-00001"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">3.22</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered os-hasSolution" data-type="exercise" id="exer-00001"><header></header><section>
+<div data-type="problem" id="prob-00001"><div class="os-problem-container">
+<p id="para-00001">Anna has to buy a new car. She has two choices, car A and car B. Anna can afford only one car. The probability that Anna will buy car A is <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo> </mo><mo>=</mo><mo> </mo><mn>0</mn><mo>.</mo><mn>25</mn></mrow><annotation-xml encoding="MathML-Content"><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo> </mo><mo>=</mo><mo> </mo><mn>0</mn><mo>.</mo><mn>25</mn></annotation-xml></semantics></math></span>, and the probability that Anna will buy car B is <span class="os-math-in-para"><math display="inline"><semantics><mrow><mi>P</mi><mo>(</mo><mi>B</mi><mo>)</mo><mo> </mo><mo>=</mo><mo> </mo><mn>0</mn><mo>.</mo><mn>65</mn></mrow><annotation-xml encoding="MathML-Content"><mi>P</mi><mo>(</mo><mi>B</mi><mo>)</mo><mo> </mo><mo>=</mo><mo> </mo><mn>0</mn><mo>.</mo><mn>65</mn></annotation-xml></semantics></math></span>. Find:</p>
+<ul id="list-00001">
+<li><math display="inline"><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo> </mo><mi>A</mi><mi>N</mi><mi>D</mi><mo> </mo><mi>B</mi><mo>)</mo></mrow><annotation-xml encoding="MathML-Content"><mi>P</mi><mo>(</mo><mi>A</mi><mo> </mo><mi>A</mi><mi>N</mi><mi>D</mi><mo> </mo><mi>B</mi><mo>)</mo></annotation-xml></semantics></math></li>
+<li><math display="inline"><semantics><mrow><mi>P</mi><mo>(</mo><mi>A</mi><mo> </mo><mi>O</mi><mi>R</mi><mo> </mo><mi>B</mi><mo>)</mo></mrow><annotation-xml encoding="MathML-Content"><mi>P</mi><mo>(</mo><mi>A</mi><mo> </mo><mi>O</mi><mi>R</mi><mo> </mo><mi>B</mi><mo>)</mo></annotation-xml></semantics></math></li>
+</ul>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-idm73418960"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">3.23</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="fs-idm37807440"><a aria-label="View Table 3.10" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables#Ch03_M04_tbl007">Table 3.10</a> contains the number of crimes per 100,000 inhabitants in the United States over the span of several years.</p><div class="os-table" id="Ch03_M04_tbl007"><div class="table-scroll"><table data-id="Ch03_M04_tbl007" data-summary="United States Crime Index Rates Per 100,000 Inhabitants 2008 – 2011"><thead>
+<tr>
+<th scope="col">Year</th>
+<th scope="col">Robbery</th>
+<th scope="col">Burglary</th>
+<th scope="col">Vandalism</th>
+<th scope="col">Vehicle</th>
+<th scope="col">Total</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>145.7</td>
+<td>732.1</td>
+<td>29.7</td>
+<td>314.7</td>
+<td>
+</td></tr>
+<tr>
+<td>2</td>
+<td>133.1</td>
+<td>717.7</td>
+<td>29.1</td>
+<td>259.2</td>
+<td>
+</td></tr>
+<tr>
+<td>3</td>
+<td>119.3</td>
+<td>701</td>
+<td>27.7</td>
+<td>239.1</td>
+<td>
+</td></tr>
+<tr>
+<td>4</td>
+<td>113.7</td>
+<td>702.2</td>
+<td>26.8</td>
+<td>229.6</td>
+<td>
+</td></tr>
+<tr>
+<td>Total</td>
+<td>
+</td><td>
+</td><td>
+</td><td>
+</td><td>
+</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.10</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title">United States Crime Index Rates Per 100,000 Inhabitants</span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idm29224880"><header></header><section>
+<div data-type="problem" id="fs-idm58902352"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idp18911776">TOTAL each column and each row. Total data = 4,520.7</p>
+<ol id="fs-idm6434864" type="a">
+<li>Find <em data-effect="italics">P</em>(Year 2 AND Robbery).</li>
+<li>Find <em data-effect="italics">P</em>(Year 3 AND Burglary).</li>
+<li>Find <em data-effect="italics">P</em>(Year 3 OR Burglary).</li>
+<li>Find <em data-effect="italics">P</em>(Year 4 | Vandalism).</li>
+<li>Find <em data-effect="italics">P</em>(Vehicle | Year 1).</li>
+</ol></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idm46779568">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-idm37451408">a. 0.0294, b. 0.1551, c. 0.7165, d. 0.2365, e. 0.2575</p></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm31309776"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">3.23</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm30200592"><header></header><section>
+<div data-type="problem" id="fs-idm54491920"><div class="os-problem-container">
+<p id="fs-idm50410048"><a aria-label="View Table 3.11" class="autogenerated-content" href="https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables#M05_ch03-tbl009">Table 3.11</a> relates the weights and heights of a group of individuals participating in an observational study.</p><div class="os-table" id="M05_ch03-tbl009"><div class="table-scroll"><table data-id="M05_ch03-tbl009" data-summary=""><thead>
+<tr>
+<th scope="col">Weight/Height</th>
+<th scope="col">Tall</th>
+<th scope="col">Medium</th>
+<th scope="col">Short</th>
+<th scope="col">Totals</th>
+</tr></thead><tbody>
+<tr>
+<td>Overweight</td>
+<td>18</td>
+<td>28</td>
+<td>14</td>
+<td>
+</td></tr>
+<tr>
+<td>Typical Weight Range</td>
+<td>20</td>
+<td>51</td>
+<td>28</td>
+<td></td></tr>
+<tr>
+<td>Underweight</td>
+<td>12</td>
+<td>25</td>
+<td>9</td>
+<td>
+</td></tr>
+<tr>
+<td>Totals</td>
+<td>
+</td><td>
+</td><td>
+</td><td>
+</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">3.11</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<ol id="fs-idm43315168" type="a">
+<li>Find the total for each row and column</li>
+<li>Find the probability that a randomly chosen individual from this group is Tall.</li>
+<li>Find the probability that a randomly chosen individual from this group is Overweight and Tall.</li>
+<li>Find the probability that a randomly chosen individual from this group is Tall given that the individual is Overweight.</li>
+<li>Find the probability that a randomly chosen individual from this group is Overweight given that the individual is Tall.</li>
+<li>Find the probability a randomly chosen individual from this group is Tall and Underweight.</li>
+<li>Are the events Overweight and Tall independent?</li>
+</ol></div></div>
+</section></div>
+</div></section></div>
+</div></article><footer><p>Adapted from OpenStax, Introductory Statistics 2e, 3.4 Contingency Tables. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introductory-statistics-2e/pages/3-4-contingency-tables">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

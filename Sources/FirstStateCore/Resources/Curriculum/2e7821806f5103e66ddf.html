@@ -1,0 +1,119 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_44891352-21cf-454b-b803-1cd2ffc828a4"><h2 data-rex-keep="true" data-type="document-title" id="page_44891352-21cf-454b-b803-1cd2ffc828a4_titlecreatedbycookbook"><span class="os-number">12.2</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">Scatter Plots</span>
+</h2>
+<p id="element-38110">Before we take up the discussion of linear regression and correlation, we need to examine a way to display the relation between two variables <em data-effect="italics">x</em> and <em data-effect="italics">y</em>. The most common and easiest way is a <strong>scatter plot</strong>. The following example illustrates a scatter plot.</p>
+<div class="ui-has-child-title" data-type="example" id="element-777"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">12.5</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body"><p id="para-00001">An educational researcher collects data on the vocabulary size of children as a function of age. The data is shown in Table 12.1. Is there a relationship between age and vocabulary size for young children? Construct a scatter plot. Let <em data-effect="italics">x</em> = Child’s Age, and let <em data-effect="italics">y</em> = Vocabulary Size.</p>
+<div class="os-table" id="table-00001"><div class="table-scroll"><table data-id="table-00001" data-summary=".."><thead>
+<tr>
+<th scope="col">Age (years)</th>
+<th scope="col">Vocabulary Size (number of words)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>3</td>
+<td>655</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1098</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2463</td>
+</tr>
+<tr>
+<td>7</td>
+<td>3195</td>
+</tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">12.1</span>
+<span class="os-divider"> </span>
+<span class="os-title" data-type="title"><!-- no-selfclose --></span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<div class="os-figure" id="linrgs_scater12"><figure class="scaled-down ui-has-child-figcaption" data-id="linrgs_scater12">
+<span data-alt="This is a scatter plot for the data provided. The x-axis represents the year and the y-axis represents the number of m-commerce users in millions. There are four points plotted, at (2000, 0.5), (2002, 20.0), (2003, 33.0), (2004, 47.0)." data-type="media" id="id1171452159644"><img alt="This is a scatter plot for the data provided. The x-axis represents the year and the y-axis represents the number of m-commerce users in millions. There are four points plotted, at (2000, 0.5), (2002, 20.0), (2003, 33.0), (2004, 47.0)." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/9c78fc7e90bc03fd2f187582b9e2cc67ed0d0be1" height="782" loading="lazy" src="cda1ab9e8a6a5d848e0e3e01.webp" width="1087"/></span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">12.5</span>
+</figcaption></figure></div></div></section></div><div class="statistics calculator ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idp52837344"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Using the TI-83, 83+, 84, 84+ Calculator</span>
+</h3></header><section>
+<div class="os-note-body">
+To create a scatter plot:
+<ol id="fs-idp71144528">
+<li>Enter your X data into list L1 and your Y data into list L2.</li>
+<li>Press 2nd <code data-type="code">STATPLOT ENTER</code> to use Plot 1.  On the input screen for PLOT 1, highlight On and press <code data-type="code">ENTER</code>. (Make sure the other plots are OFF.)</li>
+<li>For TYPE: highlight the very first icon, which is the scatter plot, and press <code data-type="code">ENTER</code>.</li>
+<li>For Xlist:, enter <code data-type="code">L1</code> ENTER and for Ylist: <code data-type="code">L2</code> ENTER.</li>
+<li>For Mark: it does not matter which symbol you highlight, but the square is the easiest to see. Press <code data-type="code">ENTER</code>.</li>
+<li>Make sure there are no other equations that could be plotted.  Press Y = and clear any equations out.</li>
+<li>Press the <code data-type="code">ZOOM</code> key and then the number 9 (for menu item "ZoomStat") ; the calculator will fit the window to the data.  You can press WINDOW to see the scaling of the axes.</li>
+</ol>
+</div></section></div><div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm16826784"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">12.5</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="eip-339"><header></header><section>
+<div data-type="problem" id="eip-740"><div class="os-problem-container">
+<p id="eip-489">Amelia plays basketball for her high school. She wants to improve to play at the college level. She notices that the number of points she scores in a game goes up in response to the number of hours she practices her jump shot each week. She records the following data:</p>
+<div class="os-table" id="eip-idp1116432"><div class="table-scroll"><table data-id="eip-idp1116432" data-summary=""><thead><tr><th scope="col"><em data-effect="italics">X</em> (hours practicing jump shot)</th> <th scope="col"><em data-effect="italics">Y</em> (points scored in a game)</th></tr></thead><tbody>
+<tr><td>5</td> <td>15</td></tr>
+<tr><td>7</td> <td>22</td></tr>
+<tr><td>9</td> <td>28</td></tr>
+<tr><td>10</td> <td>31</td></tr>
+<tr><td>11</td> <td>33</td></tr>
+<tr><td>12</td> <td>36</td></tr>
+</tbody></table></div><div class="os-caption-container">
+<span class="os-title-label">Table </span>
+<span class="os-number">12.2</span>
+<span class="os-divider"> </span>
+<span class="os-divider"> </span>
+</div>
+</div>
+<p id="eip-idm36661536">Construct a scatter plot and state if what Amelia thinks appears to be true.</p>
+</div></div>
+</section></div>
+</div></section></div>
+<p id="element-83">A scatter plot shows the <strong>direction</strong> of a relationship between the variables. A clear direction happens when there is either:
+</p><ul id="list1">
+<li>High values of one variable occurring with high values of the other variable or low values of one variable occurring with low values of the other variable.</li>
+<li>High values of one variable occurring with low values of the other variable.</li>
+</ul>
+<p id="element-674">You can determine the <strong>strength</strong> of the relationship by looking at the scatter plot and seeing how close the points are to a line, a power function, an exponential function,
+or to some other type of function.  For a linear relationship there is an exception. Consider a scatter plot where all the points fall on a horizontal line providing a "perfect fit." The horizontal line would in fact show no relationship.</p>
+<p id="element-708">When you look at a scatterplot, you want to notice the <strong>overall pattern</strong> and any <strong>deviations</strong> from the pattern. The following scatterplot examples illustrate these concepts.</p>
+<div class="os-figure" id="lingrgs10"><figure class="scaled-down ui-has-child-figcaption" data-id="lingrgs10"><span data-alt="The first graph is a scatter plot with 6 points plotted. The points form a pattern that moves upward to the right, almost in a straight line. The second graph is a scatter plot with the same 6 points as the first graph. A 7th point is plotted in the top left corner of the quadrant. It falls outside the general pattern set by the other 6 points." data-type="media" id="id1171450550347"><img alt="The first graph is a scatter plot with 6 points plotted. The points form a pattern that moves upward to the right, almost in a straight line. The second graph is a scatter plot with the same 6 points as the first graph. A 7th point is plotted in the top left corner of the quadrant. It falls outside the general pattern set by the other 6 points." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/226d68a32c32e693b9878c3622a8f9370a407371" height="478" loading="lazy" src="e7e84afa620dfe54f8941365.webp" width="1461"/>
+</span><figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">12.6</span>
+</figcaption></figure></div>
+<div class="os-figure" id="lingrgs20"><figure class="scaled-down ui-has-child-figcaption" data-id="lingrgs20"><span data-alt="The first graph is a scatter plot with 6 points plotted. The points form a pattern that moves downward to the right, almost in a straight line. The second graph is a scatter plot of 8 points. These points form a general downward pattern, but the point do not align in a tight pattern." data-type="media" id="id1171453496318"><img alt="The first graph is a scatter plot with 6 points plotted. The points form a pattern that moves downward to the right, almost in a straight line. The second graph is a scatter plot of 8 points. These points form a general downward pattern, but the point do not align in a tight pattern." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/eb4cff5863e10bca52404b4abfec4031654b4408" height="478" loading="lazy" src="69043b516f34a5596d326a96.webp" width="1461"/>
+</span><figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">12.7</span>
+</figcaption></figure></div>
+<div class="os-figure" id="lingrgs30"><figure class="scaled-down ui-has-child-figcaption" data-id="lingrgs30"><span data-alt="The first graph is a scatter plot of 7 points in an exponential pattern. The pattern of the points begins along the x-axis and curves steeply upward to the right side of the quadrant. The second graph shows a scatter plot with many points scattered everywhere, exhibiting no pattern." data-type="media" id="id1171454842074">
+<img alt="The first graph is a scatter plot of 7 points in an exponential pattern. The pattern of the points begins along the x-axis and curves steeply upward to the right side of the quadrant. The second graph shows a scatter plot with many points scattered everywhere, exhibiting no pattern." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/0c9120a0ef0ceb15ea4d41e78d189fedd9f25239" height="478" loading="lazy" src="bb27174dd1e1a1d632cbae18.webp" width="1461"/>
+</span><figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">12.8</span>
+</figcaption></figure></div>
+<p id="element-243">In this chapter, we are interested in scatter plots that show a linear pattern. Linear patterns are quite common. The linear relationship is strong if the points are close to a straight line,  except in the case of a horizontal line where there is no relationship. If we think that the points show a linear relationship, we would like to draw a line on the scatter plot. This line can be calculated through a process called <span data-type="term" group-by="l" id="term-00001">linear regression</span>. However, we only calculate a regression line if one of the variables helps to explain or predict the other variable. If <em data-effect="italics">x</em> is the independent variable and <em data-effect="italics">y</em> the dependent variable,
+then we can use a regression line to predict <em data-effect="italics">y</em> for a given value of <em data-effect="italics">x</em></p>
+</div></article><footer><p>Adapted from OpenStax, Introductory Statistics 2e, 12.2 Scatter Plots. Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introductory-statistics-2e/pages/12-2-scatter-plots">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

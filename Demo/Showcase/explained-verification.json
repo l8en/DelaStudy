@@ -1,0 +1,53 @@
+{
+  "video": {
+    "file": "DelaStudy-Explained-2m15.mp4",
+    "durationSeconds": 135,
+    "width": 1920,
+    "height": 1080,
+    "codec": "avc1",
+    "videoTracks": 1,
+    "audioTracks": 0,
+    "bytes": 29377580,
+    "sha256": "c4889f7d0d1a6bda92086d268341e644f653157c16752130f159ae156d23e96f",
+    "codeExcerpts": 2,
+    "diagramOverlays": 10,
+    "maximumDiagramWidth": 900,
+    "maximumDiagramHeight": 340,
+    "webcamArea": "Upper right kept clear",
+    "chapterMidpointsDecodedAndInspected": 21,
+    "narrationBurnedIn": false
+  },
+  "preservation": {
+    "approvedVideo": "DelaStudy-Walkthrough-2m15.mp4",
+    "approvedVideoSHA256Unchanged": "9b8a7ebb2494dd887889a6e0c7adece0962a3175ee607bec3292c77af7e5c7b8",
+    "approvedScriptSHA256Unchanged": "d0d3d933971ee8c93f68efac670693a2e24b7f2b0839e549aed246afc0c3cc3d",
+    "base": "Approved finished video, not a new recording or re-edit of raw ranges",
+    "replacedRegion": "Only the right-hand presentation area; base movie is visible through x=670",
+    "shotManifestUnchanged": true,
+    "retiming": false,
+    "reframing": false,
+    "phoneSamplesCompared": 135,
+    "phoneCrop": {"x":135,"y":40,"width":525,"height":1000},
+    "maximumFrameTimeDeltaSeconds": 0,
+    "minimumPSNRdB": 42.48356372007697,
+    "averagePSNRdB": 47.39768890908994,
+    "maximumMeanAbsoluteChannelDifference": 0.8041568253968254,
+    "scope": "Equal-time samples at one-second intervals. Small video re-encoding differences are expected; not a claim of lossless or exhaustive pixel identity.",
+    "fullComparisonReport": "/tmp/delastudy-explained-OHXuP9/preservation.json"
+  },
+  "script": {
+    "file": "DelaStudy-Team-Narration.docx",
+    "sha256": "108c1c14b63f7ccec436478bea892f657c960dc4706e4ebf026bcc67b896ac1b",
+    "spokenWords": 257,
+    "pagesRenderedAndInspected": 3,
+    "accessibilityAuditFindings": 0,
+    "presenters": [
+      {"name":"M’hamed","start":0,"end":41},
+      {"name":"Ibby","start":41,"end":96},
+      {"name":"Sai","start":96,"end":135}
+    ],
+    "readAloud": "Main narration only; timestamps and screen cues are not spoken",
+    "source": "explained-narration.json"
+  },
+  "scope": "Local video presentation and companion script only. App code, accounts, Simulator state and the approved earlier deliverables are unchanged. No commit, public deployment or remote write."
+}

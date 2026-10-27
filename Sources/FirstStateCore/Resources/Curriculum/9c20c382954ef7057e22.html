@@ -1,0 +1,1087 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>
+    :root { color-scheme: light dark; } html { max-width:100%; overflow-x:hidden; } body { font: -apple-system-body; line-height:1.65; margin:20px; color:#18233a; background:#fcfcfa; overflow-wrap:break-word; min-width:0; } article { max-width:100%; min-width:0; }
+    h1 { font-size:1.6em; line-height:1.2; } h2 { font-size:1.25em; line-height:1.3; margin-top:1.8em; } h3 { font-size:1.1em; }
+    a { color:#3455d1; } img,svg { max-width:100%; height:auto; } figure { margin:1.5em 0; } figcaption,footer,aside { font-size:.9em; } footer { border-top:1px solid #b4bfd1; margin-top:2em; padding-top:1em; } aside { border-left:3px solid #3455d1; padding-left:1em; margin-bottom:1.5em; }
+    .math-scroll,.table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; } table { border-collapse:collapse; } th,td { padding:.5em; border:1px solid #b4bfd1; } math[display=block] { padding:.5em 0; } pre { max-width:100%; overflow-x:auto; } code { font-family:ui-monospace,monospace; } [data-type=note] { border-left:3px solid #3455d1; padding-left:1em; margin:1.5em 0; }
+    @media(prefers-color-scheme:dark) { body { background:#10151d; color:#f0f3fa; } a { color:#a2b5ff; } img { background:#fff; } }
+    </style></head><body><article><div class="chapter-content-module" data-book-content="true" data-type="page" id="page_c3952dc3-b6d9-42d3-beb7-9d9427db2c12"><h2 data-rex-keep="true" data-type="document-title" id="page_c3952dc3-b6d9-42d3-beb7-9d9427db2c12_titlecreatedbycookbook"><span class="os-number">7.1</span>
+<span class="os-divider"> </span>
+<span class="os-text" data-type="" itemprop="">The Central Limit Theorem for Sample Means (Averages)</span>
+</h2>
+<p id="fs-idm47553248">Suppose <em data-effect="italics">X</em> is a random variable with a distribution that may be known or unknown (it can be any distribution). Using a subscript that matches the random variable, suppose:</p>
+<ol id="list-1" type="a">
+<li><em data-effect="italics">μ</em><em data-effect="italics"><sub>X</sub></em> = the mean of <em data-effect="italics">X</em></li>
+<li><em data-effect="italics">σ</em><em data-effect="italics"><sub>X</sub></em> = the standard deviation of <em data-effect="italics">X</em></li>
+</ol>
+<p id="fs-idm4523440">If you draw random samples of size <em data-effect="italics">n</em>, then as <em data-effect="italics">n</em> increases, the random variable <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> which consists of sample means, tends to be <span data-type="term" group-by="n" id="term-00001">normally distributed</span> and</p><div class="unnumbered" data-type="equation" id="element-810"><div class="math-scroll"><math display="block"><semantics><mrow>
+<mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover><mo>~</mo><mi>N</mi><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>μ</mi>
+<mi>x</mi>
+</msub>
+<mtext>, </mtext><mfrac>
+<mrow>
+<msub>
+<mi>σ</mi><mi>X</mi>
+</msub>
+</mrow>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover><mo>~</mo><mi>N</mi><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<msub>
+<mi>μ</mi>
+<mi>x</mi>
+</msub>
+<mtext>, </mtext><mfrac>
+<mrow>
+<msub>
+<mi>σ</mi><mi>X</mi>
+</msub>
+</mrow>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></div></div>
+<p id="element-489">The <span data-type="term" group-by="c" id="term-00002">central limit theorem</span> for sample means says that if you repeatedly draw samples of a given size (such as repeatedly rolling ten dice) and calculate their means, those means tend to follow a normal distribution (the sampling distribution). As sample sizes increase, the distribution of means more closely follows the normal distribution. The normal distribution has the same mean as the original distribution and a variance that equals the original variance divided by the sample size. Standard deviation is the square root of variance, so the standard deviation of the sampling distribution is the standard deviation of the original distribution divided by the square root of <em data-effect="italics">n</em>. The variable <em data-effect="italics">n</em> is the number of values that are averaged together, not the number of times the experiment is done.</p><p id="fs-idm26555216">To put it more formally, if you draw random samples of size <em data-effect="italics">n</em>, the distribution of the random variable <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span>, which consists of sample means, is called the <strong>sampling distribution of the mean</strong>. The sampling distribution of the mean approaches a normal distribution as <em data-effect="italics">n</em>, the <span data-type="term" group-by="s" id="term-00003">sample size</span>, increases. </p>
+<p id="element-54">The random variable <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> has a different <em data-effect="italics">z</em>-score associated with it from that of the random variable <em data-effect="italics">X</em>. The mean <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> is the value of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> in one sample.</p><div class="unnumbered" data-label="" data-type="equation" id="element-684"><div class="math-scroll"><math display="block"><semantics><mrow>
+<mrow>
+<mi>z</mi><mo>=</mo><mfrac>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo stretchy="true">¯</mo>
+</mover>
+<mo>−</mo><msub>
+<mi>μ</mi>
+<mi>x</mi>
+</msub>
+</mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msub>
+<mi>σ</mi>
+<mi>X</mi>
+</msub>
+</mrow>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>z</mi><mo>=</mo><mfrac>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo stretchy="true">¯</mo>
+</mover>
+<mo>−</mo><msub>
+<mi>μ</mi>
+<mi>x</mi>
+</msub>
+</mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msub>
+<mi>σ</mi>
+<mi>X</mi>
+</msub>
+</mrow>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></div></div>
+<p id="element-686"><em data-effect="italics">μ</em><sub><em data-effect="italics">X</em></sub> is the average of both <em data-effect="italics">X</em> and <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span>.</p><p id="element-455"><span class="os-math-in-para"><math display="inline"><semantics><mrow><msub><mi>σ</mi><mi>x</mi></msub><mo>=</mo><mfrac><msub><mi>σ</mi><mi>X</mi></msub><msqrt><mi>n</mi></msqrt></mfrac><mo>=</mo></mrow><annotation-xml encoding="MathML-Content"><msub><mi>σ</mi><mi>x</mi></msub><mo>=</mo><mfrac><msub><mi>σ</mi><mi>X</mi></msub><msqrt><mi>n</mi></msqrt></mfrac><mo>=</mo></annotation-xml></semantics></math></span> standard deviation of <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>X</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> and is called the <span data-type="term" group-by="s" id="term-00004">standard error of the mean.</span></p>
+<div class="statistics calculator ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm74236704"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Using the TI-83, 83+, 84, 84+ Calculator</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm164143744">To find probabilities for means on the calculator, follow these steps.</p>
+<p id="fs-idm81814896"><code data-type="code">2nd DISTR</code><span data-type="newline"><br/></span><code data-type="code">2:normalcdf</code></p>
+<p id="fs-idm32771680"><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mi>n</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>c</mi><mi>d</mi><mi>f</mi><mrow><mo>(</mo>
+<mrow>
+<mi>l</mi><mi>o</mi><mi>w</mi><mi>e</mi><mi>r</mi><mtext> </mtext><mi>v</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mtext> </mtext><mi>o</mi><mi>f</mi><mtext> </mtext><mi>t</mi><mi>h</mi><mi>e</mi><mtext> </mtext><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>,</mo><mtext> </mtext><mi>u</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>r</mi><mtext> </mtext><mi>v</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mtext> </mtext><mi>o</mi><mi>f</mi><mtext> </mtext><mi>t</mi><mi>h</mi><mi>e</mi><mtext> </mtext><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>,</mo><mtext> </mtext><mi>m</mi><mi>e</mi><mi>a</mi><mi>n</mi><mo>,</mo><mtext> </mtext><mfrac>
+<mrow>
+<mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>a</mi><mi>r</mi><mi>d</mi><mo> </mo><mi>d</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mi>s</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mo> </mo><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mi>n</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>a</mi><mi>l</mi><mi>c</mi><mi>d</mi><mi>f</mi><mrow><mo>(</mo>
+<mrow>
+<mi>l</mi><mi>o</mi><mi>w</mi><mi>e</mi><mi>r</mi><mtext> </mtext><mi>v</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mtext> </mtext><mi>o</mi><mi>f</mi><mtext> </mtext><mi>t</mi><mi>h</mi><mi>e</mi><mtext> </mtext><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>,</mo><mtext> </mtext><mi>u</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>r</mi><mtext> </mtext><mi>v</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mtext> </mtext><mi>o</mi><mi>f</mi><mtext> </mtext><mi>t</mi><mi>h</mi><mi>e</mi><mtext> </mtext><mi>a</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo>,</mo><mtext> </mtext><mi>m</mi><mi>e</mi><mi>a</mi><mi>n</mi><mo>,</mo><mtext> </mtext><mfrac>
+<mrow>
+<mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>a</mi><mi>r</mi><mi>d</mi><mo> </mo><mi>d</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mi>s</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mo> </mo><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span></p><p id="fs-idm176650400">where:
+</p><ul id="fs-idm130027040">
+<li><em data-effect="italics">mean</em> is the mean of the original distribution</li>
+<li><em data-effect="italics">standard deviation</em> is the standard deviation of the original distribution</li>
+<li><em data-effect="italics">sample size</em> = <em data-effect="italics">n</em></li>
+</ul>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="element-469"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">7.1</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<p id="element-961">An unknown distribution has a mean of 90 and a standard deviation of 15. Samples of size <em data-effect="italics">n</em> = 25 are drawn randomly from the population.</p>
+<div class="unnumbered has-problem-title" data-type="exercise" id="element-705"><header></header><section>
+<div data-type="problem" id="id5873867"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-704"><span data-type="newline"><br/></span>a. Find the probability that the <span data-type="term" group-by="s" id="term-00005">sample mean</span> is between 85 and 92.</p></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id5873893">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="fs-idp14520352">a. Let <em data-effect="italics">X</em> = one value from the original unknown population. The probability question asks you to find a probability for the <strong>sample mean</strong>.</p>
+<p id="element-126">Let <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> = the mean of a sample of size 25. Since <em data-effect="italics">μ</em><sub><em data-effect="italics">X</em></sub> = 90, <em data-effect="italics">σ<sub>X</sub></em> = 15, and <em data-effect="italics">n</em> = 25, </p>
+<p id="element-756"><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> ~ <em data-effect="italics">N</em><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>90</mn><mtext>, </mtext><mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>25</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>90</mn><mtext>, </mtext><mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>25</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span>.</p>
+<p id="element-181">Find <em data-effect="italics">P</em>(85 &lt; <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> &lt; 92). Draw a graph.</p>
+<p id="element-196">
+<em data-effect="italics">P</em>(85 &lt; <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> &lt; 92) = 0.6997</p>
+<p id="element-594">The probability that the sample mean is between 85 and 92 is 0.6997.</p>
+</div>
+</section>
+</details>
+</section></div>
+<div class="os-figure" id="fs-idm143949248"><figure class="scaled-down ui-has-child-figcaption" data-id="fs-idm143949248">
+<span data-alt="This is a normal distribution curve. The peak of the curve coincides with the point 90 on the horizontal axis. The points 85 and 92 are labeled on the axis. Vertical lines are drawn from these points to the curve and the area between the lines is shaded. The shaded region represents the probability that 85 &lt; x &lt; 92." data-type="media" id="id5864797">
+<img alt="This is a normal distribution curve. The peak of the curve coincides with the point 90 on the horizontal axis. The points 85 and 92 are labeled on the axis. Vertical lines are drawn from these points to the curve and the area between the lines is shaded. The shaded region represents the probability that 85 &lt; x &lt; 92." data-media-type="image/png" data-original-src="/apps/archive/20260604.144757/resources/dc1d0c1a899a202807433332c859acded60692de" height="443" loading="lazy" src="7f8c2c5a22550515ac076868.webp" width="966"/></span>
+<figcaption class="os-caption-container">
+<span class="os-title-label">Figure </span>
+<span class="os-number">7.2</span>
+</figcaption></figure></div>
+<div class="statistics calculator ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm146534448"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Using the TI-83, 83+, 84, 84+ Calculator</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="element-868"><code data-type="code">normalcdf</code>(lower value, upper value, mean, standard error of the mean)</p>
+<p id="element-106">The parameter list is abbreviated (lower value, upper value, <em data-effect="italics">μ</em>, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>)</p><p id="element-77"><code data-type="code">normalcdf</code>(85,92,90,<span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>25</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>25</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span>) = 0.6997</p></div></section></div>
+<div class="unnumbered has-problem-title" data-type="exercise" id="element-808"><header></header><section>
+<div data-type="problem" id="id5864943"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idm58973456">b. Find the value that is two standard deviations above the expected value, 90, of the sample mean.</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id5864961">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-91">b. To find the value that is two standard deviations above the expected value 90, use the formula:</p>
+<p id="eip-idm63061120">value = <em data-effect="italics">μ</em><sub>x</sub> + (#ofTSDEVs)<span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msub>
+<mi>σ</mi>
+<mi>x</mi>
+</msub>
+</mrow>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<msub>
+<mi>σ</mi>
+<mi>x</mi>
+</msub>
+</mrow>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span></p><p id="eip-idp63452384">value = 90 + 2 <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>25</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>25</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> = 96</p>
+<p id="element-564">The value that is two standard deviations above the expected value is 96.</p>
+<p id="fs-idp29133808">The standard error of the mean is <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<msub><mi>σ</mi><mi>x</mi></msub>
+</mrow>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<msub><mi>σ</mi><mi>x</mi></msub>
+</mrow>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> = <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>25</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>25</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math></span> = 3. Recall that the standard error of the mean is a description of how far (on average) that the sample mean will be from the population mean in repeated simple random samples of size <em data-effect="italics">n</em>.</p></div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm83395104"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">7.1</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm18823760"><header></header><section>
+<div data-type="problem" id="fs-idp5202224"><div class="os-problem-container">
+<p id="fs-idp2240544">An unknown distribution has a mean of 45 and a standard deviation of eight. Samples of size <em data-effect="italics">n</em> = 30 are drawn randomly from the population. Find the probability that the sample mean is between 42 and 50.</p>
+</div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="element-708"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">7.2</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="element-794"><header></header><section>
+<div data-type="problem" id="id5865146"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="element-24">The length of time, in hours, it takes an "over 40" group of people to play one soccer match is normally distributed with a <strong>mean of two hours</strong> and a <strong>standard deviation of 0.5 hours</strong>. A <strong>sample of size <em data-effect="italics">n</em> = 50</strong> is drawn randomly from the population. Find the probability that the <strong>sample mean</strong> is between 1.8 hours and 2.3 hours.</p>
+</div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="id5865170">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<p id="element-723">
+Let <em data-effect="italics">X</em> = the time, in hours, it takes to play one soccer match.</p>
+<p id="element-302">The probability question asks you to find a probability for the <strong>sample mean time, in hours</strong>, it takes to play one soccer match.</p>
+<p id="element-849">Let <span class="os-math-in-para"><math display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo>¯</mo></mover></mrow><annotation-xml encoding="MathML-Content"><mover accent="true"><mi>x</mi><mo>¯</mo></mover></annotation-xml></semantics></math></span> = the <span data-type="term" group-by="m" id="term-00006">mean</span> time, in hours, it takes to play one soccer match.</p>
+<p id="fs-idm28701424">If <em data-effect="italics">μ<sub>X</sub></em> = _________, <em data-effect="italics">σ<sub>X</sub></em> = __________, and <em data-effect="italics">n</em> =  ___________, then <span class="os-math-in-para"><math display="inline"><semantics><mrow><mover accent="true"><mi>X</mi><mo>¯</mo></mover></mrow><annotation-xml encoding="MathML-Content"><mover accent="true"><mi>X</mi><mo>¯</mo></mover></annotation-xml></semantics></math></span> ~ <em data-effect="italics">N</em>(______, ______) by the <span data-type="term" group-by="c" id="term-00007">central limit theorem for means</span>.</p>
+<p id="fs-idm68643920"><em data-effect="italics">μ<sub>X</sub></em> = 2, <em data-effect="italics">σ<sub>X</sub></em> = 0.5, <em data-effect="italics">n</em> = 50, and <em data-effect="italics">X</em> ~ <em data-effect="italics">N</em><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>2, </mtext><mfrac>
+<mrow>
+<mn>0.5</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>50</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>2, </mtext><mfrac>
+<mrow>
+<mn>0.5</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>50</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span></p>
+<p id="fs-idm39125184">Find <em data-effect="italics">P</em>(1.8 &lt; <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> &lt; 2.3). Draw a graph.</p>
+<p id="fs-idp90367824"><em data-effect="italics">P</em>(1.8 &lt; <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> &lt; 2.3) = 0.9977</p>
+<p id="element-290"><code data-type="code">normalcdf</code><span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.</mn><mtext>8,2</mtext><mtext>.3,2,</mtext><mfrac>
+<mrow>
+<mn>.5</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>50</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>1.</mn><mtext>8,2</mtext><mtext>.3,2,</mtext><mfrac>
+<mrow>
+<mn>.5</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>50</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span> = 0.9977</p><p id="element-13">The probability that the mean time is between 1.8 hours and 2.3 hours is 0.9977.</p></div>
+</section>
+</details>
+</section></div></div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm109373536"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">7.2</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idp55734224"><header></header><section>
+<div data-type="problem" id="fs-idp43500160"><div class="os-problem-container">
+<p id="fs-idp24603664">The length of time taken on the SAT for a group of students is normally distributed with a mean of 2.5 hours and a standard deviation of 0.25 hours. A sample size of <em data-effect="italics">n</em> = 60 is drawn randomly from the population. Find the probability that the sample mean is between two hours and three hours.</p>
+</div></div>
+</section></div></div></section></div>
+<div class="statistics calculator ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm13085488"><header><h3 class="os-title" data-type="title">
+<span class="os-title-label">Using the TI-83, 83+, 84, 84+ Calculator</span>
+</h3></header><section>
+<div class="os-note-body">
+<p id="fs-idm146458576">To find percentiles for means on the calculator, follow these steps.</p>
+<p id="fs-idm39446144"><code data-type="code">2<sup>nd</sup> DIStR</code>
+<span data-type="newline"><br/></span><code data-type="code">3:invNorm</code></p>
+<p id="fs-idm50856880"><em data-effect="italics">k</em> = invNorm<span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>area to the left of </mtext><mi>k</mi><mtext>, mean,</mtext><mo> </mo><mfrac>
+<mrow>
+<mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>a</mi><mi>r</mi><mi>d</mi><mo> </mo><mi>d</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mi>s</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mo> </mo><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>area to the left of </mtext><mi>k</mi><mtext>, mean,</mtext><mo> </mo><mfrac>
+<mrow>
+<mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>a</mi><mi>r</mi><mi>d</mi><mo> </mo><mi>d</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mi>s</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>e</mi><mo> </mo><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math></span></p><p id="fs-idm74111040">where:
+</p><ul id="fs-idm74110784"><li><em data-effect="italics">k</em> = the <em data-effect="italics">k</em><sup>th</sup> percentile</li>
+<li><em data-effect="italics">mean</em> is the mean of the original distribution</li>
+<li><em data-effect="italics">standard deviation</em> is the standard deviation of the original distribution</li>
+<li><em data-effect="italics">sample size</em> = <em data-effect="italics">n</em></li>
+</ul>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-idp22561888"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">7.3</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idp8724208"><header></header><section>
+<div data-type="problem" id="fs-idp17530752"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idp27120736">In a recent study, it was reported that the mean age of iPad users is 34 years. Suppose the standard deviation is 15 years. Take a sample of size <em data-effect="italics">n</em> = 100.</p>
+<ol id="fs-idm47147072" type="a">
+<li>What are the mean and standard deviation for the sample mean ages of iPad users?</li>
+<li>What does the distribution look like?</li>
+<li>Find the probability that the sample mean age is more than 30 years (the reported mean age of iPad users in this particular study).</li>
+<li>Find the 95<sup>th</sup> percentile for the sample mean age (to one decimal place).</li>
+</ol></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idp42522512">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<ol id="fs-idm50017008" type="a"><li>Since the sample mean tends to target the population mean, we have <em data-effect="italics">μ<sub>χ</sub></em> = <em data-effect="italics">μ</em> = 34. The sample standard deviation is given by <em data-effect="italics">σ<sub>χ</sub></em> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>100</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>100</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = <math display="inline"><semantics><mrow>
+<mrow>
+<mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<mn>10</mn>
+</mrow>
+</mfrac>
+</mrow></annotation-xml></semantics></math> = 1.5</li>
+<li>The central limit theorem states that for large sample sizes(<em data-effect="italics">n</em>), the sampling distribution will be approximately normal.</li>
+<li>The probability that the sample mean age is more than 30 is given by <math display="inline"><semantics><mrow><mi>P</mi><mo>(</mo><mover accent="true"><mi>X</mi><mo>¯</mo></mover><mo> </mo><mo>&gt;</mo><mo> </mo><mn>30</mn><mo>)</mo></mrow><annotation-xml encoding="MathML-Content"><mi>P</mi><mo>(</mo><mover accent="true"><mi>X</mi><mo>¯</mo></mover><mo> </mo><mo>&gt;</mo><mo> </mo><mn>30</mn><mo>)</mo></annotation-xml></semantics></math> = <code data-type="code">normalcdf</code>(30,E99,34,1.5) = 0.9962</li>
+<li>Let <em data-effect="italics">k</em> = the 95<sup>th</sup> percentile.
+<span data-count="1" data-type="newline"><br/></span><em data-effect="italics">k</em> = invNorm<math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>0.</mn><mtext>95,34,</mtext><mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>100</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>0.</mn><mtext>95,34,</mtext><mfrac>
+<mrow>
+<mn>15</mn>
+</mrow>
+<mrow>
+<msqrt>
+<mrow>
+<mn>100</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> = 36.5</li>
+</ol></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm63776496"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">7.3</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idm62512800"><header></header><section>
+<div data-type="problem" id="fs-idm44878080"><div class="os-problem-container">
+<p id="fs-idm48406832">In an article on Flurry Blog, a gaming marketing gap for men between the ages of 30 and 40 is identified. You are researching a startup game targeted at the 35-year-old demographic. Your idea is to develop a strategy game that can be played by men from their late 20s through their late 30s. Based on the article’s data, industry research shows that the average strategy player is 28 years old with a standard deviation of 4.8 years. You take a sample of 100 randomly selected gamers. If your target market is 29- to 35-year-olds, should you continue with your development strategy?</p></div></div>
+</section></div>
+</div></section></div>
+<div class="ui-has-child-title" data-type="example" id="fs-idm59036512"><header><h3 class="os-title">
+<span class="os-title-label">Example </span>
+<span class="os-number">7.4</span>
+<span class="os-divider"> </span>
+</h3></header><section>
+<div class="body">
+<div class="unnumbered has-problem-title" data-type="exercise" id="fs-idp15422768"><header></header><section>
+<div data-type="problem" id="fs-idp210784"><h4 data-type="problem-title">
+<span class="os-title-label">Problem</span>
+</h4>
+<div class="os-problem-container">
+<p id="fs-idm45834688">The mean number of minutes for app engagement by an iPad user is 8.2 minutes. Suppose the standard deviation is one minute. Take a sample of 60.</p>
+<ol id="fs-idm51964960" type="a">
+<li>What are the mean and standard deviation for the sample mean number of minutes for app engagement by an iPad user?</li>
+<li>What is the standard error of the mean?</li>
+<li>Find the 90<sup>th</sup> percentile for the sample mean time of minutes for app engagement by an iPad user. Interpret this value in a complete sentence.</li>
+<li>Find the probability that the sample mean is between eight minutes and 8.5 minutes.</li>
+</ol></div></div>
+<details aria-label="Show/Hide Solution" data-type="solution" id="fs-idp4823088">
+<summary class="btn-link ui-toggle" data-content="Show/Hide Solution" title="Show/Hide Solution"></summary>
+<section class="ui-body" role="alert"><h4 data-type="solution-title">
+<span class="os-title-label">Solution</span>
+</h4>
+<div class="os-solution-container">
+<ol id="fs-idm38233840" type="a"><li><math display="inline"><semantics><mrow>
+<mrow>
+<msub>
+<mi>μ</mi>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo stretchy="true">¯</mo>
+</mover>
+</mrow>
+</msub>
+<mo>=</mo><mi>μ</mi><mo>=</mo><mn>8.2</mn><mtext> </mtext><msub>
+<mi>σ</mi>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo stretchy="true">¯</mo>
+</mover>
+</mrow>
+</msub>
+<mo>=</mo><mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>60</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>0.13</mn>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<msub>
+<mi>μ</mi>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo stretchy="true">¯</mo>
+</mover>
+</mrow>
+</msub>
+<mo>=</mo><mi>μ</mi><mo>=</mo><mn>8.2</mn><mtext> </mtext><msub>
+<mi>σ</mi>
+<mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo stretchy="true">¯</mo>
+</mover>
+</mrow>
+</msub>
+<mo>=</mo><mfrac>
+<mi>σ</mi>
+<mrow>
+<msqrt>
+<mi>n</mi>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>=</mo><mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>60</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+<mo>=</mo><mn>0.13</mn>
+</mrow></annotation-xml></semantics></math></li>
+<li>This allows us to calculate the probability of sample means of a particular distance from the mean, in repeated samples of size 60.</li>
+<li>Let <em data-effect="italics">k</em> = the 90<sup>th</sup> percentile
+<span data-type="newline"><br/></span>
+<em data-effect="italics">k</em> = <code data-type="code">invNorm</code><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>0.</mn><mtext>90,8</mtext><mtext>.2,</mtext><mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>60</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mn>0.</mn><mtext>90,8</mtext><mtext>.2,</mtext><mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>60</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> = 8.37. This values indicates that 90 percent of the average app engagement time for iPad users is less than 8.37 minutes.</li>
+<li><em data-effect="italics">P</em>(8 &lt; <math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math> &lt; 8.5) = <code data-type="code">normalcdf</code><math display="inline"><semantics><mrow>
+<mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>8,8</mtext><mtext>.5,8</mtext><mtext>.2,</mtext><mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>60</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow>
+</mrow><annotation-xml encoding="MathML-Content"><mrow>
+<mrow><mo>(</mo>
+<mrow>
+<mtext>8,8</mtext><mtext>.5,8</mtext><mtext>.2,</mtext><mfrac>
+<mn>1</mn>
+<mrow>
+<msqrt>
+<mrow>
+<mn>60</mn>
+</mrow>
+</msqrt>
+</mrow>
+</mfrac>
+</mrow>
+<mo>)</mo></mrow>
+</mrow></annotation-xml></semantics></math> = 0.9293</li>
+</ol></div>
+</section>
+</details>
+</section></div>
+</div></section></div>
+<div class="statistics try ui-has-child-title" data-has-label="true" data-label="" data-type="note" id="fs-idm70207568"><header><h3 class="os-title">
+<span class="os-title-label">Try It </span>
+<span class="os-number">7.4</span>
+</h3></header><section>
+<div class="os-note-body">
+<div class="unnumbered" data-type="exercise" id="fs-idp8586512"><header></header><section>
+<div data-type="problem" id="fs-idm57780000"><div class="os-problem-container">
+<p id="fs-idm57779872">Cans of a cola beverage claim to contain 16 ounces. The amounts in a sample are measured and the statistics are <em data-effect="italics">n</em> = 34, <span class="os-math-in-para"><math display="inline"><semantics><mrow>
+<mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover>
+</mrow><annotation-xml encoding="MathML-Content"><mover accent="true">
+<mi>x</mi>
+<mo>¯</mo>
+</mover></annotation-xml></semantics></math></span> = 16.01 ounces. If the cans are filled so that <em data-effect="italics">μ</em> = 16.00 ounces (as labeled) and <em data-effect="italics">σ</em> = 0.143 ounces, find the probability that a sample of 34 cans will have an average amount greater than 16.01 ounces. Do the results suggest that cans are filled with an amount greater than 16 ounces?</p></div></div>
+</section></div>
+</div></section></div>
+</div></article><footer><p>Adapted from OpenStax, Introductory Statistics 2e, 7.1 The Central Limit Theorem for Sample Means (Averages). Formatting adapted for this reader; content and original figure credits retained.</p><p><a href="https://openstax.org/books/introductory-statistics-2e/pages/7-1-the-central-limit-theorem-for-sample-means-averages">Access the original free textbook</a> · <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike License</a></p></footer></body></html>

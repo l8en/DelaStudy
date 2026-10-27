@@ -49,6 +49,6 @@ struct LearnerMetricsTests {
         let awards = LearnerMetrics.awards(content: AppContent.content, snapshot: ProgressSnapshot(attempts: attempts))
         #expect(awards.first { $0.id == "three-subjects" }?.isUnlocked == true)
         #expect(awards.first { $0.id == "college-start" }?.isUnlocked == true)
-        #expect(awards.count == 10)
+        #expect(awards.count == 12)
     }
 }

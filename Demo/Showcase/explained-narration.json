@@ -1,0 +1,193 @@
+{
+  "video": "DelaStudy-Explained-2m15.mp4",
+  "duration": 135,
+  "scenes": [
+    {
+      "start": 0,
+      "end": 6,
+      "title": "Create an account",
+      "speaker": "M’hamed",
+      "screen": "Waffles123’s username and masked password; Create account opens setup.",
+      "read": "I’m M’hamed. This is DelaStudy, and we’re creating Waffles123’s account."
+    },
+    {
+      "start": 6,
+      "end": 24,
+      "title": "Personalized onboarding",
+      "speaker": "M’hamed",
+      "screen": "Onboarding; choices merge into a saved local plan.",
+      "read": "We choose our grade and a study goal. Next come our subjects and a course direction. Our school and study preferences shape a saved starting plan on this iPhone.",
+      "segments": [
+        {
+          "start": 6,
+          "end": 11,
+          "read": "We choose our grade and a study goal."
+        },
+        {
+          "start": 11,
+          "end": 16,
+          "read": "Next come our subjects and a course direction."
+        },
+        {
+          "start": 16,
+          "end": 24,
+          "read": "Our school and study preferences shape a saved starting plan on this iPhone."
+        }
+      ]
+    },
+    {
+      "start": 24,
+      "end": 28,
+      "title": "The student’s desk",
+      "speaker": "M’hamed",
+      "screen": "Today opens; the diagram’s final node highlights.",
+      "read": "Today brings that plan into one place."
+    },
+    {
+      "start": 28,
+      "end": 36,
+      "title": "Find a course",
+      "speaker": "M’hamed",
+      "screen": "Browse course levels and search Geometry; three paths converge into search.",
+      "read": "The library separates high school, AP preparation, and introductory college paths. Here, we search for Geometry."
+    },
+    {
+      "start": 36,
+      "end": 41,
+      "title": "A complete course structure",
+      "speaker": "M’hamed",
+      "screen": "Geometry outline; the diagram shows five units with six activities each.",
+      "read": "Each course has five units and at least thirty activities."
+    },
+    {
+      "start": 41,
+      "end": 51,
+      "title": "Bite-sized lessons",
+      "speaker": "Ibby",
+      "screen": "Three lesson steps; code 1 saves the position before changing the step.",
+      "read": "I’m Ibby. Lessons use three short steps. The code saves our position before advancing, so we can return without losing our place."
+    },
+    {
+      "start": 51,
+      "end": 74,
+      "title": "Practice, feedback and saving",
+      "speaker": "Ibby",
+      "screen": "MCQ → blank → matching → save; the diagram follows each question type.",
+      "read": "Multiple choice checks our understanding of vertical angles. Next, we fill in one hundred eighty degrees. For matching, we drag the first term, then tap the others into place. Feedback follows our answers. Completion saves the activity and awards its XP once.",
+      "segments": [
+        {
+          "start": 51,
+          "end": 55,
+          "read": "Multiple choice checks our understanding of vertical angles."
+        },
+        {
+          "start": 55,
+          "end": 59,
+          "read": "Next, we fill in one hundred eighty degrees."
+        },
+        {
+          "start": 59,
+          "end": 69,
+          "read": "For matching, we drag the first term, then tap the others into place. Feedback follows our answers."
+        },
+        {
+          "start": 69,
+          "end": 74,
+          "read": "Completion saves the activity and awards its XP once."
+        }
+      ]
+    },
+    {
+      "start": 74,
+      "end": 83,
+      "title": "Resources, not a wall of text",
+      "speaker": "Ibby",
+      "screen": "Resources dropdowns; textbooks, full readings and videos form a tree.",
+      "read": "Resources separate textbooks, full readings, and videos into expandable categories. Extra material stays outside the lesson."
+    },
+    {
+      "start": 83,
+      "end": 90,
+      "title": "College preparation",
+      "speaker": "Ibby",
+      "screen": "College checklist; Explore fields of study is checked.",
+      "read": "College planning breaks preparation into steps: explore fields, compare routes, and ask a counselor."
+    },
+    {
+      "start": 90,
+      "end": 96,
+      "title": "Plan the next session",
+      "speaker": "Ibby",
+      "screen": "Save Review angle relationships; goal → saved task → Focus session.",
+      "read": "We save a specific study task, ready for a Focus session."
+    },
+    {
+      "start": 96,
+      "end": 106,
+      "title": "Sound with visible playback",
+      "speaker": "Sai",
+      "screen": "Brown noise plays, pauses and resumes; the diagram contrasts both states.",
+      "read": "I’m Sai. Sounds are optional. Playing animates the colored waves; pausing stops them. There’s also a static option for Reduce Motion."
+    },
+    {
+      "start": 106,
+      "end": 113,
+      "title": "A quieter study view",
+      "speaker": "Sai",
+      "screen": "Pomodoro countdown; upcoming tasks can be hidden.",
+      "read": "Zen puts the timer first. We can hide upcoming tasks when we want fewer distractions."
+    },
+    {
+      "start": 113,
+      "end": 127,
+      "title": "One useful iOS notification",
+      "speaker": "Sai",
+      "screen": "Optional alert setting → Home Screen banner → tap; code 2 validates the account and session.",
+      "read": "Session-end notifications are optional too. One completion alert appears on the iPhone Home Screen. A tap runs these account and session checks. Only the matching timer opens.",
+      "segments": [
+        {
+          "start": 113,
+          "end": 116,
+          "read": "Session-end notifications are optional too."
+        },
+        {
+          "start": 116,
+          "end": 121,
+          "read": "One completion alert appears on the iPhone Home Screen."
+        },
+        {
+          "start": 121,
+          "end": 127,
+          "read": "A tap runs these account and session checks. Only the matching timer opens."
+        }
+      ]
+    },
+    {
+      "start": 127,
+      "end": 135,
+      "title": "Real progress, one student",
+      "speaker": "Sai",
+      "screen": "Waffles123’s 20 XP and Stats; saved activities → XP → level progress.",
+      "read": "The profile reflects work completed here. That’s DelaStudy: learning, planning, and focused study, connected through saved progress."
+    }
+  ],
+  "pageStarts": [
+    {
+      "index": 0,
+      "title": "DelaStudy",
+      "subtitle": "M’hamed  |  0:00–0:41  |  Account, setup & courses"
+    },
+    {
+      "index": 5,
+      "title": "Learn, then use it",
+      "subtitle": "Ibby  |  0:41–1:36  |  Lessons, practice & planning"
+    },
+    {
+      "index": 10,
+      "title": "Focus and follow through",
+      "subtitle": "Sai  |  1:36–2:15  |  Sound, notification & progress"
+    }
+  ],
+  "instruction": "Read only the main narration text. Speaker names, timestamps and ON SCREEN cues are not spoken. Start each line at its timestamp; the wording already explains the diagrams and both code excerpts. No improvisation is needed.",
+  "author": "M’hamed, Ibby and Sai"
+}

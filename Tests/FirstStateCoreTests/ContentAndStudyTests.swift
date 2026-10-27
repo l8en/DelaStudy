@@ -6,12 +6,13 @@ import Testing
 struct ContentAndStudyTests {
     @Test func bundledContentIsValid() {
         #expect(ContentValidator.validate(AppContent.content).isEmpty)
-        #expect(AppContent.content.courses.count == 29)
+        #expect(AppContent.content.courses.count == 39)
         #expect(AppContent.content.courses.filter { $0.level == .highSchool }.count == 17)
         #expect(AppContent.content.courses.filter { $0.level == .college }.count == 12)
-        #expect(AppContent.content.objectives.count == 36)
-        #expect(AppContent.content.questions.count == 72)
-        #expect(AppContent.content.lessonMaterials.count == 36)
+        #expect(AppContent.content.courses.filter { $0.level == .apPreparation }.count == 10)
+        #expect(AppContent.content.objectives.count == 46)
+        #expect(AppContent.content.questions.count == 112)
+        #expect(AppContent.content.lessonMaterials.count == 46)
         #expect(AppContent.content.lessonMaterials.allSatisfy { !$0.notes.isEmpty })
         #expect(AppContent.content.lessonMaterials.filter { $0.video != nil }.count == 12)
     }
