@@ -1,6 +1,6 @@
 # DelaStudy
 
-I'm M'hamed, and DelaStudy is an iPhone study app I've been working on for high-school and college students. It started with Delaware civics and grew into a place to study other subjects too.
+I'm M'hamed, I am Ibrahim, and I am Sai, and DelaStudy is an iPhone study app I've been working on for high-school and college students. It started with Delaware civics and grew into a place to study other subjects too.
 
 I wanted the app to connect the parts of studying that usually end up scattered around: reading something, trying a question, taking notes, and remembering where I left off.
 
@@ -36,7 +36,7 @@ swift test
 
 ## Still in progress
 
-This is a student project, and I'm still improving it. Course paths cover selected topics, not full school courses or college credit. Videos and external links need an internet connection.
+This is a student project, and we are still improving it. Course paths cover selected topics, not full school courses or college credit. Videos and external links need an internet connection.
 
 The practice questions aren't official Delaware assessments, and the app isn't endorsed by the state or the source publishers.
 
